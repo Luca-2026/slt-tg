@@ -19,6 +19,24 @@ const Index = () => {
         description="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von AV- & IT-Lösungen. Konferenz- und Medientechnik, IT-Infrastruktur – alles aus einer Hand."
         keywords="AV Installation, IT-Lösungen, Medientechnik Integration, IT-Infrastruktur, Konferenztechnik Krefeld, Videokonferenz Installation NRW"
         canonical="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "SLT Technology Group",
+          "url": "https://www.slt-tg.de",
+          "description": "Ihr Partner für Installation, Integration und Betrieb von AV- & IT-Lösungen in NRW und deutschlandweit.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "SLT Technology Group GmbH & Co. KG",
+            "url": "https://www.slt-tg.de",
+            "logo": "https://www.slt-tg.de/favicon.png"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.slt-tg.de/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
       />
       <HeroSection />
       <IntroSection />
