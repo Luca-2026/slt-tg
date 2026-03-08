@@ -344,7 +344,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to SLT (with attachments)
     const notificationPayload: any = {
-      from: "SLT Technology Group <onboarding@resend.dev>",
+      from: "SLT Technology Group <noreply@slt-tg.de>",
       to: [toAddress],
       reply_to: data.email,
       subject,
@@ -360,7 +360,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log(`Sending confirmation email to ${data.email}`);
     try {
       const confirmResponse = await resend.emails.send({
-        from: "SLT Technology Group <onboarding@resend.dev>",
+        from: "SLT Technology Group <noreply@slt-tg.de>",
         to: [data.email],
         subject: confirmationSubject!,
         html: confirmationHtml!,
