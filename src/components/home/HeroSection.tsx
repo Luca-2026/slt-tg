@@ -82,7 +82,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 mb-10">
             <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-              <Link to="/kontakt">
+              <Link to="/projektanfrage">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -135,7 +135,7 @@ export function HeroSection() {
 
             <div className="flex gap-3 mb-10">
               <Button asChild size="lg" className="text-base bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-                <Link to="/kontakt">
+                <Link to="/projektanfrage">
                   Projekt anfragen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -210,7 +210,7 @@ export function HeroSection() {
 
             <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <Button asChild size="lg" className="text-base px-8 bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-                <Link to="/kontakt">
+                <Link to="/projektanfrage">
                   Projekt anfragen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
