@@ -310,7 +310,6 @@ export default function Karriere() {
               return (
                 <div
                   key={job.id}
-                  className="scroll-hidden"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <Card
