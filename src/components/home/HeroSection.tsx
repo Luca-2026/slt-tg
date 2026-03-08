@@ -60,43 +60,46 @@ export function HeroSection() {
     <>
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-10">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
-            AV- & IT-Lösungen
+        <div className="min-h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-6">
+          {/* Top content */}
+          <div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-5 animate-fade-in">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
+              AV- & IT-Lösungen
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl font-bold leading-[1.1] mb-4 animate-fade-in-up" style={{ textShadow: "0 2px 20px hsl(200 100% 25% / 0.4)" }}>
+              <span className="text-primary">your digital</span>
+              <br />
+              <span className="text-primary">future.</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+                <Link to="/projektanfrage">
+                  Projekt anfragen
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+                <Link to="/projekte">
+                  Referenzen
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl font-bold leading-[1.1] mb-4" style={{ textShadow: "0 2px 20px hsl(33 100% 50% / 0.3)" }}>
-            <span className="text-accent">your digital</span>
-            <br />
-            <span className="text-accent">future.</span>
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs">
-            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-3 mb-10">
-            <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-              <Link to="/projektanfrage">
-                Projekt anfragen
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-              <Link to="/projekte">
-                <Play className="mr-2 h-4 w-4" />
-                Referenzen
-              </Link>
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-6 rounded-xl bg-primary/90 p-6">
+          {/* Stats - pushed to bottom */}
+          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 mt-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={150} suffix="+" label="Projekte" />
             <CountUpStat end={200} suffix="+" label="Kunden" />
             <CountUpStat end={10} suffix="+" label="Jahre" />
