@@ -137,8 +137,8 @@ const Finanzierung = () => {
             <Badge variant="outline" className="mb-6">
               Finanzierung & Servicemodelle
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Flexible Finanzierungsoptionen
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Flexible Finanzierungs&shy;optionen
             </h1>
             <p className="text-lg text-muted-foreground">
               Medientechnik muss nicht immer eine große Investition sein. Ich berate Sie 
