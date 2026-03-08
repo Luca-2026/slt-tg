@@ -25,11 +25,9 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <nav className="section-container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <span className="text-xl font-bold text-foreground">
-            SLT <span className="text-primary">Technology Group</span>
-          </span>
-        </Link>
+          <Link to="/" className="flex items-center">
+            <img src={sltLogo} alt="SLT Technology Group" className="h-10 lg:h-12 w-auto" />
+          </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
