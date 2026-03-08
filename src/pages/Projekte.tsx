@@ -213,7 +213,7 @@ function ClientLogosOnProjekte() {
 }
 
 const Projekte = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const location = useLocation();
