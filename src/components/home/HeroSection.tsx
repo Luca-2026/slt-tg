@@ -63,7 +63,7 @@ export function HeroSection() {
         <img
           src={heroImage}
           alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[75%_center] sm:object-[60%_center] lg:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
       </div>
