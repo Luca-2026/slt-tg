@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 
 const footerLinks = {
   leistungen: [
+    { name: "Installation & Integration", href: "/leistungen#integration" },
     { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
     { name: "Ausschreibung & Vergabe", href: "/leistungen#fachplanung" },
-    { name: "IT-Integration & Betrieb", href: "/leistungen#integration" },
+    { name: "Service & Betrieb", href: "/leistungen#service" },
     { name: "Finanzierung", href: "/finanzierung" },
   ],
   loesungen: [
@@ -38,15 +39,13 @@ export function Footer() {
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src="/assets/sandhoff-logo.jpg" 
-                alt="Sandhoff IT- & Mediensysteme" 
-                className="h-12 w-auto"
-              />
+              <span className="text-xl font-bold text-foreground">
+                SLT <span className="text-primary">Technology Group</span>
+              </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Fachplaner für Medientechnik in NRW. 
-              Herstellerneutrale AV-Beratung und Systemintegration.
+              Ihr Partner für die Installation & Integration von
+              Konferenz- und Medientechnik in Deutschland und Europa.
             </p>
           </div>
 
@@ -58,10 +57,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.leistungen.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -77,10 +73,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.loesungen.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -96,20 +89,14 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.navigation.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -124,42 +111,32 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="mailto:luca@sandhoff.org"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href="tel:+4921514179902" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Phone className="h-4 w-4" />
+                  +49 (0) 2151 - 417 99 02
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@slt-tg.de" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="h-4 w-4" />
-                  luca@sandhoff.org
+                  info@slt-tg.de
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span>
-                  Marienforster Weg 2<br />
-                  53343 Wachtberg
+                  Anrather Straße 291<br />
+                  47807 Krefeld
                 </span>
               </li>
             </ul>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 mt-6">
-              <a
-                href="https://www.linkedin.com/in/luca-sandhoff-5a332017a"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="LinkedIn Profil von Luca Sandhoff"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-center text-sm text-muted-foreground">
-            © {currentYear} Sandhoff | IT- & Mediensysteme. Alle Rechte vorbehalten.
+            © {currentYear} SLT Technology Group GmbH & Co. KG. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

@@ -24,11 +24,9 @@ export function Header() {
       <nav className="section-container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img 
-            src="/assets/sandhoff-logo.jpg" 
-            alt="Sandhoff IT- & Mediensysteme" 
-            className="h-10 lg:h-12 w-auto"
-          />
+          <span className="text-xl font-bold text-foreground">
+            SLT <span className="text-primary">Technology Group</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -52,7 +50,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Button asChild className="btn-glow">
-            <Link to="/projektanfrage">Projektanfrage starten</Link>
+            <Link to="/kontakt">Kontakt</Link>
           </Button>
         </div>
 
@@ -62,11 +60,7 @@ export function Header() {
           className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
 
@@ -90,8 +84,8 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4">
-              <Link to="/projektanfrage" onClick={() => setMobileMenuOpen(false)}>
-                Projektanfrage starten
+              <Link to="/kontakt" onClick={() => setMobileMenuOpen(false)}>
+                Kontakt
               </Link>
             </Button>
           </div>

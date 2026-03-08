@@ -7,8 +7,8 @@ const Datenschutz = () => {
     <Layout>
       <SEOHead
         title="Datenschutzerklärung"
-        description="Datenschutzerklärung von Sandhoff IT- & Mediensysteme. Informationen zur Datenverarbeitung gemäß DSGVO."
-        keywords="Datenschutz, DSGVO, Datenschutzerklärung"
+        description="Datenschutzerklärung der SLT Technology Group GmbH & Co. KG. Informationen zur Datenverarbeitung gemäß DSGVO."
+        keywords="Datenschutz, DSGVO, Datenschutzerklärung, SLT Technology Group"
         canonical="/datenschutz"
       />
       <section className="py-20 lg:py-28">
@@ -22,138 +22,112 @@ const Datenschutz = () => {
             <div className="prose prose-invert max-w-none space-y-8">
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  1. Datenschutz auf einen Blick
+                  Ihre Betroffenenrechte
                 </h2>
-                <h3 className="text-lg font-medium text-foreground mb-2">
-                  Allgemeine Hinweise
-                </h3>
-                <p className="text-muted-foreground">
-                  Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit 
-                  Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. 
-                  Personenbezogene Daten sind alle Daten, mit denen Sie persönlich 
-                  identifiziert werden können.
+                <p className="text-muted-foreground mb-4">
+                  Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:
                 </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  2. Verantwortliche Stelle
-                </h2>
-                <p className="text-muted-foreground">
-                  Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+                <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                  <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung</li>
+                  <li>Berichtigung unrichtiger personenbezogener Daten</li>
+                  <li>Löschung Ihrer bei uns gespeicherten Daten</li>
+                  <li>Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen</li>
+                  <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns</li>
+                  <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben</li>
+                </ul>
+                <p className="text-muted-foreground mt-4">
+                  Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
                 </p>
                 <p className="text-muted-foreground mt-4">
-                  Luca Sandhoff<br />
-                  Sandhoff | IT- & Mediensysteme<br />
-                  Marienforster Weg 2<br />
-                  53343 Wachtberg<br />
-                  <br />
-                  E-Mail: luca@sandhoff.org
+                  Sie können sich jederzeit mit einer Beschwerde an die für Sie zuständige Aufsichtsbehörde wenden.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  3. Datenerfassung auf dieser Website
+                  Zwecke der Datenverarbeitung
                 </h2>
-                
-                <h3 className="text-lg font-medium text-foreground mb-2 mt-6">Kontaktformular</h3>
-                <p className="text-muted-foreground">
-                  Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre 
-                  Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen 
-                  Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von 
-                  Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne 
-                  Ihre Einwilligung weiter.
+                <p className="text-muted-foreground mb-4">
+                  Wir verarbeiten Ihre personenbezogenen Daten nur zu den in dieser Datenschutzerklärung genannten Zwecken. 
+                  Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den genannten Zwecken findet nicht statt. 
+                  Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn:
                 </p>
-
-                <h3 className="text-lg font-medium text-foreground mb-2 mt-6">Projektanfrage-Formular</h3>
-                <p className="text-muted-foreground">
-                  Bei Nutzung unseres Projektanfrage-Formulars werden die eingegebenen 
-                  Daten (Kontaktdaten, Projektinformationen, hochgeladene Dateien) zur 
-                  Bearbeitung Ihrer Anfrage verarbeitet. Die Daten werden nach Abschluss 
-                  der Anfrage bzw. des Projekts gemäß den gesetzlichen Aufbewahrungsfristen 
-                  gelöscht.
-                </p>
-
-                <h3 className="text-lg font-medium text-foreground mb-2 mt-6">Datei-Uploads</h3>
-                <p className="text-muted-foreground">
-                  Hochgeladene Dateien (z.B. Grundrisse, Planungsunterlagen) werden 
-                  ausschließlich zur Bearbeitung Ihrer Projektanfrage verwendet und 
-                  sicher gespeichert. Die Dateien werden nach Abschluss der Anfrage 
-                  bzw. nach Ablauf der gesetzlichen Aufbewahrungsfristen gelöscht.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  4. Ihre Rechte
-                </h2>
-                <p className="text-muted-foreground">
-                  Sie haben jederzeit das Recht:
-                </p>
-                <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
-                  <li>Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten</li>
-                  <li>Die Berichtigung unrichtiger Daten zu verlangen</li>
-                  <li>Die Löschung Ihrer Daten zu verlangen</li>
-                  <li>Die Einschränkung der Verarbeitung zu verlangen</li>
-                  <li>Der Verarbeitung zu widersprechen</li>
-                  <li>Die Datenübertragbarkeit zu verlangen</li>
+                <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                  <li>Sie Ihre ausdrückliche Einwilligung dazu erteilt haben</li>
+                  <li>die Verarbeitung zur Abwicklung eines Vertrags mit Ihnen erforderlich ist</li>
+                  <li>die Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist</li>
+                  <li>die Verarbeitung zur Wahrung berechtigter Interessen erforderlich ist und kein Grund zur Annahme besteht, dass Sie ein überwiegendes schutzwürdiges Interesse an der Nichtweitergabe Ihrer Daten haben</li>
                 </ul>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  5. Hosting
+                  Löschung bzw. Sperrung der Daten
                 </h2>
                 <p className="text-muted-foreground">
-                  Diese Website wird extern gehostet. Die personenbezogenen Daten, die 
-                  auf dieser Website erfasst werden, werden auf den Servern des Hosters 
-                  gespeichert. Hierbei kann es sich v.a. um IP-Adressen, Kontaktanfragen, 
-                  Meta- und Kommunikationsdaten, Websitezugriffe und sonstige Daten handeln.
+                  Wir halten uns an die Grundsätze der Datenvermeidung und Datensparsamkeit. 
+                  Wir speichern Ihre personenbezogenen Daten daher nur so lange, wie dies zur Erreichung 
+                  der hier genannten Zwecke erforderlich ist oder wie es die vom Gesetzgeber vorgesehenen 
+                  vielfältigen Speicherfristen vorsehen. Nach Fortfall des jeweiligen Zweckes bzw. Ablauf 
+                  dieser Fristen werden die entsprechenden Daten routinemäßig und entsprechend den 
+                  gesetzlichen Vorschriften gesperrt oder gelöscht.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  6. SSL-/TLS-Verschlüsselung
+                  SSL-Verschlüsselung
                 </h2>
                 <p className="text-muted-foreground">
-                  Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung 
-                  vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte 
-                  Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von 
-                  „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer 
-                  Browserzeile.
+                  Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir 
+                  dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  7. Terminbuchung
+                  Verwendung von Google Maps
                 </h2>
                 <p className="text-muted-foreground">
-                  Für die Terminbuchung nutzen wir einen externen Dienst (z.B. Calendly 
-                  oder Cal.com). Bei Nutzung dieses Dienstes gelten zusätzlich dessen 
-                  Datenschutzbestimmungen. Die im Rahmen der Terminbuchung erhobenen 
-                  Daten werden ausschließlich zur Durchführung und Organisation des 
-                  gebuchten Termins verwendet.
+                  Diese Webseite verwendet Google Maps API, um geographische Informationen visuell darzustellen. 
+                  Bei der Nutzung von Google Maps werden von Google auch Daten über die Nutzung der Kartenfunktionen 
+                  durch Besucher erhoben, verarbeitet und genutzt. Nähere Informationen über die Datenverarbeitung 
+                  durch Google können Sie den{" "}
+                  <a href="http://www.google.com/privacypolicy.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    Google-Datenschutzhinweisen
+                  </a>{" "}
+                  entnehmen.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  8. Änderungen dieser Datenschutzerklärung
+                  Änderung unserer Datenschutzbestimmungen
                 </h2>
                 <p className="text-muted-foreground">
-                  Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie 
-                  stets den aktuellen rechtlichen Anforderungen entspricht oder um 
-                  Änderungen unserer Leistungen umzusetzen. Für Ihren erneuten Besuch 
-                  gilt dann die neue Datenschutzerklärung.
+                  Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen 
+                  rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der 
+                  Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
                 </p>
               </div>
 
-              <div className="pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground">
-                  Stand: Januar 2024
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">
+                  Fragen an den Datenschutzbeauftragten
+                </h2>
+                <p className="text-muted-foreground">
+                  Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden 
+                  Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
+                </p>
+                <p className="text-muted-foreground mt-4">
+                  <strong className="text-foreground">SLT Technology Group GmbH & Co. KG</strong><br />
+                  Herr Benedikt Nöchel<br />
+                  Anrather Straße 291<br />
+                  DE-47807 Krefeld<br />
+                  E-Mail:{" "}
+                  <a href="mailto:datenschutz@slt-tg.de" className="text-primary hover:underline">
+                    datenschutz@slt-tg.de
+                  </a>
                 </p>
               </div>
             </div>

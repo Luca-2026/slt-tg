@@ -9,14 +9,14 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
-    question: "Was bedeutet ‚herstellerneutral'?",
+    question: "Welche Leistungen bietet SLT an?",
     answer:
-      "Wir sind an keinen Hersteller gebunden und empfehlen ausschließlich die Lösungen, die optimal zu Ihren Anforderungen und Ihrer bestehenden Infrastruktur passen. Das garantiert Ihnen objektive Beratung ohne Interessenskonflikte.",
+      "Wir bieten die komplette Bandbreite: Von der Bedarfsanalyse und Planung über die professionelle Installation und Integration bis hin zum laufenden Betrieb und Support. Unser Schwerpunkt liegt auf Konferenz- und Medientechnik, IT-Netzwerktechnik, Digital Signage und Steuerungslösungen.",
   },
   {
-    question: "Arbeiten Sie nur mit großen Unternehmen?",
+    question: "In welchem Gebiet sind Sie tätig?",
     answer:
-      "Nein, wir betreuen Projekte unterschiedlicher Größe – vom einzelnen Konferenzraum bis zum Multi-Room-Rollout mit über 20 Räumen. Entscheidend ist nicht die Unternehmensgröße, sondern die Komplexität der Anforderungen.",
+      "Wir sind deutschlandweit und im europäischen Ausland tätig. Unser Hauptsitz ist in Krefeld, NRW. Wir betreuen Kunden aller Branchen und Größen.",
   },
   {
     question: "Was kostet eine erste Beratung?",
@@ -29,18 +29,17 @@ const faqs = [
       "Die Dauer hängt vom Projektumfang ab. Ein einzelner Konferenzraum kann in 4-8 Wochen umgesetzt werden, größere Rollouts benötigen entsprechend mehr Zeit. Im Erstgespräch erstellen wir einen realistischen Zeitplan.",
   },
   {
-    question: "Unterstützen Sie auch bei der Beschaffung und Ausschreibung?",
+    question: "Bieten Sie auch After-Sales Support?",
     answer:
-      "Ja, wir begleiten als Fachplaner den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung – HOAI-konform und transparent.",
+      "Ja, unser Service Desk steht Ihnen nach der Installation zur Verfügung. Wir bieten proaktives Monitoring, regelmäßige Wartung, Updates und schnellen Support bei Problemen – damit Ihre Technik zuverlässig läuft.",
   },
   {
-    question: "Was umfasst der Managed Service?",
+    question: "Mit welchen Herstellern arbeiten Sie zusammen?",
     answer:
-      "Der Managed Service beinhaltet proaktives 24/7-Monitoring, First-Level-Support für Ihre Nutzer, regelmäßige System-Updates und quartalsweise Optimierungsberichte. So läuft Ihre Technik zuverlässig.",
+      "Wir arbeiten mit führenden Herstellern wie Crestron, Barco, Shure, Sennheiser, Samsung, iiyama, Nureva, Huddly und vielen weiteren zusammen. Wir beraten bedarfsgerecht und empfehlen die optimale Lösung für Ihre Anforderungen.",
   },
 ];
 
-// Generate FAQ Schema for SEO
 const generateFAQSchema = () => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -58,12 +57,9 @@ export function FAQSection() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: accordionRef, isVisible: accordionVisible } = useScrollAnimation();
 
-  // Inject FAQ Schema into head
   useEffect(() => {
     const existingScript = document.querySelector('script[data-faq-schema]');
-    if (existingScript) {
-      existingScript.remove();
-    }
+    if (existingScript) existingScript.remove();
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.setAttribute("data-faq-schema", "true");
@@ -72,16 +68,13 @@ export function FAQSection() {
 
     return () => {
       const script = document.querySelector('script[data-faq-schema]');
-      if (script) {
-        script.remove();
-      }
+      if (script) script.remove();
     };
   }, []);
 
   return (
     <section className="py-20 lg:py-28 bg-card">
       <div className="section-container">
-        {/* Section Header */}
         <div 
           ref={headerRef}
           className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
@@ -96,7 +89,6 @@ export function FAQSection() {
           </p>
         </div>
 
-        {/* FAQ Accordion */}
         <div ref={accordionRef} className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
