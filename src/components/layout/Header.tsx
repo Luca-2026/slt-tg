@@ -21,12 +21,12 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <nav className="section-container flex items-center justify-between h-16 lg:h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
+      <nav className="section-container flex items-center justify-between h-20 lg:h-24">
         {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={sltLogo} alt="SLT Technology Group" className="h-10 lg:h-12 w-auto" />
-          </Link>
+        <Link to="/" className="flex items-center">
+          <img src={sltLogo} alt="SLT Technology Group" className="h-14 lg:h-16 w-auto" />
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">

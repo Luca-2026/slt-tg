@@ -35,13 +35,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-primary text-primary-foreground border-t border-border">
       <div className="section-container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <img src={sltLogo} alt="SLT Technology Group" className="h-10 w-auto" />
+              <img src={sltLogo} alt="SLT Technology Group" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Ihr Partner für die Installation & Integration von
