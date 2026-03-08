@@ -1,30 +1,37 @@
 import { Link } from "react-router-dom";
-import { Lightbulb, FileText, Monitor, ArrowRight } from "lucide-react";
+import { Wrench, FileText, Monitor, ArrowRight, Headphones } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
-    icon: Lightbulb,
-    title: "Konzeption & Beratung",
+    icon: Wrench,
+    title: "Installation & Integration",
     description:
-      "Bedarfsanalyse, Nutzungskonzepte und Wirtschaftlichkeitsbetrachtungen. Ich entwickle passgenaue Lösungen für Ihre Anforderungen.",
-    features: ["Bedarfsanalyse", "Testsysteme", "Nutzungskonzepte"],
+      "Professionelle Installation und Inbetriebnahme Ihrer AV- und Konferenztechnik. Wir integrieren alle Komponenten nahtlos in Ihre bestehende IT-Infrastruktur.",
+    features: ["Montage & Verkabelung", "Systemintegration", "Inbetriebnahme & Test"],
   },
   {
     icon: FileText,
-    title: "Fachplanung & Ausschreibung",
+    title: "Fachplanung & Beratung",
     description:
-      "Herstellerneutrale Leistungsverzeichnisse, Bewertungskriterien und Vergabebegleitung für eine fundierte Beschaffung.",
-    features: ["Leistungsverzeichnisse", "Bewertungsmatrizen", "Vergabebegleitung"],
+      "Bedarfsgerechte Konzepte und Planungen für Ihre Konferenzräume und Meeting Spaces. Wir beraten herstellerunabhängig.",
+    features: ["Bedarfsanalyse", "Raumkonzepte", "Leistungsverzeichnisse"],
   },
   {
     icon: Monitor,
-    title: "IT-Integration & Betrieb",
+    title: "Konferenz- & Medientechnik",
     description:
-      "Proaktives Monitoring, User-Support und kontinuierliche Optimierung Ihrer Medientechnik – als Managed Service.",
-    features: ["Monitoring", "First-Level-Support", "Managed Rooms"],
+      "Komplettlösungen für Videokonferenzen, Digital Signage, Lautsprechersysteme und Steuerungstechnik.",
+    features: ["Videokonferenzsysteme", "Digital Signage", "Steuerung & Signalmanagement"],
+  },
+  {
+    icon: Headphones,
+    title: "Service & Support",
+    description:
+      "Zuverlässiger After-Sales Support, Service Desk und proaktives Monitoring für den reibungslosen Betrieb Ihrer Systeme.",
+    features: ["Service Desk", "Managed Rooms", "Wartung & Updates"],
   },
 ];
 
@@ -47,20 +54,20 @@ export function ServicesOverview() {
             Unsere Leistungen
           </h2>
           <p className="text-lg text-muted-foreground">
-            Von der ersten Idee bis zum laufenden Betrieb – wir begleiten Ihr Projekt 
-            in allen Phasen mit unserer Expertise.
+            Von der Planung über die Installation bis zum laufenden Betrieb – 
+            wir begleiten Ihr Projekt in allen Phasen.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Card
               key={service.title}
               className={`group bg-card border-border card-hover scroll-hidden ${
                 cardsVisible ? "scroll-visible" : ""
               }`}
-              style={{ transitionDelay: `${index * 0.15}s` }}
+              style={{ transitionDelay: `${index * 0.12}s` }}
             >
               <CardHeader>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">

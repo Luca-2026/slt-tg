@@ -7,8 +7,8 @@ const Impressum = () => {
     <Layout>
       <SEOHead
         title="Impressum"
-        description="Impressum von Sandhoff IT- & Mediensysteme. Angaben gemäß § 5 TMG."
-        keywords="Impressum, Kontakt, Sandhoff"
+        description="Impressum der SLT Technology Group GmbH & Co. KG. Angaben gemäß § 5 TMG."
+        keywords="Impressum, Kontakt, SLT Technology Group"
         canonical="/impressum"
       />
       <section className="py-20 lg:py-28">
@@ -22,41 +22,87 @@ const Impressum = () => {
             <div className="prose prose-invert max-w-none space-y-8">
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Angaben gemäß § 5 TMG
+                  SLT Technology Group GmbH & Co. KG
                 </h2>
                 <p className="text-muted-foreground">
-                  Luca Sandhoff<br />
-                  Sandhoff | IT- & Mediensysteme<br />
-                  Marienforster Weg 2<br />
-                  53343 Wachtberg
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">Kontakt</h2>
-                <p className="text-muted-foreground">
-                  E-Mail: luca@sandhoff.org
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Umsatzsteuer-ID
-                </h2>
-                <p className="text-muted-foreground">
-                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                  [Wird nach Anmeldung ergänzt]
+                  Anrather Straße 291<br />
+                  DE-47807 Krefeld<br />
+                  <br />
+                  Fon: +49 (0) 2151 - 417 99 02<br />
+                  Fax: +49 (0) 2151 - 417 99 04<br />
+                  E-Mail:{" "}
+                  <a href="mailto:info@slt-tg.de" className="text-primary hover:underline">
+                    info@slt-tg.de
+                  </a>
+                  <br />
+                  <br />
+                  HRA 7075 Amtsgericht Krefeld
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+                  Geschäftsführer
                 </h2>
                 <p className="text-muted-foreground">
-                  Luca Sandhoff<br />
-                  Marienforster Weg 2<br />
-                  53343 Wachtberg
+                  Benedikt Nöchel
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">
+                  Persönlich haftende Gesellschafterin
+                </h2>
+                <p className="text-muted-foreground">
+                  SLT Management GmbH<br />
+                  Anrather Straße 291<br />
+                  DE-47807 Krefeld<br />
+                  <br />
+                  Fon: +49 (0) 2151 - 417 99 03<br />
+                  Fax: +49 (0) 2151 - 417 99 04<br />
+                  E-Mail:{" "}
+                  <a href="mailto:info@slt-tg.de" className="text-primary hover:underline">
+                    info@slt-tg.de
+                  </a>
+                  <br />
+                  <br />
+                  HRB 18191 Amtsgericht Krefeld<br />
+                  Gerichtsstand: Amtsgericht Krefeld
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">
+                  Haftungsausschluss
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  Die SLT Technology Group GmbH & Co. KG prüft und aktualisiert die Informationen auf ihrer 
+                  Webseite ständig. Trotz aller Sorgfalt können sich Daten und Informationen jeglicher Art 
+                  inzwischen verändert haben. Eine Haftung, Garantie oder sonstiges Einstehen für die Aktualität, 
+                  Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen kann daher nicht 
+                  übernommen werden.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Gleiches gilt auch für alle anderen Webseiten, auf die direkt mittels Hyperlink oder in sonstiger 
+                  Weise verwiesen wird. SLT Technology Group GmbH & Co. KG ist für den Inhalt der Webseiten, 
+                  die aufgrund einer solchen Verbindung oder Hinweis erreicht werden, nicht verantwortlich.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Inhalt, Struktur und Gestaltung der SLT Technology Group GmbH & Co. KG Webseite sind 
+                  urheberrechtlich geschützt. Die Vervielfältigung, Änderung, Darstellung, Verbreitung, 
+                  Übermittlung, Veröffentlichung, Verkauf, Lizenzierung, Bearbeitung, Verfremdung oder Nutzung 
+                  von Informationen oder Daten bedarf der vorherigen schriftlichen Zustimmung der 
+                  SLT Technology Group GmbH & Co. KG.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">
+                  Betriebshaftpflichtversicherung
+                </h2>
+                <p className="text-muted-foreground">
+                  Gothaer Allgemeine Versicherung AG<br />
+                  Geltungsbereich des Versicherungsschutzes: Deutschland & Europa
                 </p>
               </div>
 
@@ -79,42 +125,6 @@ const Impressum = () => {
                 <p className="text-muted-foreground">
                   Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren 
                   vor einer Verbraucherschlichtungsstelle teilzunehmen.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Haftung für Inhalte
-                </h2>
-                <p className="text-muted-foreground">
-                  Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf 
-                  diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 
-                  10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte 
-                  oder gespeicherte fremde Informationen zu überwachen oder nach Umständen 
-                  zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Haftung für Links
-                </h2>
-                <p className="text-muted-foreground">
-                  Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte 
-                  wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch 
-                  keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der 
-                  jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-xl font-semibold text-foreground mb-4">Urheberrecht</h2>
-                <p className="text-muted-foreground">
-                  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten 
-                  unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, 
-                  Verbreitung und jede Art der Verwertung außerhalb der Grenzen des 
-                  Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors 
-                  bzw. Erstellers.
                 </p>
               </div>
             </div>

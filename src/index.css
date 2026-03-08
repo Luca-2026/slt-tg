@@ -2,83 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sandhoff | IT- & Mediensysteme - Design System
-   Dark Professional Theme with Orange Corporate Color
+/* SLT Technology Group - Design System
+   Dark Navy Blue Theme with Orange Corporate Color
    All colors in HSL format */
 
 @layer base {
   :root {
-    /* Dark Theme - Base Colors (Pure Black like Logo) */
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
+    /* Dark Navy Blue Theme */
+    --background: 215 45% 7%;
+    --foreground: 210 20% 98%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 215 40% 11%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 215 40% 11%;
+    --popover-foreground: 210 20% 98%;
 
-    /* Primary - Sandhoff Orange */
-    --primary: 27 91% 55%;
-    --primary-foreground: 0 0% 2%;
+    /* Primary - SLT Orange */
+    --primary: 30 90% 52%;
+    --primary-foreground: 215 45% 5%;
 
-    /* Secondary - Dark Gray */
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary - Dark Navy */
+    --secondary: 215 35% 16%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 215 30% 16%;
+    --muted-foreground: 215 15% 65%;
 
     /* Accent - Lighter Orange */
-    --accent: 27 91% 60%;
-    --accent-foreground: 0 0% 2%;
+    --accent: 30 85% 58%;
+    --accent-foreground: 215 45% 5%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 14%;
-    --ring: 27 91% 55%;
+    --border: 215 30% 20%;
+    --input: 215 35% 16%;
+    --ring: 30 90% 52%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 27 91% 55%;
-    --sidebar-primary-foreground: 0 0% 2%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 27 91% 55%;
+    --sidebar-background: 215 45% 5%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 30 90% 52%;
+    --sidebar-primary-foreground: 215 45% 5%;
+    --sidebar-accent: 215 35% 16%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 215 30% 20%;
+    --sidebar-ring: 30 90% 52%;
 
     /* Custom Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(27 91% 50%), hsl(27 91% 60%));
-    --shadow-glow: 0 0 40px -10px hsl(27 91% 55% / 0.4);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --gradient-primary: linear-gradient(135deg, hsl(30 90% 48%), hsl(30 90% 58%));
+    --shadow-glow: 0 0 40px -10px hsl(30 90% 52% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(215 45% 0% / 0.5);
   }
 
   /* Light mode override - keep dark for this project */
   .light {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 27 91% 55%;
-    --primary-foreground: 0 0% 2%;
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 27 91% 60%;
-    --accent-foreground: 0 0% 2%;
+    --background: 215 45% 7%;
+    --foreground: 210 20% 98%;
+    --card: 215 40% 11%;
+    --card-foreground: 210 20% 98%;
+    --popover: 215 40% 11%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 30 90% 52%;
+    --primary-foreground: 215 45% 5%;
+    --secondary: 215 35% 16%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 30% 16%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 30 85% 58%;
+    --accent-foreground: 215 45% 5%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 14%;
-    --ring: 27 91% 55%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 30% 20%;
+    --input: 215 35% 16%;
+    --ring: 30 90% 52%;
   }
 }
 
@@ -117,7 +117,6 @@
 }
 
 @layer utilities {
-  /* Base animation states */
   .animate-fade-in {
     animation: fade-in 0.5s ease-out forwards;
   }
@@ -130,7 +129,6 @@
     animation: slide-in-right 0.4s ease-out forwards;
   }
 
-  /* Scroll-triggered animation classes */
   .scroll-hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -190,33 +188,17 @@
   }
 
   @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes slide-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
   }
 }

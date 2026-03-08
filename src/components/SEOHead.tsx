@@ -15,20 +15,18 @@ export function SEOHead({
   description,
   keywords,
   canonical,
-  ogImage = "/assets/sandhoff-logo.jpg",
+  ogImage = "/og-image.jpg",
   type = "website",
   structuredData,
 }: SEOHeadProps) {
-  const baseUrl = "https://www.sandhoff.org";
-  const fullTitle = `${title} | Sandhoff IT- & Mediensysteme`;
+  const baseUrl = "https://www.slt-tg.de";
+  const fullTitle = `${title} | SLT Technology Group`;
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
   const fullOgImage = ogImage.startsWith("http") ? ogImage : `${baseUrl}${ogImage}`;
 
   useEffect(() => {
-    // Update document title
     document.title = fullTitle;
 
-    // Update or create meta tags
     const updateMetaTag = (name: string, content: string, property = false) => {
       const attr = property ? "property" : "name";
       let tag = document.querySelector(`meta[${attr}="${name}"]`);
@@ -42,25 +40,19 @@ export function SEOHead({
       }
     };
 
-    // Primary Meta Tags
     updateMetaTag("description", description);
-    if (keywords) {
-      updateMetaTag("keywords", keywords);
-    }
+    if (keywords) updateMetaTag("keywords", keywords);
 
-    // Open Graph Tags
     updateMetaTag("og:title", fullTitle, true);
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:url", fullCanonical, true);
     updateMetaTag("og:type", type, true);
     updateMetaTag("og:image", fullOgImage, true);
 
-    // Twitter Tags
     updateMetaTag("twitter:title", fullTitle);
     updateMetaTag("twitter:description", description);
     updateMetaTag("twitter:image", fullOgImage);
 
-    // Update canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
       canonicalLink.setAttribute("href", fullCanonical);
@@ -71,12 +63,9 @@ export function SEOHead({
       document.head.appendChild(canonicalLink);
     }
 
-    // Add structured data if provided
     if (structuredData) {
       const existingScript = document.querySelector('script[data-seo-structured]');
-      if (existingScript) {
-        existingScript.remove();
-      }
+      if (existingScript) existingScript.remove();
       const script = document.createElement("script");
       script.type = "application/ld+json";
       script.setAttribute("data-seo-structured", "true");
@@ -85,11 +74,8 @@ export function SEOHead({
     }
 
     return () => {
-      // Cleanup structured data on unmount
       const script = document.querySelector('script[data-seo-structured]');
-      if (script) {
-        script.remove();
-      }
+      if (script) script.remove();
     };
   }, [fullTitle, description, keywords, fullCanonical, fullOgImage, type, structuredData]);
 

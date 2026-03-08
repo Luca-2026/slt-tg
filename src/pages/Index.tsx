@@ -14,9 +14,9 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Fachbüro für Medientechnik & AV-Fachplanung"
-        description="Fachbüro für Medientechnik in NRW: Herstellerneutrale Fachplanung, Ausschreibung und Beratung für Videokonferenz- und AV-Systeme. Von der Konzeption bis zum Betrieb."
-        keywords="Fachbüro Medientechnik, AV-Fachplanung, Medientechnik Consultant, Ausschreibung Konferenztechnik, AV-Beratung NRW, Fachplaner Videokonferenz, Köln, Bonn"
+        title="Installation & Integration von AV-Lösungen"
+        description="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik. Von der Planung bis zum Service aus einer Hand."
+        keywords="AV Installation, Medientechnik Integration, Konferenztechnik Krefeld, Videokonferenz Installation NRW, AV-Lösungen"
         canonical="/"
       />
       <HeroSection />

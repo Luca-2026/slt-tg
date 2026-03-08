@@ -1,16 +1,16 @@
-import { Shield, Euro, Settings, BarChart3, Headphones } from "lucide-react";
+import { Shield, Wrench, Settings, BarChart3, Headphones } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const trustPoints = [
   {
     icon: Shield,
-    title: "8+ Jahre Erfahrung",
-    description: "Expertise in AV & UC",
+    title: "Seit 2016",
+    description: "Erfahrung in AV & UC",
   },
   {
-    icon: Euro,
-    title: "Transparente Kosten",
-    description: "Keine versteckten Gebühren",
+    icon: Wrench,
+    title: "Komplettlösungen",
+    description: "Planung bis Installation",
   },
   {
     icon: Settings,
@@ -19,13 +19,13 @@ const trustPoints = [
   },
   {
     icon: BarChart3,
-    title: "Proaktives Monitoring",
-    description: "24/7 Systemüberwachung",
+    title: "32+ Projekte",
+    description: "Erfolgreich umgesetzt",
   },
   {
     icon: Headphones,
-    title: "Persönlicher Support",
-    description: "Direkter Ansprechpartner",
+    title: "After-Sales Support",
+    description: "Zuverlässiger Service",
   },
 ];
 

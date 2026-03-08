@@ -28,27 +28,26 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Herstellerunabhängige Beratung
+            Installation & Integration von AV-Lösungen
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up">
-            Videokonferenz- und AV-Lösungen, die{" "}
-            <span className="gradient-text">Zusammenarbeit neu definieren</span>
+            <span className="gradient-text">your digital future.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Wir planen, integrieren und betreuen Ihre Videokonferenz- und AV-Lösungen – 
-            von der ersten Idee bis zum produktiven Betrieb. Plug-and-play-Erlebnisse 
-            statt Technik-Hürden.
+            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen. 
+            Von der Planung über die Installation bis zum laufenden Betrieb – 
+            alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="btn-glow text-base px-8">
-              <Link to="/projektanfrage">
-                Projektanfrage starten
+              <Link to="/kontakt">
+                Projekt anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -62,9 +61,9 @@ export function HeroSection() {
 
           {/* Stats with Count Up */}
           <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <CountUpStat end={32} suffix="+" label="Projekte" />
+            <CountUpStat end={25} suffix="+" label="Zufriedene Kunden" />
             <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
-            <CountUpStat end={50} suffix="+" label="Projekte" />
-            <CountUpStat end={100} suffix="%" label="Herstellerneutral" />
           </div>
         </div>
       </div>
