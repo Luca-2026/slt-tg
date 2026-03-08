@@ -82,7 +82,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 mb-10">
             <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-              <Link to="/kontakt">
+              <Link to="/projektanfrage">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
