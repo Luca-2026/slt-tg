@@ -210,10 +210,10 @@ const Projektanfrage = () => {
               <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 Vielen Dank für Ihre Anfrage!
               </h1>
-              <p className="text-lg text-muted-foreground mb-8">
-                Ihre Projektanfrage ist bei mir eingegangen. Ich werde mich innerhalb 
-                von 24 Stunden bei Ihnen melden, um die nächsten Schritte zu besprechen.
-              </p>
+               <p className="text-lg text-muted-foreground mb-8">
+                 Ihre Projektanfrage ist bei uns eingegangen. Wir werden uns innerhalb 
+                 von 24 Stunden bei Ihnen melden, um die nächsten Schritte zu besprechen.
+               </p>
 
               <Card className="bg-card border-border text-left mb-8">
                 <CardHeader>
