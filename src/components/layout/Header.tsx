@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import sltLogo from "@/assets/slt-logo.png";
-import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Startseite", href: "/" },
