@@ -21,7 +21,7 @@ const solutions = [
     icon: Video,
     title: "Konferenzräume & Meeting-Spaces",
     subtitle: "Produktive Zusammenarbeit – vor Ort und remote",
-    description: "Moderne Konferenzräume müssen hybride Meetings unterstützen, einfach zu bedienen sein und zuverlässig funktionieren. Ich plane und integriere Lösungen für Microsoft Teams Rooms, Zoom Rooms oder BYOM-Konzepte (Bring Your Own Meeting).",
+    description: "Moderne Konferenzräume müssen hybride Meetings unterstützen, einfach zu bedienen sein und zuverlässig funktionieren. Wir planen und integrieren Lösungen für Microsoft Teams Rooms, Zoom Rooms oder BYOM-Konzepte (Bring Your Own Meeting).",
     features: [
       "Microsoft Teams Rooms & Zoom Rooms Integration",
       "BYOM-Lösungen für flexible Nutzung",
