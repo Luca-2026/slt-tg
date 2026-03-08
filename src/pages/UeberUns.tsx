@@ -53,9 +53,10 @@ const timeline = [
 const teamMembers = [
   { name: "Benedikt Nöchel", role: "Projektleitung & Vertrieb", image: "/assets/team/benedikt-noechel.jpg", email: "b.noechel@slt-tg.de" },
   { name: "Ersel Uzun", role: "Technik & Service", image: "/assets/team/ersel-uzun.jpg", email: "e.uzun@slt-tg.de" },
+  { name: "Maibrit Breuer", role: "Marketing & Design", image: null, email: "m.breuer@slt-tg.de" },
+  { name: "Juno", role: "Feel Good Manager 🐾", image: "/assets/team/juno.png", email: null },
   { name: "Andreas Scherzow", role: "Logistik & Lager", image: null, email: "a.scherzow@slt-tg.de" },
   { name: "Patricia Preuss", role: "Verwaltung & Office", image: null, email: "p.preuss@slt-tg.de" },
-  { name: "Juno", role: "Feel Good Manager 🐾", image: "/assets/team/juno.png", email: null },
 ];
 
 const whyItems = [
@@ -175,11 +176,11 @@ const UeberUns = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
-                className="text-center group animate-fade-in-up"
+                className="text-center group animate-fade-in-up w-32"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {member.email ? (
