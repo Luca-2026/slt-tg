@@ -19,6 +19,7 @@ import Datenschutz from "./pages/Datenschutz";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
+import Karriere from "./pages/Karriere";
 import LocalSEOPage from "./pages/LocalSEOPage";
 import { getLocalSEORoutes } from "./data/localSEO";
 
