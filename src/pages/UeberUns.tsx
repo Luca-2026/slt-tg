@@ -145,7 +145,7 @@ const UeberUns = () => {
                Unser Werdegang
              </h2>
              <p className="text-lg text-muted-foreground">
-               Über 8 Jahre Erfahrung in der AV/UC-Branche – vom Projektingenieur zum 
+               Über 8 Jahre Erfahrung in der AV- & IT-Branche – vom Projektingenieur zum 
                etablierten Systemintegrator.
              </p>
           </div>

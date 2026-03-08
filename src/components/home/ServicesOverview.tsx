@@ -21,10 +21,10 @@ const services = [
   },
   {
     icon: Monitor,
-    title: "Konferenz- & Medientechnik",
+    title: "AV- & IT-Lösungen",
     description:
-      "Komplettlösungen für Videokonferenzen, Digital Signage, Lautsprechersysteme und Steuerungstechnik.",
-    features: ["Videokonferenzsysteme", "Digital Signage", "Steuerung & Signalmanagement"],
+      "Komplettlösungen für Videokonferenzen, IT-Netzwerke, Digital Signage, Beschallungssysteme und Steuerungstechnik.",
+    features: ["Videokonferenzsysteme", "IT-Infrastruktur", "Digital Signage"],
   },
   {
     icon: Headphones,

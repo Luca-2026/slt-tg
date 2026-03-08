@@ -63,9 +63,9 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEOHead
-        title="Kontakt: AV-Installation & Projektanfrage"
-        description="Kontaktieren Sie die SLT Technology Group für Ihre AV-Projekte. Kostenlose Erstberatung für Installation, Integration und Betrieb von Konferenztechnik."
-        keywords="AV-Installation Kontakt, Medientechnik Anfrage, SLT Technology Group, Konferenztechnik Krefeld"
+        title="Kontakt: AV- & IT-Installation & Projektanfrage"
+        description="Kontaktieren Sie die SLT Technology Group für Ihre AV- & IT-Projekte. Kostenlose Erstberatung für Installation, Integration und Betrieb."
+        keywords="AV-Installation Kontakt, IT-Lösungen Anfrage, SLT Technology Group, Konferenztechnik Krefeld"
         canonical="/kontakt"
       />
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">

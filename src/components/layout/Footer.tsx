@@ -45,7 +45,7 @@ export function Footer() {
             </Link>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
               Ihr Partner für die Installation & Integration von
-              Konferenz- und Medientechnik in Deutschland und Europa.
+              AV- & IT-Lösungen, Konferenz- und Medientechnik in Deutschland und Europa.
             </p>
           </div>
 

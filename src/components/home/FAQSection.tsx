@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Welche Leistungen bietet SLT an?",
     answer:
-      "Wir bieten die komplette Bandbreite: Von der Bedarfsanalyse und Planung über die professionelle Installation und Integration bis hin zum laufenden Betrieb und Support. Unser Schwerpunkt liegt auf Konferenz- und Medientechnik, IT-Netzwerktechnik, Digital Signage und Steuerungslösungen.",
+      "Wir bieten die komplette Bandbreite: Von der Bedarfsanalyse und Planung über die professionelle Installation und Integration bis hin zum laufenden Betrieb und Support. Unser Schwerpunkt liegt auf AV- & IT-Lösungen, Konferenz- und Medientechnik, IT-Netzwerktechnik, Digital Signage und Steuerungslösungen.",
   },
   {
     question: "In welchem Gebiet sind Sie tätig?",

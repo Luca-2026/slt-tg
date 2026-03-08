@@ -38,9 +38,9 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen. 
-            Von der Planung über die Installation bis zum laufenden Betrieb – 
-            alles aus einer Hand.
+            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
+            sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
+            laufenden Betrieb – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
