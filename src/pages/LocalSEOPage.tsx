@@ -101,7 +101,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Standort Bonn</h3>
                     <p className="text-sm text-muted-foreground">
-                      Neben unserem Hauptsitz in Krefeld betreiben wir ein Büro in <strong>Bonn, Drachenburgstraße 8, 53179 Bonn</strong>. 
+                      Neben unserem Hauptsitz in Krefeld betreiben wir einen vollwertigen Standort in <strong>Bonn, Drachenburgstraße 8, 53179 Bonn</strong>. 
                       So können wir im Kölner und Bonner Raum besonders flexibel und kurzfristig reagieren.
                     </p>
                   </div>
