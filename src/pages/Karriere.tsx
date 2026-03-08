@@ -411,7 +411,7 @@ export default function Karriere() {
               return (
                 <div
                   key={benefit.label}
-                  className="scroll-hidden flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                  className="flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
