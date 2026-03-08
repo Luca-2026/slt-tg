@@ -69,7 +69,7 @@ export function HeroSection() {
       </div>
 
       {/* Hotspots on devices */}
-      <div className="absolute inset-0 z-30 hidden md:block pointer-events-none">
+      <div className="absolute inset-0 z-30 hidden lg:block pointer-events-none">
         {hotspots.map((spot) => (
           <Link
             key={spot.id}
