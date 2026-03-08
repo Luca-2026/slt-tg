@@ -18,39 +18,48 @@ export type Database = {
         Row: {
           created_at: string
           cv_file_path: string | null
+          education_completed: string | null
           email: string
           first_name: string
+          has_drivers_license: string | null
           id: string
           last_name: string
           message: string | null
           phone: string | null
           position: string
+          salary_expectation: string | null
           start_date: string | null
           status: string
         }
         Insert: {
           created_at?: string
           cv_file_path?: string | null
+          education_completed?: string | null
           email: string
           first_name: string
+          has_drivers_license?: string | null
           id?: string
           last_name: string
           message?: string | null
           phone?: string | null
           position: string
+          salary_expectation?: string | null
           start_date?: string | null
           status?: string
         }
         Update: {
           created_at?: string
           cv_file_path?: string | null
+          education_completed?: string | null
           email?: string
           first_name?: string
+          has_drivers_license?: string | null
           id?: string
           last_name?: string
           message?: string | null
           phone?: string | null
           position?: string
+          salary_expectation?: string | null
           start_date?: string | null
           status?: string
         }
