@@ -226,6 +226,29 @@ export default function Karriere() {
 
       if (error) throw error;
 
+      // Send email notification to karriere@slt-tg.de
+      try {
+        await supabase.functions.invoke("send-contact-email", {
+          body: {
+            type: "job-application",
+            name: `${firstName} ${lastName}`,
+            email,
+            phone: phone || undefined,
+            message: message || undefined,
+            position: selectedPosition,
+            firstName,
+            lastName,
+            startDate: startDate || undefined,
+            educationCompleted: educationCompleted || undefined,
+            hasDriversLicense: hasDriversLicense || undefined,
+            salaryExpectation: salaryExpectation || undefined,
+            hasCv: !!cvPath,
+          },
+        });
+      } catch (emailErr) {
+        console.error("Email notification failed:", emailErr);
+      }
+
       toast({ title: "Bewerbung gesendet! ✅", description: "Vielen Dank für Ihre Bewerbung. Wir melden uns zeitnah bei Ihnen." });
       (e.target as HTMLFormElement).reset();
       setCvFile(null);
