@@ -2,18 +2,31 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
+
+function AnimatedBlock({ children, className }: { children: React.ReactNode; className?: string }) {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "transition-all duration-700 ease-out",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+}
 
 export function IntroSection() {
-  const { ref: ref1 } = useScrollAnimation();
-  const { ref: ref2 } = useScrollAnimation();
-  const { ref: ref3 } = useScrollAnimation();
-
   return (
     <section className="py-20 lg:py-28">
       <div className="section-container space-y-24 lg:space-y-32">
 
         {/* Block 1: Das sind wir */}
-        <div ref={ref1} className="scroll-hidden max-w-3xl mx-auto text-center">
+        <AnimatedBlock className="max-w-3xl mx-auto text-center">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             Digital natives mit einer Passion für Technik
           </p>
@@ -32,10 +45,10 @@ export function IntroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </AnimatedBlock>
 
         {/* Block 2: Unsere Mission */}
-        <div ref={ref2} className="scroll-hidden max-w-3xl mx-auto text-center">
+        <AnimatedBlock className="max-w-3xl mx-auto text-center">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             Einfach und gut funktionierende hybride Zusammenarbeit.
           </p>
@@ -53,10 +66,10 @@ export function IntroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </AnimatedBlock>
 
         {/* Block 3: Das zeichnet uns aus */}
-        <div ref={ref3} className="scroll-hidden max-w-3xl mx-auto text-center">
+        <AnimatedBlock className="max-w-3xl mx-auto text-center">
           <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
             Passion für Videokonferenzen.
           </p>
@@ -70,7 +83,7 @@ export function IntroSection() {
             unseren Kunden stets partnerschaftlich zur Seite – zum Beispiel durch unseren 
             ausgezeichneten After-Sales Support und unseren Service Desk.
           </p>
-        </div>
+        </AnimatedBlock>
 
       </div>
     </section>
