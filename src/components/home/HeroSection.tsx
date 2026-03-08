@@ -109,7 +109,7 @@ export function HeroSection() {
       </div>
 
       {/* Hotspots on devices */}
-      <div ref={containerRef} className="absolute inset-0 z-10 hidden md:block">
+      <div ref={containerRef} className="absolute inset-0 z-30 hidden md:block" style={{ pointerEvents: DEV_MODE ? "auto" : "none" }}>
         {hotspots.map((spot) => {
           const inner = (
             <>
@@ -135,8 +135,8 @@ export function HeroSection() {
             return (
               <div
                 key={spot.id}
-                className="group absolute cursor-grab active:cursor-grabbing"
-                style={{ top: `${spot.top}%`, left: `${spot.left}%` }}
+                className="group absolute cursor-grab active:cursor-grabbing p-4 -m-4"
+                style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
                 onMouseDown={(e) => handleMouseDown(e, spot.id)}
               >
                 {inner}
