@@ -18,16 +18,6 @@ import {
   Briefcase,
   GraduationCap,
   Wrench,
-  Coffee,
-  Shield,
-  Laptop,
-  Apple,
-  Flame,
-  BookOpen,
-  PartyPopper,
-  Shirt,
-  Trophy,
-  MessageCircle,
   ChevronDown,
   FileText,
   X,
@@ -35,6 +25,16 @@ import {
 } from "lucide-react";
 
 import introRakete from "@/assets/intro-rakete.png";
+import iconFlexibleArbeitszeiten from "@/assets/benefits/flexible-arbeitszeiten.png";
+import iconAltersvorsorge from "@/assets/benefits/altersvorsorge.png";
+import iconLaptop from "@/assets/benefits/laptop.png";
+import iconGetraenke from "@/assets/benefits/getraenke-fruechte.png";
+import iconGrillplatz from "@/assets/benefits/grillplatz.png";
+import iconWeiterbildung from "@/assets/benefits/weiterbildung.png";
+import iconWeihnachtsfeier from "@/assets/benefits/weihnachtsfeier.png";
+import iconArbeitskleidung from "@/assets/benefits/arbeitskleidung.png";
+import iconBonussystem from "@/assets/benefits/bonussystem.png";
+import iconFeedbackkultur from "@/assets/benefits/feedbackkultur.png";
 
 const jobPositions = [
   {
