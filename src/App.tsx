@@ -16,6 +16,7 @@ import Kontakt from "./pages/Kontakt";
 import Projektanfrage from "./pages/Projektanfrage";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import AGB from "./pages/AGB";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
