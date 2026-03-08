@@ -41,7 +41,7 @@ const services = [
     title: "Fachplanung & Ausschreibung",
     subtitle: "Herstellerneutral und fundiert",
     description:
-      "Ich erstelle detaillierte Leistungsverzeichnisse, entwickle objektive Bewertungskriterien und begleite Sie durch den gesamten Vergabeprozess. So erhalten Sie vergleichbare Angebote und eine fundierte Entscheidungsgrundlage.",
+      "Wir erstellen detaillierte Leistungsverzeichnisse, entwickeln objektive Bewertungskriterien und begleiten Sie durch den gesamten Vergabeprozess. So erhalten Sie vergleichbare Angebote und eine fundierte Entscheidungsgrundlage.",
     deliverables: [
       { icon: FileText, title: "Leistungsverzeichnisse", description: "Detaillierte, herstellerneutrale Ausschreibungsunterlagen" },
       { icon: CheckCircle, title: "Bewertungsmatrizen", description: "Objektive Kriterien für die Angebotsvergleichbarkeit" },
