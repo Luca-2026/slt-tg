@@ -85,19 +85,31 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
             Unsere {topic.title}-Leistungen in {city.name}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topic.services.map((service, i) => (
-              <Card key={i} className="bg-background border-border">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {topic.services.map((service, i) => {
+              const cardContent = (
+                <Card key={i} className={`bg-background border-border ${service.link ? "hover:border-primary/30 transition-colors" : ""}`}>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                    {service.link && (
+                      <span className="text-xs text-primary mt-2 inline-flex items-center gap-1">
+                        Mehr erfahren <ArrowRight className="h-3 w-3" />
+                      </span>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+              return service.link ? (
+                <Link key={i} to={service.link} className="block">{cardContent}</Link>
+              ) : (
+                cardContent
+              );
+            })}
           </div>
         </div>
       </section>
