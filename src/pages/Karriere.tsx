@@ -151,7 +151,7 @@ export default function Karriere() {
     setSelectedPosition(job.title);
     setTimeout(() => {
       formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
+    }, 200);
   };
 
   const closeApplicationForm = () => {
@@ -248,7 +248,7 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
+      <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-center">
         <img
           src={karriereHero}
           alt="SLT Karriere"
