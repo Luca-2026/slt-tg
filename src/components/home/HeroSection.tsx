@@ -135,7 +135,7 @@ export function HeroSection() {
 
             <div className="flex gap-3 mb-10">
               <Button asChild size="lg" className="text-base bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
-                <Link to="/kontakt">
+                <Link to="/projektanfrage">
                   Projekt anfragen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
