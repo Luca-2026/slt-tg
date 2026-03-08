@@ -6,7 +6,7 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { ReferencesTeaser } from "@/components/home/ReferencesTeaser";
 import { ClientLogosSlider } from "@/components/home/ClientLogosSlider";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+
 import { PartnersSection } from "@/components/home/PartnersSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
@@ -26,7 +26,7 @@ const Index = () => {
       <ProcessTimeline />
       <ReferencesTeaser />
       <ClientLogosSlider />
-      <TestimonialsSection />
+      
       <PartnersSection />
       <FAQSection />
       <CTASection />

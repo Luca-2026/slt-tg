@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Building2, 
@@ -13,8 +13,11 @@ import {
   MapPin,
   Calendar,
   CheckCircle,
-  X
+  X,
+  Star,
+  Quote
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
@@ -108,7 +111,97 @@ const projects = [
   },
 ];
 
-const Projekte = () => {
+const testimonials = [
+  {
+    name: "Thomas Döbber-Rüther",
+    position: "Geschäftsführer",
+    company: "Rheinhotel Dreesen GmbH",
+    rating: 5,
+    text: "Wir haben die Firma SLT Technology Group als zuverlässigen Partner im Bereich der Neuausstattung unserer Tagungsräume erlebt. Schnelle Abwicklung, kompetente Monteure und ein insgesamt reibungsloser Ablauf! Vielen Dank und gerne wieder!",
+    avatar: "/assets/testimonials/thomas.png",
+  },
+  {
+    name: "Apostolos Parashos",
+    position: "Geschäftsführer",
+    company: "Laki's Gastro GmbH, Düsseldorf",
+    rating: 5,
+    text: "SLT hat unseren Gastronomie- und Eventbereich mit modernster LED-Beleuchtungstechnik, einer durchdachten Beschallungslösung, mehreren Digital-Signage Displays und einem leistungsfähigen Gäste-WIFI ausgestattet. Besonders großartig ist die ortsunabhängige Steuerung aller Komponenten über ein Tablet!",
+    avatar: "/assets/testimonials/lakis.jpg",
+  },
+  {
+    name: "André Perthel",
+    position: "Geschäftsführer",
+    company: "Ma2Me2 GmbH, Berlin",
+    rating: 5,
+    text: "Wir arbeiten bereits seit mehreren Jahren partnerschaftlich mit SLT im Bereich der Netzwerktechnik und der Planung von Videokonferenzlösungen zusammen. Die Zusammenarbeit zeichnet sich durch unkomplizierte Kommunikation und einer schnellen, stets professionellen Ausführung aus.",
+  },
+];
+
+const clients = [
+  { name: "TomTom", logo: "/assets/clients/tomtom.jpg", url: "https://www.tomtom.com" },
+  { name: "Rheinhotel Dreesen", logo: "/assets/clients/rheinhotel-dreesen.png", url: "https://www.rheinhoteldreesen.de" },
+  { name: "Langeoog Tourismus", logo: "/assets/clients/langeoog.png", url: "https://www.langeoog.de" },
+  { name: "Rhenus Lub", logo: "/assets/clients/rhenus.webp", url: "https://www.rhenuslub.de" },
+  { name: "Bank-Verlag", logo: "/assets/clients/bank-verlag.svg", url: "https://www.bank-verlag.de" },
+  { name: "Montaplast", logo: "/assets/clients/montaplast.png", url: "https://www.montaplast.com" },
+  { name: "GEA", logo: "/assets/clients/gea.png", url: "https://www.gea.com" },
+  { name: "Pfeifer & Langen", logo: "/assets/clients/pfeifer-langen.svg", url: "https://www.pfeifer-langen.com" },
+];
+
+function TestimonialsOnProjekte() {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+    <section className="py-16 lg:py-20 bg-muted/30">
+      <div className="section-container">
+        <div ref={ref} className={`text-center mb-10 scroll-hidden-blur ${isVisible ? "scroll-visible-blur" : ""}`}>
+          <Badge variant="outline" className="mb-4">Kundenstimmen</Badge>
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Das sagen unsere Kunden</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <Card key={i} className="bg-card border-border relative overflow-hidden">
+              <CardContent className="p-6">
+                <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/10" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(t.rating)].map((_, j) => (
+                    <Star key={j} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground mb-5 leading-relaxed">"{t.text}"</p>
+                <div className="border-t border-border pt-4 flex items-center gap-3">
+                  {t.avatar && <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover grayscale" />}
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">{t.position}, {t.company}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClientLogosOnProjekte() {
+  return (
+    <section className="py-12 bg-background">
+      <div className="section-container">
+        <h3 className="text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-8">Weitere Kunden</h3>
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+          {clients.map((c) => (
+            <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+              <img src={c.logo} alt={`${c.name} Logo`} loading="lazy" className="h-10 lg:h-12 w-auto object-contain" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
@@ -306,6 +399,12 @@ const Projekte = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsOnProjekte />
+
+      {/* Client Logos */}
+      <ClientLogosOnProjekte />
 
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-card">
