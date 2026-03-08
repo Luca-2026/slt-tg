@@ -9,6 +9,7 @@ const testimonials = [
     company: "Rheinhotel Dreesen GmbH",
     rating: 5,
     text: "Wir haben die Firma SLT Technology Group als zuverlässigen Partner im Bereich der Neuausstattung unserer Tagungsräume erlebt. Schnelle Abwicklung, kompetente Monteure und ein insgesamt reibungsloser Ablauf! Vielen Dank und gerne wieder!",
+    avatar: "/assets/testimonials/thomas.png",
   },
   {
     name: "Apostolos Parashos",
@@ -16,6 +17,7 @@ const testimonials = [
     company: "Laki's Gastro GmbH, Düsseldorf",
     rating: 5,
     text: "SLT hat unseren Gastronomie- und Eventbereich mit modernster LED-Beleuchtungstechnik, einer durchdachten Beschallungslösung, mehreren Digital-Signage Displays und einem leistungsfähigen Gäste-WIFI ausgestattet. Besonders großartig ist die ortsunabhängige Steuerung aller Komponenten über ein Tablet!",
+    avatar: "/assets/testimonials/lakis.jpg",
   },
   {
     name: "André Perthel",
