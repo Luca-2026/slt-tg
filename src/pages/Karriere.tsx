@@ -337,7 +337,7 @@ export default function Karriere() {
                             <Icon className="h-6 w-6 text-primary" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
+                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-1 leading-snug">
                               {job.title}
                             </h3>
                             {job.subtitle && (
