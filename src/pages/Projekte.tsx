@@ -290,7 +290,7 @@ const Projekte = () => {
               >
                 <div className="grid lg:grid-cols-2">
                   {/* Project Image */}
-                  <div className="aspect-video lg:aspect-auto bg-secondary flex items-center justify-center relative overflow-hidden min-h-[300px]">
+                  <div className="aspect-video bg-secondary flex items-center justify-center relative overflow-hidden">
                     {project.heroImage ? (
                       <img 
                         src={project.heroImage} 
