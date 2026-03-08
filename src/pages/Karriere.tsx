@@ -24,7 +24,7 @@ import {
   Rocket,
 } from "lucide-react";
 
-import introRakete from "@/assets/intro-rakete.png";
+import karriereHero from "@/assets/karriere-hero.png";
 import iconFlexibleArbeitszeiten from "@/assets/benefits/flexible-arbeitszeiten.png";
 import iconAltersvorsorge from "@/assets/benefits/altersvorsorge.png";
 import iconLaptop from "@/assets/benefits/laptop.png";
