@@ -29,8 +29,8 @@ const hotspots = [
     id: "kamera",
     label: "Videokonferenzsysteme",
     href: "/technologien#videokonferenz",
-    top: 15,
-    left: 35,
+    top: 20,
+    left: 30,
   },
   {
     id: "steuerung",
@@ -43,8 +43,8 @@ const hotspots = [
     id: "audio",
     label: "Audiotechnik",
     href: "/technologien#audio",
-    top: 55,
-    left: 20,
+    top: 45,
+    left: 14,
   },
   {
     id: "accesspoint",
