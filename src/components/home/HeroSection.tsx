@@ -167,6 +167,8 @@ export function HeroSection() {
             src={heroImage}
             alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
             className="w-full h-full object-cover object-center"
+            fetchPriority="high"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
         </div>
