@@ -55,7 +55,7 @@ const solutions = [
     icon: Presentation,
     title: "Auditorien & Veranstaltungsräume",
     subtitle: "Professionelle Präsentationen vor großem Publikum",
-    description: "Große Veranstaltungen erfordern professionelle Beschallung, hochauflösende Displays und zuverlässige Streaming-Lösungen. Ich plane Auditorien und Veranstaltungsräume, die sowohl Präsenz- als auch Hybrid-Events ermöglichen.",
+    description: "Große Veranstaltungen erfordern professionelle Beschallung, hochauflösende Displays und zuverlässige Streaming-Lösungen. Wir planen Auditorien und Veranstaltungsräume, die sowohl Präsenz- als auch Hybrid-Events ermöglichen.",
     features: [
       "Professionelle Beschallungssysteme",
       "LED-Wände & großformatige Displays",
