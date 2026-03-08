@@ -6,7 +6,7 @@ const clients = [
   { name: "TomTom", logo: "/assets/clients/tomtom.jpg", url: "https://www.tomtom.com" },
   { name: "Rheinhotel Dreesen", logo: "/assets/clients/rheinhotel-dreesen.png", url: "https://www.rheinhoteldreesen.de" },
   { name: "Langeoog Tourismus", logo: "/assets/clients/langeoog.png", url: "https://www.langeoog.de" },
-  { name: "Rhenus Logistics", logo: "/assets/clients/rhenus.webp", url: "https://www.rhenus.com" },
+  { name: "Rhenus Lub", logo: "/assets/clients/rhenus.webp", url: "https://www.rhenuslub.de" },
   { name: "Bank-Verlag", logo: "/assets/clients/bank-verlag.svg", url: "https://www.bank-verlag.de" },
   { name: "Montaplast", logo: "/assets/clients/montaplast.png", url: "https://www.montaplast.com" },
   { name: "GEA", logo: "/assets/clients/gea.png", url: "https://www.gea.com" },
