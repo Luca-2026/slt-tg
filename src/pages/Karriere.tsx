@@ -259,8 +259,8 @@ export default function Karriere() {
       </section>
 
       {/* Company Profile */}
-      <section ref={profileRef} className="py-16 md:py-24 bg-secondary/30">
-        <div className="section-container scroll-hidden">
+      <section ref={profileRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+        <div className="section-container">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Unternehmensprofil
           </p>
