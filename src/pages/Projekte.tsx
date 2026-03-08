@@ -93,10 +93,11 @@ const projects = [
     location: "Bönen",
     year: "2024",
     icon: Users,
-    heroImage: "/assets/projects/gea-farm/gea-main.jpg",
+    heroImage: "/assets/projects/gea-farm/gea-dual-display.jpg",
     galleryImages: [
+      "/assets/projects/gea-farm/gea-dual-display.jpg",
       "/assets/projects/gea-farm/gea-installation.jpg",
-      "/assets/projects/gea-farm/gea-room.jpg",
+      "/assets/projects/gea-farm/gea-camera.jpg",
     ],
     shortDescription: "Konzeption und Umsetzung eines modernen Managementraums mit Huddly L1, Nureva HDL-310 und zwei 75\" Iiyama 4K Displays.",
     challenge: "Das Management benötigte einen repräsentativen Raum für Präsentationen, Video-Meetings und strategische Workshops – mit höchsten Ansprüchen an Bild- und Tonqualität.",
