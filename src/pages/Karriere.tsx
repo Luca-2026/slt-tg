@@ -108,16 +108,16 @@ const jobPositions = [
 ];
 
 const benefits = [
-  { icon: Clock, label: "Flexible Arbeitszeiten" },
-  { icon: Shield, label: "Betriebliche Altersvorsorge" },
-  { icon: Laptop, label: "Eigener Laptop" },
-  { icon: Apple, label: "Küche mit Getränken & Obst" },
-  { icon: Flame, label: "Grillplatz" },
-  { icon: BookOpen, label: "Weiterbildungen" },
-  { icon: PartyPopper, label: "Weihnachtsfeier" },
-  { icon: Shirt, label: "Arbeitskleidung" },
-  { icon: Trophy, label: "Bonussystem" },
-  { icon: MessageCircle, label: "Offene Feedbackkultur" },
+  { image: iconFlexibleArbeitszeiten, label: "Flexible Arbeitszeiten" },
+  { image: iconAltersvorsorge, label: "Betriebliche Altersvorsorge" },
+  { image: iconLaptop, label: "Eigener Laptop" },
+  { image: iconGetraenke, label: "Küche mit Getränken & Obst" },
+  { image: iconGrillplatz, label: "Grillplatz" },
+  { image: iconWeiterbildung, label: "Weiterbildungen" },
+  { image: iconWeihnachtsfeier, label: "Weihnachtsfeier" },
+  { image: iconArbeitskleidung, label: "Arbeitskleidung" },
+  { image: iconBonussystem, label: "Bonussystem" },
+  { image: iconFeedbackkultur, label: "Offene Feedbackkultur" },
 ];
 
 export default function Karriere() {
