@@ -136,7 +136,7 @@ const solutions = [
       "Netzwerk-Monitoring & Management"
     ],
     useCases: ["Neubauten", "Bestandssanierung", "Campus-Netzwerke", "Rechenzentren"],
-    image: "/assets/solutions/conference-room.jpg"
+    image: "/assets/solutions/it-network.jpg"
   },
   {
     id: "videoueberwachung",
