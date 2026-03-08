@@ -133,6 +133,7 @@ export default function Karriere() {
   const { ref: formAnimRef, isVisible: formVisible } = useScrollAnimation();
 
   const [expandedJob, setExpandedJob] = useState<string | null>(null);
+  const [applyingForJob, setApplyingForJob] = useState<string | null>(null);
   const [selectedPosition, setSelectedPosition] = useState("");
   const [cvFile, setCvFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -140,9 +141,23 @@ export default function Karriere() {
   const formSectionRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
-  const scrollToForm = (position?: string) => {
-    if (position) setSelectedPosition(position);
-    formSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  const isAzubiPosition = (position: string) => {
+    const job = jobPositions.find((j) => j.title === position);
+    return job?.isAzubi ?? false;
+  };
+
+  const openApplicationForm = (job: typeof jobPositions[0]) => {
+    setApplyingForJob(job.id);
+    setSelectedPosition(job.title);
+    setTimeout(() => {
+      formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  };
+
+  const closeApplicationForm = () => {
+    setApplyingForJob(null);
+    setSelectedPosition("");
+    setCvFile(null);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
