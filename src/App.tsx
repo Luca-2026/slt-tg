@@ -19,8 +19,12 @@ import Datenschutz from "./pages/Datenschutz";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
+import LocalSEOPage from "./pages/LocalSEOPage";
+import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
+
+const localRoutes = getLocalSEORoutes();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -44,6 +48,13 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          {localRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={<LocalSEOPage topicKey={route.topic} cityKey={route.city} />}
+            />
+          ))}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
