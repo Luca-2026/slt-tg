@@ -44,6 +44,7 @@ const jobPositions = [
     type: "Vollzeit",
     start: "Ausbildungsbeginn: 01.08.2026",
     icon: GraduationCap,
+    isAzubi: true,
     description:
       "Du organisierst gerne, behältst den Überblick und möchtest in einem innovativen Tech-Unternehmen durchstarten? Dann ist diese Ausbildung genau das Richtige für dich.",
     tasks: [
@@ -51,12 +52,14 @@ const jobPositions = [
       "Kundenkommunikation und -betreuung",
       "Rechnungswesen und Auftragsbearbeitung",
       "Unterstützung bei Projekten und Events",
+      "Nutzung moderner KI-Tools zur Optimierung kaufmännischer Prozesse",
     ],
     requirements: [
       "Mittlere Reife oder (Fach-)Abitur",
       "Organisationstalent und Eigeninitiative",
       "Gute Deutsch- und Englischkenntnisse",
       "Sicherer Umgang mit MS Office",
+      "Interesse an KI-gestützten Arbeitsmethoden und digitalen Tools",
     ],
   },
   {
@@ -67,6 +70,7 @@ const jobPositions = [
     start: "Ausbildungsbeginn: 01.08.2026",
     subtitle: "Schwerpunkt: AV-Systemintegration",
     icon: Wrench,
+    isAzubi: true,
     description:
       "Du bist technikbegeistert und möchtest lernen, wie professionelle AV-Systeme geplant, installiert und konfiguriert werden? Werde Teil unseres Teams!",
     tasks: [
@@ -90,6 +94,7 @@ const jobPositions = [
     start: "Arbeitsbeginn: ab sofort",
     subtitle: "Schwerpunkt Installation & Konfiguration",
     icon: Briefcase,
+    isAzubi: false,
     description:
       "Du bist erfahren in der Medientechnik und möchtest hochwertige Konferenz- und Kollaborationslösungen für namhafte Kunden realisieren? Dann suchen wir genau dich!",
     tasks: [
