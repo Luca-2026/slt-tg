@@ -406,21 +406,16 @@ export default function Karriere() {
             Das bieten wir unserem Team
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
+            {benefits.map((benefit, index) => (
                 <div
                   key={benefit.label}
                   className="flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
+                  <img src={benefit.image} alt={benefit.label} className="w-16 h-16 md:w-20 md:h-20 object-contain mb-3" />
                   <span className="text-sm font-medium text-foreground">{benefit.label}</span>
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
       </section>
