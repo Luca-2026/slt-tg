@@ -140,8 +140,8 @@ export function IntroSection() {
 
           <AnimatedBlock direction="right">
             <ImageCard
-              src={introLogo}
-              alt="SLT Technology Group Logo"
+              src={introAuszeichnung}
+              alt="Moderner Konferenzraum mit Display und Videokonferenzsystem von SLT"
               className="aspect-[16/9]"
             />
           </AnimatedBlock>
