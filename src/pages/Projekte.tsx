@@ -459,7 +459,7 @@ const Projekte = () => {
           </button>
           <img 
             src={lightboxImage} 
-            alt="Projektbild vergrößert"
+            alt="Vergrößerte Projektansicht – AV-Installation von SLT Technology Group"
             className="max-w-full max-h-full object-contain"
             onClick={(e) => e.stopPropagation()}
           />

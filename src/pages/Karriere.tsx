@@ -275,7 +275,7 @@ export default function Karriere() {
       <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-end sm:items-center">
         <img
           src={karriereHero}
-          alt="SLT Karriere"
+          alt="Karriere bei der SLT Technology Group – offene Stellen in der Medientechnik und IT-Branche"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />

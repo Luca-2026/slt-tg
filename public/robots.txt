@@ -1,11 +1,12 @@
-# Robots.txt für Sandhoff IT- & Mediensysteme
-# Canonical Domain: https://www.sandhoff.org
+# Robots.txt für SLT Technology Group GmbH & Co. KG
+# Canonical Domain: https://www.slt-tg.de
 
 User-agent: *
 Allow: /
+Disallow: /api/
 
 # Sitemap
-Sitemap: https://www.sandhoff.org/sitemap.xml
+Sitemap: https://www.slt-tg.de/sitemap.xml
 
 # Spezifische Bot-Regeln
 User-agent: Googlebot

@@ -256,7 +256,7 @@ const Loesungen = () => {
                 <div className="aspect-video bg-secondary rounded-2xl overflow-hidden">
                   <img 
                     src={solution.image} 
-                    alt={solution.title}
+                    alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
                     className="w-full h-full object-cover"
                   />
                 </div>

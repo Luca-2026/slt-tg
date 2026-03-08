@@ -120,7 +120,7 @@ const UeberUns = () => {
               <div className="aspect-[4/3] bg-secondary rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src="/assets/team/team-photo.jpg" 
-                  alt="SLT Technology Group Team"
+                  alt="Das Team der SLT Technology Group – AV- und IT-Spezialisten aus Krefeld"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
