@@ -290,30 +290,17 @@ export default function Karriere() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
             Wir als Arbeitgeber
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="card-hover border-primary/20">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Rocket className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">SLT Technology Group</h3>
-                <p className="text-muted-foreground">
-                  Unter der Marke SLT Technology Group planen und installieren wir hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="card-hover border-accent/20">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <Briefcase className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">SLT-Rental</h3>
-                <p className="text-muted-foreground">
-                  Unter der Marke SLT-Rental vermieten wir Baumaschinen, Anhänger sowie Eventbedarf und setzen dabei auf ein einzigartig-digitales Vermietkonzept mit eigener Onlineplattform.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="card-hover border-primary/20 max-w-2xl">
+            <CardContent className="p-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <Rocket className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">SLT Technology Group</h3>
+              <p className="text-muted-foreground">
+                Die SLT Technology Group GmbH & Co. KG ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden – deutschlandweit und in Europa.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
