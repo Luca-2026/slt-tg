@@ -124,7 +124,7 @@ export function HeroSection() {
       </section>
 
       {/* ===== TABLET HERO (sm to lg) ===== */}
-      <section className="relative hidden sm:flex lg:hidden items-center min-h-[80svh] overflow-hidden -mt-20">
+      <section className="relative hidden sm:flex lg:hidden items-center min-h-[100svh] overflow-hidden -mt-20">
         <div className="absolute inset-0">
           <img
             src={heroImage}
