@@ -66,7 +66,7 @@ const UeberUns = () => {
                 SLT Technology Group
               </h1>
               <p className="text-xl text-primary font-medium mb-4">
-                Ihr Spezialist für Videokonferenz- & AV-Lösungen
+                Ihr Spezialist für AV- & IT-Lösungen
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Mit über 8 Jahren Erfahrung in der AV/UC-Branche haben wir eines gelernt: 
