@@ -143,11 +143,11 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }}>
+            <p className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }} role="presentation">
               <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
-            </h1>
+            </p>
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
               Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
