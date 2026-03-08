@@ -22,36 +22,36 @@ const hotspots = [
     id: "display",
     label: "Displays & Visualisierung",
     href: "/technologien#displays",
-    top: "28%",
-    left: "37%",
+    top: "33%",
+    left: "38%",
   },
   {
     id: "kamera",
     label: "Videokonferenzsysteme",
     href: "/technologien#videokonferenz",
-    top: "18%",
-    left: "43%",
+    top: "20%",
+    left: "38%",
   },
   {
     id: "steuerung",
     label: "Mediensteuerung",
     href: "/technologien#steuerung",
-    top: "62%",
-    left: "35%",
+    top: "68%",
+    left: "33%",
   },
   {
     id: "audio",
     label: "Audiotechnik",
     href: "/technologien#audio",
-    top: "52%",
-    left: "27%",
+    top: "58%",
+    left: "24%",
   },
   {
     id: "sensor",
     label: "Videoüberwachung & Sicherheit",
     href: "/technologien#videoueberwachung",
-    top: "22%",
-    left: "52%",
+    top: "23%",
+    left: "49%",
   },
 ];
 
@@ -116,14 +116,14 @@ export function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="btn-glow text-base px-8">
               <Link to="/kontakt">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white">
+            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
               <Link to="/projekte">
                 <Play className="mr-2 h-5 w-5" />
                 Referenzen ansehen
