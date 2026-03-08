@@ -153,7 +153,8 @@ const solutions = [
       "24/7 Monitoring & Alarmierung"
     ],
     useCases: ["Firmengelände", "Produktionshallen", "Parkhäuser", "Kritische Infrastruktur"],
-    image: "/assets/solutions/surveillance.jpg"
+    image: "/assets/solutions/surveillance.jpg",
+    imagePosition: "object-[50%_25%]"
   },
 ];
 
@@ -178,7 +179,7 @@ function SolutionDetailSection({ solution, index }: { solution: typeof solutions
                 src={solution.image} 
                 alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
                 loading="lazy"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className={`w-full h-full object-cover hover:scale-105 transition-transform duration-700 ${solution.imagePosition || ""}`}
               />
             </div>
           </div>
