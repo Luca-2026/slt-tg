@@ -98,6 +98,16 @@ export function HeroSection() {
             </div>
           </div>
 
+          {/* Hero Image */}
+          <div className="rounded-xl overflow-hidden my-6 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+            <img
+              src={heroImage}
+              alt="Moderner Konferenzraum mit professioneller AV-Technik"
+              className="w-full h-40 object-cover object-center rounded-xl"
+              fetchPriority="high"
+              loading="eager"
+            />
+
           {/* Stats - pushed to bottom */}
           <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 mt-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={150} suffix="+" label="Projekte" />
