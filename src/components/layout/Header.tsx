@@ -18,10 +18,28 @@ const navigation = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const isTransparent = isHome && !scrolled && !mobileMenuOpen;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        isTransparent
+          ? "bg-transparent border-b border-transparent"
+          : "bg-background/95 backdrop-blur-lg border-b border-border shadow-sm"
+      )}
+    >
       <nav className="section-container flex items-center justify-between h-20 lg:h-24 overflow-hidden">
         {/* Logo */}
         <Link to="/" className="flex items-center overflow-hidden">
@@ -35,10 +53,15 @@ export function Header() {
               key={item.name}
               to={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                location.pathname === item.href
+                "text-sm font-medium transition-colors",
+                isTransparent
+                  ? "text-white/80 hover:text-white"
+                  : "hover:text-primary",
+                !isTransparent && location.pathname === item.href
                   ? "text-primary"
-                  : "text-muted-foreground"
+                  : !isTransparent
+                  ? "text-muted-foreground"
+                  : ""
               )}
             >
               {item.name}
@@ -56,7 +79,10 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
+          className={cn(
+            "lg:hidden p-2 transition-colors",
+            isTransparent ? "text-white/80 hover:text-white" : "text-muted-foreground hover:text-foreground"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
