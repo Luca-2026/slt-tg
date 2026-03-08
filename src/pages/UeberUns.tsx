@@ -176,7 +176,7 @@ const UeberUns = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
