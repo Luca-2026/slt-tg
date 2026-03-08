@@ -8,15 +8,15 @@
 
 @layer base {
   :root {
-    /* SLT CI Colors: #00507d (Primary Blue), #ff8e02 (Orange), #393d46 (Dark Gray), #eeeeee (Light Gray) */
-    --background: 204 100% 4%;
-    --foreground: 0 0% 93%;
+    /* SLT CI: #00507d (Blue), #ff8e02 (Orange), #393d46 (Headlines), #595959 (Text), #eeeeee (Light Gray) */
+    --background: 0 0% 100%;
+    --foreground: 220 10% 25%;
 
-    --card: 204 60% 8%;
-    --card-foreground: 0 0% 93%;
+    --card: 0 0% 97%;
+    --card-foreground: 220 10% 25%;
 
-    --popover: 204 60% 8%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 25%;
 
     /* Primary - SLT Blue #00507d */
     --primary: 204 100% 25%;
@@ -24,38 +24,39 @@
 
     /* Secondary - SLT Orange #ff8e02 */
     --secondary: 33 100% 50%;
-    --secondary-foreground: 204 100% 4%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 10% 18%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 35%;
 
     /* Accent - SLT Orange #ff8e02 */
     --accent: 33 100% 50%;
-    --accent-foreground: 204 100% 4%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 93%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 22%;
-    --input: 220 10% 18%;
-    --ring: 33 100% 50%;
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 204 100% 25%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
-    --sidebar-background: 204 100% 3%;
-    --sidebar-foreground: 0 0% 93%;
+    --sidebar-background: 204 100% 20%;
+    --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 33 100% 50%;
-    --sidebar-primary-foreground: 204 100% 4%;
-    --sidebar-accent: 220 10% 18%;
-    --sidebar-accent-foreground: 0 0% 93%;
-    --sidebar-border: 220 10% 22%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 204 100% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 204 100% 18%;
     --sidebar-ring: 33 100% 50%;
 
     /* Custom Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(33 100% 46%), hsl(33 100% 54%));
-    --shadow-glow: 0 0 40px -10px hsl(33 100% 50% / 0.4);
-    --shadow-card: 0 4px 20px -4px hsl(204 100% 0% / 0.5);
+    --gradient-primary: linear-gradient(135deg, hsl(204 100% 22%), hsl(204 100% 30%));
+    --gradient-accent: linear-gradient(135deg, hsl(33 100% 46%), hsl(33 100% 54%));
+    --shadow-glow: 0 0 40px -10px hsl(204 100% 25% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(220 10% 25% / 0.08);
   }
 
   /* Light mode override - keep dark for this project */
