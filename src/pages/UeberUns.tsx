@@ -46,7 +46,7 @@ const timeline = [
   { year: "2016", text: "Gründung der SLT Event Production UG (haftungsbeschränkt) mit Sitz in Köln." },
   { year: "2017", text: "Umwandlung in die SLT Event Production GmbH und Umzug in die neuen Geschäftsräume nach Düsseldorf." },
   { year: "2018", text: "Bezug des neuen Standorts in Ratingen-Homberg." },
-  { year: "2020", text: "Erweiterung des Portfolios und Umfirmierung in „SLT Technology Group GmbH & Co. KG"." },
+  { year: "2020", text: 'Erweiterung des Portfolios und Umfirmierung in "SLT Technology Group GmbH & Co. KG".' },
   { year: "2020", text: "Bezug des neuen Standorts in Krefeld-Fichtenhain an der A44 mit neuen Büros und Lagerflächen." },
 ];
 
