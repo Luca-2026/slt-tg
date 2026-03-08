@@ -43,7 +43,7 @@ const generateArticleSchema = (article: ArticleData) => ({
     "@type": "WebPage",
     "@id": `https://www.slt-tg.de/news/${article.slug}`
   },
-  "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/assets/sandhoff-logo.jpg",
+  "image": article.image ? `https://www.slt-tg.de${article.image}` : "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/favicon.png",,
   "articleSection": article.category,
   "keywords": article.keywords
 });
