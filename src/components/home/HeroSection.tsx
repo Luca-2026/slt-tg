@@ -107,9 +107,10 @@ export function HeroSection() {
               fetchPriority="high"
               loading="eager"
             />
+          </div>
 
           {/* Stats - pushed to bottom */}
-          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 mt-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={150} suffix="+" label="Projekte" />
             <CountUpStat end={200} suffix="+" label="Kunden" />
             <CountUpStat end={10} suffix="+" label="Jahre" />
