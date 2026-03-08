@@ -6,7 +6,7 @@ const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com", hasLogo: true },
   { name: "Q-Sys", logo: "/assets/partners/qsys.jpg", url: "https://www.qsys.com", hasLogo: true },
   { name: "Shure", logo: "/assets/partners/shure.svg", url: "https://www.shure.com", hasLogo: true },
-  { name: "Sennheiser", logo: "/assets/partners/sennheiser.png", url: "https://www.sennheiser.com", hasLogo: true, invert: true },
+  { name: "Sennheiser", logo: "/assets/partners/sennheiser.svg", url: "https://www.sennheiser.com", hasLogo: true },
   { name: "Nureva", logo: "/assets/partners/nureva.png", url: "https://www.nureva.com", hasLogo: true },
   { name: "Barco", logo: "/assets/partners/barco.png", url: "https://www.barco.com", hasLogo: true },
   { name: "Yealink", logo: "/assets/partners/yealink.png", url: "https://www.yealink.com", hasLogo: true },
@@ -16,6 +16,7 @@ const partners = [
   { name: "Samsung", logo: "/assets/partners/samsung.png", url: "https://www.samsung.com", hasLogo: true },
   { name: "AVer", logo: "/assets/partners/aver.jpg", url: "https://www.aver.com", hasLogo: true },
   { name: "Huddly", logo: "/assets/partners/huddly.png", url: "https://www.huddly.com", hasLogo: true },
+  { name: "Ubiquiti", logo: "/assets/partners/ubiquiti.png", url: "https://www.ui.com", hasLogo: true },
 ];
 
 export function PartnersSection() {
@@ -69,7 +70,7 @@ export function PartnersSection() {
                     loading="lazy"
                     decoding="async"
                     className={`h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${
-                      partner.name === "Huddly" || partner.invert ? "invert" : ""
+                      partner.name === "Huddly" ? "invert" : ""
                     }`}
                   />
                 </div>
