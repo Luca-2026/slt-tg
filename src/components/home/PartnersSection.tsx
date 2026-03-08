@@ -70,7 +70,7 @@ export function PartnersSection() {
                     loading="lazy"
                     decoding="async"
                     className={`h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${
-                      partner.name === "Huddly" || partner.invert ? "invert" : ""
+                      partner.name === "Huddly" ? "invert" : ""
                     }`}
                   />
                 </div>
