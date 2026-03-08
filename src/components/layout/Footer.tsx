@@ -35,15 +35,15 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-primary text-primary-foreground border-t border-border">
       <div className="section-container py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <img src={sltLogo} alt="SLT Technology Group" className="h-10 w-auto" />
+              <img src={sltLogo} alt="SLT Technology Group" className="h-12 w-auto brightness-0 invert" />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-primary-foreground/70 leading-relaxed">
               Ihr Partner für die Installation & Integration von
               Konferenz- und Medientechnik in Deutschland und Europa.
             </p>
@@ -51,13 +51,13 @@ export function Footer() {
 
           {/* Leistungen */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider mb-4">
               Leistungen
             </h3>
             <ul className="space-y-3">
               {footerLinks.leistungen.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -67,13 +67,13 @@ export function Footer() {
 
           {/* Lösungen */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider mb-4">
               Lösungen
             </h3>
             <ul className="space-y-3">
               {footerLinks.loesungen.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -83,20 +83,20 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider mb-4">
               Navigation
             </h3>
             <ul className="space-y-3">
               {footerLinks.navigation.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -106,23 +106,23 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-primary-foreground uppercase tracking-wider mb-4">
               Kontakt
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+4921514179902" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+4921514179902" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   <Phone className="h-4 w-4" />
                   +49 (0) 2151 - 417 99 02
                 </a>
               </li>
               <li>
-                <a href="mailto:info@slt-tg.de" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:info@slt-tg.de" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                   <Mail className="h-4 w-4" />
                   info@slt-tg.de
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2 text-sm text-primary-foreground/70">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span>
                   Anrather Straße 291<br />
@@ -134,8 +134,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-center text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
+          <p className="text-center text-sm text-primary-foreground/60">
             © {currentYear} SLT Technology Group GmbH & Co. KG. Alle Rechte vorbehalten.
           </p>
         </div>
