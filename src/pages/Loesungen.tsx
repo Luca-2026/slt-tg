@@ -179,7 +179,7 @@ function SolutionDetailSection({ solution, index }: { solution: typeof solutions
                 src={solution.image} 
                 alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
                 loading="lazy"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className={`w-full h-full object-cover hover:scale-105 transition-transform duration-700 ${solution.imagePosition || ""}`}
               />
             </div>
           </div>
