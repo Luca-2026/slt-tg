@@ -157,7 +157,7 @@ const Finanzierung = () => {
               Flexible Finanzierungs&shy;optionen
             </h1>
             <p className="text-lg text-muted-foreground">
-              Medientechnik muss nicht immer eine große Investition sein. Ich berate Sie 
+              Medientechnik muss nicht immer eine große Investition sein. Wir beraten Sie 
               zu verschiedenen Finanzierungsmodellen – von Kauf über Leasing bis zum 
               All-inclusive-Service.
             </p>
