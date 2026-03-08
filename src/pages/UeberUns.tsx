@@ -16,12 +16,12 @@ const values = [
   {
     icon: Target,
     title: "Herstellerneutral",
-    description: "Ich empfehle nur, was zu Ihren Anforderungen passt – nicht was die höchste Marge bringt.",
+    description: "Wir empfehlen nur, was zu Ihren Anforderungen passt – nicht was die höchste Marge bringt.",
   },
   {
     icon: Handshake,
     title: "Partnerschaftlich",
-    description: "Ich sehe mich als verlängerten Arm Ihrer IT-Abteilung, nicht als externen Berater.",
+    description: "Wir sehen uns als verlängerten Arm Ihrer IT-Abteilung, nicht als externen Berater.",
   },
   {
     icon: Lightbulb,
