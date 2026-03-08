@@ -103,7 +103,7 @@ const UeberUns = () => {
                 für die Privatwirtschaft oder die öffentliche Hand.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Als <strong className="text-foreground">Inklusionsunternehmen</strong> prägen uns bei der täglichen Arbeit 
+                Als <a href="https://www.bih.de/integrationsaemter/zb-magazin/ausgabe-02-2024-lvr/gewagt-und-gewonnen/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">Inklusionsunternehmen</a> prägen uns bei der täglichen Arbeit 
                 insbesondere die Werte <strong className="text-foreground">Nachhaltigkeit</strong> und <strong className="text-foreground">Klimaneutralität</strong>.
               </p>
               <Button asChild>
