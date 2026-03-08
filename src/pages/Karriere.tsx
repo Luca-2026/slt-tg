@@ -248,55 +248,55 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-center">
+      <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-end sm:items-center">
         <img
           src={karriereHero}
           alt="SLT Karriere"
-          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right-bottom"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 py-20 md:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 pb-12 pt-20 sm:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="max-w-xl">
-            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-6 text-sm px-4 py-1.5">
+            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
               Wir stellen ein 🚀
             </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary-foreground">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-primary-foreground">
               Starte mit uns durch.
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-6 sm:mb-8">
               Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
             </p>
             <Button
               size="lg"
-              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group"
+              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
               onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
             >
               Offene Stellen ansehen
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
       </section>
 
       {/* Company Profile */}
-      <section ref={profileRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+      <section ref={profileRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Unternehmensprofil
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-8">
             Wir als Arbeitgeber
           </h2>
           <Card className="card-hover border-primary/20">
-            <CardContent className="p-8">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <Rocket className="h-6 w-6 text-primary" />
+            <CardContent className="p-5 sm:p-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4">
+                <Rocket className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">SLT Technology Group</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">SLT Technology Group</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 Die SLT Technology Group GmbH & Co. KG ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden – deutschlandweit und in Europa.
               </p>
             </CardContent>
@@ -305,12 +305,12 @@ export default function Karriere() {
       </section>
 
       {/* Job Positions */}
-      <section ref={jobsRef} id="positions" className={`py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
+      <section ref={jobsRef} id="positions" className={`py-12 sm:py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Offene Stellen
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-10">
             Stellenmarkt
           </h2>
           <div className="space-y-4">
@@ -331,13 +331,13 @@ export default function Karriere() {
                       className="w-full text-left"
                       onClick={() => setExpandedJob(isExpanded ? null : job.id)}
                     >
-                      <CardContent className="p-6 md:p-8">
+                      <CardContent className="p-4 sm:p-6 md:p-8">
                         <div className="flex flex-col md:flex-row md:items-center gap-4">
                           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon className="h-6 w-6 text-primary" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">
+                            <h3 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-1 leading-snug">
                               {job.title}
                             </h3>
                             {job.subtitle && (
@@ -363,7 +363,7 @@ export default function Karriere() {
                     </button>
 
                     {isExpanded && (
-                      <div className="px-6 md:px-8 pb-8 animate-fade-in-up border-t border-border pt-6">
+                      <div className="px-4 sm:px-6 md:px-8 pb-6 sm:pb-8 animate-fade-in-up border-t border-border pt-4 sm:pt-6">
                         <p className="text-muted-foreground mb-6">{job.description}</p>
                         <div className="grid md:grid-cols-2 gap-8 mb-8">
                           <div>
@@ -568,23 +568,23 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
-      <section ref={benefitsRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
+      <section ref={benefitsRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Wir möchten etwas zurückgeben
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-10">
             Das bieten wir unserem Team
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
             {benefits.map((benefit, index) => (
                 <div
                   key={benefit.label}
-                  className="flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                  className="flex flex-col items-center text-center p-3 sm:p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <img src={benefit.image} alt={benefit.label} className="w-16 h-16 md:w-20 md:h-20 object-contain mb-3" />
-                  <span className="text-sm font-medium text-foreground">{benefit.label}</span>
+                  <img src={benefit.image} alt={benefit.label} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain mb-2 sm:mb-3" />
+                  <span className="text-xs sm:text-sm font-medium text-foreground">{benefit.label}</span>
                 </div>
               ))}
           </div>
