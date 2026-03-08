@@ -109,7 +109,7 @@ export function HeroSection() {
       </div>
 
       {/* Hotspots on devices */}
-      <div ref={containerRef} className="absolute inset-0 z-10 hidden md:block">
+      <div ref={containerRef} className="absolute inset-0 z-30 hidden md:block" style={{ pointerEvents: DEV_MODE ? "auto" : "none" }}>
         {hotspots.map((spot) => {
           const inner = (
             <>
