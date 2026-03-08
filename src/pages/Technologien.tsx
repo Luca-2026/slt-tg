@@ -182,11 +182,11 @@ const Technologien = () => {
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Herstellerneutrale Technologieberatung
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Ich empfehle nur Produkte, die zu Ihren Anforderungen passen – nicht die mit 
-              der höchsten Marge. Durch Zertifizierungen bei führenden Herstellern kenne 
-              ich die Stärken und Schwächen jeder Lösung.
-            </p>
+             <p className="text-lg text-muted-foreground">
+               Wir empfehlen nur Produkte, die zu Ihren Anforderungen passen – nicht die mit 
+               der höchsten Marge. Durch Zertifizierungen bei führenden Herstellern kennen 
+               wir die Stärken und Schwächen jeder Lösung.
+             </p>
           </div>
         </div>
       </section>

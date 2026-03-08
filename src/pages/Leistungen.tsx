@@ -82,13 +82,13 @@ const Leistungen = () => {
             <Badge variant="outline" className="mb-6">
               Leistungsübersicht
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Meine Leistungen im Detail
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Von der ersten Idee bis zum laufenden Betrieb – ich begleite Ihr Projekt 
-              in allen Phasen mit Expertise und Leidenschaft für durchdachte Lösungen.
-            </p>
+             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+               Unsere Leistungen im Detail
+             </h1>
+             <p className="text-lg text-muted-foreground">
+               Von der ersten Idee bis zum laufenden Betrieb – wir begleiten Ihr Projekt 
+               in allen Phasen mit Expertise und Leidenschaft für durchdachte Lösungen.
+             </p>
           </div>
         </div>
       </section>

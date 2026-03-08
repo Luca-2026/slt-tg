@@ -12,7 +12,7 @@ const steps = [
     icon: Search,
     number: "02",
     title: "Konzept entwickeln",
-    description: "Ich erstelle ein maßgeschneidertes Konzept mit Testsystemen und Wirtschaftlichkeitsbetrachtung.",
+    description: "Wir erstellen ein maßgeschneidertes Konzept mit Testsystemen und Wirtschaftlichkeitsbetrachtung.",
   },
   {
     icon: FileCheck,

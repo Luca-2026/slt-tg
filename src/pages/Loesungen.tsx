@@ -139,10 +139,10 @@ const Loesungen = () => {
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Maßgeschneiderte Lösungen für jeden Raum
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
-              Anforderungen. Ich entwickle Konzepte, die genau zu Ihren Nutzungsszenarien passen.
-            </p>
+             <p className="text-lg text-muted-foreground">
+               Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
+               Anforderungen. Wir entwickeln Konzepte, die genau zu Ihren Nutzungsszenarien passen.
+             </p>
           </div>
         </div>
       </section>

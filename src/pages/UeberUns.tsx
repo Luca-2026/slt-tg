@@ -184,10 +184,10 @@ const UeberUns = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Lassen Sie uns über Ihr Projekt sprechen
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            Ob konkretes Vorhaben oder erste Orientierung – ich nehme mir gerne Zeit 
-            für ein unverbindliches Gespräch.
-          </p>
+           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+             Ob konkretes Vorhaben oder erste Orientierung – wir nehmen uns gerne Zeit 
+             für ein unverbindliches Gespräch.
+           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="btn-glow">
               <Link to="/projektanfrage">

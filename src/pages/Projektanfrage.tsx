@@ -633,7 +633,7 @@ const Projektanfrage = () => {
                         <Link to="/datenschutz" className="text-primary hover:underline">
                           Datenschutzerklärung
                         </Link>{" "}
-                        gelesen und stimme der Verarbeitung meiner Daten zu. *
+                         gelesen und stimme der Verarbeitung meiner Daten zu. *
                       </Label>
                     </div>
 
