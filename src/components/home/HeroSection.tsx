@@ -134,7 +134,6 @@ export function HeroSection() {
           if (DEV_MODE) {
             return (
               <div
-              <div
                 key={spot.id}
                 className="group absolute cursor-grab active:cursor-grabbing p-4 -m-4"
                 style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
