@@ -6,6 +6,12 @@ export interface LocalSEOCity {
   coordinates: { lat: string; lng: string };
 }
 
+export interface LocalSEOService {
+  title: string;
+  description: string;
+  link?: string;
+}
+
 export interface LocalSEOTopic {
   baseSlug: string;
   title: string;
@@ -14,7 +20,7 @@ export interface LocalSEOTopic {
   heroTitle: (city: string) => string;
   heroSubtitle: (city: string) => string;
   intro: (city: string) => string;
-  services: { title: string; description: string }[];
+  services: LocalSEOService[];
   faqItems: (city: string) => { question: string; answer: string }[];
 }
 
@@ -39,12 +45,12 @@ export const topics: Record<string, LocalSEOTopic> = {
     heroSubtitle: (city) => `Ihr Partner für professionelle Medien- und Konferenztechnik in ${city} und Umgebung. Installation, Integration und Service – alles aus einer Hand.`,
     intro: (city) => `Als erfahrener Fachplaner und Integrator für Medientechnik betreuen wir Unternehmen in ${city} und der gesamten Region. Von der Bedarfsanalyse über die Planung bis zur Installation und dem laufenden Betrieb – wir realisieren Ihr Projekt termingerecht und budgetsicher.`,
     services: [
-      { title: "Videokonferenzsysteme", description: "Microsoft Teams Rooms, Zoom Rooms und herstellerneutrale Lösungen für produktive Meetings." },
-      { title: "Displays & Visualisierung", description: "Interaktive Touch-Displays, LED-Wände und professionelle Präsentationsmonitore." },
-      { title: "Audiotechnik", description: "Deckenmikrofone, DSP-Systeme und Beschallungslösungen für kristallklare Kommunikation." },
-      { title: "Mediensteuerung", description: "Intuitive Touch-Panel-Steuerungen und automatisierte Raumszenarien mit Crestron, Q-Sys & Co." },
-      { title: "Digital Signage", description: "Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen." },
-      { title: "Wireless Präsentation", description: "Kabellose Content-Sharing-Systeme wie Barco ClickShare und Crestron AirMedia." },
+      { title: "Videokonferenzsysteme", description: "Microsoft Teams Rooms, Zoom Rooms und herstellerneutrale Lösungen für produktive Meetings.", link: "/loesungen#konferenzraum-detail" },
+      { title: "Displays & Visualisierung", description: "Interaktive Touch-Displays, LED-Wände und professionelle Präsentationsmonitore.", link: "/loesungen#empfang-detail" },
+      { title: "Audiotechnik", description: "Deckenmikrofone, DSP-Systeme und Beschallungslösungen für kristallklare Kommunikation.", link: "/technologien#audio" },
+      { title: "Mediensteuerung", description: "Intuitive Touch-Panel-Steuerungen und automatisierte Raumszenarien mit Crestron, Q-Sys & Co.", link: "/technologien#steuerung" },
+      { title: "Digital Signage", description: "Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen.", link: "/loesungen#empfang-detail" },
+      { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
       { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: `Ja, wir installieren und integrieren professionelle Medientechnik in ${city} und der gesamten Region. Unser Firmensitz in Krefeld ermöglicht kurze Anfahrtswege in ganz NRW.` },
@@ -60,14 +66,14 @@ export const topics: Record<string, LocalSEOTopic> = {
     metaDescription: "Professionelle Konferenztechnik",
     heroTitle: (city) => `Konferenztechnik ${city}`,
     heroSubtitle: (city) => `Professionelle Konferenzraum-Ausstattung für Unternehmen in ${city}. Von der Planung bis zur Inbetriebnahme – wir machen Ihre Meetings produktiver.`,
-    intro: (city) => `Wir planen, installieren und betreuen Konferenztechnik für Unternehmen in ${city} und ganz ${city === "Nordrhein-Westfalen" ? "NRW" : "NRW"}. Ob kleiner Huddle Space oder großer Boardroom – wir finden die passende Lösung.`,
+    intro: (city) => `Wir planen, installieren und betreuen Konferenztechnik für Unternehmen in ${city} und ganz NRW. Ob kleiner Huddle Space oder großer Boardroom – wir finden die passende Lösung.`,
     services: [
-      { title: "Microsoft Teams Rooms", description: "Zertifizierte Teams-Raum-Systeme für nahtlose Zusammenarbeit." },
-      { title: "Zoom Rooms", description: "Professionelle Zoom-Raumlösungen für hybride Meetings." },
-      { title: "Raumakustik", description: "Akustikberatung und -optimierung für beste Sprachverständlichkeit." },
-      { title: "Raumbuchungssysteme", description: "Digitale Türschilder und Buchungslösungen für effiziente Raumnutzung." },
-      { title: "Hybride Meeting-Lösungen", description: "Brücken zwischen Präsenz- und Remote-Teilnehmern für produktive Meetings." },
-      { title: "AV-Möbel & Einbauten", description: "Maßgefertigte Medientisch-Lösungen und Kabelmanagement." },
+      { title: "Microsoft Teams Rooms", description: "Zertifizierte Teams-Raum-Systeme für nahtlose Zusammenarbeit.", link: "/loesungen#konferenzraum-detail" },
+      { title: "Zoom Rooms", description: "Professionelle Zoom-Raumlösungen für hybride Meetings.", link: "/loesungen#konferenzraum-detail" },
+      { title: "Raumakustik & Audio", description: "Akustikberatung und Deckenmikrofone für beste Sprachverständlichkeit.", link: "/technologien#audio" },
+      { title: "Fachplanung & Beratung", description: "Bedarfsgerechte Konzepte von der Analyse bis zur Ausschreibung.", link: "/leistungen#konzeption" },
+      { title: "Hybride Meeting-Lösungen", description: "Brücken zwischen Präsenz- und Remote-Teilnehmern.", link: "/loesungen#konferenzraum-detail" },
+      { title: "Service & Betrieb", description: "Wartung, Remote-Monitoring und garantierte Reaktionszeiten.", link: "/leistungen#service" },
     ],
     faqItems: (city) => [
       { question: `Planen Sie Konferenzräume in ${city}?`, answer: `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
@@ -84,12 +90,12 @@ export const topics: Record<string, LocalSEOTopic> = {
     heroSubtitle: (city) => `Leistungsfähige IT-Netzwerke, strukturierte Verkabelung und WLAN-Lösungen für Unternehmen in ${city}. Die Basis für moderne Kommunikation.`,
     intro: (city) => `Eine stabile IT-Infrastruktur ist das Fundament für alle modernen AV- und Kommunikationssysteme. Wir planen und realisieren Netzwerklösungen für Unternehmen in ${city} – von der strukturierten Verkabelung bis zum Enterprise-WLAN.`,
     services: [
-      { title: "Strukturierte Verkabelung", description: "Cat6a/Cat7-Kupfer- und Glasfasernetze nach aktuellen Normen." },
-      { title: "Enterprise WLAN", description: "Professionelle WLAN-Planung mit Site Surveys und Wi-Fi 6E/7." },
-      { title: "Netzwerk-Switches", description: "Managed Switches mit VLAN-Segmentierung für sichere Netze." },
-      { title: "AV-over-IP", description: "Netzwerkbasierte AV-Signalverteilung für flexible Raumkonzepte." },
-      { title: "Firewall & Security", description: "Netzwerksicherheit mit modernen Firewall- und VPN-Lösungen." },
-      { title: "Videoüberwachung", description: "IP-basierte Videoüberwachungssysteme und Zutrittskontrolle." },
+      { title: "Strukturierte Verkabelung", description: "Cat6a/Cat7-Kupfer- und Glasfasernetze nach aktuellen Normen.", link: "/technologien#it-infrastruktur" },
+      { title: "Enterprise WLAN", description: "Professionelle WLAN-Planung mit Site Surveys und Wi-Fi 6E/7.", link: "/technologien#it-infrastruktur" },
+      { title: "Netzwerk-Switches", description: "Managed Switches mit VLAN-Segmentierung für sichere Netze.", link: "/technologien#it-infrastruktur" },
+      { title: "AV-over-IP", description: "Netzwerkbasierte AV-Signalverteilung für flexible Raumkonzepte.", link: "/technologien#signalverteilung" },
+      { title: "Videoüberwachung", description: "IP-basierte Videoüberwachungssysteme und Zutrittskontrolle.", link: "/technologien#videoueberwachung" },
+      { title: "Installation & Integration", description: "Professionelle Montage und Inbetriebnahme der gesamten Infrastruktur.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
       { question: `Bieten Sie IT-Netzwerk-Services in ${city} an?`, answer: `Ja, wir planen und installieren IT-Infrastruktur in ${city} und ganz NRW. Von der Verkabelung bis zur WLAN-Ausleuchtung.` },
@@ -100,15 +106,10 @@ export const topics: Record<string, LocalSEOTopic> = {
 
 export function getLocalSEORoutes(): { path: string; topic: string; city: string }[] {
   const routes: { path: string; topic: string; city: string }[] = [];
-
-  // medientechnik cities
   ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"].forEach((city) => {
     routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
   });
-
-  // konferenztechnik + it-infrastruktur → nrw
   routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
   routes.push({ path: "/it-infrastruktur/nrw", topic: "it-infrastruktur", city: "nrw" });
-
   return routes;
 }
