@@ -349,7 +349,7 @@ const Projekte = () => {
                                 >
                                   <img 
                                     src={img} 
-                                    alt={`${project.company} - Bild ${idx + 1}`}
+                                    alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
                                   />
                                 </button>
