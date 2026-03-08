@@ -260,7 +260,7 @@ export default function Karriere() {
           className={`section-container relative z-10 py-20 md:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="max-w-xl">
-            <Badge className="bg-accent text-accent-foreground mb-6 text-sm px-4 py-1.5">
+            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-6 text-sm px-4 py-1.5">
               Wir stellen ein 🚀
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary-foreground">
@@ -271,7 +271,7 @@ export default function Karriere() {
             </p>
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground btn-glow group"
+              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group"
               onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
             >
               Offene Stellen ansehen
