@@ -16,6 +16,7 @@ import Kontakt from "./pages/Kontakt";
 import Projektanfrage from "./pages/Projektanfrage";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import AGB from "./pages/AGB";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
           {localRoutes.map((route) => (
             <Route
               key={route.path}
