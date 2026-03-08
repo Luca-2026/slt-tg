@@ -331,7 +331,7 @@ export default function Karriere() {
                       className="w-full text-left"
                       onClick={() => setExpandedJob(isExpanded ? null : job.id)}
                     >
-                      <CardContent className="p-6 md:p-8">
+                      <CardContent className="p-4 sm:p-6 md:p-8">
                         <div className="flex flex-col md:flex-row md:items-center gap-4">
                           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                             <Icon className="h-6 w-6 text-primary" />
