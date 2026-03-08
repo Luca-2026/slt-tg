@@ -151,7 +151,7 @@ export default function Karriere() {
     setSelectedPosition(job.title);
     setTimeout(() => {
       formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 100);
+    }, 200);
   };
 
   const closeApplicationForm = () => {
