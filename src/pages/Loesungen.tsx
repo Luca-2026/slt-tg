@@ -153,7 +153,7 @@ const solutions = [
       "24/7 Monitoring & Alarmierung"
     ],
     useCases: ["Firmengelände", "Produktionshallen", "Parkhäuser", "Kritische Infrastruktur"],
-    image: "/assets/solutions/industry.jpg"
+    image: "/assets/solutions/surveillance.jpg"
   },
 ];
 
