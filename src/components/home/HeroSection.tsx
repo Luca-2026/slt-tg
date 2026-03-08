@@ -43,8 +43,8 @@ const hotspots = [
     id: "audio",
     label: "Audiotechnik",
     href: "/technologien#audio",
-    top: 55,
-    left: 20,
+    top: 45,
+    left: 14,
   },
   {
     id: "accesspoint",
