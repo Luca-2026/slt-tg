@@ -22,10 +22,10 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
-      <nav className="section-container flex items-center justify-between h-28 lg:h-32">
+      <nav className="section-container flex items-center justify-between h-20 lg:h-24 overflow-hidden">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <img src={sltLogo} alt="SLT Technology Group" className="h-24 lg:h-28 w-auto object-contain" />
+        <Link to="/" className="flex items-center overflow-hidden">
+          <img src={sltLogo} alt="SLT Technology Group" className="h-32 lg:h-40 w-auto object-contain scale-110" />
         </Link>
 
         {/* Desktop Navigation */}
