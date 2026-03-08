@@ -77,7 +77,7 @@ const generateNewsListSchema = () => ({
   "publisher": {
     "@type": "Organization",
     "name": "SLT Technology Group",
-    "logo": { "@type": "ImageObject", "url": "https://www.slt-tg.de/assets/sandhoff-logo.jpg" }
+    "logo": { "@type": "ImageObject", "url": "https://www.slt-tg.de/favicon.png" }
   },
   "mainEntity": {
     "@type": "ItemList",

@@ -36,14 +36,14 @@ const generateArticleSchema = (article: ArticleData) => ({
     "name": "SLT Technology Group",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.slt-tg.de/assets/sandhoff-logo.jpg"
+      "url": "https://www.slt-tg.de/favicon.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": `https://www.slt-tg.de/news/${article.slug}`
   },
-  "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/assets/sandhoff-logo.jpg",
+  "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/favicon.png",
   "articleSection": article.category,
   "keywords": article.keywords
 });
