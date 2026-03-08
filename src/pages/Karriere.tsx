@@ -150,7 +150,7 @@ export default function Karriere() {
     setApplyingForJob(job.id);
     setSelectedPosition(job.title);
     setTimeout(() => {
-      formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
@@ -252,7 +252,7 @@ export default function Karriere() {
         <img
           src={karriereHero}
           alt="SLT Karriere"
-          className="absolute inset-0 w-full h-full object-cover object-right"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-transparent" />
         <div
