@@ -180,7 +180,7 @@ function TestimonialsOnProjekte() {
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">"{t.text}"</p>
                 <div className="border-t border-border pt-4 flex items-center gap-3">
-                  {t.avatar && <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover grayscale" />}
+                  {t.avatar && <img src={t.avatar} alt={`${t.name}, ${t.position} bei ${t.company}`} className="w-10 h-10 rounded-full object-cover grayscale" />}
                   <div>
                     <p className="font-semibold text-foreground text-sm">{t.name}</p>
                     <p className="text-xs text-muted-foreground">{t.position}, {t.company}</p>
