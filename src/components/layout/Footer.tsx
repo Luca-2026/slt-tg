@@ -43,8 +43,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:items-start mb-5">
           {/* Logo + Contact */}
           <div className="md:col-span-3 flex flex-col gap-3">
-            <Link to="/">
-              <img src={sltLogo} alt="SLT Technology Group" className="h-36 lg:h-44 w-auto brightness-0 invert" />
+            <Link to="/" className="-mt-2">
+              <img src={sltLogo} alt="SLT Technology Group" className="h-36 lg:h-44 w-auto brightness-0 invert object-contain object-left-top" />
             </Link>
             <div className="flex flex-col gap-1 text-[11px] text-primary-foreground/60">
               <a href="tel:+4921514179902" className="flex items-center gap-1.5 hover:text-accent transition-colors">
