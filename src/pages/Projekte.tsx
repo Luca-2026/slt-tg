@@ -240,6 +240,19 @@ const Projekte = () => {
         description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Fachbüros für Medientechnik in NRW."
         keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Fachbüro Referenzen NRW"
         canonical="/projekte"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Referenzprojekte der SLT Technology Group",
+          "itemListElement": projects.map((p, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": `${p.company} – ${p.categoryLabel}`,
+            "description": p.shortDescription,
+            "url": `https://www.slt-tg.de/projekte#${p.id}`,
+            "image": `https://www.slt-tg.de${p.heroImage}`
+          }))
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">

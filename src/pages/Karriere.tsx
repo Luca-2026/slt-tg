@@ -265,10 +265,31 @@ export default function Karriere() {
   return (
     <Layout>
       <SEOHead
-        title="Karriere | SLT Technology Group – Jetzt bewerben"
-        description="Starte deine Karriere bei der SLT Technology Group. Offene Stellen in den Bereichen Medientechnik, AV-Systemintegration und Büromanagement."
+        title="Karriere bei SLT Technology Group – Jetzt bewerben"
+        description="Starte deine Karriere bei der SLT Technology Group. Offene Stellen in den Bereichen Medientechnik, AV-Systemintegration und Büromanagement in Krefeld und Bonn."
         keywords="Karriere, Jobs, Medientechniker, Ausbildung, SLT Technology Group, AV-Technik, Krefeld, Bonn"
         canonical="/karriere"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Karriere bei SLT Technology Group",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Offene Stellen",
+            "itemListElement": jobPositions.map((job, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "item": {
+                "@type": "JobPosting",
+                "title": job.title,
+                "hiringOrganization": { "@type": "Organization", "name": "SLT Technology Group GmbH & Co. KG", "sameAs": "https://www.slt-tg.de" },
+                "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": job.location, "addressCountry": "DE" } },
+                "employmentType": job.type === "Vollzeit" ? "FULL_TIME" : "FULL_TIME",
+                "description": job.description
+              }
+            }))
+          }
+        }}
       />
 
       {/* Hero Section */}
