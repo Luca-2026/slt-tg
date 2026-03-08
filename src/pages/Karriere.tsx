@@ -24,7 +24,7 @@ import {
   Rocket,
 } from "lucide-react";
 
-import introRakete from "@/assets/intro-rakete.png";
+import karriereHero from "@/assets/karriere-hero.png";
 import iconFlexibleArbeitszeiten from "@/assets/benefits/flexible-arbeitszeiten.png";
 import iconAltersvorsorge from "@/assets/benefits/altersvorsorge.png";
 import iconLaptop from "@/assets/benefits/laptop.png";
@@ -248,21 +248,25 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(204_100%_35%_/_0.4),_transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(33_100%_50%_/_0.1),_transparent_60%)]" />
+      <section className="relative overflow-hidden">
+        <img
+          src={karriereHero}
+          alt="SLT Karriere"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 py-24 md:py-36 lg:py-44 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
-          <div>
+          <div className="max-w-xl">
             <Badge className="bg-accent text-accent-foreground mb-6 text-sm px-4 py-1.5">
               Wir stellen ein 🚀
             </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary-foreground">
               Starte mit uns durch.
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl mb-8">
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-8">
               Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
             </p>
             <Button
@@ -273,13 +277,6 @@ export default function Karriere() {
               Offene Stellen ansehen
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </div>
-          <div className="flex-shrink-0">
-            <img
-              src={introRakete}
-              alt="SLT Rakete"
-              className="w-48 md:w-64 lg:w-80 drop-shadow-2xl animate-fade-in"
-            />
           </div>
         </div>
       </section>
@@ -293,30 +290,17 @@ export default function Karriere() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
             Wir als Arbeitgeber
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="card-hover border-primary/20">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Rocket className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">SLT Technology Group</h3>
-                <p className="text-muted-foreground">
-                  Unter der Marke SLT Technology Group planen und installieren wir hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="card-hover border-accent/20">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <Briefcase className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">SLT-Rental</h3>
-                <p className="text-muted-foreground">
-                  Unter der Marke SLT-Rental vermieten wir Baumaschinen, Anhänger sowie Eventbedarf und setzen dabei auf ein einzigartig-digitales Vermietkonzept mit eigener Onlineplattform.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="card-hover border-primary/20 max-w-2xl">
+            <CardContent className="p-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                <Rocket className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">SLT Technology Group</h3>
+              <p className="text-muted-foreground">
+                Die SLT Technology Group GmbH & Co. KG ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden – deutschlandweit und in Europa.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
