@@ -27,23 +27,23 @@ const generateArticleSchema = (article: ArticleData) => ({
   "datePublished": article.date,
   "dateModified": article.date,
   "author": {
-    "@type": "Person",
-    "name": "Luca Sandhoff",
-    "url": "https://www.sandhoff.org/ueber-uns"
+    "@type": "Organization",
+    "name": "SLT Technology Group",
+    "url": "https://www.slt-tg.de/ueber-uns"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sandhoff IT- & Mediensysteme",
+    "name": "SLT Technology Group",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.sandhoff.org/assets/sandhoff-logo.jpg"
+      "url": "https://www.slt-tg.de/assets/sandhoff-logo.jpg"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://www.sandhoff.org/news/${article.slug}`
+    "@id": `https://www.slt-tg.de/news/${article.slug}`
   },
-  "image": article.image ? `https://www.sandhoff.org${article.image}` : "https://www.sandhoff.org/assets/sandhoff-logo.jpg",
+  "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/assets/sandhoff-logo.jpg",
   "articleSection": article.category,
   "keywords": article.keywords
 });
@@ -574,7 +574,7 @@ const articlesData: Record<string, ArticleData> = {
           Die Lösung: Durchdachte Systemintegration
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Bei <strong>Sandhoff | IT- & Mediensysteme</strong> sorgen wir dafür, dass Ihre Technik 
+          Bei <strong>SLT Technology Group</strong> sorgen wir dafür, dass Ihre Technik 
           zusammenarbeitet. Ein Knopfdruck startet das Meeting – Display, Beleuchtung und 
           Videokonferenz sind sofort bereit.
         </p>
@@ -688,7 +688,7 @@ const articlesData: Record<string, ArticleData> = {
           Klare Kommunikation – so geht's
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Bei <strong>Sandhoff | IT- & Mediensysteme</strong> sorgen wir dafür, dass Sprache klar, 
+          Bei <strong>SLT Technology Group</strong> sorgen wir dafür, dass Sprache klar, 
           verständlich und zuverlässig übertragen wird:
         </p>
         <ul className="space-y-3 text-muted-foreground">

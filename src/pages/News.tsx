@@ -73,13 +73,13 @@ const generateNewsListSchema = () => ({
   "@type": "CollectionPage",
   "name": "News & Aktuelles aus der Medientechnik-Welt",
   "description": "Neuigkeiten, Trends und Innovationen aus der professionellen Medientechnik. Berichte von ISE, InfoComm und aktuelle AV-Branchenthemen.",
-  "url": "https://www.sandhoff.org/news",
+  "url": "https://www.slt-tg.de/news",
   "publisher": {
     "@type": "Organization",
-    "name": "Sandhoff IT- & Mediensysteme",
+    "name": "SLT Technology Group",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.sandhoff.org/assets/sandhoff-logo.jpg"
+      "url": "https://www.slt-tg.de/assets/sandhoff-logo.jpg"
     }
   },
   "mainEntity": {
@@ -87,7 +87,7 @@ const generateNewsListSchema = () => ({
     "itemListElement": newsArticles.map((article, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "url": `https://www.sandhoff.org/news/${article.slug}`,
+      "url": `https://www.slt-tg.de/news/${article.slug}`,
       "name": article.title
     }))
   }
