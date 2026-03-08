@@ -243,6 +243,7 @@ export default function Karriere() {
             hasDriversLicense: hasDriversLicense || undefined,
             salaryExpectation: salaryExpectation || undefined,
             hasCv: !!cvPath,
+            cvFilePath: cvPath || undefined,
           },
         });
       } catch (emailErr) {
