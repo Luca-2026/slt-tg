@@ -35,6 +35,7 @@ const projects = [
     icon: Building2,
     heroImage: "/assets/projects/alunorf/alunorf-main.jpg",
     galleryImages: [
+      "/assets/projects/alunorf/alunorf-main.jpg",
       "/assets/projects/alunorf/alunorf-display.jpg",
       "/assets/projects/alunorf/alunorf-control.jpg",
       "/assets/projects/alunorf/alunorf-logo.jpg",
