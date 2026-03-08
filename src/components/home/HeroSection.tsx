@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
+import { useState, useRef, useCallback } from "react";
 import heroImage from "@/assets/hero-konferenzraum.jpg";
 
 function CountUpStat({ end, suffix, label }: { end: number; suffix: string; label: string }) {
@@ -17,45 +18,84 @@ function CountUpStat({ end, suffix, label }: { end: number; suffix: string; labe
   );
 }
 
-const hotspots = [
+const initialHotspots = [
   {
     id: "display",
     label: "Displays & Visualisierung",
     href: "/technologien#displays",
-    top: "33%",
-    left: "38%",
+    top: 33,
+    left: 38,
   },
   {
     id: "kamera",
     label: "Videokonferenzsysteme",
     href: "/technologien#videokonferenz",
-    top: "20%",
-    left: "38%",
+    top: 20,
+    left: 38,
   },
   {
     id: "steuerung",
     label: "Mediensteuerung",
     href: "/technologien#steuerung",
-    top: "68%",
-    left: "33%",
+    top: 68,
+    left: 33,
   },
   {
     id: "audio",
     label: "Audiotechnik",
     href: "/technologien#audio",
-    top: "58%",
-    left: "24%",
+    top: 58,
+    left: 24,
   },
   {
     id: "sensor",
     label: "Videoüberwachung & Sicherheit",
     href: "/technologien#videoueberwachung",
-    top: "23%",
-    left: "49%",
+    top: 23,
+    left: 49,
   },
 ];
 
+// Set to true to enable drag-to-position mode (dev only)
+const DEV_MODE = true;
+
 export function HeroSection() {
+  const [hotspots, setHotspots] = useState(initialHotspots);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const draggingRef = useRef<string | null>(null);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent, id: string) => {
+    if (!DEV_MODE) return;
+    e.preventDefault();
+    e.stopPropagation();
+    draggingRef.current = id;
+
+    const handleMouseMove = (ev: MouseEvent) => {
+      if (!containerRef.current || !draggingRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const top = Math.max(0, Math.min(100, ((ev.clientY - rect.top) / rect.height) * 100));
+      const left = Math.max(0, Math.min(100, ((ev.clientX - rect.left) / rect.width) * 100));
+      setHotspots(prev =>
+        prev.map(h => h.id === draggingRef.current ? { ...h, top: Math.round(top * 10) / 10, left: Math.round(left * 10) / 10 } : h)
+      );
+    };
+
+    const handleMouseUp = () => {
+      draggingRef.current = null;
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+      // Log current positions for easy copy-paste
+      console.log("=== HOTSPOT POSITIONS ===");
+      setHotspots(prev => {
+        prev.forEach(h => console.log(`${h.id}: top=${h.top}%, left=${h.left}%`));
+        return prev;
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden -mt-24 lg:-mt-28">
       {/* Background Image */}
@@ -65,31 +105,57 @@ export function HeroSection() {
           alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
           className="w-full h-full object-cover"
         />
-        {/* Gradient overlay for text readability on the right */}
         <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
       </div>
 
       {/* Hotspots on devices */}
-      <div className="absolute inset-0 z-10 hidden md:block">
-        {hotspots.map((spot) => (
-          <Link
-            key={spot.id}
-            to={spot.href}
-            className="group absolute"
-            style={{ top: spot.top, left: spot.left }}
-            title={spot.label}
-          >
-            {/* Pulsating ring */}
-            <span className="absolute -inset-3 rounded-full bg-accent/20 animate-ping" />
-            <span className="absolute -inset-2 rounded-full bg-accent/30 animate-pulse" />
-            {/* Dot */}
-            <span className="relative block w-4 h-4 rounded-full bg-accent border-2 border-accent shadow-[0_0_12px_hsl(var(--accent))] transition-transform group-hover:scale-150" />
-            {/* Tooltip */}
-            <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
-              {spot.label}
-            </span>
-          </Link>
-        ))}
+      <div ref={containerRef} className="absolute inset-0 z-10 hidden md:block">
+        {hotspots.map((spot) => {
+          const inner = (
+            <>
+              {/* Gentle pulsating ring */}
+              <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
+              {/* Dot */}
+              <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)]
+                transition-transform group-hover:scale-150" />
+              {/* Tooltip */}
+              <span className="absolute left-5 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
+                {spot.label}
+              </span>
+              {/* Dev mode label */}
+              {DEV_MODE && (
+                <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] text-accent bg-black/70 px-1 rounded whitespace-nowrap pointer-events-none">
+                  {spot.id} ({spot.left}%, {spot.top}%)
+                </span>
+              )}
+            </>
+          );
+
+          if (DEV_MODE) {
+            return (
+              <div
+                key={spot.id}
+                className="group absolute cursor-grab active:cursor-grabbing"
+                style={{ top: `${spot.top}%`, left: `${spot.left}%` }}
+                onMouseDown={(e) => handleMouseDown(e, spot.id)}
+              >
+                {inner}
+              </div>
+            );
+          }
+
+          return (
+            <Link
+              key={spot.id}
+              to={spot.href}
+              className="group absolute"
+              style={{ top: `${spot.top}%`, left: `${spot.left}%` }}
+              title={spot.label}
+            >
+              {inner}
+            </Link>
+          );
+        })}
       </div>
 
       {/* Content - Right aligned */}
@@ -97,7 +163,7 @@ export function HeroSection() {
         <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
             Installation & Integration von AV- & IT-Lösungen
           </div>
 
