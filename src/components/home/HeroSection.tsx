@@ -9,10 +9,10 @@ function CountUpStat({ end, suffix, label, light = false }: { end: number; suffi
   
   return (
     <div className="text-center" ref={ref}>
-      <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${light ? "text-white" : "text-white"}`}>
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white/80">
         {count}{suffix}
       </div>
-      <div className={`text-xs sm:text-sm mt-1 ${light ? "text-white/60" : "text-white/60"}`}>{label}</div>
+      <div className="text-xs sm:text-sm mt-1 text-white/50">{label}</div>
     </div>
   );
 }
