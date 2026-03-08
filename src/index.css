@@ -211,8 +211,14 @@
   .animate-scroll-logos {
     animation: scroll-logos 30s linear infinite;
   }
-
   .animate-scroll-logos:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-scroll-logos-slow {
+    animation: scroll-logos 45s linear infinite;
+  }
+  .animate-scroll-logos-slow:hover {
     animation-play-state: paused;
   }
 }
