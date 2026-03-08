@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Building2, 
@@ -13,8 +13,11 @@ import {
   MapPin,
   Calendar,
   CheckCircle,
-  X
+  X,
+  Star,
+  Quote
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
