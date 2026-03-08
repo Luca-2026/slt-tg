@@ -268,7 +268,7 @@ export default function Karriere() {
         title="Karriere | SLT Technology Group – Jetzt bewerben"
         description="Starte deine Karriere bei der SLT Technology Group. Offene Stellen in den Bereichen Medientechnik, AV-Systemintegration und Büromanagement."
         keywords="Karriere, Jobs, Medientechniker, Ausbildung, SLT Technology Group, AV-Technik, Krefeld, Bonn"
-        canonical="https://slt-tg.de/karriere"
+        canonical="/karriere"
       />
 
       {/* Hero Section */}
