@@ -121,11 +121,11 @@ const benefits = [
 ];
 
 export default function Karriere() {
-  const { ref: heroRef } = useScrollAnimation();
-  const { ref: profileRef } = useScrollAnimation();
-  const { ref: jobsRef } = useScrollAnimation();
-  const { ref: benefitsRef } = useScrollAnimation();
-  const { ref: formAnimRef } = useScrollAnimation();
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { ref: profileRef, isVisible: profileVisible } = useScrollAnimation();
+  const { ref: jobsRef, isVisible: jobsVisible } = useScrollAnimation();
+  const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation();
+  const { ref: formAnimRef, isVisible: formVisible } = useScrollAnimation();
 
   const [expandedJob, setExpandedJob] = useState<string | null>(null);
   const [selectedPosition, setSelectedPosition] = useState("");
@@ -227,9 +227,9 @@ export default function Karriere() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(33_100%_50%_/_0.1),_transparent_60%)]" />
         <div
           ref={heroRef}
-          className="section-container relative z-10 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10"
+          className={`section-container relative z-10 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
-          <div className="flex-1 scroll-hidden">
+          <div>
             <Badge className="bg-accent text-accent-foreground mb-6 text-sm px-4 py-1.5">
               Wir stellen ein 🚀
             </Badge>
@@ -248,7 +248,7 @@ export default function Karriere() {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <div className="flex-shrink-0 scroll-hidden">
+          <div className="flex-shrink-0">
             <img
               src={introRakete}
               alt="SLT Rakete"
@@ -259,8 +259,8 @@ export default function Karriere() {
       </section>
 
       {/* Company Profile */}
-      <section ref={profileRef} className="py-16 md:py-24 bg-secondary/30">
-        <div className="section-container scroll-hidden">
+      <section ref={profileRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+        <div className="section-container">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Unternehmensprofil
           </p>
@@ -295,12 +295,12 @@ export default function Karriere() {
       </section>
 
       {/* Job Positions */}
-      <section ref={jobsRef} id="positions" className="py-16 md:py-24">
+      <section ref={jobsRef} id="positions" className={`py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 scroll-hidden">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Offene Stellen
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 scroll-hidden">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
             Stellenmarkt
           </h2>
           <div className="space-y-4">
@@ -310,7 +310,6 @@ export default function Karriere() {
               return (
                 <div
                   key={job.id}
-                  className="scroll-hidden"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <Card
@@ -398,12 +397,12 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
-      <section ref={benefitsRef} className="py-16 md:py-24 bg-secondary/30">
+      <section ref={benefitsRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 scroll-hidden">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Wir möchten etwas zurückgeben
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 scroll-hidden">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
             Das bieten wir unserem Team
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
@@ -412,7 +411,7 @@ export default function Karriere() {
               return (
                 <div
                   key={benefit.label}
-                  className="scroll-hidden flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                  className="flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
@@ -428,8 +427,8 @@ export default function Karriere() {
 
       {/* Application Form */}
       <section ref={formSectionRef} className="py-16 md:py-24" id="bewerbung">
-        <div ref={formAnimRef} className="section-container max-w-3xl mx-auto">
-          <div className="text-center mb-10 scroll-hidden">
+        <div ref={formAnimRef} className={`section-container max-w-3xl mx-auto scroll-hidden ${formVisible ? "scroll-visible" : ""}`}>
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
               Bewerbungsformular
             </p>
@@ -441,7 +440,7 @@ export default function Karriere() {
             </p>
           </div>
 
-          <Card className="scroll-hidden border-primary/10 shadow-lg">
+          <Card className="border-primary/10 shadow-lg">
             <CardContent className="p-6 md:p-10">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Position select */}
