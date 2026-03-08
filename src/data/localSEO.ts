@@ -50,6 +50,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Audiotechnik", description: "Deckenmikrofone, DSP-Systeme und Beschallungslösungen für kristallklare Kommunikation.", link: "/technologien#audio" },
       { title: "Mediensteuerung", description: "Intuitive Touch-Panel-Steuerungen und automatisierte Raumszenarien mit Crestron, Q-Sys & Co.", link: "/technologien#steuerung" },
       { title: "Digital Signage", description: "Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen.", link: "/loesungen#empfang-detail" },
+      { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN, Managed Switches und AV-over-IP für eine stabile Basis.", link: "/technologien#it-infrastruktur" },
       { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
