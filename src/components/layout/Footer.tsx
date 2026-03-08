@@ -44,7 +44,7 @@ export function Footer() {
           {/* Logo + Contact */}
           <div className="md:col-span-3 flex flex-col gap-3">
             <Link to="/">
-              <img src={sltLogo} alt="SLT Technology Group" className="h-32 lg:h-40 w-auto brightness-0 invert" />
+              <img src={sltLogo} alt="SLT Technology Group" className="max-h-20 w-auto brightness-0 invert" />
             </Link>
             <div className="flex flex-col gap-1 text-[11px] text-primary-foreground/60">
               <a href="tel:+4921514179902" className="flex items-center gap-1.5 hover:text-accent transition-colors">
