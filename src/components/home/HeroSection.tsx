@@ -68,8 +68,8 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-bold leading-[1.1] mb-4">
-            <span className="text-primary">your digital</span>
+          <h1 className="text-4xl font-bold leading-[1.1] mb-4" style={{ textShadow: "0 2px 20px hsl(33 100% 50% / 0.3)" }}>
+            <span className="text-accent">your digital</span>
             <br />
             <span className="text-accent">future.</span>
           </h1>
