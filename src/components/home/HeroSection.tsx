@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
+import heroImage from "@/assets/hero-konferenzraum.jpg";
 
 function CountUpStat({ end, suffix, label }: { end: number; suffix: string; label: string }) {
   const { count, ref } = useCountUp({ end, duration: 2000 });
@@ -16,42 +17,113 @@ function CountUpStat({ end, suffix, label }: { end: number; suffix: string; labe
   );
 }
 
+const hotspots = [
+  {
+    id: "display",
+    label: "Displays & Visualisierung",
+    href: "/technologien#displays",
+    top: "28%",
+    left: "37%",
+  },
+  {
+    id: "kamera",
+    label: "Videokonferenzsysteme",
+    href: "/technologien#videokonferenz",
+    top: "18%",
+    left: "43%",
+  },
+  {
+    id: "steuerung",
+    label: "Mediensteuerung",
+    href: "/technologien#steuerung",
+    top: "62%",
+    left: "35%",
+  },
+  {
+    id: "audio",
+    label: "Audiotechnik",
+    href: "/technologien#audio",
+    top: "52%",
+    left: "27%",
+  },
+  {
+    id: "sensor",
+    label: "Videoüberwachung & Sicherheit",
+    href: "/technologien#videoueberwachung",
+    top: "22%",
+    left: "52%",
+  },
+];
+
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden -mt-24 lg:-mt-28 pt-32 lg:pt-36">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2300507d%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50" />
-      
-      <div className="section-container relative z-10 py-8 sm:py-12">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center overflow-hidden -mt-24 lg:-mt-28">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient overlay for text readability on the right */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
+      </div>
+
+      {/* Hotspots on devices */}
+      <div className="absolute inset-0 z-10 hidden md:block">
+        {hotspots.map((spot) => (
+          <Link
+            key={spot.id}
+            to={spot.href}
+            className="group absolute"
+            style={{ top: spot.top, left: spot.left }}
+            title={spot.label}
+          >
+            {/* Pulsating ring */}
+            <span className="absolute -inset-3 rounded-full bg-accent/20 animate-ping" />
+            <span className="absolute -inset-2 rounded-full bg-accent/30 animate-pulse" />
+            {/* Dot */}
+            <span className="relative block w-4 h-4 rounded-full bg-accent border-2 border-accent shadow-[0_0_12px_hsl(var(--accent))] transition-transform group-hover:scale-150" />
+            {/* Tooltip */}
+            <span className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
+              {spot.label}
+            </span>
+          </Link>
+        ))}
+      </div>
+
+      {/* Content - Right aligned */}
+      <div className="section-container relative z-20 py-8 sm:py-12">
+        <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             Installation & Integration von AV- & IT-Lösungen
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up">
-            <span className="text-primary">your digital future.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
+            <span className="text-primary">your digital</span>
+            <br />
+            <span className="text-accent">future.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg sm:text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
             sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
             laufenden Betrieb – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="btn-glow text-base px-8">
               <Link to="/kontakt">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base px-8">
+            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white">
               <Link to="/projekte">
                 <Play className="mr-2 h-5 w-5" />
                 Referenzen ansehen
@@ -59,8 +131,8 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats with Count Up */}
-          <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={32} suffix="+" label="Projekte" />
             <CountUpStat end={25} suffix="+" label="Zufriedene Kunden" />
             <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
@@ -69,9 +141,9 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 rounded-full bg-primary" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+          <div className="w-1 h-2 rounded-full bg-accent" />
         </div>
       </div>
     </section>
