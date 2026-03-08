@@ -248,34 +248,34 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-center">
+      <section className="relative overflow-hidden h-[calc(100vh-5rem)] lg:h-[calc(100vh-6rem)] flex items-end sm:items-center">
         <img
           src={karriereHero}
           alt="SLT Karriere"
-          className="absolute inset-0 w-full h-full object-cover object-center lg:object-right-bottom"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 py-20 md:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 pb-12 pt-20 sm:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="max-w-xl">
-            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-6 text-sm px-4 py-1.5">
+            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
               Wir stellen ein 🚀
             </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary-foreground">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-primary-foreground">
               Starte mit uns durch.
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-6 sm:mb-8">
               Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
             </p>
             <Button
               size="lg"
-              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group"
+              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
               onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
             >
               Offene Stellen ansehen
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
