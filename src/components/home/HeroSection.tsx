@@ -28,7 +28,7 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Installation & Integration von AV-Lösungen
+            Installation & Integration von AV- & IT-Lösungen
           </div>
 
           {/* Headline */}
@@ -38,9 +38,9 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen. 
-            Von der Planung über die Installation bis zum laufenden Betrieb – 
-            alles aus einer Hand.
+            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
+            sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
+            laufenden Betrieb – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}

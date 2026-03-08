@@ -48,9 +48,9 @@ const UeberUns = () => {
   return (
     <Layout>
       <SEOHead
-        title="Über uns – Fachbüro für Medientechnik"
-        description="Luca Sandhoff: AV-Consultant und Fachplaner für Medientechnik mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
-        keywords="Luca Sandhoff, AV-Consultant, Medientechnik Fachplaner, Fachbüro Medientechnik, AV-Berater NRW"
+        title="Über uns – Ihr Partner für AV- & IT-Lösungen"
+        description="SLT Technology Group: Ihr Spezialist für AV- und IT-Lösungen mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
+        keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Medientechnik, AV-Berater NRW"
         canonical="/ueber-uns"
       />
       {/* Hero Section */}
@@ -66,10 +66,10 @@ const UeberUns = () => {
                 SLT Technology Group
               </h1>
               <p className="text-xl text-primary font-medium mb-4">
-                Ihr Spezialist für Videokonferenz- & AV-Lösungen
+                Ihr Spezialist für AV- & IT-Lösungen
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Mit über 8 Jahren Erfahrung in der AV/UC-Branche haben wir eines gelernt: 
+                Mit über 8 Jahren Erfahrung in der AV- & IT-Branche haben wir eines gelernt: 
                 Die beste Technik nützt nichts, wenn sie nicht zum Unternehmen passt. 
                 Deshalb setzen wir auf herstellerneutrale Beratung, pragmatische Lösungen 
                 und langfristige Partnerschaften.
@@ -145,7 +145,7 @@ const UeberUns = () => {
                Unser Werdegang
              </h2>
              <p className="text-lg text-muted-foreground">
-               Über 8 Jahre Erfahrung in der AV/UC-Branche – vom Projektingenieur zum 
+               Über 8 Jahre Erfahrung in der AV- & IT-Branche – vom Projektingenieur zum 
                etablierten Systemintegrator.
              </p>
           </div>

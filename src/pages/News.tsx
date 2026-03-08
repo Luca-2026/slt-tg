@@ -115,7 +115,7 @@ const News = () => {
               Aktuelles
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              News aus der AV-Welt
+              News aus der AV- & IT-Welt
             </h1>
             <p className="text-lg text-muted-foreground">
               Trends, Innovationen und Neuigkeiten aus der professionellen Medientechnik – 

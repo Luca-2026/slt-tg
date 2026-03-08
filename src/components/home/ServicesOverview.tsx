@@ -9,8 +9,8 @@ const services = [
     icon: Wrench,
     title: "Installation & Integration",
     description:
-      "Professionelle Installation und Inbetriebnahme Ihrer AV- und Konferenztechnik. Wir integrieren alle Komponenten nahtlos in Ihre bestehende IT-Infrastruktur.",
-    features: ["Montage & Verkabelung", "Systemintegration", "Inbetriebnahme & Test"],
+      "Professionelle Installation und Inbetriebnahme Ihrer AV- und IT-Systeme. Wir integrieren alle Komponenten nahtlos in Ihre bestehende Infrastruktur.",
+    features: ["Montage & Verkabelung", "Systemintegration", "IT-Infrastruktur & Netzwerk"],
   },
   {
     icon: FileText,
@@ -21,10 +21,10 @@ const services = [
   },
   {
     icon: Monitor,
-    title: "Konferenz- & Medientechnik",
+    title: "AV- & IT-Lösungen",
     description:
-      "Komplettlösungen für Videokonferenzen, Digital Signage, Lautsprechersysteme und Steuerungstechnik.",
-    features: ["Videokonferenzsysteme", "Digital Signage", "Steuerung & Signalmanagement"],
+      "Komplettlösungen für Videokonferenzen, IT-Netzwerke, Digital Signage, Beschallungssysteme und Steuerungstechnik.",
+    features: ["Videokonferenzsysteme", "IT-Infrastruktur", "Digital Signage"],
   },
   {
     icon: Headphones,
