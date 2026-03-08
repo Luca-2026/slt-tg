@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import introTeam from "@/assets/intro-team.jpg";
-import introRakete from "@/assets/intro-rakete.png";
+import introMission from "@/assets/langeoog-display.jpg";
 import introLogo from "@/assets/intro-logo.png";
 
 function AnimatedBlock({
@@ -93,8 +93,8 @@ export function IntroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <AnimatedBlock direction="left" className="order-2 lg:order-1">
             <ImageCard
-              src={introRakete}
-              alt="SLT Rakete – Ihr Partner zum Durchstarten"
+              src={introMission}
+              alt="Digital Signage Display – professionelle AV-Installation von SLT"
               className="aspect-[16/9]"
             />
           </AnimatedBlock>
