@@ -196,8 +196,8 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
-              <span className="text-primary">your digital</span>
+            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}>
+              <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
             </h1>
