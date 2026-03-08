@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import heroImage from "@/assets/hero-konferenzraum.jpg";
 
-function CountUpStat({ end, suffix, label }: { end: number; suffix: string; label: string }) {
+function CountUpStat({ end, suffix, label, light = false }: { end: number; suffix: string; label: string; light?: boolean }) {
   const { count, ref } = useCountUp({ end, duration: 2000 });
   
   return (
     <div className="text-center" ref={ref}>
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
+      <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${light ? "text-white" : "text-white"}`}>
         {count}{suffix}
       </div>
-      <div className="text-xs sm:text-sm text-muted-foreground mt-1">{label}</div>
+      <div className={`text-xs sm:text-sm mt-1 ${light ? "text-white/60" : "text-white/60"}`}>{label}</div>
     </div>
   );
 }
@@ -81,13 +81,13 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 mb-10">
-            <Button asChild size="lg" className="btn-glow text-sm">
+            <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
               <Link to="/kontakt">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-sm">
+            <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
               <Link to="/projekte">
                 <Play className="mr-2 h-4 w-4" />
                 Referenzen
@@ -96,10 +96,10 @@ export function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
-            <CountUpStat end={32} suffix="+" label="Projekte" />
-            <CountUpStat end={25} suffix="+" label="Kunden" />
-            <CountUpStat end={8} suffix="+" label="Jahre" />
+          <div className="grid grid-cols-3 gap-4 pt-6 rounded-xl bg-primary/90 p-6">
+            <CountUpStat end={150} suffix="+" label="Projekte" />
+            <CountUpStat end={200} suffix="+" label="Kunden" />
+            <CountUpStat end={10} suffix="+" label="Jahre" />
           </div>
         </div>
       </section>
@@ -134,13 +134,13 @@ export function HeroSection() {
             </p>
 
             <div className="flex gap-3 mb-10">
-              <Button asChild size="lg" className="btn-glow text-base">
+              <Button asChild size="lg" className="text-base bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/kontakt">
                   Projekt anfragen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+              <Button asChild size="lg" className="text-base bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projekte">
                   <Play className="mr-2 h-5 w-5" />
                   Referenzen
@@ -149,9 +149,9 @@ export function HeroSection() {
             </div>
 
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
-              <CountUpStat end={32} suffix="+" label="Projekte" />
-              <CountUpStat end={25} suffix="+" label="Kunden" />
-              <CountUpStat end={8} suffix="+" label="Jahre" />
+              <CountUpStat end={150} suffix="+" label="Projekte" />
+              <CountUpStat end={200} suffix="+" label="Zufriedene Kunden" />
+              <CountUpStat end={10} suffix="+" label="Jahre Erfahrung" />
             </div>
           </div>
         </div>
@@ -209,13 +209,13 @@ export function HeroSection() {
             </p>
 
             <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="lg" className="btn-glow text-base px-8">
+              <Button asChild size="lg" className="text-base px-8 bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/kontakt">
                   Projekt anfragen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+              <Button asChild size="lg" className="text-base px-8 bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projekte">
                   <Play className="mr-2 h-5 w-5" />
                   Referenzen ansehen
@@ -224,9 +224,9 @@ export function HeroSection() {
             </div>
 
             <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <CountUpStat end={32} suffix="+" label="Projekte" />
-              <CountUpStat end={25} suffix="+" label="Zufriedene Kunden" />
-              <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
+              <CountUpStat end={150} suffix="+" label="Projekte" />
+              <CountUpStat end={200} suffix="+" label="Zufriedene Kunden" />
+              <CountUpStat end={10} suffix="+" label="Jahre Erfahrung" />
             </div>
           </div>
         </div>
