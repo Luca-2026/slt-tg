@@ -61,25 +61,25 @@
 
   /* Light mode override - keep dark for this project */
   .light {
-    --background: 0 0% 93%;
-    --foreground: 220 10% 24%;
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 24%;
+    --background: 0 0% 100%;
+    --foreground: 220 10% 25%;
+    --card: 0 0% 97%;
+    --card-foreground: 220 10% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 24%;
+    --popover-foreground: 220 10% 25%;
     --primary: 204 100% 25%;
     --primary-foreground: 0 0% 100%;
     --secondary: 33 100% 50%;
-    --secondary-foreground: 204 100% 4%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 93%;
     --muted-foreground: 0 0% 35%;
     --accent: 33 100% 50%;
-    --accent-foreground: 204 100% 4%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 93%;
-    --border: 220 10% 80%;
-    --input: 220 10% 85%;
-    --ring: 33 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 204 100% 25%;
   }
 }
 
