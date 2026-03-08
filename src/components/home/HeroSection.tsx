@@ -28,7 +28,7 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Installation & Integration von AV-Lösungen
+            Installation & Integration von AV- & IT-Lösungen
           </div>
 
           {/* Headline */}
