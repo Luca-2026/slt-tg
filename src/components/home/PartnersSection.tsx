@@ -16,6 +16,7 @@ const partners = [
   { name: "Samsung", logo: "/assets/partners/samsung.png", url: "https://www.samsung.com", hasLogo: true },
   { name: "AVer", logo: "/assets/partners/aver.jpg", url: "https://www.aver.com", hasLogo: true },
   { name: "Huddly", logo: "/assets/partners/huddly.png", url: "https://www.huddly.com", hasLogo: true },
+  { name: "Ubiquiti", logo: "/assets/partners/ubiquiti.png", url: "https://www.ui.com", hasLogo: true },
 ];
 
 export function PartnersSection() {
