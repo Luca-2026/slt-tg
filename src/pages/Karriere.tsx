@@ -428,7 +428,7 @@ export default function Karriere() {
 
       {/* Application Form */}
       <section ref={formSectionRef} className="py-16 md:py-24" id="bewerbung">
-        <div ref={formRef} className="section-container max-w-3xl mx-auto">
+        <div ref={formAnimRef} className="section-container max-w-3xl mx-auto">
           <div className="text-center mb-10 scroll-hidden">
             <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
               Bewerbungsformular
