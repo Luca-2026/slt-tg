@@ -30,7 +30,7 @@ const footerLinks = {
     { name: "Duisburg", href: "/medientechnik/duisburg" },
     { name: "Mönchengladbach", href: "/medientechnik/moenchengladbach" },
     { name: "Konferenztechnik NRW", href: "/konferenztechnik/nrw" },
-    { name: "IT-Infrastruktur NRW", href: "/it-infrastruktur/nrw" },
+    
   ],
 };
 

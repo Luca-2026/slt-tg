@@ -91,6 +91,5 @@ export function getLocalSEORoutes(): { path: string; topic: string; city: string
     routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
   });
   routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
-  routes.push({ path: "/it-infrastruktur/nrw", topic: "it-infrastruktur", city: "nrw" });
   return routes;
 }
