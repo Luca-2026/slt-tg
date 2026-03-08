@@ -57,7 +57,7 @@ const hotspots = [
 
 export function HeroSection() {
   return (
-    <section className="relative h-[100svh] flex items-end lg:items-center overflow-hidden -mt-20 lg:-mt-24">
+    <section className="relative min-h-[calc(100svh-5rem)] lg:min-h-[calc(100svh-6rem)] flex items-end lg:items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
