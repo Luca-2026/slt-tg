@@ -125,7 +125,7 @@ const Finanzierung = () => {
   return (
     <Layout>
       <SEOHead
-        title="Finanzierung & AV-as-a-Service Modelle"
+        title="Finanzierung: Leasing, Miete & AV-as-a-Service"
         description="Flexible Finanzierungsoptionen für Medientechnik-Projekte: Kauf, Leasing, Miete oder AV-as-a-Service. TCO-Beratung durch unseren AV-Consultant."
         keywords="AV Finanzierung, Leasing Medientechnik, AV-as-a-Service, Managed Service AV, TCO Berechnung, Medientechnik Miete"
         canonical="/finanzierung"
