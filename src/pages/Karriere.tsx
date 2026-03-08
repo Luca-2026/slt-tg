@@ -268,9 +268,9 @@ export default function Karriere() {
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground btn-glow group"
-              onClick={() => scrollToForm()}
+              onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Jetzt bewerben
+              Offene Stellen ansehen
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
