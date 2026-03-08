@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import introTeam from "@/assets/intro-team.jpg";
 import introMission from "@/assets/langeoog-display.jpg";
-import introLogo from "@/assets/intro-logo.png";
+import introAuszeichnung from "@/assets/intro-konferenzraum.jpg";
 
 function AnimatedBlock({
   children,
@@ -140,8 +140,8 @@ export function IntroSection() {
 
           <AnimatedBlock direction="right">
             <ImageCard
-              src={introLogo}
-              alt="SLT Technology Group Logo"
+              src={introAuszeichnung}
+              alt="Moderner Konferenzraum mit Display und Videokonferenzsystem von SLT"
               className="aspect-[16/9]"
             />
           </AnimatedBlock>
