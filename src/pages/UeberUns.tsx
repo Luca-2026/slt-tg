@@ -180,7 +180,7 @@ const UeberUns = () => {
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
-                className="text-center group animate-fade-in-up"
+                className="text-center group animate-fade-in-up w-32"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {member.email ? (
