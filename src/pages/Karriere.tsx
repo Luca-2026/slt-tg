@@ -568,23 +568,23 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
-      <section ref={benefitsRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
+      <section ref={benefitsRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Wir möchten etwas zurückgeben
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-10">
             Das bieten wir unserem Team
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
             {benefits.map((benefit, index) => (
                 <div
                   key={benefit.label}
-                  className="flex flex-col items-center text-center p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                  className="flex flex-col items-center text-center p-3 sm:p-4 md:p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
-                  <img src={benefit.image} alt={benefit.label} className="w-16 h-16 md:w-20 md:h-20 object-contain mb-3" />
-                  <span className="text-sm font-medium text-foreground">{benefit.label}</span>
+                  <img src={benefit.image} alt={benefit.label} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain mb-2 sm:mb-3" />
+                  <span className="text-xs sm:text-sm font-medium text-foreground">{benefit.label}</span>
                 </div>
               ))}
           </div>
