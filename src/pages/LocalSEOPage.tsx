@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
@@ -6,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, MapPin, Phone, Mail } from "lucide-react";
+import { ArrowRight, CheckCircle, MapPin, Phone, Mail, Building2 } from "lucide-react";
 import { cities, topics } from "@/data/localSEO";
 
 interface LocalSEOPageProps {
@@ -14,14 +13,27 @@ interface LocalSEOPageProps {
   cityKey: string;
 }
 
+// Cities that should show the Bonn office
+const bonnRegionCities = ["bonn", "koeln"];
+
 const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
   const city = cities[cityKey];
   const topic = topics[topicKey];
 
   if (!city || !topic) return null;
 
+  const showBonnOffice = bonnRegionCities.includes(cityKey);
   const pageTitle = `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
   const pageDesc = `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+
+  const whyItems = [
+    showBonnOffice
+      ? { title: "Standort vor Ort", desc: `Mit unserem Büro in Bonn (Drachenburgstraße 8) sind wir im ${city.name === "Bonn" ? "Bonner" : "Kölner und Bonner"} Raum besonders flexibel und schnell vor Ort.` }
+      : { title: "Kurze Wege", desc: `Unser Hauptsitz in Krefeld ermöglicht schnelle Einsätze in ${city.name} und Umgebung.` },
+    { title: "Herstellerneutral", desc: "Wir empfehlen, was zu Ihnen passt – nicht was die höchste Marge bringt." },
+    { title: "Alles aus einer Hand", desc: "Planung, Installation, Inbetriebnahme und laufender Service." },
+    { title: "Zertifizierte Partner", desc: "Offizielle Zertifizierungen bei Crestron, Shure, Barco, Q-Sys u.v.m." },
+  ];
 
   return (
     <Layout>
@@ -78,6 +90,28 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
         </div>
       </section>
 
+      {/* Standorte Info (for Bonn/Köln) */}
+      {showBonnOffice && (
+        <section className="pb-8">
+          <div className="section-container">
+            <div className="max-w-3xl mx-auto">
+              <Card className="bg-primary/5 border-primary/20">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <Building2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Standort Bonn</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Neben unserem Hauptsitz in Krefeld betreiben wir ein Büro in <strong>Bonn, Drachenburgstraße 8, 53179 Bonn</strong>. 
+                      So können wir im Kölner und Bonner Raum besonders flexibel und kurzfristig reagieren.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Services */}
       <section className="py-16 lg:py-20 bg-card">
         <div className="section-container">
@@ -86,28 +120,28 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {topic.services.map((service, i) => {
-              const cardContent = (
-                <Card key={i} className={`bg-background border-border ${service.link ? "hover:border-primary/30 transition-colors" : ""}`}>
-                  <CardHeader className="pb-3">
+              const card = (
+                <Card className={`bg-background border-border h-full flex flex-col ${service.link ? "hover:border-primary/30 transition-colors" : ""}`}>
+                  <CardHeader className="pb-3 flex-1">
                     <CardTitle className="text-lg flex items-start gap-2">
                       <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       {service.title}
                     </CardTitle>
-                  </CardHeader>
-                  <CardContent>
                     <p className="text-sm text-muted-foreground">{service.description}</p>
-                    {service.link && (
-                      <span className="text-xs text-primary mt-2 inline-flex items-center gap-1">
+                  </CardHeader>
+                  {service.link && (
+                    <CardContent className="pt-0">
+                      <span className="text-xs text-primary inline-flex items-center gap-1">
                         Mehr erfahren <ArrowRight className="h-3 w-3" />
                       </span>
-                    )}
-                  </CardContent>
+                    </CardContent>
+                  )}
                 </Card>
               );
               return service.link ? (
-                <Link key={i} to={service.link} className="block">{cardContent}</Link>
+                <Link key={i} to={service.link} className="block h-full">{card}</Link>
               ) : (
-                cardContent
+                <div key={i}>{card}</div>
               );
             })}
           </div>
@@ -122,12 +156,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               Warum SLT Technology Group in {city.name}?
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 text-left">
-              {[
-                { title: "Kurze Wege", desc: `Unser Sitz in Krefeld ermöglicht schnelle Einsätze in ${city.name} und Umgebung.` },
-                { title: "Herstellerneutral", desc: "Wir empfehlen, was zu Ihnen passt – nicht was die höchste Marge bringt." },
-                { title: "Alles aus einer Hand", desc: "Planung, Installation, Inbetriebnahme und laufender Service." },
-                { title: "Zertifizierte Partner", desc: "Offizielle Zertifizierungen bei Crestron, Shure, Barco, Q-Sys u.v.m." },
-              ].map((item, i) => (
+              {whyItems.map((item, i) => (
                 <div key={i} className="flex gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
