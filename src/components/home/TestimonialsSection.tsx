@@ -75,10 +75,19 @@ export const TestimonialsSection = () => {
                   "{testimonial.text}"
                 </p>
 
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                  <p className="text-sm text-primary">{testimonial.company}</p>
+                <div className="border-t border-border pt-4 flex items-center gap-3">
+                  {testimonial.avatar && (
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover grayscale"
+                    />
+                  )}
+                  <div>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                    <p className="text-sm text-primary">{testimonial.company}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
