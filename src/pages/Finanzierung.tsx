@@ -341,6 +341,7 @@ const Finanzierung = () => {
           </Button>
         </div>
       </section>
+      </div>
     </Layout>
   );
 };
