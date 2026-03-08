@@ -219,11 +219,11 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}>
+            <p className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }} role="presentation">
               <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
-            </h1>
+            </p>
 
             <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
