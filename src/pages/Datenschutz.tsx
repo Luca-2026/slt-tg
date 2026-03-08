@@ -78,21 +78,21 @@ const Datenschutz = () => {
                   Wir hosten die Inhalte unserer Website bei folgenden Anbietern:
                 </p>
 
-                <h3 className="text-lg font-semibold text-foreground mb-3">Netlify / Lovable</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">Serverprofis</h3>
                 <p className="text-muted-foreground mb-4">
-                  Die Website wird über die Plattform Lovable (Betrieb über Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA) 
-                  bereitgestellt. Beim Besuch unserer Website werden automatisch Daten (z.&nbsp;B. IP-Adresse, Browsertyp, Zugriffszeit) 
+                  Unsere Website wird auf Servern der Serverprofis GmbH & Co. KG, Gebhardtstraße 9, 90762 Fürth, Deutschland, gehostet. 
+                  Die Domain lautet slt-tg.de. Beim Besuch unserer Website werden automatisch Daten (z.&nbsp;B. IP-Adresse, Browsertyp, Zugriffszeit) 
                   durch die Server des Hosting-Anbieters erfasst und in sogenannten Server-Logfiles gespeichert.
                 </p>
                 <p className="text-muted-foreground mb-4">
                   Die Verwendung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst 
-                  zuverlässigen Darstellung unserer Website.
+                  zuverlässigen Darstellung unserer Website. Die Daten werden ausschließlich auf Servern in Deutschland verarbeitet.
                 </p>
                 <p className="text-muted-foreground mb-4">
-                  Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. 
-                  Weitere Informationen finden Sie in der Datenschutzerklärung von Netlify:{" "}
-                  <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    www.netlify.com/privacy
+                  Wir haben einen Vertrag über Auftragsverarbeitung (AVV) mit Serverprofis geschlossen. 
+                  Weitere Informationen finden Sie in der Datenschutzerklärung von Serverprofis:{" "}
+                  <a href="https://www.serverprofis.de/datenschutz" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    www.serverprofis.de/datenschutz
                   </a>.
                 </p>
 
