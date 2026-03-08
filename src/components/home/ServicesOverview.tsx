@@ -23,8 +23,8 @@ const services = [
     icon: Monitor,
     title: "AV- & IT-Lösungen",
     description:
-      "Komplettlösungen für Videokonferenzen, IT-Netzwerke, Digital Signage, Beschallungssysteme und Steuerungstechnik.",
-    features: ["Videokonferenzsysteme", "IT-Infrastruktur", "Digital Signage"],
+      "Komplettlösungen für Videokonferenzen, IT-Netzwerke, Digital Signage, Videoüberwachung, Beschallungssysteme und Steuerungstechnik.",
+    features: ["Videokonferenzsysteme", "IT-Infrastruktur", "Videoüberwachung"],
   },
   {
     icon: Headphones,

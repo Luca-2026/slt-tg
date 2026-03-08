@@ -12,6 +12,8 @@ import {
   Settings,
   Wifi,
   Server,
+  Network,
+  Eye,
   CheckCircle,
   Award
 } from "lucide-react";
@@ -160,6 +162,54 @@ const technologies = [
       }
     ],
     partners: ["Lightware", "Purelink", "Crestron"]
+  },
+  {
+    id: "it-infrastruktur",
+    icon: Network,
+    title: "IT-Infrastruktur & Netzwerk",
+    description: "Leistungsfähige IT-Netzwerke, strukturierte Verkabelung und sichere WLAN-Lösungen – die Basis für alle modernen AV- und Kommunikationssysteme.",
+    categories: [
+      {
+        name: "Strukturierte Verkabelung",
+        description: "Kupfer- und Glasfasernetze nach Norm",
+        products: ["Cat6a/Cat7 Verkabelung", "LWL-Glasfaser", "Patchfelder & Racks", "Kabelmanagement"]
+      },
+      {
+        name: "Netzwerkinfrastruktur",
+        description: "Switches, Router und Firewalls",
+        products: ["Managed Switches", "VLAN-Segmentierung", "Firewall-Systeme", "VPN-Lösungen"]
+      },
+      {
+        name: "WLAN & Wireless",
+        description: "Professionelle drahtlose Netzwerke",
+        products: ["Enterprise WLAN Access Points", "Wi-Fi 6E/7", "Site Surveys", "Captive Portal"]
+      }
+    ],
+    partners: ["Cisco", "HPE Aruba", "Ubiquiti"]
+  },
+  {
+    id: "videoueberwachung",
+    icon: Eye,
+    title: "Videoüberwachung & Sicherheit",
+    description: "Professionelle IP-Videoüberwachungssysteme für Gebäude, Gelände und Produktionsbereiche – von der Einzelkamera bis zur unternehmensweiten Lösung.",
+    categories: [
+      {
+        name: "IP-Kameras",
+        description: "Hochauflösende Netzwerkkameras",
+        products: ["Dome-Kameras", "Bullet-Kameras", "PTZ-Kameras", "Multisensor-Kameras"]
+      },
+      {
+        name: "Aufzeichnung & Management",
+        description: "Zentrale Video-Management-Systeme",
+        products: ["NVR-Systeme", "VMS-Software", "Cloud-Recording", "KI-basierte Videoanalyse"]
+      },
+      {
+        name: "Zutrittskontrolle",
+        description: "Integration von Zugangs- und Sicherheitssystemen",
+        products: ["Türsteuerungen", "Kartenleser & Biometrie", "Intercom-Systeme", "Alarmintegration"]
+      }
+    ],
+    partners: ["Axis", "Hikvision", "Milestone"]
   },
 ];
 
