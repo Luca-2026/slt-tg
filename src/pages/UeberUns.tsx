@@ -107,12 +107,12 @@ const UeberUns = () => {
       <section className="py-20 lg:py-28 bg-card">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Meine Arbeitsweise
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Diese Grundsätze leiten meine Arbeit – in jedem Projekt, bei jeder Empfehlung.
-            </p>
+             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+               Unsere Arbeitsweise
+             </h2>
+             <p className="text-lg text-muted-foreground">
+               Diese Grundsätze leiten unsere Arbeit – in jedem Projekt, bei jeder Empfehlung.
+             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
