@@ -155,10 +155,34 @@ const Projektanfrage = () => {
     }
   };
 
+  const fileToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        const result = reader.result as string;
+        // Remove the data:...;base64, prefix
+        resolve(result.split(",")[1]);
+      };
+      reader.onerror = reject;
+    });
+  };
+
   const handleSubmit = async () => {
     setIsSubmitting(true);
     
     try {
+      // Convert files to base64 attachments
+      const attachments = [];
+      for (const file of files) {
+        try {
+          const base64 = await fileToBase64(file);
+          attachments.push({ filename: file.name, content: base64 });
+        } catch (e) {
+          console.error("Error converting file:", file.name, e);
+        }
+      }
+
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: {
           type: "project",
@@ -174,6 +198,7 @@ const Projektanfrage = () => {
           existingSetup: formData.existingSetup,
           requirements: formData.requirements.map(r => requirements.find(req => req.id === r)?.label || r),
           additionalInfo: formData.additionalInfo,
+          attachments,
         },
       });
 
