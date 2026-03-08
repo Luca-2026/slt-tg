@@ -188,7 +188,7 @@ const Loesungen = () => {
               Lösungen nach Anwendungsfall
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Maßgeschneiderte Lösungen für jeden Raum
+              AV-Lösungen für Konferenzraum, Auditorium & mehr
             </h1>
              <p className="text-lg text-muted-foreground">
                Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
