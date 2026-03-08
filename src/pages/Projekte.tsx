@@ -110,6 +110,16 @@ const projects = [
   },
 ];
 
+const tagLinks: Record<string, string> = {
+  "Shure": "/technologien#audio",
+  "Nureva": "/technologien#audio",
+  "Nureva HDL-310": "/technologien#audio",
+  "AVer Tracking": "/technologien#video",
+  "Huddly L1": "/technologien#video",
+  "Iiyama 4K": "/technologien#displays",
+  "LED-Wall": "/technologien#displays",
+};
+
 const testimonials = [
   {
     name: "Thomas Döbber-Rüther",
@@ -375,11 +385,20 @@ const Projekte = () => {
                     ) : (
                       <div className="space-y-4">
                         <div className="flex flex-wrap gap-2">
-                          {project.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" className="text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
+                          {project.tags.map((tag) => {
+                            const link = tagLinks[tag];
+                            return link ? (
+                              <Link key={tag} to={link}>
+                                <Badge variant="outline" className="text-xs hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer">
+                                  {tag}
+                                </Badge>
+                              </Link>
+                            ) : (
+                              <Badge key={tag} variant="outline" className="text-xs">
+                                {tag}
+                              </Badge>
+                            );
+                          })}
                         </div>
                         <Button
                           variant="outline"
