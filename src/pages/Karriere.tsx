@@ -121,11 +121,11 @@ const benefits = [
 ];
 
 export default function Karriere() {
-  const { ref: heroRef } = useScrollAnimation();
-  const { ref: profileRef } = useScrollAnimation();
-  const { ref: jobsRef } = useScrollAnimation();
-  const { ref: benefitsRef } = useScrollAnimation();
-  const { ref: formAnimRef } = useScrollAnimation();
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { ref: profileRef, isVisible: profileVisible } = useScrollAnimation();
+  const { ref: jobsRef, isVisible: jobsVisible } = useScrollAnimation();
+  const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation();
+  const { ref: formAnimRef, isVisible: formVisible } = useScrollAnimation();
 
   const [expandedJob, setExpandedJob] = useState<string | null>(null);
   const [selectedPosition, setSelectedPosition] = useState("");
