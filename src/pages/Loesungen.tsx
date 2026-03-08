@@ -118,6 +118,40 @@ const solutions = [
     useCases: ["Fertigungslinien", "Kontrollräume", "Logistikzentren", "Qualitätslabore"],
     image: "/assets/solutions/industry.jpg"
   },
+  {
+    id: "it-netzwerk",
+    icon: Network,
+    title: "IT-Infrastruktur & Netzwerk",
+    subtitle: "Das digitale Fundament Ihres Unternehmens",
+    description: "Eine leistungsfähige IT-Infrastruktur ist die Grundlage für alle modernen Kommunikations- und AV-Systeme. Wir planen und implementieren strukturierte Verkabelung, Netzwerke und WLAN-Lösungen für den zuverlässigen Betrieb.",
+    features: [
+      "Strukturierte Verkabelung (Kupfer & LWL)",
+      "Netzwerk-Design & Segmentierung",
+      "Enterprise WLAN (Wi-Fi 6E/7)",
+      "Firewall & VPN-Lösungen",
+      "Server- & Rack-Infrastruktur",
+      "Netzwerk-Monitoring & Management"
+    ],
+    useCases: ["Neubauten", "Bestandssanierung", "Campus-Netzwerke", "Rechenzentren"],
+    image: "/assets/solutions/conference-room.jpg"
+  },
+  {
+    id: "videoueberwachung",
+    icon: Eye,
+    title: "Videoüberwachung & Sicherheit",
+    subtitle: "Schutz für Gebäude, Gelände und Werte",
+    description: "Professionelle IP-Videoüberwachungssysteme sorgen für Sicherheit und Überblick. Von der Einzelkamera bis zur unternehmensweiten Lösung mit KI-gestützter Videoanalyse – wir planen, installieren und betreiben Ihre Sicherheitstechnik.",
+    features: [
+      "IP-Kamerasysteme (Dome, Bullet, PTZ)",
+      "Video-Management-Software (VMS)",
+      "KI-basierte Videoanalyse",
+      "Zutrittskontrollsysteme",
+      "Gegensprech- & Intercom-Anlagen",
+      "24/7 Monitoring & Alarmierung"
+    ],
+    useCases: ["Firmengelände", "Produktionshallen", "Parkhäuser", "Kritische Infrastruktur"],
+    image: "/assets/solutions/industry.jpg"
+  },
 ];
 
 const Loesungen = () => {
