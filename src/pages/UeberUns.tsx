@@ -60,24 +60,24 @@ const UeberUns = () => {
             {/* Content */}
             <div>
               <Badge variant="outline" className="mb-6">
-                Über mich
+                Über uns
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Luca Sandhoff
+                SLT Technology Group
               </h1>
               <p className="text-xl text-primary font-medium mb-4">
                 Ihr Spezialist für Videokonferenz- & AV-Lösungen
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Mit über 8 Jahren Erfahrung in der AV/UC-Branche habe ich eines gelernt: 
+                Mit über 8 Jahren Erfahrung in der AV/UC-Branche haben wir eines gelernt: 
                 Die beste Technik nützt nichts, wenn sie nicht zum Unternehmen passt. 
-                Deshalb setze ich auf herstellerneutrale Beratung, pragmatische Lösungen 
+                Deshalb setzen wir auf herstellerneutrale Beratung, pragmatische Lösungen 
                 und langfristige Partnerschaften.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Mein Fokus liegt auf modernen Arbeitswelten – vom einzelnen Konferenzraum 
-                bis zum unternehmensweiten Rollout. Ich begleite Sie von der ersten Idee 
-                bis zum laufenden Betrieb und sorge dafür, dass Ihre Technik zuverlässig funktioniert.
+                Unser Fokus liegt auf modernen Arbeitswelten – vom einzelnen Konferenzraum 
+                bis zum unternehmensweiten Rollout. Wir begleiten Sie von der ersten Idee 
+                bis zum laufenden Betrieb und sorgen dafür, dass Ihre Technik zuverlässig funktioniert.
               </p>
               <Button asChild>
                 <Link to="/kontakt">
