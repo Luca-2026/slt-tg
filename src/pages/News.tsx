@@ -87,7 +87,7 @@ const generateNewsListSchema = () => ({
     "itemListElement": newsArticles.map((article, index) => ({
       "@type": "ListItem",
       "position": index + 1,
-      "url": `https://www.sandhoff.org/news/${article.slug}`,
+      "url": `https://www.slt-tg.de/news/${article.slug}`,
       "name": article.title
     }))
   }

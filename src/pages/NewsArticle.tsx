@@ -688,7 +688,7 @@ const articlesData: Record<string, ArticleData> = {
           Klare Kommunikation – so geht's
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Bei <strong>Sandhoff | IT- & Mediensysteme</strong> sorgen wir dafür, dass Sprache klar, 
+          Bei <strong>SLT Technology Group</strong> sorgen wir dafür, dass Sprache klar, 
           verständlich und zuverlässig übertragen wird:
         </p>
         <ul className="space-y-3 text-muted-foreground">
