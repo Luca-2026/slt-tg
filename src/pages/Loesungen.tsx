@@ -12,6 +12,8 @@ import {
   Building2,
   GraduationCap,
   Factory,
+  Network,
+  Eye,
   CheckCircle
 } from "lucide-react";
 

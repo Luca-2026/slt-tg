@@ -12,6 +12,8 @@ import {
   Settings,
   Wifi,
   Server,
+  Network,
+  Eye,
   CheckCircle,
   Award
 } from "lucide-react";
