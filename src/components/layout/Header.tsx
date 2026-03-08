@@ -12,6 +12,7 @@ const navigation = [
   { name: "Technologien", href: "/technologien" },
   { name: "Finanzierung", href: "/finanzierung" },
   { name: "Projekte", href: "/projekte" },
+  { name: "Karriere", href: "/karriere" },
   { name: "News", href: "/news" },
   { name: "Über uns", href: "/ueber-uns" },
 ];
