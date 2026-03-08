@@ -160,8 +160,8 @@ const Loesungen = () => {
   return (
     <Layout>
       <SEOHead
-        title="AV- & IT-Lösungen: Konferenzraum, Auditorium & mehr"
-        description="Maßgeschneiderte AV- & IT-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Industrie. Fachplanung und Integration von Medientechnik und IT-Infrastruktur."
+        title="Lösungen: Konferenzraum, Auditorium & Digital Signage"
+        description="Maßgeschneiderte AV-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Industrie. Fachplanung und Integration – jetzt beraten lassen!"
         keywords="Konferenzraum Planung, AV-Lösungen, IT-Lösungen, Auditorium Medientechnik, Schulungsraum AV, IT-Infrastruktur, AV-Integration NRW"
         canonical="/loesungen"
         structuredData={{
@@ -188,7 +188,7 @@ const Loesungen = () => {
               Lösungen nach Anwendungsfall
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Maßgeschneiderte Lösungen für jeden Raum
+              AV-Lösungen für Konferenzraum, Auditorium & mehr
             </h1>
              <p className="text-lg text-muted-foreground">
                Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
@@ -272,6 +272,7 @@ const Loesungen = () => {
                   <img 
                     src={solution.image} 
                     alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>

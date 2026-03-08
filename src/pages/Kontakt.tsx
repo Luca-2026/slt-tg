@@ -63,8 +63,8 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEOHead
-        title="Kontakt: AV- & IT-Installation & Projektanfrage"
-        description="Kontaktieren Sie die SLT Technology Group für Ihre AV- & IT-Projekte. Kostenlose Erstberatung für Installation, Integration und Betrieb."
+        title="Kontakt – Kostenlose AV-Erstberatung"
+        description="Kontaktieren Sie die SLT Technology Group für Ihre AV- & IT-Projekte. Kostenlose Erstberatung für Konferenzräume und Medientechnik – jetzt anfragen!"
         keywords="AV-Installation Kontakt, IT-Lösungen Anfrage, SLT Technology Group, Konferenztechnik Krefeld"
         canonical="/kontakt"
         structuredData={{
@@ -85,7 +85,7 @@ const Kontakt = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Kontakt</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Get in touch!
+              Kontakt aufnehmen – kostenlose Erstberatung
             </h1>
             <p className="text-lg text-muted-foreground">
               Wir sind immer offen für interessante Ideen, neue Kontakte und spannende Anfragen.

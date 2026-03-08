@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Instagram, Facebook } from "lucide-react";
 import sltLogo from "@/assets/slt-logo.png";
 
 const footerLinks = {
@@ -113,11 +113,23 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-3 border-t border-primary-foreground/10 flex flex-col sm:flex-row sm:justify-between gap-1">
+        <div className="pt-3 border-t border-primary-foreground/10 flex flex-col sm:flex-row sm:justify-between gap-2">
           <p className="text-[10px] text-primary-foreground/35">
             © {currentYear} SLT Technology Group GmbH & Co. KG
           </p>
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/slt-technology-group/" target="_blank" rel="noopener noreferrer" aria-label="SLT Technology Group auf LinkedIn" className="text-primary-foreground/35 hover:text-accent transition-colors">
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.instagram.com/slttechnologygroup/" target="_blank" rel="noopener noreferrer" aria-label="SLT Technology Group auf Instagram" className="text-primary-foreground/35 hover:text-accent transition-colors">
+                <Instagram className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.facebook.com/slttechnologygroup/" target="_blank" rel="noopener noreferrer" aria-label="SLT Technology Group auf Facebook" className="text-primary-foreground/35 hover:text-accent transition-colors">
+                <Facebook className="h-3.5 w-3.5" />
+              </a>
+            </div>
+            <span className="text-primary-foreground/15">|</span>
             <Link to="/impressum" className="text-[10px] text-primary-foreground/35 hover:text-accent transition-colors">Impressum</Link>
             <Link to="/datenschutz" className="text-[10px] text-primary-foreground/35 hover:text-accent transition-colors">Datenschutz</Link>
             <Link to="/agb" className="text-[10px] text-primary-foreground/35 hover:text-accent transition-colors">AGB</Link>

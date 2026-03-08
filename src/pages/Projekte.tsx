@@ -236,8 +236,8 @@ const Projekte = () => {
   return (
     <Layout>
       <SEOHead
-        title="Referenzen: Realisierte Medientechnik-Projekte"
-        description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Fachbüros für Medientechnik in NRW."
+        title="Referenzen & Projekte – Medientechnik aus NRW"
+        description="Realisierte AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts mit LED-Wall. Referenzen der SLT Technology Group – jetzt ansehen!"
         keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Fachbüro Referenzen NRW"
         canonical="/projekte"
         structuredData={{
@@ -262,7 +262,7 @@ const Projekte = () => {
               Referenzen
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Ausgewählte Projekte
+              Referenzprojekte: Medientechnik & Konferenzräume
             </h1>
             <p className="text-lg text-muted-foreground">
               Ein Einblick in realisierte Projekte – von einzelnen Boardrooms 

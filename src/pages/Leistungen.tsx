@@ -83,8 +83,8 @@ const Leistungen = () => {
   return (
     <Layout>
       <SEOHead
-        title="Fachplanung & Ausschreibung für AV- & IT-Lösungen"
-        description="Herstellerneutrale AV- & IT-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb. Installation und Integration von Medientechnik und IT-Infrastruktur in NRW und deutschlandweit."
+        title="Leistungen: AV-Fachplanung & Integration"
+        description="Von der Konzeption bis zum Betrieb: Herstellerneutrale AV-Fachplanung, Installation und Integration von Medientechnik und IT-Infrastruktur. Jetzt beraten lassen!"
         keywords="AV-Fachplanung, IT-Lösungen, Ausschreibung Medientechnik, Fachplaner Konferenztechnik, IT-Infrastruktur, Medientechnik Consultant NRW"
         canonical="/leistungen"
         structuredData={{
@@ -114,7 +114,7 @@ const Leistungen = () => {
               Leistungsübersicht
             </Badge>
              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-               Unsere Leistungen im Detail
+               AV-Fachplanung & Integration – alle Leistungen
              </h1>
              <p className="text-lg text-muted-foreground">
                Von der ersten Idee bis zum laufenden Betrieb – wir begleiten Ihr Projekt 

@@ -217,7 +217,7 @@ const Technologien = () => {
   return (
     <Layout>
       <SEOHead
-        title="AV- & IT-Technologien & Hersteller-Expertise"
+        title="Technologien & Hersteller – AV-Expertise"
         description="Herstellerneutrale Beratung zu Videokonferenzsystemen, IT-Infrastruktur, Displays, Audiotechnik und Mediensteuerung. Zertifizierter Partner von Shure, Crestron, Barco und mehr."
         keywords="AV-Technologie, IT-Lösungen, Videokonferenzsystem, Shure Mikrofon, Crestron Steuerung, Microsoft Teams Rooms, IT-Infrastruktur, Fachplaner Medientechnik"
         canonical="/technologien"

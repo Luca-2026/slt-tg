@@ -100,7 +100,7 @@ const News = () => {
   return (
     <Layout>
       <SEOHead
-        title="News: Aktuelles aus der Medientechnik-Welt"
+        title="News & Trends aus der AV-Branche"
         description="Neuigkeiten, Trends und Innovationen aus der professionellen Medientechnik. Berichte von ISE, InfoComm und aktuelle AV-Branchenthemen."
         keywords="Medientechnik News, AV Trends, ISE 2026, ProAV Innovationen, Konferenztechnik Neuheiten"
         canonical="/news"
@@ -205,9 +205,10 @@ const News = () => {
                     </div>
                   ) : article.image ? (
                     <div className="aspect-video bg-muted overflow-hidden">
-                      <img 
+                       <img 
                         src={article.image} 
-                        alt={article.title}
+                        alt={`${article.title} – ${article.category} Beitrag von SLT Technology Group`}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>

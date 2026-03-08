@@ -125,7 +125,7 @@ const Finanzierung = () => {
   return (
     <Layout>
       <SEOHead
-        title="Finanzierung & AV-as-a-Service Modelle"
+        title="Finanzierung: Leasing, Miete & AV-as-a-Service"
         description="Flexible Finanzierungsoptionen für Medientechnik-Projekte: Kauf, Leasing, Miete oder AV-as-a-Service. TCO-Beratung durch unseren AV-Consultant."
         keywords="AV Finanzierung, Leasing Medientechnik, AV-as-a-Service, Managed Service AV, TCO Berechnung, Medientechnik Miete"
         canonical="/finanzierung"
@@ -157,7 +157,7 @@ const Finanzierung = () => {
               Flexible Finanzierungs&shy;optionen
             </h1>
             <p className="text-lg text-muted-foreground">
-              Medientechnik muss nicht immer eine große Investition sein. Ich berate Sie 
+              Medientechnik muss nicht immer eine große Investition sein. Wir beraten Sie 
               zu verschiedenen Finanzierungsmodellen – von Kauf über Leasing bis zum 
               All-inclusive-Service.
             </p>
@@ -263,8 +263,8 @@ const Finanzierung = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Der Kaufpreis ist nur ein Teil der Gesamtkosten. Wartung, Support, 
                 Ausfallzeiten und Technologie-Updates machen oft den größeren Anteil aus. 
-                Ich helfe Ihnen, die Total Cost of Ownership (TCO) realistisch zu 
-                kalkulieren.
+              Wir helfen Ihnen, die Total Cost of Ownership (TCO) realistisch zu 
+              kalkulieren.
               </p>
               
               <div className="space-y-4 mb-8">
