@@ -72,7 +72,7 @@ const solutions = [
     icon: Building2,
     title: "Empfangsbereiche & Digital Signage",
     subtitle: "Der erste Eindruck zählt",
-    description: "Digitale Begrüßungssysteme, Wegeleitsysteme und dynamische Informationsdisplays prägen den ersten Eindruck Ihres Unternehmens. Ich integriere Digital-Signage-Lösungen, die informieren und beeindrucken.",
+    description: "Digitale Begrüßungssysteme, Wegeleitsysteme und dynamische Informationsdisplays prägen den ersten Eindruck Ihres Unternehmens. Wir integrieren Digital-Signage-Lösungen, die informieren und beeindrucken.",
     features: [
       "Digitale Welcome-Screens",
       "Raumbuchungssysteme mit Türschildern",
