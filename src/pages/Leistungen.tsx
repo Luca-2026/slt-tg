@@ -27,7 +27,7 @@ const services = [
     title: "Konzeption & Beratung",
     subtitle: "Die Basis für erfolgreiche Projekte",
     description:
-      "Bevor Hardware bestellt wird, analysiere ich Ihre Anforderungen, entwickle Nutzungsszenarien und prüfe die Wirtschaftlichkeit. So vermeiden Sie Fehlinvestitionen und erhalten genau die Lösung, die Sie brauchen.",
+      "Bevor Hardware bestellt wird, analysieren wir Ihre Anforderungen, entwickeln Nutzungsszenarien und prüfen die Wirtschaftlichkeit. So vermeiden Sie Fehlinvestitionen und erhalten genau die Lösung, die Sie brauchen.",
     deliverables: [
       { icon: ClipboardList, title: "Bedarfsanalyse", description: "Strukturierte Erfassung Ihrer Anforderungen und Nutzungsszenarien" },
       { icon: Scale, title: "Wirtschaftlichkeitsbetrachtung", description: "Kosten-Nutzen-Analyse verschiedener Lösungsansätze" },
