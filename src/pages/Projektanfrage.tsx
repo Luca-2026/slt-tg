@@ -188,7 +188,7 @@ const Projektanfrage = () => {
       console.error("Error sending project request:", error);
       toast({
         title: "Fehler beim Senden",
-        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail.",
+        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.",
         variant: "destructive",
       });
     } finally {
