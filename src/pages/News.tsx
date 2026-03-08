@@ -205,9 +205,10 @@ const News = () => {
                     </div>
                   ) : article.image ? (
                     <div className="aspect-video bg-muted overflow-hidden">
-                      <img 
+                       <img 
                         src={article.image} 
-                        alt={article.title}
+                        alt={`${article.title} – ${article.category} Beitrag von SLT Technology Group`}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>

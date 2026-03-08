@@ -79,7 +79,8 @@ export const TestimonialsSection = () => {
                   {testimonial.avatar && (
                     <img 
                       src={testimonial.avatar} 
-                      alt={testimonial.name}
+                      alt={`${testimonial.name}, ${testimonial.position} bei ${testimonial.company} – Kundenstimme zur AV-Installation`}
+                      loading="lazy"
                       className="w-12 h-12 rounded-full object-cover grayscale"
                     />
                   )}

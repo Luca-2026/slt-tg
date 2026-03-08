@@ -272,6 +272,7 @@ const Loesungen = () => {
                   <img 
                     src={solution.image} 
                     alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>

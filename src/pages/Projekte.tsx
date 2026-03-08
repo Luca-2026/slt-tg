@@ -262,7 +262,7 @@ const Projekte = () => {
               Referenzen
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Ausgewählte Projekte
+              Referenzprojekte: Medientechnik & Konferenzräume
             </h1>
             <p className="text-lg text-muted-foreground">
               Ein Einblick in realisierte Projekte – von einzelnen Boardrooms 

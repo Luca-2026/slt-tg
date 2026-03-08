@@ -85,7 +85,7 @@ const Kontakt = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Kontakt</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Get in touch!
+              Kontakt aufnehmen – kostenlose Erstberatung
             </h1>
             <p className="text-lg text-muted-foreground">
               Wir sind immer offen für interessante Ideen, neue Kontakte und spannende Anfragen.

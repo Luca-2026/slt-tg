@@ -263,8 +263,8 @@ const Finanzierung = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Der Kaufpreis ist nur ein Teil der Gesamtkosten. Wartung, Support, 
                 Ausfallzeiten und Technologie-Updates machen oft den größeren Anteil aus. 
-                Ich helfe Ihnen, die Total Cost of Ownership (TCO) realistisch zu 
-                kalkulieren.
+              Wir helfen Ihnen, die Total Cost of Ownership (TCO) realistisch zu 
+              kalkulieren.
               </p>
               
               <div className="space-y-4 mb-8">
