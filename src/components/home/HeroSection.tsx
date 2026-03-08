@@ -58,48 +58,36 @@ const hotspots = [
 export function HeroSection() {
   return (
     <>
-      {/* ===== MOBILE & TABLET HERO (below lg) ===== */}
-      <section className="relative lg:hidden -mt-20 overflow-hidden">
-        {/* Hero Image - takes upper portion */}
-        <div className="relative h-[45svh] min-h-[240px]">
-          <img
-            src={heroImage}
-            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-            className="w-full h-full object-cover object-[55%_center]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
-        </div>
-
-        {/* Content below image */}
-        <div className="relative bg-background px-4 sm:px-6 -mt-8 pt-0 pb-10">
+      {/* ===== MOBILE HERO (below sm) ===== */}
+      <section className="sm:hidden -mt-20">
+        <div className="bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-10">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
             AV- & IT-Lösungen
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl font-bold leading-[1.1] mb-3">
+          <h1 className="text-4xl font-bold leading-[1.1] mb-4">
             <span className="text-primary">your digital</span>
             <br />
             <span className="text-accent">future.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed max-w-md">
-            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
-            Von der Planung bis zum Betrieb – alles aus einer Hand.
+          <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs">
+            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-8">
-            <Button asChild size="lg" className="btn-glow text-sm sm:text-base">
+          <div className="flex flex-col gap-3 mb-10">
+            <Button asChild size="lg" className="btn-glow text-sm">
               <Link to="/kontakt">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-sm sm:text-base">
+            <Button asChild variant="outline" size="lg" className="text-sm">
               <Link to="/projekte">
                 <Play className="mr-2 h-4 w-4" />
                 Referenzen
@@ -112,6 +100,59 @@ export function HeroSection() {
             <CountUpStat end={32} suffix="+" label="Projekte" />
             <CountUpStat end={25} suffix="+" label="Kunden" />
             <CountUpStat end={8} suffix="+" label="Jahre" />
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TABLET HERO (sm to lg) ===== */}
+      <section className="relative hidden sm:flex lg:hidden items-center min-h-[80svh] overflow-hidden -mt-20">
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+            className="w-full h-full object-cover object-[50%_center]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2a42]/90 via-[#0a2a42]/70 to-[#0a2a42]/30" />
+        </div>
+
+        <div className="section-container relative z-20 py-16">
+          <div className="max-w-md">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-accent text-xs font-medium mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
+              Installation & Integration von AV- & IT-Lösungen
+            </div>
+
+            <h1 className="text-5xl font-bold leading-[1.1] mb-4 text-white">
+              <span className="text-primary">your digital</span>
+              <br />
+              <span className="text-accent">future.</span>
+            </h1>
+
+            <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
+              Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
+              Von der Planung bis zum Betrieb – alles aus einer Hand.
+            </p>
+
+            <div className="flex gap-3 mb-10">
+              <Button asChild size="lg" className="btn-glow text-base">
+                <Link to="/kontakt">
+                  Projekt anfragen
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+                <Link to="/projekte">
+                  <Play className="mr-2 h-5 w-5" />
+                  Referenzen
+                </Link>
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
+              <CountUpStat end={32} suffix="+" label="Projekte" />
+              <CountUpStat end={25} suffix="+" label="Kunden" />
+              <CountUpStat end={8} suffix="+" label="Jahre" />
+            </div>
           </div>
         </div>
       </section>
