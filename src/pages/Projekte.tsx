@@ -201,7 +201,7 @@ function ClientLogosOnProjekte() {
   );
 }
 
-
+const Projekte = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
