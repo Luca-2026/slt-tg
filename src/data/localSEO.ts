@@ -24,6 +24,25 @@ export interface LocalSEOTopic {
   faqItems: (city: string) => { question: string; answer: string }[];
 }
 
+const bonnRegion = ["Bonn", "Köln"];
+
+function locationAnswer(city: string): string {
+  if (city === "Bonn") {
+    return `Ja, mit unserem Standort direkt in Bonn (Drachenburgstraße 8) sind wir vor Ort und betreuen Unternehmen in ${city} und der gesamten Region.`;
+  }
+  if (city === "Köln") {
+    return `Ja, neben unserem Hauptsitz in Krefeld betreiben wir einen Standort in Bonn – ideal für kurze Wege nach ${city} und ins gesamte Rheinland.`;
+  }
+  return `Ja, von unserem Hauptsitz in Krefeld und unserem Standort in Bonn sind wir schnell in ${city} und der gesamten Region vor Ort.`;
+}
+
+function supportAnswer(city: string): string {
+  if (bonnRegion.includes(city)) {
+    return `Ja, über unseren Standort in Bonn bieten wir Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung – besonders kurze Wege für ${city} und Umgebung.`;
+  }
+  return `Ja, wir bieten Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung für alle installierten Systeme in ${city} und Umgebung.`;
+}
+
 export const cities: Record<string, LocalSEOCity> = {
   krefeld: { slug: "krefeld", name: "Krefeld", region: "Niederrhein", description: "am Niederrhein", coordinates: { lat: "51.3388", lng: "6.5853" } },
   duesseldorf: { slug: "duesseldorf", name: "Düsseldorf", region: "Rheinland", description: "in der Landeshauptstadt", coordinates: { lat: "51.2277", lng: "6.7735" } },
