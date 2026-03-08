@@ -106,7 +106,7 @@ const solutions = [
     icon: Factory,
     title: "Industrie & Produktion",
     subtitle: "Robuste Lösungen für anspruchsvolle Umgebungen",
-    description: "In Produktionsumgebungen gelten besondere Anforderungen: Staub, Lärm und schwierige Lichtverhältnisse. Ich plane robuste Medientechnik, die auch unter industriellen Bedingungen zuverlässig funktioniert.",
+    description: "In Produktionsumgebungen gelten besondere Anforderungen: Staub, Lärm und schwierige Lichtverhältnisse. Wir planen robuste Medientechnik, die auch unter industriellen Bedingungen zuverlässig funktioniert.",
     features: [
       "Industrietaugliche Displays & Monitore",
       "Robuste Beschallungssysteme",
