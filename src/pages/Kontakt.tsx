@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail, MapPin, Phone, Send, MessageSquare } from "lucide-react";
@@ -20,6 +21,9 @@ const Kontakt = () => {
     phone: "",
     message: "",
   });
+
+  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,68 +84,81 @@ const Kontakt = () => {
           }
         }}
       />
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
-        <div className="section-container">
+
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        </div>
+        <div
+          ref={heroRef}
+          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+        >
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Kontakt</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Kontakt aufnehmen – kostenlose Erstberatung
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Kontakt aufnehmen –{" "}
+              <span className="text-primary">kostenlose Erstberatung</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base lg:text-lg text-muted-foreground">
               Wir sind immer offen für interessante Ideen, neue Kontakte und spannende Anfragen.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-primary" />
-                  Nachricht senden
-                </CardTitle>
-                <CardDescription>
-                  Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input id="name" name="name" placeholder="Ihr Name" value={formData.name} onChange={handleChange} required />
+          <div
+            ref={contentRef}
+            className="grid lg:grid-cols-2 gap-10 lg:gap-16"
+          >
+            <div className={`scroll-hidden-left ${contentVisible ? "scroll-visible-x" : ""}`}>
+              <Card className="bg-card border-border">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MessageSquare className="h-5 w-5 text-primary" />
+                    Nachricht senden
+                  </CardTitle>
+                  <CardDescription>
+                    Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Name *</Label>
+                        <Input id="name" name="name" placeholder="Ihr Name" value={formData.name} onChange={handleChange} required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-Mail *</Label>
+                        <Input id="email" name="email" type="email" placeholder="ihre@email.de" value={formData.email} onChange={handleChange} required />
+                      </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-Mail *</Label>
-                      <Input id="email" name="email" type="email" placeholder="ihre@email.de" value={formData.email} onChange={handleChange} required />
+                      <Label htmlFor="phone">Telefon (optional)</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="+49 123 456789" value={formData.phone} onChange={handleChange} />
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Telefon (optional)</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+49 123 456789" value={formData.phone} onChange={handleChange} />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Nachricht *</Label>
-                    <Textarea id="message" name="message" placeholder="Wie können wir Ihnen helfen?" rows={5} value={formData.message} onChange={handleChange} required />
-                  </div>
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Wird gesendet..." : (<>Nachricht senden <Send className="ml-2 h-4 w-4" /></>)}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Nachricht *</Label>
+                      <Textarea id="message" name="message" placeholder="Wie können wir Ihnen helfen?" rows={5} value={formData.message} onChange={handleChange} required />
+                    </div>
+                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Wird gesendet..." : (<>Nachricht senden <Send className="ml-2 h-4 w-4" /></>)}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
 
-            <div className="space-y-8">
+            <div className={`space-y-6 scroll-hidden-right ${contentVisible ? "scroll-visible-x" : ""}`}>
               <Card className="bg-card border-border">
                 <CardHeader>
                   <CardTitle>Kontaktdaten</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <a href="tel:+4921514179902" className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <a href="tel:+4921514179902" className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
@@ -149,8 +166,8 @@ const Kontakt = () => {
                       <p className="font-medium text-foreground">+49 (0) 2151 - 417 99 02</p>
                     </div>
                   </a>
-                  <a href="mailto:info@slt-tg.de" className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <a href="mailto:info@slt-tg.de" className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
