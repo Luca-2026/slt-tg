@@ -227,9 +227,9 @@ export default function Karriere() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(33_100%_50%_/_0.1),_transparent_60%)]" />
         <div
           ref={heroRef}
-          className="section-container relative z-10 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10"
+          className={`section-container relative z-10 py-20 md:py-32 flex flex-col md:flex-row items-center gap-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
-          <div className="flex-1 scroll-hidden">
+          <div>
             <Badge className="bg-accent text-accent-foreground mb-6 text-sm px-4 py-1.5">
               Wir stellen ein 🚀
             </Badge>
