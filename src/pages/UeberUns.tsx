@@ -3,13 +3,20 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { 
   ArrowRight, 
   Award, 
   Target, 
   Handshake, 
   Lightbulb,
-  User
+  Users,
+  MapPin,
+  Calendar,
+  CheckCircle,
+  Leaf,
+  Heart,
+  Mail
 } from "lucide-react";
 
 const values = [
@@ -24,9 +31,9 @@ const values = [
     description: "Wir sehen uns als verlängerten Arm Ihrer IT-Abteilung, nicht als externen Berater.",
   },
   {
-    icon: Lightbulb,
-    title: "Pragmatisch",
-    description: "Keine Luftschlösser, sondern umsetzbare Lösungen, die im Alltag funktionieren.",
+    icon: Leaf,
+    title: "Nachhaltig",
+    description: "Als Inklusionsunternehmen prägen uns die Werte Nachhaltigkeit und Klimaneutralität.",
   },
   {
     icon: Award,
@@ -36,12 +43,31 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2016", text: "Einstieg als Veranstaltungstechniker und -kaufmann – Planung und Umsetzung technischer Lösungen für Messe und Retail" },
-  { year: "2019", text: "Fokus auf Systemintegration und Fachplanung von AV/UC-Komponenten" },
-  { year: "2022", text: "Implementierung von Managed Service Lösungen und Umsetzung EU-weiter Medientechnik-Ausschreibungen" },
-  { year: "04/2024", text: "Leitende Position als Verantwortlicher für Medientechnik in einem Konzern" },
-  { year: "05/2024", text: "ITIL 4 IT Service Management Zertifizierung" },
-  { year: "Laufend", text: "Herstellerzertifizierungen: Crestron, Q-Sys, Shure, Barco, Microsoft, Yealink" },
+  { year: "2016", text: "Gründung der SLT Event Production UG (haftungsbeschränkt) mit Sitz in Köln." },
+  { year: "2017", text: "Umwandlung in die SLT Event Production GmbH und Umzug in die neuen Geschäftsräume nach Düsseldorf." },
+  { year: "2018", text: "Bezug des neuen Standorts in Ratingen-Homberg." },
+  { year: "2020", text: "Erweiterung des Portfolios und Umfirmierung in „SLT Technology Group GmbH & Co. KG"." },
+  { year: "2020", text: "Bezug des neuen Standorts in Krefeld-Fichtenhain an der A44 mit neuen Büros und Lagerflächen." },
+];
+
+const teamMembers = [
+  { name: "Luca Sandhoff", role: "Geschäftsführer", image: "/assets/team/lukas-sandhoff.jpg", email: "l.sandhoff@slt-tg.de" },
+  { name: "Benedikt Nöchel", role: "Projektleitung & Vertrieb", image: "/assets/team/benedikt-noechel.jpg", email: "b.noechel@slt-tg.de" },
+  { name: "Ersel Uzun", role: "Technik & Service", image: "/assets/team/ersel-uzun.jpg", email: "e.uzun@slt-tg.de" },
+  { name: "Andreas Scherzow", role: "Logistik & Lager", image: null, email: "a.scherzow@slt-tg.de" },
+  { name: "Patricia Preuss", role: "Verwaltung & Office", image: null, email: "p.preuss@slt-tg.de" },
+  { name: "Juno", role: "Feel Good Manager 🐾", image: "/assets/team/juno.png", email: null },
+];
+
+const whyItems = [
+  "Inhabergeführt & persönlich",
+  "Über 7 Jahre Branchenerfahrung",
+  "Herstellerneutrale Beratung",
+  "Inklusionsunternehmen",
+  "Nachhaltig & klimaneutral",
+  "Deutschlandweit & europaweit tätig",
+  "Maßgeschneiderte AV- & IT-Lösungen",
+  "Langfristige Partnerschaften",
 ];
 
 const UeberUns = () => {
@@ -49,35 +75,37 @@ const UeberUns = () => {
     <Layout>
       <SEOHead
         title="Über uns – Ihr Partner für AV- & IT-Lösungen"
-        description="SLT Technology Group: Ihr Spezialist für AV- und IT-Lösungen mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
-        keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Medientechnik, AV-Berater NRW"
+        description="SLT Technology Group: Inhabergeführtes Unternehmen für AV- & IT-Lösungen seit 2016. Herstellerneutrale Beratung, maßgeschneiderte Lösungen – nachhaltig und klimaneutral."
+        keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Inklusionsunternehmen, Medientechnik, Krefeld"
         canonical="/ueber-uns"
       />
+
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Content */}
             <div>
               <Badge variant="outline" className="mb-6">
-                Über uns
+                Unternehmensprofil
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                SLT Technology Group
+                Die Geschichte der SLT
               </h1>
-              <p className="text-xl text-primary font-medium mb-4">
-                Ihr Spezialist für AV- & IT-Lösungen
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Seit inzwischen über sieben Jahren stehen wir unseren Kunden als technischer 
+                Dienstleister auf dem Weg der Digitalisierung Ihrer Konferenztechnik zur Seite. 
+                Wir sind ein junges, inhabergeführtes Unternehmen und kombinieren bewährtes mit 
+                neuer, innovativer Technik.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Mit über 8 Jahren Erfahrung in der AV- & IT-Branche haben wir eines gelernt: 
-                Die beste Technik nützt nichts, wenn sie nicht zum Unternehmen passt. 
-                Deshalb setzen wir auf herstellerneutrale Beratung, pragmatische Lösungen 
-                und langfristige Partnerschaften.
+                Aufbauend auf einer zuverlässigen und maßgeschneiderten IT-Infrastruktur, entwickeln 
+                wir leidenschaftlich gerne individuelle Lösungen für unsere Partner, die stets einen 
+                Mehrwert schaffen. Bei der Präsentation, Kommunikation oder Zusammenarbeit – sei es 
+                für die Privatwirtschaft oder die öffentliche Hand.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Unser Fokus liegt auf modernen Arbeitswelten – vom einzelnen Konferenzraum 
-                bis zum unternehmensweiten Rollout. Wir begleiten Sie von der ersten Idee 
-                bis zum laufenden Betrieb und sorgen dafür, dass Ihre Technik zuverlässig funktioniert.
+                Als <strong className="text-foreground">Inklusionsunternehmen</strong> prägen uns bei der täglichen Arbeit 
+                insbesondere die Werte <strong className="text-foreground">Nachhaltigkeit</strong> und <strong className="text-foreground">Klimaneutralität</strong>.
               </p>
               <Button asChild>
                 <Link to="/kontakt">
@@ -87,16 +115,15 @@ const UeberUns = () => {
               </Button>
             </div>
 
-            {/* Portrait Image */}
+            {/* Team Photo */}
             <div className="relative">
-              <div className="aspect-[3/4] bg-secondary rounded-2xl overflow-hidden">
+              <div className="aspect-[4/3] bg-secondary rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="/assets/team/lukas-sandhoff.jpg" 
-                  alt="Luca Sandhoff - IT- & Mediensysteme"
-                  className="w-full h-full object-cover object-[center_25%]"
+                  src="/assets/team/team-photo.jpg" 
+                  alt="SLT Technology Group Team"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              {/* Decorative Element */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
             </div>
           </div>
@@ -107,12 +134,12 @@ const UeberUns = () => {
       <section className="py-20 lg:py-28 bg-card">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-               Unsere Arbeitsweise
-             </h2>
-             <p className="text-lg text-muted-foreground">
-               Diese Grundsätze leiten unsere Arbeit – in jedem Projekt, bei jeder Empfehlung.
-             </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Unsere Werte
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Diese Grundsätze leiten unsere Arbeit – in jedem Projekt, bei jeder Empfehlung.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -137,35 +164,84 @@ const UeberUns = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
+      {/* Team Section */}
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-               Unser Werdegang
-             </h2>
-             <p className="text-lg text-muted-foreground">
-               Über 8 Jahre Erfahrung in der AV- & IT-Branche – vom Projektingenieur zum 
-               etablierten Systemintegrator.
-             </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Unser Team
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Hinter SLT stehen engagierte Köpfe, die Technik nicht nur verstehen, sondern leben.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+            {teamMembers.map((member, index) => (
+              <div
+                key={member.name}
+                className="text-center group animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {member.email ? (
+                  <a href={`mailto:${member.email}`} className="block cursor-pointer">
+                    <Avatar className="h-24 w-24 mx-auto mb-3 ring-2 ring-transparent group-hover:ring-primary transition-all duration-300 group-hover:shadow-lg">
+                      {member.image ? (
+                        <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                      ) : null}
+                      <AvatarFallback className="bg-primary/10 text-primary text-xl">
+                        {member.name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-1">
+                      <Mail className="h-3 w-3 text-primary" />
+                      <span className="text-xs text-primary">E-Mail</span>
+                    </div>
+                  </a>
+                ) : (
+                  <Avatar className="h-24 w-24 mx-auto mb-3 ring-2 ring-transparent group-hover:ring-primary transition-all duration-300 group-hover:shadow-lg">
+                    {member.image ? (
+                      <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                    ) : null}
+                    <AvatarFallback className="bg-primary/10 text-primary text-xl">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
+                )}
+                <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors duration-300">
+                  {member.name}
+                </h3>
+                <p className="text-xs text-muted-foreground">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-20 lg:py-28 bg-card">
+        <div className="section-container">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Unsere Entwicklung
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Von der Gründung 2016 bis heute – unsere Meilensteine im Überblick.
+            </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             <div className="relative">
-              {/* Timeline Line */}
               <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2" />
 
               {timeline.map((item, index) => (
                 <div
-                  key={item.year}
+                  key={`${item.year}-${index}`}
                   className="relative pl-8 md:pl-0 pb-12 last:pb-0 animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className={`md:flex md:items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                    {/* Dot */}
                     <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background md:-translate-x-1/2" />
-
-                    {/* Content */}
                     <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
                       <span className="text-sm font-bold text-primary">{item.year}</span>
                       <p className="text-muted-foreground mt-1">{item.text}</p>
@@ -178,16 +254,42 @@ const UeberUns = () => {
         </div>
       </section>
 
+      {/* Why Us Section */}
+      <section className="py-20 lg:py-28">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Warum SLT?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Was uns von anderen unterscheidet – auf einen Blick.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {whyItems.map((item, index) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <CheckCircle className="h-5 w-5 text-primary shrink-0" />
+                <span className="text-foreground font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="section-container text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Lassen Sie uns über Ihr Projekt sprechen
           </h2>
-           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-             Ob konkretes Vorhaben oder erste Orientierung – wir nehmen uns gerne Zeit 
-             für ein unverbindliches Gespräch.
-           </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+            Ob konkretes Vorhaben oder erste Orientierung – wir nehmen uns gerne Zeit 
+            für ein unverbindliches Gespräch.
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="btn-glow">
               <Link to="/projektanfrage">
