@@ -2,122 +2,155 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.sandhoff.org/</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/leistungen</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/leistungen</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/loesungen</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/loesungen</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/technologien</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/technologien</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/finanzierung</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/finanzierung</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/projekte</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/projekte</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/ueber-uns</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/ueber-uns</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/kontakt</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/kontakt</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/projektanfrage</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/projektanfrage</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/news</loc>
-    <lastmod>2026-01-30</lastmod>
+    <loc>https://www.slt-tg.de/news</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- News-Artikel -->
   <url>
-    <loc>https://www.sandhoff.org/news/ise-2026-barcelona</loc>
+    <loc>https://www.slt-tg.de/news/ise-2026-barcelona</loc>
     <lastmod>2026-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/news/ise-2026-barcelona.webp</image:loc>
-      <image:title>Integrated Systems Europe ISE 2026 Barcelona - Weltleitmesse für AV und Systemintegration</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/news/barco-clickshare-hub-ise2026.jpg</image:loc>
-      <image:title>Barco ClickShare Hub auf der ISE 2026</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/news/crestron-ccc-120-t.png</image:loc>
-      <image:title>Crestron CCC-120-T UC Compute Engine für Microsoft Teams Rooms</image:title>
-    </image:image>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/news/huddly-speaker-mode-ki-kamera</loc>
+    <loc>https://www.slt-tg.de/news/huddly-speaker-mode-ki-kamera</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/partners/huddly.png</image:loc>
-      <image:title>Huddly Speaker Mode KI-Kamera</image:title>
-    </image:image>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/news/hochwertige-technik-trotzdem-chaos</loc>
+    <loc>https://www.slt-tg.de/news/hochwertige-technik-trotzdem-chaos</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/news/konferenzraum-chaos.jpg</image:loc>
-      <image:title>Konferenzraum Technik-Chaos</image:title>
-    </image:image>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/news/man-hoert-nichts-schon-wieder</loc>
+    <loc>https://www.slt-tg.de/news/man-hoert-nichts-schon-wieder</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://www.sandhoff.org/assets/news/audio-probleme.jpg</image:loc>
-      <image:title>Audio-Probleme in Konferenzräumen</image:title>
-    </image:image>
+  </url>
+  <!-- Lokale SEO-Seiten: Medientechnik -->
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/krefeld</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/impressum</loc>
+    <loc>https://www.slt-tg.de/medientechnik/duesseldorf</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/koeln</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/bonn</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/essen</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/duisburg</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/medientechnik/moenchengladbach</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Lokale SEO-Seiten: Konferenztechnik & IT -->
+  <url>
+    <loc>https://www.slt-tg.de/konferenztechnik/nrw</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/it-infrastruktur/nrw</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Legal -->
+  <url>
+    <loc>https://www.slt-tg.de/impressum</loc>
     <lastmod>2026-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.sandhoff.org/datenschutz</loc>
+    <loc>https://www.slt-tg.de/datenschutz</loc>
     <lastmod>2026-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
