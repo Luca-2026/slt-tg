@@ -21,7 +21,7 @@ const solutions = [
     icon: Video,
     title: "Konferenzräume & Meeting-Spaces",
     subtitle: "Produktive Zusammenarbeit – vor Ort und remote",
-    description: "Moderne Konferenzräume müssen hybride Meetings unterstützen, einfach zu bedienen sein und zuverlässig funktionieren. Ich plane und integriere Lösungen für Microsoft Teams Rooms, Zoom Rooms oder BYOM-Konzepte (Bring Your Own Meeting).",
+    description: "Moderne Konferenzräume müssen hybride Meetings unterstützen, einfach zu bedienen sein und zuverlässig funktionieren. Wir planen und integrieren Lösungen für Microsoft Teams Rooms, Zoom Rooms oder BYOM-Konzepte (Bring Your Own Meeting).",
     features: [
       "Microsoft Teams Rooms & Zoom Rooms Integration",
       "BYOM-Lösungen für flexible Nutzung",
@@ -55,7 +55,7 @@ const solutions = [
     icon: Presentation,
     title: "Auditorien & Veranstaltungsräume",
     subtitle: "Professionelle Präsentationen vor großem Publikum",
-    description: "Große Veranstaltungen erfordern professionelle Beschallung, hochauflösende Displays und zuverlässige Streaming-Lösungen. Ich plane Auditorien und Veranstaltungsräume, die sowohl Präsenz- als auch Hybrid-Events ermöglichen.",
+    description: "Große Veranstaltungen erfordern professionelle Beschallung, hochauflösende Displays und zuverlässige Streaming-Lösungen. Wir planen Auditorien und Veranstaltungsräume, die sowohl Präsenz- als auch Hybrid-Events ermöglichen.",
     features: [
       "Professionelle Beschallungssysteme",
       "LED-Wände & großformatige Displays",
@@ -72,7 +72,7 @@ const solutions = [
     icon: Building2,
     title: "Empfangsbereiche & Digital Signage",
     subtitle: "Der erste Eindruck zählt",
-    description: "Digitale Begrüßungssysteme, Wegeleitsysteme und dynamische Informationsdisplays prägen den ersten Eindruck Ihres Unternehmens. Ich integriere Digital-Signage-Lösungen, die informieren und beeindrucken.",
+    description: "Digitale Begrüßungssysteme, Wegeleitsysteme und dynamische Informationsdisplays prägen den ersten Eindruck Ihres Unternehmens. Wir integrieren Digital-Signage-Lösungen, die informieren und beeindrucken.",
     features: [
       "Digitale Welcome-Screens",
       "Raumbuchungssysteme mit Türschildern",
@@ -106,7 +106,7 @@ const solutions = [
     icon: Factory,
     title: "Industrie & Produktion",
     subtitle: "Robuste Lösungen für anspruchsvolle Umgebungen",
-    description: "In Produktionsumgebungen gelten besondere Anforderungen: Staub, Lärm und schwierige Lichtverhältnisse. Ich plane robuste Medientechnik, die auch unter industriellen Bedingungen zuverlässig funktioniert.",
+    description: "In Produktionsumgebungen gelten besondere Anforderungen: Staub, Lärm und schwierige Lichtverhältnisse. Wir planen robuste Medientechnik, die auch unter industriellen Bedingungen zuverlässig funktioniert.",
     features: [
       "Industrietaugliche Displays & Monitore",
       "Robuste Beschallungssysteme",
@@ -139,10 +139,10 @@ const Loesungen = () => {
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Maßgeschneiderte Lösungen für jeden Raum
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
-              Anforderungen. Ich entwickle Konzepte, die genau zu Ihren Nutzungsszenarien passen.
-            </p>
+             <p className="text-lg text-muted-foreground">
+               Ob Konferenzraum, Auditorium oder Produktionshalle – jeder Raum hat eigene 
+               Anforderungen. Wir entwickeln Konzepte, die genau zu Ihren Nutzungsszenarien passen.
+             </p>
           </div>
         </div>
       </section>

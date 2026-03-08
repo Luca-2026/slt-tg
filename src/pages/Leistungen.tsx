@@ -27,7 +27,7 @@ const services = [
     title: "Konzeption & Beratung",
     subtitle: "Die Basis für erfolgreiche Projekte",
     description:
-      "Bevor Hardware bestellt wird, analysiere ich Ihre Anforderungen, entwickle Nutzungsszenarien und prüfe die Wirtschaftlichkeit. So vermeiden Sie Fehlinvestitionen und erhalten genau die Lösung, die Sie brauchen.",
+      "Bevor Hardware bestellt wird, analysieren wir Ihre Anforderungen, entwickeln Nutzungsszenarien und prüfen die Wirtschaftlichkeit. So vermeiden Sie Fehlinvestitionen und erhalten genau die Lösung, die Sie brauchen.",
     deliverables: [
       { icon: ClipboardList, title: "Bedarfsanalyse", description: "Strukturierte Erfassung Ihrer Anforderungen und Nutzungsszenarien" },
       { icon: Scale, title: "Wirtschaftlichkeitsbetrachtung", description: "Kosten-Nutzen-Analyse verschiedener Lösungsansätze" },
@@ -41,7 +41,7 @@ const services = [
     title: "Fachplanung & Ausschreibung",
     subtitle: "Herstellerneutral und fundiert",
     description:
-      "Ich erstelle detaillierte Leistungsverzeichnisse, entwickle objektive Bewertungskriterien und begleite Sie durch den gesamten Vergabeprozess. So erhalten Sie vergleichbare Angebote und eine fundierte Entscheidungsgrundlage.",
+      "Wir erstellen detaillierte Leistungsverzeichnisse, entwickeln objektive Bewertungskriterien und begleiten Sie durch den gesamten Vergabeprozess. So erhalten Sie vergleichbare Angebote und eine fundierte Entscheidungsgrundlage.",
     deliverables: [
       { icon: FileText, title: "Leistungsverzeichnisse", description: "Detaillierte, herstellerneutrale Ausschreibungsunterlagen" },
       { icon: CheckCircle, title: "Bewertungsmatrizen", description: "Objektive Kriterien für die Angebotsvergleichbarkeit" },
@@ -55,7 +55,7 @@ const services = [
     title: "IT-Integration & Betrieb",
     subtitle: "Technik, die zuverlässig funktioniert",
     description:
-      "Die beste Technik bringt nichts, wenn sie nicht läuft. Ich sorge für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind. Dabei arbeite ich nach ITIL v4 IT Service Management Standards für professionelle und strukturierte Serviceprozesse.",
+      "Die beste Technik bringt nichts, wenn sie nicht läuft. Wir sorgen für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind. Dabei arbeiten wir nach ITIL v4 IT Service Management Standards für professionelle und strukturierte Serviceprozesse.",
     deliverables: [
       { icon: Wrench, title: "IT-Integration", description: "Nahtlose Einbindung in Ihre bestehende IT-Infrastruktur" },
       { icon: Gauge, title: "Proaktives Monitoring", description: "24/7 Systemüberwachung mit Alarmierung bei Problemen" },
@@ -82,13 +82,13 @@ const Leistungen = () => {
             <Badge variant="outline" className="mb-6">
               Leistungsübersicht
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Meine Leistungen im Detail
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Von der ersten Idee bis zum laufenden Betrieb – ich begleite Ihr Projekt 
-              in allen Phasen mit Expertise und Leidenschaft für durchdachte Lösungen.
-            </p>
+             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+               Unsere Leistungen im Detail
+             </h1>
+             <p className="text-lg text-muted-foreground">
+               Von der ersten Idee bis zum laufenden Betrieb – wir begleiten Ihr Projekt 
+               in allen Phasen mit Expertise und Leidenschaft für durchdachte Lösungen.
+             </p>
           </div>
         </div>
       </section>

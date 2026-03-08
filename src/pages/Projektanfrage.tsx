@@ -182,13 +182,13 @@ const Projektanfrage = () => {
       setIsSubmitted(true);
       toast({
         title: "Anfrage erfolgreich gesendet!",
-        description: "Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+        description: "Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
       });
     } catch (error) {
       console.error("Error sending project request:", error);
       toast({
         title: "Fehler beim Senden",
-        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail.",
+        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.",
         variant: "destructive",
       });
     } finally {
@@ -210,10 +210,10 @@ const Projektanfrage = () => {
               <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
                 Vielen Dank für Ihre Anfrage!
               </h1>
-              <p className="text-lg text-muted-foreground mb-8">
-                Ihre Projektanfrage ist bei mir eingegangen. Ich werde mich innerhalb 
-                von 24 Stunden bei Ihnen melden, um die nächsten Schritte zu besprechen.
-              </p>
+               <p className="text-lg text-muted-foreground mb-8">
+                 Ihre Projektanfrage ist bei uns eingegangen. Wir werden uns innerhalb 
+                 von 24 Stunden bei Ihnen melden, um die nächsten Schritte zu besprechen.
+               </p>
 
               <Card className="bg-card border-border text-left mb-8">
                 <CardHeader>
@@ -318,9 +318,9 @@ const Projektanfrage = () => {
               <Card className="animate-fade-in">
                 <CardHeader>
                   <CardTitle>Kontaktdaten</CardTitle>
-                  <CardDescription>
-                    Wie kann ich Sie erreichen?
-                  </CardDescription>
+                   <CardDescription>
+                     Wie können wir Sie erreichen?
+                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-2">
@@ -633,7 +633,7 @@ const Projektanfrage = () => {
                         <Link to="/datenschutz" className="text-primary hover:underline">
                           Datenschutzerklärung
                         </Link>{" "}
-                        gelesen und stimme der Verarbeitung meiner Daten zu. *
+                         gelesen und stimme der Verarbeitung meiner Daten zu. *
                       </Label>
                     </div>
 

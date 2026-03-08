@@ -16,12 +16,12 @@ const values = [
   {
     icon: Target,
     title: "Herstellerneutral",
-    description: "Ich empfehle nur, was zu Ihren Anforderungen passt – nicht was die höchste Marge bringt.",
+    description: "Wir empfehlen nur, was zu Ihren Anforderungen passt – nicht was die höchste Marge bringt.",
   },
   {
     icon: Handshake,
     title: "Partnerschaftlich",
-    description: "Ich sehe mich als verlängerten Arm Ihrer IT-Abteilung, nicht als externen Berater.",
+    description: "Wir sehen uns als verlängerten Arm Ihrer IT-Abteilung, nicht als externen Berater.",
   },
   {
     icon: Lightbulb,
@@ -60,24 +60,24 @@ const UeberUns = () => {
             {/* Content */}
             <div>
               <Badge variant="outline" className="mb-6">
-                Über mich
+                Über uns
               </Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Luca Sandhoff
+                SLT Technology Group
               </h1>
               <p className="text-xl text-primary font-medium mb-4">
                 Ihr Spezialist für Videokonferenz- & AV-Lösungen
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Mit über 8 Jahren Erfahrung in der AV/UC-Branche habe ich eines gelernt: 
+                Mit über 8 Jahren Erfahrung in der AV/UC-Branche haben wir eines gelernt: 
                 Die beste Technik nützt nichts, wenn sie nicht zum Unternehmen passt. 
-                Deshalb setze ich auf herstellerneutrale Beratung, pragmatische Lösungen 
+                Deshalb setzen wir auf herstellerneutrale Beratung, pragmatische Lösungen 
                 und langfristige Partnerschaften.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Mein Fokus liegt auf modernen Arbeitswelten – vom einzelnen Konferenzraum 
-                bis zum unternehmensweiten Rollout. Ich begleite Sie von der ersten Idee 
-                bis zum laufenden Betrieb und sorge dafür, dass Ihre Technik zuverlässig funktioniert.
+                Unser Fokus liegt auf modernen Arbeitswelten – vom einzelnen Konferenzraum 
+                bis zum unternehmensweiten Rollout. Wir begleiten Sie von der ersten Idee 
+                bis zum laufenden Betrieb und sorgen dafür, dass Ihre Technik zuverlässig funktioniert.
               </p>
               <Button asChild>
                 <Link to="/kontakt">
@@ -107,12 +107,12 @@ const UeberUns = () => {
       <section className="py-20 lg:py-28 bg-card">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Meine Arbeitsweise
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Diese Grundsätze leiten meine Arbeit – in jedem Projekt, bei jeder Empfehlung.
-            </p>
+             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+               Unsere Arbeitsweise
+             </h2>
+             <p className="text-lg text-muted-foreground">
+               Diese Grundsätze leiten unsere Arbeit – in jedem Projekt, bei jeder Empfehlung.
+             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -141,13 +141,13 @@ const UeberUns = () => {
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Mein Werdegang
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Über 8 Jahre Erfahrung in der AV/UC-Branche – vom Projektingenieur zum 
-              selbstständigen Fachplaner.
-            </p>
+             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+               Unser Werdegang
+             </h2>
+             <p className="text-lg text-muted-foreground">
+               Über 8 Jahre Erfahrung in der AV/UC-Branche – vom Projektingenieur zum 
+               etablierten Systemintegrator.
+             </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
@@ -184,10 +184,10 @@ const UeberUns = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Lassen Sie uns über Ihr Projekt sprechen
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            Ob konkretes Vorhaben oder erste Orientierung – ich nehme mir gerne Zeit 
-            für ein unverbindliches Gespräch.
-          </p>
+           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+             Ob konkretes Vorhaben oder erste Orientierung – wir nehmen uns gerne Zeit 
+             für ein unverbindliches Gespräch.
+           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="btn-glow">
               <Link to="/projektanfrage">
