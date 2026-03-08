@@ -248,7 +248,7 @@ export default function Karriere() {
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <div className="flex-shrink-0 scroll-hidden">
+          <div className="flex-shrink-0">
             <img
               src={introRakete}
               alt="SLT Rakete"
