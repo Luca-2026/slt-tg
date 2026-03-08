@@ -9,6 +9,7 @@ const testimonials = [
     company: "Rheinhotel Dreesen GmbH",
     rating: 5,
     text: "Wir haben die Firma SLT Technology Group als zuverlässigen Partner im Bereich der Neuausstattung unserer Tagungsräume erlebt. Schnelle Abwicklung, kompetente Monteure und ein insgesamt reibungsloser Ablauf! Vielen Dank und gerne wieder!",
+    avatar: "/assets/testimonials/thomas.png",
   },
   {
     name: "Apostolos Parashos",
@@ -16,6 +17,7 @@ const testimonials = [
     company: "Laki's Gastro GmbH, Düsseldorf",
     rating: 5,
     text: "SLT hat unseren Gastronomie- und Eventbereich mit modernster LED-Beleuchtungstechnik, einer durchdachten Beschallungslösung, mehreren Digital-Signage Displays und einem leistungsfähigen Gäste-WIFI ausgestattet. Besonders großartig ist die ortsunabhängige Steuerung aller Komponenten über ein Tablet!",
+    avatar: "/assets/testimonials/lakis.jpg",
   },
   {
     name: "André Perthel",
@@ -73,10 +75,19 @@ export const TestimonialsSection = () => {
                   "{testimonial.text}"
                 </p>
 
-                <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                  <p className="text-sm text-primary">{testimonial.company}</p>
+                <div className="border-t border-border pt-4 flex items-center gap-3">
+                  {testimonial.avatar && (
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover grayscale"
+                    />
+                  )}
+                  <div>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                    <p className="text-sm text-primary">{testimonial.company}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
