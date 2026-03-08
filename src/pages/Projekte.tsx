@@ -375,11 +375,20 @@ const Projekte = () => {
                     ) : (
                       <div className="space-y-4">
                         <div className="flex flex-wrap gap-2">
-                          {project.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" className="text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
+                          {project.tags.map((tag) => {
+                            const link = tagLinks[tag];
+                            return link ? (
+                              <Link key={tag} to={link}>
+                                <Badge variant="outline" className="text-xs hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer">
+                                  {tag}
+                                </Badge>
+                              </Link>
+                            ) : (
+                              <Badge key={tag} variant="outline" className="text-xs">
+                                {tag}
+                              </Badge>
+                            );
+                          })}
                         </div>
                         <Button
                           variant="outline"
