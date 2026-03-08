@@ -2,7 +2,6 @@ import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { HeroSection } from "@/components/home/HeroSection";
 import { IntroSection } from "@/components/home/IntroSection";
-import { TrustBar } from "@/components/home/TrustBar";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { PartnersSection } from "@/components/home/PartnersSection";
@@ -22,7 +21,6 @@ const Index = () => {
       />
       <HeroSection />
       <IntroSection />
-      <TrustBar />
       <ServicesOverview />
       <ProcessTimeline />
       <PartnersSection />
