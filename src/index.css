@@ -202,4 +202,17 @@
     from { opacity: 0; transform: translateX(20px); }
     to { opacity: 1; transform: translateX(0); }
   }
+
+  @keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll-logos {
+    animation: scroll-logos 30s linear infinite;
+  }
+
+  .animate-scroll-logos:hover {
+    animation-play-state: paused;
+  }
 }
