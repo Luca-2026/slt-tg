@@ -48,9 +48,9 @@ const UeberUns = () => {
   return (
     <Layout>
       <SEOHead
-        title="Über uns – Fachbüro für Medientechnik"
-        description="Luca Sandhoff: AV-Consultant und Fachplaner für Medientechnik mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
-        keywords="Luca Sandhoff, AV-Consultant, Medientechnik Fachplaner, Fachbüro Medientechnik, AV-Berater NRW"
+        title="Über uns – Ihr Partner für AV- & IT-Lösungen"
+        description="SLT Technology Group: Ihr Spezialist für AV- und IT-Lösungen mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
+        keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Medientechnik, AV-Berater NRW"
         canonical="/ueber-uns"
       />
       {/* Hero Section */}
