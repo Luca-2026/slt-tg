@@ -119,7 +119,7 @@ const technologies = [
 ];
 
 function TechOverviewCard({ tech, index }: { tech: typeof technologies[0]; index: number }) {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation<HTMLAnchorElement>();
   return (
     <a
       ref={ref}
