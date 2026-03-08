@@ -110,6 +110,16 @@ const projects = [
   },
 ];
 
+const tagLinks: Record<string, string> = {
+  "Shure": "/technologien#audio",
+  "Nureva": "/technologien#audio",
+  "Nureva HDL-310": "/technologien#audio",
+  "AVer Tracking": "/technologien#video",
+  "Huddly L1": "/technologien#video",
+  "Iiyama 4K": "/technologien#displays",
+  "LED-Wall": "/technologien#displays",
+};
+
 const testimonials = [
   {
     name: "Thomas Döbber-Rüther",
