@@ -33,10 +33,10 @@ const generateArticleSchema = (article: ArticleData) => ({
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sandhoff IT- & Mediensysteme",
+    "name": "SLT Technology Group",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.sandhoff.org/assets/sandhoff-logo.jpg"
+      "url": "https://www.slt-tg.de/assets/sandhoff-logo.jpg"
     }
   },
   "mainEntityOfPage": {
