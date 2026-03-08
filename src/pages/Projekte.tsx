@@ -310,6 +310,12 @@ const Projekte = () => {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <TestimonialsOnProjekte />
+
+      {/* Client Logos */}
+      <ClientLogosOnProjekte />
+
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="section-container text-center">

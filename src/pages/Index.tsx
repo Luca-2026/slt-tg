@@ -26,7 +26,7 @@ const Index = () => {
       <ProcessTimeline />
       <ReferencesTeaser />
       <ClientLogosSlider />
-      <TestimonialsSection />
+      
       <PartnersSection />
       <FAQSection />
       <CTASection />
