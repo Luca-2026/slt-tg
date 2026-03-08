@@ -87,6 +87,24 @@ const Leistungen = () => {
         description="Herstellerneutrale AV- & IT-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb. Installation und Integration von Medientechnik und IT-Infrastruktur in NRW und deutschlandweit."
         keywords="AV-Fachplanung, IT-Lösungen, Ausschreibung Medientechnik, Fachplaner Konferenztechnik, IT-Infrastruktur, Medientechnik Consultant NRW"
         canonical="/leistungen"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "AV- & IT-Fachplanung und Integration",
+          "provider": { "@type": "Organization", "name": "SLT Technology Group GmbH & Co. KG", "url": "https://www.slt-tg.de" },
+          "description": "Herstellerneutrale AV- & IT-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb.",
+          "areaServed": { "@type": "State", "name": "Nordrhein-Westfalen" },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Leistungen",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Konzeption & Beratung" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fachplanung & Ausschreibung" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation & Integration" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service & Betrieb" } }
+            ]
+          }
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">

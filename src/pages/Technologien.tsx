@@ -221,6 +221,18 @@ const Technologien = () => {
         description="Herstellerneutrale Beratung zu Videokonferenzsystemen, IT-Infrastruktur, Displays, Audiotechnik und Mediensteuerung. Zertifizierter Partner von Shure, Crestron, Barco und mehr."
         keywords="AV-Technologie, IT-Lösungen, Videokonferenzsystem, Shure Mikrofon, Crestron Steuerung, Microsoft Teams Rooms, IT-Infrastruktur, Fachplaner Medientechnik"
         canonical="/technologien"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "AV- & IT-Technologien",
+          "description": "Herstellerneutrale Technologieberatung für professionelle Medientechnik und IT-Infrastruktur.",
+          "itemListElement": technologies.map((t, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": t.title,
+            "description": t.description
+          }))
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">

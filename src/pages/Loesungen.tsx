@@ -164,6 +164,21 @@ const Loesungen = () => {
         description="Maßgeschneiderte AV- & IT-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Industrie. Fachplanung und Integration von Medientechnik und IT-Infrastruktur."
         keywords="Konferenzraum Planung, AV-Lösungen, IT-Lösungen, Auditorium Medientechnik, Schulungsraum AV, IT-Infrastruktur, AV-Integration NRW"
         canonical="/loesungen"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "AV- & IT-Lösungen von SLT Technology Group",
+          "description": "Maßgeschneiderte Lösungen für Konferenzräume, Auditorien, Schulungsräume und Industrie.",
+          "numberOfItems": 6,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Konferenzräume & Meeting-Spaces", "url": "https://www.slt-tg.de/loesungen#konferenzraum-detail" },
+            { "@type": "ListItem", "position": 2, "name": "Kollaborationsräume", "url": "https://www.slt-tg.de/loesungen#kollaboration-detail" },
+            { "@type": "ListItem", "position": 3, "name": "Auditorien & Veranstaltungsräume", "url": "https://www.slt-tg.de/loesungen#auditorium-detail" },
+            { "@type": "ListItem", "position": 4, "name": "Schulungsräume", "url": "https://www.slt-tg.de/loesungen#schulung-detail" },
+            { "@type": "ListItem", "position": 5, "name": "Digital Signage & Empfang", "url": "https://www.slt-tg.de/loesungen#empfang-detail" },
+            { "@type": "ListItem", "position": 6, "name": "Industrie & Produktion", "url": "https://www.slt-tg.de/loesungen#industrie-detail" }
+          ]
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
@@ -256,7 +271,7 @@ const Loesungen = () => {
                 <div className="aspect-video bg-secondary rounded-2xl overflow-hidden">
                   <img 
                     src={solution.image} 
-                    alt={solution.title}
+                    alt={`${solution.title}: ${solution.subtitle} – AV-Lösung von SLT Technology Group`}
                     className="w-full h-full object-cover"
                   />
                 </div>

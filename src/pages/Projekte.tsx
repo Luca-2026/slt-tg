@@ -180,7 +180,7 @@ function TestimonialsOnProjekte() {
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">"{t.text}"</p>
                 <div className="border-t border-border pt-4 flex items-center gap-3">
-                  {t.avatar && <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover grayscale" />}
+                  {t.avatar && <img src={t.avatar} alt={`${t.name}, ${t.position} bei ${t.company}`} className="w-10 h-10 rounded-full object-cover grayscale" />}
                   <div>
                     <p className="font-semibold text-foreground text-sm">{t.name}</p>
                     <p className="text-xs text-muted-foreground">{t.position}, {t.company}</p>
@@ -240,6 +240,19 @@ const Projekte = () => {
         description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Fachbüros für Medientechnik in NRW."
         keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Fachbüro Referenzen NRW"
         canonical="/projekte"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Referenzprojekte der SLT Technology Group",
+          "itemListElement": projects.map((p, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": `${p.company} – ${p.categoryLabel}`,
+            "description": p.shortDescription,
+            "url": `https://www.slt-tg.de/projekte#${p.id}`,
+            "image": `https://www.slt-tg.de${p.heroImage}`
+          }))
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
@@ -349,7 +362,7 @@ const Projekte = () => {
                                 >
                                   <img 
                                     src={img} 
-                                    alt={`${project.company} - Bild ${idx + 1}`}
+                                    alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
                                   />
                                 </button>
@@ -459,7 +472,7 @@ const Projekte = () => {
           </button>
           <img 
             src={lightboxImage} 
-            alt="Projektbild vergrößert"
+            alt="Vergrößerte Projektansicht – AV-Installation von SLT Technology Group"
             className="max-w-full max-h-full object-contain"
             onClick={(e) => e.stopPropagation()}
           />

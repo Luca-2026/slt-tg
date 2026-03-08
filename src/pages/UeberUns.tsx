@@ -78,6 +78,21 @@ const UeberUns = () => {
         description="SLT Technology Group: Inhabergeführtes Unternehmen für AV- & IT-Lösungen seit 2016. Herstellerneutrale Beratung, maßgeschneiderte Lösungen – nachhaltig und klimaneutral."
         keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Inklusionsunternehmen, Medientechnik, Krefeld"
         canonical="/ueber-uns"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "SLT Technology Group GmbH & Co. KG",
+            "url": "https://www.slt-tg.de",
+            "foundingDate": "2016",
+            "description": "Inhabergeführtes Unternehmen für AV- & IT-Lösungen. Herstellerneutrale Beratung und maßgeschneiderte Integration.",
+            "address": { "@type": "PostalAddress", "streetAddress": "Anrather Straße 291", "addressLocality": "Krefeld", "postalCode": "47807", "addressCountry": "DE" },
+            "telephone": "+49 2151 4179902",
+            "email": "info@slt-tg.de",
+            "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 10, "maxValue": 50 }
+          }
+        }}
       />
 
       {/* Hero Section */}
@@ -120,7 +135,7 @@ const UeberUns = () => {
               <div className="aspect-[4/3] bg-secondary rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src="/assets/team/team-photo.jpg" 
-                  alt="SLT Technology Group Team"
+                  alt="Das Team der SLT Technology Group – AV- und IT-Spezialisten aus Krefeld"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>

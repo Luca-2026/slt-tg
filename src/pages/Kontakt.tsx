@@ -67,6 +67,18 @@ const Kontakt = () => {
         description="Kontaktieren Sie die SLT Technology Group für Ihre AV- & IT-Projekte. Kostenlose Erstberatung für Installation, Integration und Betrieb."
         keywords="AV-Installation Kontakt, IT-Lösungen Anfrage, SLT Technology Group, Konferenztechnik Krefeld"
         canonical="/kontakt"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "SLT Technology Group GmbH & Co. KG",
+            "telephone": "+49 2151 4179902",
+            "email": "info@slt-tg.de",
+            "address": { "@type": "PostalAddress", "streetAddress": "Anrather Straße 291", "addressLocality": "Krefeld", "postalCode": "47807", "addressCountry": "DE" },
+            "url": "https://www.slt-tg.de"
+          }
+        }}
       />
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">

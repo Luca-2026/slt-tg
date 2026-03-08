@@ -129,6 +129,22 @@ const Finanzierung = () => {
         description="Flexible Finanzierungsoptionen für Medientechnik-Projekte: Kauf, Leasing, Miete oder AV-as-a-Service. TCO-Beratung durch unseren AV-Consultant."
         keywords="AV Finanzierung, Leasing Medientechnik, AV-as-a-Service, Managed Service AV, TCO Berechnung, Medientechnik Miete"
         canonical="/finanzierung"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Finanzierungsmodelle für Medientechnik",
+          "description": "Vergleich verschiedener Finanzierungsoptionen: Kauf, Leasing, Miete und AV-as-a-Service.",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Finanzierungsmodelle",
+            "itemListElement": financingModels.map((m, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "name": m.title,
+              "description": m.description
+            }))
+          }
+        }}
       />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
