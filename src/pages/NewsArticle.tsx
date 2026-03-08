@@ -27,9 +27,9 @@ const generateArticleSchema = (article: ArticleData) => ({
   "datePublished": article.date,
   "dateModified": article.date,
   "author": {
-    "@type": "Person",
-    "name": "Luca Sandhoff",
-    "url": "https://www.sandhoff.org/ueber-uns"
+    "@type": "Organization",
+    "name": "SLT Technology Group",
+    "url": "https://www.slt-tg.de/ueber-uns"
   },
   "publisher": {
     "@type": "Organization",
