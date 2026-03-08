@@ -55,7 +55,7 @@ const services = [
     title: "IT-Integration & Betrieb",
     subtitle: "Technik, die zuverlässig funktioniert",
     description:
-      "Die beste Technik bringt nichts, wenn sie nicht läuft. Ich sorge für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind. Dabei arbeite ich nach ITIL v4 IT Service Management Standards für professionelle und strukturierte Serviceprozesse.",
+      "Die beste Technik bringt nichts, wenn sie nicht läuft. Wir sorgen für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind. Dabei arbeiten wir nach ITIL v4 IT Service Management Standards für professionelle und strukturierte Serviceprozesse.",
     deliverables: [
       { icon: Wrench, title: "IT-Integration", description: "Nahtlose Einbindung in Ihre bestehende IT-Infrastruktur" },
       { icon: Gauge, title: "Proaktives Monitoring", description: "24/7 Systemüberwachung mit Alarmierung bei Problemen" },
