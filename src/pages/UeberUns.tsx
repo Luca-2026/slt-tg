@@ -51,7 +51,6 @@ const timeline = [
 ];
 
 const teamMembers = [
-  { name: "Luca Sandhoff", role: "Geschäftsführer", image: "/assets/team/lukas-sandhoff.jpg", email: "l.sandhoff@slt-tg.de" },
   { name: "Benedikt Nöchel", role: "Projektleitung & Vertrieb", image: "/assets/team/benedikt-noechel.jpg", email: "b.noechel@slt-tg.de" },
   { name: "Ersel Uzun", role: "Technik & Service", image: "/assets/team/ersel-uzun.jpg", email: "e.uzun@slt-tg.de" },
   { name: "Andreas Scherzow", role: "Logistik & Lager", image: null, email: "a.scherzow@slt-tg.de" },
