@@ -305,12 +305,12 @@ export default function Karriere() {
       </section>
 
       {/* Job Positions */}
-      <section ref={jobsRef} id="positions" className={`py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
+      <section ref={jobsRef} id="positions" className={`py-12 sm:py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Offene Stellen
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-10">
             Stellenmarkt
           </h2>
           <div className="space-y-4">
