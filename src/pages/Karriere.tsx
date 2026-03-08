@@ -363,7 +363,7 @@ export default function Karriere() {
                     </button>
 
                     {isExpanded && (
-                      <div className="px-6 md:px-8 pb-8 animate-fade-in-up border-t border-border pt-6">
+                      <div className="px-4 sm:px-6 md:px-8 pb-6 sm:pb-8 animate-fade-in-up border-t border-border pt-4 sm:pt-6">
                         <p className="text-muted-foreground mb-6">{job.description}</p>
                         <div className="grid md:grid-cols-2 gap-8 mb-8">
                           <div>
