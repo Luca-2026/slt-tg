@@ -248,16 +248,16 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
         <img
           src={karriereHero}
           alt="SLT Karriere"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-right"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 py-24 md:py-36 lg:py-44 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 py-20 md:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="max-w-xl">
             <Badge className="bg-accent text-accent-foreground mb-6 text-sm px-4 py-1.5">
