@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import sltLogo from "@/assets/slt-logo.png";
 
 const footerLinks = {
   leistungen: [
@@ -39,9 +40,7 @@ export function Footer() {
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-xl font-bold text-foreground">
-                SLT <span className="text-primary">Technology Group</span>
-              </span>
+              <img src={sltLogo} alt="SLT Technology Group" className="h-10 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Ihr Partner für die Installation & Integration von
