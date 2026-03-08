@@ -93,8 +93,8 @@ export function IntroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <AnimatedBlock direction="left" className="order-2 lg:order-1">
             <ImageCard
-              src={introRakete}
-              alt="SLT Rakete – Ihr Partner zum Durchstarten"
+              src={introMission}
+              alt="Digital Signage Display – professionelle AV-Installation von SLT"
               className="aspect-[16/9]"
             />
           </AnimatedBlock>

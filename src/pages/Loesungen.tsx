@@ -84,7 +84,7 @@ const solutions = [
       "Corporate-Design-konforme Gestaltung"
     ],
     useCases: ["Empfangslobbys", "Wartebereiche", "Cafeterien", "Showrooms"],
-    image: "/assets/solutions/reception.jpg"
+    image: "/assets/solutions/langeoog-display.jpg"
   },
   {
     id: "bildung",
