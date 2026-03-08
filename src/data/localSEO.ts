@@ -50,6 +50,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Audiotechnik", description: "Deckenmikrofone, DSP-Systeme und Beschallungslösungen für kristallklare Kommunikation.", link: "/technologien#audio" },
       { title: "Mediensteuerung", description: "Intuitive Touch-Panel-Steuerungen und automatisierte Raumszenarien mit Crestron, Q-Sys & Co.", link: "/technologien#steuerung" },
       { title: "Digital Signage", description: "Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen.", link: "/loesungen#empfang-detail" },
+      { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN, Managed Switches und AV-over-IP für eine stabile Basis.", link: "/technologien#it-infrastruktur" },
       { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
@@ -74,32 +75,12 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Fachplanung & Beratung", description: "Bedarfsgerechte Konzepte von der Analyse bis zur Ausschreibung.", link: "/leistungen#konzeption" },
       { title: "Hybride Meeting-Lösungen", description: "Brücken zwischen Präsenz- und Remote-Teilnehmern.", link: "/loesungen#konferenzraum-detail" },
       { title: "Service & Betrieb", description: "Wartung, Remote-Monitoring und garantierte Reaktionszeiten.", link: "/leistungen#service" },
+      { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN und Netzwerklösungen als Basis für moderne AV-Systeme.", link: "/technologien#it-infrastruktur" },
     ],
     faqItems: (city) => [
       { question: `Planen Sie Konferenzräume in ${city}?`, answer: `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
       { question: `Wie lange dauert ein Konferenzraum-Projekt?`, answer: `Je nach Umfang rechnen Sie mit 4-12 Wochen von der Planung bis zur Inbetriebnahme. Einfache Huddle Spaces können auch schneller realisiert werden.` },
       { question: `Unterstützen Sie bei der Finanzierung?`, answer: `Ja, wir bieten verschiedene Finanzierungsmodelle an – von Leasing über Mietkauf bis zu AV-as-a-Service-Konzepten.` },
-    ],
-  },
-  "it-infrastruktur": {
-    baseSlug: "it-infrastruktur",
-    title: "IT-Infrastruktur",
-    metaTitle: "IT-Infrastruktur",
-    metaDescription: "Professionelle IT-Infrastruktur",
-    heroTitle: (city) => `IT-Infrastruktur ${city}`,
-    heroSubtitle: (city) => `Leistungsfähige IT-Netzwerke, strukturierte Verkabelung und WLAN-Lösungen für Unternehmen in ${city}. Die Basis für moderne Kommunikation.`,
-    intro: (city) => `Eine stabile IT-Infrastruktur ist das Fundament für alle modernen AV- und Kommunikationssysteme. Wir planen und realisieren Netzwerklösungen für Unternehmen in ${city} – von der strukturierten Verkabelung bis zum Enterprise-WLAN.`,
-    services: [
-      { title: "Strukturierte Verkabelung", description: "Cat6a/Cat7-Kupfer- und Glasfasernetze nach aktuellen Normen.", link: "/technologien#it-infrastruktur" },
-      { title: "Enterprise WLAN", description: "Professionelle WLAN-Planung mit Site Surveys und Wi-Fi 6E/7.", link: "/technologien#it-infrastruktur" },
-      { title: "Netzwerk-Switches", description: "Managed Switches mit VLAN-Segmentierung für sichere Netze.", link: "/technologien#it-infrastruktur" },
-      { title: "AV-over-IP", description: "Netzwerkbasierte AV-Signalverteilung für flexible Raumkonzepte.", link: "/technologien#signalverteilung" },
-      { title: "Videoüberwachung", description: "IP-basierte Videoüberwachungssysteme und Zutrittskontrolle.", link: "/technologien#videoueberwachung" },
-      { title: "Installation & Integration", description: "Professionelle Montage und Inbetriebnahme der gesamten Infrastruktur.", link: "/leistungen#integration" },
-    ],
-    faqItems: (city) => [
-      { question: `Bieten Sie IT-Netzwerk-Services in ${city} an?`, answer: `Ja, wir planen und installieren IT-Infrastruktur in ${city} und ganz NRW. Von der Verkabelung bis zur WLAN-Ausleuchtung.` },
-      { question: `Arbeiten Sie mit bestehenden IT-Dienstleistern zusammen?`, answer: `Selbstverständlich. Wir integrieren uns nahtlos in bestehende IT-Strukturen und arbeiten eng mit Ihrem IT-Team oder externen Dienstleistern zusammen.` },
     ],
   },
 };
@@ -110,6 +91,5 @@ export function getLocalSEORoutes(): { path: string; topic: string; city: string
     routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
   });
   routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
-  routes.push({ path: "/it-infrastruktur/nrw", topic: "it-infrastruktur", city: "nrw" });
   return routes;
 }

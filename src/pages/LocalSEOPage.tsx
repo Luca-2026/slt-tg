@@ -28,7 +28,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
 
   const whyItems = [
     showBonnOffice
-      ? { title: "Standort vor Ort", desc: `Mit unserem Büro in Bonn (Drachenburgstraße 8) sind wir im ${city.name === "Bonn" ? "Bonner" : "Kölner und Bonner"} Raum besonders flexibel und schnell vor Ort.` }
+      ? { title: "Standort vor Ort", desc: `Mit unserem Standort in Bonn (Drachenburgstraße 8) sind wir im ${city.name === "Bonn" ? "Bonner" : "Kölner und Bonner"} Raum besonders flexibel und schnell vor Ort.` }
       : { title: "Kurze Wege", desc: `Unser Hauptsitz in Krefeld ermöglicht schnelle Einsätze in ${city.name} und Umgebung.` },
     { title: "Herstellerneutral", desc: "Wir empfehlen, was zu Ihnen passt – nicht was die höchste Marge bringt." },
     { title: "Alles aus einer Hand", desc: "Planung, Installation, Inbetriebnahme und laufender Service." },
@@ -101,7 +101,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Standort Bonn</h3>
                     <p className="text-sm text-muted-foreground">
-                      Neben unserem Hauptsitz in Krefeld betreiben wir ein Büro in <strong>Bonn, Drachenburgstraße 8, 53179 Bonn</strong>. 
+                      Neben unserem Hauptsitz in Krefeld betreiben wir einen vollwertigen Standort in <strong>Bonn, Drachenburgstraße 8, 53179 Bonn</strong>. 
                       So können wir im Kölner und Bonner Raum besonders flexibel und kurzfristig reagieren.
                     </p>
                   </div>
