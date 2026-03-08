@@ -78,6 +78,7 @@ const Finanzierung = () => {
 
   return (
     <Layout>
+      <div className="overflow-x-hidden">
       <SEOHead
         title="Finanzierung: Leasing, Miete & AV-as-a-Service"
         description="Flexible Finanzierungsoptionen für Medientechnik-Projekte: Kauf, Leasing, Miete oder AV-as-a-Service. TCO-Beratung durch unseren AV-Consultant."
