@@ -69,7 +69,7 @@ const UeberUns = () => {
                 Ihr Spezialist für AV- & IT-Lösungen
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Mit über 8 Jahren Erfahrung in der AV/UC-Branche haben wir eines gelernt: 
+                Mit über 8 Jahren Erfahrung in der AV- & IT-Branche haben wir eines gelernt: 
                 Die beste Technik nützt nichts, wenn sie nicht zum Unternehmen passt. 
                 Deshalb setzen wir auf herstellerneutrale Beratung, pragmatische Lösungen 
                 und langfristige Partnerschaften.
