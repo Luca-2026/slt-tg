@@ -344,7 +344,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to SLT (with attachments)
     const notificationPayload: any = {
-      from: "SLT Technology Group <onboarding@resend.dev>",
+      from: "SLT Technology Group <noreply@slt-tg.de>",
       to: [toAddress],
       reply_to: data.email,
       subject,
