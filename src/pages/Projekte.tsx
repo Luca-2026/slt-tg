@@ -256,16 +256,24 @@ const Projekte = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
-        <div className="section-container">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+        </div>
+        <div
+          ref={heroRef}
+          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+        >
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">
               Referenzen
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Referenzprojekte: Medientechnik & Konferenzräume
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Referenzprojekte:{" "}
+              <span className="text-primary">Medientechnik & Konferenzräume</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base lg:text-lg text-muted-foreground">
               Ein Einblick in realisierte Projekte – von einzelnen Boardrooms 
               bis zu unternehmensweiten Rollouts mit über 20 Räumen.
             </p>
