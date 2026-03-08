@@ -132,8 +132,8 @@ function TechOverviewCard({ tech, index }: { tech: typeof technologies[0]; index
           <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors">
             <tech.icon className="h-5 w-5 text-primary" />
           </div>
-          <CardTitle className="text-base lg:text-lg">{tech.title}</CardTitle>
-          <CardDescription className="text-xs lg:text-sm line-clamp-2">{tech.description}</CardDescription>
+           <CardTitle className="text-sm lg:text-lg break-words hyphens-auto leading-tight">{tech.title}</CardTitle>
+          <CardDescription className="text-xs lg:text-sm line-clamp-2 break-words">{tech.description}</CardDescription>
         </CardHeader>
         <CardContent className="pt-0 p-4 lg:p-6 lg:pt-0 mt-auto">
           <div className="flex flex-wrap gap-1.5 mb-3">
