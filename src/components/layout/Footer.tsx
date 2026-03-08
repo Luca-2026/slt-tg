@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import sltLogo from "@/assets/slt-logo.png";
 
 const footerLinks = {
   leistungen: [
