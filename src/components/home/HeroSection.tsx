@@ -9,10 +9,10 @@ function CountUpStat({ end, suffix, label }: { end: number; suffix: string; labe
   
   return (
     <div className="text-center" ref={ref}>
-      <div className="text-3xl lg:text-4xl font-bold text-primary">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary">
         {count}{suffix}
       </div>
-      <div className="text-sm text-muted-foreground mt-1">{label}</div>
+      <div className="text-xs sm:text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   );
 }
@@ -57,18 +57,21 @@ const hotspots = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden -mt-24 lg:-mt-28">
+    <section className="relative min-h-[calc(100svh-5rem)] lg:min-h-[calc(100svh-6rem)] flex items-end lg:items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-          className="w-full h-full object-cover object-[75%_center] sm:object-[60%_center] lg:object-center"
+          className="w-full h-full object-cover object-[70%_center] sm:object-[60%_center] lg:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
+        {/* Mobile/Tablet: bottom-heavy gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a2a42]/95 via-[#0a2a42]/40 to-transparent lg:hidden" />
+        {/* Desktop: right-side gradient */}
+        <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent hidden lg:block" />
       </div>
 
-      {/* Hotspots on devices */}
+      {/* Hotspots on devices - Desktop only */}
       <div className="absolute inset-0 z-30 hidden lg:block pointer-events-none">
         {hotspots.map((spot) => (
           <Link
@@ -78,11 +81,8 @@ export function HeroSection() {
             style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
             title={spot.label}
           >
-            {/* Gentle pulsating ring */}
             <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
-            {/* Dot */}
             <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)] transition-transform group-hover:scale-150" />
-            {/* Tooltip */}
             <span className="absolute left-5 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
               {spot.label}
             </span>
@@ -90,8 +90,54 @@ export function HeroSection() {
         ))}
       </div>
 
-      {/* Content - Right aligned */}
-      <div className="section-container relative z-20 py-8 sm:py-12">
+      {/* Mobile & Tablet Content - Bottom aligned */}
+      <div className="section-container relative z-20 pb-10 pt-20 w-full lg:hidden">
+        <div className="max-w-md">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-accent text-xs font-medium mb-5 animate-fade-in">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
+            AV- & IT-Lösungen
+          </div>
+
+          {/* Headline */}
+          <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] mb-4 animate-fade-in-up text-white">
+            <span className="text-primary">your digital</span>
+            <br />
+            <span className="text-accent">future.</span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-base sm:text-lg text-white/80 mb-8 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.1s" }}>
+            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <Button asChild size="lg" className="btn-glow text-base">
+              <Link to="/kontakt">
+                Projekt anfragen
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-base border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+              <Link to="/projekte">
+                <Play className="mr-2 h-5 w-5" />
+                Referenzen
+              </Link>
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 mt-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <CountUpStat end={32} suffix="+" label="Projekte" />
+            <CountUpStat end={25} suffix="+" label="Kunden" />
+            <CountUpStat end={8} suffix="+" label="Jahre" />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Content - Right aligned */}
+      <div className="section-container relative z-20 py-8 sm:py-12 hidden lg:block">
         <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
@@ -100,21 +146,21 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
+          <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
             <span className="text-primary">your digital</span>
             <br />
             <span className="text-accent">future.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
             sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
             laufenden Betrieb – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="btn-glow text-base px-8">
               <Link to="/kontakt">
                 Projekt anfragen
@@ -138,8 +184,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+      {/* Scroll Indicator - Desktop only */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20 hidden lg:block">
         <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
           <div className="w-1 h-2 rounded-full bg-accent" />
         </div>
