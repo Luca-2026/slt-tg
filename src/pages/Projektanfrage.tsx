@@ -318,9 +318,9 @@ const Projektanfrage = () => {
               <Card className="animate-fade-in">
                 <CardHeader>
                   <CardTitle>Kontaktdaten</CardTitle>
-                  <CardDescription>
-                    Wie kann ich Sie erreichen?
-                  </CardDescription>
+                   <CardDescription>
+                     Wie können wir Sie erreichen?
+                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-2">
