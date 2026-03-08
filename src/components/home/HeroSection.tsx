@@ -57,139 +57,146 @@ const hotspots = [
 
 export function HeroSection() {
   return (
-    <section className="relative h-[100svh] -mt-20 lg:-mt-24 flex items-end lg:items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-          className="w-full h-full object-cover object-[70%_center] sm:object-[60%_center] lg:object-center"
-        />
-        {/* Mobile/Tablet: bottom-heavy gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a2a42]/95 via-[#0a2a42]/40 to-transparent lg:hidden" />
-        {/* Desktop: right-side gradient */}
-        <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent hidden lg:block" />
-      </div>
+    <>
+      {/* ===== MOBILE & TABLET HERO (below lg) ===== */}
+      <section className="relative lg:hidden -mt-20 overflow-hidden">
+        {/* Hero Image - takes upper portion */}
+        <div className="relative h-[45svh] min-h-[240px]">
+          <img
+            src={heroImage}
+            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+            className="w-full h-full object-cover object-[55%_center]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
+        </div>
 
-      {/* Hotspots on devices - Desktop only */}
-      <div className="absolute inset-0 z-30 hidden lg:block pointer-events-none">
-        {hotspots.map((spot) => (
-          <Link
-            key={spot.id}
-            to={spot.href}
-            className="group absolute"
-            style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
-            title={spot.label}
-          >
-            <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
-            <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)] transition-transform group-hover:scale-150" />
-            <span className="absolute left-5 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
-              {spot.label}
-            </span>
-          </Link>
-        ))}
-      </div>
-
-      {/* Mobile & Tablet Content - Bottom aligned */}
-      <div className="section-container relative z-20 pb-10 pt-20 w-full lg:hidden">
-        <div className="max-w-md">
+        {/* Content below image */}
+        <div className="relative bg-background px-4 sm:px-6 -mt-8 pt-0 pb-10">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-accent text-xs font-medium mb-5 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
             AV- & IT-Lösungen
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl font-bold leading-[1.1] mb-4 animate-fade-in-up text-white">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-[1.1] mb-3">
             <span className="text-primary">your digital</span>
             <br />
             <span className="text-accent">future.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg text-white/80 mb-8 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.1s" }}>
-            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed max-w-md">
+            Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
+            Von der Planung bis zum Betrieb – alles aus einer Hand.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <Button asChild size="lg" className="btn-glow text-base">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            <Button asChild size="lg" className="btn-glow text-sm sm:text-base">
               <Link to="/kontakt">
                 Projekt anfragen
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+            <Button asChild variant="outline" size="lg" className="text-sm sm:text-base">
               <Link to="/projekte">
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="mr-2 h-4 w-4" />
                 Referenzen
               </Link>
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mt-10 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
             <CountUpStat end={32} suffix="+" label="Projekte" />
             <CountUpStat end={25} suffix="+" label="Kunden" />
             <CountUpStat end={8} suffix="+" label="Jahre" />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Desktop Content - Right aligned */}
-      <div className="section-container relative z-20 py-8 sm:py-12 hidden lg:block">
-        <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
-            Installation & Integration von AV- & IT-Lösungen
-          </div>
+      {/* ===== DESKTOP HERO (lg+) ===== */}
+      <section className="relative hidden lg:flex items-center min-h-screen overflow-hidden -mt-24">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
+        </div>
 
-          {/* Headline */}
-          <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
-            <span className="text-primary">your digital</span>
-            <br />
-            <span className="text-accent">future.</span>
-          </h1>
+        {/* Hotspots - Desktop only */}
+        <div className="absolute inset-0 z-30 pointer-events-none">
+          {hotspots.map((spot) => (
+            <Link
+              key={spot.id}
+              to={spot.href}
+              className="group absolute"
+              style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
+              title={spot.label}
+            >
+              <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
+              <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)] transition-transform group-hover:scale-150" />
+              <span className="absolute left-5 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
+                {spot.label}
+              </span>
+            </Link>
+          ))}
+        </div>
 
-          {/* Subheadline */}
-          <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
-            sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
-            laufenden Betrieb – alles aus einer Hand.
-          </p>
+        {/* Desktop Content - Right aligned */}
+        <div className="section-container relative z-20 py-12">
+          <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
+              <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
+              Installation & Integration von AV- & IT-Lösungen
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <Button asChild size="lg" className="btn-glow text-base px-8">
-              <Link to="/kontakt">
-                Projekt anfragen
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
-              <Link to="/projekte">
-                <Play className="mr-2 h-5 w-5" />
-                Referenzen ansehen
-              </Link>
-            </Button>
-          </div>
+            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
+              <span className="text-primary">your digital</span>
+              <br />
+              <span className="text-accent">future.</span>
+            </h1>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <CountUpStat end={32} suffix="+" label="Projekte" />
-            <CountUpStat end={25} suffix="+" label="Zufriedene Kunden" />
-            <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
+            <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
+              sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
+              laufenden Betrieb – alles aus einer Hand.
+            </p>
+
+            <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <Button asChild size="lg" className="btn-glow text-base px-8">
+                <Link to="/kontakt">
+                  Projekt anfragen
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
+                <Link to="/projekte">
+                  <Play className="mr-2 h-5 w-5" />
+                  Referenzen ansehen
+                </Link>
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <CountUpStat end={32} suffix="+" label="Projekte" />
+              <CountUpStat end={25} suffix="+" label="Zufriedene Kunden" />
+              <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll Indicator - Desktop only */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20 hidden lg:block">
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 rounded-full bg-accent" />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+            <div className="w-1 h-2 rounded-full bg-accent" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
