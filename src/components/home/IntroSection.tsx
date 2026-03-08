@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import introTeam from "@/assets/intro-team.jpg";
 import introMission from "@/assets/langeoog-display.jpg";
-import introLogo from "@/assets/intro-logo.png";
+import introAuszeichnung from "@/assets/intro-konferenzraum.jpg";
 
 function AnimatedBlock({
   children,
