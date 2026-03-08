@@ -9,10 +9,10 @@ function CountUpStat({ end, suffix, label, light = false }: { end: number; suffi
   
   return (
     <div className="text-center" ref={ref}>
-      <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${light ? "text-white" : "text-white"}`}>
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white/80">
         {count}{suffix}
       </div>
-      <div className={`text-xs sm:text-sm mt-1 ${light ? "text-white/60" : "text-white/60"}`}>{label}</div>
+      <div className="text-xs sm:text-sm mt-1 text-white/50">{label}</div>
     </div>
   );
 }
@@ -68,8 +68,8 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl font-bold leading-[1.1] mb-4">
-            <span className="text-primary">your digital</span>
+          <h1 className="text-4xl font-bold leading-[1.1] mb-4" style={{ textShadow: "0 2px 20px hsl(33 100% 50% / 0.3)" }}>
+            <span className="text-accent">your digital</span>
             <br />
             <span className="text-accent">future.</span>
           </h1>
@@ -122,8 +122,8 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.1] mb-4 text-white">
-              <span className="text-primary">your digital</span>
+            <h1 className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }}>
+              <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
             </h1>
@@ -196,8 +196,8 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up text-white">
-              <span className="text-primary">your digital</span>
+            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}>
+              <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
             </h1>
