@@ -58,6 +58,11 @@ const hotspots = [
 export function HeroSection() {
   return (
     <>
+      {/* Single SEO H1 – visually hidden, keyword-optimized */}
+      <h1 className="sr-only">
+        Konferenz- & Medientechnik Systemhaus – Installation, Integration & Betrieb | SLT Technology Group Krefeld
+      </h1>
+
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
         <div className="min-h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-6">
@@ -69,12 +74,12 @@ export function HeroSection() {
               AV- & IT-Lösungen
             </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl font-bold leading-[1.1] mb-4 animate-fade-in-up" style={{ textShadow: "0 2px 20px hsl(200 100% 25% / 0.4)" }}>
+            {/* Headline – decorative, not h1 */}
+            <p className="text-4xl font-bold leading-[1.1] mb-4 animate-fade-in-up" style={{ textShadow: "0 2px 20px hsl(200 100% 25% / 0.4)" }} role="presentation">
               <span className="text-primary">your digital</span>
               <br />
               <span className="text-primary">future.</span>
-            </h1>
+            </p>
 
             {/* Subheadline */}
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -138,11 +143,11 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }}>
+            <p className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }} role="presentation">
               <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
-            </h1>
+            </p>
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
               Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
@@ -214,11 +219,11 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <h1 className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}>
+            <p className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }} role="presentation">
               <span className="text-accent">your digital</span>
               <br />
               <span className="text-accent">future.</span>
-            </h1>
+            </p>
 
             <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
