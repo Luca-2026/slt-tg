@@ -209,16 +209,25 @@
   }
 
   .animate-scroll-logos {
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 15s linear infinite;
   }
   .animate-scroll-logos:hover {
     animation-play-state: paused;
   }
 
   .animate-scroll-logos-slow {
-    animation: scroll-logos 45s linear infinite;
+    animation: scroll-logos 20s linear infinite;
   }
   .animate-scroll-logos-slow:hover {
     animation-play-state: paused;
+  }
+
+  @media (min-width: 1024px) {
+    .animate-scroll-logos {
+      animation-duration: 30s;
+    }
+    .animate-scroll-logos-slow {
+      animation-duration: 45s;
+    }
   }
 }
