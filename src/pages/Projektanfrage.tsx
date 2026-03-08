@@ -182,7 +182,7 @@ const Projektanfrage = () => {
       setIsSubmitted(true);
       toast({
         title: "Anfrage erfolgreich gesendet!",
-        description: "Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+        description: "Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
       });
     } catch (error) {
       console.error("Error sending project request:", error);
