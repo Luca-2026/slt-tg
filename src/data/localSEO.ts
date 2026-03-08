@@ -97,7 +97,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN und Netzwerklösungen als Basis für moderne AV-Systeme.", link: "/technologien#it-infrastruktur" },
     ],
     faqItems: (city) => [
-      { question: `Planen Sie Konferenzräume in ${city}?`, answer: `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
+      { question: `Planen Sie Konferenzräume in ${city}?`, answer: bonnRegion.includes(city) ? `Ja, mit unserem Standort in Bonn sind wir als Fachplaner und Integrator direkt in der Region ${city} vor Ort. Von der Konzeption bis zur schlüsselfertigen Übergabe.` : `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig – mit Standorten in Krefeld und Bonn. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
       { question: `Wie lange dauert ein Konferenzraum-Projekt?`, answer: `Je nach Umfang rechnen Sie mit 4-12 Wochen von der Planung bis zur Inbetriebnahme. Einfache Huddle Spaces können auch schneller realisiert werden.` },
       { question: `Unterstützen Sie bei der Finanzierung?`, answer: `Ja, wir bieten verschiedene Finanzierungsmodelle an – von Leasing über Mietkauf bis zu AV-as-a-Service-Konzepten.` },
     ],
