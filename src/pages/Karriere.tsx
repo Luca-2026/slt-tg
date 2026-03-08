@@ -397,12 +397,12 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
-      <section ref={benefitsRef} className="py-16 md:py-24 bg-secondary/30">
+      <section ref={benefitsRef} className={`py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
         <div className="section-container">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3 scroll-hidden">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Wir möchten etwas zurückgeben
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 scroll-hidden">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
             Das bieten wir unserem Team
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6">
