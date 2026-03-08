@@ -51,6 +51,7 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
           {localRoutes.map((route) => (
             <Route
               key={route.path}
