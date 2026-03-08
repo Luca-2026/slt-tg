@@ -41,9 +41,9 @@ const generateArticleSchema = (article: ArticleData) => ({
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://www.sandhoff.org/news/${article.slug}`
+    "@id": `https://www.slt-tg.de/news/${article.slug}`
   },
-  "image": article.image ? `https://www.sandhoff.org${article.image}` : "https://www.sandhoff.org/assets/sandhoff-logo.jpg",
+  "image": article.image ? `https://www.slt-tg.de${article.image}` : "https://www.slt-tg.de/assets/sandhoff-logo.jpg",
   "articleSection": article.category,
   "keywords": article.keywords
 });
