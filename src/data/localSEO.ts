@@ -73,10 +73,10 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
-      { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: `Ja, wir installieren und integrieren professionelle Medientechnik in ${city} und der gesamten Region. Unser Firmensitz in Krefeld ermöglicht kurze Anfahrtswege in ganz NRW.` },
+      { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: locationAnswer(city) },
       { question: `Was kostet ein Konferenzraum-Projekt in ${city}?`, answer: `Die Kosten hängen von Raumgröße, gewünschter Ausstattung und Komplexität ab. Wir erstellen Ihnen nach einem kostenfreien Erstgespräch ein individuelles Angebot.` },
       { question: `Welche Hersteller setzen Sie ein?`, answer: `Wir beraten herstellerneutral und arbeiten mit führenden Marken wie Crestron, Shure, Sennheiser, Barco, Samsung, Q-Sys und vielen weiteren zusammen.` },
-      { question: `Bieten Sie auch Wartung und Support in ${city}?`, answer: `Ja, wir bieten Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung für alle installierten Systeme.` },
+      { question: `Bieten Sie auch Wartung und Support in ${city}?`, answer: supportAnswer(city) },
     ],
   },
   konferenztechnik: {
