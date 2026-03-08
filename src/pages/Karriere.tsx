@@ -440,7 +440,7 @@ export default function Karriere() {
             </p>
           </div>
 
-          <Card className="scroll-hidden border-primary/10 shadow-lg">
+          <Card className="border-primary/10 shadow-lg">
             <CardContent className="p-6 md:p-10">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Position select */}
