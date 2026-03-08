@@ -574,7 +574,7 @@ const articlesData: Record<string, ArticleData> = {
           Die Lösung: Durchdachte Systemintegration
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Bei <strong>Sandhoff | IT- & Mediensysteme</strong> sorgen wir dafür, dass Ihre Technik 
+          Bei <strong>SLT Technology Group</strong> sorgen wir dafür, dass Ihre Technik 
           zusammenarbeitet. Ein Knopfdruck startet das Meeting – Display, Beleuchtung und 
           Videokonferenz sind sofort bereit.
         </p>
