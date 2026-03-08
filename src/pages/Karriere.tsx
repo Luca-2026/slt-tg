@@ -187,6 +187,9 @@ export default function Karriere() {
     const phone = (formData.get("phone") as string).trim();
     const message = (formData.get("message") as string).trim();
     const startDate = (formData.get("startDate") as string).trim();
+    const educationCompleted = (formData.get("educationCompleted") as string)?.trim() || null;
+    const hasDriversLicense = (formData.get("hasDriversLicense") as string)?.trim() || null;
+    const salaryExpectation = (formData.get("salaryExpectation") as string)?.trim() || null;
 
     if (!firstName || !lastName || !email || !selectedPosition) {
       toast({ title: "Pflichtfelder ausfüllen", description: "Bitte füllen Sie alle Pflichtfelder aus.", variant: "destructive" });
@@ -216,6 +219,9 @@ export default function Karriere() {
         message: message || null,
         cv_file_path: cvPath,
         start_date: startDate || null,
+        education_completed: educationCompleted,
+        has_drivers_license: hasDriversLicense,
+        salary_expectation: salaryExpectation,
       });
 
       if (error) throw error;
@@ -223,7 +229,7 @@ export default function Karriere() {
       toast({ title: "Bewerbung gesendet! ✅", description: "Vielen Dank für Ihre Bewerbung. Wir melden uns zeitnah bei Ihnen." });
       (e.target as HTMLFormElement).reset();
       setCvFile(null);
-      setSelectedPosition("");
+      closeApplicationForm();
     } catch (err) {
       console.error(err);
       toast({ title: "Fehler", description: "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.", variant: "destructive" });
