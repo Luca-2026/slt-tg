@@ -24,6 +24,25 @@ export interface LocalSEOTopic {
   faqItems: (city: string) => { question: string; answer: string }[];
 }
 
+const bonnRegion = ["Bonn", "Köln"];
+
+function locationAnswer(city: string): string {
+  if (city === "Bonn") {
+    return `Ja, mit unserem Standort direkt in Bonn (Drachenburgstraße 8) sind wir vor Ort und betreuen Unternehmen in ${city} und der gesamten Region.`;
+  }
+  if (city === "Köln") {
+    return `Ja, neben unserem Hauptsitz in Krefeld betreiben wir einen Standort in Bonn – ideal für kurze Wege nach ${city} und ins gesamte Rheinland.`;
+  }
+  return `Ja, von unserem Hauptsitz in Krefeld und unserem Standort in Bonn sind wir schnell in ${city} und der gesamten Region vor Ort.`;
+}
+
+function supportAnswer(city: string): string {
+  if (bonnRegion.includes(city)) {
+    return `Ja, über unseren Standort in Bonn bieten wir Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung – besonders kurze Wege für ${city} und Umgebung.`;
+  }
+  return `Ja, wir bieten Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung für alle installierten Systeme in ${city} und Umgebung.`;
+}
+
 export const cities: Record<string, LocalSEOCity> = {
   krefeld: { slug: "krefeld", name: "Krefeld", region: "Niederrhein", description: "am Niederrhein", coordinates: { lat: "51.3388", lng: "6.5853" } },
   duesseldorf: { slug: "duesseldorf", name: "Düsseldorf", region: "Rheinland", description: "in der Landeshauptstadt", coordinates: { lat: "51.2277", lng: "6.7735" } },
@@ -54,10 +73,10 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
     ],
     faqItems: (city) => [
-      { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: `Ja, wir installieren und integrieren professionelle Medientechnik in ${city} und der gesamten Region. Unser Firmensitz in Krefeld ermöglicht kurze Anfahrtswege in ganz NRW.` },
+      { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: locationAnswer(city) },
       { question: `Was kostet ein Konferenzraum-Projekt in ${city}?`, answer: `Die Kosten hängen von Raumgröße, gewünschter Ausstattung und Komplexität ab. Wir erstellen Ihnen nach einem kostenfreien Erstgespräch ein individuelles Angebot.` },
       { question: `Welche Hersteller setzen Sie ein?`, answer: `Wir beraten herstellerneutral und arbeiten mit führenden Marken wie Crestron, Shure, Sennheiser, Barco, Samsung, Q-Sys und vielen weiteren zusammen.` },
-      { question: `Bieten Sie auch Wartung und Support in ${city}?`, answer: `Ja, wir bieten Service-Verträge mit garantierten Reaktionszeiten, Remote-Monitoring und regelmäßiger Wartung für alle installierten Systeme.` },
+      { question: `Bieten Sie auch Wartung und Support in ${city}?`, answer: supportAnswer(city) },
     ],
   },
   konferenztechnik: {
@@ -78,7 +97,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN und Netzwerklösungen als Basis für moderne AV-Systeme.", link: "/technologien#it-infrastruktur" },
     ],
     faqItems: (city) => [
-      { question: `Planen Sie Konferenzräume in ${city}?`, answer: `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
+      { question: `Planen Sie Konferenzräume in ${city}?`, answer: bonnRegion.includes(city) ? `Ja, mit unserem Standort in Bonn sind wir als Fachplaner und Integrator direkt in der Region ${city} vor Ort. Von der Konzeption bis zur schlüsselfertigen Übergabe.` : `Ja, wir sind als Fachplaner und Integrator in ${city} und ganz NRW tätig – mit Standorten in Krefeld und Bonn. Von der Konzeption bis zur schlüsselfertigen Übergabe.` },
       { question: `Wie lange dauert ein Konferenzraum-Projekt?`, answer: `Je nach Umfang rechnen Sie mit 4-12 Wochen von der Planung bis zur Inbetriebnahme. Einfache Huddle Spaces können auch schneller realisiert werden.` },
       { question: `Unterstützen Sie bei der Finanzierung?`, answer: `Ja, wir bieten verschiedene Finanzierungsmodelle an – von Leasing über Mietkauf bis zu AV-as-a-Service-Konzepten.` },
     ],
