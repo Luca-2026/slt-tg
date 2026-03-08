@@ -150,7 +150,7 @@ export default function Karriere() {
     setApplyingForJob(job.id);
     setSelectedPosition(job.title);
     setTimeout(() => {
-      formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      formSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
 
