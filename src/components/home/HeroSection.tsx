@@ -116,14 +116,14 @@ export function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="btn-glow text-base px-8">
               <Link to="/kontakt">
                 Projekt anfragen
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white">
+            <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white">
               <Link to="/projekte">
                 <Play className="mr-2 h-5 w-5" />
                 Referenzen ansehen
