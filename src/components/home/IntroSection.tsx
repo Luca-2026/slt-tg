@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 import introTeam from "@/assets/intro-team.jpg";
-import introRakete from "@/assets/intro-rakete.png";
+import introMission from "@/assets/langeoog-display.jpg";
 import introLogo from "@/assets/intro-logo.png";
 
 function AnimatedBlock({
