@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
+import { TypewriterText } from "@/components/home/TypewriterText";
 const heroImage = "/assets/hero-konferenzraum.jpg";
 
 function CountUpStat({ end, suffix, label, light = false }: { end: number; suffix: string; label: string; light?: boolean }) {
