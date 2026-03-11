@@ -225,7 +225,7 @@ export function HeroSection() {
               <span className="text-accent">future.</span>
             </p>
 
-            <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-xl text-white/80 max-w-xl ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
