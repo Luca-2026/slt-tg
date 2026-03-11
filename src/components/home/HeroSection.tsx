@@ -243,7 +243,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <div className="grid grid-cols-3 gap-8 max-w-lg mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <CountUpStat end={400} suffix="+" label="Projekte" />
               <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
               <CountUpStat end={10} suffix="+" label="Jahre Erfahrung" />
