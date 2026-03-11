@@ -218,11 +218,7 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <p className="text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up" style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }} role="presentation">
-              <span className="text-accent">your digital</span>
-              <br />
-              <span className="text-accent">future.</span>
-            </p>
+            <TypewriterText />
 
             <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-lg lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <span className="whitespace-nowrap">Medientechnische Exzellenz trifft auf IT-Kompetenz:</span><br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
