@@ -60,7 +60,7 @@ export function HeroSection() {
     <>
       {/* Single SEO H1 – visually hidden, keyword-optimized */}
       <h1 className="sr-only">
-        Konferenz- & Medientechnik Systemhaus – Installation, Integration & Betrieb | SLT Technology Group Krefeld
+        Konferenz- & Medientechnik Systemhaus – Installation, Integration & Betrieb | SLT Technology Group Krefeld & Bonn
       </h1>
 
       {/* ===== MOBILE HERO (below sm) ===== */}
