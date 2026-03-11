@@ -224,8 +224,8 @@ export function HeroSection() {
               <span className="text-accent">future.</span>
             </p>
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-sm sm:max-w-md lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz:<br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-lg lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <span className="whitespace-nowrap">Medientechnische Exzellenz trifft auf IT-Kompetenz:</span><br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             <div className="flex items-center justify-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
