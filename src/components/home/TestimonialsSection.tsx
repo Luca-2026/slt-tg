@@ -108,7 +108,7 @@ export const TestimonialsSection = () => {
               ))}
             </div>
             <span className="text-sm text-muted-foreground">
-              25+ zufriedene Kunden vertrauen auf SLT
+              300+ zufriedene Kunden vertrauen auf SLT
             </span>
           </div>
         </div>

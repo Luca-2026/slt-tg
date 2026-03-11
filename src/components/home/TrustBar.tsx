@@ -19,7 +19,7 @@ const trustPoints = [
   },
   {
     icon: BarChart3,
-    title: "32+ Projekte",
+    title: "400+ Projekte",
     description: "Erfolgreich umgesetzt",
   },
   {
