@@ -211,8 +211,8 @@ export function HeroSection() {
         </div>
 
         {/* Desktop Content - Right aligned */}
-        <div className="absolute inset-0 z-20 flex items-center justify-end pr-8 lg:pr-16 xl:pr-24">
-          <div className="max-w-lg lg:max-w-xl text-left">
+        <div className="absolute inset-0 z-20 flex items-center justify-end pr-4 lg:pr-8">
+          <div className="max-w-md lg:max-w-lg text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
