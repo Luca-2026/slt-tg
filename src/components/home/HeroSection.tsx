@@ -211,8 +211,8 @@ export function HeroSection() {
         </div>
 
         {/* Desktop Content - Right aligned */}
-        <div className="section-container relative z-20 py-12 flex justify-end">
-          <div className="max-w-xl lg:max-w-2xl text-left pr-8 lg:pr-16">
+        <div className="relative z-20 py-12 px-6 lg:px-12 flex justify-end">
+          <div className="max-w-lg lg:max-w-xl text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
@@ -225,7 +225,7 @@ export function HeroSection() {
             </p>
 
             <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-sm sm:max-w-md lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz:<br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             <div className="flex items-center justify-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
