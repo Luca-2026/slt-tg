@@ -83,7 +83,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
@@ -150,8 +150,7 @@ export function HeroSection() {
             </p>
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
-              Ihr Partner für Konferenz- & Meetingräume sowie IT-Infrastruktur. 
-              Von der Planung bis zum Betrieb – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             <div className="flex gap-3 mb-10">
