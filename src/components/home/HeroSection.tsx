@@ -228,7 +228,7 @@ export function HeroSection() {
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
-            <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex items-center justify-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <Button asChild size="lg" className="text-base px-8 bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
