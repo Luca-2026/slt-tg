@@ -15,9 +15,9 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Konferenz- & Medientechnik Systemhaus Krefeld"
-        description="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von AV- & IT-Lösungen. Konferenz- und Medientechnik, IT-Infrastruktur – alles aus einer Hand."
-        keywords="AV Installation, IT-Lösungen, Medientechnik Integration, IT-Infrastruktur, Konferenztechnik Krefeld, Videokonferenz Installation NRW"
+        title="Konferenz- & Medientechnik Systemhaus Krefeld & Bonn"
+        description="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von AV- & IT-Lösungen in Krefeld und Bonn. Konferenz- und Medientechnik, IT-Infrastruktur – alles aus einer Hand."
+        keywords="AV Installation, IT-Lösungen, Medientechnik Integration, IT-Infrastruktur, Konferenztechnik Krefeld, Konferenztechnik Bonn, Videokonferenz Installation NRW"
         canonical="/"
         structuredData={{
           "@context": "https://schema.org",
