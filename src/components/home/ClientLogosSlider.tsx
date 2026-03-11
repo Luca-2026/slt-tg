@@ -54,7 +54,7 @@ export function ClientLogosSlider() {
               className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center group"
               aria-label={`${client.name} Website öffnen`}
             >
-              <div className="w-32 h-16 lg:w-40 lg:h-20 flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+              <div className="w-32 h-16 lg:w-40 lg:h-20 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-all duration-500">
                 <img
                   src={client.logo}
                   alt={`${client.name} Logo`}
