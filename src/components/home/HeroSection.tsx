@@ -212,7 +212,7 @@ export function HeroSection() {
 
         {/* Desktop Content - Right aligned */}
         <div className="section-container relative z-20 py-12">
-          <div className="ml-auto max-w-xl lg:max-w-2xl text-right">
+          <div className="max-w-xl lg:max-w-2xl text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
@@ -224,11 +224,11 @@ export function HeroSection() {
               <span className="text-accent">future.</span>
             </p>
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-sm sm:max-w-md lg:max-w-xl ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-sm sm:max-w-md lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
-            <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex items-center justify-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <Button asChild size="lg" className="text-base px-8 bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
@@ -243,7 +243,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-8 max-w-lg ml-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <div className="grid grid-cols-3 gap-8 max-w-lg mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <CountUpStat end={400} suffix="+" label="Projekte" />
               <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
               <CountUpStat end={10} suffix="+" label="Jahre Erfahrung" />
