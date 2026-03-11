@@ -226,9 +226,7 @@ export function HeroSection() {
             </p>
 
             <p className="text-xl text-white/80 max-w-lg ml-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Ihr Partner für die technische Ausstattung von Konferenz- & Meetingräumen 
-              sowie IT-Infrastruktur. Von der Planung über die Installation bis zum 
-              laufenden Betrieb – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             <div className="flex items-center justify-end gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
