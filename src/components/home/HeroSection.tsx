@@ -170,8 +170,8 @@ export function HeroSection() {
             </div>
 
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
-              <CountUpStat end={150} suffix="+" label="Projekte" />
-              <CountUpStat end={200} suffix="+" label="Zufriedene Kunden" />
+              <CountUpStat end={400} suffix="+" label="Projekte" />
+              <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
               <CountUpStat end={10} suffix="+" label="Jahre Erfahrung" />
             </div>
           </div>
