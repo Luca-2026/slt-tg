@@ -212,7 +212,7 @@ export function HeroSection() {
 
         {/* Desktop Content - Right aligned */}
         <div className="section-container relative z-20 py-12">
-          <div className="max-w-xl lg:max-w-2xl text-left">
+          <div className="ml-auto max-w-xl lg:max-w-2xl text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
