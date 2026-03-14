@@ -52,7 +52,7 @@ const AGB = () => {
 
                 {/* III */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Haftung von SLT</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Haftung von SLT</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Für Personenschäden (Verletzung von Leben, Körper, Gesundheit), die auf einer fahrlässigen oder vorsätzlichen Pflichtverletzung von SLT, seinen gesetzlichen Vertretern oder Erfüllungsgehilfen beruhen, haftet SLT unbegrenzt.
                   </p>
