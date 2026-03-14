@@ -300,10 +300,10 @@ export default function Karriere() {
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
-        {/* Spacer for header + extra on mobile */}
-        <div className="h-28 sm:h-20 lg:h-24 shrink-0" />
-        {/* Content - vertically distributed */}
-        <div className="flex-1 flex flex-col justify-center gap-5 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 pb-6 sm:py-2">
+        {/* Spacer for fixed header */}
+        <div className="h-16 sm:h-18 lg:h-20 shrink-0" />
+        {/* Content - start right after header */}
+        <div className="flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-6">
           <div
             ref={heroRef}
             className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
@@ -327,14 +327,16 @@ export default function Karriere() {
             </Button>
           </div>
 
-          {/* Company Profile - below text, pushed to bottom */}
-          <div ref={profileRef} className={`relative z-10 max-w-2xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
-            <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-3">
-              <div className="w-8 h-8 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
-                <Rocket className="h-4 w-4 text-primary-foreground" />
+          {/* Company Profile Card */}
+          <div ref={profileRef} className={`relative z-10 max-w-md scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+            <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-4 sm:p-5">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                  <Rocket className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <span className="text-sm sm:text-base font-semibold text-accent uppercase tracking-wider">Unternehmensprofil</span>
               </div>
-              <p className="text-xs sm:text-sm text-primary-foreground/80">
-                <span className="text-[10px] font-semibold text-accent uppercase tracking-wider">Unternehmensprofil </span>
+              <p className="text-sm sm:text-base text-primary-foreground/85 leading-relaxed">
                 <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau.
               </p>
             </div>
