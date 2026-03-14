@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Users, Monitor } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -5,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const references = [
+const allReferences = [
   {
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
@@ -33,10 +34,38 @@ const references = [
     tags: ["Huddly L1", "Nureva", "Barco ClickShare"],
     image: "/assets/projects/gea-farm/gea-display-wall.jpg",
   },
+  {
+    id: "bensersiel",
+    company: "Tourismus Information Bensersiel",
+    category: "Digital-Signage (interaktiv)",
+    description: "Interaktives Digital-Signage mit Samsung QMC Displays und 105\" Iiyama Ultra Wide Touchdisplay für Gästeinformation.",
+    icon: Monitor,
+    tags: ["Samsung QMC", "Touchdisplay", "Connect Signage"],
+    image: "/assets/projects/bensersiel/bensersiel-main.jpg",
+  },
+  {
+    id: "sonoco",
+    company: "Sonoco",
+    category: "WiFi & Netzwerk",
+    description: "Komplette WiFi-Infrastruktur mit EKAHAU-Ausleuchtung, Cat-7-Verkabelung und Cisco Meraki – im laufenden 24/7 Betrieb.",
+    icon: Building2,
+    tags: ["Cisco Meraki", "EKAHAU", "Cat 7"],
+    image: "/assets/projects/sonoco/sonoco-ekahau.jpg",
+  },
 ];
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const shuffled = [...arr];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 export function ReferencesTeaser() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const references = useMemo(() => shuffleArray(allReferences).slice(0, 3), []);
   const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
