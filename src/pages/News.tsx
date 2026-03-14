@@ -143,13 +143,13 @@ const News = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="max-w-3xl mx-auto text-center">
-            <Badge variant="outline" className="mb-6">Aktuelles</Badge>
+            <Badge variant="outline" className="mb-6">Aktuelles & Wissen</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              News aus der{" "}
+              News & Ratgeber{" "}
               <span className="text-primary">AV- & IT-Welt</span>
             </h1>
             <p className="text-base lg:text-lg text-muted-foreground">
-              Trends, Innovationen und Neuigkeiten aus der professionellen Medientechnik – 
+              Trends, Innovationen und Praxiswissen aus der professionellen Medientechnik – 
               von uns für Sie zusammengefasst.
             </p>
           </div>
