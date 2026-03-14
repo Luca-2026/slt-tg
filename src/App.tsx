@@ -22,6 +22,8 @@ import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
 import Karriere from "./pages/Karriere";
 import LocalSEOPage from "./pages/LocalSEOPage";
+import Ratgeber from "./pages/Ratgeber";
+import RatgeberArticle from "./pages/RatgeberArticle";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
