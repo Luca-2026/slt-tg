@@ -416,7 +416,7 @@ const Datenschutz = () => {
 
               {/* 7. Bewerberdaten */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">7. Umgang mit Bewerberdaten</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">7. Umgang mit Bewerberdaten</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir bieten Ihnen die Möglichkeit, sich bei uns über ein Online-Bewerbungsformular zu bewerben. Im Folgenden informieren wir 
                   Sie über Umfang, Zweck und Verwendung Ihrer im Rahmen des Bewerbungsprozesses erhobenen personenbezogenen Daten. Wir versichern, 
