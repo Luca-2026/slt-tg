@@ -337,7 +337,7 @@ export default function Karriere() {
                 <span className="text-sm sm:text-base font-semibold text-accent uppercase tracking-wider">Unternehmensprofil</span>
               </div>
               <p className="text-sm sm:text-base text-primary-foreground/85 leading-relaxed">
-                <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau.
+                Seit inzwischen über sieben Jahren stehen wir unseren Kunden als technischer Dienstleister auf dem Weg der Digitalisierung Ihrer Konferenztechnik zur Seite. Wir sind ein junges, inhabergeführtes Unternehmen und kombinieren bewährtes mit neuer, innovativer Technik.
               </p>
             </div>
           </div>
