@@ -136,12 +136,8 @@ export function HeroSection() {
               AV- & IT-Lösungen
             </div>
 
-            {/* Headline – decorative, not h1 */}
-            <p className="text-4xl font-bold leading-[1.1] mb-4 animate-fade-in-up" style={{ textShadow: "0 2px 20px hsl(200 100% 25% / 0.4)" }} role="presentation">
-              <span className="text-primary">your digital</span>
-              <br />
-              <span className="text-primary">future.</span>
-            </p>
+            {/* Headline – typewriter animation */}
+            <TypewriterText />
 
             {/* Subheadline */}
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
