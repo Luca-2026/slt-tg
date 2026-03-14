@@ -250,7 +250,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistung von SLT</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistung von SLT</h3>
                   <p className="text-muted-foreground mb-2">
                     a. SLT leistet Gewähr nach den gesetzlichen Vorschriften, soweit nachfolgend nichts anderes bestimmt wird oder individualvertraglich Garantiebestimmungen vereinbart worden sind.
                   </p>
