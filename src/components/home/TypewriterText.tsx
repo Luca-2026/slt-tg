@@ -28,28 +28,19 @@ export function TypewriterText() {
   }, []);
 
   const displayed = FULL_TEXT.slice(0, displayedLength);
-  const breakIndex = "your digital".length;
 
   return (
     <p
-      className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
+      className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 whitespace-nowrap"
       style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}
       role="presentation"
       aria-label="your digital future."
     >
       <span className="text-primary sm:text-accent">
-        {displayed.slice(0, Math.min(displayedLength, breakIndex))}
+        {displayed}
       </span>
-      {displayedLength > breakIndex && (
-        <>
-          <br />
-          <span className="text-primary sm:text-accent">
-            {displayed.slice(breakIndex)}
-          </span>
-        </>
-      )}
       {showCursor && (
-        <span className="inline-block w-[3px] h-[0.85em] bg-accent ml-1 align-middle animate-[blink_0.8s_step-end_infinite]" />
+        <span className="inline-block w-[3px] h-[0.85em] bg-primary sm:bg-accent ml-1 align-middle animate-[blink_0.8s_step-end_infinite]" />
       )}
     </p>
   );
