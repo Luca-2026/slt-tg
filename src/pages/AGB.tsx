@@ -173,7 +173,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Zutritt zum Objekt</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Zutritt zum Objekt</h3>
                   <p className="text-muted-foreground">
                     Der Besteller hat dafür zu sorgen, dass der/die Techniker am Ausführungstermin Zutritt zum Objekt erhalten; andernfalls hat er den entstehenden Mehraufwand zu erstatten.
                   </p>
