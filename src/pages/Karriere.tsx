@@ -301,7 +301,7 @@ export default function Karriere() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         {/* Spacer for fixed header */}
-        <div className="h-16 sm:h-18 lg:h-20 shrink-0" />
+        <div className="h-16 sm:h-18 lg:h-14 shrink-0" />
         {/* Content - start right after header */}
         <div className="flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-2 pb-6">
           <div
