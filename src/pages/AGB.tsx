@@ -111,7 +111,7 @@ const AGB = () => {
                   <p className="text-muted-foreground mb-4">
                     Tritt der Kunde aus Gründen, die nicht von uns zu vertreten sind, vom Vertrag zurück, können wir ohne Schadensnachweis als Stornierungskosten fordern:
                   </p>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
+                  <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1 mb-4">
                     <li>Bis 30 Tage vor Vertragsbeginn: 30 % des Auftragswertes</li>
                     <li>Bis 14 Tage vor Vertragsbeginn: 40 % des Auftragswertes</li>
                     <li>Bis 8 Tage vor Vertragsbeginn: 50 % des Auftragswertes</li>
