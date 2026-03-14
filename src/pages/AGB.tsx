@@ -202,7 +202,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Überlassung an Dritte und Auslandsnutzung, Rückgabe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Überlassung an Dritte und Auslandsnutzung, Rückgabe</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Der Mieter darf die Mietsache nur mit ausdrücklicher Zustimmung von SLT Dritten entgeltlich oder unentgeltlich überlassen oder ins Ausland verbringen.
                   </p>
