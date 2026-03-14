@@ -168,8 +168,8 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Vertretungsbefugnis</h3>
-                  <p className="text-muted-foreground">Die Techniker sind nicht vertretungsbefugt.</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Vertretungsbefugnis</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">Die Techniker sind nicht vertretungsbefugt.</p>
                 </section>
 
                 <section className="mb-8">
