@@ -212,7 +212,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Entschädigung bei verspäteter Rückgabe, Vertragsstrafe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Entschädigung bei verspäteter Rückgabe, Vertragsstrafe</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Gibt der Mieter die Mietsache nach Beendigung des Mietverhältnisses nicht zurück, so kann SLT für die Dauer der Vorenthaltung als Entschädigung die vereinbarte Miete oder die Miete verlangen, die für vergleichbare Sachen ortsüblich ist. Das Recht von SLT, einen höheren Schaden geltend zu machen, bleibt unberührt. Während der Dauer der Vorenthaltung ist der Mieter auch ohne Verschulden für den Schaden gegenüber SLT verantwortlich, der dadurch entsteht, dass die Mietsache verschlechtert wird, untergeht oder aus einem anderen Grund vom Mieter nicht herausgegeben werden kann.
                   </p>
