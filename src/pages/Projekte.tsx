@@ -15,6 +15,8 @@ import {
   Calendar,
   CheckCircle,
   X,
+  ChevronLeft,
+  ChevronRight,
   Star,
   Quote
 } from "lucide-react";
