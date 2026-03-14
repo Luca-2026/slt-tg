@@ -282,7 +282,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Rücktrittsrecht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Rücktrittsrecht</h3>
                   <p className="text-muted-foreground">
                     SLT ist im Falle ausbleibender, nicht richtiger oder nicht rechtzeitiger Selbstbelieferung berechtigt, vom Vertrag zurückzutreten.
                   </p>
