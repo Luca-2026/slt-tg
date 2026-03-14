@@ -195,7 +195,7 @@ const AGB = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">C. Zusätzliche Mietbedingungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Kaution</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Kaution</h3>
                   <p className="text-muted-foreground">
                     SLT ist berechtigt, vor Überlassung der Mietsache eine Barkaution in Höhe von 50 % des sich aus dem Mietvertrag ergebenden voraussichtlichen Mietzinses vom Mieter zu verlangen, die Zug-um-Zug gegen Überlassung der Mietsache auszuhändigen ist. Die Barkaution ist von SLT nicht zu verzinsen. Die Barkaution ist von SLT nicht getrennt vom eigenen Vermögen anzulegen.
                   </p>
