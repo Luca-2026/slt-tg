@@ -68,6 +68,30 @@ const newsArticles: NewsArticle[] = [
   },
 ];
 
+const guides = [
+  {
+    slug: "konferenztechnik-raumgroesse",
+    title: "Welche Konferenztechnik für welche Raumgröße?",
+    description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist.",
+    readTime: "8 Min.",
+    category: "Planung",
+  },
+  {
+    slug: "teams-rooms-vs-zoom-rooms",
+    title: "Microsoft Teams Rooms vs. Zoom Rooms",
+    description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe.",
+    readTime: "6 Min.",
+    category: "Plattformen",
+  },
+  {
+    slug: "konferenzraum-kosten",
+    title: "Was kostet ein Konferenzraum?",
+    description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen.",
+    readTime: "7 Min.",
+    category: "Budget",
+  },
+];
+
 const generateNewsListSchema = () => ({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
