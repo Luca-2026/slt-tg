@@ -180,7 +180,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistung</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistung</h3>
                   <p className="text-muted-foreground mb-4">
                     Die Gewährleistungsrechte des Bestellers sind zunächst auf Nachbesserung beschränkt. Nach Fehlschlagen einer dem Besteller zumutbaren Anzahl von Nachbesserungsversuchen stehen dem Besteller die gesetzlichen Rechte zu, insbesondere das Recht auf Herabsetzung des Preises und Rückgängigmachung des Vertrages.
                   </p>
