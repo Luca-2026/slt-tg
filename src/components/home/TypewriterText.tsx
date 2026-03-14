@@ -31,7 +31,7 @@ export function TypewriterText() {
 
   return (
     <p
-      className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 whitespace-nowrap"
+      className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 whitespace-nowrap sm:whitespace-normal"
       style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}
       role="presentation"
       aria-label="your digital future."
