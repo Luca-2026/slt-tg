@@ -329,19 +329,15 @@ export default function Karriere() {
 
           {/* Company Profile - below text, pushed to bottom */}
           <div ref={profileRef} className={`relative z-10 max-w-2xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
-            <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
-              <CardContent className="p-3 sm:p-4 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
-                  <Rocket className="h-4 w-4 text-primary-foreground" />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-[10px] font-semibold text-accent uppercase tracking-wider leading-none">Unternehmensprofil</p>
-                  <p className="text-xs sm:text-sm text-primary-foreground/80 mt-0.5">
-                    <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau, deutschlandweit.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-3">
+              <div className="w-8 h-8 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                <Rocket className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <p className="text-xs sm:text-sm text-primary-foreground/80">
+                <span className="text-[10px] font-semibold text-accent uppercase tracking-wider">Unternehmensprofil </span>
+                <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau.
+              </p>
+            </div>
           </div>
         </div>
       </section>
