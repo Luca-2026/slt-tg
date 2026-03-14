@@ -174,9 +174,33 @@ export const topics: Record<string, LocalSEOTopic> = {
 
 export function getLocalSEORoutes(): { path: string; topic: string; city: string }[] {
   const routes: { path: string; topic: string; city: string }[] = [];
-  ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"].forEach((city) => {
+  const allCities = ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"];
+
+  // Medientechnik - alle Städte
+  allCities.forEach((city) => {
     routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
   });
+
+  // Konferenztechnik - alle Städte + NRW
+  allCities.forEach((city) => {
+    routes.push({ path: `/konferenztechnik/${city}`, topic: "konferenztechnik", city });
+  });
   routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
+
+  // Videokonferenz - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/videokonferenz/${city}`, topic: "videokonferenz", city });
+  });
+
+  // IT-Netzwerk - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/it-netzwerk/${city}`, topic: "it-netzwerk", city });
+  });
+
+  // Digital Signage - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/digital-signage/${city}`, topic: "digital-signage", city });
+  });
+
   return routes;
 }
