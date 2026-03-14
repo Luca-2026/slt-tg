@@ -468,7 +468,7 @@ const Datenschutz = () => {
 
               {/* 9. Fragen */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">9. Fragen zum Datenschutz</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">9. Fragen zum Datenschutz</h2>
                 <p className="text-muted-foreground mb-4">
                   Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die 
                   für den Datenschutz verantwortliche Person in unserer Organisation:
