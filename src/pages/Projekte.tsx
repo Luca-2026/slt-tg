@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
@@ -296,6 +296,35 @@ function ClientLogosOnProjekte() {
   );
 }
 
+function ProjectImageSlider({ images, imagePositions, alt }: { images: string[]; imagePositions?: Record<string, string>; alt: string }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((img, idx) => (
+        <img
+          key={img}
+          src={img}
+          alt={`${alt} – Bild ${idx + 1}`}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            idx === current ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ objectPosition: imagePositions?.[img] || "center center" }}
+        />
+      ))}
+    </>
+  );
+}
+
 const Projekte = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const [activeCategory, setActiveCategory] = useState("all");
@@ -397,25 +426,28 @@ const Projekte = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="grid lg:grid-cols-2">
-                  {/* Project Image */}
-                  <div className="aspect-video bg-secondary flex items-center justify-center relative overflow-hidden">
-                    {project.heroImage ? (
+                  {/* Project Image Slideshow */}
+                  <div className="aspect-video bg-secondary relative overflow-hidden">
+                    {project.galleryImages && project.galleryImages.length > 0 ? (
+                      <ProjectImageSlider 
+                        images={project.galleryImages}
+                        imagePositions={(project as any).imagePositions}
+                        alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location}`}
+                      />
+                    ) : project.heroImage ? (
                       <img 
                         src={project.heroImage} 
-                        alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location} - ${project.shortDescription.substring(0, 80)}`}
+                        alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location}`}
                         loading="lazy"
-                        className="w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover"
                         style={{ objectPosition: (project as any).heroPosition || "center center" }}
                       />
                     ) : (
                       <>
-                        <project.icon className="h-24 w-24 text-muted-foreground/20" aria-hidden="true" />
-                        <p className="absolute bottom-4 left-4 right-4 text-xs text-muted-foreground text-center">
-                          Bildplatzhalter – Hier kommt ein Projektfoto
-                        </p>
+                        <project.icon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-24 w-24 text-muted-foreground/20" aria-hidden="true" />
                       </>
                     )}
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 z-20">
                       <Badge className="bg-primary text-primary-foreground">
                         {project.categoryLabel}
                       </Badge>
