@@ -11,26 +11,26 @@ const AGB = () => {
         keywords="AGB, Allgemeine Geschäftsbedingungen, SLT Technology Group, Vertragsbedingungen"
         canonical="/agb"
       />
-      <section className="py-20 lg:py-28">
-        <div className="section-container">
+      <section className="py-12 sm:py-20 lg:py-28">
+        <div className="section-container px-5 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-6">Rechtliches</Badge>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Allgemeine Geschäftsbedingungen</h1>
-            <p className="text-lg text-muted-foreground mb-2">
+            <Badge variant="outline" className="mb-4 sm:mb-6">Rechtliches</Badge>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">Allgemeine Geschäftsbedingungen</h1>
+            <p className="text-base sm:text-lg text-muted-foreground mb-2">
               der SLT Technology Group GmbH & Co. KG<br />
               und mit diesem verbundene Unternehmen.
             </p>
-            <p className="text-muted-foreground mb-12 italic">– nachfolgend SLT –</p>
+            <p className="text-muted-foreground mb-8 sm:mb-12 italic">– nachfolgend SLT –</p>
 
-            <div className="prose prose-invert max-w-none space-y-10">
+            <div className="prose prose-invert max-w-none space-y-8 sm:space-y-10">
 
               {/* A – Allgemeine Bestimmungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">A. Allgemeine Bestimmungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">A. Allgemeine Bestimmungen</h2>
 
                 {/* I */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Geltung der AGB</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Geltung der AGB</h3>
                   <p className="text-muted-foreground mb-4">
                     Diese allgemeinen Geschäftsbedingungen finden ausschließlich Anwendung gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichem Sondervermögen im Sinne von § 310 Abs. 1 BGB. Diese allgemeinen Geschäftsbedingungen gelten ausschließlich. Abweichende oder entgegenstehende Bedingungen werden von SLT nicht anerkannt, sofern SLT diesen nicht ausdrücklich schriftlich zugestimmt haben. Durch die Erteilung von Aufträgen erkennt der Kunde diese Bedingungen an, auch wenn seine AGB diesen Bedingungen entgegenstehen sollten. Diese AGB gelten auch für alle künftigen Verträge der Parteien, ohne dass es eines erneuten Hinweises auf die AGB bedarf.
                   </p>
@@ -44,7 +44,7 @@ const AGB = () => {
 
                 {/* II */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Zahlung / Aufrechnung / Zurückbehaltungsrecht / Abtretung</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Zahlung / Aufrechnung / Zurückbehaltungsrecht / Abtretung</h3>
                   <p className="text-muted-foreground mb-2">a. Rechnungen von SLT, soweit nichts anderes vereinbart worden ist, sind 14 Tage nach Rechnungsdatum fällig und ohne Abzug zu bezahlen.</p>
                   <p className="text-muted-foreground mb-2">b. Nur unbestrittene oder rechtskräftig festgestellte Forderungen berechtigen den Kunden zur Aufrechnung oder Zurückbehaltung.</p>
                   <p className="text-muted-foreground">c. SLT ist berechtigt, seine Ansprüche aus der bestehenden Geschäftsbeziehung abzutreten.</p>
@@ -52,7 +52,7 @@ const AGB = () => {
 
                 {/* III */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Haftung von SLT</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Haftung von SLT</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Für Personenschäden (Verletzung von Leben, Körper, Gesundheit), die auf einer fahrlässigen oder vorsätzlichen Pflichtverletzung von SLT, seinen gesetzlichen Vertretern oder Erfüllungsgehilfen beruhen, haftet SLT unbegrenzt.
                   </p>
@@ -69,7 +69,7 @@ const AGB = () => {
 
                 {/* IV */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Umsatzsteuer</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Umsatzsteuer</h3>
                   <p className="text-muted-foreground">
                     Sollte SLT einen Umsatz irrtümlich als nicht steuerbar bzw. steuerfrei behandeln, obwohl der Umsatz der Umsatzsteuer unterliegt, kann SLT die tatsächlich anfallende Umsatzsteuer auch nachträglich vom Kunden verlangen, sobald von SLT hierüber eine berichtigte Rechnung ausgestellt worden ist.
                   </p>
@@ -77,7 +77,7 @@ const AGB = () => {
 
                 {/* V */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Reisekosten</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Reisekosten</h3>
                   <p className="text-muted-foreground">
                     Reisekosten und Spesen, die SLT im Zusammenhang mit der Ausführung des Vertrages entstehen, sind vom Kunden gesondert zu erstatten.
                   </p>
@@ -85,7 +85,7 @@ const AGB = () => {
 
                 {/* VI */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Keine Anrechnung der Vertragsstrafe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Keine Anrechnung der Vertragsstrafe</h3>
                   <p className="text-muted-foreground">
                     Eine vereinbarte Vertragsstrafe wird auf bestehende Schadensersatzansprüche von SLT nicht angerechnet.
                   </p>
@@ -93,7 +93,7 @@ const AGB = () => {
 
                 {/* VII */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Urheberschutz</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Urheberschutz</h3>
                   <p className="text-muted-foreground mb-4">
                     SLT verpflichtet sich, dem Kunden befristet auf die Vertragslaufzeit einfache Nutzungsrechte an allen Schutzrechten nach Maßgabe und Zweck des Vertrages einzuräumen, die mit der Erbringung der Vertragsleistung erwachsen, insbesondere an Urheberrechten oder Leistungsschutzrechten oder gewerblichen Schutzrechten an dem angebotenen Technikkonzept, künstlerischen oder technischen Zeichnungen oder Grafiken (wie Lichtkonzept, Tonkonzept und Anordnung der Beschallung), Textteilen, Lichtbildwerken oder Lichtbildern oder Datensammlungen.
                   </p>
@@ -107,11 +107,11 @@ const AGB = () => {
 
                 {/* VIII */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VIII. Rücktritt vom Vertrag</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VIII. Rücktritt vom Vertrag</h3>
                   <p className="text-muted-foreground mb-4">
                     Tritt der Kunde aus Gründen, die nicht von uns zu vertreten sind, vom Vertrag zurück, können wir ohne Schadensnachweis als Stornierungskosten fordern:
                   </p>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
+                  <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-1 mb-4">
                     <li>Bis 30 Tage vor Vertragsbeginn: 30 % des Auftragswertes</li>
                     <li>Bis 14 Tage vor Vertragsbeginn: 40 % des Auftragswertes</li>
                     <li>Bis 8 Tage vor Vertragsbeginn: 50 % des Auftragswertes</li>
@@ -121,7 +121,7 @@ const AGB = () => {
 
                 {/* IX */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IX. Salvatorische Klausel, Gerichtsstand, anwendbares Recht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IX. Salvatorische Klausel, Gerichtsstand, anwendbares Recht</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Sollten einzelne Regelungen dieses Vertrages ganz oder teilweise gegen zwingendes Recht verstoßen oder aus anderen Gründen nichtig oder unwirksam sein, so bleibt die Gültigkeit der übrigen Bestimmungen hiervon unberührt. Nichtige oder unwirksame Regelungen sind durch solche zu ersetzen, die dem wirtschaftlich angestrebten Regelungszweck am nächsten kommen.
                   </p>
@@ -136,10 +136,10 @@ const AGB = () => {
 
               {/* B – Zusätzliche Werkvertragsbedingungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">B. Zusätzliche Werkvertragsbedingungen und Bedingungen bei Dienstleistungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">B. Zusätzliche Werkvertragsbedingungen und Bedingungen bei Dienstleistungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Allgemeines</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Allgemeines</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Angebote, Kalkulationen, Pläne, Zeichnungen oder vergleichbare Unterlagen dürfen ohne Zustimmung von SLT vom Besteller weder vervielfältigt, geändert oder Dritten zugänglich gemacht werden. Kommt ein Vertragsschluss nicht zu Stande, sind die Unterlagen einschließlich Kopien unverzüglich an SLT herauszugeben. Entsprechende digitale Unterlagen sind von allen Laufwerken und Speichermedien dauerhaft zu löschen.
                   </p>
@@ -149,38 +149,38 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Unberechtigte Mängelrügen</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Unberechtigte Mängelrügen</h3>
                   <p className="text-muted-foreground">
                     Kommt SLT einer Aufforderung des Bestellers zur Mängelbeseitigung nach und gewährt der Besteller den Zugang zum Objekt zum vereinbarten Zeitpunkt nicht oder stellt sich heraus, dass ein Mangel an der Leistung von SLT objektiv nicht vorliegt, hat der Besteller die Aufwendungen von SLT zu ersetzen. Mangels Vereinbarung gelten die ortsüblichen Sätze.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Geeigneter Aufbauort</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Geeigneter Aufbauort</h3>
                   <p className="text-muted-foreground">
                     SLT ist nicht verpflichtet, den Aufbauort vor Durchführung des Vertrages auf seine Eignung zu überprüfen. SLT schuldet daher die Erbringung der Leistung bei einem üblichen Aufbauort ohne Erschwernisse. Der Besteller hat die Eignung des Aufbauorts für von SLT aufzustellende, zu errichtende oder aufzubauende Materialien sicherzustellen. Verzögert sich der Aufbau durch nicht von SLT zu vertretende Umstände, so hat der Besteller die dadurch entstandenen Mehrkosten (z.&nbsp;B. Wartezeiten, zusätzlich erforderliche Reisen des Personals etc.) zu tragen.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Subunternehmer</h3>
-                  <p className="text-muted-foreground">Es ist SLT gestattet, Subunternehmer mit der Leistungserbringung zu beauftragen.</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Subunternehmer</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">Es ist SLT gestattet, Subunternehmer mit der Leistungserbringung zu beauftragen.</p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Vertretungsbefugnis</h3>
-                  <p className="text-muted-foreground">Die Techniker sind nicht vertretungsbefugt.</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Vertretungsbefugnis</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">Die Techniker sind nicht vertretungsbefugt.</p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Zutritt zum Objekt</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Zutritt zum Objekt</h3>
                   <p className="text-muted-foreground">
                     Der Besteller hat dafür zu sorgen, dass der/die Techniker am Ausführungstermin Zutritt zum Objekt erhalten; andernfalls hat er den entstehenden Mehraufwand zu erstatten.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistung</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistung</h3>
                   <p className="text-muted-foreground mb-4">
                     Die Gewährleistungsrechte des Bestellers sind zunächst auf Nachbesserung beschränkt. Nach Fehlschlagen einer dem Besteller zumutbaren Anzahl von Nachbesserungsversuchen stehen dem Besteller die gesetzlichen Rechte zu, insbesondere das Recht auf Herabsetzung des Preises und Rückgängigmachung des Vertrages.
                   </p>
@@ -192,17 +192,17 @@ const AGB = () => {
 
               {/* C – Zusätzliche Mietbedingungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">C. Zusätzliche Mietbedingungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">C. Zusätzliche Mietbedingungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Kaution</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Kaution</h3>
                   <p className="text-muted-foreground">
                     SLT ist berechtigt, vor Überlassung der Mietsache eine Barkaution in Höhe von 50 % des sich aus dem Mietvertrag ergebenden voraussichtlichen Mietzinses vom Mieter zu verlangen, die Zug-um-Zug gegen Überlassung der Mietsache auszuhändigen ist. Die Barkaution ist von SLT nicht zu verzinsen. Die Barkaution ist von SLT nicht getrennt vom eigenen Vermögen anzulegen.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Überlassung an Dritte und Auslandsnutzung, Rückgabe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Überlassung an Dritte und Auslandsnutzung, Rückgabe</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Der Mieter darf die Mietsache nur mit ausdrücklicher Zustimmung von SLT Dritten entgeltlich oder unentgeltlich überlassen oder ins Ausland verbringen.
                   </p>
@@ -212,7 +212,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Entschädigung bei verspäteter Rückgabe, Vertragsstrafe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Entschädigung bei verspäteter Rückgabe, Vertragsstrafe</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Gibt der Mieter die Mietsache nach Beendigung des Mietverhältnisses nicht zurück, so kann SLT für die Dauer der Vorenthaltung als Entschädigung die vereinbarte Miete oder die Miete verlangen, die für vergleichbare Sachen ortsüblich ist. Das Recht von SLT, einen höheren Schaden geltend zu machen, bleibt unberührt. Während der Dauer der Vorenthaltung ist der Mieter auch ohne Verschulden für den Schaden gegenüber SLT verantwortlich, der dadurch entsteht, dass die Mietsache verschlechtert wird, untergeht oder aus einem anderen Grund vom Mieter nicht herausgegeben werden kann.
                   </p>
@@ -222,14 +222,14 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Zurückbehaltungsrecht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Zurückbehaltungsrecht</h3>
                   <p className="text-muted-foreground">
                     Ein Zurückbehaltungsrecht an der Mietsache steht dem Mieter nach Ablauf der Mietzeit nicht zu.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Pflichten des Mieters</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Pflichten des Mieters</h3>
                   <p className="text-muted-foreground mb-2">a. Der Mieter hat die Mietsache schonend zu behandeln. Eventuelle Hinweise von SLT in Bezug auf die Mietsache sind vom Mieter zu beachten. Die Mietsache darf nur von Fachpersonal aufgebaut und bedient werden.</p>
                   <p className="text-muted-foreground mb-2">b. Der Mieter ist verpflichtet, die Mietsache vor Beschädigung oder Verlust (insbesondere vor Witterungseinflüssen und Diebstahl) zu schützen und geeignete Maßnahmen zu ergreifen.</p>
                   <p className="text-muted-foreground mb-2">c. Zeigt sich im Laufe der Miete ein Mangel der gemieteten Sache, so hat der Mieter unverzüglich SLT hiervon in Kenntnis zu setzen.</p>
@@ -237,7 +237,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Haftung des Mieters</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Haftung des Mieters</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Der Mieter haftet für Verlust, Untergang oder Beschädigung der Mietsache (insbesondere Feuer- und Wasserschäden, Transportschäden, Schädigung der Mietsache während der Benutzung und Abhandenkommen der Mietsache), auch wenn ihn kein Verschulden trifft. Haftungszeitraum ist der Zeitpunkt der Übergabe der Mietsache bis zur Rückgabe der Mietsache.
                   </p>
@@ -250,7 +250,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistung von SLT</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistung von SLT</h3>
                   <p className="text-muted-foreground mb-2">
                     a. SLT leistet Gewähr nach den gesetzlichen Vorschriften, soweit nachfolgend nichts anderes bestimmt wird oder individualvertraglich Garantiebestimmungen vereinbart worden sind.
                   </p>
@@ -262,17 +262,17 @@ const AGB = () => {
 
               {/* D – Zusätzliche Verkaufsbedingungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">D. Zusätzliche Verkaufsbedingungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">D. Zusätzliche Verkaufsbedingungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Versand</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Versand</h3>
                   <p className="text-muted-foreground mb-2">a. Der Versand der Ware erfolgt auf Gefahr und Rechnung des Käufers, es sei denn, es wird eine anderslautende Vereinbarung getroffen. Versicherungen gegen Schäden und Verlust werden von SLT auf ausdrücklichen Wunsch und auf Kosten des Käufers abgeschlossen.</p>
                   <p className="text-muted-foreground mb-2">b. Die Wahl der Versandart bleibt SLT überlassen.</p>
                   <p className="text-muted-foreground">c. Behälter und Kisten bleiben, soweit nichts anderes vereinbart ist, Eigentum von SLT und sind auf Anforderung nach ihrer Entladung auf Kosten von SLT zurückzusenden.</p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Eigentumsvorbehalt</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Eigentumsvorbehalt</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Die verkaufte Ware bleibt im Eigentum von SLT bis zur vollständigen Bezahlung der Forderung von SLT.
                   </p>
@@ -282,35 +282,35 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Rücktrittsrecht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Rücktrittsrecht</h3>
                   <p className="text-muted-foreground">
                     SLT ist im Falle ausbleibender, nicht richtiger oder nicht rechtzeitiger Selbstbelieferung berechtigt, vom Vertrag zurückzutreten.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Gewährleistung, Untersuchungs- und Rügepflicht bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Gewährleistung, Untersuchungs- und Rügepflicht bei Neuware</h3>
                   <p className="text-muted-foreground">
                     SLT leistet Gewähr nach den gesetzlichen Vorschriften, soweit nachfolgend nichts anderes bestimmt wird. Bei Neuware gelten die §§ 377, 378 HGB mit der Maßgabe, dass die Rüge innerhalb von 2 Tagen zu erfolgen hat. Dies gilt nicht, wenn SLT den Mangel arglistig verschwiegen hat.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Verjährungsfristen bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Verjährungsfristen bei Neuware</h3>
                   <p className="text-muted-foreground">
                     Die Verjährungsfrist der Gewährleistungsrechte des Käufers beträgt 1 Jahr, außer es handelt sich um Ansprüche des Käufers wegen eines Mangels in den Fällen des § 438 Abs. 1 Nr. 2 BGB bzw. des § 634a Abs. 1 Nr. 2 BGB. Die Verjährungsfrist beginnt ab Ablieferung der Ware bzw. mit Übergabe an das Versandunternehmen.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Angaben zu Eigenschaften von Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Angaben zu Eigenschaften von Neuware</h3>
                   <p className="text-muted-foreground">
                     Bei Neuware erfolgen alle Angaben von SLT über Eignung, Verarbeitung und Anwendung, technische Beratung und sonstigen Angaben nach bestem Gewissen, befreien den Käufer jedoch nicht von eigenen Prüfungen und Versuchen.
                   </p>
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistungsrechte bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistungsrechte bei Neuware</h3>
                   <p className="text-muted-foreground mb-4">
                     Die Gewährleistungsrechte des Käufers sind bei Neuware zunächst nach Wahl von SLT auf Ersatzlieferung und Nachbesserung beschränkt. Es obliegt SLT, entweder nachzubessern oder eine Ersatzlieferung zu veranlassen. Beanstandete Ware darf nur mit Einverständnis von SLT zurückgesandt werden.
                   </p>
@@ -320,7 +320,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VIII. Gebrauchtware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VIII. Gebrauchtware</h3>
                   <p className="text-muted-foreground">
                     Der Verkauf von Gebrauchtware erfolgt unter Ausschluss sämtlicher Sachmängelansprüche. Der Ausschluss gilt nicht im Falle des arglistigen Verschweigens eines Mangels durch SLT.
                   </p>
@@ -329,7 +329,7 @@ const AGB = () => {
 
               {/* E – Beschallungsanlagen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">E. Zusätzliche Bedingungen bei Gestellung von Beschallungsanlagen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">E. Zusätzliche Bedingungen bei Gestellung von Beschallungsanlagen</h2>
                 <p className="text-muted-foreground">
                   Es gehört weder zu den Haupt- noch zu den Nebenleistungspflichten von SLT, den Kunden über die rechtlichen Grenzen und Anforderungen im Hinblick auf Lärmemissionen zu informieren oder den Kunden in diesen Fragen zu beraten, soweit nichts Abweichendes im Auftrag geregelt ist. Ungeachtet dessen weist SLT darauf hin, dass diverse vor Lärmimmissionen schützende Vorschriften zu beachten sind. Im Übrigen wird sich SLT an etwaige diesbezügliche Anweisungen des Kunden halten.
                 </p>
@@ -337,14 +337,14 @@ const AGB = () => {
 
               {/* F – WLAN */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">F. Zusätzliche Bedingungen bei der Bereitstellung eines WLAN-Zugangs</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">F. Zusätzliche Bedingungen bei der Bereitstellung eines WLAN-Zugangs</h2>
                 <p className="text-muted-foreground mb-4">
                   Sofern SLT dem Kunden auftragsgemäß einen Internetzugang über WLAN zur Verfügung stellt, erfolgt die Nutzung des WLAN auf eigene Gefahr und auf eigenes Risiko des Kunden, insbesondere hinsichtlich der Möglichkeit von Zugriffen Dritter auf das Endgerät des Nutzers oder einer Infizierung mit schädlicher Software (z.&nbsp;B. Viren oder Trojaner). Der Kunde ist selbst verantwortlich für jegliche Sicherungsmaßnahmen (z.&nbsp;B. Verschlüsselung, Virenschutz, Firewall). Für über das WLAN übermittelte Daten, für darüber in Anspruch genommene kostenpflichtige Dienstleistungen sowie für darüber getätigte Rechtsgeschäfte ist der Kunde selbst verantwortlich; er trägt alle hieraus resultierenden Kosten.
                 </p>
                 <p className="text-muted-foreground mb-4">
                   Der Kunde ist verpflichtet, bei der Nutzung des WLAN das geltende Recht einzuhalten; insbesondere verpflichtet sich der Kunde:
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-2 mb-4">
                   <li>das WLAN weder zum Abruf noch zur Verbreitung von strafbaren, sittenwidrigen oder in sonstiger Weise rechtswidrigen Inhalten zu nutzen;</li>
                   <li>über das WLAN keine urheberrechtlich geschützten Werke widerrechtlich zu vervielfältigen, zu verbreiten, zugänglich zu machen oder in anderer Weise zu verwerten, etwa durch den Einsatz bzw. die Nutzung von Filesharing-Programmen oder Tauschbörsen;</li>
                   <li>die geltenden Jugendschutzvorschriften zu beachten;</li>
