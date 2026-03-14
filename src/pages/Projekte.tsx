@@ -31,7 +31,7 @@ const projects = [
   {
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
-    category: "boardroom",
+    category: "videokonferenz",
     categoryLabel: "Boardroom & Schulung",
     location: "Neuss",
     year: "2024",
