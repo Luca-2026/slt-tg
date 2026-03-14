@@ -424,9 +424,6 @@ const Projekte = () => {
                       </Badge>
                     </div>
                   </div>
-                      </Badge>
-                    </div>
-                  </div>
 
                   {/* Content */}
                   <div className="p-6 lg:p-8">
