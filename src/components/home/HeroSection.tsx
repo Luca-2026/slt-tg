@@ -31,7 +31,7 @@ function InspirationSlider() {
   }, [isPaused, next]);
 
   return (
-    <div className="animate-fade-in-up h-full flex flex-col" style={{ animationDelay: "0.25s" }}>
+    <div className="animate-fade-in-up h-full flex flex-col opacity-0" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
       <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1 shrink-0">Inspirationen</p>
       <div
         className="relative rounded-xl overflow-hidden flex-1 min-h-0 sm:aspect-[2/1] sm:flex-none"
