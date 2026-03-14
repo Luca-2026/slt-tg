@@ -344,7 +344,7 @@ const AGB = () => {
                 <p className="text-muted-foreground mb-4">
                   Der Kunde ist verpflichtet, bei der Nutzung des WLAN das geltende Recht einzuhalten; insbesondere verpflichtet sich der Kunde:
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                <ul className="list-disc list-outside ml-5 text-muted-foreground space-y-2 mb-4">
                   <li>das WLAN weder zum Abruf noch zur Verbreitung von strafbaren, sittenwidrigen oder in sonstiger Weise rechtswidrigen Inhalten zu nutzen;</li>
                   <li>über das WLAN keine urheberrechtlich geschützten Werke widerrechtlich zu vervielfältigen, zu verbreiten, zugänglich zu machen oder in anderer Weise zu verwerten, etwa durch den Einsatz bzw. die Nutzung von Filesharing-Programmen oder Tauschbörsen;</li>
                   <li>die geltenden Jugendschutzvorschriften zu beachten;</li>
