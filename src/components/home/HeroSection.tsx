@@ -84,7 +84,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Ihr Systemhaus für Konferenz- &amp; Medientechnik in Krefeld und Bonn: Von der Planung über die Installation bis zum laufenden Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
@@ -151,7 +151,7 @@ export function HeroSection() {
             </p>
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – als Ihr Systemhaus für Installation und Integration.
             </p>
 
             <div className="flex gap-3 mb-10">
@@ -222,7 +222,7 @@ export function HeroSection() {
             <TypewriterText />
 
             <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-lg lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              <span className="whitespace-nowrap">Medientechnische Exzellenz trifft auf IT-Kompetenz:</span><br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              <span className="whitespace-nowrap">Medientechnische Exzellenz trifft auf IT-Kompetenz:</span><br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand. Ihr Systemhaus in Krefeld &amp; Bonn.
             </p>
 
             <div className="flex items-center justify-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
