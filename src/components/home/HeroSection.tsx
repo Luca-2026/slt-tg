@@ -151,7 +151,7 @@ export function HeroSection() {
             </p>
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – als Ihr Systemhaus für Installation und Integration.
             </p>
 
             <div className="flex gap-3 mb-10">
