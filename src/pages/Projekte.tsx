@@ -296,6 +296,35 @@ function ClientLogosOnProjekte() {
   );
 }
 
+function ProjectImageSlider({ images, imagePositions, alt }: { images: string[]; imagePositions?: Record<string, string>; alt: string }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <>
+      {images.map((img, idx) => (
+        <img
+          key={img}
+          src={img}
+          alt={`${alt} – Bild ${idx + 1}`}
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            idx === current ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ objectPosition: imagePositions?.[img] || "center center" }}
+        />
+      ))}
+    </>
+  );
+}
+
 const Projekte = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const [activeCategory, setActiveCategory] = useState("all");
