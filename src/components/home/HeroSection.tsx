@@ -127,7 +127,7 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-20 pb-2">
+        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-2">
           {/* Top content */}
           <div className="shrink-0">
             {/* Badge */}
