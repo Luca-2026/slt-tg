@@ -246,7 +246,7 @@ const Datenschutz = () => {
 
               {/* 4. Datenerfassung auf dieser Website */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">4. Datenerfassung auf dieser Website</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">4. Datenerfassung auf dieser Website</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Cookies</h3>
                 <p className="text-muted-foreground mb-4">
