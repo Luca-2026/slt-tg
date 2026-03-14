@@ -122,8 +122,12 @@ const tagLinks: Record<string, string> = {
   "Nureva HDL-310": "/technologien#audio",
   "AVer Tracking": "/technologien#video",
   "Huddly L1": "/technologien#video",
+  "Huddly S1": "/technologien#video",
   "Iiyama 4K": "/technologien#displays",
+  "Iiyama 65\"": "/technologien#displays",
   "LED-Wall": "/technologien#displays",
+  "Barco ClickShare CX": "/technologien#praesentationstechnik",
+  "BYOD": "/technologien#praesentationstechnik",
 };
 
 const testimonials = [
