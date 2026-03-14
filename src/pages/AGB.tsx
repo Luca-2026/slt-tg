@@ -121,7 +121,7 @@ const AGB = () => {
 
                 {/* IX */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IX. Salvatorische Klausel, Gerichtsstand, anwendbares Recht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IX. Salvatorische Klausel, Gerichtsstand, anwendbares Recht</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Sollten einzelne Regelungen dieses Vertrages ganz oder teilweise gegen zwingendes Recht verstoßen oder aus anderen Gründen nichtig oder unwirksam sein, so bleibt die Gültigkeit der übrigen Bestimmungen hiervon unberührt. Nichtige oder unwirksame Regelungen sind durch solche zu ersetzen, die dem wirtschaftlich angestrebten Regelungszweck am nächsten kommen.
                   </p>
