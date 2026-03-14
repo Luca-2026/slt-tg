@@ -195,11 +195,7 @@ export function HeroSection() {
               Installation & Integration von AV- & IT-Lösungen
             </div>
 
-            <p className="text-5xl font-bold leading-[1.1] mb-4 text-white" style={{ textShadow: "0 2px 30px hsl(33 100% 50% / 0.3)" }} role="presentation">
-              <span className="text-accent">your digital</span>
-              <br />
-              <span className="text-accent">future.</span>
-            </p>
+            <TypewriterText />
 
             <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – als Ihr Systemhaus für Installation und Integration.
