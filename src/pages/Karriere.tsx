@@ -302,7 +302,7 @@ export default function Karriere() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 pb-6 pt-20 sm:py-0 lg:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 pt-24 pb-6 sm:py-0 lg:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="lg:flex lg:items-center lg:gap-10">
             {/* Left: Text content */}
