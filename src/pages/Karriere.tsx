@@ -302,8 +302,10 @@ export default function Karriere() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         {/* Spacer for header */}
         <div className="h-20 lg:h-24 shrink-0" />
-        {/* Content centered in remaining space */}
-        <div className="flex-1 flex items-center">
+        {/* Small spacer to push content slightly down from top, but not fully centered */}
+        <div className="flex-[0.3] sm:flex-[0.4]" />
+        {/* Content */}
+        <div className="flex-1">
           <div
             ref={heroRef}
             className={`section-container relative z-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
