@@ -209,19 +209,19 @@
   }
 
   .animate-scroll-logos {
-    animation: scroll-logos 12s linear infinite;
+    animation: scroll-logos 20s linear infinite;
   }
 
   .animate-scroll-logos-slow {
-    animation: scroll-logos 18s linear infinite;
+    animation: scroll-logos 28s linear infinite;
   }
 
   @media (min-width: 1024px) {
     .animate-scroll-logos {
-      animation-duration: 22s;
+      animation-duration: 35s;
     }
     .animate-scroll-logos-slow {
-      animation-duration: 32s;
+      animation-duration: 50s;
     }
   }
 }
