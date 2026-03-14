@@ -330,19 +330,22 @@ export default function Karriere() {
           {/* Company Profile - below text, pushed to bottom */}
           <div ref={profileRef} className={`relative z-10 max-w-xl lg:max-w-2xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
             <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
-                    <Rocket className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
+              <CardContent className="p-3 sm:p-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                    <Rocket className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-0.5">Unternehmensprofil</p>
-                    <h3 className="text-sm sm:text-lg font-bold mb-1 text-primary-foreground">SLT Technology Group</h3>
-                    <p className="text-xs sm:text-sm text-primary-foreground/80 leading-relaxed">
-                      Die SLT Technology Group ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
-                    </p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] font-semibold text-accent uppercase tracking-wider">Unternehmensprofil</p>
+                    <h3 className="text-sm font-bold text-primary-foreground">SLT Technology Group</h3>
                   </div>
+                  <p className="hidden sm:block text-xs text-primary-foreground/70 max-w-sm leading-relaxed">
+                    Junges, stark wachsendes Unternehmen. Hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
+                  </p>
                 </div>
+                <p className="sm:hidden text-xs text-primary-foreground/70 leading-relaxed mt-2">
+                  Junges, stark wachsendes Unternehmen. Hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit.
+                </p>
               </CardContent>
             </Card>
           </div>
