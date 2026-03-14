@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, MapPin, Phone, Mail, Building2 } from "lucide-react";
+import { cities, topics } from "@/data/localSEO";
 
 interface LocalSEOPageProps {
   topicKey: string;
