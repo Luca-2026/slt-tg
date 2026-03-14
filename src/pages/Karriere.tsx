@@ -352,6 +352,7 @@ export default function Karriere() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Job Positions */}
