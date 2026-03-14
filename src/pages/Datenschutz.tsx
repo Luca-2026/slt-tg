@@ -178,7 +178,7 @@ const Datenschutz = () => {
                 </p>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3>
-                <p className="text-muted-foreground mb-4 uppercase text-sm font-medium">
+                <p className="text-muted-foreground mb-4 text-sm font-medium">
                   Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, 
                   aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten 
                   Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Wenn Sie Widerspruch einlegen, 
