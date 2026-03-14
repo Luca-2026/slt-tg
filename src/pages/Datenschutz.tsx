@@ -289,7 +289,7 @@ const Datenschutz = () => {
                   Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, 
                   die Ihr Browser automatisch an uns übermittelt. Dies sind:
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
+                <ul className="list-disc list-outside pl-5 text-muted-foreground space-y-1 mb-4">
                   <li>Browsertyp und Browserversion</li>
                   <li>Verwendetes Betriebssystem</li>
                   <li>Referrer URL</li>
