@@ -27,6 +27,11 @@ const categories = [
   { id: "it-infrastruktur", name: "IT-Infrastruktur & Netzwerk" },
 ];
 
+interface ProjectImage {
+  src: string;
+  position?: string; // CSS object-position value
+}
+
 const projects = [
   {
     id: "aluminium-norf",
@@ -146,17 +151,25 @@ const projects = [
     location: "Deutschlandweit",
     year: "2022–2023",
     icon: Building2,
-    heroImage: "/assets/projects/sonoco/sonoco-rack.jpg",
+    heroImage: "/assets/projects/sonoco/sonoco-ekahau.jpg",
     galleryImages: [
-      "/assets/projects/sonoco/sonoco-rack.jpg",
+      "/assets/projects/sonoco/sonoco-ekahau.jpg",
       "/assets/projects/sonoco/sonoco-switch.jpg",
-      "/assets/projects/sonoco/sonoco-cabling.jpg",
+      "/assets/projects/sonoco/sonoco-rack.jpg",
       "/assets/projects/sonoco/sonoco-ap.jpg",
+      "/assets/projects/sonoco/sonoco-cabling.jpg",
       "/assets/projects/sonoco/sonoco-ceiling.jpg",
       "/assets/projects/sonoco/sonoco-lift.jpg",
       "/assets/projects/sonoco/sonoco-installation.jpg",
-      "/assets/projects/sonoco/sonoco-ekahau.jpg",
     ],
+    heroPosition: "center 60%",
+    imagePositions: {
+      "/assets/projects/sonoco/sonoco-rack.jpg": "center 30%",
+      "/assets/projects/sonoco/sonoco-ap.jpg": "center 40%",
+      "/assets/projects/sonoco/sonoco-cabling.jpg": "center 40%",
+      "/assets/projects/sonoco/sonoco-lift.jpg": "center 40%",
+      "/assets/projects/sonoco/sonoco-installation.jpg": "center 30%",
+    },
     shortDescription: "Komplette WiFi-Infrastruktur für mehrere Werksstandorte des Marktführers – von der EKAHAU-Ausleuchtung über Cat-7-Verkabelung bis zur Cisco Meraki Implementierung im laufenden 24/7 Betrieb.",
     challenge: "Sonoco benötigte an mehreren deutschen Standorten eine vollständig neue WiFi-Infrastruktur für die Werke sowie die Anbindung digitaler IoT-Anwendungen. Die größte Herausforderung: Sämtliche Arbeiten mussten während des laufenden 24/7-Betriebs umgesetzt werden – ohne Ausfallzeiten.",
     solution: "Zunächst wurde ein professioneller On-Site Survey mit EKAHAU durchgeführt, um die optimale Access-Point-Platzierung zu ermitteln. Anschließend wurde die gesamte strukturierte Verkabelung auf Cat 7 erneuert. Die neue Infrastruktur wurde mit modernen Cisco Meraki Access Points und Switches ausgestattet, die eine zuverlässige Abdeckung für WiFi und IoT-Anwendungen in den Produktionshallen gewährleisten.",
@@ -392,6 +405,7 @@ const Projekte = () => {
                         alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location} - ${project.shortDescription.substring(0, 80)}`}
                         loading="lazy"
                         className="w-full h-full object-cover"
+                        style={{ objectPosition: (project as any).heroPosition || "center center" }}
                       />
                     ) : (
                       <>
@@ -445,6 +459,7 @@ const Projekte = () => {
                                     src={img} 
                                     alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
+                                    style={{ objectPosition: (project as any).imagePositions?.[img] || "center center" }}
                                   />
                                 </button>
                               ))}
