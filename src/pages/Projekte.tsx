@@ -202,6 +202,7 @@ const tagLinks: Record<string, string> = {
   "BYOD": "/technologien#praesentationstechnik",
   "Samsung QMC": "/technologien#displays",
   "Digital-Signage": "/loesungen#digital-signage",
+  "Connect Signage": "https://www.connectsignage.com",
   "Cisco Meraki": "/technologien#netzwerk",
   "EKAHAU": "/technologien#netzwerk",
   "Cat 7": "/technologien#netzwerk",
