@@ -156,7 +156,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">III. Geeigneter Aufbauort</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">III. Geeigneter Aufbauort</h3>
                   <p className="text-muted-foreground">
                     SLT ist nicht verpflichtet, den Aufbauort vor Durchführung des Vertrages auf seine Eignung zu überprüfen. SLT schuldet daher die Erbringung der Leistung bei einem üblichen Aufbauort ohne Erschwernisse. Der Besteller hat die Eignung des Aufbauorts für von SLT aufzustellende, zu errichtende oder aufzubauende Materialien sicherzustellen. Verzögert sich der Aufbau durch nicht von SLT zu vertretende Umstände, so hat der Besteller die dadurch entstandenen Mehrkosten (z.&nbsp;B. Wartezeiten, zusätzlich erforderliche Reisen des Personals etc.) zu tragen.
                   </p>
