@@ -216,6 +216,15 @@
     animation: scroll-logos 28s linear infinite;
   }
 
+  @media (max-width: 639px) {
+    .animate-scroll-logos {
+      animation-duration: 40s;
+    }
+    .animate-scroll-logos-slow {
+      animation-duration: 55s;
+    }
+  }
+
   @media (min-width: 1024px) {
     .animate-scroll-logos {
       animation-duration: 35s;
