@@ -265,7 +265,7 @@ const AGB = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">D. Zusätzliche Verkaufsbedingungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Versand</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Versand</h3>
                   <p className="text-muted-foreground mb-2">a. Der Versand der Ware erfolgt auf Gefahr und Rechnung des Käufers, es sei denn, es wird eine anderslautende Vereinbarung getroffen. Versicherungen gegen Schäden und Verlust werden von SLT auf ausdrücklichen Wunsch und auf Kosten des Käufers abgeschlossen.</p>
                   <p className="text-muted-foreground mb-2">b. Die Wahl der Versandart bleibt SLT überlassen.</p>
                   <p className="text-muted-foreground">c. Behälter und Kisten bleiben, soweit nichts anderes vereinbart ist, Eigentum von SLT und sind auf Anforderung nach ihrer Entladung auf Kosten von SLT zurückzusenden.</p>
