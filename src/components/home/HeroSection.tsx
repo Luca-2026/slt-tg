@@ -31,10 +31,10 @@ function InspirationSlider() {
   }, [isPaused, next]);
 
   return (
-    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1.5">Inspirationen</p>
+    <div className="animate-fade-in-up h-full flex flex-col" style={{ animationDelay: "0.25s" }}>
+      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1 shrink-0">Inspirationen</p>
       <div
-        className="relative rounded-xl overflow-hidden aspect-[16/9]"
+        className="relative rounded-xl overflow-hidden flex-1 min-h-0 sm:aspect-[2/1] sm:flex-none"
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
@@ -127,11 +127,11 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-4">
+        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-20 pb-2">
           {/* Top content */}
-          <div>
+          <div className="shrink-0">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-3 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-2 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               AV- & IT-Lösungen
             </div>
@@ -140,29 +140,29 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base text-muted-foreground mb-4 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+              <Button asChild className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
-                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+              <Button asChild className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projekte">
                   Referenzen
-                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Inspiration Slider */}
-          <div className="shrink-0">
+          {/* Inspiration Slider - takes remaining space */}
+          <div className="flex-1 min-h-0 flex flex-col justify-center py-2">
             <InspirationSlider />
           </div>
 
