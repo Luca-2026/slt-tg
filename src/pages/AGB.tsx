@@ -222,7 +222,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Zurückbehaltungsrecht</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Zurückbehaltungsrecht</h3>
                   <p className="text-muted-foreground">
                     Ein Zurückbehaltungsrecht an der Mietsache steht dem Mieter nach Ablauf der Mietzeit nicht zu.
                   </p>
