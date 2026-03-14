@@ -28,7 +28,6 @@ export function TypewriterText() {
   }, []);
 
   const displayed = FULL_TEXT.slice(0, displayedLength);
-  const breakIndex = "your digital".length;
 
   return (
     <p
