@@ -296,7 +296,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Verjährungsfristen bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Verjährungsfristen bei Neuware</h3>
                   <p className="text-muted-foreground">
                     Die Verjährungsfrist der Gewährleistungsrechte des Käufers beträgt 1 Jahr, außer es handelt sich um Ansprüche des Käufers wegen eines Mangels in den Fällen des § 438 Abs. 1 Nr. 2 BGB bzw. des § 634a Abs. 1 Nr. 2 BGB. Die Verjährungsfrist beginnt ab Ablieferung der Ware bzw. mit Übergabe an das Versandunternehmen.
                   </p>
