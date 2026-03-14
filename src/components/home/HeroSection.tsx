@@ -31,10 +31,10 @@ function InspirationSlider() {
   }, [isPaused, next]);
 
   return (
-    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1.5">Inspirationen</p>
+    <div className="animate-fade-in-up h-full flex flex-col" style={{ animationDelay: "0.25s" }}>
+      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1 shrink-0">Inspirationen</p>
       <div
-        className="relative rounded-xl overflow-hidden aspect-[2/1]"
+        className="relative rounded-xl overflow-hidden flex-1 min-h-0 sm:aspect-[2/1] sm:flex-none"
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
