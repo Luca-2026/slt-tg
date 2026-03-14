@@ -22,10 +22,9 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
-  { id: "boardroom", name: "Boardroom" },
-  { id: "schulung", name: "Schulung" },
-  { id: "management", name: "Management" },
-  { id: "multi-room", name: "Multi-Room" },
+  { id: "videokonferenz", name: "Videokonferenzlösungen" },
+  { id: "digital-signage", name: "Digital-Signage" },
+  { id: "it-infrastruktur", name: "IT-Infrastruktur & Netzwerk" },
 ];
 
 const projects = [
