@@ -69,7 +69,7 @@ const AGB = () => {
 
                 {/* IV */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Umsatzsteuer</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Umsatzsteuer</h3>
                   <p className="text-muted-foreground">
                     Sollte SLT einen Umsatz irrtümlich als nicht steuerbar bzw. steuerfrei behandeln, obwohl der Umsatz der Umsatzsteuer unterliegt, kann SLT die tatsächlich anfallende Umsatzsteuer auch nachträglich vom Kunden verlangen, sobald von SLT hierüber eine berichtigte Rechnung ausgestellt worden ist.
                   </p>
