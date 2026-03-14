@@ -44,7 +44,7 @@ const AGB = () => {
 
                 {/* II */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Zahlung / Aufrechnung / Zurückbehaltungsrecht / Abtretung</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Zahlung / Aufrechnung / Zurückbehaltungsrecht / Abtretung</h3>
                   <p className="text-muted-foreground mb-2">a. Rechnungen von SLT, soweit nichts anderes vereinbart worden ist, sind 14 Tage nach Rechnungsdatum fällig und ohne Abzug zu bezahlen.</p>
                   <p className="text-muted-foreground mb-2">b. Nur unbestrittene oder rechtskräftig festgestellte Forderungen berechtigen den Kunden zur Aufrechnung oder Zurückbehaltung.</p>
                   <p className="text-muted-foreground">c. SLT ist berechtigt, seine Ansprüche aus der bestehenden Geschäftsbeziehung abzutreten.</p>
