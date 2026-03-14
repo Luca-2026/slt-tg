@@ -557,23 +557,23 @@ const RatgeberArticle = () => {
         structuredData={generateGuideSchema(guide)}
       />
 
-      <article className="py-20 lg:py-28">
-        <div className="section-container">
+      <article className="pt-28 pb-12 lg:pt-36 lg:pb-20">
+        <div className="section-container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <Breadcrumbs items={[
               { label: "Ratgeber", href: "/ratgeber" },
               { label: guide.title },
             ]} />
 
-            <div className="flex items-center gap-3 mt-6 mb-6">
+            <div className="flex items-center gap-3 mt-4 lg:mt-6 mb-4 lg:mb-6">
               <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
-              <span className="text-sm text-muted-foreground flex items-center gap-1">
+              <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1">
                 <Clock className="h-3.5 w-3.5" />
                 Lesezeit: {guide.readTime}
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-8 leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6 lg:mb-8 leading-tight">
               {guide.title}
             </h1>
 
