@@ -186,6 +186,11 @@ const tagLinks: Record<string, string> = {
   "BYOD": "/technologien#praesentationstechnik",
   "Samsung QMC": "/technologien#displays",
   "Digital-Signage": "/loesungen#digital-signage",
+  "Cisco Meraki": "/technologien#netzwerk",
+  "EKAHAU": "/technologien#netzwerk",
+  "Cat 7": "/technologien#netzwerk",
+  "WiFi": "/technologien#netzwerk",
+  "IoT": "/technologien#netzwerk",
 };
 
 const testimonials = [
