@@ -149,9 +149,12 @@ const tagLinks: Record<string, string> = {
   "Huddly S1": "/technologien#video",
   "Iiyama 4K": "/technologien#displays",
   "Iiyama 65\"": "/technologien#displays",
+  "Iiyama 105\" Ultra Wide": "/technologien#displays",
   "LED-Wall": "/technologien#displays",
   "Barco ClickShare CX": "/technologien#praesentationstechnik",
   "BYOD": "/technologien#praesentationstechnik",
+  "Samsung QMC": "/technologien#displays",
+  "Digital-Signage": "/loesungen#digital-signage",
 };
 
 const testimonials = [
