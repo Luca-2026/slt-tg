@@ -310,7 +310,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VII. Gewährleistungsrechte bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VII. Gewährleistungsrechte bei Neuware</h3>
                   <p className="text-muted-foreground mb-4">
                     Die Gewährleistungsrechte des Käufers sind bei Neuware zunächst nach Wahl von SLT auf Ersatzlieferung und Nachbesserung beschränkt. Es obliegt SLT, entweder nachzubessern oder eine Ersatzlieferung zu veranlassen. Beanstandete Ware darf nur mit Einverständnis von SLT zurückgesandt werden.
                   </p>
