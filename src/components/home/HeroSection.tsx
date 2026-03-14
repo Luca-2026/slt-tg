@@ -127,11 +127,11 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-2">
+        <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-5 pt-24 pb-4">
           {/* Top content */}
-          <div className="shrink-0">
+          <div className="shrink-0 space-y-4">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-2 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               AV- & IT-Lösungen
             </div>
@@ -140,12 +140,12 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-base text-muted-foreground mb-4 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base text-muted-foreground leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex gap-3 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}>
               <Button asChild className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
@@ -161,13 +161,13 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Inspiration Slider - takes remaining space */}
-          <div className="flex-1 min-h-0 flex flex-col justify-center py-2">
+          {/* Inspiration Slider - fills middle space evenly */}
+          <div className="flex-1 min-h-0 flex flex-col justify-center py-4">
             <InspirationSlider />
           </div>
 
           {/* Stats - always visible at bottom */}
-          <div className="grid grid-cols-3 gap-3 rounded-xl bg-primary/90 p-4 animate-fade-in-up shrink-0" style={{ animationDelay: "0.3s" }}>
+          <div className="grid grid-cols-3 gap-3 rounded-xl bg-primary/90 p-4 shrink-0 opacity-0 animate-fade-in-up" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
             <CountUpStat end={400} suffix="+" label="Projekte" />
             <CountUpStat end={300} suffix="+" label="Kunden" />
             <CountUpStat end={10} suffix="+" label="Jahre" />
