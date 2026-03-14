@@ -37,7 +37,7 @@ export function TypewriterText() {
       role="presentation"
       aria-label="your digital future."
     >
-      <span className="text-accent">
+      <span className="text-primary sm:text-accent">
         {displayed.slice(0, Math.min(displayedLength, breakIndex))}
       </span>
       {displayedLength > breakIndex && (

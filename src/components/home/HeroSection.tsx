@@ -161,13 +161,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Inspiration Slider */}
-          <div className="my-6">
-            <InspirationSlider />
-          </div>
-
           {/* Stats - pushed to bottom */}
-          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 animate-fade-in-up mt-auto" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={400} suffix="+" label="Projekte" />
             <CountUpStat end={300} suffix="+" label="Kunden" />
             <CountUpStat end={10} suffix="+" label="Jahre" />
