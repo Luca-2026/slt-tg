@@ -63,6 +63,30 @@ export function SEOHead({
       document.head.appendChild(canonicalLink);
     }
 
+    // Hreflang de
+    let hreflangDe = document.querySelector('link[hreflang="de"]');
+    if (hreflangDe) {
+      hreflangDe.setAttribute("href", fullCanonical);
+    } else {
+      hreflangDe = document.createElement("link");
+      hreflangDe.setAttribute("rel", "alternate");
+      hreflangDe.setAttribute("hreflang", "de");
+      hreflangDe.setAttribute("href", fullCanonical);
+      document.head.appendChild(hreflangDe);
+    }
+
+    // Hreflang x-default
+    let hreflangDefault = document.querySelector('link[hreflang="x-default"]');
+    if (hreflangDefault) {
+      hreflangDefault.setAttribute("href", fullCanonical);
+    } else {
+      hreflangDefault = document.createElement("link");
+      hreflangDefault.setAttribute("rel", "alternate");
+      hreflangDefault.setAttribute("hreflang", "x-default");
+      hreflangDefault.setAttribute("href", fullCanonical);
+      document.head.appendChild(hreflangDefault);
+    }
+
     if (structuredData) {
       const existingScript = document.querySelector('script[data-seo-structured]');
       if (existingScript) existingScript.remove();
