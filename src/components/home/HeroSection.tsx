@@ -127,11 +127,11 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-22 pb-3">
+        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-20 pb-3">
           {/* Top content */}
-          <div>
+          <div className="shrink-0">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-3 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-2 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               AV- & IT-Lösungen
             </div>
@@ -140,7 +140,7 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-base text-muted-foreground mb-5 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base text-muted-foreground mb-4 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
@@ -161,8 +161,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Inspiration Slider */}
-          <div className="shrink-0">
+          {/* Inspiration Slider - takes remaining space */}
+          <div className="flex-1 min-h-0 flex flex-col justify-center py-2">
             <InspirationSlider />
           </div>
 
