@@ -293,16 +293,16 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[100svh] flex items-center">
+      <section className="relative overflow-hidden h-[100svh] flex flex-col justify-center sm:justify-center">
         <img
           src={karriereHero}
           alt="Karriere bei der SLT Technology Group – offene Stellen in der Medientechnik und IT-Branche"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 pt-24 pb-6 sm:py-0 lg:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 pt-20 sm:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="lg:flex lg:items-center lg:gap-10">
             {/* Left: Text content */}
