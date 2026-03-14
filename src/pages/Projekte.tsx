@@ -487,7 +487,10 @@ const Projekte = () => {
                               {project.galleryImages.map((img, idx) => (
                                 <button
                                   key={idx}
-                                  onClick={() => setLightboxImage(img)}
+                                  onClick={() => {
+                                    setLightboxImages(project.galleryImages!);
+                                    setLightboxIndex(idx);
+                                  }}
                                   className="aspect-video bg-secondary rounded overflow-hidden hover:opacity-80 transition-opacity"
                                 >
                                   <img 
