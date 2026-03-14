@@ -473,7 +473,11 @@ const Projekte = () => {
                     </div>
 
                     <h2 className="text-2xl font-bold text-foreground mb-2">
-                      {project.company}
+                      {(project as any).website ? (
+                        <a href={(project as any).website} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                          {project.company} ↗
+                        </a>
+                      ) : project.company}
                     </h2>
                     <p className="text-muted-foreground mb-6">
                       {project.shortDescription}
