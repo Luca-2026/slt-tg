@@ -84,7 +84,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Ihr Systemhaus für Konferenz- &amp; Medientechnik in Krefeld und Bonn: Von der Planung über die Installation bis zum laufenden Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
