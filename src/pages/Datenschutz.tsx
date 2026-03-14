@@ -11,16 +11,16 @@ const Datenschutz = () => {
         keywords="Datenschutz, DSGVO, Datenschutzerklärung, SLT Technology Group"
         canonical="/datenschutz"
       />
-      <section className="py-20 lg:py-28">
-        <div className="section-container">
+      <section className="pt-28 pb-12 lg:pt-36 lg:pb-20">
+        <div className="section-container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-6">
+            <Badge variant="outline" className="mb-4 lg:mb-6">
               Rechtliches
             </Badge>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Datenschutzerklärung</h1>
-            <p className="text-sm text-muted-foreground mb-10">Datenschutzerklärung nach DS-GVO – Stand: März 2026</p>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 lg:mb-4">Datenschutzerklärung</h1>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-6 lg:mb-10">Datenschutzerklärung nach DS-GVO – Stand: März 2026</p>
 
-            <div className="prose prose-invert max-w-none space-y-10">
+            <div className="max-w-none space-y-8 lg:space-y-10">
 
               {/* 1. Datenschutz auf einen Blick */}
               <section>
