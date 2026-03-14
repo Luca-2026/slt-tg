@@ -165,15 +165,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="rounded-xl overflow-hidden my-6 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <img
-              src={heroImage}
-              alt="Moderner Konferenzraum mit professioneller AV-Technik"
-              className="w-full h-40 object-cover object-center rounded-xl"
-              fetchPriority="high"
-              loading="eager"
-            />
+          {/* Inspiration Slider */}
+          <div className="my-6">
+            <InspirationSlider />
           </div>
 
           {/* Stats - pushed to bottom */}
