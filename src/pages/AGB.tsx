@@ -107,7 +107,7 @@ const AGB = () => {
 
                 {/* VIII */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VIII. Rücktritt vom Vertrag</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VIII. Rücktritt vom Vertrag</h3>
                   <p className="text-muted-foreground mb-4">
                     Tritt der Kunde aus Gründen, die nicht von uns zu vertreten sind, vom Vertrag zurück, können wir ohne Schadensnachweis als Stornierungskosten fordern:
                   </p>
