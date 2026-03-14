@@ -139,7 +139,7 @@ const AGB = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">B. Zusätzliche Werkvertragsbedingungen und Bedingungen bei Dienstleistungen</h2>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Allgemeines</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Allgemeines</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Angebote, Kalkulationen, Pläne, Zeichnungen oder vergleichbare Unterlagen dürfen ohne Zustimmung von SLT vom Besteller weder vervielfältigt, geändert oder Dritten zugänglich gemacht werden. Kommt ein Vertragsschluss nicht zu Stande, sind die Unterlagen einschließlich Kopien unverzüglich an SLT herauszugeben. Entsprechende digitale Unterlagen sind von allen Laufwerken und Speichermedien dauerhaft zu löschen.
                   </p>
