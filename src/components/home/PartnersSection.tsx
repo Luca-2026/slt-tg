@@ -15,7 +15,7 @@ const partners = [
   { name: "Iiyama", logo: "/assets/partners/iiyama.png", url: "https://www.iiyama.com" },
   { name: "Samsung", logo: "/assets/partners/samsung.png", url: "https://www.samsung.com" },
   { name: "AVer", logo: "/assets/partners/aver.jpg", url: "https://www.aver.com" },
-  { name: "Huddly", logo: "/assets/partners/huddly.png", url: "https://www.huddly.com", invert: true },
+  { name: "Huddly", logo: "/assets/partners/huddly-premier.png", url: "https://www.huddly.com" },
   { name: "Ubiquiti", logo: "/assets/partners/ubiquiti.png", url: "https://www.ui.com" },
   { name: "Connect Signage", logo: "/assets/partners/connect-signage.svg", url: "https://www.connectsignage.com" },
 ];
