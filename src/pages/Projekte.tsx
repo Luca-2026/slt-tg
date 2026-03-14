@@ -27,6 +27,11 @@ const categories = [
   { id: "it-infrastruktur", name: "IT-Infrastruktur & Netzwerk" },
 ];
 
+interface ProjectImage {
+  src: string;
+  position?: string; // CSS object-position value
+}
+
 const projects = [
   {
     id: "aluminium-norf",
