@@ -3,7 +3,68 @@ import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TypewriterText } from "@/components/home/TypewriterText";
+import { useState, useEffect, useCallback } from "react";
 const heroImage = "/assets/hero-konferenzraum.jpg";
+
+const inspirationImages = [
+  "/assets/inspirationen/gea-display.jpg",
+  "/assets/inspirationen/meetingraum-display.jpg",
+  "/assets/inspirationen/teams-room.jpg",
+  "/assets/inspirationen/konferenzraum-byod.jpg",
+  "/assets/inspirationen/dual-display.jpg",
+  "/assets/inspirationen/langeoog-sunset.jpg",
+  "/assets/inspirationen/langeoog-strand.jpg",
+];
+
+function InspirationSlider() {
+  const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % inspirationImages.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(next, 3500);
+    return () => clearInterval(timer);
+  }, [isPaused, next]);
+
+  return (
+    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">Inspirationen</p>
+      <div
+        className="relative rounded-xl overflow-hidden aspect-[16/10]"
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+      >
+        {inspirationImages.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`Inspiration ${i + 1}`}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+        {/* Dots */}
+        <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+          {inspirationImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                i === current ? "bg-white w-4" : "bg-white/50"
+              }`}
+              aria-label={`Bild ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function CountUpStat({ end, suffix, label, light = false }: { end: number; suffix: string; label: string; light?: boolean }) {
   const { count, ref } = useCountUp({ end, duration: 2000 });
