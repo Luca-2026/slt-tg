@@ -55,10 +55,7 @@ export function PartnersSection() {
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-scroll-logos-slow overflow-x-auto scrollbar-hide"
-          onTouchStart={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}
-          onTouchEnd={(e) => { e.currentTarget.style.animationPlayState = ''; }}
-        >
+        <div className="flex animate-scroll-logos-slow">
           {duplicatedPartners.map((partner, index) => (
             <a
               key={`${partner.name}-${index}`}
