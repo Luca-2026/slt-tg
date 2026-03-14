@@ -458,7 +458,7 @@ const Datenschutz = () => {
 
               {/* 8. Änderung */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">8. Änderung unserer Datenschutzbestimmungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">8. Änderung unserer Datenschutzbestimmungen</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen 
                   entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.&nbsp;B. bei der Einführung 
