@@ -320,7 +320,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VIII. Gebrauchtware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VIII. Gebrauchtware</h3>
                   <p className="text-muted-foreground">
                     Der Verkauf von Gebrauchtware erfolgt unter Ausschluss sämtlicher Sachmängelansprüche. Der Ausschluss gilt nicht im Falle des arglistigen Verschweigens eines Mangels durch SLT.
                   </p>
