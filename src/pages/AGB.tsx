@@ -237,7 +237,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Haftung des Mieters</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Haftung des Mieters</h3>
                   <p className="text-muted-foreground mb-2">
                     a. Der Mieter haftet für Verlust, Untergang oder Beschädigung der Mietsache (insbesondere Feuer- und Wasserschäden, Transportschäden, Schädigung der Mietsache während der Benutzung und Abhandenkommen der Mietsache), auch wenn ihn kein Verschulden trifft. Haftungszeitraum ist der Zeitpunkt der Übergabe der Mietsache bis zur Rückgabe der Mietsache.
                   </p>
