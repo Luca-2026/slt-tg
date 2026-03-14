@@ -300,57 +300,45 @@ export default function Karriere() {
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
-        {/* Spacer for header */}
-        <div className="h-20 lg:h-24 shrink-0" />
-        {/* Content */}
-        <div className="py-6 sm:py-0 sm:flex-1 sm:flex sm:items-center">
+        {/* Spacer for header + extra on mobile */}
+        <div className="h-28 sm:h-20 lg:h-24 shrink-0" />
+        {/* Content - vertically distributed */}
+        <div className="flex-1 flex flex-col justify-center gap-5 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 pb-6 sm:py-2">
           <div
             ref={heroRef}
-            className={`section-container relative z-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+            className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
           >
-          <div className="lg:flex lg:items-center lg:gap-10">
-            {/* Left: Text content */}
-            <div className="max-w-xl lg:flex-1">
-              <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-5 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
-                Wir stellen ein 🚀
-              </Badge>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-5 leading-tight text-primary-foreground">
-                Starte mit uns durch.
-              </h1>
-              <p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-4 sm:mb-6">
-                Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
-              </p>
-              <Button
-                size="lg"
-                className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
-                onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                Offene Stellen ansehen
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
+            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-5 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
+              Wir stellen ein 🚀
+            </Badge>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-5 leading-tight text-primary-foreground">
+              Starte mit uns durch.
+            </h1>
+            <p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-4 sm:mb-6">
+              Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
+            </p>
+            <Button
+              size="lg"
+              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
+              onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Offene Stellen ansehen
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
 
-            {/* Right on desktop / Below on mobile: Company Profile */}
-            <div ref={profileRef} className={`mt-5 sm:mt-8 lg:mt-0 max-w-xl lg:max-w-sm lg:shrink-0 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
-              <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
-                      <Rocket className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-0.5">Unternehmensprofil</p>
-                      <h3 className="text-sm sm:text-lg font-bold mb-1 text-primary-foreground">SLT Technology Group</h3>
-                      <p className="text-xs sm:text-sm text-primary-foreground/80 leading-relaxed">
-                        Die SLT Technology Group ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+          {/* Company Profile - below text, pushed to bottom */}
+          <div ref={profileRef} className={`relative z-10 max-w-2xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+            <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-3">
+              <div className="w-8 h-8 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                <Rocket className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <p className="text-xs sm:text-sm text-primary-foreground/80">
+                <span className="text-[10px] font-semibold text-accent uppercase tracking-wider">Unternehmensprofil </span>
+                <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau.
+              </p>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
