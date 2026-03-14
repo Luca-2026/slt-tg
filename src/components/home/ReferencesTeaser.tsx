@@ -27,11 +27,11 @@ const references = [
   {
     id: "gea-farm",
     company: "GEA Farm Technologies",
-    category: "Management Room",
-    description: "Moderner Managementraum mit Huddly L1 Kamera, Nureva HDL-310 Audiobar und zwei 75\" Iiyama 4K Displays.",
+    category: "Besprechungsräume",
+    description: "Management Room und drei weitere Besprechungsräume mit Huddly-Kameras, Nureva, Iiyama und Barco ClickShare.",
     icon: Users,
-    tags: ["Huddly L1", "Nureva", "Iiyama 4K"],
-    image: "/assets/projects/gea-farm/gea-main.jpg",
+    tags: ["Huddly L1", "Nureva", "Barco ClickShare"],
+    image: "/assets/projects/gea-farm/gea-display-wall.jpg",
   },
 ];
 
