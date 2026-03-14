@@ -24,7 +24,7 @@ const Datenschutz = () => {
 
               {/* 1. Datenschutz auf einen Blick */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">1. Datenschutz auf einen Blick</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">1. Datenschutz auf einen Blick</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Allgemeine Hinweise</h3>
                 <p className="text-muted-foreground mb-4">
