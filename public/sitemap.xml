@@ -97,6 +97,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Ratgeber -->
+  <url>
+    <loc>https://www.slt-tg.de/ratgeber</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/ratgeber/konferenztechnik-raumgroesse</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/ratgeber/teams-rooms-vs-zoom-rooms</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/ratgeber/konferenzraum-kosten</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- News-Artikel -->
   <url>
     <loc>https://www.slt-tg.de/news/ise-2026-barcelona</loc>

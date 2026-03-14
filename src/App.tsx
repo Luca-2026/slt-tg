@@ -22,6 +22,8 @@ import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
 import Karriere from "./pages/Karriere";
 import LocalSEOPage from "./pages/LocalSEOPage";
+import Ratgeber from "./pages/Ratgeber";
+import RatgeberArticle from "./pages/RatgeberArticle";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/karriere" element={<Karriere />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
+          <Route path="/ratgeber" element={<Ratgeber />} />
+          <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
