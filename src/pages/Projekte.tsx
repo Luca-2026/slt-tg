@@ -405,6 +405,7 @@ const Projekte = () => {
                         alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location} - ${project.shortDescription.substring(0, 80)}`}
                         loading="lazy"
                         className="w-full h-full object-cover"
+                        style={{ objectPosition: (project as any).heroPosition || "center center" }}
                       />
                     ) : (
                       <>
