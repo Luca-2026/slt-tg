@@ -303,7 +303,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Angaben zu Eigenschaften von Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Angaben zu Eigenschaften von Neuware</h3>
                   <p className="text-muted-foreground">
                     Bei Neuware erfolgen alle Angaben von SLT über Eignung, Verarbeitung und Anwendung, technische Beratung und sonstigen Angaben nach bestem Gewissen, befreien den Käufer jedoch nicht von eigenen Prüfungen und Versuchen.
                   </p>
