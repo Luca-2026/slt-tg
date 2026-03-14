@@ -303,7 +303,7 @@ export default function Karriere() {
         {/* Spacer for fixed header */}
         <div className="h-16 sm:h-18 lg:h-20 shrink-0" />
         {/* Content - start right after header */}
-        <div className="flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-6">
+        <div className="flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-2 pb-6">
           <div
             ref={heroRef}
             className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
