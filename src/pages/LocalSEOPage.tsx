@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -47,7 +48,11 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
       {/* Hero */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
-          <div className="max-w-3xl mx-auto text-center">
+          <Breadcrumbs items={[
+            { label: topic.title, href: `/${topic.baseSlug}/${Object.keys(cities)[0]}` },
+            { label: city.name },
+          ]} />
+          <div className="max-w-3xl mx-auto text-center mt-6">
             <Badge variant="outline" className="mb-6">
               <MapPin className="h-3 w-3 mr-1" />
               {city.name} & Umgebung

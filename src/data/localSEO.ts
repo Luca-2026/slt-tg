@@ -102,13 +102,105 @@ export const topics: Record<string, LocalSEOTopic> = {
       { question: `Unterstützen Sie bei der Finanzierung?`, answer: `Ja, wir bieten verschiedene Finanzierungsmodelle an – von Leasing über Mietkauf bis zu AV-as-a-Service-Konzepten.` },
     ],
   },
+  videokonferenz: {
+    baseSlug: "videokonferenz",
+    title: "Videokonferenz-Lösungen",
+    metaTitle: "Videokonferenztechnik",
+    metaDescription: "Professionelle Videokonferenz-Lösungen",
+    heroTitle: (city) => `Videokonferenz-Lösungen ${city}`,
+    heroSubtitle: (city) => `Professionelle Videokonferenzsysteme für Unternehmen in ${city}. Microsoft Teams, Zoom, Webex – wir integrieren jede Plattform.`,
+    intro: (city) => `Hybrides Arbeiten erfordert zuverlässige Videokonferenztechnik. Wir planen und installieren Videokonferenzsysteme für Unternehmen in ${city} – von der Kamera und dem Mikrofon bis zur kompletten Raumintegration mit Microsoft Teams Rooms oder Zoom Rooms.`,
+    services: [
+      { title: "Microsoft Teams Rooms", description: "Zertifizierte Hardware und nahtlose Integration in Ihre Microsoft-365-Umgebung.", link: "/loesungen#konferenzraum-detail" },
+      { title: "Zoom Rooms", description: "Professionelle Zoom-Raumsysteme für einfache und zuverlässige Videokonferenzen.", link: "/loesungen#konferenzraum-detail" },
+      { title: "BYOD-Lösungen", description: "Bring-Your-Own-Device-Konzepte mit drahtloser Präsentation via Barco ClickShare.", link: "/technologien#praesentationstechnik" },
+      { title: "Kameras & Mikrofone", description: "KI-gestützte Kamerasysteme und Deckenmikrofone für natürliche Kommunikation.", link: "/technologien#videokonferenz" },
+      { title: "Displays & Soundbars", description: "Professionelle Displays und integrierte Audiolösungen für jeden Raumtyp.", link: "/technologien#displays" },
+      { title: "Netzwerk & Infrastruktur", description: "Bandbreiten-Optimierung und Quality-of-Service für stabile Videokonferenzen.", link: "/technologien#it-infrastruktur" },
+    ],
+    faqItems: (city) => [
+      { question: `Welches Videokonferenzsystem passt für mein Unternehmen in ${city}?`, answer: `Das hängt von Ihrer bestehenden IT-Infrastruktur ab. Nutzen Sie Microsoft 365, empfehlen wir Teams Rooms. Nutzen Sie Zoom, setzen wir auf Zoom Rooms. Wir beraten Sie herstellerneutral.` },
+      { question: `Was kostet ein Videokonferenzsystem?`, answer: `Ein Huddle Space startet ab ca. 3.000 €, ein vollausgestatteter Meetingraum liegt bei 8.000–25.000 €. Boardrooms und Speziallösungen werden individuell kalkuliert.` },
+      { question: `Installieren Sie Videokonferenzsysteme in ${city}?`, answer: locationAnswer(city) },
+      { question: `Bieten Sie Wartung für Videokonferenzsysteme?`, answer: supportAnswer(city) },
+    ],
+  },
+  "it-netzwerk": {
+    baseSlug: "it-netzwerk",
+    title: "IT-Netzwerktechnik",
+    metaTitle: "IT-Netzwerktechnik",
+    metaDescription: "Professionelle IT-Netzwerklösungen",
+    heroTitle: (city) => `IT-Netzwerktechnik ${city}`,
+    heroSubtitle: (city) => `Strukturierte Verkabelung, Enterprise WLAN und Managed Switches für Unternehmen in ${city}. Die Basis für zuverlässige AV- und IT-Systeme.`,
+    intro: (city) => `Moderne Medien- und Konferenztechnik funktioniert nur auf einer stabilen IT-Infrastruktur. Wir planen und installieren Netzwerklösungen für Unternehmen in ${city} – von der strukturierten Verkabelung über Enterprise WLAN bis zu AV-over-IP.`,
+    services: [
+      { title: "Strukturierte Verkabelung", description: "Cat6a/Cat7-Verkabelung nach DIN EN 50173 für zukunftssichere Infrastruktur." },
+      { title: "Enterprise WLAN", description: "Professionelle WLAN-Ausleuchtung und -Planung mit Ubiquiti und Herstellern wie Aruba." },
+      { title: "Managed Switches", description: "VLAN-Segmentierung, PoE und Quality-of-Service für AV- und IT-Konvergenz." },
+      { title: "AV-over-IP", description: "Signalverteilung über das Netzwerk für flexible und skalierbare AV-Lösungen.", link: "/technologien#it-infrastruktur" },
+      { title: "Serverraum & Schranksysteme", description: "19-Zoll-Racks, Patchfelder und Kabelmanagement für saubere Infrastruktur." },
+      { title: "Netzwerk-Monitoring", description: "Proaktive Überwachung und Alarmierung für maximale Verfügbarkeit.", link: "/leistungen#service" },
+    ],
+    faqItems: (city) => [
+      { question: `Bieten Sie IT-Netzwerkinstallation in ${city} an?`, answer: locationAnswer(city) },
+      { question: `Was kostet eine Netzwerk-Infrastruktur?`, answer: `Die Kosten hängen von der Gebäudegröße, Anzahl der Ports und gewünschten Standards ab. Wir erstellen Ihnen ein individuelles Angebot nach einer Vor-Ort-Begehung.` },
+      { question: `Arbeiten Sie mit bestehender IT-Infrastruktur?`, answer: `Ja, wir integrieren uns in bestehende Netzwerke und IT-Strukturen. Eine vorherige Analyse stellt sicher, dass die AV-Systeme optimal eingebunden werden.` },
+      { question: `Bieten Sie Netzwerk-Wartung in ${city}?`, answer: supportAnswer(city) },
+    ],
+  },
+  "digital-signage": {
+    baseSlug: "digital-signage",
+    title: "Digital Signage",
+    metaTitle: "Digital Signage",
+    metaDescription: "Professionelle Digital-Signage-Lösungen",
+    heroTitle: (city) => `Digital Signage ${city}`,
+    heroSubtitle: (city) => `Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen für Unternehmen in ${city}. Modern, flexibel und zentral steuerbar.`,
+    intro: (city) => `Von Empfangs-Displays über Wegeleitsysteme bis zu großflächigen LED-Wänden – wir planen und installieren Digital-Signage-Lösungen für Unternehmen in ${city}. Inhalte zentral verwalten, Displays standortübergreifend steuern.`,
+    services: [
+      { title: "Empfangs- & Lobby-Displays", description: "Professionelle Begrüßungslösungen und Raumbuchungssysteme.", link: "/loesungen#empfang-detail" },
+      { title: "Info- & Wegeleitsysteme", description: "Digitale Orientierung für Besucher und Mitarbeiter." },
+      { title: "LED-Wände", description: "Großflächige LED-Videowände für beeindruckende Darstellungen.", link: "/technologien#displays" },
+      { title: "Content-Management", description: "Zentrale Verwaltung aller Inhalte und Displays über eine Plattform." },
+      { title: "Raumbeschilderung", description: "Digitale Türschilder mit Kalender-Integration für Microsoft 365 und Google." },
+      { title: "Wartung & Support", description: "Remote-Monitoring und proaktiver Service für maximale Verfügbarkeit.", link: "/leistungen#service" },
+    ],
+    faqItems: (city) => [
+      { question: `Installieren Sie Digital Signage in ${city}?`, answer: locationAnswer(city) },
+      { question: `Kann ich die Inhalte selbst verwalten?`, answer: `Ja, alle unsere Digital-Signage-Lösungen beinhalten ein Content-Management-System, das Sie selbst bedienen können. Wir schulen Ihre Mitarbeiter bei der Übergabe.` },
+      { question: `Was kostet eine Digital-Signage-Lösung?`, answer: `Einzelne Info-Displays starten ab ca. 1.500 €. Größere Projekte mit LED-Wänden und Content-Management werden individuell kalkuliert.` },
+    ],
+  },
 };
 
 export function getLocalSEORoutes(): { path: string; topic: string; city: string }[] {
   const routes: { path: string; topic: string; city: string }[] = [];
-  ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"].forEach((city) => {
+  const allCities = ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"];
+
+  // Medientechnik - alle Städte
+  allCities.forEach((city) => {
     routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
   });
+
+  // Konferenztechnik - alle Städte + NRW
+  allCities.forEach((city) => {
+    routes.push({ path: `/konferenztechnik/${city}`, topic: "konferenztechnik", city });
+  });
   routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
+
+  // Videokonferenz - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/videokonferenz/${city}`, topic: "videokonferenz", city });
+  });
+
+  // IT-Netzwerk - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/it-netzwerk/${city}`, topic: "it-netzwerk", city });
+  });
+
+  // Digital Signage - alle Städte
+  allCities.forEach((city) => {
+    routes.push({ path: `/digital-signage/${city}`, topic: "digital-signage", city });
+  });
+
   return routes;
 }

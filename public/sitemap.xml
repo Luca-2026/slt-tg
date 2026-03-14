@@ -4,7 +4,7 @@
   <!-- Hauptseiten -->
   <url>
     <loc>https://www.slt-tg.de/</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,13 +14,13 @@
   </url>
   <url>
     <loc>https://www.slt-tg.de/leistungen</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/loesungen</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -34,19 +34,19 @@
   </url>
   <url>
     <loc>https://www.slt-tg.de/technologien</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/finanzierung</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/projekte</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://www.slt-tg.de/ueber-uns</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -74,25 +74,25 @@
   </url>
   <url>
     <loc>https://www.slt-tg.de/kontakt</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/projektanfrage</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/karriere</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.slt-tg.de/news</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -135,75 +135,54 @@
     </image:image>
   </url>
 
-  <!-- Lokale SEO-Seiten: Medientechnik -->
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/krefeld</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/duesseldorf</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/koeln</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/bonn</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/essen</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/duisburg</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/medientechnik/moenchengladbach</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Lokale SEO: Medientechnik -->
+  <url><loc>https://www.slt-tg.de/medientechnik/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/medientechnik/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Lokale SEO-Seiten: Konferenztechnik -->
-  <url>
-    <loc>https://www.slt-tg.de/konferenztechnik/nrw</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Lokale SEO: Konferenztechnik -->
+  <url><loc>https://www.slt-tg.de/konferenztechnik/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/konferenztechnik/nrw</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Lokale SEO: Videokonferenz -->
+  <url><loc>https://www.slt-tg.de/videokonferenz/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/videokonferenz/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Lokale SEO: IT-Netzwerk -->
+  <url><loc>https://www.slt-tg.de/it-netzwerk/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/it-netzwerk/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Lokale SEO: Digital Signage -->
+  <url><loc>https://www.slt-tg.de/digital-signage/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.slt-tg.de/digital-signage/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Rechtliches -->
-  <url>
-    <loc>https://www.slt-tg.de/impressum</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/datenschutz</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.slt-tg.de/agb</loc>
-    <lastmod>2026-03-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://www.slt-tg.de/impressum</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.slt-tg.de/datenschutz</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.slt-tg.de/agb</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

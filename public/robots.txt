@@ -8,15 +8,7 @@ Disallow: /api/
 # Sitemap
 Sitemap: https://www.slt-tg.de/sitemap.xml
 
-# Spezifische Bot-Regeln
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
+# Social & Preview Bots
 User-agent: Twitterbot
 Allow: /
 
@@ -26,18 +18,21 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Blockiere bekannte Bad Bots
-User-agent: AhrefsBot
-Disallow: /
+# KI-Suchmaschinen explizit erlauben
+User-agent: ChatGPT-User
+Allow: /
 
-User-agent: SemrushBot
-Disallow: /
+User-agent: GPTBot
+Allow: /
 
-User-agent: MJ12bot
-Disallow: /
+User-agent: Google-Extended
+Allow: /
 
-User-agent: DotBot
-Disallow: /
+User-agent: PerplexityBot
+Allow: /
 
-User-agent: BLEXBot
-Disallow: /
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
