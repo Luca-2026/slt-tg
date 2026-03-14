@@ -11,20 +11,20 @@ const Datenschutz = () => {
         keywords="Datenschutz, DSGVO, Datenschutzerklärung, SLT Technology Group"
         canonical="/datenschutz"
       />
-      <section className="py-20 lg:py-28">
-        <div className="section-container">
+      <section className="pt-28 pb-12 lg:pt-36 lg:pb-20">
+        <div className="section-container px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-6">
+            <Badge variant="outline" className="mb-4 lg:mb-6">
               Rechtliches
             </Badge>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Datenschutzerklärung</h1>
-            <p className="text-sm text-muted-foreground mb-10">Datenschutzerklärung nach DS-GVO – Stand: März 2026</p>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 lg:mb-4">Datenschutzerklärung</h1>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-6 lg:mb-10">Datenschutzerklärung nach DS-GVO – Stand: März 2026</p>
 
-            <div className="prose prose-invert max-w-none space-y-10">
+            <div className="max-w-none space-y-8 lg:space-y-10">
 
               {/* 1. Datenschutz auf einen Blick */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">1. Datenschutz auf einen Blick</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">1. Datenschutz auf einen Blick</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Allgemeine Hinweise</h3>
                 <p className="text-muted-foreground mb-4">
@@ -73,7 +73,7 @@ const Datenschutz = () => {
 
               {/* 2. Hosting */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">2. Hosting</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">2. Hosting</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir hosten die Inhalte unserer Website bei folgenden Anbietern:
                 </p>
@@ -109,7 +109,7 @@ const Datenschutz = () => {
 
               {/* 3. Allgemeine Hinweise und Pflichtinformationen */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">3. Allgemeine Hinweise und Pflichtinformationen</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Datenschutz</h3>
                 <p className="text-muted-foreground mb-4">
@@ -178,7 +178,7 @@ const Datenschutz = () => {
                 </p>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3>
-                <p className="text-muted-foreground mb-4 uppercase text-sm font-medium">
+                <p className="text-muted-foreground mb-4 text-sm font-medium">
                   Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, 
                   aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten 
                   Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Wenn Sie Widerspruch einlegen, 
@@ -222,7 +222,7 @@ const Datenschutz = () => {
                   Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. 
                   Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                <ul className="list-disc list-outside pl-5 text-muted-foreground space-y-2 mb-4">
                   <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
                   <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
                   <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
@@ -246,7 +246,7 @@ const Datenschutz = () => {
 
               {/* 4. Datenerfassung auf dieser Website */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">4. Datenerfassung auf dieser Website</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">4. Datenerfassung auf dieser Website</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Cookies</h3>
                 <p className="text-muted-foreground mb-4">
@@ -289,7 +289,7 @@ const Datenschutz = () => {
                   Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, 
                   die Ihr Browser automatisch an uns übermittelt. Dies sind:
                 </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
+                <ul className="list-disc list-outside pl-5 text-muted-foreground space-y-1 mb-4">
                   <li>Browsertyp und Browserversion</li>
                   <li>Verwendetes Betriebssystem</li>
                   <li>Referrer URL</li>
@@ -347,7 +347,7 @@ const Datenschutz = () => {
 
               {/* 5. E-Mail-Versand */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">5. E-Mail-Versand</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">5. E-Mail-Versand</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Resend (Transaktionale E-Mails)</h3>
                 <p className="text-muted-foreground mb-4">
@@ -369,7 +369,7 @@ const Datenschutz = () => {
 
               {/* 6. Plugins und Tools */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">6. Plugins und Tools</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">6. Plugins und Tools</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Google Fonts (lokales Hosting)</h3>
                 <p className="text-muted-foreground mb-4">
@@ -416,7 +416,7 @@ const Datenschutz = () => {
 
               {/* 7. Bewerberdaten */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">7. Umgang mit Bewerberdaten</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">7. Umgang mit Bewerberdaten</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir bieten Ihnen die Möglichkeit, sich bei uns über ein Online-Bewerbungsformular zu bewerben. Im Folgenden informieren wir 
                   Sie über Umfang, Zweck und Verwendung Ihrer im Rahmen des Bewerbungsprozesses erhobenen personenbezogenen Daten. Wir versichern, 
@@ -458,7 +458,7 @@ const Datenschutz = () => {
 
               {/* 8. Änderung */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">8. Änderung unserer Datenschutzbestimmungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">8. Änderung unserer Datenschutzbestimmungen</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen 
                   entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.&nbsp;B. bei der Einführung 
@@ -468,7 +468,7 @@ const Datenschutz = () => {
 
               {/* 9. Fragen */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">9. Fragen zum Datenschutz</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">9. Fragen zum Datenschutz</h2>
                 <p className="text-muted-foreground mb-4">
                   Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die 
                   für den Datenschutz verantwortliche Person in unserer Organisation:
