@@ -303,7 +303,7 @@ export default function Karriere() {
         {/* Spacer for header */}
         <div className="h-20 lg:h-24 shrink-0" />
         {/* Content - vertically distributed */}
-        <div className="flex-1 flex flex-col justify-evenly px-4 sm:px-6 lg:px-8">
+        <div className="flex-1 flex flex-col justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 py-4">
           <div
             ref={heroRef}
             className={`relative z-10 max-w-xl pt-2 sm:pt-4 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
