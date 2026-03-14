@@ -15,6 +15,8 @@ import {
   Calendar,
   CheckCircle,
   X,
+  ChevronLeft,
+  ChevronRight,
   Star,
   Quote
 } from "lucide-react";
@@ -329,7 +331,8 @@ const Projekte = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const location = useLocation();
 
   // Scroll to project if hash is present
@@ -484,7 +487,10 @@ const Projekte = () => {
                               {project.galleryImages.map((img, idx) => (
                                 <button
                                   key={idx}
-                                  onClick={() => setLightboxImage(img)}
+                                  onClick={() => {
+                                    setLightboxImages(project.galleryImages!);
+                                    setLightboxIndex(idx);
+                                  }}
                                   className="aspect-video bg-secondary rounded overflow-hidden hover:opacity-80 transition-opacity"
                                 >
                                   <img 
@@ -587,23 +593,57 @@ const Projekte = () => {
       </section>
 
       {/* Lightbox */}
-      {lightboxImage && (
+      {lightboxImages.length > 0 && (
         <div 
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setLightboxImage(null)}
+          onClick={() => setLightboxImages([])}
         >
           <button 
-            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
-            onClick={() => setLightboxImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-10"
+            onClick={() => setLightboxImages([])}
           >
             <X className="h-8 w-8" />
           </button>
+
+          {/* Previous */}
+          {lightboxImages.length > 1 && (
+            <button
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/30 rounded-full p-2"
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
+              }}
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </button>
+          )}
+
           <img 
-            src={lightboxImage} 
+            src={lightboxImages[lightboxIndex]} 
             alt="Vergrößerte Projektansicht – AV-Installation von SLT Technology Group"
             className="max-w-full max-h-full object-contain"
             onClick={(e) => e.stopPropagation()}
           />
+
+          {/* Next */}
+          {lightboxImages.length > 1 && (
+            <button
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 bg-black/30 rounded-full p-2"
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxIndex((prev) => (prev + 1) % lightboxImages.length);
+              }}
+            >
+              <ChevronRight className="h-8 w-8" />
+            </button>
+          )}
+
+          {/* Counter */}
+          {lightboxImages.length > 1 && (
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm bg-black/40 px-3 py-1 rounded-full">
+              {lightboxIndex + 1} / {lightboxImages.length}
+            </div>
+          )}
         </div>
       )}
     </Layout>
