@@ -127,11 +127,11 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="min-h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-6">
+        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-4">
           {/* Top content */}
           <div>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-5 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-3 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               AV- & IT-Lösungen
             </div>
@@ -140,34 +140,36 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand. Ihr Systemhaus in Krefeld &amp; Bonn.
+            <p className="text-xs text-muted-foreground mb-4 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+            <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projekte">
                   Referenzen
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Inspiration Slider */}
-          <div className="my-6">
-            <InspirationSlider />
+          {/* Inspiration Slider - flex grow to fill remaining space */}
+          <div className="flex-1 min-h-0 my-3">
+            <div className="h-full">
+              <InspirationSlider />
+            </div>
           </div>
 
-          {/* Stats - pushed to bottom */}
-          <div className="grid grid-cols-3 gap-4 rounded-xl bg-primary/90 p-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          {/* Stats - always visible at bottom */}
+          <div className="grid grid-cols-3 gap-3 rounded-xl bg-primary/90 p-4 animate-fade-in-up shrink-0" style={{ animationDelay: "0.3s" }}>
             <CountUpStat end={400} suffix="+" label="Projekte" />
             <CountUpStat end={300} suffix="+" label="Kunden" />
             <CountUpStat end={10} suffix="+" label="Jahre" />
