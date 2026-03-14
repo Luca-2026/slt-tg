@@ -308,7 +308,6 @@ export default function Karriere() {
             ref={heroRef}
             className={`section-container relative z-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
           >
-        >
           <div className="lg:flex lg:items-center lg:gap-10">
             {/* Left: Text content */}
             <div className="max-w-xl lg:flex-1">
