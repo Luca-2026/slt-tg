@@ -356,11 +356,11 @@ const Projekte = () => {
             </Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               Referenzprojekte:{" "}
-              <span className="text-primary">Medientechnik & Konferenzräume</span>
+              <span className="text-primary">Medientechnik, IT & Netzwerk</span>
             </h1>
             <p className="text-base lg:text-lg text-muted-foreground">
-              Ein Einblick in realisierte Projekte – von einzelnen Boardrooms 
-              bis zu unternehmensweiten Rollouts mit über 20 Räumen.
+              Ein Einblick in realisierte Projekte – von Konferenzräumen über 
+              Digital-Signage bis hin zu unternehmensweiten IT-Infrastrukturen.
             </p>
           </div>
         </div>
