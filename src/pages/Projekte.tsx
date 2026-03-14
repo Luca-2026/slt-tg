@@ -138,6 +138,37 @@ const projects = [
     ],
     tags: ["Samsung QMC", "Iiyama 105\" Ultra Wide", "Digital-Signage", "Touchdisplay", "Connect Signage", "CMS"],
   },
+  {
+    id: "sonoco",
+    company: "Sonoco (mehrere Standorte)",
+    category: "it-infrastruktur",
+    categoryLabel: "WiFi-Infrastruktur & Netzwerk",
+    location: "Deutschlandweit",
+    year: "2022–2023",
+    icon: Building2,
+    heroImage: "/assets/projects/sonoco/sonoco-rack.jpg",
+    galleryImages: [
+      "/assets/projects/sonoco/sonoco-rack.jpg",
+      "/assets/projects/sonoco/sonoco-switch.jpg",
+      "/assets/projects/sonoco/sonoco-cabling.jpg",
+      "/assets/projects/sonoco/sonoco-ap.jpg",
+      "/assets/projects/sonoco/sonoco-ceiling.jpg",
+      "/assets/projects/sonoco/sonoco-lift.jpg",
+      "/assets/projects/sonoco/sonoco-installation.jpg",
+      "/assets/projects/sonoco/sonoco-ekahau.jpg",
+    ],
+    shortDescription: "Komplette WiFi-Infrastruktur für mehrere Werksstandorte des Marktführers – von der EKAHAU-Ausleuchtung über Cat-7-Verkabelung bis zur Cisco Meraki Implementierung im laufenden 24/7 Betrieb.",
+    challenge: "Sonoco benötigte an mehreren deutschen Standorten eine vollständig neue WiFi-Infrastruktur für die Werke sowie die Anbindung digitaler IoT-Anwendungen. Die größte Herausforderung: Sämtliche Arbeiten mussten während des laufenden 24/7-Betriebs umgesetzt werden – ohne Ausfallzeiten.",
+    solution: "Zunächst wurde ein professioneller On-Site Survey mit EKAHAU durchgeführt, um die optimale Access-Point-Platzierung zu ermitteln. Anschließend wurde die gesamte strukturierte Verkabelung auf Cat 7 erneuert. Die neue Infrastruktur wurde mit modernen Cisco Meraki Access Points und Switches ausgestattet, die eine zuverlässige Abdeckung für WiFi und IoT-Anwendungen in den Produktionshallen gewährleisten.",
+    results: [
+      "Professionelle EKAHAU-Ausleuchtung aller Standorte",
+      "Vollständige Erneuerung der strukturierten Verkabelung auf Cat 7",
+      "Cisco Meraki Access Points & Switches für zuverlässige WiFi-Abdeckung",
+      "Implementierung digitaler IoT-Anwendungen in der Produktion",
+      "Gesamte Umsetzung im laufenden 24/7-Betrieb ohne Ausfallzeiten",
+    ],
+    tags: ["Cisco Meraki", "EKAHAU", "Cat 7", "WiFi", "IoT", "24/7 Betrieb"],
+  },
 ];
 
 const tagLinks: Record<string, string> = {
