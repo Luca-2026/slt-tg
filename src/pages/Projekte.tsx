@@ -22,17 +22,16 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
-  { id: "boardroom", name: "Boardroom" },
-  { id: "schulung", name: "Schulung" },
-  { id: "management", name: "Management" },
-  { id: "multi-room", name: "Multi-Room" },
+  { id: "videokonferenz", name: "Videokonferenzlösungen" },
+  { id: "digital-signage", name: "Digital-Signage" },
+  { id: "it-infrastruktur", name: "IT-Infrastruktur & Netzwerk" },
 ];
 
 const projects = [
   {
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
-    category: "boardroom",
+    category: "videokonferenz",
     categoryLabel: "Boardroom & Schulung",
     location: "Neuss",
     year: "2024",
@@ -60,7 +59,7 @@ const projects = [
   {
     id: "pfeifer-langen",
     company: "Pfeifer & Langen GmbH & Co. KG",
-    category: "multi-room",
+    category: "videokonferenz",
     categoryLabel: "Multi-Room Rollout",
     location: "Köln",
     year: "2023",
@@ -89,7 +88,7 @@ const projects = [
   {
     id: "gea-farm",
     company: "GEA Farm Technologies",
-    category: "management",
+    category: "videokonferenz",
     categoryLabel: "Management Room & Besprechungsräume",
     location: "Bönen",
     year: "2024–2026",
@@ -114,6 +113,31 @@ const projects = [
     ],
     tags: ["Huddly L1", "Huddly S1", "Nureva HDL-310", "Iiyama 65\"", "Barco ClickShare CX", "BYOD"],
   },
+  {
+    id: "bensersiel",
+    company: "Tourismus Information Bensersiel",
+    category: "digital-signage",
+    categoryLabel: "Digital-Signage (interaktiv)",
+    location: "Bensersiel",
+    year: "2025",
+    icon: Monitor,
+    heroImage: "/assets/projects/bensersiel/bensersiel-main.jpg",
+    galleryImages: [
+      "/assets/projects/bensersiel/bensersiel-main.jpg",
+      "/assets/projects/bensersiel/bensersiel-strand.jpg",
+    ],
+    shortDescription: "Interaktives Digital-Signage-System mit Samsung QMC Displays und einem 105\" Iiyama Ultra Wide Touchdisplay für die Tourismus Information.",
+    challenge: "Die Tourismus Information Bensersiel benötigte eine moderne, interaktive Lösung, um Gästen jederzeit aktuelle Informationen zu Fährabfahrtzeiten, Gastronomie und Freizeitangeboten zugänglich zu machen – intuitiv bedienbar und zentral pflegbar.",
+    solution: "Installation mehrerer Samsung QMC Displays und eines beeindruckenden 105\" interaktiven Iiyama 21:9 Ultra Wide Displays. Der Clou: Gäste können über das Touchdisplay interaktiv Informationen abrufen – von Fährabfahrtzeiten bis zu Gastronomie-Tipps. Alle Displays sind über das Content Management System unseres Partners Connect Signage eingebunden. Die Inhalte können von den Kunden einfach und selbst gepflegt werden – über die Cloud jederzeit erreichbar.",
+    results: [
+      "Interaktive Gästeinformation über 105\" Ultra Wide Touchdisplay",
+      "Mehrere Samsung QMC Displays für Informationsanzeige",
+      "Cloud-basiertes Content Management über Connect Signage",
+      "Eigenständige Pflege der Inhalte durch den Kunden jederzeit möglich",
+      "Intuitive Bedienung für Touristen ohne Einweisung",
+    ],
+    tags: ["Samsung QMC", "Iiyama 105\" Ultra Wide", "Digital-Signage", "Touchdisplay", "Connect Signage", "CMS"],
+  },
 ];
 
 const tagLinks: Record<string, string> = {
@@ -125,9 +149,12 @@ const tagLinks: Record<string, string> = {
   "Huddly S1": "/technologien#video",
   "Iiyama 4K": "/technologien#displays",
   "Iiyama 65\"": "/technologien#displays",
+  "Iiyama 105\" Ultra Wide": "/technologien#displays",
   "LED-Wall": "/technologien#displays",
   "Barco ClickShare CX": "/technologien#praesentationstechnik",
   "BYOD": "/technologien#praesentationstechnik",
+  "Samsung QMC": "/technologien#displays",
+  "Digital-Signage": "/loesungen#digital-signage",
 };
 
 const testimonials = [
