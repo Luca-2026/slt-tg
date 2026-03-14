@@ -123,6 +123,7 @@ const projects = [
   {
     id: "bensersiel",
     company: "Tourismus Information Bensersiel",
+    website: "https://www.langeoog.de",
     category: "digital-signage",
     categoryLabel: "Digital-Signage (interaktiv)",
     location: "Bensersiel",
