@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
