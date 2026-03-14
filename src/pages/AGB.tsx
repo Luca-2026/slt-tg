@@ -329,7 +329,7 @@ const AGB = () => {
 
               {/* E – Beschallungsanlagen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">E. Zusätzliche Bedingungen bei Gestellung von Beschallungsanlagen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">E. Zusätzliche Bedingungen bei Gestellung von Beschallungsanlagen</h2>
                 <p className="text-muted-foreground">
                   Es gehört weder zu den Haupt- noch zu den Nebenleistungspflichten von SLT, den Kunden über die rechtlichen Grenzen und Anforderungen im Hinblick auf Lärmemissionen zu informieren oder den Kunden in diesen Fragen zu beraten, soweit nichts Abweichendes im Auftrag geregelt ist. Ungeachtet dessen weist SLT darauf hin, dass diverse vor Lärmimmissionen schützende Vorschriften zu beachten sind. Im Übrigen wird sich SLT an etwaige diesbezügliche Anweisungen des Kunden halten.
                 </p>
