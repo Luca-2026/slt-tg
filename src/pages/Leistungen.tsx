@@ -212,6 +212,7 @@ const Leistungen = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="max-w-3xl mx-auto text-center">
+            <Breadcrumbs items={[{ label: "Leistungen" }]} />
             <Badge variant="outline" className="mb-6 animate-fade-in">
               Leistungsübersicht
             </Badge>

@@ -265,6 +265,7 @@ const Technologien = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="max-w-3xl mx-auto text-center">
+            <Breadcrumbs items={[{ label: "Technologien" }]} />
             <Badge variant="outline" className="mb-6">
               Technologien & Produkte
             </Badge>

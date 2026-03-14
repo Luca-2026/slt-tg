@@ -267,6 +267,7 @@ const Projekte = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="max-w-3xl mx-auto text-center">
+            <Breadcrumbs items={[{ label: "Projekte" }]} />
             <Badge variant="outline" className="mb-6">
               Referenzen
             </Badge>
