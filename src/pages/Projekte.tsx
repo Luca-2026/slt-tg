@@ -459,6 +459,7 @@ const Projekte = () => {
                                     src={img} 
                                     alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
+                                    style={{ objectPosition: (project as any).imagePositions?.[img] || "center center" }}
                                   />
                                 </button>
                               ))}
