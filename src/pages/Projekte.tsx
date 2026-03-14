@@ -331,7 +331,8 @@ const Projekte = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const location = useLocation();
 
   // Scroll to project if hash is present
