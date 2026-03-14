@@ -293,56 +293,64 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[100svh] flex flex-col justify-center">
+      <section className="relative overflow-hidden h-[100svh] flex flex-col">
         <img
           src={karriereHero}
           alt="Karriere bei der SLT Technology Group – offene Stellen in der Medientechnik und IT-Branche"
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
-        <div
-          ref={heroRef}
-          className={`section-container relative z-10 pt-20 lg:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
-        >
-          <div className="max-w-xl">
-            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
-              Wir stellen ein 🚀
-            </Badge>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-6 leading-tight text-primary-foreground">
-              Starte mit uns durch.
-            </h1>
-            <p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-5 sm:mb-8">
-              Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
-            </p>
-            <Button
-              size="lg"
-              className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
-              onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Offene Stellen ansehen
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
+        {/* Spacer for header */}
+        <div className="h-20 lg:h-24 shrink-0" />
+        {/* Content */}
+        <div className="py-6 sm:py-0 sm:flex-1 sm:flex sm:items-center">
+          <div
+            ref={heroRef}
+            className={`section-container relative z-10 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          >
+          <div className="lg:flex lg:items-center lg:gap-10">
+            {/* Left: Text content */}
+            <div className="max-w-xl lg:flex-1">
+              <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-5 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
+                Wir stellen ein 🚀
+              </Badge>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-5 leading-tight text-primary-foreground">
+                Starte mit uns durch.
+              </h1>
+              <p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-4 sm:mb-6">
+                Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
+              </p>
+              <Button
+                size="lg"
+                className="bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent group text-sm sm:text-base"
+                onClick={() => document.getElementById("positions")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Offene Stellen ansehen
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
 
-          {/* Company Profile - inside hero */}
-          <div ref={profileRef} className={`mt-6 sm:mt-10 max-w-xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
-            <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
-              <CardContent className="p-4 sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
-                    <Rocket className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+            {/* Right on desktop / Below on mobile: Company Profile */}
+            <div ref={profileRef} className={`mt-5 sm:mt-8 lg:mt-0 max-w-xl lg:max-w-sm lg:shrink-0 scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+              <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                      <Rocket className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-0.5">Unternehmensprofil</p>
+                      <h3 className="text-sm sm:text-lg font-bold mb-1 text-primary-foreground">SLT Technology Group</h3>
+                      <p className="text-xs sm:text-sm text-primary-foreground/80 leading-relaxed">
+                        Die SLT Technology Group ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-0.5">Unternehmensprofil</p>
-                    <h3 className="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-primary-foreground">SLT Technology Group</h3>
-                    <p className="text-xs sm:text-base text-primary-foreground/80 leading-relaxed">
-                      Die SLT Technology Group ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
+        </div>
         </div>
       </section>
 
