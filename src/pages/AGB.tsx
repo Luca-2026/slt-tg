@@ -192,7 +192,7 @@ const AGB = () => {
 
               {/* C – Zusätzliche Mietbedingungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">C. Zusätzliche Mietbedingungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">C. Zusätzliche Mietbedingungen</h2>
 
                 <section className="mb-8">
                   <h3 className="text-xl font-semibold text-foreground mb-4">I. Kaution</h3>
