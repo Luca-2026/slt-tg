@@ -293,7 +293,7 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-[100svh] flex items-end sm:items-center">
+      <section className="relative overflow-hidden h-[100svh] flex items-center">
         <img
           src={karriereHero}
           alt="Karriere bei der SLT Technology Group – offene Stellen in der Medientechnik und IT-Branche"
