@@ -229,7 +229,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Pflichten des Mieters</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Pflichten des Mieters</h3>
                   <p className="text-muted-foreground mb-2">a. Der Mieter hat die Mietsache schonend zu behandeln. Eventuelle Hinweise von SLT in Bezug auf die Mietsache sind vom Mieter zu beachten. Die Mietsache darf nur von Fachpersonal aufgebaut und bedient werden.</p>
                   <p className="text-muted-foreground mb-2">b. Der Mieter ist verpflichtet, die Mietsache vor Beschädigung oder Verlust (insbesondere vor Witterungseinflüssen und Diebstahl) zu schützen und geeignete Maßnahmen zu ergreifen.</p>
                   <p className="text-muted-foreground mb-2">c. Zeigt sich im Laufe der Miete ein Mangel der gemieteten Sache, so hat der Mieter unverzüglich SLT hiervon in Kenntnis zu setzen.</p>
