@@ -136,7 +136,7 @@ const AGB = () => {
 
               {/* B – Zusätzliche Werkvertragsbedingungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">B. Zusätzliche Werkvertragsbedingungen und Bedingungen bei Dienstleistungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">B. Zusätzliche Werkvertragsbedingungen und Bedingungen bei Dienstleistungen</h2>
 
                 <section className="mb-8">
                   <h3 className="text-xl font-semibold text-foreground mb-4">I. Allgemeines</h3>
