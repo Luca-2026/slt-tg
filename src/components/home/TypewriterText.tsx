@@ -43,7 +43,7 @@ export function TypewriterText() {
       {displayedLength > breakIndex && (
         <>
           <br />
-          <span className="text-accent">
+          <span className="text-primary sm:text-accent">
             {displayed.slice(breakIndex)}
           </span>
         </>
