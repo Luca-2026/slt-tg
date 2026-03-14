@@ -272,7 +272,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Eigentumsvorbehalt</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Eigentumsvorbehalt</h3>
                   <p className="text-muted-foreground mb-4">
                     a. Die verkaufte Ware bleibt im Eigentum von SLT bis zur vollständigen Bezahlung der Forderung von SLT.
                   </p>
