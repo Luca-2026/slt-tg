@@ -34,7 +34,7 @@ function InspirationSlider() {
     <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
       <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1.5">Inspirationen</p>
       <div
-        className="relative rounded-xl overflow-hidden aspect-[16/9]"
+        className="relative rounded-xl overflow-hidden aspect-[2/1]"
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
