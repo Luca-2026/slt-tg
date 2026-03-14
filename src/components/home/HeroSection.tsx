@@ -127,7 +127,7 @@ export function HeroSection() {
 
       {/* ===== MOBILE HERO (below sm) ===== */}
       <section className="sm:hidden -mt-20">
-        <div className="h-[100svh] flex flex-col bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-4">
+        <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-4 pt-24 pb-4">
           {/* Top content */}
           <div>
             {/* Badge */}
@@ -140,7 +140,7 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-xs text-muted-foreground mb-4 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-sm text-muted-foreground mb-5 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
@@ -162,7 +162,7 @@ export function HeroSection() {
           </div>
 
           {/* Inspiration Slider */}
-          <div className="my-3 shrink-0">
+          <div className="shrink-0">
             <InspirationSlider />
           </div>
 
