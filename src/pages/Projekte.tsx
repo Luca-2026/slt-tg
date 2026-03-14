@@ -146,7 +146,7 @@ const projects = [
     location: "Deutschlandweit",
     year: "2022–2023",
     icon: Building2,
-    heroImage: "/assets/projects/sonoco/sonoco-rack.jpg",
+    heroImage: "/assets/projects/sonoco/sonoco-ekahau.jpg",
     galleryImages: [
       "/assets/projects/sonoco/sonoco-rack.jpg",
       "/assets/projects/sonoco/sonoco-switch.jpg",
