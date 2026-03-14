@@ -337,7 +337,7 @@ const AGB = () => {
 
               {/* F – WLAN */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">F. Zusätzliche Bedingungen bei der Bereitstellung eines WLAN-Zugangs</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">F. Zusätzliche Bedingungen bei der Bereitstellung eines WLAN-Zugangs</h2>
                 <p className="text-muted-foreground mb-4">
                   Sofern SLT dem Kunden auftragsgemäß einen Internetzugang über WLAN zur Verfügung stellt, erfolgt die Nutzung des WLAN auf eigene Gefahr und auf eigenes Risiko des Kunden, insbesondere hinsichtlich der Möglichkeit von Zugriffen Dritter auf das Endgerät des Nutzers oder einer Infizierung mit schädlicher Software (z.&nbsp;B. Viren oder Trojaner). Der Kunde ist selbst verantwortlich für jegliche Sicherungsmaßnahmen (z.&nbsp;B. Verschlüsselung, Virenschutz, Firewall). Für über das WLAN übermittelte Daten, für darüber in Anspruch genommene kostenpflichtige Dienstleistungen sowie für darüber getätigte Rechtsgeschäfte ist der Kunde selbst verantwortlich; er trägt alle hieraus resultierenden Kosten.
                 </p>
