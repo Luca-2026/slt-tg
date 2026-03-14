@@ -306,7 +306,7 @@ export default function Karriere() {
         <div className="flex-1 flex flex-col justify-center gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 py-4">
           <div
             ref={heroRef}
-            className={`relative z-10 max-w-xl pt-2 sm:pt-4 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+            className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
           >
             <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-5 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
               Wir stellen ein 🚀
