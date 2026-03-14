@@ -300,10 +300,10 @@ export default function Karriere() {
           className="absolute inset-0 w-full h-full object-cover object-[center_30%] sm:object-center lg:object-right-bottom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/40 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
-        {/* Spacer for header */}
-        <div className="h-20 lg:h-24 shrink-0" />
+        {/* Spacer for header + extra on mobile */}
+        <div className="h-28 sm:h-20 lg:h-24 shrink-0" />
         {/* Content - vertically distributed */}
-        <div className="flex-1 flex flex-col justify-end sm:justify-center gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 py-6 sm:py-2">
+        <div className="flex-1 flex flex-col justify-center gap-5 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 pb-6 sm:py-2">
           <div
             ref={heroRef}
             className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
