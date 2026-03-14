@@ -26,7 +26,7 @@ const AGB = () => {
 
               {/* A – Allgemeine Bestimmungen */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">A. Allgemeine Bestimmungen</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">A. Allgemeine Bestimmungen</h2>
 
                 {/* I */}
                 <section className="mb-8">
