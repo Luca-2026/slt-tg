@@ -369,7 +369,7 @@ const Datenschutz = () => {
 
               {/* 6. Plugins und Tools */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">6. Plugins und Tools</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">6. Plugins und Tools</h2>
 
                 <h3 className="text-lg font-semibold text-foreground mb-3">Google Fonts (lokales Hosting)</h3>
                 <p className="text-muted-foreground mb-4">
