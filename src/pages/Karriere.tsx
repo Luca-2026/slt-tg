@@ -337,7 +337,7 @@ export default function Karriere() {
                 <div className="min-w-0">
                   <p className="text-[10px] font-semibold text-accent uppercase tracking-wider leading-none">Unternehmensprofil</p>
                   <p className="text-xs sm:text-sm text-primary-foreground/80 mt-0.5">
-                    <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Junges, stark wachsendes Unternehmen für hochwertige Videokonferenzlösungen auf Enterprise-Niveau.
+                    <span className="font-bold text-primary-foreground">SLT Technology Group</span> – Hochwertige Videokonferenzlösungen auf Enterprise-Niveau, deutschlandweit.
                   </p>
                 </div>
               </CardContent>
