@@ -140,22 +140,22 @@ export function HeroSection() {
             <TypewriterText />
 
             {/* Subheadline */}
-            <p className="text-sm text-muted-foreground mb-5 leading-relaxed max-w-xs animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base text-muted-foreground mb-5 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex gap-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+              <Button asChild className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projektanfrage">
                   Projekt anfragen
-                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="sm" className="text-xs bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
+              <Button asChild className="text-sm bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 hover:text-accent">
                 <Link to="/projekte">
                   Referenzen
-                  <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
             </div>
