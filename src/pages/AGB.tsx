@@ -11,18 +11,18 @@ const AGB = () => {
         keywords="AGB, Allgemeine Geschäftsbedingungen, SLT Technology Group, Vertragsbedingungen"
         canonical="/agb"
       />
-      <section className="py-20 lg:py-28">
-        <div className="section-container">
+      <section className="py-12 sm:py-20 lg:py-28">
+        <div className="section-container px-5 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <Badge variant="outline" className="mb-6">Rechtliches</Badge>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Allgemeine Geschäftsbedingungen</h1>
-            <p className="text-lg text-muted-foreground mb-2">
+            <Badge variant="outline" className="mb-4 sm:mb-6">Rechtliches</Badge>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">Allgemeine Geschäftsbedingungen</h1>
+            <p className="text-base sm:text-lg text-muted-foreground mb-2">
               der SLT Technology Group GmbH & Co. KG<br />
               und mit diesem verbundene Unternehmen.
             </p>
-            <p className="text-muted-foreground mb-12 italic">– nachfolgend SLT –</p>
+            <p className="text-muted-foreground mb-8 sm:mb-12 italic">– nachfolgend SLT –</p>
 
-            <div className="prose prose-invert max-w-none space-y-10">
+            <div className="prose prose-invert max-w-none space-y-8 sm:space-y-10">
 
               {/* A – Allgemeine Bestimmungen */}
               <div>
