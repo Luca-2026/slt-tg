@@ -59,7 +59,7 @@ const projects = [
   {
     id: "pfeifer-langen",
     company: "Pfeifer & Langen GmbH & Co. KG",
-    category: "multi-room",
+    category: "videokonferenz",
     categoryLabel: "Multi-Room Rollout",
     location: "Köln",
     year: "2023",
