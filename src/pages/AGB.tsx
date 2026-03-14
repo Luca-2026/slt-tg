@@ -289,7 +289,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">IV. Gewährleistung, Untersuchungs- und Rügepflicht bei Neuware</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">IV. Gewährleistung, Untersuchungs- und Rügepflicht bei Neuware</h3>
                   <p className="text-muted-foreground">
                     SLT leistet Gewähr nach den gesetzlichen Vorschriften, soweit nachfolgend nichts anderes bestimmt wird. Bei Neuware gelten die §§ 377, 378 HGB mit der Maßgabe, dass die Rüge innerhalb von 2 Tagen zu erfolgen hat. Dies gilt nicht, wenn SLT den Mangel arglistig verschwiegen hat.
                   </p>
