@@ -293,7 +293,7 @@ export default function Karriere() {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden flex items-center">
+      <section className="relative overflow-hidden h-[100svh] flex flex-col justify-center">
         <img
           src={karriereHero}
           alt="Karriere bei der SLT Technology Group – offene Stellen in der Medientechnik und IT-Branche"
@@ -302,16 +302,16 @@ export default function Karriere() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30 sm:bg-gradient-to-r sm:from-primary/85 sm:via-primary/60 sm:to-transparent" />
         <div
           ref={heroRef}
-          className={`section-container relative z-10 py-20 sm:py-28 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+          className={`section-container relative z-10 pt-20 lg:pt-24 scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
         >
           <div className="max-w-xl">
-            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
+            <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
               Wir stellen ein 🚀
             </Badge>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-primary-foreground">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 sm:mb-6 leading-tight text-primary-foreground">
               Starte mit uns durch.
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-6 sm:mb-8">
+            <p className="text-sm sm:text-lg md:text-xl text-primary-foreground/90 max-w-lg mb-5 sm:mb-8">
               Wir suchen stetig neue und technikbegeisterte Talente, die sich gemeinsam mit uns entwickeln möchten.
             </p>
             <Button
@@ -325,17 +325,21 @@ export default function Karriere() {
           </div>
 
           {/* Company Profile - inside hero */}
-          <div ref={profileRef} className={`mt-10 sm:mt-14 max-w-xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+          <div ref={profileRef} className={`mt-6 sm:mt-10 max-w-xl scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
             <Card className="bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/20">
-              <CardContent className="p-5 sm:p-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-foreground/15 flex items-center justify-center mb-3 sm:mb-4">
-                  <Rocket className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+              <CardContent className="p-4 sm:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary-foreground/15 flex items-center justify-center shrink-0">
+                    <Rocket className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-0.5">Unternehmensprofil</p>
+                    <h3 className="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-primary-foreground">SLT Technology Group</h3>
+                    <p className="text-xs sm:text-base text-primary-foreground/80 leading-relaxed">
+                      Die SLT Technology Group ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige Videokonferenzlösungen auf Enterprise-Niveau – deutschlandweit und in Europa.
+                    </p>
+                  </div>
                 </div>
-                <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">Unternehmensprofil</p>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-primary-foreground">SLT Technology Group</h3>
-                <p className="text-sm sm:text-base text-primary-foreground/80">
-                  Die SLT Technology Group GmbH & Co. KG ist ein junges und stark wachsendes Unternehmen. Wir planen und installieren hochwertige und individuelle Videokonferenzlösungen auf Enterprise-Niveau für unsere Kunden – deutschlandweit und in Europa.
-                </p>
               </CardContent>
             </Card>
           </div>
