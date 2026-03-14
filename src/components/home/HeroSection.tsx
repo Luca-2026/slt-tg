@@ -161,11 +161,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Inspiration Slider - flex grow to fill remaining space */}
-          <div className="flex-1 min-h-0 my-3">
-            <div className="h-full">
-              <InspirationSlider />
-            </div>
+          {/* Inspiration Slider */}
+          <div className="my-3 shrink-0">
+            <InspirationSlider />
           </div>
 
           {/* Stats - always visible at bottom */}
