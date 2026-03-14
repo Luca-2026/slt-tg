@@ -73,7 +73,7 @@ const Datenschutz = () => {
 
               {/* 2. Hosting */}
               <section>
-                <h2 className="text-2xl font-bold text-foreground mb-6">2. Hosting</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4 lg:mb-6">2. Hosting</h2>
                 <p className="text-muted-foreground mb-4">
                   Wir hosten die Inhalte unserer Website bei folgenden Anbietern:
                 </p>
