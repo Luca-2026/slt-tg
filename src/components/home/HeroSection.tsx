@@ -31,10 +31,10 @@ function InspirationSlider() {
   }, [isPaused, next]);
 
   return (
-    <div className="animate-fade-in-up h-full flex flex-col" style={{ animationDelay: "0.25s" }}>
+    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
       <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1.5">Inspirationen</p>
       <div
-        className="relative rounded-xl overflow-hidden flex-1 min-h-0"
+        className="relative rounded-xl overflow-hidden aspect-[16/9]"
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
       >
@@ -161,11 +161,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Inspiration Slider - flex grow to fill remaining space */}
-          <div className="flex-1 min-h-0 my-3">
-            <div className="h-full">
-              <InspirationSlider />
-            </div>
+          {/* Inspiration Slider */}
+          <div className="my-3 shrink-0">
+            <InspirationSlider />
           </div>
 
           {/* Stats - always visible at bottom */}
