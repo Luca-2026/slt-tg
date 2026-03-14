@@ -149,7 +149,7 @@ const AGB = () => {
                 </section>
 
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">II. Unberechtigte Mängelrügen</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">II. Unberechtigte Mängelrügen</h3>
                   <p className="text-muted-foreground">
                     Kommt SLT einer Aufforderung des Bestellers zur Mängelbeseitigung nach und gewährt der Besteller den Zugang zum Objekt zum vereinbarten Zeitpunkt nicht oder stellt sich heraus, dass ein Mangel an der Leistung von SLT objektiv nicht vorliegt, hat der Besteller die Aufwendungen von SLT zu ersetzen. Mangels Vereinbarung gelten die ortsüblichen Sätze.
                   </p>
