@@ -136,7 +136,7 @@ const projects = [
     ],
     shortDescription: "Interaktives Digital-Signage-System mit Samsung QMC Displays und einem 105\" Iiyama Ultra Wide Touchdisplay für die Tourismus Information.",
     challenge: "Die Tourismus Information Bensersiel benötigte eine moderne, interaktive Lösung, um Gästen jederzeit aktuelle Informationen zu Fährabfahrtzeiten, Gastronomie und Freizeitangeboten zugänglich zu machen – intuitiv bedienbar und zentral pflegbar.",
-    solution: "Installation mehrerer Samsung QMC Displays und eines beeindruckenden 105\" interaktiven Iiyama 21:9 Ultra Wide Displays. Der Clou: Gäste können über das Touchdisplay interaktiv Informationen abrufen – von Fährabfahrtzeiten bis zu Gastronomie-Tipps. Alle Displays sind über das Content Management System unseres Partners Connect Signage eingebunden. Die Inhalte können von den Kunden einfach und selbst gepflegt werden – über die Cloud jederzeit erreichbar.",
+    solution: "Installation mehrerer Samsung QMC Displays und eines beeindruckenden 105\" interaktiven Iiyama 21:9 Ultra Wide Displays. Der Clou: Gäste können über das Touchdisplay interaktiv Informationen abrufen – von Fährabfahrtzeiten bis zu Gastronomie-Tipps. Alle Displays sind über das Content Management System unseres Partners Connect Signage eingebunden. Die Inhalte können von den Kunden einfach und selbst gepflegt werden – über die Cloud jederzeit erreichbar. Als offizieller Connect Signage Partner sorgen wir für eine nahtlose Integration und langfristigen Support.",
     results: [
       "Interaktive Gästeinformation über 105\" Ultra Wide Touchdisplay",
       "Mehrere Samsung QMC Displays für Informationsanzeige",
