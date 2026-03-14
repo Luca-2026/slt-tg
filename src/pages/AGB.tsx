@@ -85,7 +85,7 @@ const AGB = () => {
 
                 {/* VI */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">VI. Keine Anrechnung der Vertragsstrafe</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">VI. Keine Anrechnung der Vertragsstrafe</h3>
                   <p className="text-muted-foreground">
                     Eine vereinbarte Vertragsstrafe wird auf bestehende Schadensersatzansprüche von SLT nicht angerechnet.
                   </p>
