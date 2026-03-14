@@ -65,6 +65,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 
 export function ReferencesTeaser() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const references = useMemo(() => shuffleArray(allReferences).slice(0, 3), []);
   const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
