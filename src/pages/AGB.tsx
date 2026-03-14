@@ -77,7 +77,7 @@ const AGB = () => {
 
                 {/* V */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">V. Reisekosten</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">V. Reisekosten</h3>
                   <p className="text-muted-foreground">
                     Reisekosten und Spesen, die SLT im Zusammenhang mit der Ausführung des Vertrages entstehen, sind vom Kunden gesondert zu erstatten.
                   </p>
