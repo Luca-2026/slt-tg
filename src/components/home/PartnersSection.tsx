@@ -51,33 +51,44 @@ export function PartnersSection() {
       </div>
 
       {/* Infinite scroll slider */}
-      <div className="relative">
+      <div className="relative"
+        onTouchStart={(e) => {
+          const el = e.currentTarget.querySelector('.animate-scroll-logos-slow') as HTMLElement;
+          if (el) el.style.animationPlayState = 'paused';
+        }}
+        onTouchEnd={(e) => {
+          const el = e.currentTarget.querySelector('.animate-scroll-logos-slow') as HTMLElement;
+          if (el) setTimeout(() => { el.style.animationPlayState = ''; }, 2000);
+        }}
+      >
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-scroll-logos-slow">
-          {duplicatedPartners.map((partner, index) => (
-            <a
-              key={`${partner.name}-${index}`}
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center group"
-              aria-label={`${partner.name} Website öffnen`}
-            >
-              <div className="w-28 h-14 lg:w-36 lg:h-16 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-all duration-500">
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} Logo`}
-                  loading="lazy"
-                  decoding="async"
-                  className={`max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.05] ${
-                    (partner as any).invert ? "invert" : ""
-                  }`}
-                />
-              </div>
-            </a>
-          ))}
+        <div className="overflow-hidden">
+          <div className="flex animate-scroll-logos-slow w-max">
+            {duplicatedPartners.map((partner, index) => (
+              <a
+                key={`${partner.name}-${index}`}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center group"
+                aria-label={`${partner.name} Website öffnen`}
+              >
+                <div className="w-28 h-14 lg:w-36 lg:h-16 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-all duration-500">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} Logo`}
+                    loading="lazy"
+                    decoding="async"
+                    className={`max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.05] ${
+                      (partner as any).invert ? "invert" : ""
+                    }`}
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 

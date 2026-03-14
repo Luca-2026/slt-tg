@@ -209,35 +209,19 @@
   }
 
   .animate-scroll-logos {
-    animation: scroll-logos 10s linear infinite;
-    cursor: grab;
-    touch-action: pan-x;
-  }
-  .animate-scroll-logos:hover {
-    animation-play-state: paused;
-  }
-  .animate-scroll-logos:active {
-    cursor: grabbing;
+    animation: scroll-logos 12s linear infinite;
   }
 
   .animate-scroll-logos-slow {
-    animation: scroll-logos 14s linear infinite;
-    cursor: grab;
-    touch-action: pan-x;
-  }
-  .animate-scroll-logos-slow:hover {
-    animation-play-state: paused;
-  }
-  .animate-scroll-logos-slow:active {
-    cursor: grabbing;
+    animation: scroll-logos 18s linear infinite;
   }
 
   @media (min-width: 1024px) {
     .animate-scroll-logos {
-      animation-duration: 20s;
+      animation-duration: 22s;
     }
     .animate-scroll-logos-slow {
-      animation-duration: 28s;
+      animation-duration: 32s;
     }
   }
 }

@@ -39,32 +39,43 @@ export function ClientLogosSlider() {
       </div>
 
       {/* Infinite scroll slider */}
-      <div className="relative">
+      <div className="relative"
+        onTouchStart={(e) => {
+          const el = e.currentTarget.querySelector('.animate-scroll-logos') as HTMLElement;
+          if (el) el.style.animationPlayState = 'paused';
+        }}
+        onTouchEnd={(e) => {
+          const el = e.currentTarget.querySelector('.animate-scroll-logos') as HTMLElement;
+          if (el) setTimeout(() => { el.style.animationPlayState = ''; }, 2000);
+        }}
+      >
         {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/30 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/30 to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-scroll-logos">
-          {duplicatedClients.map((client, index) => (
-            <a
-              key={`${client.name}-${index}`}
-              href={client.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center group"
-              aria-label={`${client.name} Website öffnen`}
-            >
-              <div className="w-32 h-16 lg:w-40 lg:h-20 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-all duration-500">
-                <img
-                  src={client.logo}
-                  alt={`${client.name} Logo`}
-                  loading="lazy"
-                  decoding="async"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </a>
-          ))}
+        <div className="overflow-hidden">
+          <div className="flex animate-scroll-logos w-max">
+            {duplicatedClients.map((client, index) => (
+              <a
+                key={`${client.name}-${index}`}
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center group"
+                aria-label={`${client.name} Website öffnen`}
+              >
+                <div className="w-32 h-16 lg:w-40 lg:h-20 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-all duration-500">
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} Logo`}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
