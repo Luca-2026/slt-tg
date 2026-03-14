@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Calendar, Clock, MapPin, BookOpen } from "lucide-react";
 
 interface NewsArticle {
   id: string;
@@ -68,6 +68,30 @@ const newsArticles: NewsArticle[] = [
   },
 ];
 
+const guides = [
+  {
+    slug: "konferenztechnik-raumgroesse",
+    title: "Welche Konferenztechnik für welche Raumgröße?",
+    description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist.",
+    readTime: "8 Min.",
+    category: "Planung",
+  },
+  {
+    slug: "teams-rooms-vs-zoom-rooms",
+    title: "Microsoft Teams Rooms vs. Zoom Rooms",
+    description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe.",
+    readTime: "6 Min.",
+    category: "Plattformen",
+  },
+  {
+    slug: "konferenzraum-kosten",
+    title: "Was kostet ein Konferenzraum?",
+    description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen.",
+    readTime: "7 Min.",
+    category: "Budget",
+  },
+];
+
 const generateNewsListSchema = () => ({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
@@ -119,13 +143,13 @@ const News = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="max-w-3xl mx-auto text-center">
-            <Badge variant="outline" className="mb-6">Aktuelles</Badge>
+            <Badge variant="outline" className="mb-6">Aktuelles & Wissen</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              News aus der{" "}
+              News & Ratgeber{" "}
               <span className="text-primary">AV- & IT-Welt</span>
             </h1>
             <p className="text-base lg:text-lg text-muted-foreground">
-              Trends, Innovationen und Neuigkeiten aus der professionellen Medientechnik – 
+              Trends, Innovationen und Praxiswissen aus der professionellen Medientechnik – 
               von uns für Sie zusammengefasst.
             </p>
           </div>
@@ -248,8 +272,44 @@ const News = () => {
         </section>
       )}
 
+      {/* Ratgeber Section */}
+      <section className="py-12 lg:py-16">
+        <div className="section-container">
+          <div className="flex items-center gap-3 mb-6 lg:mb-8">
+            <BookOpen className="h-5 w-5 text-primary" />
+            <h2 className="text-xl lg:text-2xl font-bold text-foreground">Ratgeber & Praxiswissen</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {guides.map((guide) => (
+              <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className="group block">
+                <Card className="h-full bg-card border-border hover:border-primary/30 transition-all duration-300 group-hover:shadow-lg">
+                  <CardHeader className="p-4 sm:p-5">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Badge variant="secondary" className="text-[10px]">{guide.category}</Badge>
+                      <span className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        {guide.readTime}
+                      </span>
+                    </div>
+                    <CardTitle className="text-sm lg:text-base group-hover:text-primary transition-colors">
+                      {guide.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 sm:p-5 pt-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-3">{guide.description}</p>
+                    <span className="text-primary text-xs sm:text-sm font-medium flex items-center gap-1">
+                      Ratgeber lesen <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Coming Soon */}
-      <section className="py-16 lg:py-20">
+      <section className="py-12 lg:py-16">
         <div
           ref={ctaRef}
           className={`section-container text-center scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}

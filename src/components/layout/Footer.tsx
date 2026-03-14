@@ -17,7 +17,7 @@ const footerLinks = {
   ],
   unternehmen: [
     { name: "Projekte", href: "/projekte" },
-    { name: "Ratgeber", href: "/ratgeber" },
+    { name: "News & Wissen", href: "/news" },
     { name: "Karriere", href: "/karriere" },
     { name: "Über uns", href: "/ueber-uns" },
     { name: "News", href: "/news" },
