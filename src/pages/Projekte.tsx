@@ -542,12 +542,21 @@ const Projekte = () => {
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag) => {
                             const link = tagLinks[tag];
+                            const isExternal = link?.startsWith("http");
                             return link ? (
-                              <Link key={tag} to={link}>
-                                <Badge variant="outline" className="text-xs hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer">
-                                  {tag}
-                                </Badge>
-                              </Link>
+                              isExternal ? (
+                                <a key={tag} href={link} target="_blank" rel="noopener noreferrer">
+                                  <Badge variant="outline" className="text-xs hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer">
+                                    {tag} ↗
+                                  </Badge>
+                                </a>
+                              ) : (
+                                <Link key={tag} to={link}>
+                                  <Badge variant="outline" className="text-xs hover:bg-primary/10 hover:border-primary/30 transition-colors cursor-pointer">
+                                    {tag}
+                                  </Badge>
+                                </Link>
+                              )
                             ) : (
                               <Badge key={tag} variant="outline" className="text-xs">
                                 {tag}
