@@ -30,7 +30,7 @@ const AGB = () => {
 
                 {/* I */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-semibold text-foreground mb-4">I. Geltung der AGB</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4">I. Geltung der AGB</h3>
                   <p className="text-muted-foreground mb-4">
                     Diese allgemeinen Geschäftsbedingungen finden ausschließlich Anwendung gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichem Sondervermögen im Sinne von § 310 Abs. 1 BGB. Diese allgemeinen Geschäftsbedingungen gelten ausschließlich. Abweichende oder entgegenstehende Bedingungen werden von SLT nicht anerkannt, sofern SLT diesen nicht ausdrücklich schriftlich zugestimmt haben. Durch die Erteilung von Aufträgen erkennt der Kunde diese Bedingungen an, auch wenn seine AGB diesen Bedingungen entgegenstehen sollten. Diese AGB gelten auch für alle künftigen Verträge der Parteien, ohne dass es eines erneuten Hinweises auf die AGB bedarf.
                   </p>
