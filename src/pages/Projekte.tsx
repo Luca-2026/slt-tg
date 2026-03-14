@@ -88,7 +88,7 @@ const projects = [
   {
     id: "gea-farm",
     company: "GEA Farm Technologies",
-    category: "management",
+    category: "videokonferenz",
     categoryLabel: "Management Room & Besprechungsräume",
     location: "Bönen",
     year: "2024–2026",
