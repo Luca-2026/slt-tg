@@ -70,6 +70,14 @@ const newsArticles: NewsArticle[] = [
 
 const guides = [
   {
+    slug: "yealink-meetingboard-pro",
+    title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
+    description: "Funktionen, Größen und Einsatzszenarien – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    readTime: "7 Min.",
+    category: "Produkte",
+    featured: true,
+  },
+  {
     slug: "konferenztechnik-raumgroesse",
     title: "Welche Konferenztechnik für welche Raumgröße?",
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist.",
@@ -280,18 +288,21 @@ const News = () => {
             <h2 className="text-xl lg:text-2xl font-bold text-foreground">Ratgeber & Praxiswissen</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {guides.map((guide) => (
-              <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className="group block">
-                <Card className="h-full bg-card border-border hover:border-primary/30 transition-all duration-300 group-hover:shadow-lg">
+            {guides.map((guide) => {
+              const isFeatured = 'featured' in guide && guide.featured;
+              return (
+              <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className={`group block ${isFeatured ? "sm:col-span-2 lg:col-span-3" : ""}`}>
+                <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${isFeatured ? "border-primary/30 bg-secondary hover:border-primary/50" : "bg-card border-border hover:border-primary/30"}`}>
                   <CardHeader className="p-4 sm:p-5">
                     <div className="flex items-center gap-3 mb-2">
+                      {isFeatured && <Badge className="text-[10px]">⭐ Neu</Badge>}
                       <Badge variant="secondary" className="text-[10px]">{guide.category}</Badge>
                       <span className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         {guide.readTime}
                       </span>
                     </div>
-                    <CardTitle className="text-sm lg:text-base group-hover:text-primary transition-colors">
+                    <CardTitle className={`group-hover:text-primary transition-colors ${isFeatured ? "text-base lg:text-lg" : "text-sm lg:text-base"}`}>
                       {guide.title}
                     </CardTitle>
                   </CardHeader>
@@ -303,7 +314,8 @@ const News = () => {
                   </CardContent>
                 </Card>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
