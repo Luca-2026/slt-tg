@@ -5,7 +5,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const guides = [
   {
@@ -52,9 +51,8 @@ const Ratgeber = () => {
         canonical="/ratgeber"
       />
 
-      {/* Hero Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background">
-        <div className="section-container animate-fade-in-up">
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Breadcrumbs items={[{ label: "Ratgeber" }]} />
           <div className="max-w-3xl mx-auto text-center mt-6">
             <Badge variant="outline" className="mb-6">
@@ -66,16 +64,15 @@ const Ratgeber = () => {
               <span className="text-primary">Konferenz- & Medientechnik</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Praxiswissen für IT-Entscheider und Facility Manager: Neutrale Empfehlungen, 
+              Praxiswissen für IT-Entscheider und Facility Manager: Neutrale Empfehlungen,
               realistische Kostenrahmen und fundierte Vergleiche – ohne Verkaufsdruck.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Guides Grid */}
-      <h2 className="text-3xl font-bold text-center py-8">Unsere Ratgeber-Artikel</h2>
-      <div className="py-8 lg:py-12">
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide) => (
               <Link
@@ -83,13 +80,11 @@ const Ratgeber = () => {
                 to={`/ratgeber/${guide.slug}`}
                 className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
               >
-                <div
-                  className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
-                    guide.featured
-                      ? "border-primary/30 bg-secondary hover:border-primary/50"
-                      : "border-border bg-card hover:border-primary/30"
-                  }`}
-                >
+                <div className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
+                  guide.featured
+                    ? "border-primary/30 bg-secondary hover:border-primary/50"
+                    : "border-border bg-card hover:border-primary/30"
+                }`}>
                   <div className="flex items-center gap-3 mb-3">
                     <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
                       {guide.featured ? "⭐ Neu" : guide.category}
@@ -118,16 +113,15 @@ const Ratgeber = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* CTA Section */}
-      <div className="py-16 lg:py-20 bg-card">
+      <section className="py-16 lg:py-20 bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
             Individuelle Beratung gewünscht?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            Unsere Ratgeber geben Ihnen eine solide Grundlage. Für Ihr konkretes Projekt 
+            Unsere Ratgeber geben Ihnen eine solide Grundlage. Für Ihr konkretes Projekt
             beraten wir Sie gerne persönlich – kostenfrei und unverbindlich.
           </p>
           <Button asChild size="lg" className="btn-glow">
@@ -137,7 +131,7 @@ const Ratgeber = () => {
             </Link>
           </Button>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 };
