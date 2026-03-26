@@ -43,8 +43,6 @@ const guides = [
 ];
 
 const Ratgeber = () => {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-
   return (
     <Layout>
       <SEOHead
@@ -56,10 +54,7 @@ const Ratgeber = () => {
 
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background">
-        <div
-          ref={heroRef}
-          className={`section-container scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
-        >
+        <div className="section-container animate-fade-in-up">
           <Breadcrumbs items={[{ label: "Ratgeber" }]} />
           <div className="max-w-3xl mx-auto text-center mt-6">
             <Badge variant="outline" className="mb-6">
