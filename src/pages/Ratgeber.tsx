@@ -4,7 +4,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -23,6 +22,7 @@ const guides = [
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist – mit konkreten Empfehlungen.",
     readTime: "8 Min.",
     category: "Planung",
+    featured: false,
   },
   {
     slug: "teams-rooms-vs-zoom-rooms",
@@ -30,6 +30,7 @@ const guides = [
     description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe für Ihr Unternehmen.",
     readTime: "6 Min.",
     category: "Plattformen",
+    featured: false,
   },
   {
     slug: "konferenzraum-kosten",
@@ -37,6 +38,7 @@ const guides = [
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen – von der Basisausstattung bis zum Boardroom.",
     readTime: "7 Min.",
     category: "Budget",
+    featured: false,
   },
 ];
 
@@ -52,6 +54,7 @@ const Ratgeber = () => {
         canonical="/ratgeber"
       />
 
+      {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background">
         <div
           ref={heroRef}
@@ -75,8 +78,9 @@ const Ratgeber = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20 bg-background">
-        <div className="section-container">
+      {/* Guides Grid */}
+      <div className="py-16 lg:py-20" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide) => (
               <Link
@@ -84,11 +88,13 @@ const Ratgeber = () => {
                 to={`/ratgeber/${guide.slug}`}
                 className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
               >
-                <div className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
-                  guide.featured
-                    ? "border-primary/30 bg-secondary/50 hover:border-primary/50"
-                    : "border-border bg-card hover:border-primary/30"
-                }`}>
+                <div
+                  className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
+                    guide.featured
+                      ? "border-primary/30 bg-secondary hover:border-primary/50"
+                      : "border-border bg-card hover:border-primary/30"
+                  }`}
+                >
                   <div className="flex items-center gap-3 mb-3">
                     <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
                       {guide.featured ? "⭐ Neu" : guide.category}
@@ -101,13 +107,15 @@ const Ratgeber = () => {
                       {guide.readTime}
                     </span>
                   </div>
-                  <h3 className={`font-semibold text-foreground group-hover:text-primary transition-colors mb-3 ${guide.featured ? "text-2xl lg:text-3xl" : "text-xl"}`}>
+                  <h3 className={`font-semibold text-foreground group-hover:text-primary transition-colors mb-3 ${
+                    guide.featured ? "text-2xl lg:text-3xl" : "text-xl"
+                  }`}>
                     {guide.title}
                   </h3>
                   <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
                     {guide.description}
                   </p>
-                  <span className="text-primary text-sm font-medium flex items-center gap-1">
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-1">
                     Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
@@ -115,10 +123,11 @@ const Ratgeber = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="py-16 lg:py-20 bg-card">
-        <div className="section-container text-center">
+      {/* CTA Section */}
+      <div className="py-16 lg:py-20 bg-card">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
             Individuelle Beratung gewünscht?
           </h2>
@@ -133,7 +142,7 @@ const Ratgeber = () => {
             </Link>
           </Button>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 };
