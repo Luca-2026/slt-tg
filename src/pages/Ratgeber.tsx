@@ -75,14 +75,15 @@ const Ratgeber = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20" style={{ opacity: 1, visibility: 'visible' }}>
+      <section className="py-16 lg:py-20">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.map((guide, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ opacity: 1, transform: 'none', filter: 'none' }}>
+            {guides.map((guide) => (
               <Link
                 key={guide.slug}
                 to={`/ratgeber/${guide.slug}`}
                 className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
+                style={{ opacity: 1 }}
               >
                 <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${
                   guide.featured
