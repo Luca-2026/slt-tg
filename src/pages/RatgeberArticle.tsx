@@ -502,6 +502,158 @@ const guides: Record<string, GuideData> = {
       </>
     ),
   },
+
+  "yealink-meetingboard-pro": {
+    slug: "yealink-meetingboard-pro",
+    title: "Yealink MeetingBoard Pro: All-in-One Lösung für Microsoft Teams Rooms",
+    metaDescription: "Yealink MeetingBoard Pro im Detail: Funktionen, Größen (65/75/86 Zoll), Kamera, Whiteboard & Installation. SLT Technology Group – autorisierter Yealink-Partner in NRW.",
+    keywords: "Yealink MeetingBoard Pro, MeetingBoard Pro Microsoft Teams, Yealink Whiteboard, All-in-One Konferenzsystem, Teams Rooms Whiteboard, Yealink MeetingBoard kaufen, Yealink Partner NRW",
+    readTime: "7 Min.",
+    category: "Produkte",
+    content: (
+      <>
+        <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
+          Das <strong>Yealink MeetingBoard Pro</strong> vereint Videokonferenz, Display und interaktives Whiteboard 
+          in einem einzigen Gerät – zertifiziert für <strong>Microsoft Teams Rooms</strong> und <strong>Zoom Rooms</strong>. 
+          Als <strong>autorisierter Yealink-Partner</strong> übernehmen wir bei der SLT Technology Group die komplette 
+          Planung, Installation und Inbetriebnahme für Ihr Unternehmen.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Was ist das Yealink MeetingBoard Pro?</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Das MeetingBoard Pro ist Yealinks Flaggschiff unter den All-in-One-Konferenzsystemen. Es kombiniert 
+          ein 4K-Multi-Touch-Display, ein leistungsstarkes Kamerasystem und professionelle Audiotechnik in einem 
+          eleganten Gehäuse. In nur 10 Minuten aufgebaut, ersetzt es separate Bildschirme, Kameras, Mikrofone 
+          und Lautsprecher – ideal für Unternehmen, die Kabelchaos reduzieren und Meetings effizienter gestalten wollen.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Verfügbare Größen & Raumempfehlung</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Das MeetingBoard Pro ist in drei Displaygrößen erhältlich, die jeweils für unterschiedliche Raumtypen optimiert sind:
+        </p>
+        <div className="overflow-x-auto -mx-4 sm:mx-0 mb-6">
+          <table className="w-full text-xs sm:text-sm border-collapse min-w-[500px]">
+            <thead>
+              <tr className="border-b border-border bg-primary/5">
+                <th className="text-left p-3 font-semibold text-foreground">Modell</th>
+                <th className="text-left p-3 font-semibold text-foreground">Displaygröße</th>
+                <th className="text-left p-3 font-semibold text-foreground">Raumgröße</th>
+                <th className="text-left p-3 font-semibold text-foreground">Personenanzahl</th>
+              </tr>
+            </thead>
+            <tbody className="text-muted-foreground">
+              <tr className="border-b border-border/50">
+                <td className="p-3 font-medium text-foreground">MeetingBoard 65 Pro</td>
+                <td className="p-3">65 Zoll</td>
+                <td className="p-3">Klein</td>
+                <td className="p-3">1–6 Personen</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="p-3 font-medium text-foreground">MeetingBoard 75 Pro</td>
+                <td className="p-3">75 Zoll</td>
+                <td className="p-3">Mittel / Open Space</td>
+                <td className="p-3">6–12 Personen</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="p-3 font-medium text-foreground">MeetingBoard 86 Pro</td>
+                <td className="p-3">86 Zoll</td>
+                <td className="p-3">Groß</td>
+                <td className="p-3">12–20 Personen</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Triple-Kamerasystem mit KI</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Das integrierte Kamerasystem besteht aus <strong>drei 50-Megapixel-Kameras</strong> mit Tele- und 
+          Weitwinkelobjektiven. Dank <strong>12-fachem PTZ-Zoom</strong> (Pan-Tilt-Zoom) werden selbst entfernte 
+          Teilnehmer gestochen scharf dargestellt. KI-gestützte Funktionen sorgen für ein natürliches Meetingerlebnis:
+        </p>
+        <Card className="mb-6 bg-primary/5 border-primary/20">
+          <CardContent className="p-4 sm:p-6">
+            <h3 className="font-semibold text-foreground mb-3 text-sm sm:text-base">KI-Kamerafunktionen</h3>
+            <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span><strong>IntelliFocus:</strong> Zeigt automatisch Nahaufnahmen des aktiven Sprechers – wie in einem Vor-Ort-Gespräch</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span><strong>Video Fence:</strong> Definiert virtuelle Meeting-Grenzen – nur Personen im Rahmen werden angezeigt</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span><strong>Automatisches Framing:</strong> Die Kamera passt den Bildausschnitt dynamisch an die Teilnehmerzahl an</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span><strong>Elektrischer Privacy Shutter:</strong> Physischer Verschluss für maximale Privatsphäre</span></li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Professionelle Audiotechnik</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+          Mit <strong>36 Watt Stereo-Lautsprechern</strong> und <strong>16 MEMS-Mikrofonarrays</strong> liefert das 
+          MeetingBoard Pro kraftvollen, raumfüllenden Sound. Die KI-gestützte Rauschunterdrückung und 
+          Vollduplex-Audioverarbeitung sorgen für kristallklare Gespräche mit einer Reichweite von bis zu 12 Metern – 
+          auch in großen Meetingräumen wird jede Stimme klar erfasst.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Interaktives Whiteboard</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Das 4K-Touch-Display mit Anti-Glare-Beschichtung bietet ein natürliches Schreiberlebnis 
+          mit nur <strong>21 ms Latenz</strong>. Ob natives Microsoft Whiteboard, Zoom Whiteboard oder die 
+          Yealink-eigene Whiteboard-App – kollaboratives Arbeiten wird zum Kinderspiel:
+        </p>
+        <Card className="mb-6 bg-primary/5 border-primary/20">
+          <CardContent className="p-4 sm:p-6">
+            <h3 className="font-semibold text-foreground mb-3 text-sm sm:text-base">Whiteboard-Features</h3>
+            <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span>Stift zum Schreiben, Stiftende zum Radieren</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span>Multi-User-Schreiben – mehrere Personen gleichzeitig</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span>Handflächen-Erkennung (Palm Rejection) gegen versehentliche Eingaben</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" /> <span>Finger-Navigation zum Zoomen und Bewegen</span></li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Flexible Plattform: Windows oder Android</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+          Das MeetingBoard Pro ist sowohl mit <strong>Windows-Compute</strong> (für Microsoft Teams Rooms) als auch 
+          mit <strong>Android-Basis</strong> erhältlich. So können Sie die Plattform wählen, die am besten zu Ihrer 
+          bestehenden Infrastruktur passt. Das Gerät unterstützt neben Microsoft Teams auch Zoom und weitere 
+          Cloud-Meeting-Plattformen.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Montage & Zubehör</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Ob Wandmontage oder mobiler Standfuß – das MeetingBoard Pro ist für verschiedene Einsatzszenarien konzipiert. 
+          Optionales Zubehör wie das <strong>Yealink CTP25 Touch-Panel</strong> für die Raumsteuerung oder 
+          externe Erweiterungsmikrofone ergänzen das System bei Bedarf.
+        </p>
+
+        <Card className="bg-accent/10 border-accent/20 mb-6 sm:mb-8 mt-8">
+          <CardContent className="p-4 sm:p-6">
+            <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">🏆 SLT Technology Group – Ihr autorisierter Yealink-Partner</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-3">
+              Als autorisierter Yealink-Provider sind wir Ihr Ansprechpartner für das MeetingBoard Pro in NRW und deutschlandweit. 
+              Unser Service umfasst:
+            </p>
+            <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" /> <span><strong>Beratung & Raumplanung:</strong> Welche Größe und Konfiguration passt zu Ihrem Raum?</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" /> <span><strong>Beschaffung:</strong> Direkte Lieferung über unsere Partnerkanäle</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" /> <span><strong>Installation & Montage:</strong> Professionelle Wand- oder Standfußmontage inkl. Verkabelung</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" /> <span><strong>Inbetriebnahme & Konfiguration:</strong> Einrichtung mit Microsoft Teams, Zoom oder Ihrer bevorzugten Plattform</span></li>
+              <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" /> <span><strong>Support & Wartung:</strong> Laufende Betreuung und schnelle Hilfe bei Fragen</span></li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-8 sm:mt-12">Für wen eignet sich das MeetingBoard Pro?</h2>
+        <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+          Das Yealink MeetingBoard Pro ist ideal für Unternehmen, die:
+        </p>
+        <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground mb-6 list-outside ml-5">
+          <li>Meetings, Präsentationen und Brainstorming-Sessions in einem Gerät vereinen möchten</li>
+          <li>Wert auf eine <strong>aufgeräumte, professionelle Optik</strong> im Meetingraum legen</li>
+          <li>Eine <strong>Microsoft Teams Rooms</strong> oder <strong>Zoom Rooms</strong>-zertifizierte Lösung suchen</li>
+          <li>Mehrere Räume mit einer einheitlichen, skalierbaren Lösung ausstatten wollen</li>
+          <li>Hybrides Arbeiten mit interaktivem Whiteboarding verbinden möchten</li>
+        </ul>
+      </>
+    ),
+  },
 };
 
 const generateGuideSchema = (guide: GuideData) => ({
