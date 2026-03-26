@@ -78,23 +78,38 @@ const Ratgeber = () => {
       <section className="py-16 lg:py-20">
         <div className="section-container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.map((guide) => (
-              <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className="group block">
-                <Card className="h-full bg-card border-border hover:border-primary/30 transition-all duration-300 group-hover:shadow-lg">
+            {guides.map((guide, index) => (
+              <Link
+                key={guide.slug}
+                to={`/ratgeber/${guide.slug}`}
+                className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
+              >
+                <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${
+                  guide.featured
+                    ? "bg-primary/5 border-primary/30 hover:border-primary/50"
+                    : "bg-card border-border hover:border-primary/30"
+                }`}>
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-3">
-                      <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
+                      <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
+                        {guide.featured ? "⭐ Neu" : guide.category}
+                      </Badge>
+                      {guide.featured && (
+                        <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
+                      )}
                       <span className="text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         {guide.readTime}
                       </span>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className={`group-hover:text-primary transition-colors ${guide.featured ? "text-2xl lg:text-3xl" : "text-xl"}`}>
                       {guide.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-sm mb-4">{guide.description}</p>
+                    <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
+                      {guide.description}
+                    </p>
                     <span className="text-primary text-sm font-medium flex items-center gap-1">
                       Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </span>
