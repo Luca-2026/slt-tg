@@ -4,9 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const guides = [
   {
@@ -23,6 +21,7 @@ const guides = [
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist – mit konkreten Empfehlungen.",
     readTime: "8 Min.",
     category: "Planung",
+    featured: false,
   },
   {
     slug: "teams-rooms-vs-zoom-rooms",
@@ -30,6 +29,7 @@ const guides = [
     description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe für Ihr Unternehmen.",
     readTime: "6 Min.",
     category: "Plattformen",
+    featured: false,
   },
   {
     slug: "konferenzraum-kosten",
@@ -37,12 +37,11 @@ const guides = [
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen – von der Basisausstattung bis zum Boardroom.",
     readTime: "7 Min.",
     category: "Budget",
+    featured: false,
   },
 ];
 
 const Ratgeber = () => {
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
-
   return (
     <Layout>
       <SEOHead
@@ -52,11 +51,8 @@ const Ratgeber = () => {
         canonical="/ratgeber"
       />
 
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 via-primary/3 to-background">
-        <div
-          ref={heroRef}
-          className={`section-container scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
-        >
+      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Breadcrumbs items={[{ label: "Ratgeber" }]} />
           <div className="max-w-3xl mx-auto text-center mt-6">
             <Badge variant="outline" className="mb-6">
@@ -68,7 +64,7 @@ const Ratgeber = () => {
               <span className="text-primary">Konferenz- & Medientechnik</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Praxiswissen für IT-Entscheider und Facility Manager: Neutrale Empfehlungen, 
+              Praxiswissen für IT-Entscheider und Facility Manager: Neutrale Empfehlungen,
               realistische Kostenrahmen und fundierte Vergleiche – ohne Verkaufsdruck.
             </p>
           </div>
@@ -76,45 +72,43 @@ const Ratgeber = () => {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="section-container">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.map((guide, index) => (
+            {guides.map((guide) => (
               <Link
                 key={guide.slug}
                 to={`/ratgeber/${guide.slug}`}
                 className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
               >
-                <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${
+                <div className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
                   guide.featured
-                    ? "bg-primary/5 border-primary/30 hover:border-primary/50"
-                    : "bg-card border-border hover:border-primary/30"
+                    ? "border-primary/30 bg-secondary hover:border-primary/50"
+                    : "border-border bg-card hover:border-primary/30"
                 }`}>
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-3">
-                      <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
-                        {guide.featured ? "⭐ Neu" : guide.category}
-                      </Badge>
-                      {guide.featured && (
-                        <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
-                      )}
-                      <span className="text-xs text-muted-foreground flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {guide.readTime}
-                      </span>
-                    </div>
-                    <CardTitle className={`group-hover:text-primary transition-colors ${guide.featured ? "text-2xl lg:text-3xl" : "text-xl"}`}>
-                      {guide.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
-                      {guide.description}
-                    </p>
-                    <span className="text-primary text-sm font-medium flex items-center gap-1">
-                      Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center gap-3 mb-3">
+                    <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
+                      {guide.featured ? "⭐ Neu" : guide.category}
+                    </Badge>
+                    {guide.featured && (
+                      <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
+                    )}
+                    <span className="text-xs text-muted-foreground flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {guide.readTime}
                     </span>
-                  </CardContent>
-                </Card>
+                  </div>
+                  <h3 className={`font-semibold text-foreground group-hover:text-primary transition-colors mb-3 ${
+                    guide.featured ? "text-2xl lg:text-3xl" : "text-xl"
+                  }`}>
+                    {guide.title}
+                  </h3>
+                  <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
+                    {guide.description}
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-1">
+                    Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -122,12 +116,12 @@ const Ratgeber = () => {
       </section>
 
       <section className="py-16 lg:py-20 bg-card">
-        <div className="section-container text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
             Individuelle Beratung gewünscht?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            Unsere Ratgeber geben Ihnen eine solide Grundlage. Für Ihr konkretes Projekt 
+            Unsere Ratgeber geben Ihnen eine solide Grundlage. Für Ihr konkretes Projekt
             beraten wir Sie gerne persönlich – kostenfrei und unverbindlich.
           </p>
           <Button asChild size="lg" className="btn-glow">
