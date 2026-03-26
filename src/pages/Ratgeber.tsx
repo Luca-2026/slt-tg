@@ -75,47 +75,42 @@ const Ratgeber = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20 bg-red-500">
+      <section className="py-16 lg:py-20 bg-background">
         <div className="section-container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ opacity: 1, transform: 'none', filter: 'none' }}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide) => (
               <Link
                 key={guide.slug}
                 to={`/ratgeber/${guide.slug}`}
                 className={`group block ${guide.featured ? "md:col-span-2 lg:col-span-3" : ""}`}
-                style={{ opacity: 1 }}
               >
-                <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${
+                <div className={`h-full rounded-lg border p-6 transition-all duration-300 group-hover:shadow-lg ${
                   guide.featured
-                    ? "bg-primary/5 border-primary/30 hover:border-primary/50"
-                    : "bg-card border-border hover:border-primary/30"
+                    ? "border-primary/30 bg-secondary/50 hover:border-primary/50"
+                    : "border-border bg-card hover:border-primary/30"
                 }`}>
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-3">
-                      <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
-                        {guide.featured ? "⭐ Neu" : guide.category}
-                      </Badge>
-                      {guide.featured && (
-                        <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
-                      )}
-                      <span className="text-xs text-muted-foreground flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {guide.readTime}
-                      </span>
-                    </div>
-                    <CardTitle className={`group-hover:text-primary transition-colors ${guide.featured ? "text-2xl lg:text-3xl" : "text-xl"}`}>
-                      {guide.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
-                      {guide.description}
-                    </p>
-                    <span className="text-primary text-sm font-medium flex items-center gap-1">
-                      Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center gap-3 mb-3">
+                    <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
+                      {guide.featured ? "⭐ Neu" : guide.category}
+                    </Badge>
+                    {guide.featured && (
+                      <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
+                    )}
+                    <span className="text-xs text-muted-foreground flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      {guide.readTime}
                     </span>
-                  </CardContent>
-                </Card>
+                  </div>
+                  <h3 className={`font-semibold text-foreground group-hover:text-primary transition-colors mb-3 ${guide.featured ? "text-2xl lg:text-3xl" : "text-xl"}`}>
+                    {guide.title}
+                  </h3>
+                  <p className={`text-muted-foreground mb-4 ${guide.featured ? "text-base max-w-2xl" : "text-sm"}`}>
+                    {guide.description}
+                  </p>
+                  <span className="text-primary text-sm font-medium flex items-center gap-1">
+                    Ratgeber lesen <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
