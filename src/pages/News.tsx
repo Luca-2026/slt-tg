@@ -4,7 +4,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight, Calendar, Clock, MapPin, BookOpen } from "lucide-react";
 
 interface NewsArticle {
@@ -126,10 +125,6 @@ const News = () => {
   const featuredArticle = newsArticles.find((article) => article.featured);
   const regularArticles = newsArticles.filter((article) => !article.featured);
 
-  const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
-  const { ref: featuredRef, isVisible: featuredVisible } = useScrollAnimation();
-  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
-  const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
   return (
     <Layout>
@@ -146,10 +141,7 @@ const News = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         </div>
-        <div
-          ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
-        >
+        <div className="section-container relative z-10 animate-fade-in-up">
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Aktuelles & Wissen</Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -168,10 +160,7 @@ const News = () => {
       {featuredArticle && (
         <section className="py-12 lg:py-16">
           <div className="section-container">
-            <div
-              ref={featuredRef}
-              className={`scroll-hidden-scale ${featuredVisible ? "scroll-visible-scale" : ""}`}
-            >
+              <div>
               <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
                 <div className="grid lg:grid-cols-2 gap-8">
                   <div className="aspect-video lg:aspect-auto bg-black flex items-center justify-center overflow-hidden">
@@ -229,12 +218,11 @@ const News = () => {
         <section className="py-12 lg:py-16 bg-card/50">
           <div className="section-container">
             <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-8">Weitere Beiträge</h2>
-            <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {regularArticles.map((article, index) => (
                 <Card
                   key={article.id}
-                  className={`overflow-hidden flex flex-col hover:border-primary/30 hover:shadow-md transition-all duration-300 scroll-hidden ${gridVisible ? "scroll-visible" : ""}`}
-                  style={{ transitionDelay: `${index * 0.1}s` }}
+                  className="overflow-hidden flex flex-col hover:border-primary/30 hover:shadow-md transition-all duration-300"
                 >
                   {article.videoBackground ? (
                     <div className="aspect-video bg-muted overflow-hidden relative">
@@ -322,10 +310,7 @@ const News = () => {
 
       {/* Coming Soon */}
       <section className="py-12 lg:py-16">
-        <div
-          ref={ctaRef}
-          className={`section-container text-center scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
-        >
+        <div className="section-container text-center">
           <p className="text-sm text-muted-foreground mb-6">
             Weitere Beiträge folgen in Kürze. Schauen Sie regelmäßig vorbei!
           </p>
