@@ -142,8 +142,8 @@ const UeberUns = () => {
   return (
     <Layout>
       <SEOHead
-        title="Über uns – IT-Unternehmen & AV-Systemhaus Krefeld"
-        description="SLT Technology Group: Inhabergeführtes IT-Unternehmen in Krefeld & Bonn. Herstellerneutrale AV- & IT-Lösungen seit 2016 – nachhaltig, kompetent und persönlich."
+        title="Über uns – Medientechnik Systemhaus Krefeld"
+        description="SLT Technology Group: Inhabergeführtes Systemhaus für Konferenz- & Medientechnik in Krefeld & Bonn. Herstellerneutrale Beratung seit 2016 – nachhaltig und kompetent."
         keywords="SLT Technology Group, AV-Lösungen, IT-Lösungen, Inklusionsunternehmen, Medientechnik, Krefeld"
         canonical="/ueber-uns"
         structuredData={{
