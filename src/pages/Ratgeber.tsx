@@ -75,7 +75,7 @@ const Ratgeber = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
+      <section className="py-16 lg:py-20 bg-red-500">
         <div className="section-container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ opacity: 1, transform: 'none', filter: 'none' }}>
             {guides.map((guide) => (
