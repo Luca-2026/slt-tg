@@ -175,8 +175,8 @@ const Leistungen = () => {
   return (
     <Layout>
       <SEOHead
-        title="Leistungen: AV-Fachplanung & Integration"
-        description="Von der Konzeption bis zum Betrieb: Herstellerneutrale AV-Fachplanung, Installation und Integration von Medientechnik und IT-Infrastruktur. Jetzt beraten lassen!"
+        title="Leistungen: AV-Fachplanung, IT & Netzwerktechnik"
+        description="Von Konzeption bis Betrieb: AV-Fachplanung, Netzwerktechnik, IT-Infrastruktur & Medientechnik-Installation. Ihr Systemhaus für Krefeld, Bonn & NRW."
         keywords="AV-Fachplanung, IT-Lösungen, Ausschreibung Medientechnik, Fachplaner Konferenztechnik, IT-Infrastruktur, Medientechnik Consultant NRW"
         canonical="/leistungen"
         structuredData={{

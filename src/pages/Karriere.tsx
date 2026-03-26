@@ -265,8 +265,8 @@ export default function Karriere() {
   return (
     <Layout>
       <SEOHead
-        title="Karriere & Jobs – Jetzt bei SLT bewerben"
-        description="Starte deine Karriere bei der SLT Technology Group. Offene Stellen in den Bereichen Medientechnik, AV-Systemintegration und Büromanagement in Krefeld und Bonn."
+        title="Karriere & Jobs – Medien- & Veranstaltungstechnik"
+        description="Jetzt bewerben bei SLT Technology Group: Offene Stellen in Medientechnik, Veranstaltungstechnik, AV-Systemintegration & Büromanagement in Krefeld und Bonn."
         keywords="Karriere, Jobs, Medientechniker, Ausbildung, SLT Technology Group, AV-Technik, Krefeld, Bonn"
         canonical="/karriere"
         structuredData={{
