@@ -239,24 +239,8 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
         </div>
 
-        {/* Hotspots - Desktop only */}
-        <div className="absolute inset-0 z-30 pointer-events-none">
-          {hotspots.map((spot) => (
-            <Link
-              key={spot.id}
-              to={spot.href}
-              className="group absolute"
-              style={{ top: `${spot.top}%`, left: `${spot.left}%`, pointerEvents: "auto" }}
-              title={spot.label}
-            >
-              <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
-              <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)] transition-transform group-hover:scale-150" />
-              <span className="absolute left-5 top-1/2 -translate-y-1/2 whitespace-nowrap bg-background/95 backdrop-blur-sm text-foreground text-xs font-medium px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-border">
-                {spot.label}
-              </span>
-            </Link>
-          ))}
-        </div>
+        {/* Hotspots - Desktop only, positioned relative to image content */}
+        <HeroHotspots />
 
         {/* Desktop Content - Right aligned */}
         <div className="absolute inset-0 z-20 flex items-center justify-end pr-10 lg:pr-16 xl:pr-24 pt-16">
