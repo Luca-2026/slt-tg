@@ -10,6 +10,14 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const guides = [
   {
+    slug: "yealink-meetingboard-pro",
+    title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
+    description: "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    readTime: "7 Min.",
+    category: "Produkte",
+    featured: true,
+  },
+  {
     slug: "konferenztechnik-raumgroesse",
     title: "Welche Konferenztechnik für welche Raumgröße?",
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist – mit konkreten Empfehlungen.",
@@ -29,13 +37,6 @@ const guides = [
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen – von der Basisausstattung bis zum Boardroom.",
     readTime: "7 Min.",
     category: "Budget",
-  },
-  {
-    slug: "yealink-meetingboard-pro",
-    title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
-    description: "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
-    readTime: "7 Min.",
-    category: "Produkte",
   },
 ];
 
