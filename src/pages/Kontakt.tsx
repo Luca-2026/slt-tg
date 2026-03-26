@@ -67,9 +67,9 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEOHead
-        title="Kontakt – AV- & IT-Beratung Krefeld & Bonn"
-        description="Jetzt kostenlose Erstberatung anfragen: Konferenztechnik, Netzwerktechnik & IT-Lösungen. SLT Technology Group – Ihr Systemhaus in Krefeld und Bonn. ☎ 02151 4179902"
-        keywords="Kontakt Systemhaus Krefeld, IT-Beratung Bonn, AV-Beratung Krefeld, Konferenztechnik Anfrage, IT-Dienstleister NRW"
+        title="Kontakt – AV-Beratung Krefeld & Bonn"
+        description="Jetzt kostenlose Erstberatung anfragen: Konferenztechnik, Medientechnik & AV-Integration. SLT Technology Group – Ihr Systemhaus in Krefeld und Bonn. ☎ 02151 4179902"
+        keywords="Kontakt Systemhaus Krefeld, AV-Beratung Krefeld, Konferenztechnik Anfrage, Medientechnik Bonn"
         canonical="/kontakt"
         structuredData={{
           "@context": "https://schema.org",
