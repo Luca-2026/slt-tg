@@ -51,10 +51,10 @@ const Ratgeber = () => {
         canonical="/ratgeber"
       />
 
-      <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
+      <section className="py-10 lg:py-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Breadcrumbs items={[{ label: "Ratgeber" }]} />
-          <div className="max-w-3xl mx-auto text-center mt-6">
+          <div className="max-w-3xl mx-auto text-center mt-4">
             <Badge variant="outline" className="mb-6">
               <BookOpen className="h-3 w-3 mr-1" />
               Wissen & Praxis
@@ -71,7 +71,7 @@ const Ratgeber = () => {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
+      <section className="py-8 lg:py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide) => (
