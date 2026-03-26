@@ -30,6 +30,13 @@ const guides = [
     readTime: "7 Min.",
     category: "Budget",
   },
+  {
+    slug: "yealink-meetingboard-pro",
+    title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
+    description: "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    readTime: "7 Min.",
+    category: "Produkte",
+  },
 ];
 
 const Ratgeber = () => {
