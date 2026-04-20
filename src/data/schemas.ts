@@ -123,11 +123,13 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
     schemas.push(BONN_LOCAL_BUSINESS);
   }
 
-  // FAQPage
+  // FAQPage – Override hat Vorrang vor Template
+  const override = getContentOverride(route.topic, route.city);
+  const faqs = override?.faqItems ?? topic.faqItems(city.name);
   schemas.push({
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: topic.faqItems(city.name).map((q) => ({
+    mainEntity: faqs.map((q) => ({
       "@type": "Question",
       name: q.question,
       acceptedAnswer: { "@type": "Answer", text: q.answer },
