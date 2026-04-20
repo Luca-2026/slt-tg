@@ -63,10 +63,8 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
     ? override.heroSubtitle
     : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
 
-  // Override-Services als zusätzliche Karten zur generischen Topic-Service-Liste
-  const overrideServiceCards: LocalSEOServiceLike[] = override
-    ? override.services.map((s) => ({ title: s, description: "" }))
-    : [];
+  // Stadt-spezifische Leistungen aus dem Override (zusätzlich zur generischen Topic-Liste)
+  const overrideServices: string[] = override?.services ?? [];
 
   const whyItems = [
     showBonnOffice
@@ -99,10 +97,10 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               {city.name} & Umgebung
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              {topic.heroTitle(city.name)}
+              {heroTitle}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              {topic.heroSubtitle(city.name)}
+              {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="btn-glow">
@@ -130,7 +128,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               {topic.title} {city.description} – professionell geplant und installiert
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              {topic.intro(city.name)}
+              {introText}
             </p>
           </div>
         </div>
@@ -224,7 +222,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               Häufige Fragen zu {topic.title} in {city.name}
             </h2>
             <Accordion type="single" collapsible className="w-full">
-              {topic.faqItems(city.name).map((faq, i) => (
+              {faqs.map((faq, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
