@@ -16,33 +16,10 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
   const baseUrl = "https://www.slt-tg.de";
 
   const allItems = [{ label: "Startseite", href: "/" }, ...items];
-
-  useEffect(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: allItems.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        name: item.label,
-        item: item.href ? `${baseUrl}${item.href}` : `${baseUrl}${location.pathname}`,
-      })),
-    };
-
-    const existing = document.querySelector('script[data-breadcrumb-schema]');
-    if (existing) existing.remove();
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.setAttribute("data-breadcrumb-schema", "true");
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const el = document.querySelector('script[data-breadcrumb-schema]');
-      if (el) el.remove();
-    };
-  }, [location.pathname]);
+  // BreadcrumbList JSON-LD wird statisch durch Prerender (scripts/prerender.mjs)
+  // ausgeliefert. Hier nur noch UI – keine DOM-Schema-Injection mehr.
+  void location;
+  void baseUrl;
 
   return (
     <nav aria-label="Breadcrumb" className="py-3">
