@@ -189,10 +189,24 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               );
             })}
           </div>
+
+          {overrideServices.length > 0 && (
+            <div className="max-w-3xl mx-auto mt-12">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Was wir konkret in {city.name} leisten
+              </h3>
+              <ul className="space-y-3">
+                {overrideServices.map((s, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
-
-      {/* Why SLT */}
       <section className="py-16 lg:py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
