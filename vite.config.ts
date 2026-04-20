@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  // publicDir-Dotfiles (z. B. .htaccess) explizit erlauben
+  build: { copyPublicDir: true },
+  publicDir: "public",
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
