@@ -9,7 +9,7 @@
  * Hero-Strategie: statisches HTML aus route.h1 + route.intro[].
  * Hydration ist pragmatisch – React überschreibt den Hero beim Mount.
  */
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -229,6 +229,17 @@ async function main() {
   await writeFile(path.join(DIST, "sitemap.xml"), sitemap, "utf8");
   const indexable = ALL_ROUTES.filter((r) => !r.noindex).length;
   console.log(`\n[sitemap] ${indexable} URLs (von ${ALL_ROUTES.length} Routes)`);
+
+  // Dotfiles aus public/ kopieren (Vite ignoriert Dotfiles standardmäßig)
+  const dotfiles = [".htaccess"];
+  for (const name of dotfiles) {
+    const src = path.join(ROOT, "public", name);
+    if (existsSync(src)) {
+      await copyFile(src, path.join(DIST, name));
+      console.log(`[dotfile] ${name} kopiert`);
+    }
+  }
+
   console.log(`[prerender] Done. ${count} Seiten geschrieben.`);
 }
 
