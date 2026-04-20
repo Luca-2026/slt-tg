@@ -7,7 +7,7 @@
  *   injiziert (Platzhalter <!--PRERENDER:JSONLD-->).
  */
 import type { SeoRoute } from "./seo-routes";
-import { cities, topics } from "./localSEO";
+import { cities, topics, getContentOverride } from "./localSEO";
 
 const BASE_URL = "https://www.slt-tg.de";
 
