@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, MapPin, Phone, Mail, Building2 } from "lucide-react";
-import { cities, topics, isNoindex } from "@/data/localSEO";
+import { cities, topics, isNoindex, getContentOverride } from "@/data/localSEO";
 
 interface LocalSEOPageProps {
   topicKey: string;
@@ -49,9 +49,24 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
 
   if (!city || !topic) return null;
 
+  const override = getContentOverride(topicKey, cityKey);
+  const heroTitle = override?.heroTitle ?? topic.heroTitle(city.name);
+  const heroSubtitle = override?.heroSubtitle ?? topic.heroSubtitle(city.name);
+  const introText = override?.intro ?? topic.intro(city.name);
+  const faqs = override?.faqItems ?? topic.faqItems(city.name);
+
   const showBonnOffice = bonnRegionCities.includes(cityKey);
-  const pageTitle = `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
-  const pageDesc = `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+  const pageTitle = override
+    ? `${override.heroTitle} | SLT Technology Group`
+    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
+  const pageDesc = override
+    ? override.heroSubtitle
+    : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+
+  // Override-Services als zusätzliche Karten zur generischen Topic-Service-Liste
+  const overrideServiceCards: LocalSEOServiceLike[] = override
+    ? override.services.map((s) => ({ title: s, description: "" }))
+    : [];
 
   const whyItems = [
     showBonnOffice
