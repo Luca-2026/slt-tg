@@ -172,35 +172,61 @@ export const topics: Record<string, LocalSEOTopic> = {
   },
 };
 
-export function getLocalSEORoutes(): { path: string; topic: string; city: string }[] {
-  const routes: { path: string; topic: string; city: string }[] = [];
+/**
+ * Thin-Content-Schutz: Diese Topic+City-Kombinationen werden bis zum
+ * Prerender/Content-Refactor von der Indexierung ausgeschlossen.
+ * Format: "topic:city"
+ */
+export const NOINDEX_COMBINATIONS: ReadonlySet<string> = new Set([
+  // Köln (3) – medientechnik & videokonferenz bleiben indexierbar
+  "konferenztechnik:koeln",
+  "it-netzwerk:koeln",
+  "digital-signage:koeln",
+  // Essen (5)
+  "medientechnik:essen",
+  "konferenztechnik:essen",
+  "videokonferenz:essen",
+  "it-netzwerk:essen",
+  "digital-signage:essen",
+  // Duisburg (5)
+  "medientechnik:duisburg",
+  "konferenztechnik:duisburg",
+  "videokonferenz:duisburg",
+  "it-netzwerk:duisburg",
+  "digital-signage:duisburg",
+  // Mönchengladbach (5)
+  "medientechnik:moenchengladbach",
+  "konferenztechnik:moenchengladbach",
+  "videokonferenz:moenchengladbach",
+  "it-netzwerk:moenchengladbach",
+  "digital-signage:moenchengladbach",
+]);
+
+export function isNoindex(topic: string, city: string): boolean {
+  return NOINDEX_COMBINATIONS.has(`${topic}:${city}`);
+}
+
+export interface LocalSEORoute {
+  path: string;
+  topic: string;
+  city: string;
+  noindex: boolean;
+}
+
+export function getLocalSEORoutes(): LocalSEORoute[] {
+  const routes: LocalSEORoute[] = [];
   const allCities = ["krefeld", "duesseldorf", "koeln", "bonn", "essen", "duisburg", "moenchengladbach"];
 
-  // Medientechnik - alle Städte
-  allCities.forEach((city) => {
-    routes.push({ path: `/medientechnik/${city}`, topic: "medientechnik", city });
-  });
+  const push = (path: string, topic: string, city: string) => {
+    routes.push({ path, topic, city, noindex: isNoindex(topic, city) });
+  };
 
-  // Konferenztechnik - alle Städte + NRW
-  allCities.forEach((city) => {
-    routes.push({ path: `/konferenztechnik/${city}`, topic: "konferenztechnik", city });
-  });
-  routes.push({ path: "/konferenztechnik/nrw", topic: "konferenztechnik", city: "nrw" });
-
-  // Videokonferenz - alle Städte
-  allCities.forEach((city) => {
-    routes.push({ path: `/videokonferenz/${city}`, topic: "videokonferenz", city });
-  });
-
-  // IT-Netzwerk - alle Städte
-  allCities.forEach((city) => {
-    routes.push({ path: `/it-netzwerk/${city}`, topic: "it-netzwerk", city });
-  });
-
-  // Digital Signage - alle Städte
-  allCities.forEach((city) => {
-    routes.push({ path: `/digital-signage/${city}`, topic: "digital-signage", city });
-  });
+  allCities.forEach((city) => push(`/medientechnik/${city}`, "medientechnik", city));
+  allCities.forEach((city) => push(`/konferenztechnik/${city}`, "konferenztechnik", city));
+  push("/konferenztechnik/nrw", "konferenztechnik", "nrw");
+  allCities.forEach((city) => push(`/videokonferenz/${city}`, "videokonferenz", city));
+  allCities.forEach((city) => push(`/it-netzwerk/${city}`, "it-netzwerk", city));
+  allCities.forEach((city) => push(`/digital-signage/${city}`, "digital-signage", city));
 
   return routes;
 }

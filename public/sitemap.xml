@@ -167,51 +167,41 @@
     </image:image>
   </url>
 
-  <!-- Lokale SEO: Medientechnik -->
+  <!--
+    Lokale SEO – Thin-Content-Schutz aktiv (Stand: 2026-04-20)
+    17 Stadt-Topic-Kombinationen sind aktuell auf noindex gesetzt
+    (Essen, Duisburg, Mönchengladbach komplett; Köln teilweise) und
+    daher hier auskommentiert. Sie werden wieder aufgenommen, sobald
+    der Content je Stadt individualisiert ist.
+  -->
+
+  <!-- Lokale SEO: Medientechnik (indexierbar: Krefeld, Düsseldorf, Köln, Bonn) -->
   <url><loc>https://www.slt-tg.de/medientechnik/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/medientechnik/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/medientechnik/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/medientechnik/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/medientechnik/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/medientechnik/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/medientechnik/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Lokale SEO: Konferenztechnik -->
+  <!-- Lokale SEO: Konferenztechnik (indexierbar: Krefeld, Düsseldorf, Bonn, NRW) -->
   <url><loc>https://www.slt-tg.de/konferenztechnik/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/konferenztechnik/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/konferenztechnik/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/konferenztechnik/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/konferenztechnik/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/konferenztechnik/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/konferenztechnik/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/konferenztechnik/nrw</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Lokale SEO: Videokonferenz -->
+  <!-- Lokale SEO: Videokonferenz (indexierbar: Krefeld, Düsseldorf, Köln, Bonn) -->
   <url><loc>https://www.slt-tg.de/videokonferenz/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/videokonferenz/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/videokonferenz/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/videokonferenz/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/videokonferenz/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/videokonferenz/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/videokonferenz/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Lokale SEO: IT-Netzwerk -->
+  <!-- Lokale SEO: IT-Netzwerk (indexierbar: Krefeld, Düsseldorf, Bonn) -->
   <url><loc>https://www.slt-tg.de/it-netzwerk/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/it-netzwerk/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/it-netzwerk/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/it-netzwerk/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/it-netzwerk/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/it-netzwerk/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/it-netzwerk/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Lokale SEO: Digital Signage -->
+  <!-- Lokale SEO: Digital Signage (indexierbar: Krefeld, Düsseldorf, Bonn) -->
   <url><loc>https://www.slt-tg.de/digital-signage/krefeld</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/digital-signage/duesseldorf</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/digital-signage/koeln</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.slt-tg.de/digital-signage/bonn</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/digital-signage/essen</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/digital-signage/duisburg</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.slt-tg.de/digital-signage/moenchengladbach</loc><lastmod>2026-03-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Rechtliches -->
   <url><loc>https://www.slt-tg.de/impressum</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
