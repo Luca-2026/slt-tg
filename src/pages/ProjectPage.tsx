@@ -22,11 +22,11 @@ const ProjectPage = () => {
   return (
     <Layout>
       <SEOHead
-        title={`${project.name} – Referenzprojekt SLT Technology Group`}
+        title={`${project.name} – Referenzprojekt`}
         description={project.shortDescription}
         canonical={url}
         ogImage={project.heroImage}
-        ogType="article"
+        type="article"
       />
 
       {/* Hero */}

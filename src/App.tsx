@@ -11,6 +11,7 @@ import Loesungen from "./pages/Loesungen";
 import Technologien from "./pages/Technologien";
 import Finanzierung from "./pages/Finanzierung";
 import Projekte from "./pages/Projekte";
+import ProjectPage from "./pages/ProjectPage";
 import UeberUns from "./pages/UeberUns";
 import Kontakt from "./pages/Kontakt";
 import Projektanfrage from "./pages/Projektanfrage";
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/technologien" element={<Technologien />} />
           <Route path="/finanzierung" element={<Finanzierung />} />
           <Route path="/projekte" element={<Projekte />} />
+          <Route path="/projekte/:slug" element={<ProjectPage />} />
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/projektanfrage" element={<Projektanfrage />} />
