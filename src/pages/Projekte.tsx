@@ -34,6 +34,15 @@ interface ProjectImage {
   position?: string; // CSS object-position value
 }
 
+// Mapping von card-id auf Detailseiten-Slug (/projekte/{slug})
+const detailSlugMap: Record<string, string> = {
+  "aluminium-norf": "aluminium-norf",
+  "pfeifer-langen": "pfeifer-langen",
+  "gea-farm": "gea-farm-technologies",
+  "bensersiel": "tourismus-info-bensersiel",
+  "sonoco": "sonoco",
+};
+
 const projects = [
   {
     id: "aluminium-norf",
@@ -565,12 +574,14 @@ const Projekte = () => {
                           })}
                         </div>
                         <Button
+                          asChild
                           variant="outline"
                           size="sm"
-                          onClick={() => setExpandedProject(project.id)}
                         >
-                          Details anzeigen
-                          <ArrowRight className="ml-2 h-4 w-4" />
+                          <Link to={`/projekte/${detailSlugMap[project.id] || project.id}`}>
+                            Details anzeigen
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
                         </Button>
                       </div>
                     )}

@@ -494,9 +494,31 @@ export const NEWS_ROUTES: SeoRoute[] = [
 ];
 
 // ───────────────────────────────────────────────────────────
-// 5) PROJECT_ROUTES (nur Übersicht – Detailseiten kommen später)
+// 5) PROJECT_ROUTES (Übersicht + Detailseiten)
 // ───────────────────────────────────────────────────────────
-export const PROJECT_ROUTES: SeoRoute[] = [];
+import { PROJECTS } from "./projects";
+
+export const PROJECT_ROUTES: SeoRoute[] = PROJECTS.map((project) => ({
+  path: `/projekte/${project.slug}`,
+  routeType: "project" as RouteType,
+  title: `${project.name} – Referenzprojekt | SLT Technology Group`,
+  description:
+    project.shortDescription.length > 160
+      ? project.shortDescription.slice(0, 157) + "..."
+      : project.shortDescription,
+  h1: project.name,
+  intro: [project.shortDescription],
+  canonical: `/projekte/${project.slug}`,
+  ogImage: project.heroImage,
+  ogType: "article",
+  changefreq: "monthly",
+  priority: 0.8,
+  lastmod: TODAY,
+  breadcrumbs: [
+    { name: "Projekte", path: "/projekte" },
+    { name: project.client, path: `/projekte/${project.slug}` },
+  ],
+}));
 
 // ───────────────────────────────────────────────────────────
 // 6) LEGAL_ROUTES (aus Sitemap raus, aber für Crawler erreichbar)

@@ -8,6 +8,7 @@
  */
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
+import { getProjectBySlug, type Project } from "./projects";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -203,11 +204,11 @@ export function buildGenericSchemas(route: SeoRoute): object[] {
 // Project list (/projekte)
 // ─────────────────────────────────────────────
 const FEATURED_PROJECTS = [
-  { name: "Aluminium Norf", image: "/assets/projects/alunorf/alunorf-main.jpg" },
-  { name: "Pfeifer & Langen", image: "/assets/projects/pfeifer-langen/pl-main.jpg" },
-  { name: "GEA Farm Technologies", image: "/assets/projects/gea-farm/gea-main.jpg" },
-  { name: "Bensersiel", image: "/assets/projects/bensersiel/bensersiel-main.jpg" },
-  { name: "Sonoco", image: "/assets/projects/sonoco/sonoco-main.jpg" },
+  { name: "Aluminium Norf", image: "/assets/projects/alunorf/alunorf-main.jpg", slug: "aluminium-norf" },
+  { name: "Pfeifer & Langen", image: "/assets/projects/pfeifer-langen/pl-main.jpg", slug: "pfeifer-langen" },
+  { name: "GEA Farm Technologies", image: "/assets/projects/gea-farm/gea-main.jpg", slug: "gea-farm-technologies" },
+  { name: "Tourismus Information Bensersiel", image: "/assets/projects/bensersiel/bensersiel-main.jpg", slug: "tourismus-info-bensersiel" },
+  { name: "Sonoco", image: "/assets/projects/sonoco/sonoco-ekahau.jpg", slug: "sonoco" },
 ];
 
 export function buildProjectListSchemas(route: SeoRoute): object[] {
@@ -228,11 +229,56 @@ export function buildProjectListSchemas(route: SeoRoute): object[] {
         "@type": "ListItem",
         position: i + 1,
         name: p.name,
+        url: `${BASE_URL}/projekte/${p.slug}`,
         image: `${BASE_URL}${p.image}`,
       })),
     },
     buildBreadcrumbList(route),
   ];
+}
+
+// ─────────────────────────────────────────────
+// Project detail (/projekte/{slug}) – Article-Schema
+// ─────────────────────────────────────────────
+export function buildProjectDetailSchemas(project: Project): object[] {
+  const projectUrl = `${BASE_URL}/projekte/${project.slug}`;
+  const startYear = project.year.split(/[–-]/)[0].trim();
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${projectUrl}#article`,
+    headline: project.name,
+    name: project.name,
+    description: project.shortDescription,
+    image: project.heroImage.startsWith("http")
+      ? project.heroImage
+      : `${BASE_URL}${project.heroImage}`,
+    datePublished: `${startYear}-01-01`,
+    dateModified: "2026-04-20",
+    author: ORG_REF,
+    publisher: {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "SLT Technology Group",
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/favicon.png` },
+    },
+    about: { "@type": "Thing", name: project.category },
+    mentions: project.tags.map((tag) => ({ "@type": "Thing", name: tag })),
+    mainEntityOfPage: { "@type": "WebPage", "@id": projectUrl },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: `${BASE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Projekte", item: `${BASE_URL}/projekte` },
+      { "@type": "ListItem", position: 3, name: project.name, item: projectUrl },
+    ],
+  };
+
+  return [articleSchema, breadcrumbSchema];
 }
 
 // ─────────────────────────────────────────────
@@ -247,8 +293,15 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
     case "ratgeber":
     case "news":
       return buildArticleSchemas(route);
-    case "project":
+    case "project": {
+      // /projekte = Übersicht, /projekte/{slug} = Detail
+      const parts = route.path.split("/").filter(Boolean);
+      if (parts.length >= 2) {
+        const project = getProjectBySlug(parts[1]);
+        if (project) return buildProjectDetailSchemas(project);
+      }
       return buildProjectListSchemas(route);
+    }
     case "legal":
       return buildGenericSchemas(route);
     case "page":
