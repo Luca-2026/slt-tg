@@ -9,7 +9,7 @@
  * Hero-Strategie: statisches HTML aus route.h1 + route.intro[].
  * Hydration ist pragmatisch – React überschreibt den Hero beim Mount.
  */
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
