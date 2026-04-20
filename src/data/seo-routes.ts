@@ -3,7 +3,7 @@
  * Single Source of Truth für: Title, Description, H1, Hero-Intro,
  * canonical, og:image, noindex, breadcrumbs, routeType.
  */
-import { cities, topics, getLocalSEORoutes, isNoindex } from "./localSEO";
+import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
 
 export type RouteType =
   | "home"
@@ -253,13 +253,29 @@ export const MAIN_ROUTES: SeoRoute[] = [
 export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
   const topic = topics[r.topic];
   const city = cities[r.city];
+  const override = getContentOverride(r.topic, r.city);
+
+  const h1 = override?.heroTitle ?? topic.heroTitle(city.name);
+  const heroSub = override?.heroSubtitle ?? topic.heroSubtitle(city.name);
+  const intro = override?.intro ?? topic.intro(city.name);
+  // Title: bei Override aus heroTitle ableiten (kürzer, einzigartiger);
+  // sonst weiter generisches Template
+  const title = override
+    ? `${override.heroTitle} | SLT Technology Group`
+    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT Technology Group`;
+  const description = override
+    ? override.heroSubtitle.length > 160
+      ? override.heroSubtitle.slice(0, 157) + "..."
+      : override.heroSubtitle
+    : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+
   return {
     path: r.path,
     routeType: "localseo" as RouteType,
-    title: `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT Technology Group`,
-    description: `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`,
-    h1: topic.heroTitle(city.name),
-    intro: [topic.heroSubtitle(city.name), topic.intro(city.name)],
+    title,
+    description,
+    h1,
+    intro: [heroSub, intro],
     canonical: r.path,
     ogImage: "/assets/hero-konferenzraum.jpg",
     noindex: r.noindex,

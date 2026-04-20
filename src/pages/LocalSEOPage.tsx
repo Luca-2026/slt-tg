@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, MapPin, Phone, Mail, Building2 } from "lucide-react";
-import { cities, topics, isNoindex } from "@/data/localSEO";
+import { cities, topics, isNoindex, getContentOverride } from "@/data/localSEO";
 
 interface LocalSEOPageProps {
   topicKey: string;
@@ -49,9 +49,22 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
 
   if (!city || !topic) return null;
 
+  const override = getContentOverride(topicKey, cityKey);
+  const heroTitle = override?.heroTitle ?? topic.heroTitle(city.name);
+  const heroSubtitle = override?.heroSubtitle ?? topic.heroSubtitle(city.name);
+  const introText = override?.intro ?? topic.intro(city.name);
+  const faqs = override?.faqItems ?? topic.faqItems(city.name);
+
   const showBonnOffice = bonnRegionCities.includes(cityKey);
-  const pageTitle = `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
-  const pageDesc = `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+  const pageTitle = override
+    ? `${override.heroTitle} | SLT Technology Group`
+    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
+  const pageDesc = override
+    ? override.heroSubtitle
+    : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+
+  // Stadt-spezifische Leistungen aus dem Override (zusätzlich zur generischen Topic-Liste)
+  const overrideServices: string[] = override?.services ?? [];
 
   const whyItems = [
     showBonnOffice
@@ -84,10 +97,10 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               {city.name} & Umgebung
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              {topic.heroTitle(city.name)}
+              {heroTitle}
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              {topic.heroSubtitle(city.name)}
+              {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="btn-glow">
@@ -115,7 +128,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               {topic.title} {city.description} – professionell geplant und installiert
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              {topic.intro(city.name)}
+              {introText}
             </p>
           </div>
         </div>
@@ -176,10 +189,24 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               );
             })}
           </div>
+
+          {overrideServices.length > 0 && (
+            <div className="max-w-3xl mx-auto mt-12">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Was wir konkret in {city.name} leisten
+              </h3>
+              <ul className="space-y-3">
+                {overrideServices.map((s, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">{s}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
-
-      {/* Why SLT */}
       <section className="py-16 lg:py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
@@ -209,7 +236,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
               Häufige Fragen zu {topic.title} in {city.name}
             </h2>
             <Accordion type="single" collapsible className="w-full">
-              {topic.faqItems(city.name).map((faq, i) => (
+              {faqs.map((faq, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
