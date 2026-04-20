@@ -3,31 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Language -->
     <meta http-equiv="content-language" content="de" />
-    <!-- Hreflang wird dynamisch per SEOHead gesetzt -->
-    
-    <!-- Primary Meta Tags -->
+
+    <!-- Primary Meta Tags (werden pro Route vom Prerender überschrieben) -->
     <title>Installation & Integration von AV-Lösungen | SLT Technology Group</title>
     <meta name="title" content="Installation & Integration von AV-Lösungen | SLT Technology Group" />
-    <meta name="description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik in Deutschland und Europa.">
+    <meta name="description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik in Deutschland und Europa." />
     <meta name="author" content="SLT Technology Group GmbH & Co. KG" />
-    <meta name="keywords" content="AV Installation, Medientechnik Integration, Konferenztechnik, Videokonferenzsysteme, Digital Signage, IT-Netzwerktechnik, Krefeld, NRW">
+    <meta name="keywords" content="AV Installation, Medientechnik Integration, Konferenztechnik, Videokonferenzsysteme, Digital Signage, IT-Netzwerktechnik, Krefeld, NRW" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="de" />
     <meta name="revisit-after" content="7 days" />
-    
-    <!-- Canonical URL -->
-    <!-- Canonical wird dynamisch per SEOHead gesetzt -->
-    
+
+    <!-- Canonical (wird pro Route vom Prerender gesetzt) -->
+    <link rel="canonical" href="https://www.slt-tg.de/" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.slt-tg.de/" />
+    <meta property="og:title" content="Installation & Integration von AV-Lösungen | SLT Technology Group" />
+    <meta property="og:description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik." />
     <meta property="og:image" content="https://www.slt-tg.de/og-image.png" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="SLT Technology Group" />
@@ -35,50 +36,28 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.slt-tg.de/" />
+    <meta name="twitter:title" content="Installation & Integration von AV-Lösungen | SLT Technology Group" />
+    <meta name="twitter:description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik." />
     <meta name="twitter:image" content="https://www.slt-tg.de/og-image.png" />
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="DE-NW" />
     <meta name="geo.placename" content="Krefeld, Nordrhein-Westfalen" />
-    
-    <!-- Structured Data - LocalBusiness -->
+
+    <!-- Globale Schemas: Organization + WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "Organization",
       "@id": "https://www.slt-tg.de/#organization",
       "name": "SLT Technology Group GmbH & Co. KG",
       "alternateName": "SLT Technology Group",
-      "description": "Ihr Partner für die Installation, Integration und den Betrieb von Konferenz- und Medientechnik in Deutschland und Europa.",
       "url": "https://www.slt-tg.de",
       "logo": "https://www.slt-tg.de/favicon.png",
       "image": "https://www.slt-tg.de/og-image.png",
-      "priceRange": "€€€",
       "telephone": "+49 2151 4179902",
       "email": "info@slt-tg.de",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Anrather Straße 291",
-        "addressLocality": "Krefeld",
-        "postalCode": "47807",
-        "addressRegion": "Nordrhein-Westfalen",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "51.3388",
-        "longitude": "6.5853"
-      },
-      "areaServed": [
-        { "@type": "State", "name": "Nordrhein-Westfalen" },
-        { "@type": "Country", "name": "Deutschland" },
-        { "@type": "Country", "name": "Europa" }
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Benedikt Nöchel",
-        "jobTitle": "Geschäftsführer"
-      },
+      "founder": { "@type": "Person", "name": "Benedikt Nöchel", "jobTitle": "Geschäftsführer" },
       "sameAs": [
         "https://www.linkedin.com/company/slt-tg/",
         "https://www.instagram.com/slttechnologygroup/",
@@ -98,82 +77,40 @@
         "@type": "OfferCatalog",
         "name": "Leistungen",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Installation & Integration",
-              "description": "Professionelle Installation und Integration von AV- und Konferenztechnik"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Fachplanung & Beratung",
-              "description": "Bedarfsgerechte Konzepte und Planungen für Konferenzräume"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Service & Support",
-              "description": "After-Sales Support, Service Desk und proaktives Monitoring"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation & Integration", "description": "Professionelle Installation und Integration von AV- und Konferenztechnik" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fachplanung & Beratung", "description": "Bedarfsgerechte Konzepte und Planungen für Konferenzräume" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service & Support", "description": "After-Sales Support, Service Desk und proaktives Monitoring" } }
         ]
       }
     }
     </script>
-
-    <!-- Structured Data - Standort Bonn -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://www.slt-tg.de/#organization-bonn",
-      "name": "SLT Technology Group – Standort Bonn",
-      "description": "SLT Technology Group Standort Bonn – Ihr Partner für Konferenz- und Medientechnik im Rheinland.",
+      "@type": "WebSite",
+      "@id": "https://www.slt-tg.de/#website",
+      "name": "SLT Technology Group",
       "url": "https://www.slt-tg.de",
-      "logo": "https://www.slt-tg.de/favicon.png",
-      "telephone": "+49 2151 4179902",
-      "email": "info@slt-tg.de",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Drachenburgstraße 8",
-        "addressLocality": "Bonn",
-        "postalCode": "53179",
-        "addressRegion": "Nordrhein-Westfalen",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "50.7374",
-        "longitude": "7.0982"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Bonn" },
-        { "@type": "City", "name": "Köln" },
-        { "@type": "State", "name": "Nordrhein-Westfalen" }
-      ],
-      "parentOrganization": {
-        "@type": "Organization",
-        "@id": "https://www.slt-tg.de/#organization"
+      "publisher": { "@id": "https://www.slt-tg.de/#organization" },
+      "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.slt-tg.de/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
-    <meta property="og:title" content="Installation & Integration von AV-Lösungen | SLT Technology Group">
-    <meta name="twitter:title" content="Installation & Integration von AV-Lösungen | SLT Technology Group">
-    <meta property="og:description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik.">
-    <meta name="twitter:description" content="SLT Technology Group – Ihr Partner für Installation, Integration und Betrieb von Konferenz- und Medientechnik.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/assets/hero-konferenzraum.jpg" fetchpriority="high">
+
+    <!-- PRERENDER: Route-spezifische JSON-LD-Schemas werden hier injiziert -->
+    <!--PRERENDER:JSONLD-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/assets/hero-konferenzraum.jpg" fetchpriority="high" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--PRERENDER:HERO--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

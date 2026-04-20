@@ -87,20 +87,10 @@ export function SEOHead({
       document.head.appendChild(hreflangDefault);
     }
 
-    if (structuredData) {
-      const existingScript = document.querySelector('script[data-seo-structured]');
-      if (existingScript) existingScript.remove();
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.setAttribute("data-seo-structured", "true");
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      const script = document.querySelector('script[data-seo-structured]');
-      if (script) script.remove();
-    };
+    // JSON-LD wird statisch via Prerender ausgeliefert (siehe scripts/prerender.mjs).
+    // Hier KEIN dynamisches Schema-Injecten mehr, um Doppelausgabe nach Hydration
+    // zu vermeiden. Title/Meta/OG/Canonical werden weiterhin live gesetzt, damit
+    // dynamische Seiten nach Hydration korrekt ausgezeichnet bleiben.
   }, [fullTitle, description, keywords, fullCanonical, fullOgImage, type, structuredData]);
 
   return null;
