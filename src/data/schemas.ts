@@ -283,6 +283,74 @@ export function buildProjectDetailSchemas(project: Project): object[] {
 }
 
 // ─────────────────────────────────────────────
+// JobPosting (/karriere/{slug})
+// ─────────────────────────────────────────────
+export function buildJobPostingSchemas(job: JobPosition, route: SeoRoute): object[] {
+  const jobUrl = `${BASE_URL}/karriere/${job.slug}`;
+
+  const jobSchema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: buildJobDescriptionHtml(job),
+    identifier: {
+      "@type": "PropertyValue",
+      name: HIRING_ORG.name,
+      value: job.identifier,
+    },
+    datePosted: job.datePosted,
+    validThrough: job.validThrough,
+    employmentType: job.employmentType,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: HIRING_ORG.name,
+      sameAs: HIRING_ORG.sameAs,
+      logo: HIRING_ORG.logo,
+    },
+    jobLocation: job.addresses.map((a) => ({
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: a.streetAddress,
+        addressLocality: a.addressLocality,
+        addressRegion: a.addressRegion,
+        postalCode: a.postalCode,
+        addressCountry: a.addressCountry,
+      },
+    })),
+    directApply: true,
+    url: jobUrl,
+  };
+
+  if (job.baseSalary) {
+    jobSchema.baseSalary = {
+      "@type": "MonetaryAmount",
+      currency: job.baseSalary.currency,
+      value: {
+        "@type": "QuantitativeValue",
+        minValue: job.baseSalary.minValue,
+        maxValue: job.baseSalary.maxValue,
+        unitText: job.baseSalary.unitText,
+      },
+    };
+  }
+  if (job.educationRequirements) {
+    jobSchema.educationRequirements = {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: job.educationRequirements,
+    };
+  }
+  if (job.experienceRequirementsMonths != null) {
+    jobSchema.experienceRequirements = {
+      "@type": "OccupationalExperienceRequirements",
+      monthsOfExperience: job.experienceRequirementsMonths,
+    };
+  }
+
+  return [jobSchema, buildBreadcrumbList(route)];
+}
+
+// ─────────────────────────────────────────────
 // Resolver
 // ─────────────────────────────────────────────
 export function resolveRouteSchemas(route: SeoRoute): object[] {
@@ -302,6 +370,12 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
         if (project) return buildProjectDetailSchemas(project);
       }
       return buildProjectListSchemas(route);
+    }
+    case "job": {
+      const parts = route.path.split("/").filter(Boolean);
+      const job = parts.length >= 2 ? getJobBySlug(parts[1]) : undefined;
+      if (job) return buildJobPostingSchemas(job, route);
+      return buildGenericSchemas(route);
     }
     case "legal":
       return buildGenericSchemas(route);
