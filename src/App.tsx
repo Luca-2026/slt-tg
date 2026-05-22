@@ -60,6 +60,9 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
           <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
+          <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
+          <Route path="/service-wartung" element={<ServiceWartung />} />
+          <Route path="/partner/:slug" element={<PartnerPage />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
