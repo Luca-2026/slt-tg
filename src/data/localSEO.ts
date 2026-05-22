@@ -58,11 +58,12 @@ export const topics: Record<string, LocalSEOTopic> = {
   medientechnik: {
     baseSlug: "medientechnik",
     title: "Medientechnik",
-    metaTitle: "Medientechnik",
-    metaDescription: "Professionelle Medientechnik",
-    heroTitle: (city) => `Medientechnik ${city}`,
-    heroSubtitle: (city) => `Ihr Partner für professionelle Medien- und Konferenztechnik in ${city} und Umgebung. Installation, Integration und Service – alles aus einer Hand.`,
-    intro: (city) => `Als erfahrener Fachplaner und Integrator für Medientechnik betreuen wir Unternehmen in ${city} und der gesamten Region. Von der Bedarfsanalyse über die Planung bis zur Installation und dem laufenden Betrieb – wir realisieren Ihr Projekt termingerecht und budgetsicher.`,
+    metaTitle: "Medientechnik & AV-Integration",
+    metaDescription: "Enterprise-Medientechnik & AV-Integration für Konzerne und großen Mittelstand",
+    heroTitle: (city) => `Medientechnik & AV-Integration ${city}`,
+    heroSubtitle: (city) => `Enterprise-AV-Systemhaus für Konzerne und großen Mittelstand in ${city}: Fachplanung, standardisierte Rollouts, Managed Services – herstellerneutral und partnerschaftlich.`,
+    intro: (city) => `Als zertifizierter Fachplaner und Integrator für Enterprise-Medientechnik betreuen wir Konzerne und großen Mittelstand in ${city} und der gesamten Region NRW. Von der Bedarfsanalyse über standortübergreifende Rollouts bis zum Managed Service – termingerecht, budgetsicher und mit klaren SLAs.`,
+
     services: [
       { title: "Videokonferenzsysteme", description: "Microsoft Teams Rooms, Zoom Rooms und herstellerneutrale Lösungen für produktive Meetings.", link: "/loesungen#konferenzraum-detail" },
       { title: "Displays & Visualisierung", description: "Interaktive Touch-Displays, LED-Wände und professionelle Präsentationsmonitore.", link: "/loesungen#empfang-detail" },
@@ -82,11 +83,12 @@ export const topics: Record<string, LocalSEOTopic> = {
   konferenztechnik: {
     baseSlug: "konferenztechnik",
     title: "Konferenztechnik",
-    metaTitle: "Konferenztechnik",
-    metaDescription: "Professionelle Konferenztechnik",
-    heroTitle: (city) => `Konferenztechnik ${city}`,
-    heroSubtitle: (city) => `Professionelle Konferenzraum-Ausstattung für Unternehmen in ${city}. Von der Planung bis zur Inbetriebnahme – wir machen Ihre Meetings produktiver.`,
-    intro: (city) => `Wir planen, installieren und betreuen Konferenztechnik für Unternehmen in ${city} und ganz NRW. Ob kleiner Huddle Space oder großer Boardroom – wir finden die passende Lösung.`,
+    metaTitle: "Konferenztechnik & Boardroom-Integration",
+    metaDescription: "Enterprise-Konferenztechnik & Boardroom-Integration für Konzerne",
+    heroTitle: (city) => `Konferenztechnik & Boardroom-Integration ${city}`,
+    heroSubtitle: (city) => `Standardisierte Konferenzraum-Rollouts für Konzerne und großen Mittelstand in ${city}: Huddle bis Boardroom, Microsoft Teams Rooms, Zoom Rooms, herstellerneutral integriert.`,
+    intro: (city) => `Wir planen, integrieren und betreuen Konferenz- und Boardroom-Technik für Konzerne und großen Mittelstand in ${city} und ganz NRW. Vom Huddle Space bis zum repräsentativen Boardroom – standardisierbar für Multi-Site-Rollouts.`,
+
     services: [
       { title: "Microsoft Teams Rooms", description: "Zertifizierte Teams-Raum-Systeme für nahtlose Zusammenarbeit.", link: "/loesungen#konferenzraum-detail" },
       { title: "Zoom Rooms", description: "Professionelle Zoom-Raumlösungen für hybride Meetings.", link: "/loesungen#konferenzraum-detail" },
@@ -105,11 +107,12 @@ export const topics: Record<string, LocalSEOTopic> = {
   videokonferenz: {
     baseSlug: "videokonferenz",
     title: "Videokonferenz-Lösungen",
-    metaTitle: "Videokonferenztechnik",
-    metaDescription: "Professionelle Videokonferenz-Lösungen",
-    heroTitle: (city) => `Videokonferenz-Lösungen ${city}`,
-    heroSubtitle: (city) => `Professionelle Videokonferenzsysteme für Unternehmen in ${city}. Microsoft Teams, Zoom, Webex – wir integrieren jede Plattform.`,
-    intro: (city) => `Hybrides Arbeiten erfordert zuverlässige Videokonferenztechnik. Wir planen und installieren Videokonferenzsysteme für Unternehmen in ${city} – von der Kamera und dem Mikrofon bis zur kompletten Raumintegration mit Microsoft Teams Rooms oder Zoom Rooms.`,
+    metaTitle: "Videokonferenz & Hybrid-Meeting-Lösungen",
+    metaDescription: "Enterprise-Videokonferenz & Hybrid-Meeting-Lösungen für Konzerne",
+    heroTitle: (city) => `Videokonferenz & Hybrid-Meeting ${city}`,
+    heroSubtitle: (city) => `Zertifizierte Videokonferenz- und Hybrid-Meeting-Systeme für Konzerne in ${city}: Microsoft Teams Rooms, Zoom Rooms, Webex – plattformneutral integriert und standardisierbar.`,
+    intro: (city) => `Hybrides Arbeiten erfordert zuverlässige Enterprise-Videokonferenztechnik. Wir planen und installieren standardisierbare Systeme für Konzerne in ${city} – von der KI-Kamera über Deckenmikrofone bis zur kompletten Raumintegration mit Microsoft Teams Rooms oder Zoom Rooms.`,
+
     services: [
       { title: "Microsoft Teams Rooms", description: "Zertifizierte Hardware und nahtlose Integration in Ihre Microsoft-365-Umgebung.", link: "/loesungen#konferenzraum-detail" },
       { title: "Zoom Rooms", description: "Professionelle Zoom-Raumsysteme für einfache und zuverlässige Videokonferenzen.", link: "/loesungen#konferenzraum-detail" },
@@ -128,11 +131,12 @@ export const topics: Record<string, LocalSEOTopic> = {
   "it-netzwerk": {
     baseSlug: "it-netzwerk",
     title: "IT-Netzwerktechnik",
-    metaTitle: "IT-Netzwerktechnik",
-    metaDescription: "Professionelle IT-Netzwerklösungen",
-    heroTitle: (city) => `IT-Netzwerktechnik ${city}`,
-    heroSubtitle: (city) => `Strukturierte Verkabelung, Enterprise WLAN und Managed Switches für Unternehmen in ${city}. Die Basis für zuverlässige AV- und IT-Systeme.`,
-    intro: (city) => `Moderne Medien- und Konferenztechnik funktioniert nur auf einer stabilen IT-Infrastruktur. Wir planen und installieren Netzwerklösungen für Unternehmen in ${city} – von der strukturierten Verkabelung über Enterprise WLAN bis zu AV-over-IP.`,
+    metaTitle: "IT-Netzwerk & Enterprise-Infrastruktur",
+    metaDescription: "Enterprise-IT-Netzwerk: Strukturierte Verkabelung, Cisco/Aruba, AV-over-IP",
+    heroTitle: (city) => `IT-Netzwerk & Enterprise-Infrastruktur ${city}`,
+    heroSubtitle: (city) => `Enterprise-Netzwerkinfrastruktur für Konzerne in ${city}: Strukturierte Verkabelung, Cisco/Aruba/Ubiquiti, AV-over-IP, Managed Services – die Basis für moderne AV-Systeme.`,
+    intro: (city) => `Moderne Enterprise-Medientechnik funktioniert nur auf einer stabilen IT-Infrastruktur. Wir planen und installieren Netzwerklösungen für Konzerne in ${city} – von strukturierter Verkabelung über Enterprise-WLAN-Ausleuchtung bis zu AV-over-IP-Architekturen.`,
+
     services: [
       { title: "Strukturierte Verkabelung", description: "Cat6a/Cat7-Verkabelung nach DIN EN 50173 für zukunftssichere Infrastruktur." },
       { title: "Enterprise WLAN", description: "Professionelle WLAN-Ausleuchtung und -Planung mit Ubiquiti und Herstellern wie Aruba." },
@@ -151,11 +155,12 @@ export const topics: Record<string, LocalSEOTopic> = {
   "digital-signage": {
     baseSlug: "digital-signage",
     title: "Digital Signage",
-    metaTitle: "Digital Signage",
-    metaDescription: "Professionelle Digital-Signage-Lösungen",
-    heroTitle: (city) => `Digital Signage ${city}`,
-    heroSubtitle: (city) => `Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen für Unternehmen in ${city}. Modern, flexibel und zentral steuerbar.`,
-    intro: (city) => `Von Empfangs-Displays über Wegeleitsysteme bis zu großflächigen LED-Wänden – wir planen und installieren Digital-Signage-Lösungen für Unternehmen in ${city}. Inhalte zentral verwalten, Displays standortübergreifend steuern.`,
+    metaTitle: "Digital Signage & LED-Werbeanlagen",
+    metaDescription: "Enterprise-Digital-Signage, LED-Wände und Wegeleitsysteme für Konzerne",
+    heroTitle: (city) => `Digital Signage & LED-Werbeanlagen ${city}`,
+    heroSubtitle: (city) => `Enterprise-Digital-Signage für Konzerne und Industrie in ${city}: Empfangs- und Lobby-Displays, LED-Werbeanlagen, Wegeleitsysteme – zentral steuerbar, standortübergreifend.`,
+    intro: (city) => `Von Empfangs-Displays über digitale Wegeleitsysteme bis zu großflächigen Outdoor-LED-Werbeanlagen – wir planen und betreiben Digital-Signage-Architekturen für Konzerne in ${city}. Zentrales Content-Management, Multi-Site-Rollout, Service- und Wartungsverträge.`,
+
     services: [
       { title: "Empfangs- & Lobby-Displays", description: "Professionelle Begrüßungslösungen und Raumbuchungssysteme.", link: "/loesungen#empfang-detail" },
       { title: "Info- & Wegeleitsysteme", description: "Digitale Orientierung für Besucher und Mitarbeiter." },

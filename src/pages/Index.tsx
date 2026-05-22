@@ -15,9 +15,10 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Medientechnik Systemhaus Krefeld & Bonn"
-        description="SLT Technology Group – Ihr Systemhaus für Konferenztechnik, Medientechnik und AV-Integration in Krefeld, Bonn und NRW. Planung, Installation & Betrieb aus einer Hand. Neu: Whitepaper Wartung Outdoor-LED-Werbeanlagen."
-        keywords="Medientechnik Systemhaus Krefeld, Konferenztechnik Bonn, AV-Installation NRW, Servicepartner Outdoor-LED, Wartung LED-Werbeanlage, LED-Wand Service NRW, Outdoor-LED Wartungsvertrag, LED-Werbeanlage Reparatur, Digital Signage Wartung"
+        title="AV-Systemintegration für Konzerne & Enterprise NRW"
+        description="SLT Technology Group – Enterprise-AV-Systemhaus für Konzerne und großen Mittelstand: Standardisierte Konferenzraum-Rollouts, Multi-Site-Integration, Managed Services. Standorte Krefeld & Bonn, NRW-weit."
+        keywords="AV-Systemintegration Enterprise, Konferenzraum Rollout NRW, Boardroom Integration, Microsoft Teams Rooms Integrator, Crestron Partner NRW, Q-SYS zertifiziert, Managed AV Services, Multi-Site AV Rollout, Enterprise Medientechnik Krefeld Bonn, Servicepartner Outdoor-LED, Wartung LED-Werbeanlage"
+
         canonical="/"
         structuredData={[
           {
