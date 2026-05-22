@@ -190,8 +190,11 @@ const handler = async (req: Request): Promise<Response> => {
           Wir haben Ihre Bewerbung erhalten und werden diese sorgfältig prüfen.
         </p>
         <p style="color: #333; font-size: 15px; line-height: 1.6;">
-          Unser Team wird sich zeitnah bei Ihnen melden. Bei Rückfragen erreichen Sie uns jederzeit unter 
-          <a href="mailto:karriere@slt-tg.de" style="color: #00507d;">karriere@slt-tg.de</a> oder telefonisch unter 
+          Unser Team prüft Ihre Unterlagen sorgfältig und meldet sich <strong>spätestens innerhalb von fünf Werktagen</strong> persönlich bei Ihnen zurück – entweder mit einer Einladung zum Kennenlerngespräch oder einer Rückmeldung zum weiteren Vorgehen.
+        </p>
+        <p style="color: #333; font-size: 15px; line-height: 1.6;">
+          Bei Rückfragen erreichen Sie uns jederzeit unter
+          <a href="mailto:karriere@slt-tg.de" style="color: #00507d;">karriere@slt-tg.de</a> oder telefonisch unter
           <a href="tel:+4921514179902" style="color: #00507d;">+49 (0) 2151 - 417 99 02</a>.
         </p>
 
