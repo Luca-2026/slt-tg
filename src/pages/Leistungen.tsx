@@ -247,6 +247,24 @@ const Leistungen = () => {
         <ServiceSection key={service.id} service={service} index={sectionIndex} />
       ))}
 
+      {/* Cross-Links Hubs */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="section-container grid md:grid-cols-2 gap-6">
+          <Link to="/service-wartung" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
+            <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Service & Support</div>
+            <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Service & Wartung (ITIL v4)</h3>
+            <p className="text-sm text-muted-foreground">Service Desk, Monitoring und planbare Wartung – langfristige Betriebssicherheit für AV-Räume und Signage-Flotten.</p>
+            <span className="inline-flex items-center text-sm font-medium text-primary mt-4">Mehr erfahren <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+          </Link>
+          <Link to="/konferenzraum-ausstattung" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
+            <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Pillar-Page</div>
+            <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Konferenzraum-Ausstattung</h3>
+            <p className="text-sm text-muted-foreground">Von Huddle bis Boardroom – Hardware-Empfehlungen und Planungs-Leitfaden je Raumgröße.</p>
+            <span className="inline-flex items-center text-sm font-medium text-primary mt-4">Übersicht öffnen <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+          </Link>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
