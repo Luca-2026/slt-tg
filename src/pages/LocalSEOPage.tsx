@@ -247,6 +247,46 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
         </div>
       </section>
 
+      {/* Weiterführende Inhalte – Pillar & Hersteller */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="section-container">
+          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-6 text-center">
+            Weiterführende Themen
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-6">
+            <Link to="/konferenzraum-ausstattung" className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all">
+              <div className="text-[10px] font-semibold uppercase tracking-wider text-accent mb-1">Pillar-Page</div>
+              <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Konferenzraum-Ausstattung im Überblick</h3>
+              <p className="text-sm text-muted-foreground">Raumgrößen-Matrix von Huddle bis Boardroom mit Hardware-Empfehlungen.</p>
+            </Link>
+            <Link to="/service-wartung" className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all">
+              <div className="text-[10px] font-semibold uppercase tracking-wider text-accent mb-1">Betrieb</div>
+              <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Service & Wartung (ITIL v4)</h3>
+              <p className="text-sm text-muted-foreground">Service Desk, Monitoring und planbare Wartung für AV- und Signage-Flotten.</p>
+            </Link>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3 text-center">Zertifizierte Hersteller-Partner</p>
+            <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
+              {[
+                { name: "Crestron", slug: "crestron" },
+                { name: "Q-SYS", slug: "q-sys" },
+                { name: "Sennheiser", slug: "sennheiser" },
+                { name: "Shure", slug: "shure" },
+                { name: "Huddly", slug: "huddly" },
+                { name: "Barco", slug: "barco" },
+                { name: "Yealink", slug: "yealink" },
+                { name: "Cisco", slug: "cisco" },
+              ].map((p) => (
+                <Link key={p.slug} to={`/partner/${p.slug}`} className="px-2 py-2 rounded-lg border border-border bg-card text-center text-xs font-medium text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                  {p.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-primary/10 via-background to-background">
         <div className="section-container text-center">
