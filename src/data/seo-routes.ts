@@ -4,6 +4,7 @@
  * canonical, og:image, noindex, breadcrumbs, routeType.
  */
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
+import { partners } from "./partners";
 
 export type RouteType =
   | "home"
