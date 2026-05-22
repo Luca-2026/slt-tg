@@ -358,6 +358,46 @@ const Loesungen = () => {
         <SolutionDetailSection key={solution.id} solution={solution} index={sectionIndex} />
       ))}
 
+      {/* Hersteller-Übersicht & Pillar-Link */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="section-container">
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <Link to="/konferenzraum-ausstattung" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
+              <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Pillar-Page</div>
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Konferenzraum-Ausstattung im Überblick</h3>
+              <p className="text-sm text-muted-foreground">Raumgrößen-Matrix, Hardware-Empfehlungen und Planungs-Leitfaden – von Huddle bis Boardroom.</p>
+              <span className="inline-flex items-center text-sm font-medium text-primary mt-4">Übersicht öffnen <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+            <Link to="/service-wartung" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
+              <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Betrieb</div>
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Service & Wartung (ITIL v4)</h3>
+              <p className="text-sm text-muted-foreground">Service Desk, 24/7-Monitoring und planbare Wartung für AV- und Signage-Installationen.</p>
+              <span className="inline-flex items-center text-sm font-medium text-primary mt-4">Mehr erfahren <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+            </Link>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-foreground mb-4">Unsere zertifizierten Hersteller-Partner</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { name: "Crestron", slug: "crestron" },
+                { name: "Q-SYS", slug: "q-sys" },
+                { name: "Sennheiser", slug: "sennheiser" },
+                { name: "Shure", slug: "shure" },
+                { name: "Huddly", slug: "huddly" },
+                { name: "Barco", slug: "barco" },
+                { name: "Yealink", slug: "yealink" },
+                { name: "Cisco", slug: "cisco" },
+              ].map((p) => (
+                <Link key={p.slug} to={`/partner/${p.slug}`} className="px-4 py-3 rounded-lg border border-border bg-card text-center text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary transition-all">
+                  {p.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
