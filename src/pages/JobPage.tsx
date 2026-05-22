@@ -5,74 +5,10 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, GraduationCap, Wrench, MapPin, Clock, CalendarDays, Euro, ArrowRight } from "lucide-react";
-import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "@/data/jobs";
+import { getJobBySlug } from "@/data/jobs";
 import { JobApplicationForm } from "@/components/karriere/JobApplicationForm";
 
 const ICONS = { GraduationCap, Wrench, Briefcase } as const;
-
-function buildJobPostingJsonLd(job: JobPosition) {
-  const url = `https://www.slt-tg.de/karriere/${job.slug}`;
-  const jsonLd: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
-    title: job.title,
-    description: buildJobDescriptionHtml(job),
-    identifier: {
-      "@type": "PropertyValue",
-      name: HIRING_ORG.name,
-      value: job.identifier,
-    },
-    datePosted: job.datePosted,
-    validThrough: job.validThrough,
-    employmentType: job.employmentType,
-    hiringOrganization: {
-      "@type": "Organization",
-      name: HIRING_ORG.name,
-      sameAs: HIRING_ORG.sameAs,
-      logo: HIRING_ORG.logo,
-    },
-    jobLocation: job.addresses.map((a) => ({
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: a.streetAddress,
-        addressLocality: a.addressLocality,
-        addressRegion: a.addressRegion,
-        postalCode: a.postalCode,
-        addressCountry: a.addressCountry,
-      },
-    })),
-    directApply: true,
-    url,
-  };
-
-  if (job.baseSalary) {
-    jsonLd.baseSalary = {
-      "@type": "MonetaryAmount",
-      currency: job.baseSalary.currency,
-      value: {
-        "@type": "QuantitativeValue",
-        minValue: job.baseSalary.minValue,
-        maxValue: job.baseSalary.maxValue,
-        unitText: job.baseSalary.unitText,
-      },
-    };
-  }
-  if (job.educationRequirements) {
-    jsonLd.educationRequirements = {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: job.educationRequirements,
-    };
-  }
-  if (job.experienceRequirementsMonths != null) {
-    jsonLd.experienceRequirements = {
-      "@type": "OccupationalExperienceRequirements",
-      monthsOfExperience: job.experienceRequirementsMonths,
-    };
-  }
-
-  return jsonLd;
-}
 
 export default function JobPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -81,37 +17,23 @@ export default function JobPage() {
   if (!job) return <Navigate to="/karriere" replace />;
 
   const Icon = ICONS[job.iconName];
+  // SEOHead hängt automatisch " | SLT Technology Group" an – Titel kurz halten.
+  const shortTitle = `${job.title} – ${job.locationLabel}`;
   const breadcrumbItems = [
-    { label: "Karriere", path: "/karriere" },
+    { label: "Karriere", href: "/karriere" },
     { label: job.title },
   ];
 
   return (
     <Layout>
       <SEOHead
-        title={job.seoTitle}
+        title={shortTitle}
         description={job.seoDescription}
         keywords={`${job.title}, Karriere, Jobs, SLT Technology Group, ${job.addresses
           .map((a) => a.addressLocality)
           .join(", ")}, Medientechnik, AV-Technik`}
         canonical={`/karriere/${job.slug}`}
-        structuredData={[
-          buildJobPostingJsonLd(job),
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.slt-tg.de/" },
-              { "@type": "ListItem", position: 2, name: "Karriere", item: "https://www.slt-tg.de/karriere" },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: job.title,
-                item: `https://www.slt-tg.de/karriere/${job.slug}`,
-              },
-            ],
-          },
-        ]}
+        type="article"
       />
 
       <section className="bg-gradient-to-b from-primary/5 to-background border-b border-border">
