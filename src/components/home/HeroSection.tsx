@@ -253,6 +253,9 @@ export function HeroSection() {
 
         <div className="section-container relative z-20 py-16">
           <div className="max-w-md">
+            <div className="mb-4">
+              <WhitepaperBadge variant="dark" />
+            </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-accent text-xs font-medium mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
