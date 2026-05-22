@@ -9,6 +9,7 @@
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
 import { getProjectBySlug, type Project } from "./projects";
+import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 
 const BASE_URL = "https://www.slt-tg.de";
 
