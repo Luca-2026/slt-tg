@@ -123,7 +123,7 @@ export const topics: Record<string, LocalSEOTopic> = {
     ],
     faqItems: (city) => [
       { question: `Welches Videokonferenzsystem passt für mein Unternehmen in ${city}?`, answer: `Das hängt von Ihrer bestehenden IT-Infrastruktur ab. Nutzen Sie Microsoft 365, empfehlen wir Teams Rooms. Nutzen Sie Zoom, setzen wir auf Zoom Rooms. Wir beraten Sie herstellerneutral.` },
-      { question: `Was kostet ein Videokonferenzsystem?`, answer: `Ein Huddle Space startet ab ca. 3.000 €, ein vollausgestatteter Meetingraum liegt bei 8.000–25.000 €. Boardrooms und Speziallösungen werden individuell kalkuliert.` },
+      { question: `Was kostet ein Videokonferenzsystem?`, answer: `Die Kosten variieren je nach Raumgröße, gewünschter Plattform (Teams Rooms, Zoom Rooms, Webex) und Hardware-Auswahl. Nach einer kurzen Bedarfsanalyse erstellen wir Ihnen ein individuelles, transparentes Angebot.` },
       { question: `Installieren Sie Videokonferenzsysteme in ${city}?`, answer: locationAnswer(city) },
       { question: `Bieten Sie Wartung für Videokonferenzsysteme?`, answer: supportAnswer(city) },
     ],
