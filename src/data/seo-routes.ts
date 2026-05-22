@@ -13,6 +13,7 @@ export type RouteType =
   | "news"
   | "project"
   | "job"
+  | "partner"
   | "legal";
 
 export interface SeoBreadcrumb {
