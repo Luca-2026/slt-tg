@@ -248,6 +248,41 @@ export const MAIN_ROUTES: SeoRoute[] = [
     lastmod: TODAY,
     breadcrumbs: [{ name: "Ratgeber", path: "/ratgeber" }],
   },
+  {
+    path: "/konferenzraum-ausstattung",
+    routeType: "page",
+    title: "Konferenzraum-Ausstattung: Huddle bis Boardroom & Auditorium | SLT AV",
+    description:
+      "Enterprise-Konferenzraum-Ausstattung nach Raumgröße: Huddle, Meeting, Boardroom, Auditorium. Hardware-Empfehlungen, Kostenrahmen, Lieferzeit und Rollout-Dauer – standardisierbar für Multi-Site.",
+    h1: "Konferenzraum-Ausstattung nach Raumgröße",
+    intro: [
+      "Vom Huddle Space bis zum Auditorium: Wir empfehlen die optimale AV-Ausstattung für jeden Raumtyp – mit konkreten Hardware-Kombinationen, Kostenrahmen und Rollout-Zeitplan.",
+      "Standardisierbar, skalierbar und herstellerneutral – für Konzerne, Industrie und großen Mittelstand.",
+    ],
+    canonical: "/konferenzraum-ausstattung",
+    ogImage: "/assets/hero-konferenzraum.jpg",
+    changefreq: "monthly",
+    priority: 0.95,
+    lastmod: TODAY,
+    breadcrumbs: [{ name: "Konferenzraum-Ausstattung", path: "/konferenzraum-ausstattung" }],
+  },
+  {
+    path: "/service-wartung",
+    routeType: "page",
+    title: "AV-Service & Wartung: SLA, Fernwartung & Support | SLT Technology Group",
+    description:
+      "Professioneller Service für Ihre AV- und IT-Systeme: Wartungsverträge mit SLA, Fernwartung, Hardware-Ersatz und Helpdesk. Für Enterprise-Kunden in NRW und bundesweit.",
+    h1: "AV-Service & Wartung",
+    intro: [
+      "Wartungsverträge mit festen SLAs, proaktive Fernüberwachung und schneller Vor-Ort-Service – damit Ihre Konferenzräume immer funktionieren.",
+      "Von der regelmäßigen Inspektion bis zum 24/7-Notfallservice: Wir begleiten Ihre AV-Systeme über den gesamten Lebenszyklus.",
+    ],
+    canonical: "/service-wartung",
+    changefreq: "monthly",
+    priority: 0.85,
+    lastmod: TODAY,
+    breadcrumbs: [{ name: "Service & Wartung", path: "/service-wartung" }],
+  },
 ];
 
 
