@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TypewriterText } from "@/components/home/TypewriterText";
 import { useState, useEffect, useCallback, useRef } from "react";
+import { WhitepaperBadge } from "@/components/home/WhitepaperBadge";
 const heroImage = "/assets/hero-konferenzraum.jpg";
 
 const inspirationImages = [
