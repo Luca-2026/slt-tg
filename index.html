@@ -100,6 +100,40 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.slt-tg.de/#service-led-wartung",
+      "serviceType": "Wartung und Service für Outdoor-LED-Werbeanlagen",
+      "name": "SLT CARE LED – Servicepartner für Outdoor-LED-Werbeanlagen",
+      "description": "Servicepartner für Outdoor-LED-Werbeanlagen in NRW und deutschlandweit: 2× jährliche Vor-Ort-Inspektion und Reinigung, Modulpool, garantierte Reaktionszeiten (24 h Totalausfall / 48 h Teilausfall), Remote-Support sowie eigene Hubarbeitsbühnen-Logistik. Alternativ flexibler On-Demand-Service.",
+      "provider": { "@id": "https://www.slt-tg.de/#organization" },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Nordrhein-Westfalen" },
+        { "@type": "Country", "name": "Deutschland" }
+      ],
+      "category": "Wartung Outdoor-LED-Werbeanlagen",
+      "termsOfService": "https://www.slt-tg.de/downloads/slt-wartungskonzept-outdoor-led.pdf",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Service- und Wartungskonzept Outdoor-LED-Werbeanlagen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "SLT On-Demand Service",
+            "description": "Abrufunterstützung ohne Bindung für Outdoor-LED-Werbeanlagen, 115 € netto/Std. zzgl. Anfahrt.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "115", "priceCurrency": "EUR", "unitText": "HUR" }
+          },
+          {
+            "@type": "Offer",
+            "name": "SLT CARE LED – Wartungsvertrag",
+            "description": "Planbarer Wartungsvertrag pro LED-Wand mit 2× Inspektion, Modulpool und garantierten Reaktionszeiten – ab 1.490 € netto/Jahr pro Wand.",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1490", "priceCurrency": "EUR", "unitText": "ANN" }
+          }
+        ]
+      }
+    }
 
     <!-- PRERENDER: Route-spezifische JSON-LD-Schemas werden hier injiziert -->
     <!--PRERENDER:JSONLD-->
