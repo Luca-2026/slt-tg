@@ -12,6 +12,7 @@ export type RouteType =
   | "ratgeber"
   | "news"
   | "project"
+  | "job"
   | "legal";
 
 export interface SeoBreadcrumb {
@@ -560,6 +561,32 @@ export const LEGAL_ROUTES: SeoRoute[] = [
 ];
 
 // ───────────────────────────────────────────────────────────
+// 7) JOB_ROUTES (/karriere/{slug}) – Google for Jobs
+// ───────────────────────────────────────────────────────────
+import { JOBS } from "./jobs";
+
+export const JOB_ROUTES: SeoRoute[] = JOBS.map((job) => ({
+  path: `/karriere/${job.slug}`,
+  routeType: "job" as RouteType,
+  title: job.seoTitle,
+  description: job.seoDescription,
+  h1: job.title,
+  intro: [
+    job.description,
+    `${job.locationLabel} · ${job.employmentTypeLabel} · ${job.startLabel}`,
+  ],
+  canonical: `/karriere/${job.slug}`,
+  ogType: "article",
+  changefreq: "weekly",
+  priority: 0.7,
+  lastmod: job.datePosted,
+  breadcrumbs: [
+    { name: "Karriere", path: "/karriere" },
+    { name: job.title, path: `/karriere/${job.slug}` },
+  ],
+}));
+
+// ───────────────────────────────────────────────────────────
 // ALL_ROUTES
 // ───────────────────────────────────────────────────────────
 export const ALL_ROUTES: SeoRoute[] = [
@@ -568,6 +595,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...RATGEBER_ROUTES,
   ...NEWS_ROUTES,
   ...PROJECT_ROUTES,
+  ...JOB_ROUTES,
   ...LEGAL_ROUTES,
 ];
 
