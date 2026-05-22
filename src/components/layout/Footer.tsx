@@ -6,21 +6,31 @@ const footerLinks = {
   leistungen: [
     { name: "Installation & Integration", href: "/leistungen#integration" },
     { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
-    { name: "Service & Betrieb", href: "/leistungen#service" },
+    { name: "Service & Wartung (ITIL v4)", href: "/service-wartung" },
     { name: "Finanzierung", href: "/finanzierung" },
   ],
   loesungen: [
+    { name: "Konferenzraum-Ausstattung", href: "/konferenzraum-ausstattung" },
     { name: "Konferenzräume", href: "/loesungen#konferenzraum-detail" },
     { name: "Auditorien", href: "/loesungen#auditorium-detail" },
     { name: "Digital Signage", href: "/loesungen#empfang-detail" },
     { name: "Technologien", href: "/technologien" },
+  ],
+  hersteller: [
+    { name: "Crestron", href: "/partner/crestron" },
+    { name: "Q-SYS", href: "/partner/q-sys" },
+    { name: "Sennheiser", href: "/partner/sennheiser" },
+    { name: "Shure", href: "/partner/shure" },
+    { name: "Huddly", href: "/partner/huddly" },
+    { name: "Barco", href: "/partner/barco" },
+    { name: "Yealink", href: "/partner/yealink" },
+    { name: "Cisco", href: "/partner/cisco" },
   ],
   unternehmen: [
     { name: "Projekte", href: "/projekte" },
     { name: "News & Wissen", href: "/news" },
     { name: "Karriere", href: "/karriere" },
     { name: "Über uns", href: "/ueber-uns" },
-    { name: "News", href: "/news" },
     { name: "Kontakt", href: "/kontakt" },
   ],
   regionen: [
