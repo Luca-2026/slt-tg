@@ -26,6 +26,9 @@ import JobPage from "./pages/JobPage";
 import LocalSEOPage from "./pages/LocalSEOPage";
 import Ratgeber from "./pages/Ratgeber";
 import RatgeberArticle from "./pages/RatgeberArticle";
+import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
+import ServiceWartung from "./pages/ServiceWartung";
+import PartnerPage from "./pages/PartnerPage";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
@@ -57,6 +60,9 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
           <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
+          <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
+          <Route path="/service-wartung" element={<ServiceWartung />} />
+          <Route path="/partner/:slug" element={<PartnerPage />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />
