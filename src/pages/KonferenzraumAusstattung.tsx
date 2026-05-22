@@ -27,9 +27,9 @@ const roomTypes = [
     description: "Kompakte Räume für spontane Besprechungen, kurze Check-ins oder Fokusarbeit. Die Technik muss sofort funktionieren – ohne IT-Support.",
     hardware: [
       "All-in-One-Videobar (Logitech Rally Bar Mini, Yealink MeetingBar A10)",
-      "27–32" Display oder Interaktives Whiteboard",
+      '27–32" Display oder Interaktives Whiteboard',
       "Kabellose Präsentation (Barco ClickShare, Crestron AirMedia)",
-      "Integriertes Mikrofonarray (keine sichtboren Mikrofone)",
+      "Integriertes Mikrofonarray (keine sichtbaren Mikrofone)",
     ],
     budget: "3.500 – 7.000 EUR",
     delivery: "2 – 3 Wochen",
@@ -45,7 +45,7 @@ const roomTypes = [
     description: "Der Standard-Meetingraum für Teams, Projektbesprechungen und hybride Calls. Klarer Fokus auf gleichberechtigte Teilnahme vor Ort und remote.",
     hardware: [
       "Videokonferenz-Soundbar (Poly Studio X50, Logitech Rally Bar, Yealink A20)",
-      "55–65" 4K-Display oder Dual-Screen-Setup",
+      '55–65" 4K-Display oder Dual-Screen-Setup',
       "Touch-Controller (Logitech Tap, Crestron TSW-770)",
       "Kabellose Präsentation + BYOM",
       "Akustik-Optimierung (absorptive Wand-/Deckenelemente)",
@@ -64,7 +64,7 @@ const roomTypes = [
     description: "Größere Besprechungsräume für Abteilungen, Schulungen oder Kundenworkshops. Flexible Nutzung zwischen Präsentation, Video und Kollaboration.",
     hardware: [
       "Modulares Videokonferenzsystem (Poly G7500, Logitech Rally Plus)",
-      "65–86" Display oder Interaktives Whiteboard (Yealink MeetingBoard)",
+      '65–86" Display oder Interaktives Whiteboard (Yealink MeetingBoard)',
       "Deckenmikrofonlösung (Sennheiser TeamConnect Ceiling 2, Shure MXA920)",
       "Erweiterte Mikrofon-Abdeckung (bis 7 Mic Pods bei Rally Plus)",
       "Zwei-Wege-Lautsprecher oder Soundbar-Erweiterung",
@@ -84,11 +84,11 @@ const roomTypes = [
     description: "Repräsentative Räume für Vorstand, Aufsichtsrat und wichtige Stakeholder. Höchste Anforderungen an Design, Bedienkomfort und Zuverlässigkeit.",
     hardware: [
       "PTZ-Kamera mit Speaker-Tracking (Poly EagleEye Director, Crestron Auto-Framing)",
-      "86–98" Display oder Dual-75"-Setup",
+      '86–98" Display oder Dual-75"-Setup',
       "Unsichtbare Deckenmikrofonlösung (Sennheiser TeamConnect Ceiling 2)",
       "Dedizierte DSP mit Echo-Unterdrückung (Q-SYS Core, Biamp Tesira)",
       "Zentrale Touch-Steuerung mit Raumszenarien (Licht, Klima, Jalousien)",
-      "Kabellose Präsentation + dokumentenkamera",
+      "Kabellose Präsentation + Dokumentenkamera",
       "Dolmetscher-Loop für internationale Gäste",
     ],
     budget: "45.000 – 90.000 EUR",
