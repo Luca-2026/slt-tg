@@ -191,6 +191,8 @@ export function HeroSection() {
         <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-5 pt-24 pb-4">
           {/* Top content */}
           <div className="shrink-0 space-y-4">
+            <WhitepaperBadge variant="light" />
+
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
