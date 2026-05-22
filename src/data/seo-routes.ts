@@ -625,6 +625,27 @@ export const JOB_ROUTES: SeoRoute[] = JOBS.map((job) => ({
 }));
 
 // ───────────────────────────────────────────────────────────
+// 8) PARTNER_ROUTES (/partner/{slug})
+// ───────────────────────────────────────────────────────────
+export const PARTNER_ROUTES: SeoRoute[] = partners.map((partner) => ({
+  path: `/partner/${partner.slug}`,
+  routeType: "partner" as RouteType,
+  title: partner.headline,
+  description: partner.description,
+  h1: partner.headline,
+  intro: [partner.longDescription],
+  canonical: `/partner/${partner.slug}`,
+  ogImage: partner.ogImage || "/og-image.png",
+  changefreq: "monthly",
+  priority: 0.85,
+  lastmod: TODAY,
+  breadcrumbs: [
+    { name: "Partner", path: "/technologien" },
+    { name: partner.name, path: `/partner/${partner.slug}` },
+  ],
+}));
+
+// ───────────────────────────────────────────────────────────
 // ALL_ROUTES
 // ───────────────────────────────────────────────────────────
 export const ALL_ROUTES: SeoRoute[] = [
@@ -635,6 +656,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...PROJECT_ROUTES,
   ...JOB_ROUTES,
   ...LEGAL_ROUTES,
+  ...PARTNER_ROUTES,
 ];
 
 export { isNoindex };
