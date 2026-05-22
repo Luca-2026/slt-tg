@@ -10,6 +10,7 @@ import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
 import { getProjectBySlug, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
+import { getPartnerBySlug } from "./partners";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -96,6 +97,21 @@ function buildBreadcrumbList(route: SeoRoute) {
 }
 
 // ─────────────────────────────────────────────
+// Helper: FAQPage
+// ─────────────────────────────────────────────
+export function buildFAQPageSchema(faqs: { question: string; answer: string }[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: { "@type": "Answer", text: q.answer },
+    })),
+  };
+}
+
+// ─────────────────────────────────────────────
 // LocalSEO
 // ─────────────────────────────────────────────
 export function buildLocalSeoSchemas(route: SeoRoute): object[] {
@@ -128,15 +144,7 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
   // FAQPage – Override hat Vorrang vor Template
   const override = getContentOverride(route.topic, route.city);
   const faqs = override?.faqItems ?? topic.faqItems(city.name);
-  schemas.push({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: { "@type": "Answer", text: q.answer },
-    })),
-  });
+  schemas.push(buildFAQPageSchema(faqs));
 
   schemas.push(buildBreadcrumbList(route));
   return schemas;
@@ -351,6 +359,41 @@ export function buildJobPostingSchemas(job: JobPosition, route: SeoRoute): objec
 }
 
 // ─────────────────────────────────────────────
+// Vendor Partner (/partner/{slug})
+// ─────────────────────────────────────────────
+export function buildVendorPartnerSchemas(route: SeoRoute): object[] {
+  const parts = route.path.split("/").filter(Boolean);
+  const partner = parts.length >= 2 ? getPartnerBySlug(parts[1]) : undefined;
+  if (!partner) return buildPageSchemas(route);
+
+  const schemas: object[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: partner.headline,
+      description: partner.description,
+      url: `${BASE_URL}${route.path}`,
+      isPartOf: { "@id": `${BASE_URL}/#website` },
+      publisher: ORG_REF,
+      mainEntity: {
+        "@type": "Service",
+        name: `${partner.name} Integration & Service`,
+        provider: ORG_REF,
+        serviceType: "AV-Systemintegration",
+        areaServed: [
+          { "@type": "State", name: "Nordrhein-Westfalen" },
+          { "@type": "Country", name: "Deutschland" },
+        ],
+      },
+    },
+    buildFAQPageSchema(partner.faqs),
+    buildBreadcrumbList(route),
+  ];
+
+  return schemas;
+}
+
+// ─────────────────────────────────────────────
 // Resolver
 // ─────────────────────────────────────────────
 export function resolveRouteSchemas(route: SeoRoute): object[] {
@@ -377,6 +420,8 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
       if (job) return buildJobPostingSchemas(job, route);
       return buildGenericSchemas(route);
     }
+    case "partner":
+      return buildVendorPartnerSchemas(route);
     case "legal":
       return buildGenericSchemas(route);
     case "page":
