@@ -70,7 +70,7 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="md:col-span-5 grid grid-cols-3 gap-4">
+          <div className="md:col-span-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div>
               <h3 className="text-[10px] font-semibold uppercase tracking-wider mb-1.5 text-primary-foreground/70">Leistungen</h3>
               <ul className="space-y-0.5">
@@ -83,6 +83,14 @@ export function Footer() {
               <h3 className="text-[10px] font-semibold uppercase tracking-wider mb-1.5 text-primary-foreground/70">Lösungen</h3>
               <ul className="space-y-0.5">
                 {footerLinks.loesungen.map((l) => (
+                  <li key={l.name}><Link to={l.href} className="text-[11px] text-primary-foreground/50 hover:text-accent transition-colors leading-tight">{l.name}</Link></li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-[10px] font-semibold uppercase tracking-wider mb-1.5 text-primary-foreground/70">Hersteller</h3>
+              <ul className="space-y-0.5">
+                {footerLinks.hersteller.map((l) => (
                   <li key={l.name}><Link to={l.href} className="text-[11px] text-primary-foreground/50 hover:text-accent transition-colors leading-tight">{l.name}</Link></li>
                 ))}
               </ul>
