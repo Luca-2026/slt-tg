@@ -67,14 +67,12 @@ const PartnerPage = () => {
               {partner.longDescription}
             </p>
 
-            {/* Certifications */}
+            {/* Partner status */}
             <div className="flex flex-wrap items-center gap-2 mt-6">
               <Award className="h-4 w-4 text-primary" />
-              {partner.certifications.map((cert) => (
-                <Badge key={cert} variant="secondary" className="text-xs">
-                  {cert}
-                </Badge>
-              ))}
+              <Badge variant="secondary" className="text-xs">
+                {partner.partnerStatus}
+              </Badge>
             </div>
           </div>
         </div>
@@ -140,26 +138,31 @@ const PartnerPage = () => {
         </div>
       </section>
 
-      {/* References */}
-      <section className="py-16 lg:py-24">
-        <div className="section-container">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
-            Referenzprojekte mit {partner.name}
-          </h2>
-          <div className="grid sm:grid-cols-2 gap-4 lg:gap-5">
-            {partner.references.map((ref) => (
-              <Card key={ref.projectName} className="bg-card border-border/60">
-                <CardHeader className="p-4 lg:p-5">
-                  <CardTitle className="text-sm lg:text-base">{ref.projectName}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 lg:p-5 pt-0">
-                  <p className="text-xs lg:text-sm text-muted-foreground">{ref.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      {/* References — nur anzeigen, wenn verifizierte Referenzen vorliegen */}
+      {partner.references.length > 0 && (
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
+              Referenzprojekte mit {partner.name}
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4 lg:gap-5">
+              {partner.references.map((ref) => (
+                <Card key={ref.projectName} className="bg-card border-border/60">
+                  <CardHeader className="p-4 lg:p-5">
+                    <CardTitle className="text-sm lg:text-base">{ref.projectName}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-4 lg:p-5 pt-0">
+                    <p className="text-xs lg:text-sm text-muted-foreground">{ref.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground mt-6">
+              Weitere Referenzen mit {partner.name} auf Anfrage.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="py-16 lg:py-24 bg-card/50">
