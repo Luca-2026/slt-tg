@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Clock, Calendar, CheckCircle, Phone, User } from "lucide-react";
-import { getBlogPostBySlug } from "@/data/ratgeberPosts";
+import { getRatgeberPostBySlug } from "@/data/ratgeberPosts";
 import heroImage from "@/assets/ratgeber/ki-readiness-hero.jpg";
 
 const checklist = [
@@ -36,9 +36,9 @@ const checklist = [
   },
 ];
 
-const BlogArticle = () => {
+const RatgeberKiReadiness = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getBlogPostBySlug(slug) : undefined;
+  const post = slug ? getRatgeberPostBySlug(slug) : undefined;
 
   if (!post) return <Navigate to="/ratgeber" replace />;
 
@@ -287,4 +287,4 @@ const BlogArticle = () => {
   );
 };
 
-export default BlogArticle;
+export default RatgeberKiReadiness;

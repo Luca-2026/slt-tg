@@ -1,6 +1,6 @@
 /**
- * Blog-Beiträge (Fachratgeber) – Metadaten für Übersicht, SEO-Routen und Schemas.
- * Der Fließtext liegt in src/pages/BlogArticle.tsx.
+ * Ratgeber-Fachbeiträge – Metadaten für Übersicht, SEO-Routen und Schemas.
+ * Der Fließtext liegt in src/pages/RatgeberKiReadiness.tsx.
  */
 
 export interface RatgeberFaq {
@@ -41,7 +41,7 @@ export const ratgeberPosts: RatgeberPostMeta[] = [
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
     author: "SLT Technology Group, Redaktion AV Systemintegration",
-    ogImage: "/assets/blog/ki-readiness-og.jpg",
+    ogImage: "/assets/ratgeber/ki-readiness-og.jpg",
     faqs: [
       {
         question: "Ist unser bestehender Konferenzraum automatisch KI-fähig?",
