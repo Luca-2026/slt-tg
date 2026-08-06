@@ -648,7 +648,7 @@ export const partners: Partner[] = [
       {
         name: "MeetingBoard",
         description: "Interaktives Display mit integrierter Kamera, Audio und Whiteboard-Funktion",
-        products: ["Yealink MeetingBoard"],
+        products: ["Yealink MeetingBoard Pro (65\" / 75\" / 86\")"],
       },
       {
         name: "Headsets & Konferenztelefone",
