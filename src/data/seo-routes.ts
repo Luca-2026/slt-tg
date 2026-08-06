@@ -12,7 +12,7 @@ export type RouteType =
   | "page"
   | "localseo"
   | "ratgeber"
-  | "blog"
+  
   | "news"
   | "project"
   | "job"
