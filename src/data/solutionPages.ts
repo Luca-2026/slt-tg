@@ -230,7 +230,7 @@ export const solutionPages: SolutionPage[] = [
           "Townhalls und Hauptversammlungen werden heute regelmäßig übertragen oder aufgezeichnet. Dafür braucht es mehr als eine Kamera: definierte Bildausschnitte, eine Bildmischung, sauber getrennte Audiowege für Saal und Stream sowie eine Rückkanal-Lösung für Fragen aus dem Remote-Publikum. Wir legen fest, welche Szenarien ohne externes Personal laufen sollen, und automatisieren diese über Presets – aufwendigere Events bleiben über den Regieplatz steuerbar.",
         bullets: [
           "PTZ-Kameras mit Presets für Rednerpult, Podium und Publikum",
-          "Getrennte Mischungen für Saalbeschallung und Streamington",
+          "Getrennte Mischungen für Saalbeschallung und Stream",
           "Aufzeichnung mit definierter Ablage und Zugriffsrechten",
           "Rückkanal für Fragen aus dem Remote-Publikum",
         ],
@@ -338,7 +338,7 @@ export const solutionPages: SolutionPage[] = [
           "Sprachverstärkung über Deckenlautsprecher statt Frontboxen",
           "Ansteck- oder Bügelmikrofon für die vortragende Person",
           "Deckenmikrofon-Arrays oder Handmikrofone für Publikumsfragen",
-          "Echo- und Störgeräuschunterdrückung für den Streamington",
+          "Echo- und Störgeräuschunterdrückung für den Stream",
         ],
       },
       {
