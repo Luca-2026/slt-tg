@@ -703,6 +703,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...JOB_ROUTES,
   ...LEGAL_ROUTES,
   ...PARTNER_ROUTES,
+  ...BLOG_ROUTES,
 ];
 
 export { isNoindex };
