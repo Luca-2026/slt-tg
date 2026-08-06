@@ -138,6 +138,98 @@ const PartnerPage = () => {
         </div>
       </section>
 
+      {/* Modell-Matrix — nur für vertiefte Partnerseiten */}
+      {partner.modelTable && (
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              {partner.modelTable.title}
+            </h2>
+            {partner.modelTable.intro && (
+              <p className="text-sm lg:text-base text-muted-foreground max-w-3xl mb-8">
+                {partner.modelTable.intro}
+              </p>
+            )}
+            <div className="overflow-x-auto rounded-xl border border-border/60">
+              <table className="w-full text-left border-collapse min-w-[640px]">
+                <thead>
+                  <tr className="bg-card">
+                    {partner.modelTable.columns.map((col) => (
+                      <th
+                        key={col}
+                        className="p-4 text-xs lg:text-sm font-semibold text-foreground border-b border-border/60"
+                      >
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {partner.modelTable.rows.map((row) => (
+                    <tr key={row.model} className="border-b border-border/40 last:border-0">
+                      <th
+                        scope="row"
+                        className="p-4 align-top text-xs lg:text-sm font-medium text-foreground whitespace-nowrap"
+                      >
+                        {row.model}
+                      </th>
+                      <td className="p-4 align-top text-xs lg:text-sm text-muted-foreground">
+                        {row.roomFit}
+                      </td>
+                      <td className="p-4 align-top text-xs lg:text-sm text-muted-foreground">
+                        {row.highlights}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {partner.modelTable.sourceNote && (
+              <p className="text-xs text-muted-foreground mt-4">{partner.modelTable.sourceNote}</p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Vertiefende Abschnitte */}
+      {partner.sections && partner.sections.length > 0 && (
+        <section className="py-16 lg:py-24 bg-card/50">
+          <div className="section-container">
+            <div className="max-w-3xl space-y-10 lg:space-y-12">
+              {partner.sections.map((section) => (
+                <article key={section.title}>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                    {section.title}
+                  </h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 40)}
+                      className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-4 last:mb-0"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                  {section.bullets && (
+                    <ul className="mt-4 space-y-2">
+                      {section.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+
       {/* References — nur anzeigen, wenn verifizierte Referenzen vorliegen */}
       {partner.references.length > 0 && (
         <section className="py-16 lg:py-24">
