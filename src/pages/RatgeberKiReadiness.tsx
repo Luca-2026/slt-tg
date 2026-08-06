@@ -37,8 +37,7 @@ const checklist = [
 ];
 
 const RatgeberKiReadiness = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getRatgeberPostBySlug(slug) : undefined;
+  const post = getRatgeberPostBySlug("ki-readiness-av-medientechnik-2026");
 
   if (!post) return <Navigate to="/ratgeber" replace />;
 
