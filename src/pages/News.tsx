@@ -69,12 +69,19 @@ const newsArticles: NewsArticle[] = [
 
 const guides = [
   {
+    slug: "ki-readiness-av-medientechnik-2026",
+    title: "KI-Readiness in der AV-Branche: Medientechnik 2026 KI-fähig machen",
+    description: "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance – mit Checkliste in sechs Schritten.",
+    readTime: "8 Min.",
+    category: "AV/IT-Konvergenz",
+    featured: true,
+  },
+  {
     slug: "yealink-meetingboard-pro",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
     description: "Funktionen, Größen und Einsatzszenarien – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
     readTime: "7 Min.",
     category: "Produkte",
-    featured: true,
   },
   {
     slug: "konferenztechnik-raumgroesse",
