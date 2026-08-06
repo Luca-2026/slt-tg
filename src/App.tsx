@@ -60,9 +60,11 @@ const App = () => (
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
+          <Route path="/ratgeber/ki-readiness-av-medientechnik-2026" element={<RatgeberKiReadiness />} />
           <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogArticle />} />
+          {/* Alt-URLs aus dem kurzzeitigen /blog-Bereich */}
+          <Route path="/blog" element={<Navigate to="/ratgeber" replace />} />
+          <Route path="/blog/:slug" element={<BlogRedirect />} />
           <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
           <Route path="/service-wartung" element={<ServiceWartung />} />
           <Route path="/partner/:slug" element={<PartnerPage />} />
