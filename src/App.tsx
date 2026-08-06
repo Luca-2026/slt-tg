@@ -28,6 +28,8 @@ import Ratgeber from "./pages/Ratgeber";
 import RatgeberArticle from "./pages/RatgeberArticle";
 import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
 import ServiceWartung from "./pages/ServiceWartung";
+import DigitalSignage from "./pages/DigitalSignage";
+import Videokonferenzanlage from "./pages/Videokonferenzanlage";
 import PartnerPage from "./pages/PartnerPage";
 import RatgeberKiReadiness from "./pages/RatgeberKiReadiness";
 import { getLocalSEORoutes } from "./data/localSEO";
