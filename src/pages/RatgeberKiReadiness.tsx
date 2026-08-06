@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Clock, Calendar, CheckCircle, Phone, User } from "lucide-react";
-import { getBlogPostBySlug } from "@/data/blogPosts";
-import heroImage from "@/assets/blog/ki-readiness-hero.jpg";
+import { getRatgeberPostBySlug } from "@/data/ratgeberPosts";
+import heroImage from "@/assets/ratgeber/ki-readiness-hero.jpg";
 
 const checklist = [
   {
@@ -36,11 +36,10 @@ const checklist = [
   },
 ];
 
-const BlogArticle = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getBlogPostBySlug(slug) : undefined;
+const RatgeberKiReadiness = () => {
+  const post = getRatgeberPostBySlug("ki-readiness-av-medientechnik-2026");
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <Navigate to="/ratgeber" replace />;
 
   return (
     <Layout>
@@ -48,7 +47,7 @@ const BlogArticle = () => {
         title={post.title}
         description={post.description}
         keywords={post.keywords}
-        canonical={`/blog/${post.slug}`}
+        canonical={`/ratgeber/${post.slug}`}
         type="article"
         ogImage={post.ogImage}
       />
@@ -57,7 +56,7 @@ const BlogArticle = () => {
         <div className="section-container px-4 sm:px-6 pt-8 lg:pt-12">
           <div className="max-w-3xl mx-auto">
             <Breadcrumbs items={[
-              { label: "Blog", href: "/blog" },
+              { label: "Ratgeber", href: "/ratgeber" },
               { label: post.title },
             ]} />
 
@@ -287,4 +286,4 @@ const BlogArticle = () => {
   );
 };
 
-export default BlogArticle;
+export default RatgeberKiReadiness;

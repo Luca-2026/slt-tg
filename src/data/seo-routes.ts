@@ -5,14 +5,14 @@
  */
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
 import { partners } from "./partners";
-import { blogPosts } from "./blogPosts";
+import { ratgeberPosts } from "./ratgeberPosts";
 
 export type RouteType =
   | "home"
   | "page"
   | "localseo"
   | "ratgeber"
-  | "blog"
+  
   | "news"
   | "project"
   | "job"
@@ -651,48 +651,32 @@ export const PARTNER_ROUTES: SeoRoute[] = partners.map((partner) => ({
 // ALL_ROUTES
 // ───────────────────────────────────────────────────────────
 // ───────────────────────────────────────────────────────────
-// BLOG_ROUTES
+// Ratgeber-Fachbeiträge (aus src/data/ratgeberPosts.ts)
 // ───────────────────────────────────────────────────────────
-export const BLOG_ROUTES: SeoRoute[] = [
-  {
-    path: "/blog",
-    routeType: "page",
-    title: "Blog: Fachbeiträge zu Medientechnik & AV/IT | SLT Technology Group",
-    description:
-      "Fachbeiträge der SLT Technology Group zu Medientechnik, Konferenzraumtechnik, AV/IT-Konvergenz und KI in der professionellen Medientechnik.",
-    h1: "Fachbeiträge aus der AV- & IT-Systemintegration",
-    intro: [
-      "Hintergründe und Praxiswissen für Geschäftsführer, IT-Leiter und Facility-Verantwortliche.",
-    ],
-    canonical: "/blog",
-    changefreq: "monthly",
-    priority: 0.7,
-    lastmod: TODAY,
-    breadcrumbs: [{ name: "Blog", path: "/blog" }],
-  },
-  ...blogPosts.map<SeoRoute>((post) => ({
-    path: `/blog/${post.slug}`,
-    routeType: "blog" as const,
-    title: post.metaTitle,
-    description: post.description,
-    h1: post.h1,
-    intro: [post.excerpt],
-    canonical: `/blog/${post.slug}`,
-    ogImage: post.ogImage,
-    ogType: "article" as const,
-    changefreq: "monthly",
-    priority: 0.8,
-    lastmod: post.date,
-    breadcrumbs: [
-      { name: "Blog", path: "/blog" },
-      { name: post.title, path: `/blog/${post.slug}` },
-    ],
-    articleSlug: post.slug,
-    articleDate: post.date,
-    articleCategory: post.category,
-    articleImage: post.ogImage,
-  })),
-];
+export const RATGEBER_POST_ROUTES: SeoRoute[] = ratgeberPosts.map<SeoRoute>((post) => ({
+  path: `/ratgeber/${post.slug}`,
+  routeType: "ratgeber" as const,
+  title: post.metaTitle,
+  description: post.description,
+  h1: post.h1,
+  intro: [post.excerpt],
+  canonical: `/ratgeber/${post.slug}`,
+  ogImage: post.ogImage,
+  ogType: "article" as const,
+  changefreq: "monthly",
+  priority: 0.8,
+  lastmod: post.date,
+  breadcrumbs: [
+    { name: "Ratgeber", path: "/ratgeber" },
+    { name: post.title, path: `/ratgeber/${post.slug}` },
+  ],
+  articleSlug: post.slug,
+  articleDate: post.date,
+  articleCategory: post.category,
+  articleImage: post.ogImage,
+}));
+
+
 
 export const ALL_ROUTES: SeoRoute[] = [
   ...MAIN_ROUTES,
@@ -703,7 +687,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...JOB_ROUTES,
   ...LEGAL_ROUTES,
   ...PARTNER_ROUTES,
-  ...BLOG_ROUTES,
+  ...RATGEBER_POST_ROUTES,
 ];
 
 export { isNoindex };

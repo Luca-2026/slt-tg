@@ -11,7 +11,7 @@ import { cities, topics, getContentOverride } from "./localSEO";
 import { getProjectBySlug, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
-import { getBlogPostBySlug } from "./blogPosts";
+import { getRatgeberPostBySlug } from "./ratgeberPosts";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -403,14 +403,13 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
       return []; // nur globale Schemas in index.html
     case "localseo":
       return buildLocalSeoSchemas(route);
-    case "blog": {
+    case "ratgeber": {
       const slug = route.articleSlug ?? route.path.split("/").filter(Boolean)[1];
-      const post = slug ? getBlogPostBySlug(slug) : undefined;
+      const post = slug ? getRatgeberPostBySlug(slug) : undefined;
       const schemas = buildArticleSchemas(route);
       if (post) schemas.splice(1, 0, buildFAQPageSchema(post.faqs));
       return schemas;
     }
-    case "ratgeber":
     case "news":
       return buildArticleSchemas(route);
     case "project": {

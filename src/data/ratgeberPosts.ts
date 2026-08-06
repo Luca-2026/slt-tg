@@ -1,14 +1,14 @@
 /**
- * Blog-Beiträge (Fachratgeber) – Metadaten für Übersicht, SEO-Routen und Schemas.
- * Der Fließtext liegt in src/pages/BlogArticle.tsx.
+ * Ratgeber-Fachbeiträge – Metadaten für Übersicht, SEO-Routen und Schemas.
+ * Der Fließtext liegt in src/pages/RatgeberKiReadiness.tsx.
  */
 
-export interface BlogFaq {
+export interface RatgeberFaq {
   question: string;
   answer: string;
 }
 
-export interface BlogPostMeta {
+export interface RatgeberPostMeta {
   slug: string;
   title: string;
   h1: string;
@@ -21,10 +21,10 @@ export interface BlogPostMeta {
   category: string;
   author: string;
   ogImage: string; // absolut auflösbarer Pfad ab /
-  faqs: BlogFaq[];
+  faqs: RatgeberFaq[];
 }
 
-export const blogPosts: BlogPostMeta[] = [
+export const ratgeberPosts: RatgeberPostMeta[] = [
   {
     slug: "ki-readiness-av-medientechnik-2026",
     title: "KI-Readiness in der AV-Branche",
@@ -41,7 +41,7 @@ export const blogPosts: BlogPostMeta[] = [
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
     author: "SLT Technology Group, Redaktion AV Systemintegration",
-    ogImage: "/assets/blog/ki-readiness-og.jpg",
+    ogImage: "/assets/ratgeber/ki-readiness-og.jpg",
     faqs: [
       {
         question: "Ist unser bestehender Konferenzraum automatisch KI-fähig?",
@@ -62,6 +62,6 @@ export const blogPosts: BlogPostMeta[] = [
   },
 ];
 
-export function getBlogPostBySlug(slug: string): BlogPostMeta | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+export function getRatgeberPostBySlug(slug: string): RatgeberPostMeta | undefined {
+  return ratgeberPosts.find((p) => p.slug === slug);
 }
