@@ -292,7 +292,36 @@ const PartnerPage = () => {
         </div>
       </section>
 
+      {/* Weiterführende Themen */}
+      {partner.relatedLinks && partner.relatedLinks.length > 0 && (
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
+              Weiterführende Themen
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+              {partner.relatedLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="group block rounded-xl border border-border/60 bg-card p-5 hover:border-primary/40 hover:shadow-md transition-all duration-300"
+                >
+                  <span className="flex items-center gap-2 text-sm lg:text-base font-semibold text-foreground">
+                    {link.label}
+                    <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <span className="block text-xs lg:text-sm text-muted-foreground mt-2">
+                    {link.description}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
+
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
