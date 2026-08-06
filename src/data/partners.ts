@@ -637,7 +637,13 @@ export const partners: Partner[] = [
       {
         name: "MeetingBar (All-in-One)",
         description: "Soundbar mit integrierter Kamera für Teams- und Zoom-Rooms",
-        products: ["Yealink MeetingBar A20", "Yealink MeetingBar A30"],
+        products: [
+          "Yealink MeetingBar A10",
+          "Yealink MeetingBar A20",
+          "Yealink MeetingBar A30",
+          "Yealink MeetingBar A50",
+        ],
+
       },
       {
         name: "MeetingBoard",
