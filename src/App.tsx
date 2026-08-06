@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { TrailingSlashRedirect } from "@/components/TrailingSlashRedirect";
 import Index from "./pages/Index";
@@ -33,6 +33,11 @@ import RatgeberKiReadiness from "./pages/RatgeberKiReadiness";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
+
+const BlogRedirect = () => {
+  const { slug } = useParams<{ slug: string }>();
+  return <Navigate to={`/ratgeber/${slug ?? ""}`} replace />;
+};
 
 const localRoutes = getLocalSEORoutes();
 
