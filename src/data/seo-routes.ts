@@ -5,7 +5,7 @@
  */
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
 import { partners } from "./partners";
-import { blogPosts } from "./blogPosts";
+import { ratgeberPosts } from "./ratgeberPosts";
 
 export type RouteType =
   | "home"
@@ -687,7 +687,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...JOB_ROUTES,
   ...LEGAL_ROUTES,
   ...PARTNER_ROUTES,
-  ...BLOG_ROUTES,
+  ...RATGEBER_POST_ROUTES,
 ];
 
 export { isNoindex };

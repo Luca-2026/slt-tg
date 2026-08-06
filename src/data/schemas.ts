@@ -11,7 +11,7 @@ import { cities, topics, getContentOverride } from "./localSEO";
 import { getProjectBySlug, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
-import { getBlogPostBySlug } from "./blogPosts";
+import { getRatgeberPostBySlug } from "./ratgeberPosts";
 
 const BASE_URL = "https://www.slt-tg.de";
 

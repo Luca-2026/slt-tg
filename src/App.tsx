@@ -29,8 +29,7 @@ import RatgeberArticle from "./pages/RatgeberArticle";
 import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
 import ServiceWartung from "./pages/ServiceWartung";
 import PartnerPage from "./pages/PartnerPage";
-import Blog from "./pages/Blog";
-import BlogArticle from "./pages/BlogArticle";
+import RatgeberKiReadiness from "./pages/RatgeberKiReadiness";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
