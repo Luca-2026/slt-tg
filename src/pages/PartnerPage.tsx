@@ -138,6 +138,98 @@ const PartnerPage = () => {
         </div>
       </section>
 
+      {/* Modell-Matrix — nur für vertiefte Partnerseiten */}
+      {partner.modelTable && (
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              {partner.modelTable.title}
+            </h2>
+            {partner.modelTable.intro && (
+              <p className="text-sm lg:text-base text-muted-foreground max-w-3xl mb-8">
+                {partner.modelTable.intro}
+              </p>
+            )}
+            <div className="overflow-x-auto rounded-xl border border-border/60">
+              <table className="w-full text-left border-collapse min-w-[640px]">
+                <thead>
+                  <tr className="bg-card">
+                    {partner.modelTable.columns.map((col) => (
+                      <th
+                        key={col}
+                        className="p-4 text-xs lg:text-sm font-semibold text-foreground border-b border-border/60"
+                      >
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {partner.modelTable.rows.map((row) => (
+                    <tr key={row.model} className="border-b border-border/40 last:border-0">
+                      <th
+                        scope="row"
+                        className="p-4 align-top text-xs lg:text-sm font-medium text-foreground whitespace-nowrap"
+                      >
+                        {row.model}
+                      </th>
+                      <td className="p-4 align-top text-xs lg:text-sm text-muted-foreground">
+                        {row.roomFit}
+                      </td>
+                      <td className="p-4 align-top text-xs lg:text-sm text-muted-foreground">
+                        {row.highlights}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {partner.modelTable.sourceNote && (
+              <p className="text-xs text-muted-foreground mt-4">{partner.modelTable.sourceNote}</p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Vertiefende Abschnitte */}
+      {partner.sections && partner.sections.length > 0 && (
+        <section className="py-16 lg:py-24 bg-card/50">
+          <div className="section-container">
+            <div className="max-w-3xl space-y-10 lg:space-y-12">
+              {partner.sections.map((section) => (
+                <article key={section.title}>
+                  <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
+                    {section.title}
+                  </h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 40)}
+                      className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-4 last:mb-0"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                  {section.bullets && (
+                    <ul className="mt-4 space-y-2">
+                      {section.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+
       {/* References — nur anzeigen, wenn verifizierte Referenzen vorliegen */}
       {partner.references.length > 0 && (
         <section className="py-16 lg:py-24">
@@ -200,7 +292,36 @@ const PartnerPage = () => {
         </div>
       </section>
 
+      {/* Weiterführende Themen */}
+      {partner.relatedLinks && partner.relatedLinks.length > 0 && (
+        <section className="py-16 lg:py-24">
+          <div className="section-container">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
+              Weiterführende Themen
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+              {partner.relatedLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="group block rounded-xl border border-border/60 bg-card p-5 hover:border-primary/40 hover:shadow-md transition-all duration-300"
+                >
+                  <span className="flex items-center gap-2 text-sm lg:text-base font-semibold text-foreground">
+                    {link.label}
+                    <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <span className="block text-xs lg:text-sm text-muted-foreground mt-2">
+                    {link.description}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
+
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
