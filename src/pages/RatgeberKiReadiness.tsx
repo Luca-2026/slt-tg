@@ -6,8 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Clock, Calendar, CheckCircle, Phone, User } from "lucide-react";
-import { getBlogPostBySlug } from "@/data/blogPosts";
-import heroImage from "@/assets/blog/ki-readiness-hero.jpg";
+import { getBlogPostBySlug } from "@/data/ratgeberPosts";
+import heroImage from "@/assets/ratgeber/ki-readiness-hero.jpg";
 
 const checklist = [
   {
@@ -40,7 +40,7 @@ const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPostBySlug(slug) : undefined;
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <Navigate to="/ratgeber" replace />;
 
   return (
     <Layout>
@@ -48,7 +48,7 @@ const BlogArticle = () => {
         title={post.title}
         description={post.description}
         keywords={post.keywords}
-        canonical={`/blog/${post.slug}`}
+        canonical={`/ratgeber/${post.slug}`}
         type="article"
         ogImage={post.ogImage}
       />
@@ -57,7 +57,7 @@ const BlogArticle = () => {
         <div className="section-container px-4 sm:px-6 pt-8 lg:pt-12">
           <div className="max-w-3xl mx-auto">
             <Breadcrumbs items={[
-              { label: "Blog", href: "/blog" },
+              { label: "Ratgeber", href: "/ratgeber" },
               { label: post.title },
             ]} />
 
