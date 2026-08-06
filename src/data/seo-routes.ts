@@ -285,6 +285,42 @@ export const MAIN_ROUTES: SeoRoute[] = [
     lastmod: TODAY,
     breadcrumbs: [{ name: "Service & Wartung", path: "/service-wartung" }],
   },
+  {
+    path: "/digital-signage",
+    routeType: "page",
+    title: "Digital Signage Anbieter für Unternehmen | SLT Technology Group",
+    description:
+      "Digital Signage Anbieter für Unternehmen: Fachplanung, Displays und LED-Walls, CMS- und Netzwerk-Integration, Multi-Site-Rollout und Service nach ITIL v4 – aus NRW, bundesweit tätig.",
+    h1: "Digital Signage für Unternehmen",
+    intro: [
+      "Von der Empfangs-LED bis zum standortübergreifenden Display-Netz: Wir planen, installieren und betreiben Digital-Signage-Anlagen als AV-Systemhaus.",
+      "Inklusive CMS-Auswahl, Netzwerk- und IT-Integration, Room-Booking-Panels und Outdoor-LED – herstellerneutral und multi-site-fähig.",
+    ],
+    canonical: "/digital-signage",
+    ogImage: "/assets/hero-konferenzraum.jpg",
+    changefreq: "monthly",
+    priority: 0.95,
+    lastmod: TODAY,
+    breadcrumbs: [{ name: "Digital Signage", path: "/digital-signage" }],
+  },
+  {
+    path: "/videokonferenzanlage",
+    routeType: "page",
+    title: "Videokonferenzanlage für Konferenzräume | SLT Technology Group",
+    description:
+      "Videokonferenzanlage planen, installieren und betreiben lassen: Kamera, Audio, Display und Steuerung für Teams- und Zoom-Räume – herstellerneutral, IT-konform, mit Service.",
+    h1: "Videokonferenzanlage für Ihre Konferenzräume",
+    intro: [
+      "Kamera, Audio, Display und Bedienung als durchdachtes Gesamtsystem – vom Huddle Room bis zum Auditorium.",
+      "Passend zu Microsoft Teams, Zoom oder BYOD, abgestimmt mit Ihrer IT und optional im Managed-Service-Betrieb.",
+    ],
+    canonical: "/videokonferenzanlage",
+    ogImage: "/assets/hero-konferenzraum.jpg",
+    changefreq: "monthly",
+    priority: 0.95,
+    lastmod: TODAY,
+    breadcrumbs: [{ name: "Videokonferenzanlage", path: "/videokonferenzanlage" }],
+  },
 ];
 
 
