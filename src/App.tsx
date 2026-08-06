@@ -29,6 +29,8 @@ import RatgeberArticle from "./pages/RatgeberArticle";
 import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
 import ServiceWartung from "./pages/ServiceWartung";
 import PartnerPage from "./pages/PartnerPage";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
@@ -60,6 +62,8 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
           <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
           <Route path="/service-wartung" element={<ServiceWartung />} />
           <Route path="/partner/:slug" element={<PartnerPage />} />
