@@ -28,6 +28,8 @@ import Ratgeber from "./pages/Ratgeber";
 import RatgeberArticle from "./pages/RatgeberArticle";
 import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
 import ServiceWartung from "./pages/ServiceWartung";
+import DigitalSignage from "./pages/DigitalSignage";
+import Videokonferenzanlage from "./pages/Videokonferenzanlage";
 import PartnerPage from "./pages/PartnerPage";
 import RatgeberKiReadiness from "./pages/RatgeberKiReadiness";
 import { getLocalSEORoutes } from "./data/localSEO";
@@ -72,6 +74,8 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogRedirect />} />
           <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
           <Route path="/service-wartung" element={<ServiceWartung />} />
+          <Route path="/digital-signage" element={<DigitalSignage />} />
+          <Route path="/videokonferenzanlage" element={<Videokonferenzanlage />} />
           <Route path="/partner/:slug" element={<PartnerPage />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
