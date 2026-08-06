@@ -6,10 +6,13 @@
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
 import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
+import { solutionPages } from "./solutionPages";
+
 
 export type RouteType =
   | "home"
   | "page"
+  | "solution"
   | "localseo"
   | "ratgeber"
   
@@ -18,6 +21,7 @@ export type RouteType =
   | "job"
   | "partner"
   | "legal";
+
 
 export interface SeoBreadcrumb {
   name: string;
@@ -46,6 +50,7 @@ export interface SeoRoute {
   articleDate?: string; // ratgeber/news
   articleCategory?: string; // ratgeber/news
   articleImage?: string; // news
+  solutionSlug?: string; // solution
 }
 
 const TODAY = "2026-04-20";
@@ -714,8 +719,31 @@ export const RATGEBER_POST_ROUTES: SeoRoute[] = ratgeberPosts.map<SeoRoute>((pos
 
 
 
+// ───────────────────────────────────────────────────────────
+// Lösungs-Detailseiten (/loesungen/{slug})
+// ───────────────────────────────────────────────────────────
+export const SOLUTION_ROUTES: SeoRoute[] = solutionPages.map((p) => ({
+  path: `/loesungen/${p.slug}`,
+  routeType: "solution" as const,
+  title: p.title,
+  description: p.description,
+  h1: p.h1,
+  intro: [p.heroLead],
+  canonical: `/loesungen/${p.slug}`,
+  ogImage: p.image,
+  changefreq: "monthly",
+  priority: 0.8,
+  lastmod: TODAY,
+  breadcrumbs: [
+    { name: "Lösungen", path: "/loesungen" },
+    { name: p.navLabel, path: `/loesungen/${p.slug}` },
+  ],
+  solutionSlug: p.slug,
+}));
+
 export const ALL_ROUTES: SeoRoute[] = [
   ...MAIN_ROUTES,
+  ...SOLUTION_ROUTES,
   ...LOCALSEO_ROUTES,
   ...RATGEBER_ROUTES,
   ...NEWS_ROUTES,
@@ -727,3 +755,4 @@ export const ALL_ROUTES: SeoRoute[] = [
 ];
 
 export { isNoindex };
+

@@ -191,7 +191,7 @@ const ServiceWartung = () => {
                 <a
                   key={service.id}
                   href={`#${service.id}`}
-                  className="block group scroll-hidden"
+                  className={`block group scroll-hidden ${gridVisible ? "scroll-visible" : ""}`}
                   style={{ transitionDelay: `${index * 0.06}s` }}
                 >
                   <Card className="bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col">

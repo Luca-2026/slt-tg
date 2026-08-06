@@ -8,6 +8,7 @@ import { TrailingSlashRedirect } from "@/components/TrailingSlashRedirect";
 import Index from "./pages/Index";
 import Leistungen from "./pages/Leistungen";
 import Loesungen from "./pages/Loesungen";
+import SolutionPage from "./pages/SolutionPage";
 import Technologien from "./pages/Technologien";
 import Finanzierung from "./pages/Finanzierung";
 import Projekte from "./pages/Projekte";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/leistungen" element={<Leistungen />} />
           <Route path="/loesungen" element={<Loesungen />} />
+          <Route path="/loesungen/:slug" element={<SolutionPage />} />
           <Route path="/technologien" element={<Technologien />} />
           <Route path="/finanzierung" element={<Finanzierung />} />
           <Route path="/projekte" element={<Projekte />} />

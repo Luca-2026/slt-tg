@@ -224,4 +224,34 @@
   <url><loc>https://www.slt-tg.de/impressum</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.slt-tg.de/datenschutz</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.slt-tg.de/agb</loc><lastmod>2026-03-14</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/kollaborationsraeume-kreativzonen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/auditorien-veranstaltungsraeume</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/bildung-schulung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/industrie-produktion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/it-infrastruktur-netzwerk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.slt-tg.de/loesungen/videoueberwachung-sicherheit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
