@@ -719,6 +719,31 @@ const RatgeberArticle = () => {
 
             {guide.content}
 
+            {/* Money-Keyword-Anker zeigen bewusst auf die Pillar-Seiten,
+                nicht auf weitere Ratgeber-Beiträge. */}
+            <div className="mt-8 sm:mt-10 p-5 rounded-xl border border-border bg-muted/30">
+              <h2 className="text-base sm:text-lg font-bold text-foreground mb-3">Passende Leistungen von SLT Technology Group</h2>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/konferenzraum-ausstattung" className="text-primary hover:underline font-medium">
+                    Konferenzraum-Ausstattung planen und umsetzen lassen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/service-wartung" className="text-primary hover:underline font-medium">
+                    Wartung und Service für Konferenztechnik
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leistungen" className="text-primary hover:underline font-medium">
+                    AV-Systemintegration als Medientechnik-Systemhaus
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+
+
             {/* CTA */}
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border">
               <h2 className="text-lg sm:text-xl font-bold text-foreground mb-3">

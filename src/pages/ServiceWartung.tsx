@@ -301,6 +301,38 @@ const ServiceWartung = () => {
         </div>
       </section>
 
+      {/* Vertiefende Ratgeber – informationelle Ankertexte, damit
+          Service-/Wartungs-Keywords auf dieser Pillar-Page bleiben. */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="section-container">
+          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-2">Hintergrundwissen im Ratgeber</h2>
+          <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+            Service, Wartung und Managed Rooms erbringen wir über diese Seite. Ergänzendes
+            Hintergrundwissen zum Betrieb moderner Medientechnik finden Sie in unseren Ratgebern.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { slug: "ki-readiness-av-medientechnik-2026", label: "Ratgeber: KI-Readiness und Predictive Maintenance verstehen" },
+              { slug: "konferenztechnik-raumgroesse", label: "Ratgeber: Technik je Raumtyp verstehen" },
+            ].map((g) => (
+              <Link
+                key={g.slug}
+                to={`/ratgeber/${g.slug}`}
+                className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
+              >
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {g.label}
+                </span>
+                <span className="inline-flex items-center text-xs text-primary mt-3">
+                  Weiterlesen <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">

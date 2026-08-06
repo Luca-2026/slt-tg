@@ -272,6 +272,39 @@ const KonferenzraumAusstattung = () => {
         <RoomCard key={room.id} room={room} index={index} />
       ))}
 
+      {/* Vertiefende Ratgeber – bewusst informationelle Ankertexte,
+          damit die Money-Keywords bei dieser Pillar-Page bleiben. */}
+      <section className="py-12 lg:py-16 bg-muted/30">
+        <div className="section-container">
+          <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-2">Hintergrundwissen im Ratgeber</h2>
+          <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
+            Die Planung und Umsetzung Ihrer Konferenzraum-Ausstattung übernehmen wir auf dieser Seite.
+            Die folgenden Ratgeber liefern ergänzendes Hintergrundwissen zur Entscheidungsfindung.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { slug: "konferenztechnik-raumgroesse", label: "Ratgeber: Technik je Raumtyp verstehen" },
+              { slug: "teams-rooms-vs-zoom-rooms", label: "Ratgeber: Plattform-Vergleich Teams / Zoom" },
+              { slug: "konferenzraum-kosten", label: "Ratgeber: Kostenfaktoren im Überblick" },
+            ].map((g) => (
+              <Link
+                key={g.slug}
+                to={`/ratgeber/${g.slug}`}
+                className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
+              >
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {g.label}
+                </span>
+                <span className="inline-flex items-center text-xs text-primary mt-3">
+                  Weiterlesen <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Multi-Site CTA */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
