@@ -11,9 +11,9 @@ const footerLinks = {
   ],
   loesungen: [
     { name: "Konferenzraum-Ausstattung", href: "/konferenzraum-ausstattung" },
-    { name: "Konferenzräume", href: "/loesungen#konferenzraum-detail" },
+    { name: "Videokonferenzanlage", href: "/videokonferenzanlage" },
+    { name: "Digital Signage", href: "/digital-signage" },
     { name: "Auditorien", href: "/loesungen#auditorium-detail" },
-    { name: "Digital Signage", href: "/loesungen#empfang-detail" },
     { name: "Technologien", href: "/technologien" },
   ],
   hersteller: [
