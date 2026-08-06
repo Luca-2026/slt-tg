@@ -22,6 +22,7 @@ import {
 const solutions = [
   {
     id: "konferenzraum",
+    href: "/konferenzraum-ausstattung",
     icon: Video,
     title: "Konferenzräume & Meeting-Spaces",
     subtitle: "Produktive Zusammenarbeit – vor Ort und remote",
@@ -39,6 +40,7 @@ const solutions = [
   },
   {
     id: "kollaboration",
+    href: "/loesungen/kollaborationsraeume-kreativzonen",
     icon: Users,
     title: "Kollaborationsräume & Kreativzonen",
     subtitle: "Raum für Ideen und agiles Arbeiten",
@@ -56,6 +58,7 @@ const solutions = [
   },
   {
     id: "auditorium",
+    href: "/loesungen/auditorien-veranstaltungsraeume",
     icon: Presentation,
     title: "Auditorien & Veranstaltungsräume",
     subtitle: "Professionelle Präsentationen vor großem Publikum",
@@ -73,6 +76,7 @@ const solutions = [
   },
   {
     id: "empfang",
+    href: "/digital-signage",
     icon: Building2,
     title: "Empfangsbereiche & Digital Signage",
     subtitle: "Der erste Eindruck zählt",
@@ -90,6 +94,7 @@ const solutions = [
   },
   {
     id: "bildung",
+    href: "/loesungen/bildung-schulung",
     icon: GraduationCap,
     title: "Bildung & Schulung",
     subtitle: "Moderne Lernumgebungen gestalten",
@@ -107,6 +112,7 @@ const solutions = [
   },
   {
     id: "industrie",
+    href: "/loesungen/industrie-produktion",
     icon: Factory,
     title: "Industrie & Produktion",
     subtitle: "Robuste Lösungen für anspruchsvolle Umgebungen",
@@ -124,6 +130,7 @@ const solutions = [
   },
   {
     id: "it-netzwerk",
+    href: "/loesungen/it-infrastruktur-netzwerk",
     icon: Network,
     title: "IT-Infrastruktur & Netzwerk",
     subtitle: "Das digitale Fundament Ihres Unternehmens",
@@ -141,6 +148,7 @@ const solutions = [
   },
   {
     id: "videoueberwachung",
+    href: "/loesungen/videoueberwachung-sicherheit",
     icon: Eye,
     title: "Videoüberwachung & Sicherheit",
     subtitle: "Schutz für Gebäude, Gelände und Werte",
@@ -229,12 +237,17 @@ function SolutionDetailSection({ solution, index }: { solution: typeof solutions
               </div>
             </div>
 
-            <Button asChild>
-              <Link to="/projektanfrage">
-                Projekt anfragen
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild>
+                <Link to={solution.href}>
+                  Zur Detailseite
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/projektanfrage">Projekt anfragen</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -297,16 +310,16 @@ const Loesungen = () => {
 
             {/* Quick nav pills */}
             <div className="flex flex-wrap justify-center gap-2 mt-10">
-              {solutions.slice(0, 6).map((s) => (
-                <a
+              {solutions.map((s) => (
+                <Link
                   key={s.id}
-                  href={`#${s.id}-detail`}
+                  to={s.href}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-background/80 backdrop-blur-sm text-xs lg:text-sm text-muted-foreground hover:border-primary/40 hover:text-primary transition-all duration-200"
                 >
                   <s.icon className="h-3 w-3 lg:h-3.5 lg:w-3.5" />
                   <span className="hidden sm:inline">{s.title.split(" ")[0]}</span>
                   <span className="sm:hidden">{s.title.split(" ")[0]}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -318,9 +331,9 @@ const Loesungen = () => {
         <div className="section-container">
           <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
             {solutions.map((solution, index) => (
-              <a
+              <Link
                 key={solution.id}
-                href={`#${solution.id}-detail`}
+                to={solution.href}
                 className={`block group scroll-hidden ${gridVisible ? "scroll-visible" : ""}`}
                 style={{ transitionDelay: `${index * 0.06}s` }}
               >
@@ -343,11 +356,11 @@ const Loesungen = () => {
                   </CardHeader>
                   <CardContent className="p-3 lg:p-4 pt-0 mt-auto">
                     <span className="text-xs text-primary inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Details ansehen <ArrowRight className="h-3 w-3" />
+                      Zur Detailseite <ArrowRight className="h-3 w-3" />
                     </span>
                   </CardContent>
                 </Card>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

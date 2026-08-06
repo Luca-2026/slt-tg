@@ -30,7 +30,7 @@ const SolutionPage = () => {
   return (
     <Layout>
       <SEOHead
-        title={solution.title}
+        title={solution.title.replace(" | SLT Technology Group", "")}
         description={solution.description}
         keywords={solution.keywords}
         canonical={canonical}
