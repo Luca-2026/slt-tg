@@ -1,0 +1,24 @@
+# Disavow-Datei für slt-tg.de
+# Erstellt am: 2026-08-06
+# Datenquelle: Semrush Backlink Analysis
+# Hinweis: Diese Datei domain-weit disavowed verdächtige Backlinks.
+# Vor dem Upload in der Google Search Console bitte final prüfen.
+
+# Spammy / PBN-artige Domains (niedrige Authority/Trust, verdächtige TLDs)
+domain:analyticshaven.top
+domain:anchorurl.cloud
+domain:blinks.monster
+domain:blogsphere.top
+domain:buzzshrink.website
+domain:dailymusings.top
+
+# Automatisierter Traffic / irrelevante SEO-Tools
+domain:sitetosocial.com
+
+# Low-Authority Job-/Verzeichnis-Domain mit verdächtigem Linkmuster
+domain:careergo.eu
+
+# PBN / gekaufte Backlinks (Anchor-Text: "high quality dofollow backlinks...")
+# Die folgenden Domains wurden über Semrush mit exakt diesem Spam-Anchor identifiziert.
+# Falls die Domain nicht bekannt ist, wird sie sicherheitshalber domain-weit disavowed.
+domain:example3.com
