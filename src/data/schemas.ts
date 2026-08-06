@@ -12,6 +12,7 @@ import { getProjectBySlug, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
+import { getSolutionPage } from "./solutionPages";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -202,6 +203,31 @@ export function buildPageSchemas(route: SeoRoute): object[] {
       isPartOf: { "@id": `${BASE_URL}/#website` },
       publisher: ORG_REF,
     },
+    buildBreadcrumbList(route),
+  ];
+}
+
+// ─────────────────────────────────────────────
+// Lösungs-Detailseiten (/loesungen/{slug})
+// ─────────────────────────────────────────────
+export function buildSolutionSchemas(route: SeoRoute): object[] {
+  const solution = route.solutionSlug ? getSolutionPage(route.solutionSlug) : undefined;
+  if (!solution) return buildPageSchemas(route);
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: solution.h1,
+      serviceType: solution.navLabel,
+      provider: ORG_REF,
+      areaServed: [
+        { "@type": "State", name: "Nordrhein-Westfalen" },
+        { "@type": "Country", name: "Deutschland" },
+      ],
+      url: `${BASE_URL}${route.path}`,
+      description: solution.description,
+    },
+    buildFAQPageSchema(solution.faqs),
     buildBreadcrumbList(route),
   ];
 }
@@ -427,6 +453,8 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
       if (job) return buildJobPostingSchemas(job, route);
       return buildGenericSchemas(route);
     }
+    case "solution":
+      return buildSolutionSchemas(route);
     case "partner":
       return buildVendorPartnerSchemas(route);
     case "legal":

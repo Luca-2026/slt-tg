@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import sltLogo from "@/assets/slt-logo.png";
+import { solutionsNav } from "@/data/solutionPages";
 
 const topNavigation = [
   { name: "Startseite", href: "/" },
@@ -16,12 +17,7 @@ const topNavigation = [
   { name: "Über uns", href: "/ueber-uns" },
 ];
 
-const solutionsItems = [
-  { name: "Lösungen Übersicht", href: "/loesungen" },
-  { name: "Konferenzraum-Ausstattung", href: "/konferenzraum-ausstattung" },
-  { name: "Videokonferenzanlage", href: "/videokonferenzanlage" },
-  { name: "Digital Signage", href: "/digital-signage" },
-];
+const solutionsItems = solutionsNav;
 
 function isSolutionsActive(pathname: string) {
   return solutionsItems.some((item) => item.href === pathname);

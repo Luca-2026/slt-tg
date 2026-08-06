@@ -50,6 +50,7 @@ export interface SeoRoute {
   articleDate?: string; // ratgeber/news
   articleCategory?: string; // ratgeber/news
   articleImage?: string; // news
+  solutionSlug?: string; // solution
 }
 
 const TODAY = "2026-04-20";
