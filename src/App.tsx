@@ -74,6 +74,8 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogRedirect />} />
           <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
           <Route path="/service-wartung" element={<ServiceWartung />} />
+          <Route path="/digital-signage" element={<DigitalSignage />} />
+          <Route path="/videokonferenzanlage" element={<Videokonferenzanlage />} />
           <Route path="/partner/:slug" element={<PartnerPage />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
