@@ -57,9 +57,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/",
     routeType: "home",
-    title: "AV-Systemintegration für Konzerne & Enterprise NRW | SLT Technology Group",
+    title: "Konferenzraum-Ausstattung, Videokonferenz & Digital Signage | SLT Technology Group",
     description:
-      "Enterprise-AV-Systemhaus für Konzerne und großen Mittelstand: Standardisierte Konferenzraum-Rollouts, Multi-Site-Integration und Managed Services. Standorte Krefeld & Bonn, NRW-weit.",
+      "AV-Systemhaus für Konferenzraum-Ausstattung, Videokonferenzanlagen und Digital Signage: Fachplanung, Multi-Site-Rollout und Service nach ITIL v4. Standorte Krefeld & Bonn, NRW-weit.",
     h1: "Konferenz- & Medientechnik aus einer Hand",
     intro: [
       "Wir planen, integrieren und betreiben Konferenz- und Medientechnik für Konzerne, Industrie und großen Mittelstand in Deutschland und Europa.",
