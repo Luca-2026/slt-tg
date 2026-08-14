@@ -176,7 +176,6 @@ const highlightSlides: HighlightSlide[] = [
 ];
 
 const News = () => {
-  const featuredArticle = newsArticles.find((article) => article.featured);
   const regularArticles = newsArticles.filter((article) => !article.featured);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
