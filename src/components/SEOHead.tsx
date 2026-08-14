@@ -20,7 +20,7 @@ export function SEOHead({
   structuredData,
 }: SEOHeadProps) {
   const baseUrl = "https://www.slt-tg.de";
-  const fullTitle = `${title} | SLT Technology Group`;
+  const fullTitle = /\|\s*SLT/.test(title) ? title : `${title} | SLT AV`;
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
   const fullOgImage = ogImage.startsWith("http") ? ogImage : `${baseUrl}${ogImage}`;
 
