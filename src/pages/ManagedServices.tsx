@@ -82,14 +82,16 @@ const ManagedServices = () => {
                 Standorte hinweg und abgestimmt mit Ihrer IT.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg" className="btn-glow">
-                  <Link to="/projektanfrage">
+                <Button asChild size="lg" className="btn-glow w-full sm:w-auto">
+                  <Link to="/projektanfrage" className="w-full justify-center whitespace-normal text-center">
                     Managed-Service-Gespräch vereinbaren
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/service-wartung">Service &amp; Wartung im Überblick</Link>
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Link to="/service-wartung" className="w-full justify-center whitespace-normal text-center">
+                    Service &amp; Wartung im Überblick
+                  </Link>
                 </Button>
               </div>
             </div>
