@@ -5,7 +5,6 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { TypewriterText } from "@/components/home/TypewriterText";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { WhitepaperBadge } from "@/components/home/WhitepaperBadge";
-const heroImage = "/assets/hero-konferenzraum.jpg";
 
 const inspirationImages = [
   "/assets/inspirationen/gea-display.jpg",
@@ -247,14 +246,18 @@ export function HeroSection() {
 
       {/* ===== TABLET HERO (sm to lg) ===== */}
       <section className="relative hidden sm:flex lg:hidden items-center min-h-[100svh] overflow-hidden -mt-20">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-            className="w-full h-full object-cover object-[50%_center]"
-            fetchPriority="high"
-            loading="eager"
-          />
+        <div className="absolute inset-0 bg-[#0a2a42]">
+          <picture className="block w-full h-full">
+            <source srcSet="/assets/hero-konferenzraum.webp" type="image/webp" />
+            <img
+              src="/assets/hero-konferenzraum-opt.jpg"
+              alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+              className="w-full h-full object-cover object-[50%_center]"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a2a42]/90 via-[#0a2a42]/70 to-[#0a2a42]/30" />
         </div>
 
@@ -309,16 +312,21 @@ export function HeroSection() {
       {/* ===== DESKTOP HERO (lg+) ===== */}
       <section className="relative hidden lg:flex items-center min-h-screen overflow-hidden -mt-24">
         {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
-            className="w-full h-full object-cover object-center"
-            fetchPriority="high"
-            loading="eager"
-          />
+        <div className="absolute inset-0 bg-[#0a2a42]">
+          <picture className="block w-full h-full">
+            <source srcSet="/assets/hero-konferenzraum.webp" type="image/webp" />
+            <img
+              src="/assets/hero-konferenzraum-opt.jpg"
+              alt="Moderner Konferenzraum mit professioneller AV-Technik von SLT Technology Group"
+              className="w-full h-full object-cover object-center"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
         </div>
+
 
         {/* Hotspots - Desktop only, positioned relative to image content */}
         <HeroHotspots />
