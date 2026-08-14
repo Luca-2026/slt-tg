@@ -34,18 +34,19 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
       <nav className="section-container flex items-center justify-between h-20 lg:h-24 overflow-visible">
         {/* Logo */}
-        <Link to="/" className="flex items-center overflow-hidden">
-          <img src={sltLogo} alt="SLT Technology Group" className="h-32 lg:h-40 w-auto object-contain scale-110" />
+        <Link to="/" className="flex shrink-0 items-center overflow-hidden">
+          <img src={sltLogo} alt="SLT Technology Group" className="h-28 nav:h-32 2xl:h-40 w-auto object-contain scale-110" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6 whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-4 nav:gap-5 2xl:gap-6 whitespace-nowrap">
           {topNavigation.slice(0, 2).map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
+                item.href === "/" && "hidden nav:inline",
                 location.pathname === item.href
                   ? "text-primary"
                   : "text-muted-foreground"
@@ -119,7 +120,7 @@ export function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <Button asChild className="btn-glow">
             <Link to="/kontakt">Kontakt</Link>
           </Button>
@@ -128,7 +129,8 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
+          className="xl:hidden p-2 text-muted-foreground hover:text-foreground"
+          aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -137,7 +139,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-background border-b border-border animate-fade-in">
+        <div className="xl:hidden bg-background border-b border-border animate-fade-in">
           <div className="section-container py-4 space-y-1">
             {topNavigation.slice(0, 2).map((item) => (
               <Link

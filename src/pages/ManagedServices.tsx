@@ -50,9 +50,9 @@ const ManagedServices = () => {
   return (
     <Layout>
       <SEOHead
-        title="Managed Services für AV- & Konferenztechnik"
-        description="Managed Services für Konferenz- und Medientechnik: Service Desk, proaktives 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4 – multi-site-fähig, herstellerneutral, aus NRW."
-        keywords="Managed Services, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
+        title="Managed Services für Medientechnik"
+        description="Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW."
+        keywords="Managed Services, Managed Service Provider, Managed IT Services, Wartung Medientechnik, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
         canonical="/managed-services"
       />
 
@@ -67,7 +67,7 @@ const ManagedServices = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            <div>
+            <div className="min-w-0">
               <Breadcrumbs items={[{ label: "Managed Services" }]} />
               <Badge variant="outline" className="mb-6">
                 Betrieb nach ITIL v4
@@ -82,14 +82,16 @@ const ManagedServices = () => {
                 Standorte hinweg und abgestimmt mit Ihrer IT.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg" className="btn-glow">
-                  <Link to="/projektanfrage">
+                <Button asChild size="lg" className="btn-glow w-full sm:w-auto">
+                  <Link to="/projektanfrage" className="w-full justify-center whitespace-normal text-center">
                     Managed-Service-Gespräch vereinbaren
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/service-wartung">Service &amp; Wartung im Überblick</Link>
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Link to="/service-wartung" className="w-full justify-center whitespace-normal text-center">
+                    Service &amp; Wartung im Überblick
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -263,7 +265,7 @@ const ManagedServices = () => {
             className={`scroll-hidden-blur ${whyVisible ? "scroll-visible-blur" : ""}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
-              Warum SLT Technology Group als Managed-Service-Partner
+              Warum SLT Technology Group als Managed Service Provider für AV und IT
             </h2>
             <div className="grid sm:grid-cols-2 gap-5 max-w-4xl">
               {reasons.map((r) => (

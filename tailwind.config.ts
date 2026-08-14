@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      screens: {
+        nav: "1400px",
+      },
       fontFamily: {
         sans: ['Montserrat', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
