@@ -9,6 +9,7 @@ import { solutionsNav } from "@/data/solutionPages";
 const topNavigation = [
   { name: "Startseite", href: "/" },
   { name: "Leistungen", href: "/leistungen" },
+  { name: "Managed Services", href: "/managed-services" },
   { name: "Technologien", href: "/technologien" },
   { name: "Finanzierung", href: "/finanzierung" },
   { name: "Projekte", href: "/projekte" },
