@@ -33,6 +33,10 @@
     --accent: 33 100% 50%;
     --accent-foreground: 0 0% 100%;
 
+    /* Hero - dark SLT blue base behind hero imagery (#0a2a42) */
+    --hero: 205 74% 15%;
+    --hero-foreground: 0 0% 100%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
