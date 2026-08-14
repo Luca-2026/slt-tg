@@ -161,6 +161,20 @@
     transform: translateX(0);
   }
 
+  /* Mobile first: horizontale Einblend-Animationen erzeugen auf schmalen
+     Viewports horizontalen Overflow – dort vertikal einblenden. */
+  @media (max-width: 767px) {
+    .scroll-hidden-left,
+    .scroll-hidden-right {
+      transform: translateY(24px);
+    }
+
+    .scroll-visible-x {
+      transform: translateY(0);
+    }
+  }
+
+
   .scroll-hidden-scale {
     opacity: 0;
     transform: scale(0.9);
