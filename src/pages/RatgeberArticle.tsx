@@ -735,7 +735,7 @@ const RatgeberArticle = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/leistungen" className="text-primary hover:underline font-medium">
+                  <Link to="/loesungen" className="text-primary hover:underline font-medium">
                     AV-Systemintegration als Medientechnik-Systemhaus
                   </Link>
                 </li>

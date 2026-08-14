@@ -4,8 +4,8 @@ import sltLogo from "@/assets/slt-logo.png";
 
 const footerLinks = {
   leistungen: [
-    { name: "Installation & Integration", href: "/leistungen#integration" },
-    { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
+    { name: "Installation & Integration", href: "/loesungen" },
+    { name: "Fachplanung & Beratung", href: "/loesungen" },
     { name: "Service & Wartung (ITIL v4)", href: "/service-wartung" },
     { name: "Managed Services", href: "/managed-services" },
     { name: "Finanzierung", href: "/finanzierung" },

@@ -112,7 +112,7 @@ export function IntroSection() {
               Wir bringen Ihren Konferenzraum auf die nächste Stufe!
             </p>
             <Button asChild variant="outline" size="lg" className="group/btn">
-              <Link to="/leistungen">
+              <Link to="/loesungen">
                 Unsere Leistungen
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
               </Link>

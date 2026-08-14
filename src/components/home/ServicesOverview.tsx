@@ -11,7 +11,7 @@ const services = [
     description:
       "Bedarfsgerechte Konzepte und Planungen für Ihre Konferenzräume und Meeting Spaces. Wir beraten herstellerunabhängig.",
     features: ["Bedarfsanalyse", "Raumkonzepte", "Wirtschaftlichkeitsbetrachtung"],
-    link: "/leistungen#konzeption",
+    link: "/loesungen",
   },
   {
     icon: FileText,
@@ -19,7 +19,7 @@ const services = [
     description:
       "Herstellerneutrale Leistungsverzeichnisse, objektive Bewertungskriterien und professionelle Vergabebegleitung.",
     features: ["Leistungsverzeichnisse", "Bewertungsmatrizen", "Vergabebegleitung"],
-    link: "/leistungen#fachplanung",
+    link: "/loesungen",
   },
   {
     icon: Wrench,
@@ -27,7 +27,7 @@ const services = [
     description:
       "Professionelle Installation und Inbetriebnahme Ihrer AV- und IT-Systeme. Nahtlose Integration in Ihre bestehende Infrastruktur.",
     features: ["Montage & Verkabelung", "IT-Integration", "IT-Infrastruktur & Netzwerk"],
-    link: "/leistungen#integration",
+    link: "/loesungen",
   },
   {
     icon: Headphones,
@@ -35,7 +35,7 @@ const services = [
     description:
       "Zuverlässiger After-Sales Support, proaktives Monitoring und strukturierte Serviceprozesse nach ITIL v4.",
     features: ["Service Desk", "Managed Rooms", "Wartung & Updates"],
-    link: "/leistungen#service",
+    link: "/service-wartung",
   },
 ];
 
@@ -107,7 +107,7 @@ export function ServicesOverview() {
           }`}
         >
           <Button asChild variant="outline" size="lg">
-            <Link to="/leistungen">
+            <Link to="/loesungen">
               Alle Leistungen im Detail
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
