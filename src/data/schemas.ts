@@ -13,6 +13,7 @@ import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } f
 import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
 import { getSolutionPage } from "./solutionPages";
+import { msModules, msFaqs } from "./managedServices";
 
 const BASE_URL = "https://www.slt-tg.de";
 
