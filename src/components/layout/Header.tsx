@@ -39,13 +39,14 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden nav:flex items-center gap-4 2xl:gap-6 whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-4 nav:gap-5 2xl:gap-6 whitespace-nowrap">
           {topNavigation.slice(0, 2).map((item) => (
             <Link
               key={item.name}
               to={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
+                item.href === "/" && "hidden nav:inline",
                 location.pathname === item.href
                   ? "text-primary"
                   : "text-muted-foreground"
@@ -119,7 +120,7 @@ export function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden nav:block">
+        <div className="hidden xl:block">
           <Button asChild className="btn-glow">
             <Link to="/kontakt">Kontakt</Link>
           </Button>
@@ -128,7 +129,7 @@ export function Header() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          className="nav:hidden p-2 text-muted-foreground hover:text-foreground"
+          className="xl:hidden p-2 text-muted-foreground hover:text-foreground"
           aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -138,7 +139,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="nav:hidden bg-background border-b border-border animate-fade-in">
+        <div className="xl:hidden bg-background border-b border-border animate-fade-in">
           <div className="section-container py-4 space-y-1">
             {topNavigation.slice(0, 2).map((item) => (
               <Link
