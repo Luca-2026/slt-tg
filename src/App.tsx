@@ -29,6 +29,7 @@ import Ratgeber from "./pages/Ratgeber";
 import RatgeberArticle from "./pages/RatgeberArticle";
 import KonferenzraumAusstattung from "./pages/KonferenzraumAusstattung";
 import ServiceWartung from "./pages/ServiceWartung";
+import ManagedServices from "./pages/ManagedServices";
 import DigitalSignage from "./pages/DigitalSignage";
 import Videokonferenzanlage from "./pages/Videokonferenzanlage";
 import PartnerPage from "./pages/PartnerPage";
