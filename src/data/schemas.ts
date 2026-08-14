@@ -237,6 +237,42 @@ export function buildGenericSchemas(route: SeoRoute): object[] {
 }
 
 // ─────────────────────────────────────────────
+// Managed Services (/managed-services)
+// ─────────────────────────────────────────────
+export function buildManagedServicesSchemas(route: SeoRoute): object[] {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${BASE_URL}/managed-services#service`,
+      name: "Managed Services für AV- und Konferenztechnik",
+      serviceType: "AV Managed Services",
+      provider: ORG_REF,
+      areaServed: [
+        { "@type": "State", name: "Nordrhein-Westfalen" },
+        { "@type": "Country", name: "Deutschland" },
+      ],
+      url: `${BASE_URL}/managed-services`,
+      description: route.description,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Managed-Service-Module",
+        itemListElement: msModules.map((m) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: m.title,
+            description: m.description,
+          },
+        })),
+      },
+    },
+    buildFAQPageSchema(msFaqs),
+    buildBreadcrumbList(route),
+  ];
+}
+
+// ─────────────────────────────────────────────
 // Project list (/projekte)
 // ─────────────────────────────────────────────
 const FEATURED_PROJECTS = [
