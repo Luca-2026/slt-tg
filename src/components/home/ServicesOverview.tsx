@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Wrench, FileText, Monitor, ArrowRight, Headphones, Lightbulb } from "lucide-react";
+import { Wrench, FileText, Monitor, ArrowRight, Headphones, Lightbulb, LifeBuoy, Download } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -118,6 +118,36 @@ export function ServicesOverview() {
               <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
             </Link>
           ))}
+
+          <Link
+            to="/managed-services"
+            className="flex items-center gap-3 px-4 py-4 border-b border-border active:bg-muted/50 transition-colors"
+          >
+            <span className="w-10 h-10 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+              <LifeBuoy className="h-5 w-5 text-primary" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-semibold text-foreground">Managed Services</span>
+              <span className="block text-xs text-muted-foreground">Laufender Betrieb für Konferenztechnik</span>
+            </span>
+            <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+          </Link>
+
+          <a
+            href="/downloads/slt-wartungskonzept-outdoor-led.pdf"
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-3 px-4 py-4 active:bg-muted/50 transition-colors"
+          >
+            <span className="w-10 h-10 shrink-0 rounded-lg bg-accent/10 flex items-center justify-center">
+              <FileText className="h-5 w-5 text-accent" />
+            </span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-sm font-semibold text-foreground">Whitepaper Outdoor-LED ↗</span>
+              <span className="block text-xs text-muted-foreground">Service- &amp; Wartungskonzept (PDF)</span>
+            </span>
+            <Download className="h-4 w-4 shrink-0 text-accent" />
+          </a>
         </div>
 
         <div 
