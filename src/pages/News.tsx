@@ -240,8 +240,8 @@ const News = () => {
               {highlightSlides.map((slide) => (
                 <CarouselItem key={slide.key}>
                   <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
-                    <div className="grid lg:grid-cols-2 gap-8">
-                      <div className="aspect-video lg:aspect-auto bg-black flex items-center justify-center overflow-hidden">
+                    <div className="grid lg:grid-cols-2 lg:gap-8">
+                      <div className="aspect-[16/9] lg:aspect-auto lg:min-h-[320px] bg-muted flex items-center justify-center overflow-hidden">
                         {slide.videoBackground ? (
                           <video
                             src={slide.videoBackground}
@@ -252,40 +252,43 @@ const News = () => {
                           <img
                             src={slide.image}
                             alt={`${slide.title} – ${slide.category} | SLT Technology Group`}
-                            className="w-full h-full object-contain p-4"
+                            width={1280}
+                            height={720}
+                            loading="lazy"
+                            className="w-full h-full object-cover"
                           />
                         ) : (
-                          <div className="text-center p-8">
+                          <div className="text-center p-6">
                             {slide.kind === "Ratgeber" ? (
-                              <BookOpen className="h-16 w-16 text-primary mx-auto mb-4" />
+                              <BookOpen className="h-12 w-12 sm:h-16 sm:w-16 text-primary mx-auto mb-3" />
                             ) : (
-                              <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
+                              <MapPin className="h-12 w-12 sm:h-16 sm:w-16 text-primary mx-auto mb-3" />
                             )}
                             <p className="text-muted-foreground text-sm">{slide.category}</p>
                           </div>
                         )}
                       </div>
-                      <div className="p-6 lg:p-8 flex flex-col justify-center">
-                        <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <div className="p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                           <Badge>{slide.kind}</Badge>
                           <Badge variant="outline">{slide.category}</Badge>
                           {slide.date && (
-                            <span className="text-sm text-muted-foreground flex items-center gap-1">
-                              <Calendar className="h-4 w-4" />
+                            <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1">
+                              <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                               {new Date(slide.date).toLocaleDateString("de-DE", {
                                 day: "numeric", month: "long", year: "numeric",
                               })}
                             </span>
                           )}
                         </div>
-                        <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-3">
+                        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-2 sm:mb-3 leading-snug">
                           {slide.title}
                         </h2>
-                        <p className="text-sm lg:text-base text-muted-foreground mb-6 leading-relaxed line-clamp-4">
+                        <p className="text-sm lg:text-base text-muted-foreground mb-5 sm:mb-6 leading-relaxed line-clamp-3 sm:line-clamp-4">
                           {slide.excerpt}
                         </p>
-                        <div className="flex items-center gap-4">
-                          <Button asChild>
+                        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                          <Button asChild className="w-full sm:w-auto">
                             <Link to={slide.to}>
                               {slide.kind === "Ratgeber" ? "Ratgeber lesen" : "Weiterlesen"}
                               <ArrowRight className="ml-2 h-4 w-4" />
@@ -297,6 +300,8 @@ const News = () => {
                           </span>
                         </div>
                       </div>
+                    </div>
+
                     </div>
                   </Card>
                 </CarouselItem>
