@@ -308,7 +308,7 @@ const Videokonferenzanlage = () => {
           <p className="text-sm text-muted-foreground mb-6 max-w-2xl">
             Videokonferenz ist Teil der Raumausstattung – diese Seiten ergänzen die Planung.
           </p>
-          <div className="grid sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung nach Raumgröße" },
               { to: "/partner/yealink", label: "Yealink MeetingBar & MeetingBoard" },
@@ -318,12 +318,12 @@ const Videokonferenzanlage = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
+                className="group flex h-full flex-col justify-between gap-3 p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
               >
-                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                <span className="block text-sm font-medium text-foreground leading-snug group-hover:text-primary transition-colors">
                   {l.label}
                 </span>
-                <span className="inline-flex items-center text-xs text-primary mt-3">
+                <span className="inline-flex items-center text-xs font-medium text-primary">
                   Ansehen{" "}
                   <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </span>

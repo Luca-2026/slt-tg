@@ -245,8 +245,8 @@ const DigitalSignage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <item.icon className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{item.title}</h2>
+              <div className="min-w-0">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2 break-words hyphens-auto">{item.title}</h2>
                 <p className="text-sm lg:text-base text-muted-foreground max-w-2xl">
                   {item.description}
                 </p>
@@ -324,7 +324,7 @@ const DigitalSignage = () => {
             Digital Signage ist selten ein isoliertes Projekt – meist gehören Konferenzräume,
             Videokonferenz und der laufende Betrieb dazu.
           </p>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung planen lassen" },
               { to: "/videokonferenzanlage", label: "Videokonferenzanlage einrichten lassen" },
@@ -333,12 +333,12 @@ const DigitalSignage = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
+                className="group flex h-full flex-col justify-between gap-3 p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all"
               >
-                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                <span className="block text-sm font-medium text-foreground leading-snug group-hover:text-primary transition-colors">
                   {l.label}
                 </span>
-                <span className="inline-flex items-center text-xs text-primary mt-3">
+                <span className="inline-flex items-center text-xs font-medium text-primary">
                   Ansehen{" "}
                   <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </span>
