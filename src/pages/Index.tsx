@@ -15,8 +15,8 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="AV-Systemintegration für Konzerne & Enterprise NRW"
-        description="SLT Technology Group – Enterprise-AV-Systemhaus für Konzerne und großen Mittelstand: Standardisierte Konferenzraum-Rollouts, Multi-Site-Integration, Managed Services. Standorte Krefeld & Bonn, NRW-weit."
+        title="Konferenzraum-Ausstattung & AV-Systemhaus NRW"
+        description="AV-Systemhaus für Konferenzraum-Ausstattung, Videokonferenz und Digital Signage: Fachplanung, Rollout und Service nach ITIL v4. Krefeld & Bonn, NRW-weit."
         keywords="AV-Systemintegration Enterprise, Konferenzraum Rollout NRW, Boardroom Integration, Microsoft Teams Rooms Integrator, Crestron Partner NRW, Q-SYS zertifiziert, Managed AV Services, Multi-Site AV Rollout, Enterprise Medientechnik Krefeld Bonn, Servicepartner Outdoor-LED, Wartung LED-Werbeanlage"
 
         canonical="/"

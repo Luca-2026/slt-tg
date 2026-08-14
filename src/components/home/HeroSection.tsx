@@ -183,7 +183,7 @@ export function HeroSection() {
     <>
       {/* Single SEO H1 – visually hidden, keyword-optimized */}
       <h1 className="sr-only">
-        AV-Systemintegration für Konzerne & Enterprise – Konferenzraum-Rollouts, Boardroom, Managed Services | SLT Technology Group Krefeld & Bonn
+        Konferenzraum-Ausstattung & AV-Systemintegration in NRW – SLT Technology Group
       </h1>
 
 
