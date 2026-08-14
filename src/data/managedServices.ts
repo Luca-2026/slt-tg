@@ -191,6 +191,16 @@ export const msFaqs = [
       "Wir arbeiten als verlängerte Werkbank Ihrer IT. Durch ITIL-v4-konforme Prozesse lassen sich Incident-, Problem- und Change-Management sauber an bestehende IT-Service-Strukturen und Ticketsysteme andocken; Zuständigkeiten und Eskalationswege werden vorab schriftlich festgelegt.",
   },
   {
+    question: "Warum sind Managed Services für Unternehmen sinnvoll?",
+    answer:
+      "Weil Störungen an Konferenz- und Medientechnik direkt Arbeitszeit kosten. Ein Managed Service verlagert Überwachung, Entstörung und Wartung auf einen festen Partner: Anwender haben eine Anlaufstelle, die interne IT wird entlastet, Ausfälle werden früher erkannt und die Betriebskosten sind als monatliche Pauschale planbar statt als unvorhersehbare Einzeleinsätze.",
+  },
+  {
+    question: "Was ist der Unterschied zwischen Managed Services und klassischer Wartung?",
+    answer:
+      "Klassische Wartung ist ein wiederkehrender Prüftermin plus Reparatur im Störungsfall. Managed Services umfassen zusätzlich den laufenden Betrieb: Service Desk für Anwender, kontinuierliches Monitoring, Ticketing mit definierten Reaktionszeiten, Reporting und Optimierungsempfehlungen. Wartung ist damit ein Baustein innerhalb des Managed Service.",
+  },
+  {
     question: "Was kostet ein Managed-Service-Vertrag?",
     answer:
       "Die Kosten hängen von Raumanzahl, Technikstand, Servicezeiten und gewünschtem Leistungsmodell ab. Nach der Bestandsaufnahme erhalten Sie ein Angebot mit fester monatlicher Servicepauschale, sodass der AV-Betrieb budgetierbar wird.",

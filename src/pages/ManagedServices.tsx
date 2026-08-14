@@ -50,9 +50,9 @@ const ManagedServices = () => {
   return (
     <Layout>
       <SEOHead
-        title="Managed Services für AV- & Konferenztechnik"
-        description="Managed Services für Konferenz- und Medientechnik: Service Desk, proaktives 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4 – multi-site-fähig, herstellerneutral, aus NRW."
-        keywords="Managed Services, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
+        title="Managed Services für Medientechnik & AV-Betrieb"
+        description="Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW."
+        keywords="Managed Services, Managed Service Provider, Managed IT Services, Wartung Medientechnik, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
         canonical="/managed-services"
       />
 
@@ -265,7 +265,7 @@ const ManagedServices = () => {
             className={`scroll-hidden-blur ${whyVisible ? "scroll-visible-blur" : ""}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
-              Warum SLT Technology Group als Managed-Service-Partner
+              Warum SLT Technology Group als Managed Service Provider für AV und IT
             </h2>
             <div className="grid sm:grid-cols-2 gap-5 max-w-4xl">
               {reasons.map((r) => (
