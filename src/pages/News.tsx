@@ -138,10 +138,64 @@ const generateNewsListSchema = () => ({
   }
 });
 
+interface HighlightSlide {
+  key: string;
+  kind: "News" | "Ratgeber";
+  category: string;
+  title: string;
+  excerpt: string;
+  readTime: string;
+  date?: string;
+  image?: string;
+  videoBackground?: string;
+  to: string;
+}
+
+const highlightSlides: HighlightSlide[] = [
+  ...[...newsArticles].sort((a, b) => Number(!!b.featured) - Number(!!a.featured)).map((a) => ({
+    key: `news-${a.id}`,
+    kind: "News" as const,
+    category: a.category,
+    title: a.title,
+    excerpt: a.excerpt,
+    readTime: a.readTime,
+    date: a.date,
+    image: a.image,
+    videoBackground: a.videoBackground,
+    to: `/news/${a.slug}`,
+  })),
+  ...guides.map((g) => ({
+    key: `guide-${g.slug}`,
+    kind: "Ratgeber" as const,
+    category: g.category,
+    title: g.title,
+    excerpt: g.description,
+    readTime: g.readTime,
+    to: `/ratgeber/${g.slug}`,
+  })),
+];
+
 const News = () => {
   const featuredArticle = newsArticles.find((article) => article.featured);
   const regularArticles = newsArticles.filter((article) => !article.featured);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    if (!api) return;
+    const onSelect = () => setCurrent(api.selectedScrollSnap());
+    onSelect();
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    const id = window.setInterval(() => api.scrollNext(), 6000);
+    return () => window.clearInterval(id);
+  }, [api]);
 
   return (
     <Layout>
@@ -173,62 +227,99 @@ const News = () => {
         </div>
       </section>
 
-      {/* Featured Article */}
-      {featuredArticle && (
-        <section className="py-12 lg:py-16">
-          <div className="section-container">
-              <div>
-              <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
-                <div className="grid lg:grid-cols-2 gap-8">
-                  <div className="aspect-video lg:aspect-auto bg-black flex items-center justify-center overflow-hidden">
-                    {featuredArticle.image ? (
-                      <img 
-                        src={featuredArticle.image} 
-                        alt="Integrated Systems Europe ISE 2026 Barcelona - Weltleitmesse für AV und Systemintegration"
-                        className="w-full h-full object-contain p-4"
-                      />
-                    ) : (
-                      <div className="text-center p-8">
-                        <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                        <p className="text-muted-foreground">ISE 2026 Barcelona</p>
+      {/* Highlight Carousel */}
+      <section className="py-12 lg:py-16">
+        <div className="section-container">
+          <Carousel setApi={setApi} opts={{ loop: true, align: "start" }} className="w-full">
+            <CarouselContent>
+              {highlightSlides.map((slide) => (
+                <CarouselItem key={slide.key}>
+                  <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
+                    <div className="grid lg:grid-cols-2 gap-8">
+                      <div className="aspect-video lg:aspect-auto bg-black flex items-center justify-center overflow-hidden">
+                        {slide.videoBackground ? (
+                          <video
+                            src={slide.videoBackground}
+                            autoPlay muted loop playsInline
+                            className="w-full h-full object-cover"
+                          />
+                        ) : slide.image ? (
+                          <img
+                            src={slide.image}
+                            alt={`${slide.title} – ${slide.category} | SLT Technology Group`}
+                            className="w-full h-full object-contain p-4"
+                          />
+                        ) : (
+                          <div className="text-center p-8">
+                            {slide.kind === "Ratgeber" ? (
+                              <BookOpen className="h-16 w-16 text-primary mx-auto mb-4" />
+                            ) : (
+                              <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
+                            )}
+                            <p className="text-muted-foreground text-sm">{slide.category}</p>
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                  <div className="p-6 lg:p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 mb-4">
-                      <Badge>{featuredArticle.category}</Badge>
-                      <span className="text-sm text-muted-foreground flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {new Date(featuredArticle.date).toLocaleDateString("de-DE", {
-                          day: "numeric", month: "long", year: "numeric",
-                        })}
-                      </span>
+                      <div className="p-6 lg:p-8 flex flex-col justify-center">
+                        <div className="flex flex-wrap items-center gap-3 mb-4">
+                          <Badge>{slide.kind}</Badge>
+                          <Badge variant="outline">{slide.category}</Badge>
+                          {slide.date && (
+                            <span className="text-sm text-muted-foreground flex items-center gap-1">
+                              <Calendar className="h-4 w-4" />
+                              {new Date(slide.date).toLocaleDateString("de-DE", {
+                                day: "numeric", month: "long", year: "numeric",
+                              })}
+                            </span>
+                          )}
+                        </div>
+                        <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-3">
+                          {slide.title}
+                        </h2>
+                        <p className="text-sm lg:text-base text-muted-foreground mb-6 leading-relaxed line-clamp-4">
+                          {slide.excerpt}
+                        </p>
+                        <div className="flex items-center gap-4">
+                          <Button asChild>
+                            <Link to={slide.to}>
+                              {slide.kind === "Ratgeber" ? "Ratgeber lesen" : "Weiterlesen"}
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                          </Button>
+                          <span className="text-xs lg:text-sm text-muted-foreground flex items-center gap-1">
+                            <Clock className="h-3.5 w-3.5" />
+                            {slide.readTime} Lesezeit
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-3">
-                      {featuredArticle.title}
-                    </h2>
-                    <p className="text-sm lg:text-base text-muted-foreground mb-6 leading-relaxed">
-                      {featuredArticle.excerpt}
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <Button asChild>
-                        <Link to={`/news/${featuredArticle.slug}`}>
-                          Weiterlesen
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                      <span className="text-xs lg:text-sm text-muted-foreground flex items-center gap-1">
-                        <Clock className="h-3.5 w-3.5" />
-                        {featuredArticle.readTime} Lesezeit
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex -left-4 lg:-left-6" />
+            <CarouselNext className="hidden sm:flex -right-4 lg:-right-6" />
+          </Carousel>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {highlightSlides.map((slide, index) => (
+              <button
+                key={`dot-${slide.key}`}
+                type="button"
+                onClick={() => api?.scrollTo(index)}
+                aria-label={`Beitrag ${index + 1} anzeigen`}
+                aria-current={current === index}
+                className={`h-2 rounded-full transition-all ${
+                  current === index ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                }`}
+              />
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+
 
       {/* Regular Articles Grid */}
       {regularArticles.length > 0 && (
