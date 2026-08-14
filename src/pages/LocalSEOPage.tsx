@@ -253,6 +253,15 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
           <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-6 text-center">
             Weiterführende Themen
           </h2>
+          {topic.baseSlug === "konferenztechnik" && city.slug === "nrw" && (
+            <div className="max-w-4xl mx-auto mb-6">
+              <Link to="/managed-services" className="group block p-5 rounded-xl border border-primary/30 bg-card hover:border-primary/60 hover:shadow-md transition-all">
+                <div className="text-[10px] font-semibold uppercase tracking-wider text-accent mb-1">Laufender Betrieb</div>
+                <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">Managed Services für Konferenztechnik in NRW</h3>
+                <p className="text-sm text-muted-foreground">Service Desk, proaktives 24/7-Monitoring und Managed Rooms nach ITIL v4 – für Multi-Site-Umgebungen in Nordrhein-Westfalen.</p>
+              </Link>
+            </div>
+          )}
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-6">
             <Link to="/konferenzraum-ausstattung" className="group block p-5 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-md transition-all">
               <div className="text-[10px] font-semibold uppercase tracking-wider text-accent mb-1">Pillar-Page</div>
