@@ -165,6 +165,7 @@ function HeroHotspots() {
             pointerEvents: "auto",
           }}
           title={spot.label}
+          aria-label={spot.label}
         >
           <span className="absolute -inset-2 rounded-full bg-accent/15 animate-[pulse_3s_ease-in-out_infinite]" />
           <span className="relative block w-2.5 h-2.5 rounded-full bg-accent border border-accent/80 shadow-[0_0_8px_hsl(var(--accent)/0.5)] transition-transform group-hover:scale-150" />
@@ -182,7 +183,7 @@ export function HeroSection() {
     <>
       {/* Single SEO H1 – visually hidden, keyword-optimized */}
       <h1 className="sr-only">
-        AV-Systemintegration für Konzerne & Enterprise – Konferenzraum-Rollouts, Boardroom, Managed Services | SLT Technology Group Krefeld & Bonn
+        Konferenzraum-Ausstattung & AV-Systemintegration in NRW – SLT Technology Group
       </h1>
 
 

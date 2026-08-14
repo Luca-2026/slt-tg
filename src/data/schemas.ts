@@ -463,7 +463,9 @@ export function buildVendorPartnerSchemas(route: SeoRoute): object[] {
 export function resolveRouteSchemas(route: SeoRoute): object[] {
   switch (route.routeType) {
     case "home":
-      return []; // nur globale Schemas in index.html
+      // Organization/WebSite stehen global in index.html,
+      // hier zusätzlich die beiden physischen Standorte als LocalBusiness
+      return [KREFELD_LOCAL_BUSINESS, BONN_LOCAL_BUSINESS];
     case "localseo":
       return buildLocalSeoSchemas(route);
     case "ratgeber": {
