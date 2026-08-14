@@ -31,17 +31,22 @@ export function TypewriterText() {
 
   return (
     <p
-      className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 whitespace-nowrap sm:whitespace-normal"
+      className="relative text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 whitespace-nowrap sm:whitespace-normal"
       style={{ textShadow: "0 4px 40px hsl(33 100% 50% / 0.3)" }}
       role="presentation"
       aria-label="your digital future."
     >
-      <span className="text-primary sm:text-accent">
-        {displayed}
+      {/* Invisible sizing layer: reserves the final height so no layout shift occurs while typing */}
+      <span className="invisible" aria-hidden="true">
+        {FULL_TEXT}
       </span>
-      {showCursor && (
-        <span className="inline-block w-[3px] h-[0.85em] bg-primary sm:bg-accent ml-1 align-middle animate-[blink_0.8s_step-end_infinite]" />
-      )}
+      <span className="absolute inset-0">
+        <span className="text-primary sm:text-accent">{displayed}</span>
+        {showCursor && (
+          <span className="inline-block w-[3px] h-[0.85em] bg-primary sm:bg-accent ml-1 align-middle animate-[blink_0.8s_step-end_infinite]" />
+        )}
+      </span>
     </p>
   );
 }
+
