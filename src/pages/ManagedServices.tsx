@@ -50,7 +50,7 @@ const ManagedServices = () => {
   return (
     <Layout>
       <SEOHead
-        title="Managed Services für Medientechnik & AV-Betrieb"
+        title="Managed Services für Medientechnik"
         description="Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW."
         keywords="Managed Services, Managed Service Provider, Managed IT Services, Wartung Medientechnik, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
         canonical="/managed-services"

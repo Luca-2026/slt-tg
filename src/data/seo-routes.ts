@@ -293,7 +293,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/managed-services",
     routeType: "page",
-    title: "Managed Services für Medientechnik & AV-Betrieb | SLT AV",
+    title: "Managed Services für Medientechnik | SLT Technology Group",
     description:
       "Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW.",
     h1: "Managed Services für Konferenz- und Medientechnik",
