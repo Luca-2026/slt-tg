@@ -48,11 +48,11 @@ export function FAQSection() {
   const { ref: accordionRef, isVisible: accordionVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 lg:py-28 bg-card">
+    <section className="py-12 lg:py-28 bg-card">
       <div className="section-container">
         <div 
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+          className={`text-center max-w-3xl mx-auto mb-10 lg:mb-16 scroll-hidden-blur ${
             headerVisible ? "scroll-visible-blur" : ""
           }`}
         >
@@ -65,12 +65,12 @@ export function FAQSection() {
         </div>
 
         <div ref={accordionRef} className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="rounded-lg border border-border bg-background px-4 sm:border-0 sm:bg-transparent sm:px-0 sm:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className={`bg-background border border-border rounded-lg px-6 data-[state=open]:border-primary/50 scroll-hidden ${
+                className={`border-b border-border last:border-b-0 sm:bg-background sm:border sm:rounded-lg sm:px-6 sm:last:border-b data-[state=open]:border-primary/50 scroll-hidden ${
                   accordionVisible ? "scroll-visible" : ""
                 }`}
                 style={{ transitionDelay: `${index * 0.08}s` }}

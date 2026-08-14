@@ -45,11 +45,11 @@ export function ServicesOverview() {
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-12 lg:py-28">
       <div className="section-container">
         <div 
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+          className={`text-center max-w-3xl mx-auto mb-8 lg:mb-16 scroll-hidden-blur ${
             headerVisible ? "scroll-visible-blur" : ""
           }`}
         >
@@ -62,7 +62,7 @@ export function ServicesOverview() {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Link
               key={service.title}
@@ -100,9 +100,29 @@ export function ServicesOverview() {
           ))}
         </div>
 
+        {/* Mobile: kompakte Liste statt Kartenstapel */}
+        <div className="md:hidden rounded-xl border border-border bg-card overflow-hidden">
+          {services.map((service) => (
+            <Link
+              key={service.title}
+              to={service.link}
+              className="flex items-center gap-3 px-4 py-4 border-b border-border last:border-b-0 active:bg-muted/50 transition-colors"
+            >
+              <span className="w-10 h-10 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
+                <service.icon className="h-5 w-5 text-primary" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-sm font-semibold text-foreground">{service.title}</span>
+                <span className="block text-xs text-muted-foreground">{service.features.join(" · ")}</span>
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0 text-primary" />
+            </Link>
+          ))}
+        </div>
+
         <div 
           ref={ctaRef}
-          className={`text-center mt-12 scroll-hidden-scale ${
+          className={`text-center mt-8 lg:mt-12 scroll-hidden-scale ${
             ctaVisible ? "scroll-visible-scale" : ""
           }`}
         >
