@@ -71,10 +71,10 @@ function CountUpStat({ end, suffix, label, light = false }: { end: number; suffi
   
   return (
     <div className="text-center" ref={ref}>
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white/80">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-hero-foreground/80">
         {count}{suffix}
       </div>
-      <div className="text-xs sm:text-sm mt-1 text-white/50">{label}</div>
+      <div className="text-xs sm:text-sm mt-1 text-hero-foreground/50">{label}</div>
     </div>
   );
 }
@@ -191,8 +191,6 @@ export function HeroSection() {
         <div className="h-[100svh] flex flex-col justify-between bg-gradient-to-br from-primary/10 via-background to-accent/5 px-5 pt-24 pb-4">
           {/* Top content */}
           <div className="shrink-0 space-y-4">
-            <WhitepaperBadge variant="light" />
-
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
@@ -204,7 +202,7 @@ export function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-base text-muted-foreground leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
-              Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand.
+              Konferenz- und Meetingräume von der Planung bis zum laufenden Betrieb – alles aus einer Hand.
             </p>
 
             {/* CTA Buttons */}
@@ -222,12 +220,6 @@ export function HeroSection() {
                 </Link>
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
-              Laufender Betrieb gesucht?{" "}
-              <Link to="/managed-services" className="text-primary font-medium underline underline-offset-4 hover:text-primary/80">
-                Managed Services für Konferenztechnik
-              </Link>
-            </p>
           </div>
 
           {/* Inspiration Slider - fills middle space evenly */}
@@ -246,7 +238,7 @@ export function HeroSection() {
 
       {/* ===== TABLET HERO (sm to lg) ===== */}
       <section className="relative hidden sm:flex lg:hidden items-center min-h-[100svh] overflow-hidden -mt-20">
-        <div className="absolute inset-0 bg-[#0a2a42]">
+        <div className="absolute inset-0 bg-hero">
           <picture className="block w-full h-full">
             <source srcSet="/assets/hero-konferenzraum.webp" type="image/webp" />
             <img
@@ -258,7 +250,7 @@ export function HeroSection() {
               decoding="sync"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2a42]/90 via-[#0a2a42]/70 to-[#0a2a42]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-hero/90 via-hero/70 to-hero/30" />
         </div>
 
         <div className="section-container relative z-20 py-16">
@@ -273,7 +265,7 @@ export function HeroSection() {
 
             <TypewriterText />
 
-            <p className="text-base text-white/80 mb-8 leading-relaxed max-w-sm">
+            <p className="text-base text-hero-foreground/80 mb-8 leading-relaxed max-w-sm">
               Medientechnische Exzellenz trifft auf IT-Kompetenz: Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – als Ihr Systemhaus für Installation und Integration.
             </p>
 
@@ -292,7 +284,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <p className="-mt-6 mb-10 text-sm text-white/80">
+            <p className="-mt-6 mb-10 text-sm text-hero-foreground/80">
               Laufender Betrieb gesucht?{" "}
               <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
                 Managed Services für Konferenztechnik
@@ -312,7 +304,7 @@ export function HeroSection() {
       {/* ===== DESKTOP HERO (lg+) ===== */}
       <section className="relative hidden lg:flex items-center min-h-screen overflow-hidden -mt-24">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[#0a2a42]">
+        <div className="absolute inset-0 bg-hero">
           <picture className="block w-full h-full">
             <source srcSet="/assets/hero-konferenzraum.webp" type="image/webp" />
             <img
@@ -324,7 +316,7 @@ export function HeroSection() {
               decoding="sync"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-l from-[#0a2a42]/90 via-[#0a2a42]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-hero/90 via-hero/60 to-transparent" />
         </div>
 
 
@@ -344,7 +336,7 @@ export function HeroSection() {
 
             <TypewriterText />
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 max-w-lg lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <p className="text-base sm:text-lg lg:text-xl text-hero-foreground/80 max-w-lg lg:max-w-xl mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <span className="whitespace-nowrap">Medientechnische Exzellenz trifft auf IT-Kompetenz:</span><br />Wir realisieren Konferenz- und Meetingräume von der Planung bis zum Betrieb – alles aus einer Hand. Ihr Systemhaus in Krefeld &amp; Bonn.
             </p>
 
@@ -363,7 +355,7 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <p className="mt-6 text-sm sm:text-base text-white/80 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+            <p className="mt-6 text-sm sm:text-base text-hero-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               Laufender Betrieb gesucht?{" "}
               <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
                 Managed Services für Konferenztechnik

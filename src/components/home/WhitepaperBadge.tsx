@@ -10,7 +10,7 @@ export function WhitepaperBadge({ variant = "dark" }: Props) {
   const styles =
     variant === "light"
       ? "bg-accent/10 border-accent/30 text-accent hover:bg-accent/20"
-      : "bg-white/10 border-white/25 text-white hover:bg-white/20 backdrop-blur-sm";
+      : "bg-primary-foreground/10 border-primary-foreground/25 text-primary-foreground hover:bg-primary-foreground/20 backdrop-blur-sm";
 
   return (
     <a
