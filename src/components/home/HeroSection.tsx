@@ -83,14 +83,14 @@ const hotspots = [
   {
     id: "display",
     label: "Displays & Visualisierung",
-    href: "/technologien#displays",
+    href: "/digital-signage",
     top: 30,
     left: 35,
   },
   {
     id: "kamera",
     label: "Videokonferenzsysteme",
-    href: "/technologien#videokonferenz",
+    href: "/videokonferenzanlage",
     top: 20,
     left: 35,
   },
@@ -111,7 +111,7 @@ const hotspots = [
   {
     id: "accesspoint",
     label: "IT-Infrastruktur & Netzwerk",
-    href: "/technologien#it-infrastruktur",
+    href: "/loesungen/it-infrastruktur-netzwerk",
     top: 18,
     left: 46,
   },
