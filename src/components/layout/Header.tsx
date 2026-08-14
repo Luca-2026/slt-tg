@@ -9,6 +9,7 @@ import { solutionsNav } from "@/data/solutionPages";
 const topNavigation = [
   { name: "Startseite", href: "/" },
   { name: "Leistungen", href: "/leistungen" },
+  { name: "Managed Services", href: "/managed-services" },
   { name: "Technologien", href: "/technologien" },
   { name: "Finanzierung", href: "/finanzierung" },
   { name: "Projekte", href: "/projekte" },
@@ -38,7 +39,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6 whitespace-nowrap">
           {topNavigation.slice(0, 2).map((item) => (
             <Link
               key={item.name}

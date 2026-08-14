@@ -13,6 +13,7 @@ import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } f
 import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
 import { getSolutionPage } from "./solutionPages";
+import { msModules, msFaqs } from "./managedServices";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -234,6 +235,42 @@ export function buildSolutionSchemas(route: SeoRoute): object[] {
 
 export function buildGenericSchemas(route: SeoRoute): object[] {
   return [buildBreadcrumbList(route)];
+}
+
+// ─────────────────────────────────────────────
+// Managed Services (/managed-services)
+// ─────────────────────────────────────────────
+export function buildManagedServicesSchemas(route: SeoRoute): object[] {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${BASE_URL}/managed-services#service`,
+      name: "Managed Services für AV- und Konferenztechnik",
+      serviceType: "AV Managed Services",
+      provider: ORG_REF,
+      areaServed: [
+        { "@type": "State", name: "Nordrhein-Westfalen" },
+        { "@type": "Country", name: "Deutschland" },
+      ],
+      url: `${BASE_URL}/managed-services`,
+      description: route.description,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Managed-Service-Module",
+        itemListElement: msModules.map((m) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: m.title,
+            description: m.description,
+          },
+        })),
+      },
+    },
+    buildFAQPageSchema(msFaqs),
+    buildBreadcrumbList(route),
+  ];
 }
 
 // ─────────────────────────────────────────────
@@ -461,6 +498,7 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
       return buildGenericSchemas(route);
     case "page":
     default:
+      if (route.path === "/managed-services") return buildManagedServicesSchemas(route);
       return buildPageSchemas(route);
   }
 }

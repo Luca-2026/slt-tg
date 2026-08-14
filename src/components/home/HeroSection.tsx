@@ -223,6 +223,12 @@ export function HeroSection() {
                 </Link>
               </Button>
             </div>
+            <p className="text-sm text-muted-foreground opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="text-primary font-medium underline underline-offset-4 hover:text-primary/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
           </div>
 
           {/* Inspiration Slider - fills middle space evenly */}
@@ -283,6 +289,14 @@ export function HeroSection() {
               </Button>
             </div>
 
+            <p className="-mt-6 mb-10 text-sm text-white/80">
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
+
+
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
               <CountUpStat end={400} suffix="+" label="Projekte" />
               <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
@@ -340,6 +354,14 @@ export function HeroSection() {
                 </Link>
               </Button>
             </div>
+
+            <p className="mt-6 text-sm sm:text-base text-white/80 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
+
 
             <div className="grid grid-cols-3 gap-8 max-w-lg mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <CountUpStat end={400} suffix="+" label="Projekte" />

@@ -7,6 +7,7 @@ const footerLinks = {
     { name: "Installation & Integration", href: "/leistungen#integration" },
     { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
     { name: "Service & Wartung (ITIL v4)", href: "/service-wartung" },
+    { name: "Managed Services", href: "/managed-services" },
     { name: "Finanzierung", href: "/finanzierung" },
   ],
   loesungen: [

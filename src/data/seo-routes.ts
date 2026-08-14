@@ -291,6 +291,23 @@ export const MAIN_ROUTES: SeoRoute[] = [
     breadcrumbs: [{ name: "Service & Wartung", path: "/service-wartung" }],
   },
   {
+    path: "/managed-services",
+    routeType: "page",
+    title: "Managed Services für AV- & Konferenztechnik | SLT Technology Group",
+    description:
+      "Managed Services für Konferenz- und Medientechnik: Service Desk, proaktives 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4 – multi-site-fähig und herstellerneutral aus NRW.",
+    h1: "Managed Services für Konferenz- und Medientechnik",
+    intro: [
+      "Wir übernehmen den laufenden Betrieb Ihrer AV-Umgebung: zentraler Service Desk, proaktives 24/7-Monitoring, Managed Rooms und planbare Wartung.",
+      "Strukturiert nach ITIL v4, abgestimmt mit Ihrer IT und über alle Standorte hinweg – als kalkulierbare monatliche Servicepauschale.",
+    ],
+    canonical: "/managed-services",
+    changefreq: "monthly",
+    priority: 0.9,
+    lastmod: TODAY,
+    breadcrumbs: [{ name: "Managed Services", path: "/managed-services" }],
+  },
+  {
     path: "/digital-signage",
     routeType: "page",
     title: "Digital Signage Anbieter für Unternehmen | SLT Technology Group",
