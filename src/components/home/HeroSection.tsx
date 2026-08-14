@@ -223,6 +223,12 @@ export function HeroSection() {
                 </Link>
               </Button>
             </div>
+            <p className="text-sm text-muted-foreground opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s", animationFillMode: "forwards" }}>
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="text-primary font-medium underline underline-offset-4 hover:text-primary/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
           </div>
 
           {/* Inspiration Slider - fills middle space evenly */}
