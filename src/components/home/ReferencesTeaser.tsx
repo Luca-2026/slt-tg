@@ -70,12 +70,12 @@ export function ReferencesTeaser() {
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-12 lg:py-28">
       <div className="section-container">
         {/* Section Header */}
         <div 
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+          className={`text-center max-w-3xl mx-auto mb-10 lg:mb-16 scroll-hidden-blur ${
             headerVisible ? "scroll-visible-blur" : ""
           }`}
         >
@@ -93,7 +93,7 @@ export function ReferencesTeaser() {
             <Link
               key={ref.id}
               to={`/projekte#${ref.id}`}
-              className="block"
+              className={index > 1 ? "hidden md:block" : "block"}
             >
               <Card
                 className={`group bg-card border-border card-hover overflow-hidden h-full cursor-pointer scroll-hidden-left ${
@@ -146,7 +146,7 @@ export function ReferencesTeaser() {
         {/* CTA */}
         <div 
           ref={ctaRef}
-          className={`text-center mt-12 scroll-hidden-scale ${
+          className={`text-center mt-8 lg:mt-12 scroll-hidden-scale ${
             ctaVisible ? "scroll-visible-scale" : ""
           }`}
         >

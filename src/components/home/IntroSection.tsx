@@ -54,8 +54,8 @@ function ImageCard({ src, alt, className }: { src: string; alt: string; classNam
 
 export function IntroSection() {
   return (
-    <section className="py-20 lg:py-28 overflow-hidden">
-      <div className="section-container space-y-28 lg:space-y-40">
+    <section className="py-12 lg:py-28 overflow-hidden">
+      <div className="section-container space-y-14 lg:space-y-40">
 
         {/* Block 1: Das sind wir — Image right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -63,10 +63,10 @@ export function IntroSection() {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Digital natives mit einer Passion für Technik
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight">
               Das sind wir
             </h2>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6 lg:mb-8">
               Ihr Partner zum Durchstarten in die Zukunft der digitalen Zusammenarbeit!
               Seit 2016 stehen wir unseren Kunden aller Branchen und Größen in Deutschland 
               sowie dem europäischen Ausland als Partner zur Seite und begleiten Sie 
@@ -91,7 +91,7 @@ export function IntroSection() {
 
         {/* Block 2: Unsere Mission — Image left */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <AnimatedBlock direction="left" className="order-2 lg:order-1">
+          <AnimatedBlock direction="left" className="hidden lg:block order-2 lg:order-1">
             <ImageCard
               src={introMission}
               alt="Digital Signage Display – professionelle AV-Installation von SLT"
@@ -103,17 +103,17 @@ export function IntroSection() {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Einfach und gut funktionierende hybride Zusammenarbeit.
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight">
               Das ist unsere Mission
             </h2>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6 lg:mb-8">
               SLT steht für funktionale, leicht zu bedienende Audio-Visuelle und IT-Komplettlösungen, 
               bis hin zu individuellem Signalmanagement und Automatisierungslösungen. 
               Wir bringen Ihren Konferenzraum auf die nächste Stufe!
             </p>
             <Button asChild variant="outline" size="lg" className="group/btn">
               <Link to="/loesungen">
-                Unsere Leistungen
+                Unsere Lösungen
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </Button>
@@ -126,7 +126,7 @@ export function IntroSection() {
             <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-3">
               Passion für Videokonferenzen.
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6 leading-tight">
               Das zeichnet uns aus
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
@@ -138,7 +138,7 @@ export function IntroSection() {
             </p>
           </AnimatedBlock>
 
-          <AnimatedBlock direction="right">
+          <AnimatedBlock direction="right" className="hidden lg:block">
             <ImageCard
               src={introAuszeichnung}
               alt="Moderner Konferenzraum mit Display und Videokonferenzsystem von SLT"

@@ -73,12 +73,12 @@ export function ProcessTimeline() {
   const { refs, visible } = useStepVisibility();
 
   return (
-    <section className="py-20 lg:py-28 bg-card">
+    <section className="py-12 lg:py-28 bg-card">
       <div className="section-container">
         {/* Header */}
         <div
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+          className={`text-center max-w-3xl mx-auto mb-10 lg:mb-16 scroll-hidden-blur ${
             headerVisible ? "scroll-visible-blur" : ""
           }`}
         >
@@ -106,7 +106,7 @@ export function ProcessTimeline() {
             }}
           />
 
-          <div className="space-y-12 lg:space-y-16">
+          <div className="space-y-8 lg:space-y-16">
             {steps.map((step, index) => (
               <div
                 key={step.number}
@@ -138,10 +138,10 @@ export function ProcessTimeline() {
                   }`}>
                     {step.label}
                   </span>
-                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
+                  <h3 className="text-lg lg:text-2xl font-bold text-foreground mb-1.5 lg:mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     {step.description}
                   </p>
                 </div>
