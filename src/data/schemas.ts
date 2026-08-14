@@ -498,6 +498,7 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
       return buildGenericSchemas(route);
     case "page":
     default:
+      if (route.path === "/managed-services") return buildManagedServicesSchemas(route);
       return buildPageSchemas(route);
   }
 }
