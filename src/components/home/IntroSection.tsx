@@ -113,7 +113,7 @@ export function IntroSection() {
             </p>
             <Button asChild variant="outline" size="lg" className="group/btn">
               <Link to="/loesungen">
-                Unsere Leistungen
+                Unsere Lösungen
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </Button>
