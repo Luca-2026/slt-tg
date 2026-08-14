@@ -289,6 +289,14 @@ export function HeroSection() {
               </Button>
             </div>
 
+            <p className="-mt-6 mb-10 text-sm text-white/80">
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
+
+
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
               <CountUpStat end={400} suffix="+" label="Projekte" />
               <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
