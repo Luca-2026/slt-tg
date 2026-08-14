@@ -347,6 +347,14 @@ export function HeroSection() {
               </Button>
             </div>
 
+            <p className="mt-6 text-sm sm:text-base text-white/80 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+              Laufender Betrieb gesucht?{" "}
+              <Link to="/managed-services" className="font-medium text-accent underline underline-offset-4 hover:text-accent/80">
+                Managed Services für Konferenztechnik
+              </Link>
+            </p>
+
+
             <div className="grid grid-cols-3 gap-8 max-w-lg mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <CountUpStat end={400} suffix="+" label="Projekte" />
               <CountUpStat end={300} suffix="+" label="Zufriedene Kunden" />
