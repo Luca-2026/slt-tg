@@ -234,7 +234,7 @@ const RatgeberKiReadiness = () => {
             <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
               KI in der Medientechnik ist kein einzelnes Gerät, das man kauft, sondern das Ergebnis sauberer
               Planung über Technik, Netzwerk, Organisation und Recht hinweg. Genau hier setzt professionelle{" "}
-              <Link to="/leistungen" className="text-primary underline underline-offset-4">
+              <Link to="/loesungen" className="text-primary underline underline-offset-4">
                 AV-Systemintegration
               </Link>{" "}
               an: herstellerneutrale Fachplanung, die KI-Fähigkeit, IT-Sicherheit und Compliance von Anfang an

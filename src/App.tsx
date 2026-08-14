@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { TrailingSlashRedirect } from "@/components/TrailingSlashRedirect";
 import Index from "./pages/Index";
-import Leistungen from "./pages/Leistungen";
 import Loesungen from "./pages/Loesungen";
 import SolutionPage from "./pages/SolutionPage";
 import Technologien from "./pages/Technologien";
@@ -55,7 +54,7 @@ const App = () => (
         <TrailingSlashRedirect />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/leistungen" element={<Leistungen />} />
+          <Route path="/leistungen" element={<Navigate to="/loesungen" replace />} />
           <Route path="/loesungen" element={<Loesungen />} />
           <Route path="/loesungen/:slug" element={<SolutionPage />} />
           <Route path="/technologien" element={<Technologien />} />

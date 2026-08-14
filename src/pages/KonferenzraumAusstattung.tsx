@@ -360,7 +360,7 @@ const KonferenzraumAusstattung = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/leistungen">Unsere Leistungen</Link>
+                <Link to="/loesungen">Unsere Leistungen</Link>
               </Button>
             </div>
           </div>

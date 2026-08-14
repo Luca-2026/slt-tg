@@ -71,7 +71,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Mediensteuerung", description: "Intuitive Touch-Panel-Steuerungen und automatisierte Raumszenarien mit Crestron, Q-Sys & Co.", link: "/technologien#steuerung" },
       { title: "Digital Signage", description: "Digitale Beschilderung, Info-Displays und Empfangsbereich-Lösungen.", link: "/loesungen#empfang-detail" },
       { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN, Managed Switches und AV-over-IP für eine stabile Basis.", link: "/technologien#it-infrastruktur" },
-      { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/leistungen#integration" },
+      { title: "Installation & Integration", description: "Professionelle Montage, Verkabelung und Inbetriebnahme aller Systeme.", link: "/loesungen" },
     ],
     faqItems: (city) => [
       { question: `Bieten Sie Medientechnik-Installation in ${city} an?`, answer: locationAnswer(city) },
@@ -93,9 +93,9 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Microsoft Teams Rooms", description: "Zertifizierte Teams-Raum-Systeme für nahtlose Zusammenarbeit.", link: "/loesungen#konferenzraum-detail" },
       { title: "Zoom Rooms", description: "Professionelle Zoom-Raumlösungen für hybride Meetings.", link: "/loesungen#konferenzraum-detail" },
       { title: "Raumakustik & Audio", description: "Akustikberatung und Deckenmikrofone für beste Sprachverständlichkeit.", link: "/technologien#audio" },
-      { title: "Fachplanung & Beratung", description: "Bedarfsgerechte Konzepte von der Analyse bis zur Ausschreibung.", link: "/leistungen#konzeption" },
+      { title: "Fachplanung & Beratung", description: "Bedarfsgerechte Konzepte von der Analyse bis zur Ausschreibung.", link: "/loesungen" },
       { title: "Hybride Meeting-Lösungen", description: "Brücken zwischen Präsenz- und Remote-Teilnehmern.", link: "/loesungen#konferenzraum-detail" },
-      { title: "Service & Betrieb", description: "Wartung, Remote-Monitoring und garantierte Reaktionszeiten.", link: "/leistungen#service" },
+      { title: "Service & Betrieb", description: "Wartung, Remote-Monitoring und garantierte Reaktionszeiten.", link: "/service-wartung" },
       { title: "IT-Infrastruktur & Netzwerk", description: "Strukturierte Verkabelung, Enterprise WLAN und Netzwerklösungen als Basis für moderne AV-Systeme.", link: "/technologien#it-infrastruktur" },
     ],
     faqItems: (city) => [
@@ -143,7 +143,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "Managed Switches", description: "VLAN-Segmentierung, PoE und Quality-of-Service für AV- und IT-Konvergenz." },
       { title: "AV-over-IP", description: "Signalverteilung über das Netzwerk für flexible und skalierbare AV-Lösungen.", link: "/technologien#it-infrastruktur" },
       { title: "Serverraum & Schranksysteme", description: "19-Zoll-Racks, Patchfelder und Kabelmanagement für saubere Infrastruktur." },
-      { title: "Netzwerk-Monitoring", description: "Proaktive Überwachung und Alarmierung für maximale Verfügbarkeit.", link: "/leistungen#service" },
+      { title: "Netzwerk-Monitoring", description: "Proaktive Überwachung und Alarmierung für maximale Verfügbarkeit.", link: "/service-wartung" },
     ],
     faqItems: (city) => [
       { question: `Bieten Sie IT-Netzwerkinstallation in ${city} an?`, answer: locationAnswer(city) },
@@ -167,7 +167,7 @@ export const topics: Record<string, LocalSEOTopic> = {
       { title: "LED-Wände", description: "Großflächige LED-Videowände für beeindruckende Darstellungen.", link: "/technologien#displays" },
       { title: "Content-Management", description: "Zentrale Verwaltung aller Inhalte und Displays über eine Plattform." },
       { title: "Raumbeschilderung", description: "Digitale Türschilder mit Kalender-Integration für Microsoft 365 und Google." },
-      { title: "Wartung & Support", description: "Remote-Monitoring und proaktiver Service für maximale Verfügbarkeit.", link: "/leistungen#service" },
+      { title: "Wartung & Support", description: "Remote-Monitoring und proaktiver Service für maximale Verfügbarkeit.", link: "/service-wartung" },
     ],
     faqItems: (city) => [
       { question: `Installieren Sie Digital Signage in ${city}?`, answer: locationAnswer(city) },

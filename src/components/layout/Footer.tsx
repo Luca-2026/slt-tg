@@ -4,10 +4,10 @@ import sltLogo from "@/assets/slt-logo.png";
 
 const footerLinks = {
   leistungen: [
-    { name: "Installation & Integration", href: "/leistungen#integration" },
-    { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
+    { name: "Lösungen im Überblick", href: "/loesungen" },
     { name: "Service & Wartung (ITIL v4)", href: "/service-wartung" },
     { name: "Managed Services", href: "/managed-services" },
+    { name: "Technologien", href: "/technologien" },
     { name: "Finanzierung", href: "/finanzierung" },
   ],
   loesungen: [
@@ -15,7 +15,7 @@ const footerLinks = {
     { name: "Videokonferenzanlage", href: "/videokonferenzanlage" },
     { name: "Digital Signage", href: "/digital-signage" },
     { name: "Auditorien", href: "/loesungen#auditorium-detail" },
-    { name: "Technologien", href: "/technologien" },
+    { name: "Alle Lösungen", href: "/loesungen" },
   ],
   hersteller: [
     { name: "Crestron", href: "/partner/crestron" },

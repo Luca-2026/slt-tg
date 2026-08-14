@@ -77,22 +77,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     lastmod: TODAY,
   },
   {
-    path: "/leistungen",
-    routeType: "page",
-    title: "AV-Integration: Fachplanung, Rollout, Managed Services | SLT Technology Group",
-    description:
-      "Vollständige Leistungstiefe für Enterprise-AV: Bedarfsanalyse, AV-Fachplanung, Multi-Site-Rollout, Inbetriebnahme und Managed Services mit garantierten SLAs.",
-    h1: "Leistungen für Enterprise-AV-Projekte",
-    intro: [
-      "Von der Konzeption über standortübergreifende Rollouts bis zum Managed Service: SLT begleitet Ihr AV-Programm über den gesamten Lebenszyklus.",
-    ],
-    canonical: "/leistungen",
-    changefreq: "monthly",
-    priority: 0.9,
-    lastmod: TODAY,
-    breadcrumbs: [{ name: "Leistungen", path: "/leistungen" }],
-  },
-  {
     path: "/loesungen",
     routeType: "page",
     title: "Konferenzraum-Lösungen: Huddle bis Boardroom & Auditorium | SLT AV",
