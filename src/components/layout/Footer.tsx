@@ -15,7 +15,7 @@ const footerLinks = {
     { name: "Videokonferenzanlage", href: "/videokonferenzanlage" },
     { name: "Digital Signage", href: "/digital-signage" },
     { name: "Auditorien", href: "/loesungen#auditorium-detail" },
-    { name: "Technologien", href: "/technologien" },
+    { name: "Alle Lösungen", href: "/loesungen" },
   ],
   hersteller: [
     { name: "Crestron", href: "/partner/crestron" },
