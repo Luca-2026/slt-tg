@@ -245,8 +245,8 @@ const DigitalSignage = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <item.icon className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">{item.title}</h2>
+              <div className="min-w-0">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-2 break-words hyphens-auto">{item.title}</h2>
                 <p className="text-sm lg:text-base text-muted-foreground max-w-2xl">
                   {item.description}
                 </p>
