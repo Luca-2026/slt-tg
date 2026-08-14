@@ -35,11 +35,11 @@ export function Header() {
       <nav className="section-container flex items-center justify-between h-20 lg:h-24 overflow-visible">
         {/* Logo */}
         <Link to="/" className="flex shrink-0 items-center overflow-hidden">
-          <img src={sltLogo} alt="SLT Technology Group" className="h-28 lg:h-32 2xl:h-40 w-auto object-contain scale-110" />
+          <img src={sltLogo} alt="SLT Technology Group" className="h-28 xl:h-28 2xl:h-40 w-auto object-contain scale-110" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden xl:flex items-center gap-4 2xl:gap-6 whitespace-nowrap">
+        <div className="hidden xl:flex items-center gap-3 2xl:gap-6 whitespace-nowrap">
           {topNavigation.slice(0, 2).map((item) => (
             <Link
               key={item.name}

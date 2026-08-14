@@ -67,7 +67,7 @@ const ManagedServices = () => {
           className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
         >
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            <div>
+            <div className="min-w-0">
               <Breadcrumbs items={[{ label: "Managed Services" }]} />
               <Badge variant="outline" className="mb-6">
                 Betrieb nach ITIL v4
