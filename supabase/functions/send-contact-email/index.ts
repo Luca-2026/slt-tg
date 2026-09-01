@@ -96,8 +96,17 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
-    // Prepare attachments array for Resend
-    const resendAttachments: Array<{ filename: string; content: Buffer }> = [];
+    // Prepare attachments array for Resend (content must be a base64-encoded string)
+    const resendAttachments: Array<{ filename: string; content: string }> = [];
+
+    const bytesToBase64 = (bytes: Uint8Array): string => {
+      let binary = "";
+      const chunkSize = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunkSize) {
+        binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+      }
+      return btoa(binary);
+    };
 
     // If there's a CV file in storage, download it
     if (data.cvFilePath) {
@@ -107,11 +116,10 @@ const handler = async (req: Request): Promise<Response> => {
           .from("cv-uploads")
           .download(data.cvFilePath);
         if (!downloadError && fileData) {
-          const arrayBuffer = await fileData.arrayBuffer();
-          const buffer = new Uint8Array(arrayBuffer);
+          const bytes = new Uint8Array(await fileData.arrayBuffer());
           resendAttachments.push({
             filename: data.cvFilePath.replace(/^\d+-/, ""),
-            content: buffer as unknown as Buffer,
+            content: bytesToBase64(bytes),
           });
         } else {
           console.error("Error downloading CV:", downloadError);
@@ -121,21 +129,11 @@ const handler = async (req: Request): Promise<Response> => {
       }
     }
 
-    // Add base64-encoded attachments (from project request form)
+    // Add base64-encoded attachments (from project request form) – pass through as-is
     if (data.attachments?.length) {
       for (const att of data.attachments) {
-        try {
-          const binaryStr = atob(att.content);
-          const bytes = new Uint8Array(binaryStr.length);
-          for (let i = 0; i < binaryStr.length; i++) {
-            bytes[i] = binaryStr.charCodeAt(i);
-          }
-          resendAttachments.push({
-            filename: att.filename,
-            content: bytes as unknown as Buffer,
-          });
-        } catch (e) {
-          console.error("Error processing attachment:", att.filename, e);
+        if (att?.filename && att?.content) {
+          resendAttachments.push({ filename: att.filename, content: att.content });
         }
       }
     }
