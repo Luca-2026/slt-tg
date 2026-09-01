@@ -356,6 +356,9 @@ const handler = async (req: Request): Promise<Response> => {
     }
     const emailResponse = await resend.emails.send(notificationPayload);
     console.log("Notification email sent:", emailResponse);
+    if (emailResponse.error) {
+      throw new Error(`Benachrichtigungs-E-Mail fehlgeschlagen: ${emailResponse.error.message}`);
+    }
 
     // Send confirmation email to the sender
     console.log(`Sending confirmation email to ${data.email}`);
