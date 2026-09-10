@@ -180,7 +180,7 @@ interface HighlightSlide {
 }
 
 const highlightSlides: HighlightSlide[] = [
-  ...[...newsArticles].sort((a, b) => Number(!!b.featured) - Number(!!a.featured)).map((a) => ({
+  ...newsArticles.map((a) => ({
     key: `news-${a.id}`,
     kind: "News" as const,
     category: a.category,
@@ -192,20 +192,25 @@ const highlightSlides: HighlightSlide[] = [
     videoBackground: a.videoBackground,
     to: `/news/${a.slug}`,
   })),
-  ...guides.map((g) => ({
+  ...sortedGuides.map((g) => ({
     key: `guide-${g.slug}`,
     kind: "Ratgeber" as const,
     category: g.category,
     title: g.title,
     excerpt: g.description,
     readTime: g.readTime,
+    date: g.date,
     image: g.image,
     to: `/ratgeber/${g.slug}`,
   })),
-];
+].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 
 const News = () => {
-  const regularArticles = newsArticles.filter((article) => !article.featured);
+  const regularArticles = [...newsArticles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 

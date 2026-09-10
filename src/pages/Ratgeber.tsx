@@ -100,7 +100,7 @@ const Ratgeber = () => {
       <section className="py-8 lg:py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guides.map((guide) => (
+            {sortedGuides.map((guide) => (
               <Link
                 key={guide.slug}
                 to={`/ratgeber/${guide.slug}`}
@@ -111,13 +111,24 @@ const Ratgeber = () => {
                     ? "border-primary/30 bg-secondary hover:border-primary/50"
                     : "border-border bg-card hover:border-primary/30"
                 }`}>
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
                     <Badge variant={guide.featured ? "default" : "secondary"} className="text-xs">
                       {guide.featured ? "⭐ Neu" : guide.category}
                     </Badge>
                     {guide.featured && (
                       <Badge variant="secondary" className="text-xs">{guide.category}</Badge>
                     )}
+                    <time
+                      dateTime={guide.date}
+                      className="text-xs text-muted-foreground flex items-center gap-1"
+                    >
+                      <Calendar className="h-3 w-3" />
+                      {new Date(guide.date).toLocaleDateString("de-DE", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </time>
                     <span className="text-xs text-muted-foreground flex items-center gap-1">
                       <Clock className="h-3 w-3" />
                       {guide.readTime}
