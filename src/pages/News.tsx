@@ -388,11 +388,15 @@ const News = () => {
                     </div>
                   ) : null}
                   <CardHeader className="p-4 lg:p-5">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
                       <Badge variant="outline" className="text-[10px]">{article.category}</Badge>
-                      <span className="text-[10px] lg:text-xs text-muted-foreground">
+                      <time
+                        dateTime={article.date}
+                        className="text-[10px] lg:text-xs text-muted-foreground flex items-center gap-1"
+                      >
+                        <Calendar className="h-3 w-3" />
                         {new Date(article.date).toLocaleDateString("de-DE")}
-                      </span>
+                      </time>
                     </div>
                     <CardTitle className="text-sm lg:text-base">{article.title}</CardTitle>
                   </CardHeader>
@@ -420,15 +424,22 @@ const News = () => {
             <h2 className="text-xl lg:text-2xl font-bold text-foreground">Ratgeber & Praxiswissen</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {guides.map((guide) => {
-              const isFeatured = 'featured' in guide && guide.featured;
+            {sortedGuides.map((guide) => {
+              const isFeatured = guide.featured;
               return (
               <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className={`group block ${isFeatured ? "sm:col-span-2 lg:col-span-3" : ""}`}>
                 <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${isFeatured ? "border-primary/30 bg-secondary hover:border-primary/50" : "bg-card border-border hover:border-primary/30"}`}>
                   <CardHeader className="p-4 sm:p-5">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
                       {isFeatured && <Badge className="text-[10px]">⭐ Neu</Badge>}
                       <Badge variant="secondary" className="text-[10px]">{guide.category}</Badge>
+                      <time
+                        dateTime={guide.date}
+                        className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1"
+                      >
+                        <Calendar className="h-3 w-3" />
+                        {new Date(guide.date).toLocaleDateString("de-DE")}
+                      </time>
                       <span className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         {guide.readTime}
