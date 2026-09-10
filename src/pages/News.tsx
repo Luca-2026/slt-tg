@@ -79,47 +79,70 @@ const newsArticles: NewsArticle[] = [
 
 const guides = [
   {
+    slug: "raumbuchungssystem-konferenzraeume",
+    image: "/assets/ratgeber/raumbuchung-og.jpg",
+    title: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
+    description: "Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Checkliste in sechs Punkten.",
+    date: "2026-09-10",
+    readTime: "7 Min.",
+    category: "Planung",
+    featured: true,
+  },
+  {
     slug: "ki-readiness-av-medientechnik-2026",
     image: "/assets/ratgeber/ki-readiness.jpg",
     title: "KI-Readiness in der AV-Branche: Medientechnik 2026 KI-fähig machen",
     description: "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance – mit Checkliste in sechs Schritten.",
+    date: "2026-08-06",
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
-    featured: true,
+    featured: false,
   },
   {
     slug: "yealink-meetingboard-pro",
     image: "/assets/ratgeber/meetingboard.jpg",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
     description: "Funktionen, Größen und Einsatzszenarien – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    date: "2026-03-26",
     readTime: "7 Min.",
     category: "Produkte",
+    featured: false,
   },
   {
     slug: "konferenztechnik-raumgroesse",
     image: "/assets/ratgeber/raumgroesse.jpg",
     title: "Welche Konferenztechnik für welche Raumgröße?",
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist.",
+    date: "2026-03-14",
     readTime: "8 Min.",
     category: "Planung",
+    featured: false,
   },
   {
     slug: "teams-rooms-vs-zoom-rooms",
     image: "/assets/ratgeber/plattformen.jpg",
     title: "Microsoft Teams Rooms vs. Zoom Rooms",
     description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe.",
+    date: "2026-03-14",
     readTime: "6 Min.",
     category: "Plattformen",
+    featured: false,
   },
   {
     slug: "konferenzraum-kosten",
     image: "/assets/ratgeber/kosten.jpg",
     title: "Was kostet ein Konferenzraum?",
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen.",
+    date: "2026-03-14",
     readTime: "7 Min.",
     category: "Budget",
+    featured: false,
   },
 ];
+
+const sortedGuides = [...guides].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 
 const generateNewsListSchema = () => ({
   "@context": "https://schema.org",
@@ -157,7 +180,7 @@ interface HighlightSlide {
 }
 
 const highlightSlides: HighlightSlide[] = [
-  ...[...newsArticles].sort((a, b) => Number(!!b.featured) - Number(!!a.featured)).map((a) => ({
+  ...newsArticles.map((a) => ({
     key: `news-${a.id}`,
     kind: "News" as const,
     category: a.category,
@@ -169,20 +192,25 @@ const highlightSlides: HighlightSlide[] = [
     videoBackground: a.videoBackground,
     to: `/news/${a.slug}`,
   })),
-  ...guides.map((g) => ({
+  ...sortedGuides.map((g) => ({
     key: `guide-${g.slug}`,
     kind: "Ratgeber" as const,
     category: g.category,
     title: g.title,
     excerpt: g.description,
     readTime: g.readTime,
+    date: g.date,
     image: g.image,
     to: `/ratgeber/${g.slug}`,
   })),
-];
+].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 
 const News = () => {
-  const regularArticles = newsArticles.filter((article) => !article.featured);
+  const regularArticles = [...newsArticles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -360,11 +388,15 @@ const News = () => {
                     </div>
                   ) : null}
                   <CardHeader className="p-4 lg:p-5">
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
                       <Badge variant="outline" className="text-[10px]">{article.category}</Badge>
-                      <span className="text-[10px] lg:text-xs text-muted-foreground">
+                      <time
+                        dateTime={article.date}
+                        className="text-[10px] lg:text-xs text-muted-foreground flex items-center gap-1"
+                      >
+                        <Calendar className="h-3 w-3" />
                         {new Date(article.date).toLocaleDateString("de-DE")}
-                      </span>
+                      </time>
                     </div>
                     <CardTitle className="text-sm lg:text-base">{article.title}</CardTitle>
                   </CardHeader>
@@ -392,15 +424,22 @@ const News = () => {
             <h2 className="text-xl lg:text-2xl font-bold text-foreground">Ratgeber & Praxiswissen</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {guides.map((guide) => {
-              const isFeatured = 'featured' in guide && guide.featured;
+            {sortedGuides.map((guide) => {
+              const isFeatured = guide.featured;
               return (
               <Link key={guide.slug} to={`/ratgeber/${guide.slug}`} className={`group block ${isFeatured ? "sm:col-span-2 lg:col-span-3" : ""}`}>
                 <Card className={`h-full transition-all duration-300 group-hover:shadow-lg ${isFeatured ? "border-primary/30 bg-secondary hover:border-primary/50" : "bg-card border-border hover:border-primary/30"}`}>
                   <CardHeader className="p-4 sm:p-5">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
                       {isFeatured && <Badge className="text-[10px]">⭐ Neu</Badge>}
                       <Badge variant="secondary" className="text-[10px]">{guide.category}</Badge>
+                      <time
+                        dateTime={guide.date}
+                        className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1"
+                      >
+                        <Calendar className="h-3 w-3" />
+                        {new Date(guide.date).toLocaleDateString("de-DE")}
+                      </time>
                       <span className="text-[10px] sm:text-xs text-muted-foreground flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         {guide.readTime}
