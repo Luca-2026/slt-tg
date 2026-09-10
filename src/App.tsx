@@ -33,6 +33,7 @@ import DigitalSignage from "./pages/DigitalSignage";
 import Videokonferenzanlage from "./pages/Videokonferenzanlage";
 import PartnerPage from "./pages/PartnerPage";
 import RatgeberKiReadiness from "./pages/RatgeberKiReadiness";
+import RatgeberRaumbuchung from "./pages/RatgeberRaumbuchung";
 import { getLocalSEORoutes } from "./data/localSEO";
 
 const queryClient = new QueryClient();
@@ -70,6 +71,7 @@ const App = () => (
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
           <Route path="/ratgeber/ki-readiness-av-medientechnik-2026" element={<RatgeberKiReadiness />} />
+          <Route path="/ratgeber/raumbuchungssystem-konferenzraeume" element={<RatgeberRaumbuchung />} />
           <Route path="/ratgeber/:slug" element={<RatgeberArticle />} />
           {/* Alt-URLs aus dem kurzzeitigen /blog-Bereich */}
           <Route path="/blog" element={<Navigate to="/ratgeber" replace />} />

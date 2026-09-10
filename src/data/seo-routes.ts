@@ -379,6 +379,30 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
 // ───────────────────────────────────────────────────────────
 export const RATGEBER_ROUTES: SeoRoute[] = [
   {
+    path: "/ratgeber/raumbuchungssystem-konferenzraeume",
+    routeType: "ratgeber",
+    title: "Raumbuchungssystem für Konferenzräume: Auswahl & Integration | SLT Technology Group",
+    description:
+      "Raumbuchungssystem planen: Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Auswahl-Checkliste.",
+    h1: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
+    intro: [
+      "Woraus ein Raumbuchungssystem besteht, wie es an Microsoft 365 oder Google Workspace andockt und welche sechs Kriterien vor der Bestellung geklärt gehören.",
+    ],
+    canonical: "/ratgeber/raumbuchungssystem-konferenzraeume",
+    ogType: "article",
+    ogImage: "/assets/ratgeber/raumbuchung-og.jpg",
+    changefreq: "monthly",
+    priority: 0.8,
+    lastmod: "2026-09-10",
+    breadcrumbs: [
+      { name: "Ratgeber", path: "/ratgeber" },
+      { name: "Raumbuchungssystem für Konferenzräume", path: "/ratgeber/raumbuchungssystem-konferenzraeume" },
+    ],
+    articleSlug: "raumbuchungssystem-konferenzraeume",
+    articleDate: "2026-09-10",
+    articleCategory: "Planung",
+  },
+  {
     path: "/ratgeber/yealink-meetingboard-pro",
     routeType: "ratgeber",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms | SLT Technology Group",
