@@ -70,12 +70,11 @@ const useCases = [
     icon: MonitorPlay,
     title: "Outdoor-LED & Werbeanlagen",
     description:
-      "Großflächige LED-Anlagen im Außenbereich inklusive Betriebs- und Wartungskonzept – von der Standortprüfung bis zur laufenden Betreuung.",
+      "Großflächige LED-Anlagen im Außenbereich – von der Standortprüfung über die Auslegung bis zur Inbetriebnahme.",
     features: [
       "Auslegung nach Pixelpitch, Helligkeit und Betrachtungsabstand",
       "Elektro- und Netzwerkanbindung koordiniert mit dem Gewerk vor Ort",
       "Fernüberwachung des Anlagenzustands",
-      "Wartungskonzept für Outdoor-LED verfügbar",
     ],
   },
   {

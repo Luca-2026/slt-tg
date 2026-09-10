@@ -8,12 +8,20 @@ import { ArrowRight, BookOpen, Clock } from "lucide-react";
 
 const guides = [
   {
+    slug: "raumbuchungssystem-konferenzraeume",
+    title: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
+    description: "Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Checkliste in sechs Punkten.",
+    readTime: "7 Min.",
+    category: "Planung",
+    featured: true,
+  },
+  {
     slug: "ki-readiness-av-medientechnik-2026",
     title: "KI-Readiness in der AV-Branche: Medientechnik 2026 KI-fähig machen",
     description: "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance: Was KI-Readiness für Ihre Medientechnik bedeutet – inklusive Checkliste in sechs Schritten.",
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
-    featured: true,
+    featured: false,
   },
   {
     slug: "yealink-meetingboard-pro",

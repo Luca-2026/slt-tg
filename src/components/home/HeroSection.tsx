@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TypewriterText } from "@/components/home/TypewriterText";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { WhitepaperBadge } from "@/components/home/WhitepaperBadge";
 
 const inspirationImages = [
   "/assets/inspirationen/gea-display.jpg",
@@ -256,9 +255,6 @@ export function HeroSection() {
 
         <div className="section-container relative z-20 py-16">
           <div className="max-w-md">
-            <div className="mb-4">
-              <WhitepaperBadge variant="dark" />
-            </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-accent text-xs font-medium mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen
@@ -327,9 +323,6 @@ export function HeroSection() {
         {/* Desktop Content - Right aligned */}
         <div className="absolute inset-0 z-20 flex items-center justify-end pr-10 lg:pr-16 xl:pr-24 pt-16">
           <div className="max-w-md lg:max-w-lg text-left">
-            <div className="mb-5 animate-fade-in">
-              <WhitepaperBadge variant="dark" />
-            </div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-accent animate-[pulse_3s_ease-in-out_infinite]" />
               Installation & Integration von AV- & IT-Lösungen

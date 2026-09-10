@@ -55,6 +55,16 @@
   RewriteCond %{HTTP_HOST} !^www\.slt-tg\.de$ [NC]
   RewriteRule ^(.*)$ https://www.slt-tg.de/$1 [R=301,L]
 
+  # 1b) Entferntes LED-Wartungskonzept: 410 Gone + noindex (Deindexierung)
+  <IfModule mod_headers.c>
+    <FilesMatch "slt-wartungskonzept-outdoor-led\.pdf$">
+      Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+    </FilesMatch>
+  </IfModule>
+  RewriteRule ^downloads/slt-wartungskonzept-outdoor-led\.pdf$ - [G,L]
+  RewriteRule ^downloads/?$ - [G,L]
+
+
   # 2) Wenn Datei oder Verzeichnis existiert: direkt ausliefern
   #    (so werden prerendered /medientechnik/krefeld/index.html etc. genutzt)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
