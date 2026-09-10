@@ -4,13 +4,14 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Clock } from "lucide-react";
+import { ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
 
 const guides = [
   {
     slug: "raumbuchungssystem-konferenzraeume",
     title: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
     description: "Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Checkliste in sechs Punkten.",
+    date: "2026-09-10",
     readTime: "7 Min.",
     category: "Planung",
     featured: true,
@@ -19,6 +20,7 @@ const guides = [
     slug: "ki-readiness-av-medientechnik-2026",
     title: "KI-Readiness in der AV-Branche: Medientechnik 2026 KI-fähig machen",
     description: "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance: Was KI-Readiness für Ihre Medientechnik bedeutet – inklusive Checkliste in sechs Schritten.",
+    date: "2026-08-06",
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
     featured: false,
@@ -27,6 +29,7 @@ const guides = [
     slug: "yealink-meetingboard-pro",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
     description: "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    date: "2026-03-26",
     readTime: "7 Min.",
     category: "Produkte",
     featured: false,
@@ -35,6 +38,7 @@ const guides = [
     slug: "konferenztechnik-raumgroesse",
     title: "Welche Konferenztechnik für welche Raumgröße?",
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist – mit konkreten Empfehlungen.",
+    date: "2026-03-14",
     readTime: "8 Min.",
     category: "Planung",
     featured: false,
@@ -43,6 +47,7 @@ const guides = [
     slug: "teams-rooms-vs-zoom-rooms",
     title: "Microsoft Teams Rooms vs. Zoom Rooms",
     description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe für Ihr Unternehmen.",
+    date: "2026-03-14",
     readTime: "6 Min.",
     category: "Plattformen",
     featured: false,
@@ -51,11 +56,16 @@ const guides = [
     slug: "konferenzraum-kosten",
     title: "Was kostet ein Konferenzraum?",
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen – von der Basisausstattung bis zum Boardroom.",
+    date: "2026-03-14",
     readTime: "7 Min.",
     category: "Budget",
     featured: false,
   },
 ];
+
+const sortedGuides = [...guides].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 
 const Ratgeber = () => {
   return (

@@ -79,47 +79,70 @@ const newsArticles: NewsArticle[] = [
 
 const guides = [
   {
+    slug: "raumbuchungssystem-konferenzraeume",
+    image: "/assets/ratgeber/raumbuchung-og.jpg",
+    title: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
+    description: "Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Checkliste in sechs Punkten.",
+    date: "2026-09-10",
+    readTime: "7 Min.",
+    category: "Planung",
+    featured: true,
+  },
+  {
     slug: "ki-readiness-av-medientechnik-2026",
     image: "/assets/ratgeber/ki-readiness.jpg",
     title: "KI-Readiness in der AV-Branche: Medientechnik 2026 KI-fähig machen",
     description: "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance – mit Checkliste in sechs Schritten.",
+    date: "2026-08-06",
     readTime: "8 Min.",
     category: "AV/IT-Konvergenz",
-    featured: true,
+    featured: false,
   },
   {
     slug: "yealink-meetingboard-pro",
     image: "/assets/ratgeber/meetingboard.jpg",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
     description: "Funktionen, Größen und Einsatzszenarien – inklusive Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+    date: "2026-03-26",
     readTime: "7 Min.",
     category: "Produkte",
+    featured: false,
   },
   {
     slug: "konferenztechnik-raumgroesse",
     image: "/assets/ratgeber/raumgroesse.jpg",
     title: "Welche Konferenztechnik für welche Raumgröße?",
     description: "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist.",
+    date: "2026-03-14",
     readTime: "8 Min.",
     category: "Planung",
+    featured: false,
   },
   {
     slug: "teams-rooms-vs-zoom-rooms",
     image: "/assets/ratgeber/plattformen.jpg",
     title: "Microsoft Teams Rooms vs. Zoom Rooms",
     description: "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe.",
+    date: "2026-03-14",
     readTime: "6 Min.",
     category: "Plattformen",
+    featured: false,
   },
   {
     slug: "konferenzraum-kosten",
     image: "/assets/ratgeber/kosten.jpg",
     title: "Was kostet ein Konferenzraum?",
     description: "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen.",
+    date: "2026-03-14",
     readTime: "7 Min.",
     category: "Budget",
+    featured: false,
   },
 ];
+
+const sortedGuides = [...guides].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
 
 const generateNewsListSchema = () => ({
   "@context": "https://schema.org",
