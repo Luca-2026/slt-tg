@@ -213,7 +213,7 @@ const RatgeberRaumbuchung = () => {
               Kombination aus sauber gepflegten Raumressourcen, klaren Buchungsregeln, gut bedienbaren Panels
               und einem Betriebskonzept. Wer zusätzlich die Belegungsdaten auswertet, plant die nächste
               Ausbaustufe seiner{" "}
-              <Link to="/loesungen/konferenzraeume" className="text-primary underline underline-offset-4">
+              <Link to="/konferenzraum-ausstattung" className="text-primary underline underline-offset-4">
                 Konferenzräume
               </Link>{" "}
               mit Fakten statt Bauchgefühl.
