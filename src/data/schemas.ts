@@ -14,7 +14,7 @@ import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
 import { getSolutionPage } from "./solutionPages";
 import { serviceModels } from "./serviceModels";
-import { msModules, msFaqs } from "./managedServices";
+import { msFaqs } from "./managedServices";
 
 const BASE_URL = "https://www.slt-tg.de";
 

@@ -1,9 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { getProjectBySlug } from "@/data/projects";
-import { PROJECT_ROUTES } from "@/data/seo-routes";
+import { MAIN_ROUTES, PROJECT_ROUTES } from "@/data/seo-routes";
 import { buildProjectDetailSchemas } from "@/data/schemas";
 
 describe("Knauber reference publication", () => {
+  it("only exposes the consolidated service hub to the SEO catalogue", () => {
+    expect(MAIN_ROUTES.filter(r => ["/managed-services", "/service-wartung"].includes(r.path)).map(r => r.path)).toEqual(["/managed-services"]);
+  });
   it("records the completed EU cloud migration", () => {
     expect(getProjectBySlug("knauber-outdoor-led-wartung-bonn")?.techStack.find(s => s.label === "Monitoring / Fernwartung")?.value).toBe("Migration in die NovaStar VNNOX EU Cloud abgeschlossen");
   });
