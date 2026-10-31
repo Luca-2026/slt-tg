@@ -21,6 +21,9 @@ import {
   Quote
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { PROJECTS } from "@/data/projects";
+
+const knauber = PROJECTS.find((project) => project.slug === "knauber-outdoor-led-wartung-bonn");
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
@@ -36,6 +39,7 @@ interface ProjectImage {
 
 // Mapping von card-id auf Detailseiten-Slug (/projekte/{slug})
 const detailSlugMap: Record<string, string> = {
+  "knauber-outdoor-led-wartung-bonn": "knauber-outdoor-led-wartung-bonn",
   "aluminium-norf": "aluminium-norf",
   "pfeifer-langen": "pfeifer-langen",
   "gea-farm": "gea-farm-technologies",
@@ -44,6 +48,14 @@ const detailSlugMap: Record<string, string> = {
 };
 
 const projects = [
+  ...(knauber ? [{
+    id: knauber.slug, company: knauber.client, website: knauber.externalLink?.url,
+    category: "digital-signage", categoryLabel: knauber.category, location: knauber.location,
+    year: new Date(`${knauber.datePublished}T12:00:00Z`).toLocaleDateString("de-DE", { timeZone: "UTC" }), icon: Monitor, heroImage: knauber.heroImage,
+    galleryImages: knauber.galleryImages, shortDescription: knauber.shortDescription,
+    challenge: knauber.challenge, solution: knauber.solution,
+    results: knauber.results.map((result) => result.description), tags: knauber.tags,
+  }] : []),
   {
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
@@ -326,7 +338,7 @@ function ProjectImageSlider({ images, imagePositions, alt }: { images: string[];
         <img
           key={img}
           src={img}
-          alt={`${alt} – Bild ${idx + 1}`}
+          alt={knauber?.imageAlts?.[img] ?? `${alt} – Bild ${idx + 1}`}
           loading="lazy"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             idx === current ? "opacity-100" : "opacity-0"
@@ -510,7 +522,7 @@ const Projekte = () => {
                                 >
                                   <img 
                                     src={img} 
-                                    alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
+                                    alt={knauber?.imageAlts?.[img] ?? `${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
                                     style={{ objectPosition: (project as any).imagePositions?.[img] || "center center" }}
                                   />

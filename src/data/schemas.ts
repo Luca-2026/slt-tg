@@ -8,7 +8,7 @@
  */
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
-import { getProjectBySlug, type Project } from "./projects";
+import { getProjectBySlug, PROJECTS, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
@@ -298,12 +298,12 @@ export function buildProjectListSchemas(route: SeoRoute): object[] {
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      itemListElement: FEATURED_PROJECTS.map((p, i) => ({
+      itemListElement: PROJECTS.map((p, i) => ({
         "@type": "ListItem",
         position: i + 1,
         name: p.name,
         url: `${BASE_URL}/projekte/${p.slug}`,
-        image: `${BASE_URL}${p.image}`,
+        image: `${BASE_URL}${p.heroImage}`,
       })),
     },
     buildBreadcrumbList(route),
@@ -327,8 +327,8 @@ export function buildProjectDetailSchemas(project: Project): object[] {
     image: project.heroImage.startsWith("http")
       ? project.heroImage
       : `${BASE_URL}${project.heroImage}`,
-    datePublished: `${startYear}-01-01`,
-    dateModified: "2026-04-20",
+    datePublished: project.datePublished ?? `${startYear}-01-01`,
+    dateModified: project.dateModified ?? "2026-04-20",
     author: ORG_REF,
     publisher: {
       "@type": "Organization",

@@ -20,6 +20,13 @@ export interface Project {
   client: string;
   location: string;
   year: string;
+  datePublished?: string;
+  dateModified?: string;
+  logo?: string;
+  heroAlt?: string;
+  imageAlts?: Record<string, string>;
+  relatedArticle?: { url: string; label: string };
+  partnerLink?: { url: string; label: string };
   category: string;
   shortDescription: string; // 1-2 Sätze, für Übersicht und Meta-Description
   heroImage: string;
@@ -40,6 +47,37 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "knauber-outdoor-led-wartung-bonn",
+    name: "Knauber – Outdoor-LED-Wartung in Bonn",
+    client: "Knauber",
+    location: "Bonn",
+    year: "2026",
+    datePublished: "2026-10-24",
+    dateModified: "2026-10-31",
+    category: "Outdoor-LED · Service & Wartung",
+    shortDescription: "Knauber vertraut SLT Technology Group die Wartung seiner Outdoor-LED-Anlagen in Bonn an. Reale Einblicke in Anlagenzugang und Höhenarbeit.",
+    heroImage: "/assets/projects/knauber/knauber-led-wartung-buehne.webp",
+    heroAlt: "Outdoor-LED-Anlage bei Knauber in Bonn mit aufgestellter Höhenarbeitsbühne von SLT Rental",
+    logo: "/assets/projects/knauber/knauber-logo.webp",
+    galleryImages: ["/assets/projects/knauber/knauber-led-wartung-buehne.webp", "/assets/projects/knauber/knauber-led-servicezugang.webp", "/assets/projects/knauber/knauber-led-werbetafel-bonn.webp"],
+    imageAlts: {
+      "/assets/projects/knauber/knauber-led-wartung-buehne.webp": "Outdoor-LED-Anlage bei Knauber in Bonn mit Höhenarbeitsbühne von SLT Rental",
+      "/assets/projects/knauber/knauber-led-servicezugang.webp": "Geöffnete rückseitige Serviceklappen der Knauber-LED-Anlage mit Lüftern, Netzteilen und Verkabelung",
+      "/assets/projects/knauber/knauber-led-werbetafel-bonn.webp": "LED-Werbetafel am Knauber-Standort in Bonn mit angezeigtem Knauber-Logo",
+    },
+    challenge: "Outdoor-LED-Anlagen benötigen einen sicheren Zugang zu den technischen Komponenten und eine Wartung, die Bildausgabe, Lüftung und Steuerung zusammen betrachtet. Knauber aus Bonn hat die Wartung seiner LED-Outdoor-Anlagen vertrauensvoll in die Hände der SLT Technology Group gelegt. Die Kundenfotos zeigen die Anlage, den rückseitigen Servicezugang und die dafür bereitgestellte Höhenarbeitsbühne.",
+    solution: "Wir übernehmen die Wartung der Outdoor-LED-Anlagen. Über unseren Partnerbetrieb beziehungsweise das verbundene Unternehmen SLT Rental haben wir direkten Zugriff auf Höhenarbeitsbühnen. Das verkürzt die Abstimmung zwischen Technik und Höhenzugang und ermöglicht flexible, kurzfristige Einsatzplanung. Voraussetzung bleiben eine geeignete Bühne, sichere Aufstellflächen und die Freigabe des Zugangs. Für kontinuierliches Monitoring und Fernwartung migrieren wir geeignete LED-Wände in die NovaStar VNNOX EU Cloud mit VNNOX Care. Die Anbindung wird anhand von Controller, Firmware, Netzwerk und Berechtigungen geprüft; ein abgeschlossener Migrationsstatus dieser Knauber-Anlage wird hier nicht behauptet.",
+    results: [
+      { title: "Wartung aus einer Hand", description: "Knauber hat SLT Technology Group mit der Wartung seiner Outdoor-LED-Anlagen betraut." },
+      { title: "Technik und Höhenzugang gemeinsam planen", description: "Der direkte Zugriff auf Bühnen über SLT Rental erleichtert die kurzfristige Koordination von Vor-Ort-Einsätzen." },
+    ],
+    techStack: [{ label: "Anlage", value: "Outdoor-LED-Werbeanlage" }, { label: "Leistung", value: "Service und Wartung" }, { label: "Höhenzugang", value: "Arbeitsbühnen über SLT Rental" }],
+    tags: ["Outdoor-LED", "LED-Werbetafel", "Wartung", "Bonn"],
+    externalLink: { url: "https://unternehmen.knauber.de/", label: "Knauber: offizielle Unternehmenswebsite" },
+    partnerLink: { url: "https://www.slt-rental.de", label: "Höhenarbeitsbühnen bei SLT Rental" },
+    relatedArticle: { url: "/news/outdoor-led-wartung-servicekonzept", label: "Outdoor-LED-Wartung: Prüfliste und Monitoring" },
+  },
   {
     slug: "aluminium-norf",
     name: "Aluminium Norf – Boardroom & Schulungsraum AV",
