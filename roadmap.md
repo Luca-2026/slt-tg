@@ -1,5 +1,5 @@
 # Aufgaben
-- [ ] Bank-Verlag-Referenz mit Originalfotos, Projektzeit Februar 2026 und Veröffentlichungsdatum 31.08.2026 integrieren und prüfen.
+- [x] Bank-Verlag-Referenz mit beiden Originalfotos, Projektzeit Februar 2026, Veröffentlichungsdatum 31.08.2026, interner Übersicht-Verlinkung und SEO/Sitemap integriert; Desktop/Mobil und Datumstests geprüft, kein Upload.
 - [x] Projektüberschriften intern verlinkt, drei Knauber-Bildzuschnitte auf die Motive fokussiert und großen Bildwechsel mit Fade auf Desktop/Mobil geprüft; Originalfotos unverändert erhalten.
 - [x] Knauber-Bild ohne Beschnitt, offizielle Firmierung und Kundenlink korrigiert; ausgeführte Wartung und Cloud-Migration ergänzt. Anlagenstandort nur Bonn, keine ungeprüfte Firmensitz-Zuordnung.
 - [x] Services und Wartung auf einer Seite konsolidiert und drei belegte CARE-Modelle interaktiv integriert; LED-Serviceleistungen und Buttons ergänzt, ohne PDF-Download.
