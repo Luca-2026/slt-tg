@@ -5,7 +5,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight } from "lucide-react";
 import image from "@/assets/news/outdoor-led-wartung.jpg";
-import whitepaper from "@/assets/news/outdoor-led-whitepaper.asset.json";
 import { outdoorLedArticle as article } from "@/data/outdoorLedArticle";
 
 export default function NewsOutdoorLed() {
@@ -66,7 +65,7 @@ export default function NewsOutdoorLed() {
         <section className="border-t border-border pt-6">
           <h2 className="text-2xl font-bold text-foreground mb-4">Whitepaper und Quellen</h2>
           <p className="mb-4">Leistungsumfang und LED-Servicekonditionen stammen aus dem beigefügten Service- und Wartungskonzept der SLT Technology Group. Technische Hinweise sind modellabhängig; maßgeblich bleiben die Anleitung und Freigaben des Herstellers.</p>
-          <Button asChild variant="outline" className="h-auto whitespace-normal"><a href={whitepaper.url} target="_blank" rel="noopener noreferrer"><Download className="mr-2 h-4 w-4 shrink-0" />Service-Whitepaper (PDF) ↗</a></Button>
+          <Button asChild variant="outline" className="h-auto whitespace-normal"><a href="/downloads/slt-outdoor-led-service-whitepaper-2026.pdf" download><Download className="mr-2 h-4 w-4 shrink-0" />Service-Whitepaper (PDF)</a></Button>
           <ul className="mt-5 list-disc pl-5 space-y-2 text-sm">
             <li><a href="https://www.absen.com/wp-content/uploads/2025/06/K-V3-Series-User-Manual-V202407-K-V3-Series-User-Manual-V202407.pdf" target="_blank" rel="noopener noreferrer" className="text-primary underline">Absen K V3: modellbezogene Sicherheit, Wartung und Fehlerdiagnose ↗</a></li>
             <li><a href="https://www.samsung.com/us/business/support/owners/product/oh-f-series-digital-signage-oh85f/" target="_blank" rel="noopener noreferrer" className="text-primary underline">Samsung OH85F: Handbücher für Outdoor-Digital-Signage ↗</a> – LCD-Produkt, keine allgemeine LED-Wartungsanweisung.</li>
