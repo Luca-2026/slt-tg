@@ -1,4 +1,6 @@
 # Aufgaben
+- [ ] Startseiten-Referenzen aus vollständigem Bestand rotieren lassen und davor datierte aktuelle News interaktiv anzeigen.
+- [ ] Startseite und Karussells auf Mobil und Desktop prüfen, kein Upload.
 - [x] Bank-Verlag-Referenz mit beiden Originalfotos, Projektzeit Februar 2026, Veröffentlichungsdatum 31.08.2026, interner Übersicht-Verlinkung und SEO/Sitemap integriert; Desktop/Mobil und Datumstests geprüft, kein Upload.
 - [x] Projektüberschriften intern verlinkt, drei Knauber-Bildzuschnitte auf die Motive fokussiert und großen Bildwechsel mit Fade auf Desktop/Mobil geprüft; Originalfotos unverändert erhalten.
 - [x] Knauber-Bild ohne Beschnitt, offizielle Firmierung und Kundenlink korrigiert; ausgeführte Wartung und Cloud-Migration ergänzt. Anlagenstandort nur Bonn, keine ungeprüfte Firmensitz-Zuordnung.
