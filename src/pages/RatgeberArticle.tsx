@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, Clock, BookOpen, CheckCircle } from "lucide-react";
+import { guides as guideMetadata } from "@/data/newsFeed";
 
 /* =========================================================
    Ratgeber-Artikel – basierend auf Recherche (Stand März 2026)
@@ -711,6 +712,11 @@ const RatgeberArticle = () => {
                 <Clock className="h-3.5 w-3.5" />
                 Lesezeit: {guide.readTime}
               </span>
+              {guideMetadata.find(item => item.slug === guide.slug)?.date && (
+                <time className="text-xs sm:text-sm text-muted-foreground" dateTime={guideMetadata.find(item => item.slug === guide.slug)?.date}>
+                  {new Date(`${guideMetadata.find(item => item.slug === guide.slug)?.date}T12:00:00Z`).toLocaleDateString("de-DE", { timeZone: "UTC" })}
+                </time>
+              )}
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6 lg:mb-8 leading-tight">

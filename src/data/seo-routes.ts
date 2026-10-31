@@ -8,6 +8,7 @@ import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
 import { solutionPages } from "./solutionPages";
 import { outdoorLedArticle } from "./outdoorLedArticle";
+import { guides, newsArticles } from "./newsFeed";
 
 
 export type RouteType =
@@ -756,7 +757,19 @@ export const SOLUTION_ROUTES: SeoRoute[] = solutionPages.map((p) => ({
 export const RATGEBER_ROUTES: SeoRoute[] = [
   ...LEGACY_RATGEBER_ROUTES.filter(route => !ratgeberPosts.some(post => route.articleSlug === post.slug)),
   ...RATGEBER_POST_ROUTES,
-];
+].map(route => {
+  const guide = guides.find(item => item.slug === route.articleSlug);
+  return { ...route, ogImage: route.ogImage ?? guide?.image, articleImage: route.articleImage ?? guide?.image };
+});
+
+for (const route of NEWS_ROUTES) {
+  const article = newsArticles.find(item => item.slug === route.articleSlug);
+  if (article) {
+    route.articleDate = article.date;
+    route.ogImage = article.image ?? route.ogImage;
+    route.articleImage = article.image ?? route.articleImage;
+  }
+}
 
 export const ALL_ROUTES: SeoRoute[] = [
   ...MAIN_ROUTES,
