@@ -4,8 +4,8 @@
  * Basis sind ausschließlich die Leistungen, die SLT Technology Group
  * öffentlich kommuniziert (Service Desk, proaktives 24/7-Monitoring,
  * Managed Rooms, ITIL v4, Multi-Site-Betrieb, Standorte Krefeld & Bonn).
- * Es werden bewusst KEINE konkreten SLA-Zeiten, Preise oder Kennzahlen
- * genannt – diese werden im individuellen Servicevertrag vereinbart.
+ * Konkrete CARE-Vertragsmodelle sind separat im Service-Modellkatalog
+ * anhand der vom Kunden bereitgestellten Leistungsbeschreibung definiert.
  */
 
 export interface MsModule {
@@ -13,13 +13,6 @@ export interface MsModule {
   title: string;
   description: string;
   bullets: string[];
-}
-
-export interface MsModel {
-  name: string;
-  focus: string;
-  description: string;
-  includes: string[];
 }
 
 export const msModules: MsModule[] = [
@@ -97,50 +90,11 @@ export const msModules: MsModule[] = [
   },
 ];
 
-export const msModels: MsModel[] = [
-  {
-    name: "Basis",
-    focus: "Reaktiver Betrieb",
-    description:
-      "Für Organisationen, die eine verlässliche Anlaufstelle und planbare Wartung brauchen, den Betrieb aber weiterhin selbst steuern.",
-    includes: [
-      "Service Desk zu vereinbarten Servicezeiten",
-      "Geplante Wartung und Funktionsprüfung",
-      "Remote-Support und Hersteller-Eskalation",
-      "Dokumentation der Vorgänge",
-    ],
-  },
-  {
-    name: "Proaktiv",
-    focus: "Monitoring & Prävention",
-    description:
-      "Für Unternehmen mit vielen Räumen, in denen Störungen erkannt und behoben werden sollen, bevor Nutzer sie melden.",
-    includes: [
-      "Alles aus Basis",
-      "Proaktives 24/7-Monitoring inklusive Alarmierung",
-      "Remote-Entstörung, wo technisch möglich",
-      "Regelmäßiges Service-Reporting",
-    ],
-  },
-  {
-    name: "Managed Rooms",
-    focus: "Vollbetrieb & Optimierung",
-    description:
-      "Für Konzerne und Multi-Site-Umgebungen, die den kompletten AV-Betrieb inklusive Weiterentwicklung übergeben wollen.",
-    includes: [
-      "Alles aus Proaktiv",
-      "Betrieb der gesamten Raum-Flotte über alle Standorte",
-      "Nutzungsanalysen und Optimierungs-Empfehlungen",
-      "Lifecycle-, Roadmap- und Budgetplanung",
-    ],
-  },
-];
-
 export const msProcess = [
   {
     step: "01",
     title: "Bestandsaufnahme",
-    text: "Wir erfassen Räume, Technik, Standorte und den aktuellen Betriebszustand – auch bei Anlagen, die nicht von uns installiert wurden.",
+    text: "Wir erfassen Räume, Technik, Standorte und den aktuellen Betriebszustand und prüfen den geeigneten Serviceumfang.",
   },
   {
     step: "02",
@@ -173,12 +127,12 @@ export const msFaqs = [
   {
     question: "Übernehmt ihr auch Anlagen, die ein anderer Integrator installiert hat?",
     answer:
-      "Ja. Wir starten mit einer Bestandsaufnahme und prüfen je Raum, was sich wirtschaftlich sinnvoll in den Betrieb übernehmen lässt. Einschränkungen gibt es vor allem bei Hardware, die vom Hersteller nicht mehr unterstützt wird (End-of-Life).",
+      "Die Übernahme wird im Rahmen einer Bestandsaufnahme individuell geprüft; eine pauschale Zusage für Fremdanlagen geben wir nicht.",
   },
   {
     question: "Welche Reaktionszeiten und SLAs bietet ihr?",
     answer:
-      "Servicezeiten, Reaktions- und Wiederherstellungszeiten vereinbaren wir individuell im Servicevertrag – abhängig von Anzahl der Räume, Kritikalität und Standortverteilung. Pauschale Preislisten würden diesen Unterschieden nicht gerecht.",
+      "CARE Plus bietet Montag bis Freitag von 08:00 bis 17:00 Uhr eine Reaktion innerhalb von vier Stunden mit Beginn der Remote-Analyse; falls remote nicht lösbar, erfolgt der Vor-Ort-Einsatz innerhalb von zwei Geschäftstagen. CARE Basic bietet definierte Reaktionszeiten optional. CARE Enterprise vereinbart priorisierte Reaktionszeiten nach Störungsklasse. Reaktionszeit ist keine garantierte Wiederherstellungszeit.",
   },
   {
     question: "Funktionieren Managed Services auch für mehrere Standorte?",

@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { LedService } from "@/components/services/LedService";
 import { outdoorLedArticle as article } from "@/data/outdoorLedArticle";
 
 export default function NewsOutdoorLed() {
@@ -68,12 +69,12 @@ export default function NewsOutdoorLed() {
             <li><strong className="text-foreground">Monitoring einrichten:</strong> Unterstützte Gerätestatus-, Temperatur- und Spannungsdaten sowie Fehlermeldungen erfassen. Alarmempfänger und Eskalation festlegen, statt lediglich ein Dashboard anzulegen.</li>
             <li><strong className="text-foreground">Übergabe testen:</strong> Online-/Offline-Erkennung und Alarmwege prüfen, Konfiguration dokumentieren und freigegebene Fernwartungsmaßnahmen festlegen.</li>
           </ol>
-          <p className="mt-4">Kontinuierliches technisches Monitoring ist keine Zusage für rund um die Uhr besetzten Support. Fernwartung ersetzt weder die Reinigung noch den mechanischen oder elektrischen Austausch vor Ort. Der konkrete Migrationsstatus der Knauber-Anlage wird in dieser Referenz nicht als abgeschlossen dargestellt.</p>
+          <p className="mt-4">Kontinuierliches technisches Monitoring ist keine Zusage für rund um die Uhr besetzten Support. Fernwartung ersetzt weder die Reinigung noch den mechanischen oder elektrischen Austausch vor Ort. Bei Knauber haben wir die Anlagen vollständig in die NovaStar VNNOX EU Cloud migriert.</p>
         </section>
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">6. Knauber in Bonn: Wartung mit direktem Höhenzugang</h2>
-          <a href="https://unternehmen.knauber.de/" target="_blank" rel="noopener noreferrer" className="inline-block mb-4 text-primary"><img src="/assets/projects/knauber/knauber-logo.webp" alt="Knauber Logo" width={1600} height={432} loading="lazy" className="w-48 h-auto mb-2" />Knauber Unternehmenswebsite ↗</a>
-          <p>Unser Kunde Knauber aus Bonn hat die Wartung seiner LED-Outdoor-Anlagen vertrauensvoll in unsere Hände gelegt. Die Fotos in diesem Beitrag zeigen eine reale Kundenanlage – keine Illustration und keine nachgestellte Installation.</p>
+          <a href="https://www.knauber.de/" target="_blank" rel="noopener noreferrer" className="inline-block mb-4 text-primary"><img src="/assets/projects/knauber/knauber-logo.webp" alt="Knauber Logo" width={1600} height={432} loading="lazy" className="w-48 h-auto mb-2" />Carl Knauber Holding GmbH &amp; Co. KG ↗</a>
+          <p>Unser Kunde Carl Knauber Holding GmbH &amp; Co. KG aus Bonn hat die Wartung seiner LED-Outdoor-Anlagen vertrauensvoll in unsere Hände gelegt. Als erste Maßnahmen haben wir die Lüfter und Netzteile getauscht und einen anlagenspezifischen Ersatzteilpool aufgebaut, damit benötigte Komponenten schnellstmöglich bereitgestellt werden können. Die Migration der Anlagen in die NovaStar VNNOX EU Cloud ist abgeschlossen. Monitoring und Fernwartung ergänzen seitdem die Arbeiten vor Ort. Die Fotos zeigen die tatsächlichen Kundenanlagen.</p>
           <p className="mt-3">Über unseren Partnerbetrieb beziehungsweise das verbundene Unternehmen <a href="https://www.slt-rental.de" target="_blank" rel="noopener noreferrer" className="text-primary underline">SLT Rental ↗</a> haben wir direkten Zugriff auf Höhenarbeitsbühnen. So können wir Technikeinsatz und Höhenzugang gemeinsam koordinieren und Kunden flexibel sowie kurzfristig bedienen. Dieser organisatorische Vorteil reduziert zusätzliche Abstimmung mit einem separat zu beauftragenden Bühnenvermieter; konkrete Verfügbarkeit, Zufahrt, Tragfähigkeit und sichere Aufstellung müssen vor jedem Einsatz geprüft werden.</p>
           <figure className="mt-6">
             <img src="/assets/projects/knauber/knauber-led-werbetafel-bonn.webp" alt="Outdoor-LED-Werbetafel am Knauber-Standort in Bonn mit dem Knauber-Logo auf der Bildfläche" width={1200} height={1600} loading="lazy" className="w-full max-w-lg h-auto rounded-lg" />
@@ -84,7 +85,7 @@ export default function NewsOutdoorLed() {
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-4">7. AV-Service an Ihre IT anbinden</h2>
           <p>SLT Technology Group ist ITIL 4 zertifiziert und richtet die Serviceprozesse daran aus – besonders dort, wo Medientechnik mit Netzwerk, Geräteverwaltung und IT-Sicherheit zusammenarbeitet. Praktisch heißt das: Störungen als Incidents dokumentieren, wiederkehrende Ursachen im Problem-Management untersuchen und Änderungen mit Freigabe, Wartungsfenster und Rückfallplan durchführen.</p>
-          <p className="mt-3">Legen Sie gemeinsam mit Ihrer IT fest, wer Fernzugriffe freigibt, Konten verwaltet, Firmwareänderungen genehmigt und bei Netzwerkproblemen übernimmt. Lesen Sie dazu mehr über <Link to="/managed-services" className="text-primary underline">Managed Services für Medientechnik</Link> und <Link to="/service-wartung" className="text-primary underline">Service &amp; Wartung</Link>.</p>
+          <p className="mt-3">Legen Sie gemeinsam mit Ihrer IT fest, wer Fernzugriffe freigibt, Konten verwaltet, Firmwareänderungen genehmigt und bei Netzwerkproblemen übernimmt. Lesen Sie dazu mehr über <Link to="/managed-services" className="text-primary underline">Managed Services für Medientechnik</Link> mit den <Link to="/managed-services#service-modelle" className="text-primary underline">CARE-Service-Modellen</Link>.</p>
         </section>
         <section className="border-t border-border pt-6">
           <h2 className="text-2xl font-bold text-foreground mb-4">Fachquellen und Leistungsabgrenzung</h2>
@@ -99,5 +100,6 @@ export default function NewsOutdoorLed() {
         <Button asChild className="h-auto whitespace-normal"><Link to="/projektanfrage">Anlagenprüfung anfragen <ArrowRight className="ml-2 h-4 w-4 shrink-0" /></Link></Button>
       </div>
     </article>
+    <LedService />
   </Layout>;
 }
