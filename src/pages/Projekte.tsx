@@ -51,7 +51,7 @@ const projects = [
   ...(knauber ? [{
     id: knauber.slug, company: knauber.client, website: knauber.externalLink?.url,
     category: "digital-signage", categoryLabel: knauber.category, location: knauber.location,
-    year: "24.10.2026", icon: Monitor, heroImage: knauber.heroImage,
+    year: new Date(`${knauber.datePublished}T12:00:00Z`).toLocaleDateString("de-DE", { timeZone: "UTC" }), icon: Monitor, heroImage: knauber.heroImage,
     galleryImages: knauber.galleryImages, shortDescription: knauber.shortDescription,
     challenge: knauber.challenge, solution: knauber.solution,
     results: knauber.results.map((result) => result.description), tags: knauber.tags,
@@ -338,7 +338,7 @@ function ProjectImageSlider({ images, imagePositions, alt }: { images: string[];
         <img
           key={img}
           src={img}
-          alt={`${alt} – Bild ${idx + 1}`}
+          alt={knauber?.imageAlts?.[img] ?? `${alt} – Bild ${idx + 1}`}
           loading="lazy"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             idx === current ? "opacity-100" : "opacity-0"
@@ -522,7 +522,7 @@ const Projekte = () => {
                                 >
                                   <img 
                                     src={img} 
-                                    alt={`${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
+                                    alt={knauber?.imageAlts?.[img] ?? `${project.company} – Projektbild ${idx + 1}: AV-Installation ${project.categoryLabel}`}
                                     className="w-full h-full object-cover"
                                     style={{ objectPosition: (project as any).imagePositions?.[img] || "center center" }}
                                   />
