@@ -113,11 +113,11 @@ const ProjectPage = () => {
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
               Eindrücke aus dem Projekt
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className={`grid sm:grid-cols-2 ${project.portraitGallery ? "max-w-4xl mx-auto" : "lg:grid-cols-3"} gap-4`}>
               {project.galleryImages.map((img, i) => (
                 <div
                   key={img}
-                  className="aspect-video rounded-lg overflow-hidden bg-secondary"
+                  className={`${project.portraitGallery ? "aspect-[3/4]" : "aspect-video"} rounded-lg overflow-hidden bg-secondary`}
                 >
                   <img
                     src={img}

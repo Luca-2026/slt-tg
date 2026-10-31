@@ -24,6 +24,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { PROJECTS } from "@/data/projects";
 
 const knauber = PROJECTS.find((project) => project.slug === "knauber-outdoor-led-wartung-bonn");
+const bankVerlag = PROJECTS.find((project) => project.slug === "bank-verlag-mobile-videokonferenzstele-koeln");
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
@@ -48,6 +49,14 @@ const detailSlugMap: Record<string, string> = {
 };
 
 const projects = [
+  ...(bankVerlag ? [{
+    id: bankVerlag.slug, company: bankVerlag.client,
+    category: "videokonferenz", categoryLabel: bankVerlag.category, location: bankVerlag.location,
+    year: bankVerlag.year, icon: Monitor, heroImage: bankVerlag.heroImage,
+    galleryImages: bankVerlag.galleryImages, shortDescription: bankVerlag.shortDescription,
+    challenge: bankVerlag.challenge, solution: bankVerlag.solution,
+    results: bankVerlag.results.map(result => result.description), tags: bankVerlag.tags,
+  }] : []),
   ...(knauber ? [{
     id: knauber.slug, company: knauber.client, website: knauber.externalLink?.url,
     category: "digital-signage", categoryLabel: knauber.category, location: knauber.location,
@@ -338,9 +347,9 @@ function ProjectImageSlider({ images, imagePositions, alt }: { images: string[];
         <img
           key={img}
           src={img}
-          alt={knauber?.imageAlts?.[img] ?? `${alt} – Bild ${idx + 1}`}
+          alt={bankVerlag?.imageAlts?.[img] ?? knauber?.imageAlts?.[img] ?? `${alt} – Bild ${idx + 1}`}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full ${bankVerlag?.galleryImages?.includes(img) ? "object-contain" : "object-cover"} transition-opacity duration-1000 ${
             idx === current ? "opacity-100" : "opacity-0"
           }`}
           style={{ objectPosition: imagePositions?.[img] || "center center" }}
