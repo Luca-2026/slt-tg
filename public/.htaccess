@@ -57,11 +57,12 @@
 
   # 1b) Entferntes LED-Wartungskonzept: 410 Gone + noindex (Deindexierung)
   <IfModule mod_headers.c>
-    <FilesMatch "slt-wartungskonzept-outdoor-led\.pdf$">
+    <FilesMatch "(slt-wartungskonzept-outdoor-led|slt-outdoor-led-service-whitepaper-2026)\.pdf$">
       Header always set X-Robots-Tag "noindex, nofollow, noarchive"
     </FilesMatch>
   </IfModule>
   RewriteRule ^downloads/slt-wartungskonzept-outdoor-led\.pdf$ - [G,L]
+  RewriteRule ^downloads/slt-outdoor-led-service-whitepaper-2026\.pdf$ - [G,L]
   RewriteRule ^downloads/?$ - [G,L]
 
 

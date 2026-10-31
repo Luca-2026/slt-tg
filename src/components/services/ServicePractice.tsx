@@ -15,10 +15,11 @@ export function ServicePractice() {
         </ol>
         <div className="mt-8 border-t border-border pt-6">
           <h3 className="text-xl font-semibold text-foreground mb-3">Praxiswissen für Outdoor-LED-Anlagen</h3>
-          <p className="text-muted-foreground mb-4">Prüfliste für Lüftung, Module und Dokumentation sowie die Unterschiede zwischen Abrufservice und Wartungsvertrag – auf Basis unseres Service-Whitepapers.</p>
+          <p className="text-muted-foreground mb-4">Lüftung und Module prüfen, Störungen dokumentieren und Monitoring vorbereiten: mit realen Einblicken in die Outdoor-LED-Wartung bei Knauber in Bonn.</p>
           <Button asChild variant="outline" className="h-auto whitespace-normal text-left">
-            <Link to="/news/outdoor-led-wartung-servicekonzept">LED-Prüfliste und Whitepaper lesen <ArrowRight className="ml-2 h-4 w-4 shrink-0" /></Link>
+            <Link to="/news/outdoor-led-wartung-servicekonzept">Outdoor-LED-Wartung: Praxisbeitrag lesen <ArrowRight className="ml-2 h-4 w-4 shrink-0" /></Link>
           </Button>
+          <p className="mt-4"><Link to="/projekte/knauber-outdoor-led-wartung-bonn" className="text-primary underline">Knauber: Outdoor-LED-Wartung in Bonn</Link></p>
         </div>
       </div>
     </section>
