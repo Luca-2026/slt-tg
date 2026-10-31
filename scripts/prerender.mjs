@@ -62,6 +62,12 @@ try {
       for (const schema of schemas) { const el = document.createElement("script"); el.type = "application/ld+json";
         el.dataset.routeSchema = "true"; el.textContent = JSON.stringify(schema).replace(/</g, "\\u003c"); document.head.append(el); }
       document.querySelectorAll('link[rel="preload"][as="image"]').forEach(el => el.remove());
+      // Export reveal content visibly: observers cannot run without JavaScript.
+      document.querySelectorAll('[class*="scroll-hidden"]').forEach(el => {
+        for (const cls of [...el.classList]) {
+          if (cls.startsWith("scroll-hidden")) el.classList.remove(cls);
+        }
+      });
     }, { route, schemas: resolveRouteSchemas(route), base: BASE_URL });
     const stats = await page.evaluate(() => ({ h1: document.querySelectorAll("h1").length,
       words: (document.querySelector("main")?.textContent || document.querySelector("#root")?.textContent || "").trim().split(/\s+/).length,

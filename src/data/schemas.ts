@@ -359,6 +359,8 @@ export function buildProjectDetailSchemas(project: Project): object[] {
 // ─────────────────────────────────────────────
 export function buildJobPostingSchemas(job: JobPosition, route: SeoRoute): object[] {
   const jobUrl = `${BASE_URL}/karriere/${job.slug}`;
+  // Do not advertise expired applications as active Google job postings.
+  if (Date.parse(job.validThrough) < Date.now()) return buildGenericSchemas(route);
 
   const jobSchema: Record<string, unknown> = {
     "@context": "https://schema.org",

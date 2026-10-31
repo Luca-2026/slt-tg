@@ -2,8 +2,16 @@ import { describe, expect, it } from "vitest";
 import { ALL_ROUTES } from "@/data/seo-routes";
 import { getProjectBySlug } from "@/data/projects";
 import { buildProjectDetailSchemas } from "@/data/schemas";
+import { buildJobPostingSchemas } from "@/data/schemas";
+import { JOBS } from "@/data/jobs";
 
 describe("Static SEO export rules", () => {
+  it("does not emit active JobPosting markup for the expired July vacancies", () => {
+    const job = JOBS.find(item => item.slug === "ausbildung-bueromanagement");
+    const route = ALL_ROUTES.find(item => item.path === "/karriere/ausbildung-bueromanagement");
+    if (!job || !route) throw new Error("Missing vacancy");
+    expect(JSON.stringify(buildJobPostingSchemas(job, route))).not.toContain('"@type":"JobPosting"');
+  });
   it("includes the room booking article exactly once", () => {
     expect(ALL_ROUTES.filter(route => route.path === "/ratgeber/raumbuchungssystem-konferenzraeume")).toHaveLength(1);
   });
