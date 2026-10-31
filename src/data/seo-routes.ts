@@ -507,7 +507,7 @@ export const NEWS_ROUTES: SeoRoute[] = [
     title: `${outdoorLedArticle.title} | SLT AV`,
     description: outdoorLedArticle.description,
     h1: outdoorLedArticle.title,
-    intro: ["Prüfliste für Module, Lüftung und Steuerung, nachvollziehbare Störungsmeldung und Abgrenzung von Abrufservice und Wartungsvertrag auf Basis des Service-Whitepapers."],
+    intro: [outdoorLedArticle.description],
     canonical: `/news/${outdoorLedArticle.slug}`,
     ogType: "article",
     ogImage: outdoorLedArticle.image,
@@ -640,7 +640,7 @@ export const PROJECT_ROUTES: SeoRoute[] = PROJECTS.map((project) => ({
   ogType: "article",
   changefreq: "monthly",
   priority: 0.8,
-  lastmod: TODAY,
+  lastmod: project.dateModified ?? TODAY,
   breadcrumbs: [
     { name: "Projekte", path: "/projekte" },
     { name: project.client, path: `/projekte/${project.slug}` },

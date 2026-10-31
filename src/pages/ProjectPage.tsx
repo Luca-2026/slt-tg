@@ -47,6 +47,8 @@ const ProjectPage = () => {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 leading-tight">
                 {project.name}
               </h1>
+              {project.logo && <img src={project.logo} alt={`${project.client} Logo`} width={1600} height={432} className="w-44 h-auto mb-5" />}
+              {project.datePublished && <p className="text-sm text-muted-foreground mb-4">Referenz veröffentlicht: <time dateTime={project.datePublished}>{new Date(`${project.datePublished}T12:00:00Z`).toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</time></p>}
               <p className="text-base lg:text-lg text-muted-foreground mb-6">
                 {project.shortDescription}
               </p>
@@ -69,7 +71,7 @@ const ProjectPage = () => {
             <div className="aspect-video rounded-xl overflow-hidden bg-secondary shadow-lg">
               <img
                 src={project.heroImage}
-                alt={`${project.client} – ${project.category} in ${project.location}`}
+                alt={project.heroAlt ?? `${project.client} – ${project.category} in ${project.location}`}
                 className="w-full h-full object-cover"
                 loading="eager"
               />
@@ -113,13 +115,13 @@ const ProjectPage = () => {
               {project.galleryImages.map((img, i) => (
                 <div
                   key={img}
-                  className="aspect-video rounded-lg overflow-hidden bg-secondary"
+                  className="rounded-lg overflow-hidden bg-secondary"
                 >
                   <img
                     src={img}
-                    alt={`${project.client} – Projektbild ${i + 1}`}
+                    alt={project.imageAlts?.[img] ?? `${project.client} – Projektbild ${i + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto"
                   />
                 </div>
               ))}
@@ -201,6 +203,8 @@ const ProjectPage = () => {
               {project.externalLink.label} ↗
             </a>
           )}
+          {project.partnerLink && <p className="mt-4"><a href={project.partnerLink.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">{project.partnerLink.label} ↗</a></p>}
+          {project.relatedArticle && <p className="mt-4"><Link to={project.relatedArticle.url} className="text-primary underline">{project.relatedArticle.label}</Link></p>}
         </div>
       </section>
 

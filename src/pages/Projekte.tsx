@@ -21,6 +21,9 @@ import {
   Quote
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { PROJECTS } from "@/data/projects";
+
+const knauber = PROJECTS.find((project) => project.slug === "knauber-outdoor-led-wartung-bonn");
 
 const categories = [
   { id: "all", name: "Alle Projekte" },
@@ -36,6 +39,7 @@ interface ProjectImage {
 
 // Mapping von card-id auf Detailseiten-Slug (/projekte/{slug})
 const detailSlugMap: Record<string, string> = {
+  "knauber-outdoor-led-wartung-bonn": "knauber-outdoor-led-wartung-bonn",
   "aluminium-norf": "aluminium-norf",
   "pfeifer-langen": "pfeifer-langen",
   "gea-farm": "gea-farm-technologies",
@@ -44,6 +48,14 @@ const detailSlugMap: Record<string, string> = {
 };
 
 const projects = [
+  ...(knauber ? [{
+    id: knauber.slug, company: knauber.client, website: knauber.externalLink?.url,
+    category: "digital-signage", categoryLabel: knauber.category, location: knauber.location,
+    year: "24.10.2026", icon: Monitor, heroImage: knauber.heroImage,
+    galleryImages: knauber.galleryImages, shortDescription: knauber.shortDescription,
+    challenge: knauber.challenge, solution: knauber.solution,
+    results: knauber.results.map((result) => result.description), tags: knauber.tags,
+  }] : []),
   {
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
