@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
       { title: "Ende-zu-Ende betreut", description: "Beratung, Installation, Einrichtung und After-Sales-Support wurden durch SLT Technology Group geleistet." },
     ],
     techStack: [
-      { label: "Touchscreen", value: "iiyama, 86 Zoll" },
+      { label: "Touchscreen", value: "iiyama ProLite TE8615A-B2AG, 86-Zoll-Klasse" },
       { label: "Videokonferenzbar", value: "Barco ClickShare Bar Core" },
       { label: "Notebook-Anbindung", value: "Drahtloser Präsentationsdongle" },
       { label: "Interaktion", value: "Touch-Rückkanal und bidirektionale Videokonferenz über das Notebook" },
@@ -86,6 +86,27 @@ export const PROJECTS: Project[] = [
       { label: "Projektzeit", value: "Februar 2026" },
     ],
     tags: ["iiyama 86 Zoll", "Barco ClickShare Bar Core", "Touchscreen", "Wireless BYOD", "Mobile Videokonferenz", "Köln"],
+    products: [
+      {
+        name: "Barco ClickShare Bar Core",
+        url: "https://www.barco.com/de/product/clickshare-video-bar-core",
+        facts: [
+          "All-in-one-Videobar für kleine Besprechungsräume und Huddle Spaces.",
+          "4K-Kamera mit KI-Unterstützung und Stereo-Sound.",
+          "Drahtlose Videokonferenzen und Inhaltsfreigabe über ClickShare.",
+        ],
+      },
+      {
+        name: "iiyama ProLite TE8615A-B2AG",
+        url: "https://iiyama.com/de_de/produkte/prolite-te8615a-b2ag/",
+        facts: [
+          "86-Zoll-Klasse (85,6 Zoll sichtbar) mit 4K-UHD-Auflösung: 3840 × 2160 Pixel.",
+          "DeepContrast-IR++-Touchtechnologie mit Handflächenerkennung.",
+          "Android 14 mit iiWare 21E, Google-EDLA-zertifiziert.",
+          "Wi-Fi 6E und Bluetooth 5.0 integriert.",
+        ],
+      },
+    ],
     relatedService: { url: "/videokonferenzanlage", label: "Videokonferenzanlagen: Lösungen ansehen" },
   },
   {

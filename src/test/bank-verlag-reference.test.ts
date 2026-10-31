@@ -5,6 +5,12 @@ import { buildProjectDetailSchemas } from "@/data/schemas";
 
 describe("Bank-Verlag reference dates", () => {
   const project = getProjectBySlug("bank-verlag-mobile-videokonferenzstele-koeln");
+  it("links the two specified manufacturer products", () => {
+    expect(project?.products?.map(product => product.url)).toEqual([
+      "https://www.barco.com/de/product/clickshare-video-bar-core",
+      "https://iiyama.com/de_de/produkte/prolite-te8615a-b2ag/",
+    ]);
+  });
   it("keeps the actual project time February 2026", () => expect(project?.year).toBe("Februar 2026"));
   it("uses a publication date two months before October 31", () => {
     expect(project?.datePublished).toBe("2026-08-31");
