@@ -4,6 +4,9 @@ import { PROJECT_ROUTES } from "@/data/seo-routes";
 import { buildProjectDetailSchemas } from "@/data/schemas";
 
 describe("Knauber reference publication", () => {
+  it("records the completed EU cloud migration", () => {
+    expect(getProjectBySlug("knauber-outdoor-led-wartung-bonn")?.techStack.find(s => s.label === "Monitoring / Fernwartung")?.value).toBe("Migration in die NovaStar VNNOX EU Cloud abgeschlossen");
+  });
   it("uses the requested publication date one week before 31 October 2026", () => {
     const project = getProjectBySlug("knauber-outdoor-led-wartung-bonn");
     expect(project?.datePublished).toBe("2026-10-24");
