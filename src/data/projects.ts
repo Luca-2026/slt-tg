@@ -81,7 +81,7 @@ export const PROJECTS: Project[] = [
       { label: "Videokonferenzbar", value: "Barco ClickShare Bar Core" },
       { label: "Notebook-Anbindung", value: "Drahtloser Präsentationsdongle" },
       { label: "Interaktion", value: "Touch-Rückkanal und bidirektionale Videokonferenz über das Notebook" },
-      { label: "Bauform", value: "Mobile Custom-Made-Ste­le auf rollbarem Gestell" },
+      { label: "Bauform", value: "Mobile Custom-Made-Stele auf rollbarem Gestell" },
       { label: "Projektzeit", value: "Februar 2026" },
     ],
     tags: ["iiyama 86 Zoll", "Barco ClickShare Bar Core", "Touchscreen", "Wireless BYOD", "Mobile Videokonferenz", "Köln"],

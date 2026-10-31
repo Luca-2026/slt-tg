@@ -349,10 +349,9 @@ function ProjectImageSlider({ images, imagePositions, alt }: { images: string[];
           src={img}
           alt={bankVerlag?.imageAlts?.[img] ?? knauber?.imageAlts?.[img] ?? `${alt} – Bild ${idx + 1}`}
           loading="lazy"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full ${bankVerlag?.galleryImages?.includes(img) ? "object-contain" : "object-cover"} transition-opacity duration-1000 ${
             idx === current ? "opacity-100" : "opacity-0"
           }`}
-          data-portrait={bankVerlag?.galleryImages?.includes(img) || undefined}
           style={{ objectPosition: imagePositions?.[img] || "center center" }}
         />
       ))}
