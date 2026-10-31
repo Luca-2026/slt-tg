@@ -48,6 +48,7 @@ const ProjectPage = () => {
                 {project.name}
               </h1>
               {project.logo && <img src={project.logo} alt={`${project.client} Logo`} width={1600} height={432} className="w-44 h-auto mb-5" />}
+              {project.logo && project.externalLink && <p className="mb-5"><a href={project.externalLink.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">{project.externalLink.label} ↗</a></p>}
               {project.datePublished && <p className="text-sm text-muted-foreground mb-4">Referenz veröffentlicht: <time dateTime={project.datePublished}>{new Date(`${project.datePublished}T12:00:00Z`).toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</time></p>}
               <p className="text-base lg:text-lg text-muted-foreground mb-6">
                 {project.shortDescription}
@@ -68,11 +69,11 @@ const ProjectPage = () => {
               </div>
             </div>
 
-            <div className="aspect-video rounded-xl overflow-hidden bg-secondary shadow-lg">
+            <div className="overflow-hidden rounded-lg">
               <img
                 src={project.heroImage}
                 alt={project.heroAlt ?? `${project.client} – ${project.category} in ${project.location}`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto"
                 loading="eager"
               />
             </div>
@@ -205,6 +206,7 @@ const ProjectPage = () => {
           )}
           {project.partnerLink && <p className="mt-4"><a href={project.partnerLink.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">{project.partnerLink.label} ↗</a></p>}
           {project.relatedArticle && <p className="mt-4"><Link to={project.relatedArticle.url} className="text-primary underline">{project.relatedArticle.label}</Link></p>}
+          {project.relatedService && <Button asChild variant="outline" className="mt-6 h-auto whitespace-normal"><Link to={project.relatedService.url}>{project.relatedService.label}<ArrowRight className="ml-2 h-4 w-4 shrink-0" /></Link></Button>}
         </div>
       </section>
 

@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { msModules, msModels, msProcess, msFaqs } from "@/data/managedServices";
+import { msModules, msProcess, msFaqs } from "@/data/managedServices";
+import { ServiceModels } from "@/components/services/ServiceModels";
+import { LedService } from "@/components/services/LedService";
 import { ServicePractice } from "@/components/services/ServicePractice";
 import { ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
 import monitoringImg from "@/assets/managed-services/managed-av-services-monitoring-slt.webp";
@@ -42,7 +44,6 @@ const ManagedServices = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });
   const { ref: problemRef, isVisible: problemVisible } = useScrollAnimation();
   const { ref: modulesRef, isVisible: modulesVisible } = useScrollAnimation();
-  const { ref: modelsRef, isVisible: modelsVisible } = useScrollAnimation();
   const { ref: processRef, isVisible: processVisible } = useScrollAnimation();
   const { ref: whyRef, isVisible: whyVisible } = useScrollAnimation();
   const { ref: faqRef, isVisible: faqVisible } = useScrollAnimation();
@@ -51,7 +52,7 @@ const ManagedServices = () => {
   return (
     <Layout>
       <SEOHead
-        title="Managed Services für Medientechnik"
+        title="Managed Services & Wartung für Medientechnik"
         description="Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW."
         keywords="Managed Services, Managed Service Provider, Managed IT Services, Wartung Medientechnik, AV Managed Services, Managed Rooms, Service Desk, 24/7 Monitoring, ITIL v4, AV-Betrieb, Konferenztechnik Betrieb"
         canonical="/managed-services"
@@ -74,7 +75,7 @@ const ManagedServices = () => {
                 Managed Services & Wartung
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Managed Services für{" "}
+                Managed Services & Wartung für{" "}
                 <span className="text-primary">Konferenz- und Medientechnik</span>
               </h1>
               <p className="text-base lg:text-lg text-muted-foreground mb-8">
@@ -90,8 +91,8 @@ const ManagedServices = () => {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                  <Link to="/service-wartung" className="w-full justify-center whitespace-normal text-center">
-                    Service &amp; Wartung im Überblick
+                  <Link to="/managed-services#service-modelle" className="w-full justify-center whitespace-normal text-center">
+                    Service-Modelle vergleichen
                   </Link>
                 </Button>
               </div>
@@ -192,46 +193,8 @@ const ManagedServices = () => {
 
       <ServicePractice />
 
-      {/* Service-Modelle */}
-      <section className="py-16 lg:py-24 bg-card/50">
-        <div className="section-container">
-          <div
-            ref={modelsRef}
-            className={`scroll-hidden-blur ${modelsVisible ? "scroll-visible-blur" : ""}`}
-          >
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
-              Service-Modelle
-            </h2>
-            <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl">
-              Drei Ausbaustufen als Orientierung. Servicezeiten, Reaktionszeiten und Umfang
-              vereinbaren wir individuell im Servicevertrag.
-            </p>
-            <div className="grid md:grid-cols-3 gap-4 lg:gap-5">
-              {msModels.map((model, index) => (
-                <div
-                  key={model.name}
-                  className={`flex h-full flex-col rounded-xl border border-border bg-card p-6 scroll-hidden ${modelsVisible ? "scroll-visible" : ""}`}
-                  style={{ transitionDelay: `${index * 0.08}s` }}
-                >
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-accent mb-2">
-                    {model.focus}
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{model.name}</h3>
-                  <p className="text-xs lg:text-sm text-muted-foreground mb-4">{model.description}</p>
-                  <ul className="space-y-2 mt-auto">
-                    {model.includes.map((i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs lg:text-sm text-muted-foreground">
-                        <CheckCircle className="h-3.5 w-3.5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{i}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceModels />
+      <LedService />
 
       {/* Ablauf */}
       <section className="py-16 lg:py-24">
@@ -365,7 +328,7 @@ const ManagedServices = () => {
           </h2>
           <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
             Wir starten mit einer Bestandsaufnahme Ihrer Räume und Standorte und schlagen ein
-            Service-Modell mit fester monatlicher Pauschale vor.
+            passendes Service-Modell mit transparentem Leistungsumfang vor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-glow">

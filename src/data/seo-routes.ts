@@ -259,29 +259,12 @@ export const MAIN_ROUTES: SeoRoute[] = [
     breadcrumbs: [{ name: "Konferenzraum-Ausstattung", path: "/konferenzraum-ausstattung" }],
   },
   {
-    path: "/service-wartung",
-    routeType: "page",
-    title: "AV-Service & Wartung: SLA, Fernwartung & Support | SLT Technology Group",
-    description:
-      "Professioneller Service für Ihre AV- und IT-Systeme: Wartungsverträge mit SLA, Fernwartung, Hardware-Ersatz und Helpdesk. Für Enterprise-Kunden in NRW und bundesweit.",
-    h1: "AV-Service & Wartung – individuell vereinbart",
-    intro: [
-      "Inspektion, Funktionsprüfung, Firmware-Pflege und dokumentierte Reparaturen. Für den laufenden Betrieb mit Service Desk und Monitoring finden Sie unser Gesamtangebot unter Managed Services.",
-      "SLT Technology Group ist ITIL 4 zertifiziert und stimmt Störungen und Änderungen besonders an den IT-Schnittstellen mit Ihrer Organisation ab.",
-    ],
-    canonical: "/service-wartung",
-    changefreq: "monthly",
-    priority: 0.85,
-    lastmod: TODAY,
-    breadcrumbs: [{ name: "Service & Wartung", path: "/service-wartung" }],
-  },
-  {
     path: "/managed-services",
     routeType: "page",
-    title: "Managed Services für Medientechnik | SLT Technology Group",
+    title: "Managed Services & Wartung für Medientechnik | SLT AV",
     description:
       "Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW.",
-    h1: "Managed Services für Konferenz- und Medientechnik",
+    h1: "Managed Services & Wartung für Konferenz- und Medientechnik",
     intro: [
       "Wir übernehmen den laufenden Betrieb Ihrer AV-Umgebung: zentraler Service Desk, proaktives 24/7-Monitoring, Managed Rooms und planbare Wartung.",
       "Als Managed Service Provider für AV und IT arbeiten wir nach ITIL v4, abgestimmt mit Ihrer internen IT und über alle Standorte hinweg – zur kalkulierbaren monatlichen Servicepauschale.",
@@ -289,8 +272,8 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/managed-services",
     changefreq: "monthly",
     priority: 0.9,
-    lastmod: TODAY,
-    breadcrumbs: [{ name: "Managed Services", path: "/managed-services" }],
+    lastmod: "2026-10-31",
+    breadcrumbs: [{ name: "Managed Services & Wartung", path: "/managed-services" }],
   },
   {
     path: "/digital-signage",

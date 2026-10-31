@@ -66,6 +66,9 @@
   RewriteRule ^downloads/?$ - [G,L]
 
 
+  # Services und Wartung dauerhaft im gemeinsamen Hub bündeln
+  RewriteRule ^service-wartung/?$ /managed-services [R=301,L]
+
   # 2) Wenn Datei oder Verzeichnis existiert: direkt ausliefern
   #    (so werden prerendered /medientechnik/krefeld/index.html etc. genutzt)
   RewriteCond %{REQUEST_FILENAME} -f [OR]

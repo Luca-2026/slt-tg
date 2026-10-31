@@ -1,4 +1,7 @@
 # Aufgaben
+- [x] Knauber-Bild ohne Beschnitt, offizielle Firmierung und Kundenlink korrigiert; ausgeführte Wartung und Cloud-Migration ergänzt. Anlagenstandort nur Bonn, keine ungeprüfte Firmensitz-Zuordnung.
+- [x] Services und Wartung auf einer Seite konsolidiert und drei belegte CARE-Modelle interaktiv integriert; LED-Serviceleistungen und Buttons ergänzt, ohne PDF-Download.
+- [x] Links, Vertragsregeln, SEO und Darstellung bei 1280, 927 und 393 Pixeln im Browser geprüft; kein Deploy. Server-Weiterleitung erst nach FTP-Upload wirksam.
 - [x] Whitepaper-Download entfernen und Outdoor-LED-Beitrag mit belegten Inhalten und Kundenfotos überarbeiten.
 - [x] Knauber-Projektreferenz mit Datum 24.10.2026, Logo und korrekter Kundenwebsite ergänzen.
 - [x] SEO, interne Links, Bildtexte und Browser prüfen; vollständiges Reporting bereitstellen, kein Deploy.

@@ -13,7 +13,8 @@ import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } f
 import { getPartnerBySlug } from "./partners";
 import { getRatgeberPostBySlug } from "./ratgeberPosts";
 import { getSolutionPage } from "./solutionPages";
-import { msModules, msFaqs } from "./managedServices";
+import { serviceModels } from "./serviceModels";
+import { msFaqs } from "./managedServices";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -257,12 +258,12 @@ export function buildManagedServicesSchemas(route: SeoRoute): object[] {
       description: route.description,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Managed-Service-Module",
-        itemListElement: msModules.map((m) => ({
+        name: "Managed Services & Wartung – CARE-Modelle",
+        itemListElement: serviceModels.map((m) => ({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: m.title,
+            name: m.name,
             description: m.description,
           },
         })),
