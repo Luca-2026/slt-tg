@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
@@ -8,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, MapPin, Phone, Mail, Building2 } from "lucide-react";
-import { cities, topics, isNoindex, getContentOverride } from "@/data/localSEO";
+import { cities, topics, getContentOverride } from "@/data/localSEO";
 
 interface LocalSEOPageProps {
   topicKey: string;
@@ -22,31 +21,6 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
   const city = cities[cityKey];
   const topic = topics[topicKey];
 
-  const noindex = isNoindex(topicKey, cityKey);
-
-  // Robots-Meta steuern: thin-content-Seiten auf "noindex, follow"
-  useEffect(() => {
-    const ROBOTS_MARKER = "data-local-seo-robots";
-    // alle vorherigen, von uns gesetzten robots-Tags entfernen
-    document.querySelectorAll(`meta[${ROBOTS_MARKER}]`).forEach((el) => el.remove());
-
-    if (noindex) {
-      // bestehende generische robots-Tags neutralisieren
-      document
-        .querySelectorAll('meta[name="robots"]')
-        .forEach((el) => el.parentElement?.removeChild(el));
-      const meta = document.createElement("meta");
-      meta.setAttribute("name", "robots");
-      meta.setAttribute("content", "noindex, follow");
-      meta.setAttribute(ROBOTS_MARKER, "true");
-      document.head.appendChild(meta);
-    }
-
-    return () => {
-      document.querySelectorAll(`meta[${ROBOTS_MARKER}]`).forEach((el) => el.remove());
-    };
-  }, [noindex]);
-
   if (!city || !topic) return null;
 
   const override = getContentOverride(topicKey, cityKey);
@@ -58,7 +32,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
   const showBonnOffice = bonnRegionCities.includes(cityKey);
   const pageTitle = override
     ? `${override.heroTitle} | SLT Technology Group`
-    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT`;
+    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT AV`;
   const pageDesc = override
     ? override.heroSubtitle
     : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;

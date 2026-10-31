@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { ALL_ROUTES } from "@/data/seo-routes";
 
 interface SEOHeadProps {
   title: string;
@@ -19,10 +21,18 @@ export function SEOHead({
   type = "website",
   structuredData,
 }: SEOHeadProps) {
+  const { pathname } = useLocation();
+  const route = ALL_ROUTES.find(item => item.path === pathname);
   const baseUrl = "https://www.slt-tg.de";
+  title = route?.title ?? title;
+  description = route?.description ?? description;
+  canonical = route?.canonical ?? canonical;
+  ogImage = route?.ogImage ?? ogImage;
+  type = route?.ogType === "article" ? "article" : type;
   const fullTitle = /\|\s*SLT/.test(title) ? title : `${title} | SLT AV`;
-  const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
+  const fullCanonical = `${baseUrl}${canonical ?? pathname}`;
   const fullOgImage = ogImage.startsWith("http") ? ogImage : `${baseUrl}${ogImage}`;
+  const robots = route?.noindex ? "noindex, follow" : "index, follow";
 
   useEffect(() => {
     document.title = fullTitle;
@@ -41,6 +51,7 @@ export function SEOHead({
     };
 
     updateMetaTag("description", description);
+    updateMetaTag("robots", robots);
     if (keywords) updateMetaTag("keywords", keywords);
 
     updateMetaTag("og:title", fullTitle, true);
@@ -52,6 +63,7 @@ export function SEOHead({
     updateMetaTag("twitter:title", fullTitle);
     updateMetaTag("twitter:description", description);
     updateMetaTag("twitter:image", fullOgImage);
+    updateMetaTag("twitter:url", fullCanonical);
 
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
@@ -91,7 +103,7 @@ export function SEOHead({
     // Hier KEIN dynamisches Schema-Injecten mehr, um Doppelausgabe nach Hydration
     // zu vermeiden. Title/Meta/OG/Canonical werden weiterhin live gesetzt, damit
     // dynamische Seiten nach Hydration korrekt ausgezeichnet bleiben.
-  }, [fullTitle, description, keywords, fullCanonical, fullOgImage, type, structuredData]);
+  }, [fullTitle, description, keywords, fullCanonical, fullOgImage, type, structuredData, robots]);
 
   return null;
 }
