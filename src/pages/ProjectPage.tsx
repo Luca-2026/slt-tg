@@ -185,6 +185,28 @@ const ProjectPage = () => {
       </section>
 
       {/* Tags + External Link */}
+      {project.products && (
+        <section className="pb-12 lg:pb-16">
+          <div className="section-container max-w-4xl">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">Produkte im Detail</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {project.products.map((product) => (
+                <div key={product.url} className="min-w-0 border-t border-border pt-5">
+                  <h3 className="text-lg font-semibold text-foreground mb-3">{product.name}</h3>
+                  <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground leading-relaxed">
+                    {product.facts.map((fact) => <li key={fact}>{fact}</li>)}
+                  </ul>
+                  <Button asChild variant="link" className="mt-4 px-0 h-auto whitespace-normal text-left">
+                    <a href={product.url} target="_blank" rel="noopener noreferrer">Produktdetails beim Hersteller ↗</a>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Tags + External Link */}
       <section className="pb-12 lg:pb-16">
         <div className="section-container max-w-4xl">
           <div className="flex flex-wrap gap-2 mb-6">

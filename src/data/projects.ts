@@ -24,6 +24,7 @@ export interface Project {
   dateModified?: string;
   logo?: string;
   relatedService?: { url: string; label: string };
+  products?: { name: string; url: string; facts: string[] }[];
   heroAlt?: string;
   imageAlts?: Record<string, string>;
   relatedArticle?: { url: string; label: string };

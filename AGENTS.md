@@ -4,6 +4,7 @@
 - Keep CARE model conditions in a shared editorial data catalogue consumed by the interactive comparison and service schemas, to prevent contract drift.
 - Keep service Whitepapers private as editorial sources; never ship their PDFs in public downloads.
 - Keep customer-reference metadata, dates and descriptive image texts in the shared project catalogue so cards, details and schemas agree.
+- Keep reference product links and manufacturer-verified facts in the shared project catalogue; render them optionally on reference pages to avoid duplicated product content.
 - Homepage carousels consume the complete project catalogue and shared news feed; use one responsive carousel with viewport-aware autoplay and pause controls to keep mobile content compact and current.
 - Store reference-specific cropped photo variants in the shared project catalogue; use the reusable slideshow for fading detail images without modifying the original customer photos.
 - Customer media for external FTP hosting must have optimized static public copies alongside asset provenance pointers, because Serverprofis cannot serve Lovable-relative asset URLs.
