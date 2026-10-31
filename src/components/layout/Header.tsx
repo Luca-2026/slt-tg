@@ -15,8 +15,7 @@ const isGroup = (entry: NavEntry): entry is NavGroup => "items" in entry;
 const solutionsItems: NavLinkItem[] = solutionsNav;
 
 const serviceItems: NavLinkItem[] = [
-  { name: "Managed Services", href: "/managed-services" },
-  { name: "Service & Wartung (ITIL v4)", href: "/service-wartung" },
+  { name: "Managed Services & Wartung", href: "/managed-services" },
   { name: "Technologien", href: "/technologien" },
   { name: "Finanzierung", href: "/finanzierung" },
 ];

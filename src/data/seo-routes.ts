@@ -7,6 +7,7 @@ import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from
 import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
 import { solutionPages } from "./solutionPages";
+import { outdoorLedArticle } from "./outdoorLedArticle";
 
 
 export type RouteType =
@@ -263,10 +264,10 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "AV-Service & Wartung: SLA, Fernwartung & Support | SLT Technology Group",
     description:
       "Professioneller Service für Ihre AV- und IT-Systeme: Wartungsverträge mit SLA, Fernwartung, Hardware-Ersatz und Helpdesk. Für Enterprise-Kunden in NRW und bundesweit.",
-    h1: "AV-Service & Wartung",
+    h1: "AV-Service & Wartung – individuell vereinbart",
     intro: [
-      "Wartungsverträge mit festen SLAs, proaktive Fernüberwachung und schneller Vor-Ort-Service – damit Ihre Konferenzräume immer funktionieren.",
-      "Von der regelmäßigen Inspektion bis zum 24/7-Notfallservice: Wir begleiten Ihre AV-Systeme über den gesamten Lebenszyklus.",
+      "Inspektion, Funktionsprüfung, Firmware-Pflege und dokumentierte Reparaturen. Für den laufenden Betrieb mit Service Desk und Monitoring finden Sie unser Gesamtangebot unter Managed Services.",
+      "SLT Technology Group ist ITIL 4 zertifiziert und stimmt Störungen und Änderungen besonders an den IT-Schnittstellen mit Ihrer Organisation ab.",
     ],
     canonical: "/service-wartung",
     changefreq: "monthly",
@@ -500,6 +501,25 @@ export const RATGEBER_ROUTES: SeoRoute[] = [
 // 4) NEWS_ROUTES
 // ───────────────────────────────────────────────────────────
 export const NEWS_ROUTES: SeoRoute[] = [
+  {
+    path: `/news/${outdoorLedArticle.slug}`,
+    routeType: "news",
+    title: `${outdoorLedArticle.title} | SLT AV`,
+    description: outdoorLedArticle.description,
+    h1: outdoorLedArticle.title,
+    intro: ["Prüfliste für Module, Lüftung und Steuerung, nachvollziehbare Störungsmeldung und Abgrenzung von Abrufservice und Wartungsvertrag auf Basis des Service-Whitepapers."],
+    canonical: `/news/${outdoorLedArticle.slug}`,
+    ogType: "article",
+    ogImage: outdoorLedArticle.image,
+    articleImage: outdoorLedArticle.image,
+    articleSlug: outdoorLedArticle.slug,
+    articleDate: outdoorLedArticle.date,
+    lastmod: outdoorLedArticle.date,
+    articleCategory: outdoorLedArticle.category,
+    changefreq: "monthly",
+    priority: 0.8,
+    breadcrumbs: [{ name: "News & Wissen", path: "/news" }, { name: "Outdoor-LED-Wartung", path: `/news/${outdoorLedArticle.slug}` }],
+  },
   {
     path: "/news/ise-2026-barcelona",
     routeType: "news",

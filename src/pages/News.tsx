@@ -14,6 +14,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { ArrowRight, Calendar, Clock, MapPin, BookOpen } from "lucide-react";
+import { outdoorLedArticle } from "@/data/outdoorLedArticle";
 
 
 interface NewsArticle {
@@ -32,6 +33,7 @@ interface NewsArticle {
 }
 
 const newsArticles: NewsArticle[] = [
+  { ...outdoorLedArticle, id: outdoorLedArticle.slug, excerpt: outdoorLedArticle.description, featured: true },
   {
     id: "ise-2026",
     slug: "ise-2026-barcelona",

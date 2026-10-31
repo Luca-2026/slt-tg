@@ -20,6 +20,7 @@ import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
+import NewsOutdoorLed from "./pages/NewsOutdoorLed";
 import NotFound from "./pages/NotFound";
 import Karriere from "./pages/Karriere";
 import JobPage from "./pages/JobPage";
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/karriere" element={<Karriere />} />
           <Route path="/karriere/:slug" element={<JobPage />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/outdoor-led-wartung-servicekonzept" element={<NewsOutdoorLed />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/ratgeber" element={<Ratgeber />} />
           <Route path="/ratgeber/ki-readiness-av-medientechnik-2026" element={<RatgeberKiReadiness />} />

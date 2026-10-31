@@ -73,9 +73,9 @@ export const msModules: MsModule[] = [
   },
   {
     id: "governance",
-    title: "ITIL v4 Service-Management & Reporting",
+    title: "Service-Management & Reporting",
     description:
-      "Unsere Prozesse folgen ITIL v4 – damit der AV-Betrieb sauber an Ihre bestehende IT-Service-Organisation andockt.",
+      "SLT Technology Group ist ITIL 4 zertifiziert und richtet Incident-, Problem- und Change-Management daran aus – besonders an den Schnittstellen zwischen AV, Netzwerk und Ihrer IT-Service-Organisation.",
     bullets: [
       "Incident-, Problem- und Change-Management nach ITIL v4",
       "Definierte Eskalationsstufen und Verantwortlichkeiten",
