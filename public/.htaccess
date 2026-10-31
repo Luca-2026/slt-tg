@@ -13,6 +13,10 @@
   # Statische Assets mit Hash: 1 Jahr immutable
   <FilesMatch "\.(js|css|woff|woff2|ttf|eot|svg|png|jpg|jpeg|gif|webp|avif|ico)$">
     Header always unset Cache-Control
+    Header always set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+
+  <FilesMatch "-[A-Za-z0-9_-]{8,}\.(js|css)$">
     Header always set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 
@@ -69,12 +73,28 @@
   # Services und Wartung dauerhaft im gemeinsamen Hub bündeln
   RewriteRule ^service-wartung/?$ /managed-services [R=301,L]
 
-  # 2) Wenn Datei oder Verzeichnis existiert: direkt ausliefern
-  #    (so werden prerendered /medientechnik/krefeld/index.html etc. genutzt)
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # Legacy links: real permanent redirects, not client-only navigation
+  RewriteRule ^leistungen/?$ /loesungen [R=301,L]
+  RewriteRule ^blog/?$ /ratgeber [R=301,L]
+  RewriteRule ^blog/(.+?)/?$ /ratgeber/$1 [R=301,L]
 
-  # 3) Sonst: SPA-Fallback auf root index.html
-  RewriteRule ^ index.html [L]
+  # Direct requests to index.html consolidate on the public URL
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+  # Slashless URLs for generated page directories (before mod_dir)
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+[^/])$ $1/index.html [L]
+
+  # Real static files only; unknown URLs and missing assets remain 404
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  RewriteRule ^$ index.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
