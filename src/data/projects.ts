@@ -33,6 +33,7 @@ export interface Project {
   heroImage: string;
   galleryImages?: string[];
   slideshowImages?: string[];
+  portraitGallery?: boolean;
 
   // Vollständiger Case-Study-Content
   challenge: string;
@@ -49,6 +50,43 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    slug: "bank-verlag-mobile-videokonferenzstele-koeln",
+    name: "Bank-Verlag – mobile Videokonferenzstele in Köln",
+    client: "Bank-Verlag",
+    location: "Köln",
+    year: "Februar 2026",
+    datePublished: "2026-08-31",
+    dateModified: "2026-10-31",
+    category: "Mobile Videokonferenz · Wireless BYOD",
+    shortDescription: "Mobile Custom-Made-Videokonferenzstele beim Bank-Verlag in Köln: iiyama 86-Zoll-Touchscreen, Barco ClickShare Bar Core und drahtlose Notebook-Anbindung.",
+    heroImage: "/assets/projects/bank-verlag/bank-verlag-mobile-videokonferenzstele.webp",
+    heroAlt: "Mobile Custom-Made-Videokonferenzstele beim Bank-Verlag in Köln mit iiyama 86-Zoll-Touchscreen, Barco ClickShare Bar Core und rollbarem Gestell",
+    galleryImages: ["/assets/projects/bank-verlag/bank-verlag-mobile-videokonferenzstele.webp", "/assets/projects/bank-verlag/bank-verlag-clickshare-notebook-touch.webp"],
+    portraitGallery: true,
+    imageAlts: {
+      "/assets/projects/bank-verlag/bank-verlag-mobile-videokonferenzstele.webp": "Rollbare Videokonferenzstele beim Bank-Verlag in Köln mit 86-Zoll-iiyama-Touchscreen und Barco ClickShare Bar Core unter dem Display",
+      "/assets/projects/bank-verlag/bank-verlag-clickshare-notebook-touch.webp": "Notebook mit drahtlosem ClickShare-Dongle vor der mobilen Touchscreen-Videokonferenzstele beim Bank-Verlag in Köln",
+    },
+    challenge: "Am neuen Standort des Bank-Verlags in Köln sollte eine mobile Lösung für Präsentationen und Videokonferenzen entstehen. Die Anforderung: Mitarbeitende nutzen ihr eigenes Notebook, teilen Inhalte drahtlos und verwenden die Videokonferenztechnik der Stele. Gleichzeitig sollte die Touch-Bedienung des großen Displays in diesen Arbeitsablauf eingebunden sein. Dafür mussten Display, Konferenztechnik, drahtlose Anbindung und mobiles Gestell als zusammenhängendes System geplant werden.",
+    solution: "Im Februar 2026 haben wir eine mobile Custom-Made-Videokonferenzstele gebaut und eingerichtet. Die technische Basis bilden ein iiyama 86-Zoll-Touchscreen, eine Barco ClickShare Bar Core und ein drahtloser Präsentationsdongle. Das maßgefertigte, rollbare Gestell verbindet den großen Touchscreen und die Konferenzbar zu einer mobilen Einheit. Über den Dongle verbinden Nutzer ihr Notebook drahtlos mit dem System: Inhalte werden auf dem Touchscreen angezeigt, während Touch-Eingaben zum Notebook zurückgeführt werden. Für Videokonferenzen lässt sich die integrierte Konferenzanlage bidirektional über das Notebook nutzen. SLT Technology Group hat das Projekt Ende zu Ende betreut – von der Beratung über Installation und Einrichtung bis zum After-Sales-Support.",
+    results: [
+      { title: "Mobiles Custom-Made-Design", description: "Touchscreen und Videokonferenzbar sind auf einem maßgefertigten, rollbaren Gestell zu einer Einheit zusammengeführt." },
+      { title: "Drahtlos präsentieren mit dem eigenen Notebook", description: "Der Präsentationsdongle verbindet das Notebook mit der Stele, sodass Inhalte auf dem 86-Zoll-Touchscreen geteilt werden können." },
+      { title: "Touch und Videokonferenz bidirektional", description: "Die Lösung verbindet Bildausgabe und Touch-Rückkanal mit der Nutzung der Videokonferenzanlage über das Notebook." },
+      { title: "Ende-zu-Ende betreut", description: "Beratung, Installation, Einrichtung und After-Sales-Support wurden durch SLT Technology Group geleistet." },
+    ],
+    techStack: [
+      { label: "Touchscreen", value: "iiyama, 86 Zoll" },
+      { label: "Videokonferenzbar", value: "Barco ClickShare Bar Core" },
+      { label: "Notebook-Anbindung", value: "Drahtloser Präsentationsdongle" },
+      { label: "Interaktion", value: "Touch-Rückkanal und bidirektionale Videokonferenz über das Notebook" },
+      { label: "Bauform", value: "Mobile Custom-Made-Ste­le auf rollbarem Gestell" },
+      { label: "Projektzeit", value: "Februar 2026" },
+    ],
+    tags: ["iiyama 86 Zoll", "Barco ClickShare Bar Core", "Touchscreen", "Wireless BYOD", "Mobile Videokonferenz", "Köln"],
+    relatedService: { url: "/videokonferenzanlage", label: "Videokonferenzanlagen: Lösungen ansehen" },
+  },
   {
     slug: "knauber-outdoor-led-wartung-bonn",
     name: "Knauber – Outdoor-LED-Wartung in Bonn",
