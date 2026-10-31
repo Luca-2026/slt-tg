@@ -316,7 +316,6 @@ export function buildProjectListSchemas(route: SeoRoute): object[] {
 // ─────────────────────────────────────────────
 export function buildProjectDetailSchemas(project: Project): object[] {
   const projectUrl = `${BASE_URL}/projekte/${project.slug}`;
-  const startYear = project.year.split(/[–-]/)[0].trim();
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -328,8 +327,8 @@ export function buildProjectDetailSchemas(project: Project): object[] {
     image: project.heroImage.startsWith("http")
       ? project.heroImage
       : `${BASE_URL}${project.heroImage}`,
-    datePublished: project.datePublished ?? `${startYear}-01-01`,
-    dateModified: project.dateModified ?? "2026-04-20",
+    ...(project.datePublished ? { datePublished: project.datePublished } : {}),
+    ...(project.dateModified ? { dateModified: project.dateModified } : {}),
     author: ORG_REF,
     publisher: {
       "@type": "Organization",
@@ -360,6 +359,8 @@ export function buildProjectDetailSchemas(project: Project): object[] {
 // ─────────────────────────────────────────────
 export function buildJobPostingSchemas(job: JobPosition, route: SeoRoute): object[] {
   const jobUrl = `${BASE_URL}/karriere/${job.slug}`;
+  // Do not advertise expired applications as active Google job postings.
+  if (Date.parse(job.validThrough) < Date.now()) return buildGenericSchemas(route);
 
   const jobSchema: Record<string, unknown> = {
     "@context": "https://schema.org",

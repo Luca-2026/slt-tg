@@ -8,6 +8,7 @@ import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
 import { solutionPages } from "./solutionPages";
 import { outdoorLedArticle } from "./outdoorLedArticle";
+import { guides, newsArticles } from "./newsFeed";
 
 
 export type RouteType =
@@ -54,7 +55,7 @@ export interface SeoRoute {
   solutionSlug?: string; // solution
 }
 
-const TODAY = "2026-04-20";
+
 
 // ───────────────────────────────────────────────────────────
 // 1) MAIN_ROUTES
@@ -75,7 +76,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/hero-konferenzraum.jpg",
     changefreq: "weekly",
     priority: 1.0,
-    lastmod: TODAY,
   },
   {
     path: "/loesungen",
@@ -85,13 +85,12 @@ export const MAIN_ROUTES: SeoRoute[] = [
       "Skalierbare AV-Lösungen für Enterprise: Huddle Space, Meetingraum, Boardroom, Auditorium, Empfang und Digital Signage – standardisierbar für Multi-Site-Rollouts.",
     h1: "Lösungen für jeden Raumtyp",
     intro: [
-      "Vom Huddle Space bis zum Auditorium: SLT entwickelt skalierbare, standardisierbare Konzepte für moderne Enterprise-Arbeitswelten.",
+      "Vom Huddle Space bis zum Auditorium: SLT Technology Group entwickelt skalierbare, standardisierbare Konzepte für moderne Enterprise-Arbeitswelten.",
     ],
     canonical: "/loesungen",
     ogImage: "/assets/solutions/conference-room.jpg",
     changefreq: "monthly",
     priority: 0.9,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Lösungen", path: "/loesungen" }],
   },
   {
@@ -107,7 +106,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/technologien",
     changefreq: "monthly",
     priority: 0.8,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Technologien", path: "/technologien" }],
   },
   {
@@ -123,7 +121,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/finanzierung",
     changefreq: "monthly",
     priority: 0.7,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Finanzierung", path: "/finanzierung" }],
   },
   {
@@ -140,7 +137,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/projects/alunorf/alunorf-main.jpg",
     changefreq: "weekly",
     priority: 0.9,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Projekte", path: "/projekte" }],
   },
   {
@@ -157,7 +153,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/team/team-photo.jpg",
     changefreq: "monthly",
     priority: 0.7,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Über uns", path: "/ueber-uns" }],
   },
   {
@@ -173,7 +168,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/kontakt",
     changefreq: "monthly",
     priority: 0.8,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Kontakt", path: "/kontakt" }],
   },
   {
@@ -189,7 +183,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/projektanfrage",
     changefreq: "monthly",
     priority: 0.9,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Projektanfrage", path: "/projektanfrage" }],
   },
   {
@@ -205,7 +198,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/karriere",
     changefreq: "weekly",
     priority: 0.7,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Karriere", path: "/karriere" }],
   },
   {
@@ -221,7 +213,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/news",
     changefreq: "daily",
     priority: 0.8,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "News", path: "/news" }],
   },
   {
@@ -237,7 +228,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     canonical: "/ratgeber",
     changefreq: "monthly",
     priority: 0.8,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Ratgeber", path: "/ratgeber" }],
   },
   {
@@ -255,7 +245,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/hero-konferenzraum.jpg",
     changefreq: "monthly",
     priority: 0.95,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Konferenzraum-Ausstattung", path: "/konferenzraum-ausstattung" }],
   },
   {
@@ -290,7 +279,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/hero-konferenzraum.jpg",
     changefreq: "monthly",
     priority: 0.95,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Digital Signage", path: "/digital-signage" }],
   },
   {
@@ -308,7 +296,6 @@ export const MAIN_ROUTES: SeoRoute[] = [
     ogImage: "/assets/hero-konferenzraum.jpg",
     changefreq: "monthly",
     priority: 0.95,
-    lastmod: TODAY,
     breadcrumbs: [{ name: "Videokonferenzanlage", path: "/videokonferenzanlage" }],
   },
 ];
@@ -348,7 +335,6 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
     noindex: r.noindex,
     changefreq: "monthly",
     priority: 0.8,
-    lastmod: TODAY,
     breadcrumbs: [
       { name: topic.title, path: `/${topic.baseSlug}/krefeld` },
       { name: city.name, path: r.path },
@@ -361,7 +347,7 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
 // ───────────────────────────────────────────────────────────
 // 3) RATGEBER_ROUTES
 // ───────────────────────────────────────────────────────────
-export const RATGEBER_ROUTES: SeoRoute[] = [
+const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/raumbuchungssystem-konferenzraeume",
     routeType: "ratgeber",
@@ -391,10 +377,10 @@ export const RATGEBER_ROUTES: SeoRoute[] = [
     routeType: "ratgeber",
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms | SLT Technology Group",
     description:
-      "Yealink MeetingBoard Pro im Praxis-Check: Funktionen, Größen, Einsatzszenarien – Installation und Inbetriebnahme durch SLT als autorisierter Partner.",
+      "Yealink MeetingBoard Pro im Praxis-Check: Funktionen, Größen, Einsatzszenarien – Installation und Inbetriebnahme durch SLT Technology Group als autorisierter Partner.",
     h1: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
     intro: [
-      "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation durch SLT als autorisierter Partner.",
+      "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation durch SLT Technology Group als autorisierter Partner.",
     ],
     canonical: "/ratgeber/yealink-meetingboard-pro",
     ogType: "article",
@@ -623,7 +609,7 @@ export const PROJECT_ROUTES: SeoRoute[] = PROJECTS.map((project) => ({
   ogType: "article",
   changefreq: "monthly",
   priority: 0.8,
-  lastmod: project.dateModified ?? TODAY,
+  lastmod: project.dateModified,
   breadcrumbs: [
     { name: "Projekte", path: "/projekte" },
     { name: project.client, path: `/projekte/${project.slug}` },
@@ -709,7 +695,6 @@ export const PARTNER_ROUTES: SeoRoute[] = partners.map((partner) => ({
   ogImage: partner.ogImage || "/og-image.png",
   changefreq: "monthly",
   priority: 0.85,
-  lastmod: TODAY,
   breadcrumbs: [
     { name: "Partner", path: "/technologien" },
     { name: partner.name, path: `/partner/${partner.slug}` },
@@ -761,13 +746,30 @@ export const SOLUTION_ROUTES: SeoRoute[] = solutionPages.map((p) => ({
   ogImage: p.image,
   changefreq: "monthly",
   priority: 0.8,
-  lastmod: TODAY,
   breadcrumbs: [
     { name: "Lösungen", path: "/loesungen" },
     { name: p.navLabel, path: `/loesungen/${p.slug}` },
   ],
   solutionSlug: p.slug,
 }));
+
+
+export const RATGEBER_ROUTES: SeoRoute[] = [
+  ...LEGACY_RATGEBER_ROUTES.filter(route => !ratgeberPosts.some(post => route.articleSlug === post.slug)),
+  ...RATGEBER_POST_ROUTES,
+].map(route => {
+  const guide = guides.find(item => item.slug === route.articleSlug);
+  return { ...route, ogImage: route.ogImage ?? guide?.image, articleImage: route.articleImage ?? guide?.image };
+});
+
+for (const route of NEWS_ROUTES) {
+  const article = newsArticles.find(item => item.slug === route.articleSlug);
+  if (article) {
+    route.articleDate = article.date;
+    route.ogImage = article.image ?? route.ogImage;
+    route.articleImage = article.image ?? route.articleImage;
+  }
+}
 
 export const ALL_ROUTES: SeoRoute[] = [
   ...MAIN_ROUTES,
@@ -779,8 +781,7 @@ export const ALL_ROUTES: SeoRoute[] = [
   ...JOB_ROUTES,
   ...LEGAL_ROUTES,
   ...PARTNER_ROUTES,
-  ...RATGEBER_POST_ROUTES,
-];
+ ];
 
 export { isNoindex };
 
