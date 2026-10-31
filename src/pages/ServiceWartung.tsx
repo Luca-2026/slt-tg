@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { ServicePractice } from "@/components/services/ServicePractice";
 import {
   ArrowRight,
   Headphones,
@@ -71,9 +72,9 @@ const services = [
   {
     id: "itil",
     icon: ShieldCheck,
-    title: "ITIL v4 Service-Management",
+    title: "Service-Management an der IT-Schnittstelle",
     description:
-      "Unsere Service-Prozesse folgen ITIL v4 als international etabliertem Standard – das vereinfacht die Zusammenarbeit mit Ihrer IT-Abteilung erheblich.",
+      "SLT Technology Group ist ITIL 4 zertifiziert und arbeitet danach: Störungen dokumentieren, wiederkehrende Ursachen analysieren und Änderungen mit Ihrer IT freigeben und absichern.",
     features: [
       "Incident-, Problem- und Change-Management nach ITIL v4",
       "Klare Eskalations- und Übergabewege",
@@ -108,7 +109,7 @@ const faqs = [
       "Grundsätzlich ja, sofern die Hardware nicht End-of-Life ist. Im Rahmen einer Bestandsaufnahme prüfen wir, was wir wirtschaftlich sinnvoll in unsere Wartung übernehmen können.",
   },
   {
-    question: "Was bedeutet ITIL v4 in der Praxis für uns?",
+    question: "Wie werden Störungen und Änderungen bearbeitet?",
     answer:
       "ITIL v4 ist ein international etablierter Standard für IT-Service-Management. Für Sie bedeutet das vor allem: nachvollziehbare Prozesse für Störungen, Änderungen und Anfragen sowie eine saubere Schnittstelle zu Ihrer eigenen IT.",
   },
@@ -128,7 +129,7 @@ const ServiceWartung = () => {
   return (
     <Layout>
       <SEOHead
-        title="AV-Service, Wartung & Managed Rooms (ITIL v4)"
+        title="AV-Service, Wartung & Managed Rooms"
         description="Service Desk, proaktives 24/7-Monitoring, Managed Rooms und Wartung für AV- und IT-Systeme – nach ITIL v4. SLT Technology Group für Enterprise-Kunden in NRW und bundesweit."
         keywords="AV-Service, AV-Wartung, Managed Rooms, ITIL v4, Service Desk, proaktives Monitoring, Wartungsvertrag, Medientechnik Service"
         canonical="/service-wartung"
@@ -162,16 +163,17 @@ const ServiceWartung = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Service & Wartung" }]} />
             <Badge variant="outline" className="mb-6">
-              Managed Services nach ITIL v4
+              Wartung & technischer Service
             </Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               AV-Service & Wartung –{" "}
               <span className="text-primary">individuell vereinbart</span>
             </h1>
             <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Service Desk, proaktives 24/7-Monitoring, Managed Rooms und Wartung –
-              nach ITIL v4 strukturiert und auf Ihre Umgebung zugeschnitten.
+              Inspektion, Funktionsprüfung, Firmware-Pflege und dokumentierte Reparaturen.
+              Für den laufenden Betrieb mit Service Desk und Monitoring finden Sie unser Gesamtangebot unter Managed Services.
             </p>
+            <Button asChild variant="outline" className="mt-6 h-auto whitespace-normal"><Link to="/managed-services">Managed Services & Wartung <ArrowRight className="ml-2 h-4 w-4 shrink-0" /></Link></Button>
           </div>
         </div>
       </section>
@@ -258,6 +260,8 @@ const ServiceWartung = () => {
           </div>
         </section>
       ))}
+
+      <ServicePractice />
 
       {/* FAQ */}
       <section className="py-16 lg:py-24">

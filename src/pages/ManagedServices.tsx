@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { msModules, msModels, msProcess, msFaqs } from "@/data/managedServices";
+import { ServicePractice } from "@/components/services/ServicePractice";
 import { ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
 import monitoringImg from "@/assets/managed-services/managed-av-services-monitoring-slt.webp";
 import helpdeskImg from "@/assets/managed-services/managed-av-services-helpdesk-slt.webp";
@@ -24,8 +25,8 @@ const reasons = [
     text: "Wir betreiben Medientechnik und die zugehörige Netzwerk-/IT-Seite gemeinsam – kein Fingerzeigen zwischen Gewerken.",
   },
   {
-    title: "ITIL v4 als Prozessbasis",
-    text: "Incident-, Problem- und Change-Management nach international etabliertem Standard, anschlussfähig an Konzern-IT.",
+    title: "Klare Prozesse an der IT-Schnittstelle",
+    text: "SLT Technology Group ist ITIL 4 zertifiziert: Störungen dokumentieren, Ursachen untersuchen und Änderungen mit Ihrer IT abstimmen.",
   },
   {
     title: "Herstellerneutral",
@@ -70,7 +71,7 @@ const ManagedServices = () => {
             <div className="min-w-0">
               <Breadcrumbs items={[{ label: "Managed Services" }]} />
               <Badge variant="outline" className="mb-6">
-                Betrieb nach ITIL v4
+                Managed Services & Wartung
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Managed Services für{" "}
@@ -188,6 +189,8 @@ const ManagedServices = () => {
           </div>
         </div>
       </section>
+
+      <ServicePractice />
 
       {/* Service-Modelle */}
       <section className="py-16 lg:py-24 bg-card/50">
