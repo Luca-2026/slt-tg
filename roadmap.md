@@ -1,4 +1,5 @@
 # Aufgaben
+- [ ] Abschlussprüfung Seite für Seite mit Semrush, Sitemap-/lastmod-Korrektur, Apache-Weiterleitungen und vollständigem statischem Pre-Rendering; Bericht und Serverprofis-Übergabe prüfen.
 - [x] Startseiten-Referenzen aus vollständigem Bestand (7 Projekte) rotieren lassen und davor datierte aktuelle News/Wissen interaktiv anzeigen; gemeinsame Newsquelle.
 - [x] Automatik, Bedienung, sichtbare Bilder, Reihenfolge und Seitenbreite bei 1280/393/320 Pixeln geprüft; News-Datumstest erfolgreich, kein Upload.
 - [x] Bank-Verlag-Referenz mit beiden Originalfotos, Projektzeit Februar 2026, Veröffentlichungsdatum 31.08.2026, interner Übersicht-Verlinkung und SEO/Sitemap integriert; Desktop/Mobil und Datumstests geprüft, kein Upload.
