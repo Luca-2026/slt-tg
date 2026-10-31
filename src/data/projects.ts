@@ -32,6 +32,7 @@ export interface Project {
   shortDescription: string; // 1-2 Sätze, für Übersicht und Meta-Description
   heroImage: string;
   galleryImages?: string[];
+  slideshowImages?: string[];
 
   // Vollständiger Case-Study-Content
   challenge: string;
@@ -61,8 +62,12 @@ export const PROJECTS: Project[] = [
     heroImage: "/assets/projects/knauber/knauber-led-wartung-buehne.webp",
     heroAlt: "Outdoor-LED-Anlage bei Knauber in Bonn mit aufgestellter Höhenarbeitsbühne von SLT Rental",
     logo: "/assets/projects/knauber/knauber-logo.webp",
-    galleryImages: ["/assets/projects/knauber/knauber-led-wartung-buehne.webp", "/assets/projects/knauber/knauber-led-servicezugang.webp", "/assets/projects/knauber/knauber-led-werbetafel-bonn.webp"],
+    galleryImages: ["/assets/projects/knauber/knauber-led-wartung-buehne-detail.webp", "/assets/projects/knauber/knauber-led-servicezugang-detail.webp", "/assets/projects/knauber/knauber-led-werbetafel-bonn-detail.webp"],
+    slideshowImages: ["/assets/projects/knauber/knauber-led-wartung-buehne-detail.webp", "/assets/projects/knauber/knauber-led-servicezugang-detail.webp", "/assets/projects/knauber/knauber-led-werbetafel-bonn-detail.webp"],
     imageAlts: {
+      "/assets/projects/knauber/knauber-led-wartung-buehne-detail.webp": "Höhenarbeitsbühne von SLT Rental am rückseitigen Wartungszugang der Knauber-LED-Anlage in Bonn",
+      "/assets/projects/knauber/knauber-led-servicezugang-detail.webp": "Lüfter, Netzteile und Empfangskarten hinter den geöffneten Serviceklappen der Knauber-LED-Anlage",
+      "/assets/projects/knauber/knauber-led-werbetafel-bonn-detail.webp": "Knauber-Logo auf der Outdoor-LED-Werbetafel am Standort Bonn",
       "/assets/projects/knauber/knauber-led-wartung-buehne.webp": "Outdoor-LED-Anlage bei Knauber in Bonn mit Höhenarbeitsbühne von SLT Rental",
       "/assets/projects/knauber/knauber-led-servicezugang.webp": "Geöffnete rückseitige Serviceklappen der Knauber-LED-Anlage mit Lüftern, Netzteilen und Verkabelung",
       "/assets/projects/knauber/knauber-led-werbetafel-bonn.webp": "LED-Werbetafel am Knauber-Standort in Bonn mit angezeigtem Knauber-Logo",

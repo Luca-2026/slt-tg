@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, MapPin, Calendar, Building2, CheckCircle, ExternalLink } from "lucide-react";
-import { getProjectBySlug, getRelatedProjects, PROJECTS } from "@/data/projects";
+import { getProjectBySlug, getRelatedProjects } from "@/data/projects";
+import { ProjectSlideshow } from "@/components/ProjectSlideshow";
 
 const ProjectPage = () => {
   const { slug = "" } = useParams<{ slug: string }>();
@@ -69,14 +70,14 @@ const ProjectPage = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-lg">
+            {project.slideshowImages ? <ProjectSlideshow key={project.slug} images={project.slideshowImages} alts={project.imageAlts} label={`${project.client} – Projektbilder`} /> : <div className="overflow-hidden rounded-lg">
               <img
                 src={project.heroImage}
                 alt={project.heroAlt ?? `${project.client} – ${project.category} in ${project.location}`}
                 className="w-full h-auto"
                 loading="eager"
               />
-            </div>
+            </div>}
           </div>
         </div>
       </section>
@@ -116,13 +117,13 @@ const ProjectPage = () => {
               {project.galleryImages.map((img, i) => (
                 <div
                   key={img}
-                  className="rounded-lg overflow-hidden bg-secondary"
+                  className="aspect-video rounded-lg overflow-hidden bg-secondary"
                 >
                   <img
                     src={img}
                     alt={project.imageAlts?.[img] ?? `${project.client} – Projektbild ${i + 1}`}
                     loading="lazy"
-                    className="w-full h-auto"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
