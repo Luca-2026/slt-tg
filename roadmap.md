@@ -9,13 +9,13 @@
 - [x] Paket 4: Bewerbungsablauf „sichten und zurückmelden“ bestätigt; Karriere 324, Büromanagement 336, Veranstaltungstechnik 316, Medientechniker 324 Wörter; Vorschau-Snapshots JS/no-JS identisch, Desktop/Mobil geprüft. Alte 2026-Beispielangabe im Ausbildungsformular an den zentralen Ausbildungsbeginn gekoppelt.
 - [x] Paket 5: separate Zusätze ausdrücklich freigegeben und auf allen 24 betroffenen Seiten ergänzt; Original-JSON/Descriptions unverändert. Alle Seiten mit/ohne JS sowie Desktop/Mobil geprüft, mindestens 321 Wörter; 20-%-Regeltests bestanden.
 - [x] Paket 6 NRW: auf 324 sichtbare Wörter erweitert; unbelegte pauschale 90-Minuten-Zusage und pauschale Rollout-/Branchenversprechen entfernt, FAQ-Daten bleiben gemeinsam. Desktop/Mobil und Vorschau-Snapshot-Parität geprüft.
-- [ ] Impressum: einziger verbleibender Wortzahlblocker (238 Wörter). Unternehmens-/Vertretungs-/USt-ID-Angaben bestätigen; veraltete TMG-/EU-OS-Verweise sachlich aktualisieren. Keine Rechtsklauseln zum Auffüllen erfinden.
+- [x] Impressum: gelieferte USt-ID DE340481717 aufgenommen, DDG-Verweis und EU-OS-Einstellung aktualisiert, vorhandene Standort-/Kontaktangaben ergänzt; 336 sichtbare Wörter, Desktop/Mobil und statische Textparität geprüft. Bestehende Register-/Vertretungsangaben unverändert, keine neue Bestätigung behauptet.
 - [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
 - [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
 - [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.
 - [x] Inhaltsarbeit anhand des Prüfberichts gebündelt: 24 finale Stadttexte benötigen jeweils 6–53 zusätzliche Wörter; 17 weitere Seiten umfassen Kontakt/Anfrage (2), Karriere (4), Ratgeberübersicht (1), News (3), Partner (5), NRW (1), Impressum (1).
-- [ ] Inhaltserweiterung: Impressum benötigt sachlich/rechtlich bestätigte Angaben; keine Rechtsklauseln zur Wortzahl erfinden.
-- [ ] Produktions-Upload-Paket: bleibt bis zur geprüften Inhaltserweiterung blockiert; kein künstliches Auffüllen und kein eigenmächtiges Ändern der finalen Regionalredaktion.
+- [x] Inhaltserweiterung: alle 89 Vorschaurouten bestehen die 300-Wörter-/H1-/Hero-/FAQ-/Canonical-Prüfung; JS/no-JS-Textvergleich identisch; 73 Tests bestanden.
+- [ ] Produktions-Upload-Paket: kein dist-Artefakt in dieser Umgebung vorhanden; automatische Vorschauprüfungen liefern keinen Produktions-Export. Node-Paritätstest zusätzlich durch fehlende Chromium-Version 1194 blockiert (verfügbarer Python-Browser für alle 89 Vorschaurouten erfolgreich genutzt). Erst geprüften vollständigen Produktionsexport verpacken, kein Vorschau-ZIP als Upload ausgeben.
 - [x] Erneute Vorschau-Prüfung aller 89 Inhaltsrouten: einzig /impressum unter 300 Wörtern; diese Vorschauprüfung ist kein Produktionsbuild oder Upload-Grünlicht.
 
 ## JSON-LD (08.11.2026)

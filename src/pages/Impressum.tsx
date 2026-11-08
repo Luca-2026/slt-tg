@@ -1,13 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
+import { VAT_ID } from "@/data/legalIdentity";
 
 const Impressum = () => {
   return (
     <Layout>
       <SEOHead
         title="Impressum"
-        description="Impressum der SLT Technology Group GmbH & Co. KG. Angaben gemäß § 5 TMG."
+        description="Impressum der SLT Technology Group GmbH & Co. KG. Angaben gemäß § 5 DDG."
         keywords="Impressum, Kontakt, SLT Technology Group"
         canonical="/impressum"
       />
@@ -20,6 +21,11 @@ const Impressum = () => {
             <h1 className="text-4xl font-bold text-foreground mb-8">Impressum</h1>
 
             <div className="prose prose-invert max-w-none space-y-8">
+              <p className="text-muted-foreground">
+                Angaben zum Diensteanbieter gemäß § 5 Digitale-Dienste-Gesetz (DDG):
+                Anbieter dieser Website ist die SLT Technology Group GmbH & Co. KG.
+                Nachfolgend finden Sie die Unternehmensanschrift, Kontaktmöglichkeiten und Registerangaben.
+              </p>
               <div>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
                   SLT Technology Group GmbH & Co. KG
@@ -28,7 +34,7 @@ const Impressum = () => {
                   Anrather Straße 291<br />
                   DE-47807 Krefeld<br />
                   <br />
-                  Fon: +49 (0) 2151 - 417 99 02<br />
+                  Fon: <a href="tel:+4921514179902" className="text-primary hover:underline">+49 (0) 2151 - 417 99 02</a><br />
                   Fax: +49 (0) 2151 - 417 99 04<br />
                   E-Mail:{" "}
                   <a href="mailto:info@slt-tg.de" className="text-primary hover:underline">
@@ -37,6 +43,24 @@ const Impressum = () => {
                   <br />
                   <br />
                   HRA 7075 Amtsgericht Krefeld
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Umsatzsteuer-Identifikationsnummer</h2>
+                <p className="text-muted-foreground">
+                  Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {VAT_ID}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-foreground mb-4">Weiterer Unternehmensstandort</h2>
+                <p className="text-muted-foreground">
+                  Neben dem Hauptsitz in Krefeld unterhält die SLT Technology Group einen Standort
+                  in Bonn: Drachenburgstraße 8, 53179 Bonn. Die oben genannten Registerangaben
+                  beziehen sich auf die Gesellschaft in Krefeld. Für die Kontaktaufnahme stehen
+                  die angegebene Telefonnummer und die E-Mail-Adresse info@slt-tg.de zur Verfügung.
+                  Beide Standorte sind auch auf unserer <a href="/kontakt" className="text-primary hover:underline">Kontaktseite</a> aufgeführt.
                 </p>
               </div>
 
@@ -111,15 +135,15 @@ const Impressum = () => {
                   Streitschlichtung
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung 
-                  (OS) bereit:{" "}
+                  Die Europäische Plattform zur Online-Streitbeilegung wurde zum 20. Juli 2025
+                  eingestellt. Die Rechtsgrundlage für ihre Einstellung ist die{" "}
                   <a
-                    href="https://ec.europa.eu/consumers/odr/"
+                    href="https://eur-lex.europa.eu/eli/reg/2024/3228/oj?locale=de"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    https://ec.europa.eu/consumers/odr/
+                    Verordnung (EU) 2024/3228 ↗
                   </a>
                 </p>
                 <p className="text-muted-foreground">
