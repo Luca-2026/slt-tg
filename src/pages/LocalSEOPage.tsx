@@ -10,6 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, CheckCircle, MapPin, Phone, Mail, ChevronDown } from "lucide-react";
 import { cities, topics, getContentOverride } from "@/data/localSEO";
 import { getRegion, referenzenFuerLeistung, visibleFaqs, isServiceKey, isPlaceholder } from "@/data/regionen";
+import { regionalSupplements } from "@/data/regionalSupplements";
 
 interface LocalSEOPageProps {
   topicKey: string;
@@ -35,6 +36,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
   const h1 = `${topic.shortTitle} ${region.stadt}`;
   const referenzen = referenzenFuerLeistung(region, topicKey);
   const faqs = visibleFaqs(region, topicKey);
+  const supplement = regionalSupplements[`/${topicKey}/${cityKey}`];
 
   return (
     <Layout>
@@ -74,6 +76,12 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
           <p className="text-muted-foreground leading-relaxed">{content.arbeitsweise}</p>
           <p className="text-sm text-muted-foreground mt-6">{region.standort.name} · {region.fahrzeit} · {region.ansprechpartner.name}, {region.ansprechpartner.funktion}</p>
           {region.gbpUrl && !isPlaceholder(region.gbpUrl) && <a href={region.gbpUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Google-Unternehmensprofil ↗</a>}
+        </div></div>
+      </section>}
+      {supplement && <section className="py-16 lg:py-20">
+        <div className="section-container"><div className="max-w-3xl mx-auto" data-regional-supplement>
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">{supplement.title}</h2>
+          <p className="text-muted-foreground leading-relaxed">{supplement.text}</p>
         </div></div>
       </section>}
       {faqs.length > 0 && <section className="py-16 lg:py-20 bg-card">
@@ -146,6 +154,13 @@ const NrwFallback = ({ topicKey, cityKey }: LocalSEOPageProps) => {
           </div>
         </div>
       </section>
+
+      {override.planningContext && <section className="py-16 lg:py-20">
+        <div className="section-container"><div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">Raumstandards und Betrieb gemeinsam planen</h2>
+          <p className="text-muted-foreground leading-relaxed">{override.planningContext}</p>
+        </div></div>
+      </section>}
 
       <section className="py-16 lg:py-20 bg-card">
         <div className="section-container">

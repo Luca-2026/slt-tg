@@ -7,13 +7,16 @@
 - [x] Paket 2: Ratgeber 318 Wörter, Huddly-News 367, Technik/Chaos 301, Audio 312; praktische Fachabsätze ergänzt, absolute Huddly-Abdeckungsbehauptung eingegrenzt, Vorschau-Snapshots mit/ohne JavaScript identisch und Desktop/Mobil geprüft.
 - [x] Paket 3: Crestron 358, Sennheiser 315, Shure 344, Barco 355, Cisco 377 Wörter; projektbezogene Ergänzungen ohne neue Zertifizierungen, Herstellerquellen gegengeprüft, FAQ/Canonical/H1 und Vorschau-Snapshot-Parität geprüft.
 - [x] Paket 4: Bewerbungsablauf „sichten und zurückmelden“ bestätigt; Karriere 324, Büromanagement 336, Veranstaltungstechnik 316, Medientechniker 324 Wörter; Vorschau-Snapshots JS/no-JS identisch, Desktop/Mobil geprüft. Alte 2026-Beispielangabe im Ausbildungsformular an den zentralen Ausbildungsbeginn gekoppelt.
-- [ ] Paket 5: separaten Regionalzusatz als Muster vorgelegt; ausdrückliche Freigabe fehlt → danach NRW/Impressum → Produktionsprüfung und Upload-Paket.
+- [x] Paket 5: separate Zusätze ausdrücklich freigegeben und auf allen 24 betroffenen Seiten ergänzt; Original-JSON/Descriptions unverändert. Alle Seiten mit/ohne JS sowie Desktop/Mobil geprüft, mindestens 321 Wörter; 20-%-Regeltests bestanden.
+- [x] Paket 6 NRW: auf 324 sichtbare Wörter erweitert; unbelegte pauschale 90-Minuten-Zusage und pauschale Rollout-/Branchenversprechen entfernt, FAQ-Daten bleiben gemeinsam. Desktop/Mobil und Vorschau-Snapshot-Parität geprüft.
+- [ ] Impressum: einziger verbleibender Wortzahlblocker (238 Wörter). Unternehmens-/Vertretungs-/USt-ID-Angaben bestätigen; veraltete TMG-/EU-OS-Verweise sachlich aktualisieren. Keine Rechtsklauseln zum Auffüllen erfinden.
 - [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
 - [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
 - [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.
 - [x] Inhaltsarbeit anhand des Prüfberichts gebündelt: 24 finale Stadttexte benötigen jeweils 6–53 zusätzliche Wörter; 17 weitere Seiten umfassen Kontakt/Anfrage (2), Karriere (4), Ratgeberübersicht (1), News (3), Partner (5), NRW (1), Impressum (1).
-- [ ] Inhaltserweiterung: ausdrückliche Freigabe für Zusätze zur unveränderlichen Regionalredaktion fehlt; konkrete neue Unternehmens-/Personal-/Rechtsangaben dürfen nicht erfunden werden.
+- [ ] Inhaltserweiterung: Impressum benötigt sachlich/rechtlich bestätigte Angaben; keine Rechtsklauseln zur Wortzahl erfinden.
 - [ ] Produktions-Upload-Paket: bleibt bis zur geprüften Inhaltserweiterung blockiert; kein künstliches Auffüllen und kein eigenmächtiges Ändern der finalen Regionalredaktion.
+- [x] Erneute Vorschau-Prüfung aller 89 Inhaltsrouten: einzig /impressum unter 300 Wörtern; diese Vorschauprüfung ist kein Produktionsbuild oder Upload-Grünlicht.
 
 ## JSON-LD (08.11.2026)
 - [x] Wiederverwendbare Ausgabe für globale Organisation, Standorte und route-spezifische Schemas ohne Duplikate.

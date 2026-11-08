@@ -112,6 +112,7 @@ export interface ContentOverride {
   heroTitle: string;
   heroSubtitle: string;
   intro: string;
+  planningContext?: string;
   services: string[];
   faqItems: Array<{ question: string; answer: string }>;
   localAnchor?: string;
@@ -132,30 +133,30 @@ export const CONTENT_OVERRIDES: Record<string, ContentOverride> = {
     heroSubtitle:
       "Von Aachen bis Bielefeld, von Münster bis Siegen – wir planen und installieren Konferenzräume in ganz NRW. Zwei Standorte in Krefeld und Bonn.",
     intro:
-      "Nordrhein-Westfalen ist Deutschlands größter Ballungsraum – und gleichzeitig eine Ansammlung von Wirtschaftsregionen mit sehr unterschiedlichen Anforderungen. Im Ruhrgebiet dominiert die Industrie, in Düsseldorf die Konzernzentralen, in Köln die Medien, in Bonn die Bundesverwaltung, in Ostwestfalen der Mittelstand. Wir betreuen von unseren Standorten Krefeld und Bonn aus Projekte in der gesamten Region. Je nach Projektgröße und Entfernung arbeiten wir mit lokalen Partnern zusammen oder rüsten direkt aus unserem Fuhrpark. Typische Einsatzradien: Krefeld deckt Niederrhein und Ruhrgebiet ab, Bonn das Rheinland bis Westerwald, zusammen erreichen wir jeden Punkt in NRW innerhalb von 90 Minuten.",
+      "SLT Technology Group plant, integriert und betreut Konferenztechnik für Unternehmen in Nordrhein-Westfalen. Unsere Standorte sind Krefeld und Bonn. Bei einem Einzelraum stehen Raumgröße, Nutzung und bestehende Ausstattung im Vordergrund; bei mehreren Standorten kommen gemeinsame Raumstandards und die Abstimmung mit der zentralen IT hinzu. Anfahrten, Installationsabläufe und Serviceumfang werden projektspezifisch geplant. Eine pauschale Fahrzeit für alle Orte in NRW geben wir nicht an.",
+    planningContext: "Ein standortübergreifendes Konzept beginnt mit der Einteilung der Räume nach tatsächlicher Nutzung. Huddle Space, Schulungsraum und Boardroom benötigen unterschiedliche Bild- und Audiotechnik, können aber eine wiedererkennbare Bedienlogik erhalten. Die Raumtiefe und die typischen Präsentationsinhalte bestimmen die erforderliche Darstellung. Sitzordnung und Akustik beeinflussen Mikrofonabdeckung und Lautsprecheranordnung. Die Auswahl der Kamera folgt den vorgesehenen Gesprächspositionen. Gleichzeitig werden Plattform, Raumkonten und Netzwerkanschlüsse mit der IT abgestimmt. Ein Referenzraum kann genutzt werden, um diese Entscheidungen im realen Betrieb zu prüfen, bevor weitere Räume ausgestattet werden. Dabei gehören Gastpräsentation, die Nutzung des eigenen Notebooks und die Zusammenarbeit mit zugeschalteten Personen in den Test. Vorhandene Displays und Kabelwege werden hinsichtlich ihrer weiteren Eignung bewertet. Nach Installation und Einrichtung bleiben dokumentierte Konfigurationen und klare Zuständigkeiten wichtig. Wartung, Updates und die Betreuung der Nutzenden können im Rahmen der Managed Services vereinbart werden; der Umfang richtet sich nach den Anforderungen der jeweiligen Raum- und Standortlandschaft.",
     services: [
       "Konferenzraum-Planung und Installation in ganz NRW",
       "Boardroom- und Präsidial-Ausstattung",
       "Multi-Site-Rollouts für NRW-weit verteilte Unternehmen",
-      "Simultandolmetscher-Anlagen nach IEC 60914",
       "Integration mit bestehender IT-Infrastruktur",
-      "Wartungsverträge mit NRW-Flächendeckung",
+      "Service und Wartung mit individuell vereinbartem Umfang",
     ],
     faqItems: [
       {
         question: "Wie weit reicht Ihr Einsatzradius in NRW?",
         answer:
-          "Von unseren Standorten Krefeld und Bonn erreichen wir jeden Punkt in NRW innerhalb von 90 Minuten. Typische Projektstandorte sind Düsseldorf, Köln, Essen, Dortmund, Aachen und Bielefeld. Für zeitkritische Serviceleistungen haben wir Wartungsverträge mit garantierten Reaktionszeiten.",
+          "Wir betreuen Projekte in NRW von Krefeld und Bonn aus. Anfahrt und Vor-Ort-Termine werden für das jeweilige Vorhaben geplant. Servicezeiten und Reaktionsregelungen ergeben sich aus dem vereinbarten Serviceumfang, nicht aus einer pauschalen Fahrzeitzusage.",
       },
       {
         question: "Können Sie NRW-weite Rollouts für Konzerne umsetzen?",
         answer:
-          "Ja. Unsere Referenz Pfeifer & Langen in Köln (20+ Räume einheitlich ausgestattet) und Sonoco (mehrere deutschlandweite Werksstandorte) zeigen, dass wir Rollouts mit 10, 20 oder 50 Räumen parallel planen und umsetzen können. Dabei sorgen wir für einheitlichen Room-Standard, zentrales Monitoring und koordinierte Inbetriebnahme.",
+          "Wir planen standortübergreifende AV- und IT-Projekte. Pfeifer & Langen in Köln und Sonoco mit mehreren Werksstandorten sind veröffentlichte Beispiele. Raumstandards, Reihenfolge der Inbetriebnahme und Betriebsmodell werden für jedes Vorhaben abgestimmt.",
       },
       {
         question: "Welche Branchen in NRW haben Sie bereits betreut?",
         answer:
-          "Unsere NRW-Kunden kommen aus Chemie (Aluminium Norf Neuss), Lebensmittelindustrie (Pfeifer & Langen Köln), Maschinenbau (GEA Farm Technologies Bönen) und dem Mittelstand. Die Bandbreite erlaubt uns, jede NRW-Branche mit passenden Lösungen zu bedienen.",
+          "Unsere veröffentlichten Referenzen umfassen unter anderem Aluminium Norf in Neuss, Pfeifer & Langen in Köln und GEA Farm Technologies in Bönen. Sie zeigen unterschiedliche Anforderungen an Konferenzräume, Schulungsbereiche und hybride Zusammenarbeit.",
       },
     ],
     localAnchor: "Zwei Standorte (Krefeld + Bonn), NRW-weiter Einsatzradius",

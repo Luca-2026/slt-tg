@@ -17,7 +17,7 @@
 - Homepage carousels consume the complete project catalogue and shared news feed; use one responsive carousel with viewport-aware autoplay and pause controls to keep mobile content compact and current.
 - Store reference-specific cropped photo variants in the shared project catalogue; use the reusable slideshow for fading detail images without modifying the original customer photos.
 - Customer media for external FTP hosting must have optimized static public copies alongside asset provenance pointers, because Serverprofis cannot serve Lovable-relative asset URLs.
-- Regional pages render immutable service-specific editorial content from per-city JSON; sources and review notes never enter public markup or bundles, and export validates static content plus a 20% identical-sentence threshold for introductions and requirements.
+- Regional pages preserve immutable per-city JSON editorial content; approved additive paragraphs live in a route-keyed supplement catalogue, while sources/review notes stay private and export enforces static content plus the 20% shared-sentence limit for introductions/requirements.
 - Regional metadata reads the required service-specific description field verbatim from each city JSON; missing or invalid descriptions throw during catalogue loading and block builds, with no derived fallback.
 - Strip private regional JSON fields before Vite JSON transformation so research and review notes stay source-only, including in browser assets.
 - Manufacturer certification claims come only from src/data/certifications.ts; unconfirmed vendors are labeled "Erfahrung mit", never "zertifiziert".
