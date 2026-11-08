@@ -36,6 +36,8 @@ if (!address || typeof address === "string") throw new Error("Missing render ser
 const browser = await chromium.launch({ headless: true });
 try {
   const context = await browser.newContext({ viewport: { width: 1280, height: 1800 }, reducedMotion: "reduce" });
+  // Set before React starts; export must not capture intermediate animation frames.
+  await context.addInitScript(() => { window.__SLT_PRERENDER__ = true; });
   const rows = [];
   for (const route of ALL_ROUTES) {
     const page = await context.newPage();

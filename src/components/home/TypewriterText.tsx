@@ -5,26 +5,45 @@ const TYPING_SPEED = 80;
 const START_DELAY = 400;
 
 export function TypewriterText() {
-  const [displayedLength, setDisplayedLength] = useState(0);
-  const [showCursor, setShowCursor] = useState(true);
+  const [displayedLength, setDisplayedLength] = useState(FULL_TEXT.length);
+  const [showCursor, setShowCursor] = useState(false);
 
   useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motion.matches || "__SLT_PRERENDER__" in window) return;
+    setDisplayedLength(0);
+    setShowCursor(true);
+    let interval: ReturnType<typeof setInterval> | undefined;
+    let cursorTimeout: ReturnType<typeof setTimeout> | undefined;
     const startTimeout = setTimeout(() => {
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         setDisplayedLength((prev) => {
           if (prev >= FULL_TEXT.length) {
             clearInterval(interval);
             // Hide cursor after typing completes
-            setTimeout(() => setShowCursor(false), 1500);
+            cursorTimeout = setTimeout(() => setShowCursor(false), 1500);
             return prev;
           }
           return prev + 1;
         });
       }, TYPING_SPEED);
-      return () => clearInterval(interval);
     }, START_DELAY);
 
-    return () => clearTimeout(startTimeout);
+    const finish = () => {
+      if (!motion.matches) return;
+      clearTimeout(startTimeout);
+      clearInterval(interval);
+      clearTimeout(cursorTimeout);
+      setDisplayedLength(FULL_TEXT.length);
+      setShowCursor(false);
+    };
+    motion.addEventListener("change", finish);
+    return () => {
+      clearTimeout(startTimeout);
+      clearInterval(interval);
+      clearTimeout(cursorTimeout);
+      motion.removeEventListener("change", finish);
+    };
   }, []);
 
   const displayed = FULL_TEXT.slice(0, displayedLength);

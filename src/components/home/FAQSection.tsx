@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -44,6 +44,7 @@ const faqs = [
 // Hier wird nur noch die sichtbare FAQ-UI gerendert – kein DOM-Schema-Inject mehr.
 
 export function FAQSection() {
+  const [openItem, setOpenItem] = useState("");
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: accordionRef, isVisible: accordionVisible } = useScrollAnimation();
 
@@ -65,7 +66,7 @@ export function FAQSection() {
         </div>
 
         <div ref={accordionRef} className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="rounded-lg border border-border bg-background px-4 sm:border-0 sm:bg-transparent sm:px-0 sm:space-y-4">
+          <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem} className="rounded-lg border border-border bg-background px-4 sm:border-0 sm:bg-transparent sm:px-0 sm:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
@@ -78,7 +79,7 @@ export function FAQSection() {
                 <AccordionTrigger className="text-left hover:no-underline hover:text-primary py-5">
                   <span className="text-base font-medium">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
+                <AccordionContent forceMount hidden={openItem !== `item-${index}`} className="text-muted-foreground pb-5">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

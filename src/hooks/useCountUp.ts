@@ -7,11 +7,17 @@ interface UseCountUpOptions {
 }
 
 export function useCountUp({ end, duration = 2000, startOnView = true }: UseCountUpOptions) {
-  const [count, setCount] = useState(0);
+  // The first render is meaningful even without JavaScript or viewport observers.
+  const [count, setCount] = useState(end);
   const [hasStarted, setHasStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motion.matches || "__SLT_PRERENDER__" in window) {
+      setCount(end);
+      return;
+    }
     if (!startOnView) {
       setHasStarted(true);
       return;
@@ -33,15 +39,23 @@ export function useCountUp({ end, duration = 2000, startOnView = true }: UseCoun
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [startOnView, hasStarted]);
+  }, [startOnView, hasStarted, end]);
 
   useEffect(() => {
     if (!hasStarted) return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motion.matches || "__SLT_PRERENDER__" in window) {
+      setCount(end);
+      return;
+    }
 
     const startTime = Date.now();
     const startValue = 0;
+    let frame = 0;
+    let stopped = false;
 
     const animate = () => {
+      if (stopped) return;
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       
@@ -52,11 +66,23 @@ export function useCountUp({ end, duration = 2000, startOnView = true }: UseCoun
       setCount(currentValue);
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        frame = requestAnimationFrame(animate);
       }
     };
 
-    requestAnimationFrame(animate);
+    const finish = () => {
+      if (!motion.matches) return;
+      stopped = true;
+      cancelAnimationFrame(frame);
+      setCount(end);
+    };
+    motion.addEventListener("change", finish);
+    frame = requestAnimationFrame(animate);
+    return () => {
+      stopped = true;
+      cancelAnimationFrame(frame);
+      motion.removeEventListener("change", finish);
+    };
   }, [hasStarted, end, duration]);
 
   return { count, ref };

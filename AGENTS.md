@@ -1,4 +1,5 @@
 # Architecture rules
+- Render one responsive homepage hero; initial counters contain their final values, browser-only animations respect reduced motion and the build-time prerender marker, and FAQ answers stay mounted while collapsed.
 - Production export uses build-time Chromium rendering of complete pages with React 18, Vite 5 and TypeScript; Serverprofis serves HTML without a persistent Node server or runtime SSR.
 - SEOHead reads the shared route catalogue for metadata and robots so browser navigation and exported pages cannot drift.
 - Sitemaps include only unique canonical indexable routes and use only page-specific known modification dates; never invent build-time or year-derived timestamps.

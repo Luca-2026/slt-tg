@@ -180,10 +180,22 @@ const Kontakt = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">Adresse</p>
+                      <p className="text-sm text-muted-foreground">Hauptsitz Krefeld</p>
                       <p className="font-medium text-foreground">
                         Anrather Straße 291<br />
                         47807 Krefeld
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Standort Bonn</p>
+                      <p className="font-medium text-foreground">
+                        Drachenburgstraße 8<br />
+                        53179 Bonn
                       </p>
                     </div>
                   </div>

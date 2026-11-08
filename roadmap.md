@@ -1,4 +1,5 @@
 # Aufgaben
+- [x] Startseite, Kontakt und Projektanfrage: Chromium-Snapshots ohne/mit JavaScript verglichen; Hero einmalig, 305+/228+/10+ statisch, sechs dauerhaft vorhandene FAQ-Antworten, Kontaktformular und beide Standortadressen geprüft. Formularbedienung ohne Versand, Desktop/Tablet/Mobil und 34 Tests bestanden; kein neues FTP-Paket erstellt, kein Deploy.
 - [x] Abschlussprüfung mit Semrush DE: 89 vollständige statische Seiten, 68 Sitemap-URLs, eindeutige Metadaten und bekannte lastmod-Daten; Apache-HTTPS-/301-/404-/410-Tests, 28 Regeltests, No-JS-Inhalte und Navigation geprüft. Bericht, CSV und Upload-ZIP übergeben; Live-Upload und anschließende Hoster-/Formular-/GSC-Prüfung bleiben beim Auftraggeber.
 - [x] Startseiten-Referenzen aus vollständigem Bestand (7 Projekte) rotieren lassen und davor datierte aktuelle News/Wissen interaktiv anzeigen; gemeinsame Newsquelle.
 - [x] Automatik, Bedienung, sichtbare Bilder, Reihenfolge und Seitenbreite bei 1280/393/320 Pixeln geprüft; News-Datumstest erfolgreich, kein Upload.
