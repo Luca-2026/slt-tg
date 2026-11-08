@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { REGIONEN, SERVICE_NAMES, referenzenFuerLeistung, regionDescription, sentenceSimilarity, visibleFaqs, regionalDataViolations, type ServiceKey } from "@/data/regionen";
 import { ALL_ROUTES } from "@/data/seo-routes";
-import { buildLocalSeoSchemas } from "@/data/schemas";
+import { resolveRouteSchemas } from "@/data/schemas";
 
 const keys = Object.keys(SERVICE_NAMES) as ServiceKey[];
 describe("Final regional editorial data", () => {
@@ -35,12 +35,12 @@ describe("Final regional editorial data", () => {
   it("uses all four requested schemas with the real branch address and correct FAQ", () => {
     const route = ALL_ROUTES.find(route => route.path === "/videokonferenz/koeln");
     if (!route) throw new Error("Missing route");
-    const schemas = JSON.parse(JSON.stringify(buildLocalSeoSchemas(route)));
-    expect(schemas.flatMap((schema: Record<string, unknown>) => schema["@type"])).toEqual(["Service", "LocalBusiness", "ProfessionalService", "FAQPage", "BreadcrumbList"]);
-    expect(schemas[0].provider.name).toBe("SLT Technology Group GmbH & Co. KG");
-    expect(schemas[1].address.streetAddress).toBe("Drachenburgstraße 8");
-    expect(schemas[2].mainEntity).toHaveLength(3);
-    expect(schemas[2].mainEntity[0].acceptedAnswer.text).toBe(REGIONEN.koeln.leistungen.videokonferenz?.faq?.[0].antwort);
+    const schemas = JSON.parse(JSON.stringify(resolveRouteSchemas(route)));
+    expect(schemas.flatMap((schema: Record<string, unknown>) => schema["@type"])).toEqual(["Organization", "WebSite", "Service", "FAQPage", "BreadcrumbList"]);
+    expect(schemas[2].provider.name).toBe("SLT Technology Group GmbH & Co. KG");
+    expect(schemas[0].subOrganization[1].address.streetAddress).toBe("Drachenburgstr. 8");
+    expect(schemas[3].mainEntity).toHaveLength(3);
+    expect(schemas[3].mainEntity[0].acceptedAnswer.text).toBe(REGIONEN.koeln.leistungen.videokonferenz?.faq?.[0].antwort);
     expect(JSON.stringify(schemas)).not.toMatch(/pruefen|quellen|<GBP|Luca|Sandhoff/);
   });
   it("uses all 35 explicit descriptions without deriving text from introductions", () => {

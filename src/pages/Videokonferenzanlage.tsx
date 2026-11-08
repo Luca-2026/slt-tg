@@ -1,3 +1,4 @@
+import { videoConferenceFaqs as faqs } from "@/data/pageFaqs";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
@@ -91,33 +92,7 @@ const blocks = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Was gehört zu einer vollständigen Videokonferenzanlage?",
-    answer:
-      "Mindestens Kamera, Mikrofonierung, Lautsprecher, Display und eine Bedienlösung – dazu Netzwerkanbindung, Verkabelung, Montage und die Anbindung an Ihre Kollaborationsplattform. In größeren Räumen kommen DSP-Audio, mehrere Kameras und Mediensteuerung hinzu.",
-  },
-  {
-    question: "Welche Videokonferenzanlage passt zu welcher Raumgröße?",
-    answer:
-      "Kleine Räume bis etwa sechs Personen werden meist mit einer All-in-one-Bar gelöst. Mittlere Räume brauchen zusätzliche Mikrofone, Boardrooms getrennte Komponenten mit DSP-Audio. Details zu Raumtypen finden Sie auf unserer Seite zur Konferenzraum-Ausstattung.",
-  },
-  {
-    question: "Funktioniert die Anlage mit Microsoft Teams und Zoom gleichzeitig?",
-    answer:
-      "Ja. Räume lassen sich im nativen Modus einer Plattform betreiben und zusätzlich per USB-C für andere Dienste freigeben. Welcher Weg sinnvoll ist, hängt von Ihrer IT-Strategie und den Gästeszenarien ab.",
-  },
-  {
-    question: "Kann bestehende Technik weiterverwendet werden?",
-    answer:
-      "Häufig ja. Wir nehmen den Bestand auf, prüfen Lifecycle-Status und Plattform-Kompatibilität und schlagen vor, was weiterbetrieben, ergänzt oder ersetzt werden sollte.",
-  },
-  {
-    question: "Wie lange dauert die Installation eines Konferenzraums?",
-    answer:
-      "Standardisierte Räume werden in der Regel innerhalb weniger Tage installiert und in Betrieb genommen. Bei Multi-Site-Rollouts richtet sich der Zeitplan nach Raumanzahl, Lieferzeiten und Ihren Betriebszeiten.",
-  },
-];
+
 
 const Videokonferenzanlage = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });

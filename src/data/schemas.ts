@@ -2,9 +2,7 @@
  * Zentraler Schema-Builder für JSON-LD.
  * Wird vom Prerender-Skript pro Route ausgewertet.
  *
- * - Globale Schemas (Organization, WebSite) stehen in index.html
- * - Route-spezifische Schemas werden statisch in dist/{route}/index.html
- *   injiziert (Platzhalter <!--PRERENDER:JSONLD-->).
+ * Browser and build-time export consume the identical catalogue.
  */
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
@@ -16,15 +14,24 @@ import { getRatgeberPostBySlug } from "./ratgeberPosts";
 import { getSolutionPage } from "./solutionPages";
 import { serviceModels } from "./serviceModels";
 import { msFaqs } from "./managedServices";
+import { homeFaqs, digitalSignageFaqs, videoConferenceFaqs } from "./pageFaqs";
 
 const BASE_URL = "https://www.slt-tg.de";
 
-const ORG_REF = { "@type": "Organization", "@id": `${BASE_URL}/#organization` };
+const ORG_NAME = "SLT Technology Group GmbH & Co. KG";
+const LOGO = `${BASE_URL}/favicon.png`;
+const ORG_REF = { "@type": "Organization", "@id": `${BASE_URL}/#organization`, name: ORG_NAME };
+// User-provided provisional hours; replace when confirmed.
+const OPENING_HOURS = [{
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  opens: "08:00", closes: "17:00",
+}];
 
 // Krefeld + Bonn – die einzigen physischen Standorte
 const KREFELD_LOCAL_BUSINESS = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${BASE_URL}/#localbusiness-krefeld`,
   name: "SLT Technology Group GmbH & Co. KG",
   alternateName: "SLT Technology Group",
@@ -32,30 +39,24 @@ const KREFELD_LOCAL_BUSINESS = {
     "Ihr Partner für die Installation, Integration und den Betrieb von Konferenz- und Medientechnik in Deutschland und Europa.",
   url: BASE_URL,
   logo: `${BASE_URL}/favicon.png`,
-  image: `${BASE_URL}/og-image.png`,
-  priceRange: "€€€",
   telephone: "+49 2151 4179902",
   email: "info@slt-tg.de",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Anrather Straße 291",
+    streetAddress: "Anrather Str. 291",
     addressLocality: "Krefeld",
     postalCode: "47807",
     addressRegion: "Nordrhein-Westfalen",
     addressCountry: "DE",
   },
-  geo: { "@type": "GeoCoordinates", latitude: "51.3388", longitude: "6.5853" },
-  areaServed: [
-    { "@type": "State", name: "Nordrhein-Westfalen" },
-    { "@type": "Country", name: "Deutschland" },
-    { "@type": "Country", name: "Europa" },
-  ],
+  areaServed: { "@type": "State", name: "Nordrhein-Westfalen" },
+  openingHoursSpecification: OPENING_HOURS,
   parentOrganization: ORG_REF,
 };
 
 const BONN_LOCAL_BUSINESS = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${BASE_URL}/#localbusiness-bonn`,
   name: "SLT Technology Group – Standort Bonn",
   description:
@@ -66,20 +67,28 @@ const BONN_LOCAL_BUSINESS = {
   email: "info@slt-tg.de",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Drachenburgstraße 8",
+    streetAddress: "Drachenburgstr. 8",
     addressLocality: "Bonn",
     postalCode: "53179",
     addressRegion: "Nordrhein-Westfalen",
     addressCountry: "DE",
   },
-  geo: { "@type": "GeoCoordinates", latitude: "50.7374", longitude: "7.0982" },
-  areaServed: [
-    { "@type": "City", name: "Bonn" },
-    { "@type": "City", name: "Köln" },
-    { "@type": "State", name: "Nordrhein-Westfalen" },
-  ],
+  areaServed: { "@type": "State", name: "Nordrhein-Westfalen" },
+  openingHoursSpecification: OPENING_HOURS,
   parentOrganization: ORG_REF,
 };
+
+export function buildGlobalSchemas(): object[] {
+  return [{
+    "@context": "https://schema.org", "@type": "Organization",
+    "@id": ORG_REF["@id"], name: ORG_NAME, url: BASE_URL, logo: LOGO,
+    sameAs: ["https://www.linkedin.com/company/slt-tg/", "https://www.instagram.com/slttechnologygroup/", "https://www.facebook.com/slt.tg/"],
+    subOrganization: [KREFELD_LOCAL_BUSINESS, BONN_LOCAL_BUSINESS],
+  }, {
+    "@context": "https://schema.org", "@type": "WebSite", "@id": `${BASE_URL}/#website`,
+    name: "SLT Technology Group", url: BASE_URL, publisher: ORG_REF, inLanguage: "de-DE",
+  }];
+}
 
 // ─────────────────────────────────────────────
 // Helper: BreadcrumbList
@@ -140,14 +149,7 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
     url: `${BASE_URL}${route.path}`,
   });
 
-  // LocalBusiness mit dem zuständigen Standort (aus den Stadt-Daten)
-  if (region) {
-    schemas.push({ ...(region.standort.name === "Bonn" ? BONN_LOCAL_BUSINESS : KREFELD_LOCAL_BUSINESS), "@type": ["LocalBusiness", "ProfessionalService"] });
-  } else if (route.city === "krefeld") {
-    schemas.push(KREFELD_LOCAL_BUSINESS);
-  } else if (route.city === "bonn") {
-    schemas.push(BONN_LOCAL_BUSINESS);
-  }
+  // Physical locations are defined once in the global organization.
 
   // FAQPage – aus den Stadt-Daten (ohne Platzhalter), NRW aus dem Override
   const faqs = region
@@ -163,34 +165,28 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
 // Article (Ratgeber + News)
 // ─────────────────────────────────────────────
 export function buildArticleSchemas(route: SeoRoute): object[] {
-  const isNews = route.routeType === "news";
-  const articleType = isNews ? "NewsArticle" : "Article";
-  const image = route.articleImage || route.ogImage || "/favicon.png";
+  const image = route.articleImage || route.ogImage;
 
   return [
     {
       "@context": "https://schema.org",
-      "@type": articleType,
+      "@type": "Article",
       headline: route.h1,
       description: route.description,
-      datePublished: route.articleDate || route.lastmod,
-      dateModified: route.lastmod || route.articleDate,
-      author: {
-        "@type": "Organization",
-        name: "SLT Technology Group",
-        url: `${BASE_URL}/ueber-uns`,
-      },
+      ...(route.articleDate ? { datePublished: route.articleDate } : {}),
+      ...(route.lastmod ? { dateModified: route.lastmod } : {}),
+      author: ORG_REF,
       publisher: {
         "@type": "Organization",
-        name: "SLT Technology Group",
-        logo: { "@type": "ImageObject", url: `${BASE_URL}/favicon.png` },
+        ...ORG_REF,
+        logo: { "@type": "ImageObject", url: LOGO },
       },
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${BASE_URL}${route.path}`,
       },
-      image: image.startsWith("http") ? image : `${BASE_URL}${image}`,
-      articleSection: route.articleCategory,
+      ...(image ? { image: image.startsWith("http") ? image : `${BASE_URL}${image}` } : {}),
+      ...(route.articleCategory ? { articleSection: route.articleCategory } : {}),
     },
     buildBreadcrumbList(route),
   ];
@@ -338,10 +334,13 @@ export function buildProjectDetailSchemas(project: Project): object[] {
     publisher: {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
-      name: "SLT Technology Group",
+      name: ORG_NAME,
       logo: { "@type": "ImageObject", url: `${BASE_URL}/favicon.png` },
     },
-    about: { "@type": "Thing", name: project.category },
+    about: [
+      { "@type": "Thing", name: project.category },
+      { "@type": "Organization", name: project.client },
+    ],
     mentions: project.tags.map((tag) => ({ "@type": "Thing", name: tag })),
     mainEntityOfPage: { "@type": "WebPage", "@id": projectUrl },
   };
@@ -467,12 +466,10 @@ export function buildVendorPartnerSchemas(route: SeoRoute): object[] {
 // ─────────────────────────────────────────────
 // Resolver
 // ─────────────────────────────────────────────
-export function resolveRouteSchemas(route: SeoRoute): object[] {
+function resolvePageSchemas(route: SeoRoute): object[] {
   switch (route.routeType) {
     case "home":
-      // Organization/WebSite stehen global in index.html,
-      // hier zusätzlich die beiden physischen Standorte als LocalBusiness
-      return [KREFELD_LOCAL_BUSINESS, BONN_LOCAL_BUSINESS];
+      return [buildFAQPageSchema(homeFaqs)];
     case "localseo":
       return buildLocalSeoSchemas(route);
     case "ratgeber": {
@@ -508,6 +505,12 @@ export function resolveRouteSchemas(route: SeoRoute): object[] {
     case "page":
     default:
       if (route.path === "/managed-services") return buildManagedServicesSchemas(route);
+      if (route.path === "/digital-signage") return [...buildPageSchemas(route), buildFAQPageSchema(digitalSignageFaqs)];
+      if (route.path === "/videokonferenzanlage") return [...buildPageSchemas(route), buildFAQPageSchema(videoConferenceFaqs)];
       return buildPageSchemas(route);
   }
+}
+
+export function resolveRouteSchemas(route: SeoRoute): object[] {
+  return [...buildGlobalSchemas(), ...resolvePageSchemas(route)];
 }

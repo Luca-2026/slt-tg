@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -100,6 +101,7 @@ const LocalSEOPage = ({ topicKey, cityKey }: LocalSEOPageProps) => {
 
 /** NRW-Seite: redaktioneller Override, keiner einzelnen Stadt zugeordnet. */
 const NrwFallback = ({ topicKey, cityKey }: LocalSEOPageProps) => {
+  const [openFaq, setOpenFaq] = useState("");
   const city = cities[cityKey];
   const topic = topics[topicKey];
   const override = getContentOverride(topicKey, cityKey);
@@ -169,11 +171,11 @@ const NrwFallback = ({ topicKey, cityKey }: LocalSEOPageProps) => {
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8 text-center">
               Häufige Fragen zu {topic.title} in {city.name}
             </h2>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible value={openFaq} onValueChange={setOpenFaq} className="w-full">
               {override.faqItems.map((faq, i) => (
                 <AccordionItem key={i} value={`faq-${i}`}>
                   <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+                  <AccordionContent forceMount hidden={openFaq !== `faq-${i}`} className="text-muted-foreground">{faq.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>

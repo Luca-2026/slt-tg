@@ -1,3 +1,4 @@
+import { digitalSignageFaqs as faqs } from "@/data/pageFaqs";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
@@ -105,33 +106,7 @@ const useCases = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Was macht einen guten Digital-Signage-Anbieter aus?",
-    answer:
-      "Displays kaufen kann jeder – entscheidend ist die Kombination aus Fachplanung, sauberer Netzwerk- und CMS-Integration, Montage im Bestand und einem verlässlichen Betriebskonzept. Genau diese Kette bilden wir als AV-Systemhaus vollständig ab, statt nur Hardware zu liefern.",
-  },
-  {
-    question: "Arbeitet SLT Technology Group herstellerneutral?",
-    answer:
-      "Ja. Wir wählen Displays, Player und CMS anhand Ihrer Anforderungen aus – Betrachtungsabstand, Betriebsstunden, Content-Art, IT-Vorgaben und vorhandene Systeme. Bestehende Lizenzen und Plattformen binden wir nach Möglichkeit ein.",
-  },
-  {
-    question: "Können mehrere Standorte zentral bespielt werden?",
-    answer:
-      "Ja. Standortübergreifende Ausspielung mit rollenbasierten Rechten und zentralem Monitoring ist der Regelfall bei Multi-Site-Projekten. Lokale Redaktionen können dabei eigene Inhalte innerhalb Ihrer Vorgaben pflegen.",
-  },
-  {
-    question: "Übernehmt ihr auch bestehende Digital-Signage-Anlagen?",
-    answer:
-      "Grundsätzlich ja. Wir nehmen den Bestand auf, prüfen Zustand, Lifecycle-Status und CMS-Anbindung und schlagen vor, was wirtschaftlich sinnvoll weiterbetrieben, migriert oder erneuert werden sollte.",
-  },
-  {
-    question: "Wie läuft ein Digital-Signage-Projekt bei euch ab?",
-    answer:
-      "Bedarfsaufnahme und Standortbegehung, Konzept mit Display-/Player-Auswahl und Netzwerkanforderungen, Abstimmung mit Ihrer IT, Montage und Inbetriebnahme, Einweisung der Redaktion – anschließend optional Service und Wartung.",
-  },
-];
+
 
 const DigitalSignage = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation({ threshold: 0.05 });

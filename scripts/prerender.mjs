@@ -85,12 +85,11 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
             if (!el) { el = document.createElement("link"); el.rel = "alternate"; el.hreflang = lang; document.head.append(el); }
             el.href = `${base}${route.path}`;
           }
-          document.querySelectorAll("script[data-route-schema]").forEach(el => el.remove());
-          for (const schema of schemas) {
-            const el = document.createElement("script"); el.type = "application/ld+json";
-            el.dataset.routeSchema = "true";
-            el.textContent = JSON.stringify(schema).replace(/</g, "\\u003c"); document.head.append(el);
-          }
+          document.querySelectorAll('script[type="application/ld+json"]').forEach(el => el.remove());
+          const el = document.createElement("script"); el.type = "application/ld+json";
+          el.id = "site-jsonld";
+          el.textContent = JSON.stringify(schemas).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+          document.head.append(el);
           document.querySelectorAll('link[rel="preload"][as="image"]').forEach(el => el.remove());
           // No root/content rewrites: reveal state and hotspot fallbacks belong to React.
           document.querySelectorAll("video, audio").forEach(el => el.pause());

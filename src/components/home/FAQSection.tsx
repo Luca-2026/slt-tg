@@ -1,3 +1,4 @@
+import { homeFaqs as faqs } from "@/data/pageFaqs";
 import { useState } from "react";
 import {
   Accordion,
@@ -7,41 +8,9 @@ import {
 } from "@/components/ui/accordion";
 import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const faqs = [
-  {
-    question: "Welche Leistungen bietet SLT an?",
-    answer:
-      "Wir bieten die komplette Bandbreite: Von der Bedarfsanalyse und Planung über die professionelle Installation und Integration bis hin zum laufenden Betrieb und Support. Unser Schwerpunkt liegt auf AV- & IT-Lösungen, Konferenz- und Medientechnik, IT-Netzwerktechnik, Digital Signage und Steuerungslösungen.",
-  },
-  {
-    question: "In welchem Gebiet sind Sie tätig?",
-    answer:
-      "Wir sind deutschlandweit und im europäischen Ausland tätig. Unser Hauptsitz ist in Krefeld, NRW. Wir betreuen Kunden aller Branchen und Größen.",
-  },
-  {
-    question: "Was kostet eine erste Beratung?",
-    answer:
-      "Das Erstgespräch zur Bedarfsanalyse ist kostenfrei. Erst wenn wir gemeinsam entscheiden, ein Projekt zu starten, erstellen wir ein transparentes Angebot ohne versteckte Kosten.",
-  },
-  {
-    question: "Wie lange dauert ein typisches Projekt?",
-    answer:
-      "Die Dauer hängt vom Projektumfang ab. Ein einzelner Konferenzraum kann in 4-8 Wochen umgesetzt werden, größere Rollouts benötigen entsprechend mehr Zeit. Im Erstgespräch erstellen wir einen realistischen Zeitplan.",
-  },
-  {
-    question: "Bieten Sie auch After-Sales Support?",
-    answer:
-      "Ja, unser Service Desk steht Ihnen nach der Installation zur Verfügung. Wir bieten proaktives Monitoring, regelmäßige Wartung, Updates und schnellen Support bei Problemen – damit Ihre Technik zuverlässig läuft.",
-  },
-  {
-    question: "Mit welchen Herstellern arbeiten Sie zusammen?",
-    answer:
-      "Wir arbeiten mit führenden Herstellern wie Crestron, Barco, Shure, Sennheiser, Samsung, iiyama, Nureva, Huddly und vielen weiteren zusammen. Wir beraten bedarfsgerecht und empfehlen die optimale Lösung für Ihre Anforderungen.",
-  },
-];
 
-// FAQPage-JSON-LD wird statisch via Prerender ausgeliefert (scripts/prerender.mjs).
-// Hier wird nur noch die sichtbare FAQ-UI gerendert – kein DOM-Schema-Inject mehr.
+
+// The visible UI and schema catalogue consume pageFaqs together.
 
 export function FAQSection() {
   const [openItem, setOpenItem] = useState("");

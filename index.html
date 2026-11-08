@@ -45,74 +45,7 @@
     <meta name="geo.region" content="DE-NW" />
     <meta name="geo.placename" content="Krefeld, Nordrhein-Westfalen" />
 
-    <!-- Globale Schemas: Organization + WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://www.slt-tg.de/#organization",
-      "name": "SLT Technology Group GmbH & Co. KG",
-      "alternateName": ["SLT Technology Group", "SLT AV", "SLT Technology"],
-      "disambiguatingDescription": "SLT Technology Group ist ein Enterprise-AV-Systemhaus für Konzerne und großen Mittelstand mit Standorten in Krefeld und Bonn. Nicht zu verwechseln mit SLT Rental (Baumaschinen- und Geräte-Vermietung) – wir sind ausschließlich auf AV-Systemintegration, Konferenz- und Medientechnik sowie IT-Infrastruktur spezialisiert.",
-      "url": "https://www.slt-tg.de",
-      "logo": "https://www.slt-tg.de/favicon.png",
-      "image": "https://www.slt-tg.de/og-image.png",
-      "telephone": "+49 2151 4179902",
-      "email": "info@slt-tg.de",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Anrather Straße 291",
-        "addressLocality": "Krefeld",
-        "postalCode": "47807",
-        "addressRegion": "Nordrhein-Westfalen",
-        "addressCountry": "DE"
-      },
-      "founder": { "@type": "Person", "name": "Benedikt Nöchel", "jobTitle": "Geschäftsführer" },
-
-      "sameAs": [
-        "https://www.linkedin.com/company/slt-tg/",
-        "https://www.instagram.com/slttechnologygroup/",
-        "https://www.facebook.com/slt.tg/"
-      ],
-      "knowsAbout": [
-        "AV-Installation",
-        "Medientechnik Integration",
-        "Videokonferenzsysteme",
-        "Konferenztechnik",
-        "Digital Signage",
-        "Steuerung und Signalmanagement",
-        "IT-Netzwerktechnik",
-        "Lautsprechersysteme"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Leistungen",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation & Integration", "description": "Professionelle Installation und Integration von AV- und Konferenztechnik" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fachplanung & Beratung", "description": "Bedarfsgerechte Konzepte und Planungen für Konferenzräume" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service & Support", "description": "After-Sales Support, Service Desk und proaktives Monitoring" } }
-        ]
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://www.slt-tg.de/#website",
-      "name": "SLT Technology Group",
-      "url": "https://www.slt-tg.de",
-      "publisher": { "@id": "https://www.slt-tg.de/#organization" },
-      "inLanguage": "de-DE",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.slt-tg.de/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- PRERENDER: Route-spezifische JSON-LD-Schemas werden hier injiziert -->
+    <!-- JSON-LD is supplied by the shared catalogue in browser and static export. -->
     <!--PRERENDER:JSONLD-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

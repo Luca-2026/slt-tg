@@ -1,5 +1,10 @@
 # Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
 
+## JSON-LD (08.11.2026)
+- [x] Wiederverwendbare Ausgabe für globale Organisation, Standorte und route-spezifische Schemas ohne Duplikate.
+- [x] FAQ-Daten gemeinsam nutzen; Artikel, Referenzen und Unterseiten-Breadcrumbs prüfen.
+- [x] 64 Tests bestanden; 89 Browserseiten und 89 Vorschau-Snapshots geprüft (0 % Textabweichung); beide JSON-LD-Beispiele bereitgestellt. Kein Produktionsbuild oder Upload.
+
 ## Neue Regionalredaktion (hochgeladene finale JSON-Dateien)
 - [x] Sieben Dateien unverändert übernehmen und 35 redaktionelle Seiten rendern.
 - [x] Satz-/Komma-Metadaten, Standort-/Service-/FAQ-/Breadcrumb-Schemas aktualisieren.

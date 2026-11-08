@@ -23,10 +23,14 @@ export function inspectRegionalSnapshot({ region, key }) {
   const allText = normalize(main.textContent);
   for (const item of region.quellen ?? []) if (allText.includes(item.fakt)) violations.push("Private source leaked into HTML");
   for (const service of Object.values(region.leistungen)) if (service.pruefen && html.includes(service.pruefen)) violations.push("Private review note leaked into HTML");
-  const schemaTypes = [...document.querySelectorAll('script[type="application/ld+json"]')].flatMap(el => {
-    const data = JSON.parse(el.textContent || "{}");
-    return [data, ...(data["@graph"] ?? [])].flatMap(item => [item["@type"] ?? []].flat());
-  });
+  const typesOf = data => {
+    if (Array.isArray(data)) return data.flatMap(typesOf);
+    if (!data || typeof data !== "object") return [];
+    return [data["@type"] ?? []].flat().concat(Object.entries(data)
+      .filter(([key]) => key !== "@type").flatMap(([, value]) => typesOf(value)));
+  };
+  const schemaTypes = [...document.querySelectorAll('script[type="application/ld+json"]')]
+    .flatMap(el => typesOf(JSON.parse(el.textContent || "{}")));
   for (const type of ["Service", "LocalBusiness", "FAQPage", "BreadcrumbList"]) if (!schemaTypes.includes(type)) violations.push(`Missing schema type: ${type}`);
   const visibleText = main.innerText.replace(/\s+/g, " ").trim();
   return { violations, visibleWords: visibleText.split(/\s+/).filter(Boolean).length, faqCount: faqs.length,

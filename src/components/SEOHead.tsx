@@ -81,10 +81,7 @@ export function SEOHead({
       document.head.appendChild(hreflangDefault);
     }
 
-    // JSON-LD wird statisch via Prerender ausgeliefert (siehe scripts/prerender.mjs).
-    // Hier KEIN dynamisches Schema-Injecten mehr, um Doppelausgabe nach Hydration
-    // zu vermeiden. Title/Meta/OG/Canonical werden weiterhin live gesetzt, damit
-    // dynamische Seiten nach Hydration korrekt ausgezeichnet bleiben.
+    // JSON-LD is owned by Layout's JsonLd and the shared export catalogue.
   }, [fullTitle, description, fullCanonical, fullOgImage, type, structuredData, robots]);
 
   return null;
