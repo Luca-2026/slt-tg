@@ -29,6 +29,8 @@ export async function checkExport({ directory = path.resolve("dist"), report = p
     try {
       const mime = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "application/javascript", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".svg": "image/svg+xml", ".woff2": "font/woff2" };
       res.setHeader("Content-Type", mime[path.extname(absolute)] ?? "application/octet-stream");
+      // Model Apache ErrorDocument delivery; production status is tested separately against Apache.
+      if (pathname === "/404.html") res.statusCode = 404;
       res.end(await readFile(absolute));
     } catch { res.writeHead(404); res.end(); }
   });
@@ -44,11 +46,11 @@ export async function checkExport({ directory = path.resolve("dist"), report = p
       const page = await context.newPage();
       try {
         const response = await page.goto(`http://127.0.0.1:${address.port}${routePath}`, { waitUntil: "networkidle" });
-        if (!response?.ok()) throw new Error("Missing exported HTML");
+        if (!response || (!response.ok() && !(routePath === "/404.html" && response.status() === 404))) throw new Error("Missing exported HTML");
         const route = ALL_ROUTES.find(r => r.path === routePath);
         const expectsFaq = route ? resolveRouteSchemas(route).some(schema => schema["@type"] === "FAQPage") : false;
         const visibleText = await page.evaluate(visibleMainText);
-        rows.push(await page.evaluate(inspectPostbuildPage, { path: routePath, visibleText, expectsFaq }));
+        rows.push(await page.evaluate(inspectPostbuildPage, { path: routePath, visibleText, expectsFaq, status: response.status() }));
       } catch (error) { rows.push({ path: routePath, violations: [error.message] }); }
       finally { await page.close(); }
     }

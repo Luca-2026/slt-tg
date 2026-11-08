@@ -3,7 +3,10 @@
 ## Post-Build & Serverprofis-Upload
 - [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
 - [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
-- [ ] Produktions-Upload-Paket: blockiert durch 41 Inhaltsseiten unter 300 sichtbaren Wörtern sowie 404 (15 Wörter, kein Canonical). Unveränderliche regionale Redaktion darf nicht eigenmächtig aufgefüllt werden; Freigabe für redaktionelle Ergänzungen oder explizite Regelausnahmen erforderlich.
+- [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.
+- [x] Inhaltsarbeit anhand des Prüfberichts gebündelt: 24 finale Stadttexte benötigen jeweils 6–53 zusätzliche Wörter; 17 weitere Seiten umfassen Kontakt/Anfrage (2), Karriere (4), Ratgeberübersicht (1), News (3), Partner (5), NRW (1), Impressum (1).
+- [ ] Inhaltserweiterung: ausdrückliche Freigabe für Zusätze zur unveränderlichen Regionalredaktion fehlt; konkrete neue Unternehmens-/Personal-/Rechtsangaben dürfen nicht erfunden werden.
+- [ ] Produktions-Upload-Paket: bleibt bis zur geprüften Inhaltserweiterung blockiert; kein künstliches Auffüllen und kein eigenmächtiges Ändern der finalen Regionalredaktion.
 
 ## JSON-LD (08.11.2026)
 - [x] Wiederverwendbare Ausgabe für globale Organisation, Standorte und route-spezifische Schemas ohne Duplikate.

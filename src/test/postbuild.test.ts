@@ -18,6 +18,15 @@ describe("Mandatory postbuild rules", () => {
     expect(check({ words: 299 }).violations.join()).toContain("required at least 300");
     expect(check({ words: 300 }).violations).toEqual([]);
   });
+  it("allows a short 404 without canonical only with HTTP 404 and noindex", () => {
+    document.head.innerHTML = '<meta name="robots" content="noindex, nofollow">';
+    document.body.innerHTML = '<main><h1>Seite nicht gefunden</h1></main>';
+    const input = { path: "/404.html", visibleText: "Seite nicht gefunden", status: 404 };
+    expect(inspectPostbuildPage(input).violations).toEqual([]);
+    expect(inspectPostbuildPage({ ...input, status: 200 }).violations.join()).toContain("required 404");
+    document.head.innerHTML = '';
+    expect(inspectPostbuildPage(input).violations.join()).toContain("requires noindex");
+  });
   it("rejects duplicate hero sections", () => {
     expect(check({ sections: '<section data-hero></section><section data-hero></section>' }).violations.join()).toContain("Duplicate hero sections: 2");
   });
