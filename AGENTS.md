@@ -23,3 +23,4 @@
 - Manufacturer certification claims come only from src/data/certifications.ts; unconfirmed vendors are labeled "Erfahrung mit", never "zertifiziert".
 - Job-specific editorial context belongs to the shared job catalogue and is included in both visible profiles and JobPosting descriptions to prevent content drift.
 - Public legal identifiers live in the legal identity catalogue and have exact-value tests, so supplied company identifiers cannot silently drift.
+- CV storage keys use random UUIDs and MIME-derived extensions, never applicant or original file names, to support Unicode names without exposing them in object keys.

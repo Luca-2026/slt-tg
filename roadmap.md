@@ -47,3 +47,7 @@
 
 ## Offen (Kunde liefert nach)
 - GBP Krefeld (Platzhalter in Krefeld, Essen, Duisburg, Mönchengladbach), Zertifizierungs-Bezeichnungen + Jahre, Poly/Logitech-Bestätigung
+
+## Teamname und Bewerbungsupload (08.11.2026)
+- [x] Maibrit Breuer in Maibrit Sandhoff geändert; bestehende E-Mail unverändert, Vorschau geprüft.
+- [x] Lebenslauf-Upload mit UUID/MIME-Endung unabhängig von Umlauten und Sonderzeichen; 5 Tests bestanden. Alle drei Bewerbungsformulare in der Vorschau mit Jörg/Müller und Umlaut-PDF geprüft: Upload 200, Speicherung 201, E-Mail-Annahme 200, Bestätigung sichtbar. Kein neuer Produktionsexport/FTP-Upload; tatsächlicher Posteingang nicht geprüft.

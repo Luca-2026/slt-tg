@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, FileText, Upload, X } from "lucide-react";
 import type { JobPosition } from "@/data/jobs";
+import { createCvUploadPath } from "@/lib/cv-upload";
 
 interface Props {
   job: JobPosition;
@@ -69,8 +70,7 @@ export function JobApplicationForm({ job }: Props) {
     try {
       let cvPath: string | null = null;
       if (cvFile) {
-        const fileExt = cvFile.name.split(".").pop();
-        const filePath = `${Date.now()}-${firstName}-${lastName}.${fileExt}`;
+        const filePath = createCvUploadPath(cvFile);
         const { error: uploadError } = await supabase.storage
           .from("cv-uploads")
           .upload(filePath, cvFile);

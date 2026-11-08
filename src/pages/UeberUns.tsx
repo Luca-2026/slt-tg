@@ -59,7 +59,7 @@ const timeline = [
 const teamMembers = [
   { name: "Benedikt Nöchel", role: "Projektleitung & Vertrieb", image: "/assets/team/benedikt-noechel.jpg", email: "b.noechel@slt-tg.de" },
   
-  { name: "Maibrit Breuer", role: "Marketing & Design", image: null, email: "m.breuer@slt-tg.de" },
+  { name: "Maibrit Sandhoff", role: "Marketing & Design", image: null, email: "m.breuer@slt-tg.de" },
   { name: "Juno", role: "Feel Good Manager 🐾", image: "/assets/team/juno.png", email: null },
   { name: "Andreas Scherzow", role: "Logistik & Lager", image: null, email: "a.scherzow@slt-tg.de" },
   
