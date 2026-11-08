@@ -21,3 +21,4 @@
 - Regional metadata reads the required service-specific description field verbatim from each city JSON; missing or invalid descriptions throw during catalogue loading and block builds, with no derived fallback.
 - Strip private regional JSON fields before Vite JSON transformation so research and review notes stay source-only, including in browser assets.
 - Manufacturer certification claims come only from src/data/certifications.ts; unconfirmed vendors are labeled "Erfahrung mit", never "zertifiziert".
+- Job-specific editorial context belongs to the shared job catalogue and is included in both visible profiles and JobPosting descriptions to prevent content drift.

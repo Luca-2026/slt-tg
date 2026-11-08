@@ -80,6 +80,10 @@ export default function JobPage() {
         <div className="grid lg:grid-cols-[1fr,400px] gap-10">
           <article className="space-y-8">
             <p className="text-lg text-foreground/90 leading-relaxed">{job.description}</p>
+            {job.roleContext && <div>
+              <h2 className="text-xl font-bold text-foreground mb-3">Dein beruflicher Schwerpunkt</h2>
+              <p className="text-muted-foreground leading-relaxed">{job.roleContext}</p>
+            </div>}
 
             <div>
               <h2 className="text-xl font-bold text-foreground mb-3">Deine Aufgaben</h2>
@@ -120,6 +124,7 @@ export default function JobPage() {
             )}
 
             <div className="pt-4 text-sm text-muted-foreground">
+              <p className="mb-3">Wir sichten deine Bewerbungsunterlagen und melden uns anschließend bei dir zurück.</p>
               <p>
                 Bewerbungen bitte über das Formular oder per E-Mail an{" "}
                 <a

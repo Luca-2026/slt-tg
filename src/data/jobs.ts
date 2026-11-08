@@ -70,6 +70,8 @@ export interface JobPosition {
   experienceRequirementsMonths?: number;
   /** Kurzer Pitch oben auf der Seite (1–2 Sätze) */
   description: string;
+  /** Editorial context derived from the published tasks and requirements. */
+  roleContext?: string;
   /** Aufgaben (Bullet Points) */
   tasks: string[];
   /** Anforderungen (Bullet Points) */
@@ -129,6 +131,7 @@ export const JOBS: JobPosition[] = [
       "Unterstützung bei Projekten und Events",
       "Nutzung moderner KI-Tools zur Optimierung kaufmännischer Prozesse",
     ],
+    roleContext: "In dieser Ausbildung verbindet sich kaufmännische Organisation mit dem Umfeld eines AV- und IT-Systemhauses. Die veröffentlichten Aufgaben reichen von Terminplanung und Kundenkommunikation bis zu Rechnungswesen und Auftragsbearbeitung. Auch die Unterstützung bei Projekten und Events gehört zum Aufgabenprofil. Digitale Werkzeuge und KI-gestützte Arbeitsmethoden sind dabei Teil der beschriebenen Ausrichtung. Für den Einstieg sind deshalb sowohl Interesse an organisatorischen Abläufen als auch ein sicherer Umgang mit MS Office relevant. Gute Deutsch- und Englischkenntnisse unterstützen die Kommunikation. Die Ausbildung ist für Krefeld oder Bonn ausgeschrieben. Der Beginn ist der 01.08.2027; die konkreten Anforderungen und angebotenen Rahmenbedingungen findest du in den folgenden Abschnitten.",
     requirements: [
       "Mittlere Reife oder (Fach-)Abitur",
       "Organisationstalent und Eigeninitiative",
@@ -170,6 +173,7 @@ export const JOBS: JobPosition[] = [
       "Technischer Support und Inbetriebnahme",
       "Mitarbeit bei Kundenprojekten vor Ort",
     ],
+    roleContext: "Der Schwerpunkt dieser Ausbildung liegt auf AV-Systemintegration: Professionelle Bild-, Ton- und Konferenztechnik wird als zusammenhängende Lösung betrachtet. Zum veröffentlichten Aufgabenprofil gehören Planung, Installation und Konfiguration ebenso wie technischer Support und Inbetriebnahme. Die Mitarbeit bei realen Kundenprojekten verbindet technische Grundlagen mit der praktischen Umsetzung vor Ort. Interesse an Technik, handwerkliches Geschick und zuverlässige Zusammenarbeit im Team sind deshalb wichtige Voraussetzungen. Du arbeitest im Umfeld von Herstellern wie Crestron, Shure, Sennheiser und Yealink. Die Ausbildung ist für den Standort Krefeld ausgeschrieben und beginnt am 01.08.2027. Ein Führerschein der Klasse B ist von Vorteil, wird im Anforderungsprofil aber nicht als zwingende Voraussetzung genannt.",
     requirements: [
       "Mittlere Reife oder (Fach-)Abitur",
       "Technisches Verständnis und handwerkliches Geschick",
@@ -216,6 +220,7 @@ export const JOBS: JobPosition[] = [
       "Fehlerdiagnose und technischer Support",
       "Dokumentation und Kundeneinweisung",
     ],
+    roleContext: "Diese Stelle verbindet die praktische Installation mit der Konfiguration und Inbetriebnahme von AV- und UC-Systemen. Im Mittelpunkt stehen Videokonferenzräume, darunter Microsoft Teams Rooms und Zoom Rooms, sowie die Abstimmung der eingesetzten Komponenten. Fehlerdiagnose und technischer Support gehören ebenso zum Aufgabenprofil wie Dokumentation und Kundeneinweisung. Kenntnisse in IP-Netzwerken und VLANs sind relevant, weil Konferenztechnik mit der vorhandenen IT zusammenarbeitet. Gesucht wird eine Person mit abgeschlossener einschlägiger oder vergleichbarer Ausbildung und Erfahrung mit Herstellern wie Crestron, Extron, Shure oder Sennheiser. Der Einsatzort ist Krefeld, der Einstieg ab sofort vorgesehen. Für diese Stelle ist ein Führerschein der Klasse B erforderlich.",
     requirements: [
       "Abgeschlossene Ausbildung im Bereich Medientechnik oder vergleichbar",
       "Erfahrung mit Crestron, Extron, Shure, Sennheiser o. ä.",
@@ -254,10 +259,12 @@ export function buildJobDescriptionHtml(job: JobPosition): string {
 
   return [
     `<p>${job.description}</p>`,
+    ...(job.roleContext ? [`<p>${job.roleContext}</p>`] : []),
     `<p>Einsatzort: ${job.locationLabel}. Beschäftigungsart: ${job.employmentTypeLabel}. ${job.startLabel}.</p>`,
     `<p>Deine Aufgaben:</p><ul>${tasks}</ul>`,
     `<p>Das bringst du mit:</p><ul>${reqs}</ul>`,
     offer,
+    `<p>Wir sichten deine Bewerbungsunterlagen und melden uns anschließend bei dir zurück.</p>`,
     `<p>Bewirb dich direkt online über unser Bewerbungsformular oder per E-Mail an karriere@slt-tg.de. Wir freuen uns auf deine Bewerbung!</p>`,
   ].join("");
 }

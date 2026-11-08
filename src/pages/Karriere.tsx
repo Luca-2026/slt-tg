@@ -182,6 +182,30 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
+      <section className="py-12 sm:py-16">
+        <div className="section-container max-w-3xl">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Technik und Organisation im selben Team</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Unsere ausgeschriebenen Stellen zeigen zwei Seiten eines AV- und IT-Systemhauses:
+            die technische Umsetzung beim Kunden und die kaufmännische Organisation dahinter.
+            Im Büromanagement gehören Terminplanung, Kundenkommunikation und Auftragsbearbeitung
+            zum Profil. Die Ausbildung in Veranstaltungstechnik konzentriert sich auf
+            AV-Systemintegration, Installation und Konfiguration. Als Medientechniker liegt dein
+            Schwerpunkt auf Inbetriebnahme, Fehlerdiagnose und Dokumentation. Welche Voraussetzungen
+            und Rahmenbedingungen für dich gelten, ist in der jeweiligen Stellenanzeige beschrieben.
+            Beide Ausbildungen starten am 01.08.2027. Die technischen Positionen sind für Krefeld
+            ausgeschrieben, Büromanagement für Krefeld oder Bonn.
+          </p>
+          <h2 className="text-2xl font-bold text-foreground mb-4">Nach deiner Bewerbung</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Wir sichten deine Bewerbungsunterlagen und melden uns anschließend bei dir zurück.
+            Deine Bewerbung kannst du über das jeweilige Stellenformular oder per E-Mail an
+            karriere@slt-tg.de einreichen.
+          </p>
+        </div>
+      </section>
+
+      {/* Benefits */}
       <section ref={benefitsRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 ${scrollReveal(benefitsVisible)}`}>
         <div className="section-container">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">

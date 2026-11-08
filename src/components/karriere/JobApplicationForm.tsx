@@ -205,7 +205,7 @@ export function JobApplicationForm({ job }: Props) {
         <Input
           id="startDate"
           name="startDate"
-          placeholder={job.isAzubi ? "z. B. 01.08.2026" : "z. B. ab sofort oder Datum"}
+          placeholder={job.isAzubi ? job.startLabel.replace("Ausbildungsbeginn: ", "z. B. ") : "z. B. ab sofort oder Datum"}
         />
       </div>
 
