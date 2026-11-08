@@ -1,13 +1,4 @@
-/**
- * Datengetriebenes Regional-Template (eine JSON-Datei pro Stadt).
- *
- * Regeln (Vorgabe 08.11.2026):
- * - Das Template rendert nur Abschnitte mit Inhalt (keine Platzhalter, keine Füllsätze).
- * - Referenzen mit freigabe=false werden nicht gerendert.
- * - Pro Leistung werden nur Referenzen angezeigt, deren leistung passt.
- * - Offene Felder (Platzhalter in den JSON-Daten) werden nicht gerendert,
- *   sondern in OPEN_FIELDS gesammelt und dem Kunden gemeldet.
- */
+/// <reference lib="es2022.intl" />
 import koeln from "./koeln.json";
 import duesseldorf from "./duesseldorf.json";
 import bonn from "./bonn.json";
@@ -15,149 +6,95 @@ import krefeld from "./krefeld.json";
 import essen from "./essen.json";
 import duisburg from "./duisburg.json";
 import moenchengladbach from "./moenchengladbach.json";
+import descriptions from "./descriptions.json";
 
+export const SERVICE_NAMES = {
+  medientechnik: "Medientechnik", konferenztechnik: "Konferenztechnik",
+  videokonferenz: "Videokonferenz", "it-netzwerk": "IT-Netzwerk", "digital-signage": "Digital Signage",
+} as const;
+export type ServiceKey = keyof typeof SERVICE_NAMES;
+export interface RegionFaq { frage: string; antwort: string }
+export interface RegionService {
+  einleitung?: string; anforderungen_titel?: string; anforderungen?: string;
+  arbeitsweise?: string; faq?: RegionFaq[]; pruefen?: string;
+}
 export interface RegionReferenz {
-  name: string;
-  leistung: string;
-  detail: string;
-  ort: string;
-  freigabe: boolean;
-  url?: string;
+  name: string; leistung: string[]; beschreibung: string; ort: string; freigabe: boolean; url?: string;
 }
-
-export interface RegionFaq {
-  question: string;
-  answer: string;
-}
-
 export interface Region {
-  stadt: string;
-  slug: string;
-  standort: string;
-  fahrzeit: string;
-  ansprechpartner: string;
-  gbpUrl: string | null;
-  intro: string;
-  referenzen: RegionReferenz[];
-  branchen: string[];
-  ausschluesse: string[];
-  faq: RegionFaq[];
+  stadt: string; slug: string; standort: { name: string; zusatz: string };
+  fahrzeit: string; ansprechpartner: { name: string; funktion: string };
+  gbpUrl: string | null; quellen: { fakt: string; url: string }[];
+  referenzen: RegionReferenz[]; leistungen: Partial<Record<ServiceKey, RegionService>>;
 }
-
-export const REGIONEN: Record<string, Region> = {
-  koeln: koeln as Region,
-  duesseldorf: duesseldorf as Region,
-  bonn: bonn as Region,
-  krefeld: krefeld as Region,
-  essen: essen as Region,
-  duisburg: duisburg as Region,
-  moenchengladbach: moenchengladbach as Region,
-};
-
-export function getRegion(slug: string): Region | undefined {
-  return REGIONEN[slug];
-}
-
-/** Marker für vom Kunden noch zu liefernde Inhalte. */
-const PLACEHOLDER_PATTERN = /^\[.*EINTRAGEN.*\]$|^<.*>$/;
-
+export const REGIONEN: Record<string, Region> = { koeln, duesseldorf, bonn, krefeld, essen, duisburg, moenchengladbach };
+export const REGIONAL_MODIFIED = "2026-11-08";
+export function getRegion(slug: string): Region | undefined { return REGIONEN[slug]; }
+export function isServiceKey(key: string): key is ServiceKey { return key in SERVICE_NAMES; }
 export function isPlaceholder(value: string | null | undefined): boolean {
-  if (!value) return false;
-  return PLACEHOLDER_PATTERN.test(value.trim());
+  return !!value && (value.trim().startsWith("<") || /\[.*EINTRAGEN.*\]/.test(value));
 }
-
-/** FAQ-Einträge ohne Platzhalter-Antworten (Platzhalter werden nicht gerendert). */
-export function visibleFaqs(region: Region): RegionFaq[] {
-  return region.faq.filter((item) => !isPlaceholder(item.answer));
+export function visibleFaqs(region: Region, key: string): RegionFaq[] {
+  if (!isServiceKey(key)) return [];
+  return (region.leistungen[key]?.faq ?? []).filter(faq => faq.frage && faq.antwort && !isPlaceholder(faq.antwort));
 }
-
-/** Freigegebene Referenzen, gefiltert auf die angefragte Leistung. */
-export function referenzenFuerLeistung(region: Region, leistung: string): RegionReferenz[] {
-  return region.referenzen.filter(
-    (ref) => ref.freigabe && ref.leistung.toLowerCase().includes(leistung.toLowerCase()),
-  );
+export function referenzenFuerLeistung(region: Region, key: string): RegionReferenz[] {
+  return region.referenzen.filter(ref => ref.freigabe === true && ref.leistung.includes(key));
 }
-
-/**
- * Offene Felder, die der Kunde nachliefern muss.
- * Wird nach dem Build im Report ausgegeben.
- */
-export interface OpenField {
-  stadt: string;
-  feld: string;
-  hinweis: string;
+export function sentences(text: string): string[] {
+  return Array.from(new Intl.Segmenter("de", { granularity: "sentence" }).segment(text), part => part.segment.trim()).filter(Boolean);
 }
-
-export const OPEN_FIELDS: OpenField[] = Object.values(REGIONEN).flatMap((region) => {
-  const fields: OpenField[] = [];
-  if (!region.gbpUrl) {
-    fields.push({
-      stadt: region.stadt,
-      feld: "gbpUrl",
-      hinweis: "Google-Business-Profil-URL für den zuständigen Standort (<GBP Krefeld>) fehlt",
-    });
-  }
-  for (const item of region.faq) {
-    if (isPlaceholder(item.answer)) {
-      fields.push({
-        stadt: region.stadt,
-        feld: `faq: ${item.question}`,
-        hinweis: `Antwort offen (${item.answer}) – Frage wird bis dahin nicht gerendert`,
-      });
+export function sentenceSimilarity(a: string, b: string): number {
+  const normalize = (text: string) => sentences(text).map(s => s.toLocaleLowerCase("de").replace(/\s+/g, " ").trim());
+  const first = new Set(normalize(a)), second = new Set(normalize(b));
+  if (!first.size || !second.size) return 0;
+  return [...first].filter(s => second.has(s)).length / Math.min(first.size, second.size);
+}
+export function regionDescription(region: Region, key: ServiceKey): { text: string; pending: boolean } {
+  const override = (descriptions as Record<string, string>)[`/${key}/${region.slug}`];
+  if (override) return { text: override, pending: override.length < 120 || override.length > 155 || /!|…|\.\.\./.test(override) };
+  const intro = region.leistungen[key]?.einleitung ?? "";
+  const first = sentences(intro)[0] ?? "";
+  let text = "";
+  if (first.length > 155) {
+    const comma = first.lastIndexOf(",", 149);
+    if (comma >= 0) text = first.slice(0, comma).trim() + ".";
+  } else {
+    for (const sentence of sentences(intro)) {
+      const candidate = text ? `${text} ${sentence}` : sentence;
+      if (candidate.length > 155) break;
+      text = candidate;
+      if (text.length >= 120) break;
     }
+  }
+  return { text, pending: text.length < 120 || text.length > 155 };
+}
+export const OPEN_FIELDS = Object.values(REGIONEN).flatMap(region => {
+  const fields: { stadt: string; feld: string; hinweis: string }[] = [];
+  if (isPlaceholder(region.gbpUrl)) fields.push({ stadt: region.stadt, feld: "gbpUrl", hinweis: "Google-Unternehmensprofil fehlt" });
+  for (const key of Object.keys(SERVICE_NAMES) as ServiceKey[]) {
+    if (regionDescription(region, key).pending) fields.push({ stadt: region.stadt, feld: `/${key}/${region.slug}`, hinweis: "Separate Description mit 120–155 Zeichen vom Nutzer erforderlich" });
   }
   return fields;
 });
-
-/**
- * Zusammengefügter sichtbarer Text einer Regional-Seite (pro Leistung).
- * Grundlage für den 30-%-Ähnlichkeitstest zwischen zwei Städten.
- */
-export function regionPageText(region: Region, leistung: string): string {
-  const parts: string[] = [
-    `${leistung} ${region.stadt}`,
-    region.intro,
-    region.standort,
-    region.fahrzeit,
-    region.ansprechpartner,
-  ];
-  for (const ref of referenzenFuerLeistung(region, leistung)) {
-    parts.push(ref.name, ref.leistung, ref.detail, ref.ort);
+export function regionalDataViolations(): string[] {
+  const violations: string[] = [];
+  const regions = Object.values(REGIONEN);
+  for (const key of Object.keys(SERVICE_NAMES) as ServiceKey[]) {
+    for (const region of regions) {
+      const content = region.leistungen[key];
+      const route = `/${key}/${region.slug}`;
+      if (!content?.einleitung || !content.anforderungen || visibleFaqs(region, key).length < 2) violations.push(`${route}: required editorial content missing`);
+      const metadata = regionDescription(region, key);
+      if (metadata.pending) violations.push(`${route}: separate 120–155 character description required`);
+      if (`${SERVICE_NAMES[key]} ${region.stadt} | SLT Technology Group`.length > 64) violations.push(`${route}: title exceeds 64 characters`);
+      const publicText = JSON.stringify({ einleitung: content?.einleitung, anforderungen: content?.anforderungen, arbeitsweise: content?.arbeitsweise, faq: visibleFaqs(region, key), refs: referenzenFuerLeistung(region, key), description: metadata.text });
+      if (/Luca|Sandhoff|<GBP|\[REAKTIONSZEIT/i.test(publicText)) violations.push(`${route}: forbidden public content`);
+    }
+    for (let i = 0; i < regions.length; i++) for (let j = i + 1; j < regions.length; j++) {
+      const a = regions[i].leistungen[key], b = regions[j].leistungen[key];
+      if (sentenceSimilarity(`${a?.einleitung ?? ""} ${a?.anforderungen ?? ""}`, `${b?.einleitung ?? ""} ${b?.anforderungen ?? ""}`) > 0.2) violations.push(`${key}: ${regions[i].slug}/${regions[j].slug} share more than 20% identical sentences`);
+    }
   }
-  parts.push(...region.branchen, ...region.ausschluesse);
-  for (const item of visibleFaqs(region)) {
-    parts.push(item.question, item.answer);
-  }
-  return parts.join(" ");
-}
-
-/**
- * Ähnlichkeit zweier Texte als Containment von Wort-5-Grammen:
- * Anteil der 5-Gramm-Folgen des kürzeren Textes, die auch im längeren vorkommen.
- * Stadt- und Leistungsnamen werden vorab neutralisiert, damit allein der
- * Wechsel des Ortsnamens keine künstliche Ähnlichkeit erzeugt.
- */
-export function textSimilarity(textA: string, textB: string): number {
-  const normalize = (text: string) =>
-    text
-      .toLowerCase()
-      .replace(/[^a-zäöüß0-9\s]/g, " ")
-      .split(/\s+/)
-      .filter(Boolean);
-  const wordsA = normalize(textA);
-  const wordsB = normalize(textB);
-  if (wordsA.length < 5 || wordsB.length < 5) return 0;
-  const shingles = (words: string[]) => {
-    const set = new Set<string>();
-    for (let i = 0; i + 5 <= words.length; i++) set.add(words.slice(i, i + 5).join(" "));
-    return set;
-  };
-  const setA = shingles(wordsA);
-  const setB = shingles(wordsB);
-  const smaller = setA.size <= setB.size ? setA : setB;
-  const larger = setA.size <= setB.size ? setB : setA;
-  if (smaller.size === 0) return 0;
-  let shared = 0;
-  for (const shingle of smaller) if (larger.has(shingle)) shared++;
-  return shared / smaller.size;
+  return violations;
 }

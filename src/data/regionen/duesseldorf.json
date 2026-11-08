@@ -1,56 +1,81 @@
 {
   "stadt": "Düsseldorf",
   "slug": "duesseldorf",
-  "standort": "Krefeld",
+  "standort": { "name": "Krefeld", "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld" },
   "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
-  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
   "gbpUrl": null,
-  "intro": "Düsseldorf erreichen wir von unserem Hauptsitz in Krefeld aus in rund 25–35 Minuten. In der Landeshauptstadt haben wir WLAN-Infrastruktur für die Boston Consulting Group und Capgemini umgesetzt sowie Licht-, Ton- und Signage-Technik für das Lakis an der Königsallee installiert. Ihr Ansprechpartner für Düsseldorf: Benedikt Nöchel, Geschäftsführung.",
-  "referenzen": [
-    {
-      "name": "Boston Consulting Group",
-      "leistung": "IT-Netzwerk",
-      "detail": "WLAN-Infrastruktur",
-      "ort": "Düsseldorf",
-      "freigabe": true
-    },
-    {
-      "name": "Capgemini",
-      "leistung": "IT-Netzwerk",
-      "detail": "WLAN-Infrastruktur und WLAN-Ausleuchtung",
-      "ort": "Düsseldorf und Ratingen",
-      "freigabe": true
-    },
-    {
-      "name": "Lakis Restaurant & Gastronomie",
-      "leistung": "Digital Signage und Medientechnik",
-      "detail": "Innenbeleuchtung und Lichtsteuerung, Licht- und Tontechnik, Digital Signage",
-      "ort": "Königsallee Düsseldorf",
-      "freigabe": true
-    },
-    {
-      "name": "Aluminium Norf",
-      "leistung": "Konferenztechnik",
-      "detail": "Boardroom und Schulungsraum mit Shure, Nureva und AVer",
-      "ort": "Neuss",
-      "freigabe": true,
-      "url": "/projekte/aluminium-norf"
-    }
+  "quellen": [
+    { "fakt": "Mehr als 650 japanische Unternehmen in NRW mit rund 81.000 Beschäftigten; Düsseldorf beheimatet eine der größten japanischen Gemeinden Europas", "url": "https://www.land.nrw/startseite/japan-tag-2026-feiert-duesseldorf-jahrzehntelange-freundschaft-mit-nordrhein-westfalen" },
+    { "fakt": "Bürocluster Königsallee/Innenstadt, Medienhafen, Kennedydamm, Airport City; nach Frankfurt zweitwichtigster Bürostandort Westdeutschlands (Sekundärquelle)", "url": "https://wezoo.com/insights/buro-mieten-dusseldorf" },
+    { "fakt": "Messe Düsseldorf: über 50 internationale Messen im Jahr, über 1,5 Mio. Besucher (Sekundärquelle, gegen messe-duesseldorf.de prüfen)", "url": "https://www.fair-point.com/de/venue/messe-dusseldorf/" }
   ],
-  "branchen": ["Unternehmensberatung", "Gastronomie", "Industrie"],
-  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
-  "faq": [
-    {
-      "question": "Wie schnell sind Sie in Düsseldorf vor Ort?",
-      "answer": "Von unserem Hauptsitz in Krefeld erreichen wir Düsseldorf in ca. 25–35 Minuten."
+  "referenzen": [
+    { "name": "Boston Consulting Group", "leistung": ["it-netzwerk", "medientechnik"], "beschreibung": "WLAN-Infrastruktur", "ort": "Düsseldorf", "freigabe": true },
+    { "name": "Capgemini", "leistung": ["it-netzwerk", "medientechnik"], "beschreibung": "WLAN-Ausleuchtung und WLAN-Infrastruktur", "ort": "Düsseldorf und Ratingen", "freigabe": true },
+    { "name": "Lakis Restaurant & Gastronomie", "leistung": ["digital-signage", "medientechnik"], "beschreibung": "Innenbeleuchtung und Lichtsteuerung, Licht- und Tontechnik, Digital Signage", "ort": "Königsallee, Düsseldorf", "freigabe": true },
+    { "name": "Aluminium Norf", "leistung": ["konferenztechnik", "videokonferenz"], "beschreibung": "Boardroom und Schulungsraum mit Shure, Nureva und AVer-Trackingkameras", "ort": "Neuss", "freigabe": true, "url": "/projekte/aluminium-norf" }
+  ],
+  "leistungen": {
+    "medientechnik": {
+      "einleitung": "Medientechnik in Düsseldorf heißt für uns meist: Mieterausbau in Bürohäusern an der Königsallee, am Kennedydamm oder im Medienhafen, abgestimmt mit Hausverwaltung, Brandschutz und der IT des Kunden. SLT Technology Group plant, installiert und betreut Konferenz-, Audio-, Display- und Steuerungstechnik für Unternehmen in Düsseldorf – von unserem Hauptsitz in Krefeld aus, rund 30 Minuten entfernt. Für die Boston Consulting Group haben wir in Düsseldorf die WLAN-Infrastruktur installiert, für Capgemini in Düsseldorf und Ratingen WLAN-Ausleuchtung und -Infrastruktur, und für Lakis Restaurant & Gastronomie auf der Königsallee Innenbeleuchtung, Lichtsteuerung, Licht- und Tontechnik sowie Digital Signage.",
+      "anforderungen_titel": "Was Düsseldorf von anderen Standorten unterscheidet",
+      "anforderungen": "Düsseldorf ist nach Frankfurt der zweitgrößte Bürostandort Westdeutschlands und beherbergt eine der größten japanischen Gemeinden Europas; über 650 japanische Unternehmen sitzen in NRW, ein großer Teil davon im Raum Düsseldorf. Daraus folgen drei Anforderungen, die wir hier häufiger sehen als anderswo: Besprechungsräume werden mehrsprachig genutzt, Raumsysteme müssen mit Teams, Zoom und Webex gleichermaßen laufen, und Konzernzentralen erwarten einen Raumstandard, der sich auf weitere Standorte übertragen lässt. Dazu kommt der Mieterausbau: In gemieteten Flächen sind Kabelwege, Deckenlasten und Wanddurchbrüche mit dem Vermieter abzustimmen, Rückbaupflichten eingeschlossen. Wir planen so, dass die Technik beim Auszug ohne Schaden an der Mietsache demontiert werden kann.",
+      "arbeitsweise": "Aufmaß und Abstimmung mit IT und Facility Management erfolgen bei der Installation vor Ort. Geräte zeigen wir vorab im Vorführraum in Krefeld oder stellen sie als Teststellung in Ihren Raum. Nach der Inbetriebnahme übernehmen wir auf Wunsch Service und Monitoring; Störungen in Düsseldorf erreichen wir innerhalb eines Werktags vor Ort.",
+      "faq": [
+        { "frage": "Wie schnell sind Sie in Düsseldorf vor Ort?", "antwort": "Von Krefeld aus in rund 30 Minuten; für Servicefälle planen wir den nächsten Werktag ein." },
+        { "frage": "Arbeiten Sie in gemieteten Büroflächen?", "antwort": "Ja, das ist in Düsseldorf der Regelfall. Wir stimmen Kabelwege und Montagepunkte mit der Hausverwaltung ab und dokumentieren den Rückbau." },
+        { "frage": "Welche Projekte haben Sie in Düsseldorf umgesetzt?", "antwort": "WLAN-Infrastruktur für die Boston Consulting Group, WLAN-Ausleuchtung und -Infrastruktur für Capgemini in Düsseldorf und Ratingen, Licht-, Ton- und Signage-Technik für Lakis auf der Königsallee." }
+      ],
+      "pruefen": "„zweitgrößter Bürostandort Westdeutschlands“ stammt aus einem Marktbericht; „innerhalb eines Werktags“ ist eine Zusage."
     },
-    {
-      "question": "Planen Sie auch die WLAN-Ausleuchtung?",
-      "answer": "Ja, inklusive professioneller Ausleuchtung – etwa für Capgemini in Düsseldorf und Ratingen, wo wir WLAN-Infrastruktur und Ausleuchtung umgesetzt haben."
+    "konferenztechnik": {
+      "einleitung": "Konferenztechnik für Düsseldorfer Unternehmen planen wir vom kleinen Besprechungsraum bis zum Boardroom der Konzernzentrale – mit dem Ziel, dass ein Meeting ohne Techniker beginnt und ein Standard entsteht, den Ihre IT auf jeden weiteren Raum übertragen kann. SLT Technology Group betreut Düsseldorf vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt. Bei Aluminium Norf in Neuss, 15 Minuten von Düsseldorf, haben wir einen Boardroom und einen Schulungsraum mit Shure-Mikrofonie, Nureva-Audio und AVer-Trackingkameras ausgestattet.",
+      "anforderungen_titel": "Was Konferenzräume in Düsseldorf brauchen",
+      "anforderungen": "In den Bürotürmen an der Königsallee, am Kennedydamm und im Medienhafen sitzen Beratungen, Kanzleien und Konzernzentralen mit vielen Besprechungsräumen auf wenig Fläche. Daraus ergibt sich, worauf es ankommt: Die Räume sind klein bis mittelgroß, hoch ausgelastet und wechselnd belegt – die Bedienung muss ohne Einweisung funktionieren. Internationale Teams wählen sich aus Teams, Zoom und Webex ein, also muss das Raumsystem alle drei nativ oder per BYOD bedienen. Und wer zehn Räume auf drei Etagen betreibt, braucht einen einheitlichen Standard, damit Support, Ersatzteile und Schulung nur einmal anfallen. Glaswände und harte Oberflächen, die in Düsseldorfer Neubauten üblich sind, machen die Akustik zum häufigsten Schwachpunkt; wir planen Mikrofonie und Lautsprecher deshalb vor der Kamera.",
+      "arbeitsweise": "Wir definieren mit Ihnen drei bis vier Raumtypen und statten einen Raum als Referenz aus; danach wird skaliert. Aufmaß und Abstimmung mit IT und Hausverwaltung erfolgen bei der Installation. Ersatzgeräte lagern in Krefeld, Servicefälle erreichen wir am nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Konferenzraum-Projekte haben Sie im Raum Düsseldorf realisiert?", "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss; in Düsseldorf selbst Netzwerk- und Medientechnik für Boston Consulting Group, Capgemini und Lakis." },
+        { "frage": "Teams, Zoom oder Webex – müssen wir uns festlegen?", "antwort": "Nein. Wir setzen Raumsysteme ein, die für Teams Rooms und Zoom Rooms zertifiziert sind, und ergänzen BYOD für alle anderen Dienste." },
+        { "frage": "Wie lange dauert die Ausstattung eines Standardraums?", "antwort": "Nach Freigabe und Lieferung meist wenige Tage je Raum; bei mehreren Räumen planen wir etagenweise." }
+      ],
+      "pruefen": "„Ersatzgeräte lagern in Krefeld“ setzt voraus, dass ihr das für die eingesetzten Systeme tatsächlich tut."
     },
-    {
-      "question": "Welche Hersteller setzen Sie für Boardrooms ein?",
-      "answer": "Wir arbeiten herstellerneutral mit zertifizierten Systemen von Crestron, Q-SYS, Shure, Yealink, Huddly, Barco, Sennheiser, Samsung, PureLink, Lightware, Nureva und iiyama – Details auf unserer Technologie-Übersicht."
+    "videokonferenz": {
+      "einleitung": "Videokonferenzsysteme für Düsseldorf planen wir für Unternehmen, deren Gegenstellen in Tokio, Chicago oder Paris sitzen – nicht im Nachbarbüro. Kamera, Mikrofonie, Display und Steuerung stimmen wir auf den Raum ab und binden das System an Microsoft Teams Rooms oder Zoom Rooms an, mit BYOD für alles andere. SLT Technology Group betreut Düsseldorf vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt; bei Aluminium Norf in Neuss haben wir Videokonferenzräume mit Shure, Nureva und AVer-Trackingkameras umgesetzt.",
+      "anforderungen_titel": "Warum Videokonferenz in Düsseldorf andere Anforderungen hat",
+      "anforderungen": "Düsseldorf ist Europazentrale für hunderte japanische Unternehmen und Sitz vieler internationaler Beratungen und Konzerne. Die Folge für die Raumtechnik: Meetings laufen über Zeitzonen hinweg, oft früh morgens oder spät abends ohne IT-Support im Haus, und die Teilnehmer wechseln zwischen den Plattformen ihrer Kunden. Das System muss also ohne Techniker starten, auf Englisch und Deutsch bedienbar sein und Teams, Zoom und Webex abdecken. In Glasräumen mit harten Oberflächen, wie sie in Düsseldorfer Neubauten üblich sind, entscheidet die Mikrofonie darüber, ob die Gegenseite versteht – deshalb legen wir Audio vor Kamera und Display aus. Sprecher-Tracking lohnt sich, sobald mehr als sechs Personen im Raum sitzen; darunter reicht in der Regel eine All-in-one-Bar.",
+      "arbeitsweise": "Wir prüfen zuerst, welche Plattform führt und welche nur gelegentlich vorkommt, und wählen danach das Raumsystem. Eine Teststellung im echten Raum klärt Akustik und Sichtachsen besser als jede Planung; danach installieren wir und weisen Ihre Anwender ein. Service und Monitoring übernehmen wir auf Wunsch, Vor-Ort-Einsatz am nächsten Werktag.",
+      "faq": [
+        { "frage": "Funktioniert ein Raum mit Teams und Zoom gleichzeitig?", "antwort": "Ja. Teams Rooms kann Zoom-Meetings beitreten und umgekehrt; für Webex oder andere Dienste steht BYOD per USB-C bereit." },
+        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Personen Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
+        { "frage": "Können wir vorhandene Displays weiterverwenden?", "antwort": "Häufig ja, wenn Größe und Anschlüsse passen; das klären wir bei der Bestandsaufnahme vor Ort." }
+      ],
+      "pruefen": "„hunderte japanische Unternehmen“ bewusst ohne Zahl; Quellen nennen 400–650 je nach Abgrenzung."
+    },
+    "it-netzwerk": {
+      "einleitung": "IT-Netzwerk in Düsseldorf ist die Leistung, für die wir hier die meisten Referenzen haben: Für die Boston Consulting Group haben wir die WLAN-Infrastruktur installiert, für Capgemini in Düsseldorf und Ratingen WLAN-Ausleuchtung und -Infrastruktur. SLT Technology Group plant und baut strukturierte Verkabelung, WLAN und Netzwerkinfrastruktur für Bürostandorte – als Fundament für Konferenztechnik, Digital Signage und den Arbeitsplatz. Betreut wird Düsseldorf vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt.",
+      "anforderungen_titel": "Was Netzwerke in Düsseldorfer Büros fordern",
+      "anforderungen": "Beratungen und Konzernzentralen in Düsseldorf arbeiten mit hoher Belegungsdichte, Desk-Sharing und Gästen, die täglich wechseln. Das WLAN muss auf einer Etage mit 150 gleichzeitigen Geräten stabil bleiben, Gastzugang und Unternehmensnetz sauber trennen und Videokonferenzen aus jedem Raum ohne Aussetzer tragen. Mieterausbau in Hochhäusern bedeutet zusätzlich: Trassen und Deckenauslasspunkte sind mit der Hausverwaltung abzustimmen, Brandschotts müssen nach dem Verlegen wieder geschlossen und dokumentiert werden. Internationale Unternehmen verlangen zudem Konformität mit den Vorgaben ihrer Konzern-IT – Segmentierung, zentrale Verwaltung, Protokollierung. Wir planen deshalb nach einer Ausleuchtung vor Ort, nicht nach Grundriss, und legen die Infrastruktur so aus, dass sie die nächsten zehn Jahre und einen Vermieterwechsel übersteht.",
+      "arbeitsweise": "Am Anfang steht die WLAN-Ausleuchtung mit Messung im Gebäude; daraus entstehen Access-Point-Positionen, Kanalplan und Verkabelungsplan nach DIN EN 50173. Installation und Abstimmung mit IT und Hausverwaltung erfolgen vor Ort; nach der Inbetriebnahme übergeben wir Messprotokoll und Dokumentation. Managed Services für Netzwerk und Konferenztechnik bieten wir aus einer Hand.",
+      "faq": [
+        { "frage": "Welche Netzwerkprojekte haben Sie in Düsseldorf umgesetzt?", "antwort": "WLAN-Infrastruktur für die Boston Consulting Group in Düsseldorf sowie WLAN-Ausleuchtung und -Infrastruktur für Capgemini in Düsseldorf und Ratingen." },
+        { "frage": "Machen Sie die WLAN-Ausleuchtung vor der Planung?", "antwort": "Ja, mit Messung im Gebäude. Eine Planung nach Grundriss reicht in Stahlbetonbauten mit Glasfassade nicht." },
+        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; die Verkabelung erfolgt nach DIN EN 50173, Messprotokoll inklusive." }
+      ],
+      "pruefen": "„150 gleichzeitige Geräte“ ist ein Richtwert, keine Messzahl aus euren Projekten; Herstellerliste ggf. um Aruba/Ubiquiti ergänzen."
+    },
+    "digital-signage": {
+      "einleitung": "Digital Signage in Düsseldorf reicht für uns vom Empfangsdisplay in der Konzernzentrale bis zur Gastronomie auf der Königsallee: Für Lakis Restaurant & Gastronomie haben wir dort Digital Signage zusammen mit Innenbeleuchtung, Lichtsteuerung sowie Licht- und Tontechnik umgesetzt – ein Beispiel dafür, dass Signage selten allein steht. SLT Technology Group plant Displays, LED-Flächen und das Content-Management, installiert und betreibt sie; Düsseldorf betreuen wir vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt.",
+      "anforderungen_titel": "Was Signage in Düsseldorf leisten muss",
+      "anforderungen": "Düsseldorf ist Messe-, Mode- und Beratungsstadt: über 50 internationale Messen im Jahr bringen Besucher in Hotels, Showrooms und Gastronomie, Konzernzentralen empfangen Gäste aus aller Welt, und an der Königsallee konkurriert jede Fläche um Aufmerksamkeit. Für die Technik heißt das: Inhalte müssen mehrsprachig und zentral steuerbar sein, Displays in Schaufenstern und Empfangsbereichen brauchen Helligkeiten, die gegen Tageslicht bestehen, und in der Gastronomie läuft Signage im Verbund mit Licht und Ton – eine Szene am Abend sieht anders aus als mittags. Wo mehrere Standorte bespielt werden, muss das CMS Rollen und Freigaben kennen, damit die Zentrale Vorgaben macht und die Fläche vor Ort ergänzt. Wir planen Displayklasse, Halterung und Netzwerk zusammen, weil ein Display im Schaufenster ohne PoE-Versorgung und ohne Fernzugriff nach dem ersten Ausfall zur Dauerbaustelle wird.",
+      "arbeitsweise": "Wir klären Flächen, Lichtverhältnisse und Inhalte vor Ort, wählen Display oder LED danach aus und richten das CMS mit Ihren Rollen ein. Installation und Abstimmung mit Hausverwaltung oder Center-Management erfolgen bei der Montage. Monitoring und Wartung bieten wir im Servicevertrag an, auch für bestehende Anlagen anderer Hersteller.",
+      "faq": [
+        { "frage": "Welche Signage-Projekte haben Sie in Düsseldorf umgesetzt?", "antwort": "Digital Signage, Licht- und Tontechnik sowie Lichtsteuerung für Lakis Restaurant & Gastronomie auf der Königsallee." },
+        { "frage": "Können Sie Signage mit Licht und Ton koppeln?", "antwort": "Ja, über eine gemeinsame Steuerung mit Szenen für Tageszeiten oder Veranstaltungen – so umgesetzt bei Lakis." },
+        { "frage": "Übernehmen Sie bestehende Displays in den Betrieb?", "antwort": "Ja, nach Bestandsaufnahme; Monitoring und Wartung sind herstellerunabhängig möglich." }
+      ],
+      "pruefen": "Messezahl gegen messe-duesseldorf.de prüfen; gemeinsame Steuerung bei Lakis bestätigen, sonst zweiten FAQ-Satz kürzen."
     }
-  ]
+  }
 }

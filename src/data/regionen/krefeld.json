@@ -1,49 +1,79 @@
 {
   "stadt": "Krefeld",
   "slug": "krefeld",
-  "standort": "Anrather Str. 291, 47807 Krefeld, Hauptsitz mit Lager und Vorführraum",
+  "standort": { "name": "Krefeld", "zusatz": "Hauptsitz Anrather Str. 291, 47807 Krefeld (Fichtenhain) mit Lager und Vorführraum" },
   "fahrzeit": "vor Ort; Niederrhein 15–30 Minuten",
-  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
-  "gbpUrl": null,
-  "intro": "Krefeld ist unser Hauptsitz: In der Anrather Straße 291 arbeiten Projektleitung, Lager und Vorführraum unter einem Dach. Am Niederrhein sind wir in 15–30 Minuten vor Ort – etwa beim REWE Center Willich mit seiner Logo-Bodenprojektion oder bei GOB Software & Systeme in Krefeld. Ansprechpartner am Hauptsitz ist Geschäftsführer Benedikt Nöchel.",
-  "referenzen": [
-    {
-      "name": "REWE Center Willich",
-      "leistung": "Digital Signage",
-      "detail": "Logo-Bodenprojektion",
-      "ort": "Willich",
-      "freigabe": true
-    },
-    {
-      "name": "Aluminium Norf",
-      "leistung": "Konferenztechnik",
-      "detail": "Boardroom und Schulungsraum mit Shure, Nureva und AVer",
-      "ort": "Neuss",
-      "freigabe": true,
-      "url": "/projekte/aluminium-norf"
-    },
-    {
-      "name": "GOB Software & Systeme",
-      "leistung": "Videokonferenz",
-      "detail": "Zusammenarbeit im Bereich Videokonferenzsysteme",
-      "ort": "Krefeld",
-      "freigabe": true
-    }
+  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
+  "gbpUrl": "<GBP Krefeld>",
+  "quellen": [
+    { "fakt": "Chempark Krefeld-Uerdingen: Teil eines der größten Chemie-Areale Europas (Leverkusen, Dormagen, Krefeld-Uerdingen) mit rund 70 Unternehmen und etwa 55.000 Beschäftigten an den drei Standorten", "url": "https://chemanager-online.com/de/news/deutschlands-groesste-chemiestandorte" },
+    { "fakt": "Krefeld-Uerdingen: führender Standort für Polycarbonate und Polyamide in Westeuropa; Eigentümer Bayer/Lanxess, Betreiber Currenta", "url": "https://www.gtai.de/en/invest/industries/industrial-production/chemicals-materials/chemical-parks-in-germany/chempark-krefeld-uerdingen-48234" }
   ],
-  "branchen": ["Handel", "Industrie", "Software"],
-  "ausschluesse": ["Eventtechnik-Vermietung über SLT Rental am gleichen Standort (slt-rental.de)"],
-  "faq": [
-    {
-      "question": "Kann ich Geräte vor dem Kauf in Krefeld sehen?",
-      "answer": "Ja, in unserem Vorführraum am Hauptsitz in der Anrather Straße 291 – gerne nach Terminvereinbarung."
+  "referenzen": [
+    { "name": "Aluminium Norf", "leistung": ["konferenztechnik", "videokonferenz", "medientechnik"], "beschreibung": "Boardroom und Schulungsraum mit Shure, Nureva und AVer-Trackingkameras", "ort": "Neuss", "freigabe": true, "url": "/projekte/aluminium-norf" },
+    { "name": "REWE Center Willich", "leistung": ["digital-signage", "medientechnik"], "beschreibung": "Logo-Bodenprojektion im Markt", "ort": "Willich", "freigabe": true },
+    { "name": "GOB Software & Systeme", "leistung": ["videokonferenz", "konferenztechnik"], "beschreibung": "Zusammenarbeit im Bereich Videokonferenzsysteme", "ort": "Krefeld", "freigabe": true }
+  ],
+  "leistungen": {
+    "medientechnik": {
+      "einleitung": "Medientechnik in Krefeld kommt bei uns aus der Nachbarschaft: SLT Technology Group hat ihren Hauptsitz in Krefeld-Fichtenhain, mit Lager, Werkstatt und einem Vorführraum, in dem Sie Konferenz- und Displaytechnik vor dem Kauf sehen und bedienen können. Von hier aus planen, installieren und betreuen wir Unternehmen in Krefeld und am Niederrhein – für Aluminium Norf in Neuss einen Boardroom und einen Schulungsraum, für das REWE Center Willich eine Logo-Bodenprojektion, für GOB Software & Systeme in Krefeld Videokonferenzsysteme.",
+      "anforderungen_titel": "Was Krefeld von anderen Standorten unterscheidet",
+      "anforderungen": "Krefeld ist Industrie- und Mittelstandsstadt: Der Chempark Uerdingen gehört zu den größten Chemie-Arealen Europas, dazu kommen Maschinenbau, Metallverarbeitung, Textil- und Logistikbetriebe in Fichtenhain, Linn und im Hafen. Hier brauchen Besprechungsräume selten Repräsentation, aber immer Zuverlässigkeit – und oft eine Verbindung zwischen Verwaltung und Produktion: Schichtübergaben mit Display, Schulungsräume für wechselnde Gruppen, Beschallung in Hallen, Signage für Sicherheit und Kennzahlen. Für Chemie- und Industriestandorte kommen Zutrittsregeln, Arbeitssicherheit und Abstimmung mit der Werksfeuerwehr dazu. Der Mittelstand erwartet außerdem, dass der Dienstleister in zwanzig Minuten da ist, wenn der Raum nicht startet. Das können wir in Krefeld.",
+      "arbeitsweise": "Sie sehen die Technik im Vorführraum in Fichtenhain oder als Teststellung in Ihrem Raum. Aufmaß und Abstimmung mit IT und Haustechnik erfolgen bei der Installation. Service, Ersatzteile und Techniker sitzen in Krefeld; Vor-Ort-Einsätze in der Stadt planen wir in der Regel am selben oder nächsten Werktag.",
+      "faq": [
+        { "frage": "Kann ich Geräte vor dem Kauf in Krefeld sehen?", "antwort": "Ja, im Vorführraum an der Anrather Straße in Fichtenhain – nach Terminabsprache, gern mit Ihren eigenen Inhalten." },
+        { "frage": "Welche Projekte haben Sie in Krefeld und Umgebung umgesetzt?", "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss, Logo-Bodenprojektion im REWE Center Willich, Videokonferenzsysteme für GOB Software & Systeme in Krefeld." },
+        { "frage": "Vermieten Sie auch Eventtechnik?", "antwort": "Kurzfristige Vermietung läuft über unsere Schwester SLT Rental am gleichen Standort; wir planen und installieren feste Anlagen." }
+      ],
+      "pruefen": "GOB nur als Name und „Videokonferenzsysteme“, wie vorgegeben. „Werkstatt“ streichen, falls ihr keine habt."
     },
-    {
-      "question": "Welche Hersteller haben Sie vor Ort?",
-      "answer": "Am Hauptsitz in Krefeld zeigen wir Ihnen Systeme von Herstellern wie Crestron, Shure, Barco, Samsung und iiyama – die vollständige Übersicht finden Sie auf unserer Technologie-Seite."
+    "konferenztechnik": {
+      "einleitung": "Konferenztechnik in Krefeld planen wir mit dem Vorteil, dass Sie das Ergebnis vorher sehen: In unserem Vorführraum in Krefeld-Fichtenhain stehen Raumsysteme, Displays und Mikrofonie zum Ausprobieren, bevor eine Entscheidung fällt. SLT Technology Group stattet Räume vom Huddle Space bis zum Boardroom aus, installiert und betreut sie; bei Aluminium Norf in Neuss haben wir Boardroom und Schulungsraum mit Shure, Nureva und AVer-Trackingkameras realisiert, mit GOB Software & Systeme in Krefeld arbeiten wir im Bereich Videokonferenzsysteme zusammen.",
+      "anforderungen_titel": "Was Konferenzräume in Krefeld und am Niederrhein brauchen",
+      "anforderungen": "Die Unternehmen in Krefeld und am Niederrhein sind überwiegend inhabergeführter Mittelstand und Industrie – Chemie im Chempark Uerdingen, Maschinenbau, Metall, Logistik, Software. Ihre Konferenzräume sind Arbeitsräume: Angebote werden besprochen, Lieferanten zugeschaltet, Schichtleiter geschult. Entsprechend zählt, dass der Raum ohne Einweisung startet, dass Teams und Zoom gleichermaßen laufen, weil Kunden und Lieferanten unterschiedliche Plattformen nutzen, und dass die Technik zehn Jahre hält, nicht drei. Schulungsräume für wechselnde Gruppen brauchen robuste Bedienung und Mikrofonie, die den Dozenten auch beim Umhergehen aufnimmt. In Verwaltungsgebäuden der Industrie aus den 60er bis 80er Jahren sind Akustik und Kabelwege die Planungsthemen; wir messen vor Ort, bevor wir anbieten.",
+      "arbeitsweise": "Raumtypen festlegen, Technik im Vorführraum oder als Teststellung prüfen, dann installieren – Aufmaß und Abstimmung mit IT und Haustechnik bei der Installation. Ersatzgeräte und Techniker sitzen in Krefeld; Vor-Ort-Einsätze am selben oder nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Konferenzraum-Projekte haben Sie in der Region?", "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss; Videokonferenzsysteme für GOB Software & Systeme in Krefeld." },
+        { "frage": "Wie läuft eine Teststellung ab?", "antwort": "Wir bauen das vorgesehene System in Ihrem Raum auf, Sie nutzen es im Alltag, danach entscheiden Sie – Dauer nach Absprache." },
+        { "frage": "Welche Hersteller zeigen Sie im Vorführraum?", "antwort": "Unter anderem Yealink, Huddly, Shure, Barco ClickShare und Q-SYS; der Bestand wechselt mit den Projekten." }
+      ],
+      "pruefen": "Vorführraum-Bestand: Herstellerliste mit dem tatsächlichen Aufbau abgleichen."
     },
-    {
-      "question": "Wie läuft eine Teststellung ab?",
-      "answer": "Auf Wunsch stellen wir Ihnen Systeme zum Testen direkt bei Ihnen vor Ort bereit (Try-and-Buy) – die Dauer stimmen wir individuell mit Ihnen ab."
+    "videokonferenz": {
+      "einleitung": "Videokonferenzsysteme in Krefeld installieren wir für Unternehmen, die mit Kunden und Lieferanten in ganz Europa sprechen und einen Raum wollen, der auf Knopfdruck startet. Mit GOB Software & Systeme in Krefeld arbeiten wir im Bereich Videokonferenzsysteme zusammen; bei Aluminium Norf in Neuss haben wir Räume mit Shure-Mikrofonie, Nureva-Audio und AVer-Trackingkameras ausgestattet. SLT Technology Group sitzt in Krefeld-Fichtenhain – Vorführraum, Lager und Techniker vor Ort.",
+      "anforderungen_titel": "Was Videokonferenz in Krefeld besonders macht",
+      "anforderungen": "Krefelds Wirtschaft ist industriell und mittelständisch geprägt – Chemie, Maschinenbau, Metall, Logistik, Software. Videokonferenzen verbinden hier Verwaltung und Werk, Vertrieb und Kunden, Entwicklung und Lieferanten; die Gegenseite nutzt Teams, Zoom oder Webex, je nach Konzernvorgabe. Das Raumsystem muss also plattformoffen sein und ohne IT-Support funktionieren, weil der Admin oft für mehrere Standorte zuständig ist. In Schulungs- und Besprechungsräumen mit zehn und mehr Personen entscheidet die Mikrofonie über Verständlichkeit – eine Bar allein reicht dann nicht. Und weil Industriebetriebe ihre Technik lange nutzen, planen wir Systeme, die sich mit Firmware-Updates und Kameratausch weiterentwickeln lassen, statt in drei Jahren ersetzt zu werden.",
+      "arbeitsweise": "Wir klären Plattform, Raumgröße und Nutzung, zeigen das System im Vorführraum oder als Teststellung, installieren und weisen ein. Service und Monitoring übernehmen wir aus Krefeld; Vor-Ort-Einsätze am selben oder nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Videokonferenz-Projekte haben Sie in Krefeld?", "antwort": "Zusammenarbeit mit GOB Software & Systeme in Krefeld im Bereich Videokonferenzsysteme; Räume bei Aluminium Norf in Neuss." },
+        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
+        { "frage": "Teams oder Zoom?", "antwort": "Beides. Für Teams Rooms und Zoom Rooms zertifizierte Systeme, BYOD per USB-C für alle anderen Dienste." }
+      ],
+      "pruefen": "GOB-Formulierung bleibt ohne Details, wie vorgegeben."
+    },
+    "it-netzwerk": {
+      "einleitung": "IT-Netzwerk in Krefeld planen und bauen wir vom Hauptsitz in Fichtenhain aus: strukturierte Verkabelung nach DIN EN 50173, WLAN nach Ausleuchtung, Switching und PoE als Grundlage für Konferenztechnik, Signage und Arbeitsplatz. SLT Technology Group hat WLAN-Infrastruktur für die Boston Consulting Group und Capgemini in Düsseldorf und Ratingen sowie an mehreren Werksstandorten von Sonoco realisiert – 30 Minuten von Krefeld.",
+      "anforderungen_titel": "Was Netzwerke in Krefeld fordern",
+      "anforderungen": "Industrie- und Logistikbetriebe in Krefeld und am Niederrhein brauchen Netzwerke, die in Halle und Büro gleichermaßen funktionieren: WLAN zwischen Stahlregalen und über Staplerverkehr, Verkabelung, die Feuchtigkeit und Temperatur aushält, Netzsegmente für Produktion, Verwaltung und Gäste. Im Chempark und an anderen Industriestandorten kommen Zutritts- und Sicherheitsregeln hinzu, die Montagezeiten und Material vorgeben. Softwareunternehmen und Dienstleister wollen dagegen Bandbreite bis an den Arbeitsplatz und ein Gast-WLAN, das sauber getrennt ist. Verwaltungsgebäude aus den 60er bis 80er Jahren haben selten Kabelwege, die für heutige Dichte reichen; wir messen aus und planen, bevor wir Kabel ziehen.",
+      "arbeitsweise": "WLAN-Ausleuchtung mit Messung, Access-Point-Positionen und Kanalplan, Verkabelungsplan nach DIN EN 50173; Installation und Abstimmung mit IT und Haustechnik vor Ort; Übergabe mit Messprotokoll. Netzwerk, Konferenztechnik und Signage aus einer Hand – von Krefeld aus.",
+      "faq": [
+        { "frage": "Haben Sie Netzwerkprojekte in Krefeld umgesetzt?", "antwort": "Unsere Netzwerk-Referenzen liegen in Düsseldorf, Ratingen (Boston Consulting Group, Capgemini) und an Sonoco-Werksstandorten; in Krefeld sitzen Lager, Techniker und Vorführraum." },
+        { "frage": "Funktioniert WLAN in Lagerhallen mit Hochregalen?", "antwort": "Ja, wenn es nach Messung geplant wird: Antennenausrichtung, Access-Point-Dichte und Kanalplan hängen vom Regalbild ab, nicht vom Grundriss." },
+        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+      ],
+      "pruefen": "Chempark-Erwähnung beschreibt den Standort Krefeld, nicht ein Projekt."
+    },
+    "digital-signage": {
+      "einleitung": "Digital Signage in Krefeld und am Niederrhein planen wir für Handel, Industrie und Empfang – vom Display bis zur Projektion: Für das REWE Center Willich, 15 Minuten von Krefeld, haben wir eine Logo-Bodenprojektion im Markt umgesetzt. SLT Technology Group plant, installiert und betreibt Displays, LED-Flächen und Content-Management vom Hauptsitz in Krefeld-Fichtenhain aus.",
+      "anforderungen_titel": "Was Signage in Krefeld leisten muss",
+      "anforderungen": "In Krefeld und am Niederrhein sind es drei Einsatzfelder: Handel, Industrie und Verwaltung. Im Handel – Fachmärkte, Supermärkte, Autohäuser entlang der Ausfallstraßen – geht es um Aufmerksamkeit im Markt und am Schaufenster, bei Tageslicht und mit Inhalten, die die Filiale selbst pflegen kann. In Produktion und Logistik zeigt Signage Schichtpläne, Kennzahlen und Sicherheitshinweise; Displays laufen dort im Dauerbetrieb und müssen Staub, Temperatur und Vibration aushalten. In Empfangsbereichen der Verwaltung informiert sie Besucher und Mitarbeiter. Allen gemeinsam: Ein Display ohne Fernüberwachung wird nach dem ersten Ausfall zur Dauerbaustelle, deshalb planen wir Netzwerk, PoE-Versorgung und Monitoring von Anfang an mit.",
+      "arbeitsweise": "Flächen, Licht und Inhalte klären wir vor Ort oder im Vorführraum, wählen Display, LED oder Projektion danach aus und richten das CMS mit Ihren Rollen ein. Installation bei der Montage abgestimmt mit Haustechnik oder Marktleitung. Monitoring und Wartung im Servicevertrag, auch für bestehende Anlagen.",
+      "faq": [
+        { "frage": "Welche Signage-Projekte haben Sie in der Region?", "antwort": "Logo-Bodenprojektion im REWE Center Willich; Wartung von Outdoor-LED-Anlagen für Knauber in Bonn." },
+        { "frage": "Eignet sich Signage für Produktionshallen?", "antwort": "Ja, mit Industriedisplays oder Schutzgehäusen, PoE-Versorgung und Fernüberwachung; Inhalte kommen aus Ihrem ERP oder MES, wenn gewünscht." },
+        { "frage": "Können wir Inhalte selbst pflegen?", "antwort": "Ja. Wir richten das CMS mit Rollen ein und schulen Ihr Team; der technische Betrieb bleibt bei uns, wenn Sie das wollen." }
+      ],
+      "pruefen": "ERP/MES-Anbindung: nur stehen lassen, wenn ihr das anbietet."
     }
-  ]
+  }
 }

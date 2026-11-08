@@ -1,5 +1,5 @@
 /** Full-page build-time rendering. Apache serves static HTML; no runtime SSR. */
-import { readFile, writeFile, mkdir, copyFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir, copyFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createServer } from "node:http";
@@ -7,6 +7,8 @@ import { build } from "esbuild";
 import { chromium } from "playwright";
 import { BASE_URL, buildSitemap } from "./seo-output.mjs";
 import { inspectSnapshot, READY_SELECTORS, ROUTE_SELECTORS } from "./prerender-checks.mjs";
+import { inspectRegionalSnapshot } from "./regional-checks.mjs";
+import { regionalReportMarkdown } from "./regional-report.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -24,8 +26,10 @@ export async function loadRouteData() {
 }
 
 export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOptions = {}, routes } = {}) {
-  const { ALL_ROUTES, resolveRouteSchemas, routeMetadata, applyRouteMetadata, inspectRouteMetadata } = await loadRouteData();
+  const { ALL_ROUTES, resolveRouteSchemas, routeMetadata, applyRouteMetadata, inspectRouteMetadata, REGIONEN, regionalDataViolations, isServiceKey } = await loadRouteData();
   const catalogue = routes ?? ALL_ROUTES;
+  const regionalViolations = regionalDataViolations();
+  if (!sourceUrl && regionalViolations.length) throw new Error(`Regional export blocked:\n${regionalViolations.join("\n")}`);
   // Production always requires the Vite-built template. A source URL is only
   // supplied by the browser test fixture; there is no SPA fallback on failure.
   const template = sourceUrl ? null : await readFile(path.join(DIST, "index.html"), "utf8");
@@ -99,13 +103,16 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
         snapshotPage = await snapshotContext.newPage();
         await snapshotPage.setContent(await readFile(output, "utf8"));
         const stats = await snapshotPage.evaluate(inspectSnapshot);
+        const regionalStats = route.city && REGIONEN[route.city] && isServiceKey(route.topic ?? "")
+          ? await snapshotPage.evaluate(inspectRegionalSnapshot, { region: REGIONEN[route.city], key: route.topic }) : null;
         const violations = [...stats.violations, ...errors,
+          ...(regionalStats?.violations ?? []),
           ...await snapshotPage.evaluate(inspectRouteMetadata, routeMetadata(route))];
         if (violations.length) {
           failures.push({ path: route.path, violations });
         } else {
           rows.push({ path: route.path, title: route.title, description: route.description,
-            noindex: !!route.noindex, lastmod: route.lastmod || "", ...stats });
+            noindex: !!route.noindex, lastmod: route.lastmod || "", ...stats, ...(regionalStats ?? {}) });
           console.log(`[prerender] ${route.path}: ${stats.words} words`);
         }
       } catch (error) {
@@ -119,7 +126,19 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
       throw new Error(`Invalid snapshots (${failures.length} routes):\n${failures
         .map(item => `${item.path}: ${item.violations.join("; ")}`).join("\n")}`);
     }
+    // Production scans every serialized route and text-based asset, not only main.
+    if (template) {
+      const scan = async directory => {
+        for (const entry of await readdir(directory, { withFileTypes: true })) {
+          const file = path.join(directory, entry.name);
+          if (entry.isDirectory()) await scan(file);
+          else if (/\.(html|js|css|json|svg|txt|xml|map)$/i.test(entry.name) && /Luca|Sandhoff|<GBP|\[REAKTIONSZEIT/i.test(await readFile(file, "utf8"))) throw new Error(`Forbidden public name/placeholder: ${path.relative(outputDir, file)}`);
+        }
+      };
+      await scan(outputDir);
+    }
     await writeFile(path.join(outputDir, "sitemap.xml"), buildSitemap(catalogue));
+    await writeFile(path.join(outputDir, "regionalseiten-pruefbericht.md"), regionalReportMarkdown(rows, { preview: !!template === false }));
     await writeFile(path.join(sourceUrl && outputDir !== DIST ? outputDir : ROOT, ".prerender-audit.json"), JSON.stringify(rows, null, 2));
     await copyFile(path.join(ROOT, "public/.htaccess"), path.join(outputDir, ".htaccess"));
     console.log(`[prerender] ${rows.length} complete static pages; no runtime SSR`);

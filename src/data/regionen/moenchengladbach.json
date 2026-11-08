@@ -1,30 +1,78 @@
 {
   "stadt": "Mönchengladbach",
   "slug": "moenchengladbach",
-  "standort": "Krefeld",
+  "standort": { "name": "Krefeld", "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld" },
   "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
-  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
-  "gbpUrl": null,
-  "intro": "Mönchengladbach erreichen wir von unserem Hauptsitz in Krefeld aus in rund 25–35 Minuten. Im rund 15 Minuten entfernten Willich haben wir für das REWE Center eine Logo-Bodenprojektion realisiert. Ansprechpartner für Projekte in Mönchengladbach ist Benedikt Nöchel aus der Geschäftsführung.",
-  "referenzen": [
-    {
-      "name": "REWE Center Willich",
-      "leistung": "Digital Signage",
-      "detail": "Logo-Bodenprojektion",
-      "ort": "Willich, ca. 15 Minuten von Mönchengladbach",
-      "freigabe": true
-    }
+  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
+  "gbpUrl": "<GBP Krefeld>",
+  "quellen": [
+    { "fakt": "Rund 80 Textil- und Bekleidungsunternehmen mit etwa 3.200 Beschäftigten; Hochschule Niederrhein mit Textil- und Bekleidungstechnik; starke Logistik (Logistikinitiative LOG4MG)", "url": "https://www.wfmg.de/wp-content/uploads/broschuere-arbeit-wirtschaft.pdf" },
+    { "fakt": "Santander bündelt sein Deutschlandgeschäft in der Santander Consumer Bank in Mönchengladbach; internationale Ansiedlungen u. a. Esprit, Monforts, Starrag, Nexans, L'Oréal, Elopak", "url": "https://www.wfmg.de/epaper/BinMG-2023-02/epaper/ausgabe.pdf" },
+    { "fakt": "Esprit bündelt seit 2010 die Europa-Distribution in Mönchengladbach (Regiopark)", "url": "https://www.textilwirtschaft.de/fashion-management/esprit-logistik-in-moenchengladbach-wird-ausgebaut-119495" }
   ],
-  "branchen": [],
-  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
-  "faq": [
-    {
-      "question": "Wie schnell sind Sie in Mönchengladbach vor Ort?",
-      "answer": "Von unserem Hauptsitz in Krefeld aus erreichen wir Mönchengladbach in ca. 25–35 Minuten."
+  "referenzen": [
+    { "name": "REWE Center Willich", "leistung": ["digital-signage", "medientechnik"], "beschreibung": "Logo-Bodenprojektion im Markt", "ort": "Willich, ca. 15 Minuten von Mönchengladbach", "freigabe": true }
+  ],
+  "leistungen": {
+    "medientechnik": {
+      "einleitung": "Medientechnik für Mönchengladbach planen, installieren und betreuen wir vom Hauptsitz Krefeld aus – über die A44 oder A52 in rund 30 Minuten. SLT Technology Group liefert Konferenz-, Audio-, Display- und Steuerungstechnik aus einer Hand; die nächstgelegene Referenz ist die Logo-Bodenprojektion im REWE Center Willich, eine Viertelstunde von Mönchengladbach, dazu Aluminium Norf in Neuss und GOB Software & Systeme in Krefeld.",
+      "anforderungen_titel": "Was Mönchengladbach von anderen Standorten unterscheidet",
+      "anforderungen": "Mönchengladbach ist Textil-, Logistik- und Maschinenbaustadt mit einer Deutschlandzentrale im Finanzsektor: Rund 80 Textil- und Bekleidungsunternehmen, die Europa-Distribution von Esprit im Regiopark, Textilmaschinenbauer wie Trützschler und Monforts, die Santander Consumer Bank am Santander-Platz. Daraus ergeben sich zwei Welten für Medientechnik. Logistik und Produktion brauchen Technik im Dauerbetrieb – Signage in Hallen, Schulungsräume für wechselnde Gruppen, Beschallung. Zentralen und Mittelstand brauchen Besprechungsräume, die ohne Einweisung starten und mit Partnern in Spanien, China oder Frankreich konferieren, weil viele Gladbacher Unternehmen ausländische Mütter haben. Der Baubestand reicht von Textilfabriken des 19. Jahrhunderts bis zu Logistikhallen im Nordpark – Kabelwege und Akustik sind jedes Mal neu zu planen.",
+      "arbeitsweise": "Bedarf und Räume klären wir vor Ort; Technik zeigen wir im Vorführraum in Krefeld oder als Teststellung bei Ihnen. Aufmaß und Abstimmung mit IT und Haustechnik erfolgen bei der Installation. Service und Ersatzteile aus Krefeld; Vor-Ort-Einsätze in Mönchengladbach am nächsten Werktag.",
+      "faq": [
+        { "frage": "Wie schnell sind Sie in Mönchengladbach vor Ort?", "antwort": "Von Krefeld aus in rund 30 Minuten; für Servicefälle planen wir den nächsten Werktag ein." },
+        { "frage": "Haben Sie Referenzen in der Nähe?", "antwort": "Logo-Bodenprojektion im REWE Center Willich, Boardroom und Schulungsraum bei Aluminium Norf in Neuss, Videokonferenzsysteme für GOB Software & Systeme in Krefeld." },
+        { "frage": "Arbeiten Sie in Logistik- und Produktionshallen?", "antwort": "Ja – mit Technik in Industrieklasse, PoE-Versorgung und Fernüberwachung, abgestimmt mit Arbeitssicherheit." }
+      ],
+      "pruefen": "Unternehmensnamen sind Standortfakten der WFMG, keine Kunden."
     },
-    {
-      "question": "Von welchem Standort wird Mönchengladbach betreut?",
-      "answer": "Mönchengladbach wird von unserem Hauptsitz in Krefeld aus betreut – mit Lager und Vorführraum in der Anrather Straße 291."
+    "konferenztechnik": {
+      "einleitung": "Konferenztechnik in Mönchengladbach planen wir für Mittelstand, Logistik und Zentralen mit internationalen Müttern – vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt. SLT Technology Group stattet Räume vom Huddle Space bis zum Boardroom aus, installiert und betreut sie; Boardroom und Schulungsraum haben wir bei Aluminium Norf in Neuss realisiert, über 20 Standardräume bei Pfeifer & Langen in Köln.",
+      "anforderungen_titel": "Was Konferenzräume in Mönchengladbach brauchen",
+      "anforderungen": "Viele Gladbacher Unternehmen sind Töchter oder Zentralen internationaler Konzerne – Santander aus Spanien, Esprit und Monforts mit chinesischen Eigentümern, Starrag aus der Schweiz, Nexans und L'Oréal aus Frankreich, Elopak aus Norwegen. Besprechungen laufen deshalb oft mehrsprachig und über die Plattform der Konzernmutter; das Raumsystem muss Teams, Zoom und Webex gleichermaßen bedienen. Der Textilmaschinenbau und der Mittelstand brauchen Schulungs- und Vorführräume, in denen Kunden Maschinen und Muster per Kamera sehen – hier zählen Kameraqualität und Detailwiedergabe mehr als in einem Büro. Und in umgenutzten Textilfabriken mit hohen Decken und Backstein ist die Akustik das erste Thema; wir planen Mikrofonie und Lautsprecher vor Display und Kamera.",
+      "arbeitsweise": "Raumtypen festlegen, Technik im Vorführraum in Krefeld oder als Teststellung prüfen, dann installieren – Aufmaß und Abstimmung mit IT und Haustechnik bei der Installation. Ersatzgeräte in Krefeld, Vor-Ort-Einsätze am nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Konferenzraum-Projekte können Sie zeigen?", "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss, über 20 Räume bei Pfeifer & Langen in Köln." },
+        { "frage": "Können Sie Vorführräume für Maschinen ausstatten?", "antwort": "Ja, mit Kameras für Detailaufnahmen, Mikrofonie gegen Maschinenlärm und Übertragung per Teams oder Zoom." },
+        { "frage": "Teams oder Zoom?", "antwort": "Beides. Für Teams Rooms und Zoom Rooms zertifizierte Systeme, BYOD per USB-C für alle anderen Dienste." }
+      ],
+      "pruefen": "Vorführräume für Maschinen: bestätigen, dass ihr solche Räume anbietet; sonst FAQ streichen."
+    },
+    "videokonferenz": {
+      "einleitung": "Videokonferenzsysteme für Mönchengladbach planen wir für Unternehmen, deren Mutterhaus in Madrid, Hongkong oder Paris sitzt – und für Mittelständler, die einfach einen Raum wollen, der startet. Kamera, Mikrofonie, Display und Steuerung stimmen wir auf den Raum ab und binden sie an Microsoft Teams Rooms oder Zoom Rooms an, mit BYOD für alles andere. SLT Technology Group betreut Mönchengladbach vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt; mit GOB Software & Systeme in Krefeld arbeiten wir im Bereich Videokonferenzsysteme zusammen, bei Aluminium Norf in Neuss haben wir Räume ausgestattet.",
+      "anforderungen_titel": "Was Videokonferenz in Mönchengladbach besonders macht",
+      "anforderungen": "Mönchengladbach hat ungewöhnlich viele Unternehmen mit ausländischen Eigentümern – von der Santander Consumer Bank bis zu Textilmaschinenbauern in chinesischem Besitz. Videokonferenzen laufen dort über die Plattform der Konzernmutter, mehrsprachig und über Zeitzonen hinweg; das Raumsystem muss plattformoffen sein, auf Englisch und Deutsch bedienbar und ohne Techniker starten. Logistiker im Regiopark und Nordpark sprechen mit Kunden und Spediteuren in ganz Europa. Und der Textil- und Maschinenbau zeigt per Kamera Muster, Stoffe und Maschinen – dort zählt Farbwiedergabe und Detailauflösung. Die Mikrofonie entscheidet in jedem Fall, ob die Gegenseite versteht; wir planen sie vor Kamera und Display.",
+      "arbeitsweise": "Plattform, Raumgröße und Nutzung klären wir zuerst; eine Teststellung im echten Raum zeigt Akustik und Sichtachsen. Danach installieren wir, weisen ein und übernehmen auf Wunsch Service und Monitoring aus Krefeld.",
+      "faq": [
+        { "frage": "Welche Videokonferenz-Projekte können Sie zeigen?", "antwort": "Zusammenarbeit mit GOB Software & Systeme in Krefeld; Räume bei Aluminium Norf in Neuss; mobile Stele beim Bank-Verlag in Köln." },
+        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
+        { "frage": "Können wir mit der Konzernmutter auf deren Plattform konferieren?", "antwort": "Ja. Teams Rooms und Zoom Rooms treten gegenseitig bei; Webex und andere Dienste laufen per BYOD über USB-C." }
+      ],
+      "pruefen": "Keine Gladbacher Referenz."
+    },
+    "it-netzwerk": {
+      "einleitung": "IT-Netzwerk in Mönchengladbach planen und bauen wir für Logistikhallen, Produktion und Büro: strukturierte Verkabelung nach DIN EN 50173, WLAN nach Ausleuchtung, Switching und PoE. SLT Technology Group betreut Mönchengladbach vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt; WLAN-Infrastruktur haben wir für Capgemini in Ratingen, die Boston Consulting Group in Düsseldorf und an mehreren Werksstandorten von Sonoco realisiert.",
+      "anforderungen_titel": "Was Netzwerke in Mönchengladbach fordern",
+      "anforderungen": "Mönchengladbach ist Logistikstandort – Regiopark, Nordpark und Güdderath beherbergen Distributionszentren für Mode und Handel, darunter die Europa-Distribution von Esprit. WLAN muss dort zwischen Hochregalen und über Staplerverkehr funktionieren, Scanner ohne Abbruch zwischen Zellen übergeben und Außenflächen abdecken; Verkabelung läuft über große Höhen und muss Temperaturwechsel aushalten. Textil- und Maschinenbau betreiben Produktionsnetze, die vom Büro getrennt gehören. Die Santander Consumer Bank und andere Zentralen stellen Anforderungen an Segmentierung und Protokollierung, wie sie im Finanzsektor üblich sind. Und der Baubestand von der Backsteinfabrik bis zur Stahlhalle verlangt eine Planung nach Messung, nicht nach Grundriss.",
+      "arbeitsweise": "WLAN-Ausleuchtung mit Messung in Halle und Büro, daraus Access-Point-Positionen, Antennenwahl und Kanalplan; Verkabelung nach DIN EN 50173; Installation abgestimmt mit IT, Haustechnik und Arbeitssicherheit; Übergabe mit Messprotokoll. Netzwerk, Signage und Konferenztechnik aus einer Hand.",
+      "faq": [
+        { "frage": "Haben Sie Netzwerkprojekte in Logistik und Industrie?", "antwort": "WLAN-Infrastruktur an mehreren Werksstandorten von Sonoco; Büro-WLAN für Capgemini in Ratingen und die Boston Consulting Group in Düsseldorf." },
+        { "frage": "Funktioniert WLAN in Hochregallagern?", "antwort": "Ja, wenn nach Messung geplant wird: Antennenausrichtung, Access-Point-Dichte und Roaming hängen vom Regalbild und den Endgeräten ab." },
+        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+      ],
+      "pruefen": "Santander ist Standortfakt, kein Kunde."
+    },
+    "digital-signage": {
+      "einleitung": "Digital Signage in Mönchengladbach planen wir für Handel, Logistik und Empfang – vom Display bis zur Projektion: Für das REWE Center Willich, eine Viertelstunde von Mönchengladbach, haben wir eine Logo-Bodenprojektion im Markt umgesetzt. SLT Technology Group plant, installiert und betreibt Displays, LED-Flächen und Content-Management vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt.",
+      "anforderungen_titel": "Was Signage in Mönchengladbach leisten muss",
+      "anforderungen": "Mönchengladbach ist Handels- und Logistikstadt: Der Handel ist die größte Branche unter den ausländischen Unternehmen der Stadt, Distributionszentren für Mode und Konsumgüter prägen Regiopark und Nordpark. Im Handel geht es um Aufmerksamkeit im Markt und am Schaufenster – Helligkeit gegen Tageslicht, Inhalte, die die Filiale pflegen kann, Formate wie die Bodenprojektion in Willich, die auffallen, ohne eine Wand zu brauchen. In der Logistik zeigt Signage Durchsatz, Schichtpläne und Sicherheitshinweise im Dauerbetrieb, mit Daten aus WMS oder ERP. In Empfängen der Zentralen informiert sie Besucher mehrsprachig. Wir planen Displayklasse, Halterung, Netzwerk und CMS zusammen, damit Fernüberwachung und Ersatz von Anfang an geregelt sind.",
+      "arbeitsweise": "Flächen, Licht und Inhalte klären wir vor Ort oder im Vorführraum in Krefeld, wählen Display, LED oder Projektion danach aus und richten das CMS mit Ihren Rollen ein. Installation abgestimmt mit Marktleitung oder Haustechnik; Monitoring und Wartung im Servicevertrag, auch für bestehende Anlagen.",
+      "faq": [
+        { "frage": "Welche Signage-Projekte haben Sie in der Nähe?", "antwort": "Logo-Bodenprojektion im REWE Center Willich; Wartung der Outdoor-LED-Anlagen von Knauber in Bonn." },
+        { "frage": "Was ist eine Logo-Bodenprojektion?", "antwort": "Ein LED-Projektor wirft Logo oder Botschaft auf den Boden – ohne Display, ohne Wand, mit wechselbaren Motiven. Eingesetzt im REWE Center Willich." },
+        { "frage": "Können wir Inhalte selbst pflegen?", "antwort": "Ja. Wir richten das CMS mit Rollen ein und schulen Ihr Team; der technische Betrieb bleibt bei uns, wenn Sie das wollen." }
+      ],
+      "pruefen": "WMS/ERP-Anbindung: nur stehen lassen, wenn ihr das anbietet."
     }
-  ]
+  }
 }

@@ -1,85 +1,53 @@
 import { describe, expect, it } from "vitest";
-import {
-  REGIONEN,
-  OPEN_FIELDS,
-  getRegion,
-  isPlaceholder,
-  referenzenFuerLeistung,
-  regionPageText,
-  textSimilarity,
-  visibleFaqs,
-} from "@/data/regionen";
-import { topics } from "@/data/localSEO";
+import { REGIONEN, SERVICE_NAMES, referenzenFuerLeistung, regionDescription, sentenceSimilarity, visibleFaqs, regionalDataViolations, type ServiceKey } from "@/data/regionen";
+import { ALL_ROUTES } from "@/data/seo-routes";
+import { buildLocalSeoSchemas } from "@/data/schemas";
 
-const CITY_SLUGS = Object.keys(REGIONEN);
-const LEISTUNGEN = Object.values(topics).map((t) => t.leistung);
-
-describe("Regionen-Daten (Vorgabe 08.11.2026)", () => {
-  it("hat genau die sieben vorgegebenen Städte", () => {
-    expect(CITY_SLUGS.sort()).toEqual(
-      ["bonn", "duesseldorf", "duisburg", "essen", "koeln", "krefeld", "moenchengladbach"].sort(),
-    );
+const keys = Object.keys(SERVICE_NAMES) as ServiceKey[];
+describe("Final regional editorial data", () => {
+  it("contains exactly seven cities and 35 service entries", () => {
+    expect(Object.keys(REGIONEN).sort()).toEqual(["bonn", "duesseldorf", "duisburg", "essen", "koeln", "krefeld", "moenchengladbach"]);
+    expect(Object.values(REGIONEN).reduce((sum, region) => sum + Object.keys(region.leistungen).length, 0)).toBe(35);
   });
-
-  it("jede Stadt hat eine eigene Einleitung von höchstens drei Sätzen", () => {
-    const intros = new Set<string>();
-    for (const region of Object.values(REGIONEN)) {
-      const sentences = region.intro.split(/(?<=[.!?])\s+/).filter(Boolean);
-      expect(sentences.length, region.slug).toBeLessThanOrEqual(3);
-      expect(intros.has(region.intro), `Intro doppelt: ${region.slug}`).toBe(false);
-      intros.add(region.intro);
+  it("requires at least two complete FAQs per route", () => {
+    for (const region of Object.values(REGIONEN)) for (const key of keys) {
+      expect(visibleFaqs(region, key).length, `${region.slug}/${key}`).toBeGreaterThanOrEqual(2);
+      expect(region.leistungen[key]?.einleitung).toBeTruthy();
+      expect(region.leistungen[key]?.anforderungen).toBeTruthy();
     }
   });
-
-  it("rendert keine Referenzen ohne Freigabe", () => {
-    for (const region of Object.values(REGIONEN)) {
-      for (const leistung of LEISTUNGEN) {
-        for (const ref of referenzenFuerLeistung(region, leistung)) {
-          expect(ref.freigabe, `${region.slug}/${ref.name}`).toBe(true);
-        }
-      }
+  it("matches exact service keys and never publishes unapproved references", () => {
+    const region = REGIONEN.koeln;
+    expect(referenzenFuerLeistung(region, "videokonferenz").map(ref => ref.name)).toEqual(["Bank-Verlag", "Pfeifer & Langen"]);
+    expect(referenzenFuerLeistung(region, "it-netzwerk")).toEqual([]);
+    const candidate = { ...region, referenzen: [...region.referenzen, { name: "Unapproved", beschreibung: "Private", leistung: ["videokonferenz"], ort: "Köln", freigabe: false }] };
+    expect(referenzenFuerLeistung(candidate, "videokonferenz").map(ref => ref.name)).not.toContain("Unapproved");
+    expect(referenzenFuerLeistung(region, "video")).toEqual([]);
+  });
+  it("permits at most 20% identical sentences in intro and requirements", () => {
+    expect(sentenceSimilarity("Gleicher Satz. Eigener Satz.", "Gleicher Satz. Anderer Satz.")).toBe(0.5);
+    const cities = Object.values(REGIONEN);
+    for (const key of keys) for (let i = 0; i < cities.length; i++) for (let j = i + 1; j < cities.length; j++) {
+      const a = cities[i].leistungen[key], b = cities[j].leistungen[key];
+      expect(sentenceSimilarity(`${a?.einleitung} ${a?.anforderungen}`, `${b?.einleitung} ${b?.anforderungen}`), `${key}/${cities[i].slug}/${cities[j].slug}`).toBeLessThanOrEqual(0.2);
     }
   });
-
-  it("zeigt pro Leistung nur passende Referenzen", () => {
-    const koeln = getRegion("koeln")!;
-    expect(referenzenFuerLeistung(koeln, "Videokonferenz").map((r) => r.name)).toEqual(["Bank-Verlag"]);
-    expect(referenzenFuerLeistung(koeln, "Konferenztechnik").map((r) => r.name)).toEqual(["Pfeifer & Langen"]);
-    expect(referenzenFuerLeistung(koeln, "IT-Netzwerk")).toEqual([]);
-    const bonn = getRegion("bonn")!;
-    expect(referenzenFuerLeistung(bonn, "Digital Signage").map((r) => r.name)).toEqual(["Knauber"]);
-    expect(referenzenFuerLeistung(bonn, "Medientechnik").map((r) => r.name)).toEqual(["Knauber"]);
-    const duesseldorf = getRegion("duesseldorf")!;
-    expect(referenzenFuerLeistung(duesseldorf, "IT-Netzwerk").map((r) => r.name)).toEqual([
-      "Boston Consulting Group",
-      "Capgemini",
-    ]);
+  it("uses all four requested schemas with the real branch address and correct FAQ", () => {
+    const route = ALL_ROUTES.find(route => route.path === "/videokonferenz/koeln");
+    if (!route) throw new Error("Missing route");
+    const schemas = JSON.parse(JSON.stringify(buildLocalSeoSchemas(route)));
+    expect(schemas.flatMap((schema: Record<string, unknown>) => schema["@type"])).toEqual(["Service", "LocalBusiness", "ProfessionalService", "FAQPage", "BreadcrumbList"]);
+    expect(schemas[0].provider.name).toBe("SLT Technology Group GmbH & Co. KG");
+    expect(schemas[1].address.streetAddress).toBe("Drachenburgstraße 8");
+    expect(schemas[2].mainEntity).toHaveLength(3);
+    expect(schemas[2].mainEntity[0].acceptedAnswer.text).toBe(REGIONEN.koeln.leistungen.videokonferenz?.faq?.[0].antwort);
+    expect(JSON.stringify(schemas)).not.toMatch(/pruefen|quellen|<GBP|Luca|Sandhoff/);
   });
-
-  it("rendert keine Platzhalter-Antworten und sammelt offene Felder", () => {
-    for (const region of Object.values(REGIONEN)) {
-      for (const faq of visibleFaqs(region)) {
-        expect(isPlaceholder(faq.answer), `${region.slug}: ${faq.question}`).toBe(false);
-      }
-    }
-    // Bekannte offene Felder: GBP-URLs (7 Städte) + Bonner Reaktionszeit
-    expect(OPEN_FIELDS.some((f) => f.feld.includes("Reaktionszeit") && f.stadt === "Bonn")).toBe(true);
-    expect(OPEN_FIELDS.filter((f) => f.feld === "gbpUrl")).toHaveLength(7);
-  });
-
-  it("hält den gemeinsamen Text zweier Stadtseiten derselben Leistung unter 30 %", () => {
-    for (const leistung of LEISTUNGEN) {
-      for (let i = 0; i < CITY_SLUGS.length; i++) {
-        for (let j = i + 1; j < CITY_SLUGS.length; j++) {
-          const a = regionPageText(REGIONEN[CITY_SLUGS[i]], leistung);
-          const b = regionPageText(REGIONEN[CITY_SLUGS[j]], leistung);
-          const similarity = textSimilarity(a, b);
-          expect(
-            similarity,
-            `${leistung}: ${CITY_SLUGS[i]} vs ${CITY_SLUGS[j]} = ${(similarity * 100).toFixed(1)} %`,
-          ).toBeLessThanOrEqual(0.3);
-        }
-      }
-    }
+  it("blocks export until the 18 separate descriptions are supplied", () => {
+    const pending = Object.values(REGIONEN).flatMap(region => keys.filter(key => regionDescription(region, key).pending));
+    expect(pending).toHaveLength(18);
+    const violations = regionalDataViolations();
+    expect(violations).toHaveLength(18);
+    expect(violations.every(message => message.includes("description required"))).toBe(true);
   });
 });

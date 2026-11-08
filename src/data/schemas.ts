@@ -8,7 +8,7 @@
  */
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
-import { getRegion, visibleFaqs } from "./regionen";
+import { getRegion, visibleFaqs, isServiceKey } from "./regionen";
 import { getProjectBySlug, PROJECTS, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
@@ -134,15 +134,15 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
     "@type": "Service",
     name: `${topic.shortTitle} ${city.name}`,
     serviceType: topic.title,
-    description: region?.intro ?? route.description,
-    provider: ORG_REF,
+    description: region && isServiceKey(route.topic) ? region.leistungen[route.topic]?.einleitung : route.description,
+    provider: { ...ORG_REF, name: "SLT Technology Group GmbH & Co. KG" },
     areaServed: { "@type": "City", name: city.name },
     url: `${BASE_URL}${route.path}`,
   });
 
   // LocalBusiness mit dem zuständigen Standort (aus den Stadt-Daten)
   if (region) {
-    schemas.push(region.standort.includes("Bonn") ? BONN_LOCAL_BUSINESS : KREFELD_LOCAL_BUSINESS);
+    schemas.push({ ...(region.standort.name === "Bonn" ? BONN_LOCAL_BUSINESS : KREFELD_LOCAL_BUSINESS), "@type": ["LocalBusiness", "ProfessionalService"] });
   } else if (route.city === "krefeld") {
     schemas.push(KREFELD_LOCAL_BUSINESS);
   } else if (route.city === "bonn") {
@@ -151,7 +151,7 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
 
   // FAQPage – aus den Stadt-Daten (ohne Platzhalter), NRW aus dem Override
   const faqs = region
-    ? visibleFaqs(region)
+    ? visibleFaqs(region, route.topic).map(faq => ({ question: faq.frage, answer: faq.antwort }))
     : getContentOverride(route.topic, route.city)?.faqItems ?? [];
   if (faqs.length > 0) schemas.push(buildFAQPageSchema(faqs));
 

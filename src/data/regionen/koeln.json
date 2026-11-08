@@ -1,43 +1,79 @@
 {
   "stadt": "Köln",
   "slug": "koeln",
-  "standort": "Bonn",
+  "standort": { "name": "Bonn", "zusatz": "Standort Bonn (Adresse aus dem Footer übernehmen)" },
   "fahrzeit": "ca. 35–45 Minuten ab Bonn",
-  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
   "gbpUrl": null,
-  "intro": "Köln betreuen wir von unserem Standort Bonn aus – mit einer Anfahrt von rund 35–45 Minuten. In der Domstadt haben wir für den Bank-Verlag eine mobile Videokonferenzstele gebaut und für Pfeifer & Langen über 20 Konferenzräume standardisiert. Ansprechpartner für Kölner Projekte ist Benedikt Nöchel aus der Geschäftsführung.",
-  "referenzen": [
-    {
-      "name": "Bank-Verlag",
-      "leistung": "Videokonferenz",
-      "detail": "Mobile Videokonferenzstele mit iiyama 86\"-Touchscreen und Barco ClickShare Bar Core",
-      "ort": "Köln",
-      "freigabe": true,
-      "url": "/projekte/bank-verlag-mobile-videokonferenzstele-koeln"
-    },
-    {
-      "name": "Pfeifer & Langen",
-      "leistung": "Konferenztechnik",
-      "detail": "Über 20 Konferenzräume standardisiert, inklusive 136\"-LED-Wall",
-      "ort": "Köln",
-      "freigabe": true,
-      "url": "/projekte/pfeifer-langen"
-    }
+  "quellen": [
+    { "fakt": "Rund 70 Versicherungen in Köln; Köln ist vor München der Top-Standort der Branche in Deutschland (OB Reker, 2017)", "url": "https://www.th-koeln.de/mam/downloads/deutsch/hochschule/aktuell/pm/2017/pm_43_2017_grundung_insurlab_germany.pdf" },
+    { "fakt": "Rund 25.000 Beschäftigte in fast 4.000 Unternehmen der Versicherungsbranche in Köln (IHK Köln, 2023)", "url": "https://www.ihk.de/koeln/hauptnavigation/news/ihkplus-2023-04-zukunftsversicherung-5773200" },
+    { "fakt": "Köln ist einer der wichtigsten Medienstandorte Deutschlands (WDR, RTL); Großunternehmen u. a. Ford, Bayer, AXA, Gothaer, Generali, DEUTZ", "url": "https://epflicht.ulb.uni-bonn.de/download/pdf/43615" }
   ],
-  "branchen": ["Finanz- und Verlagswesen", "Lebensmittelindustrie"],
-  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
-  "faq": [
-    {
-      "question": "Wie schnell sind Sie in Köln vor Ort?",
-      "answer": "Unser Standort Bonn liegt ca. 35–45 Minuten von Köln entfernt – Beratung, Installation und Service für Kölner Unternehmen erfolgen von dort aus."
+  "referenzen": [
+    { "name": "Bank-Verlag", "leistung": ["videokonferenz", "medientechnik", "konferenztechnik"], "beschreibung": "Mobile Videokonferenzstele mit iiyama 86\"-Touchscreen und Barco ClickShare Bar Core", "ort": "Köln", "freigabe": true, "url": "/projekte/bank-verlag-mobile-videokonferenzstele-koeln" },
+    { "name": "Pfeifer & Langen", "leistung": ["konferenztechnik", "medientechnik", "videokonferenz", "digital-signage"], "beschreibung": "Standardisierte Ausstattung von über 20 Konferenzräumen, 136\"-LED-Wall", "ort": "Köln", "freigabe": true, "url": "/projekte/pfeifer-langen" }
+  ],
+  "leistungen": {
+    "medientechnik": {
+      "einleitung": "Medientechnik für Köln planen, installieren und betreuen wir vom Standort Bonn aus, rund 40 Minuten entfernt – mit zwei Projekten in der Stadt, die zeigen, was wir meinen: Für Pfeifer & Langen haben wir über 20 Konferenzräume nach einem Standard ausgestattet, inklusive einer 136-Zoll-LED-Wall, und für den Bank-Verlag eine mobile Videokonferenzstele mit 86-Zoll-Touchscreen und Barco ClickShare gebaut. SLT Technology Group liefert Konzeption, Installation und Service aus einer Hand; Herstellerwahl treffen wir nach Raum und Nutzung, nicht nach Katalog.",
+      "anforderungen_titel": "Was Kölner Unternehmen von Medientechnik erwarten",
+      "anforderungen": "Köln ist der größte Versicherungsstandort Deutschlands – rund 70 Versicherer, fast 4.000 Unternehmen der Branche und 25.000 Beschäftigte – und zugleich einer der wichtigsten Medienstandorte mit WDR und RTL. Beide Branchen prägen die Anforderungen, die wir hier sehen: Versicherer betreiben viele Standardräume in großen Verwaltungsgebäuden und erwarten Dokumentation, Datenschutz und Betriebssicherheit auf Konzernniveau; Medienhäuser und Agenturen verlangen Bild- und Tonqualität, die vor Profis besteht. Dazwischen liegt der Kölner Mittelstand aus Industrie und Lebensmittelwirtschaft, für den ein Raum vor allem zuverlässig funktionieren muss. Gemeinsam ist allen: Der Betrieb läuft über Jahre, und ein Systemhaus muss erreichbar sein, wenn der Raum um acht Uhr nicht startet.",
+      "arbeitsweise": "Wir klären Bedarf und Raumtypen mit Ihnen, statten bei mehreren Räumen zuerst einen Referenzraum aus und skalieren danach. Aufmaß und Abstimmung mit IT und Facility Management erfolgen bei der Installation. Nach der Inbetriebnahme stehen Service Desk und Wartungsvertrag bereit; Vor-Ort-Einsätze in Köln planen wir am nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Projekte haben Sie in Köln umgesetzt?", "antwort": "Über 20 standardisierte Konferenzräume mit LED-Wall bei Pfeifer & Langen und eine mobile Videokonferenzstele beim Bank-Verlag." },
+        { "frage": "Von wo aus betreuen Sie Köln?", "antwort": "Von unserem Standort Bonn, rund 40 Minuten entfernt; Ersatz und Lager kommen aus Krefeld." },
+        { "frage": "Übernehmen Sie auch Wartung bestehender Anlagen?", "antwort": "Ja, nach Bestandsaufnahme und herstellerunabhängig, als Einzelauftrag oder im Servicevertrag." }
+      ],
+      "pruefen": "Versicherungszahlen aus 2017/2023 – Größenordnung stabil, Formulierung „rund“ beibehalten."
     },
-    {
-      "question": "Welche Projekte haben Sie in Köln umgesetzt?",
-      "answer": "Für den Bank-Verlag haben wir eine mobile Videokonferenzstele mit iiyama 86\"-Touchscreen und Barco ClickShare Bar Core gebaut. Für Pfeifer & Langen haben wir über 20 Konferenzräume standardisiert, inklusive einer 136\"-LED-Wall."
+    "konferenztechnik": {
+      "einleitung": "Konferenztechnik in Köln kennen wir aus einem Projekt, das die Anforderungen der Stadt gut abbildet: Bei Pfeifer & Langen haben wir über 20 Konferenzräume nach einem gemeinsamen Standard ausgestattet und eine 136-Zoll-LED-Wall integriert. SLT Technology Group plant Konferenzräume vom Huddle Space bis zum Boardroom, installiert und betreut sie – vom Standort Bonn aus, rund 40 Minuten von Köln.",
+      "anforderungen_titel": "Was Konferenzräume in Köln leisten müssen",
+      "anforderungen": "Kölns Wirtschaft ist von großen Verwaltungen geprägt – Versicherer wie AXA, Gothaer und Generali, Konzerne wie Ford und Bayer, dazu Medienhäuser und ein breiter Mittelstand. Wer zwanzig oder fünfzig Besprechungsräume betreibt, braucht keine zwanzig Einzellösungen, sondern drei bis vier Raumtypen mit identischer Bedienung, identischem Ersatzteilbedarf und einer Dokumentation, die der IT-Betrieb versteht. In Altbauten der Innenstadt und in den Verwaltungsbauten der 70er Jahre kommen Kabelwege, Deckenhöhen und Akustik als Planungsthemen hinzu; in Neubauten im Rheinauhafen oder in Ehrenfeld sind es Glaswände und offene Flächen. Für Medienunternehmen zählt zusätzlich die Bildqualität auf großen Flächen – deshalb LED-Wall statt Projektor, wo der Raum es hergibt.",
+      "arbeitsweise": "Wir beginnen mit einer Raumtypologie und einem Referenzraum, der im Betrieb bewertet wird, bevor der Rollout startet. Aufmaß und Abstimmung mit IT und Haustechnik erfolgen bei der Installation. Für den Betrieb bieten wir Service Desk, Monitoring und Wartung; Vor-Ort-Termine in Köln am nächsten Werktag.",
+      "faq": [
+        { "frage": "Welche Konferenzraum-Projekte haben Sie in Köln umgesetzt?", "antwort": "Über 20 Räume mit einheitlichem Standard und einer 136-Zoll-LED-Wall bei Pfeifer & Langen; eine mobile Videokonferenzlösung beim Bank-Verlag." },
+        { "frage": "Wie läuft ein Rollout über viele Räume ab?", "antwort": "Raumtypen festlegen, einen Referenzraum ausstatten und im Betrieb prüfen, dann etagenweise ausrollen – so bleiben Bedienung und Ersatzteile einheitlich." },
+        { "frage": "LED-Wall oder Display?", "antwort": "Ab etwa 110 Zoll und bei hellem Raum ist LED die bessere Wahl; darunter reicht meist ein Display. Wir rechnen beides durch." }
+      ],
+      "pruefen": "Die Stadtteil-Beispiele (Rheinauhafen, Ehrenfeld) sind Beschreibung des Baubestands, keine Projektorte."
     },
-    {
-      "question": "Betreuen Sie mehrere Standorte eines Unternehmens?",
-      "answer": "Ja, wir realisieren standardisierte Rollouts über mehrere Standorte hinweg – wie bei Pfeifer & Langen in Köln mit über 20 einheitlich ausgestatteten Konferenzräumen."
+    "videokonferenz": {
+      "einleitung": "Videokonferenzsysteme in Köln haben wir unter anderem für den Bank-Verlag gebaut – als mobile Stele mit 86-Zoll-Touchscreen und Barco ClickShare Bar Core, die dort eingesetzt wird, wo gerade ein Meeting stattfindet – und bei Pfeifer & Langen in über 20 festen Räumen. SLT Technology Group plant Kamera, Mikrofonie, Display und Steuerung passend zum Raum und bindet sie an Microsoft Teams Rooms, Zoom Rooms oder per BYOD an. Köln betreuen wir vom Standort Bonn aus, rund 40 Minuten entfernt.",
+      "anforderungen_titel": "Was Videokonferenz in Köln besonders macht",
+      "anforderungen": "In Kölns Versicherungs- und Finanzunternehmen entscheidet die IT-Sicherheit mit: Raumsysteme müssen sich in Netzsegmente, zentrale Verwaltung und Update-Prozesse einfügen, und BYOD-Lösungen dürfen keine offenen Ports hinterlassen. Medienhäuser und Agenturen stellen dagegen Anforderungen an Bild und Ton, die über das Übliche hinausgehen – eine Kamera, die vor einem Kameramann besteht. Und viele Kölner Unternehmen arbeiten mit wechselnden Räumen, Projektflächen und Veranstaltungsbereichen; dort ist eine mobile Lösung wie beim Bank-Verlag oft wirtschaftlicher als drei fest installierte Räume. Akustik bleibt in jedem Fall der Punkt, an dem Videokonferenzen scheitern, deshalb planen wir Mikrofonie und Lautsprecher zuerst.",
+      "arbeitsweise": "Wir klären, welche Plattform führt, wie viele Personen typischerweise im Raum sitzen und ob fest oder mobil installiert werden soll. Eine Teststellung im echten Raum zeigt Akustik und Sichtachsen; danach installieren wir, weisen ein und übernehmen auf Wunsch Service und Monitoring. Vor-Ort-Einsatz in Köln am nächsten Werktag.",
+      "faq": [
+        { "frage": "Fest installiert oder mobil?", "antwort": "Fest, wenn der Raum täglich für Videokonferenzen genutzt wird; mobil, wenn Flächen wechseln – wie die Stele beim Bank-Verlag in Köln." },
+        { "frage": "Teams oder Zoom?", "antwort": "Beides. Wir setzen für Teams Rooms und Zoom Rooms zertifizierte Systeme ein und ergänzen BYOD per USB-C für andere Dienste." },
+        { "frage": "Wie binden Sie das System in unsere IT-Sicherheit ein?", "antwort": "Eigenes Netzsegment, zentrale Geräteverwaltung und dokumentierte Ports – abgestimmt mit Ihrer IT vor der Installation." }
+      ],
+      "pruefen": "Aussagen zur IT-Sicherheit beschreiben euer Vorgehen; prüfen, ob das in jedem Projekt so umgesetzt wird."
+    },
+    "it-netzwerk": {
+      "einleitung": "IT-Netzwerk für Kölner Unternehmen planen und bauen wir als Fundament für Konferenztechnik, Digital Signage und den Arbeitsplatz: strukturierte Verkabelung nach DIN EN 50173, WLAN nach Ausleuchtung, Switching und PoE für Displays, Kameras und Access Points. SLT Technology Group betreut Köln vom Standort Bonn aus, rund 40 Minuten entfernt; unsere Netzwerk-Referenzen liegen in Düsseldorf (Boston Consulting Group, Capgemini) und an mehreren Werksstandorten von Sonoco.",
+      "anforderungen_titel": "Was Netzwerke in Köln fordern",
+      "anforderungen": "Köln ist Versicherungs-, Medien- und Industriestadt zugleich, und jede der drei Welten stellt andere Anforderungen an das Netz. Versicherer und Banken verlangen Segmentierung, Protokollierung und Freigabeprozesse, bevor ein Access Point online geht. Medienhäuser bewegen große Dateien und brauchen Bandbreite bis an den Arbeitsplatz, nicht nur im Serverraum. Industrie- und Lebensmittelbetriebe im Kölner Norden und im Rhein-Erft-Kreis betreiben Hallen, in denen WLAN gegen Stahlregale, Feuchtigkeit und Staplerverkehr bestehen muss. Dazu kommt der Kölner Baubestand von der Gründerzeit bis zum Neubau: Kabelwege und Brandschutz sind in jedem Gebäude anders, und eine Planung nach Grundriss scheitert spätestens an der ersten Betondecke. Wir messen deshalb vor Ort, bevor wir planen.",
+      "arbeitsweise": "WLAN-Ausleuchtung mit Messung im Gebäude, daraus Access-Point-Positionen, Kanalplan und Verkabelung; Installation und Abstimmung mit IT und Haustechnik vor Ort; Übergabe mit Messprotokoll und Dokumentation. Netzwerk, Konferenztechnik und Signage kommen aus einer Hand, damit niemand zwischen drei Dienstleistern vermittelt.",
+      "faq": [
+        { "frage": "Haben Sie Netzwerkprojekte in Köln umgesetzt?", "antwort": "Unsere Netzwerk-Referenzen liegen in Düsseldorf und Ratingen (Boston Consulting Group, Capgemini) sowie an Werksstandorten von Sonoco; in Köln haben wir Konferenzräume und Videokonferenz realisiert." },
+        { "frage": "Planen Sie WLAN nach Grundriss oder Messung?", "antwort": "Nach Messung im Gebäude. In Kölner Altbauten und Industriehallen weicht die Realität zu stark vom Plan ab." },
+        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+      ],
+      "pruefen": "Sonoco-Werksstandorte: Orte auf der Projektseite ergänzen, bevor sie regional zugeordnet werden."
+    },
+    "digital-signage": {
+      "einleitung": "Digital Signage in Köln planen wir für Empfang, Mitarbeiterinformation und Verkaufsflächen – als Display, als Videowand oder als LED-Fläche wie die 136-Zoll-LED-Wall, die wir bei Pfeifer & Langen in Köln integriert haben. SLT Technology Group übernimmt Planung, Installation, CMS-Einrichtung und Betrieb; Köln betreuen wir vom Standort Bonn aus, rund 40 Minuten entfernt.",
+      "anforderungen_titel": "Was Signage in Köln leisten muss",
+      "anforderungen": "Köln empfängt Besucher in Versicherungszentralen, Medienhäusern, Messehallen und im Einzelhandel der Innenstadt – und an jedem dieser Orte hat Signage eine andere Aufgabe. Im Empfang einer Versicherung informiert sie und lenkt Besucherströme, im Medienhaus muss sie Bildqualität vor einem kritischen Publikum liefern, in Produktion und Logistik zeigt sie Kennzahlen und Sicherheitshinweise im Schichtbetrieb. Gemeinsam ist allen Fällen: Inhalte kommen aus mehreren Abteilungen, also braucht das CMS Rollen und Freigaben; Displays laufen zwölf oder vierundzwanzig Stunden, also brauchen sie Fernüberwachung; und wer mehrere Standorte hat, will eine zentrale Steuerung mit lokalen Ergänzungen. Wir planen Displayklasse, Halterung, Netzwerk und CMS zusammen, damit der Betrieb nach der Montage nicht zur Dauerbaustelle wird.",
+      "arbeitsweise": "Flächen, Lichtverhältnisse und Inhalte klären wir vor Ort, wählen Display, Videowand oder LED danach aus und richten das CMS mit Ihren Rollen ein. Installation und Abstimmung mit Haustechnik erfolgen bei der Montage. Monitoring und Wartung bieten wir im Servicevertrag an – auch für Anlagen, die wir nicht gebaut haben.",
+      "faq": [
+        { "frage": "Welche Signage-Projekte haben Sie in Köln umgesetzt?", "antwort": "Eine 136-Zoll-LED-Wall im Rahmen der Konferenzraum-Ausstattung bei Pfeifer & Langen in Köln." },
+        { "frage": "Display, Videowand oder LED?", "antwort": "Display bis etwa 98 Zoll, Videowand bei begrenztem Budget auf großer Fläche, LED bei hellem Umfeld oder Flächen über 110 Zoll – wir rechnen alle drei durch." },
+        { "frage": "Können wir Inhalte selbst pflegen?", "antwort": "Ja. Wir richten das CMS mit Rollen und Freigaben ein und schulen Ihre Redakteure; den technischen Betrieb übernehmen wir auf Wunsch." }
+      ],
+      "pruefen": "Die LED-Wall bei Pfeifer & Langen ist Teil der Konferenzraum-Ausstattung; die Formulierung macht das kenntlich."
     }
-  ]
+  }
 }

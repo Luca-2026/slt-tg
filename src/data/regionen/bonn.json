@@ -1,35 +1,78 @@
 {
   "stadt": "Bonn",
   "slug": "bonn",
-  "standort": "Bonn",
+  "standort": { "name": "Bonn", "zusatz": "Eigener Standort Bonn (Adresse aus dem Footer übernehmen)" },
   "fahrzeit": "vor Ort; Rhein-Sieg-Kreis und Ahrweiler ca. 20–40 Minuten",
-  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
   "gbpUrl": null,
-  "intro": "Bonn ist unser zweiter Standort: Von der Drachenburgstraße 8 aus sind wir direkt vor Ort, den Rhein-Sieg-Kreis und Ahrweiler erreichen wir in rund 20–40 Minuten. In Bonn-Endenich warten wir für Knauber die Outdoor-LED-Anlagen am Firmensitz. Ansprechpartner am Standort Bonn ist Geschäftsführer Benedikt Nöchel.",
-  "referenzen": [
-    {
-      "name": "Knauber",
-      "leistung": "Digital Signage und Medientechnik",
-      "detail": "Wartung der Outdoor-LED-Anlagen am Firmensitz",
-      "ort": "Bonn-Endenich",
-      "freigabe": true,
-      "url": "/projekte/knauber-outdoor-led-wartung-bonn"
-    }
+  "quellen": [
+    { "fakt": "Sechs Bundesministerien haben ihren ersten Dienstsitz in Bonn; Bonn ist nach Berlin das zweite politische Zentrum", "url": "https://epflicht.ulb.uni-bonn.de/download/pdf/354463" },
+    { "fakt": "27 UN-Organisationen mit rund 1.200 Beschäftigten (Jahreswirtschaftsbericht 2026)", "url": "https://www.bonn.de/themen-entdecken/wirtschaft-wissenschaft/jahreswirtschaftsbericht-2026/internationaler-standort/internationale-uno-stadt-bonn.php" },
+    { "fakt": "DAX-Konzerne Deutsche Telekom und Deutsche Post DHL sowie rund 16.000 mittelständische Unternehmen", "url": "https://bonn.de/themen-entdecken/wirtschaft-wissenschaft/wirtschaftsstandort-bonn.php" }
   ],
-  "branchen": ["Handel und Energie"],
-  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
-  "faq": [
-    {
-      "question": "Haben Sie ein Team in Bonn?",
-      "answer": "Ja, wir betreiben einen eigenen Standort in Bonn, Drachenburgstraße 8 – mit eigenem Team vor Ort."
+  "referenzen": [
+    { "name": "Knauber", "leistung": ["digital-signage", "medientechnik"], "beschreibung": "Wartung der Outdoor-LED-Anlagen: Lüfter- und Netzteiltausch, Ersatzteilpool, Migration in die VNNOX-Cloud", "ort": "Bonn-Endenich", "freigabe": true, "url": "/projekte/knauber-outdoor-led-wartung-bonn" }
+  ],
+  "leistungen": {
+    "medientechnik": {
+      "einleitung": "Medientechnik in Bonn planen, installieren und betreuen wir von unserem eigenen Standort in der Stadt aus – ohne Anfahrt aus Krefeld, mit Technikern, die Bonner Gebäude kennen. Für Knauber in Bonn-Endenich übernehmen wir die Wartung der Outdoor-LED-Anlagen, vom Lüfter- und Netzteiltausch bis zur Migration in die VNNOX-Cloud. SLT Technology Group liefert Konzeption, Installation und Service für Konferenz-, Audio-, Display- und Steuerungstechnik aus einer Hand.",
+      "anforderungen_titel": "Was Bonn von anderen Standorten unterscheidet",
+      "anforderungen": "Bonn ist Bundesstadt mit sechs Bundesministerien im ersten Dienstsitz, UN-Standort mit 27 Organisationen und Sitz zweier DAX-Konzerne – und daneben Heimat von rund 16.000 mittelständischen Unternehmen. Diese Mischung bestimmt, was Medientechnik hier können muss. Öffentliche Auftraggeber und ihre Dienstleister erwarten Barrierefreiheit nach BITV, dokumentierte IT-Sicherheit und Angebote, die vergaberechtlich sauber sind. Internationale Organisationen brauchen Räume für mehrsprachige Sitzungen, Dolmetschung und hybride Teilnahme. Der Mittelstand im Rhein-Sieg-Kreis will dagegen einen Raum, der zuverlässig funktioniert, und einen Ansprechpartner, der kommt, wenn er nicht funktioniert. Wir planen für alle drei dieselbe Grundlage – saubere Akustik, einfache Bedienung, wartbare Technik – und ergänzen, was der jeweilige Auftraggeber verlangt.",
+      "arbeitsweise": "Bedarf und Raumtypen klären wir mit Ihnen vor Ort; Aufmaß und Abstimmung mit IT und Haustechnik erfolgen bei der Installation. Teststellungen im eigenen Raum sind möglich. Nach der Inbetriebnahme stehen Service Desk, Monitoring und Wartung bereit – aus Bonn, am nächsten Werktag vor Ort.",
+      "faq": [
+        { "frage": "Haben Sie ein Team in Bonn?", "antwort": "Ja, SLT Technology Group hat einen eigenen Standort in Bonn; Krefeld ist der Hauptsitz mit Lager und Vorführraum." },
+        { "frage": "Welche Projekte haben Sie in Bonn umgesetzt?", "antwort": "Die Wartung und Modernisierung der Outdoor-LED-Anlagen von Knauber in Bonn-Endenich." },
+        { "frage": "Arbeiten Sie für öffentliche Auftraggeber?", "antwort": "Ja. Wir kennen die Anforderungen an Barrierefreiheit, IT-Sicherheit und Vergabe und liefern die dafür nötige Dokumentation." }
+      ],
+      "pruefen": "„Arbeiten Sie für öffentliche Auftraggeber? – Ja“ ist eine Fähigkeitsaussage; wenn ihr noch keinen öffentlichen Auftrag abgewickelt habt, auf „Wir bieten für öffentliche Auftraggeber an“ abschwächen."
     },
-    {
-      "question": "Übernehmen Sie die Wartung bestehender Anlagen?",
-      "answer": "Ja – für Knauber in Bonn-Endenich warten wir die Outdoor-LED-Anlagen am Firmensitz, inklusive Lüfter- und Netzteiltausch sowie Ersatzteilpool."
+    "konferenztechnik": {
+      "einleitung": "Konferenztechnik in Bonn reicht vom Besprechungsraum eines Mittelständlers in Beuel bis zum Sitzungssaal einer Bundesbehörde – und wir planen beides von unserem Standort in Bonn aus. SLT Technology Group stattet Räume vom Huddle Space bis zum Boardroom aus, installiert und betreut sie; Referenzen in der Region sind die LED-Anlagen von Knauber in Bonn sowie über 20 standardisierte Konferenzräume bei Pfeifer & Langen in Köln.",
+      "anforderungen_titel": "Was Konferenzräume in Bonn brauchen",
+      "anforderungen": "In Bonn treffen drei Anforderungsprofile aufeinander, die es in dieser Dichte sonst nirgends in NRW gibt. Ministerien, Bundesbehörden und ihre Dienstleister verlangen barrierefreie Bedienung, induktive Höranlagen oder gleichwertige Lösungen, dokumentierte IT-Sicherheit und Technik, die auch ohne Cloud-Anbindung läuft. UN-Organisationen und internationale Verbände sitzen mehrsprachig, oft mit Dolmetschung, und schalten Teilnehmer aus aller Welt hybrid zu. Die beiden DAX-Konzerne und der Mittelstand erwarten Raumstandards, die sich auf viele Räume übertragen lassen. Dazu kommt der Baubestand: Vom Regierungsviertel der 50er bis 70er Jahre bis zu Neubauten am Bonner Bogen sind Deckenhöhen, Kabelwege und Akustik jedes Mal anders. Wir planen Mikrofonie und Lautsprecher zuerst, weil sie in hohen Altbausälen über Verständlichkeit entscheiden.",
+      "arbeitsweise": "Wir legen mit Ihnen Raumtypen fest, statten bei mehreren Räumen einen Referenzraum aus und skalieren danach. Aufmaß und Abstimmung mit IT und Haustechnik erfolgen bei der Installation. Service Desk, Monitoring und Wartung kommen aus Bonn; Vor-Ort-Termine am nächsten Werktag.",
+      "faq": [
+        { "frage": "Können Sie barrierefreie Konferenzräume ausstatten?", "antwort": "Ja: barrierefreie Bedienung, Höranlagen und Untertitelfunktionen der Plattformen planen wir von Anfang an mit ein." },
+        { "frage": "Welche Konferenzraum-Projekte haben Sie in der Region?", "antwort": "Über 20 Räume bei Pfeifer & Langen in Köln; in Bonn betreuen wir die LED-Anlagen von Knauber." },
+        { "frage": "Funktioniert die Technik ohne Cloud?", "antwort": "Ja, wenn gefordert. Steuerung und Audio laufen lokal; Cloud-Dienste wie Teams oder Zoom kommen nur dazu, wenn Sie sie nutzen." }
+      ],
+      "pruefen": "Höranlagen: prüfen, ob ihr induktive Anlagen selbst installiert oder mit einem Partner – sonst „planen wir ein“ statt „statten wir aus“."
     },
-    {
-      "question": "Welche Reaktionszeit gilt für Bonn?",
-      "answer": "[REAKTIONSZEIT EINTRAGEN]"
+    "videokonferenz": {
+      "einleitung": "Videokonferenzsysteme in Bonn planen wir für Organisationen, deren Gegenstellen in New York, Nairobi oder Berlin sitzen – und für Mittelständler im Rhein-Sieg-Kreis, die einfach einen Raum wollen, der auf Knopfdruck startet. SLT Technology Group stimmt Kamera, Mikrofonie, Display und Steuerung auf den Raum ab und bindet sie an Microsoft Teams Rooms, Zoom Rooms oder per BYOD an; unser Standort in Bonn ist vor Ort.",
+      "anforderungen_titel": "Warum Videokonferenz in Bonn anders ist",
+      "anforderungen": "Bonn ist deutsche UN-Stadt mit 27 Organisationen und zweites politisches Zentrum mit sechs Bundesministerien im ersten Dienstsitz. Hybride Sitzungen sind hier Alltag, aber mit Besonderheiten: Teilnehmer sprechen mehrere Sprachen, Dolmetschkanäle müssen in die Videokonferenz eingebunden werden, und Behörden stellen Anforderungen an Datenschutz und Betrieb, die eine Standard-Teams-Bar nicht erfüllt – etwa lokale Verwaltung statt Hersteller-Cloud oder die Trennung von Verwaltungs- und Gastnetz. Gleichzeitig arbeiten in Bonn zwei DAX-Konzerne und tausende Mittelständler, für die der Standardraum mit Teams Rooms genau richtig ist. Wir unterscheiden deshalb früh, welches Profil gilt, statt allen dieselbe Bar zu verkaufen.",
+      "arbeitsweise": "Wir klären Plattform, Teilnehmerzahl, Sprachen und Sicherheitsanforderungen; eine Teststellung im echten Raum zeigt Akustik und Sichtachsen. Danach installieren wir, weisen ein und übernehmen auf Wunsch Service und Monitoring aus Bonn.",
+      "faq": [
+        { "frage": "Können Sie Dolmetschung in die Videokonferenz einbinden?", "antwort": "Ja, über Dolmetschkanäle der Plattform oder eine separate Dolmetschanlage, die wir in das Raumaudio einbinden." },
+        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
+        { "frage": "Teams oder Zoom?", "antwort": "Beides. Wir setzen für Teams Rooms und Zoom Rooms zertifizierte Systeme ein; andere Dienste laufen per BYOD." }
+      ],
+      "pruefen": "Dolmetschanlagen: bestätigen, dass ihr das anbietet; sonst FAQ streichen."
+    },
+    "it-netzwerk": {
+      "einleitung": "IT-Netzwerk in Bonn bauen wir als Grundlage für Konferenztechnik, Digital Signage und Arbeitsplatz: strukturierte Verkabelung nach DIN EN 50173, WLAN nach Ausleuchtung, Switching und PoE. SLT Technology Group ist mit eigenem Standort in Bonn vor Ort; unsere Netzwerk-Referenzen liegen in Düsseldorf und Ratingen (Boston Consulting Group, Capgemini) sowie an mehreren Werksstandorten von Sonoco.",
+      "anforderungen_titel": "Was Netzwerke in Bonn fordern",
+      "anforderungen": "Bonn ist Sitz des Bundesamts für Sicherheit in der Informationstechnik, von Bundesministerien und UN-Organisationen – die Erwartung an IT-Sicherheit ist hier höher als in jeder anderen Stadt der Region, auch bei Unternehmen, die nur als Dienstleister für den Bund arbeiten. Für das Netzwerk heißt das: Segmentierung zwischen Verwaltung, Gästen und Medientechnik, dokumentierte Konfiguration, nachvollziehbare Zugriffe. Die beiden DAX-Konzerne betreiben Campusstandorte mit tausenden Geräten; der Mittelstand im Rhein-Sieg-Kreis braucht ein WLAN, das in Halle und Büro gleichermaßen funktioniert. Der Bonner Baubestand von der Gründerzeit über das Regierungsviertel bis zu Neubauten verlangt eine Planung nach Messung, nicht nach Grundriss.",
+      "arbeitsweise": "WLAN-Ausleuchtung mit Messung im Gebäude, daraus Access-Point-Positionen, Kanalplan und Verkabelung; Installation und Abstimmung mit IT und Haustechnik vor Ort; Übergabe mit Messprotokoll und Dokumentation. Netzwerk, Konferenztechnik und Signage aus einer Hand, vom Standort Bonn.",
+      "faq": [
+        { "frage": "Haben Sie Netzwerkprojekte in Bonn umgesetzt?", "antwort": "Unsere Netzwerk-Referenzen liegen in Düsseldorf, Ratingen und an Sonoco-Werksstandorten; in Bonn betreuen wir die LED-Anlagen von Knauber inklusive Netzanbindung." },
+        { "frage": "Trennen Sie Medientechnik vom Verwaltungsnetz?", "antwort": "Ja, Konferenz- und Signage-Geräte bekommen ein eigenes Segment mit dokumentierten Ports – abgestimmt mit Ihrer IT." },
+        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+      ],
+      "pruefen": "Knauber „inklusive Netzanbindung“: nur stehen lassen, wenn ihr dort tatsächlich die Netzanbindung der LED-Anlagen verantwortet."
+    },
+    "digital-signage": {
+      "einleitung": "Digital Signage in Bonn ist unsere stärkste Referenzleistung in der Stadt: Für Knauber in Bonn-Endenich betreuen wir die Outdoor-LED-Anlagen – Lüfter- und Netzteiltausch, Ersatzteilpool und Migration in die VNNOX-Cloud. SLT Technology Group plant Displays, LED-Flächen und Content-Management, installiert und betreibt sie – von unserem eigenen Standort in Bonn aus.",
+      "anforderungen_titel": "Was Signage in Bonn leisten muss",
+      "anforderungen": "Bonn ist Behörden-, UN- und Konzernstadt mit einem breiten Einzelhandel und starkem Konferenztourismus rund um das World Conference Center. Signage hat hier drei typische Aufgaben: Besucherlenkung und Information in Verwaltungs- und Konferenzgebäuden, oft mehrsprachig und barrierefrei; Mitarbeiterinformation auf Campusstandorten der Konzerne; und Werbung im Handel, bei Knauber als Outdoor-LED an stark befahrenen Straßen. Outdoor-Anlagen bringen eigene Anforderungen mit: Helligkeit gegen Sonne, Lüftung und Netzteile als Verschleißteile, Höhenzugang für die Wartung und ein Monitoring, das Ausfälle meldet, bevor der Kunde sie sieht. Wir planen Displayklasse, Halterung, Netzwerk und CMS gemeinsam und halten für Bestandsanlagen Ersatzteile vor.",
+      "arbeitsweise": "Flächen, Licht und Inhalte klären wir vor Ort, wählen Display oder LED danach aus und richten das CMS mit Ihren Rollen ein. Installation und Abstimmung mit Haustechnik oder Stadt erfolgen bei der Montage. Monitoring und Wartung bieten wir im Servicevertrag – auch für Anlagen anderer Hersteller, wie bei Knauber.",
+      "faq": [
+        { "frage": "Welche Signage-Projekte haben Sie in Bonn umgesetzt?", "antwort": "Wartung und Modernisierung der Outdoor-LED-Anlagen von Knauber in Bonn-Endenich, inklusive Ersatzteilpool und Cloud-Monitoring." },
+        { "frage": "Übernehmen Sie bestehende LED-Anlagen in die Wartung?", "antwort": "Ja, herstellerunabhängig nach Bestandsaufnahme – mit Prüfliste, Ersatzteilen und Monitoring." },
+        { "frage": "Was kostet die Wartung einer Outdoor-LED?", "antwort": "Das hängt von Fläche, Alter und Zugang ab; nach einer Bestandsaufnahme nennen wir einen festen Jahrespreis." }
+      ],
+      "pruefen": "Outdoor-Ratgeber verlinken: /news/outdoor-led-wartung-servicekonzept."
     }
-  ]
+  }
 }

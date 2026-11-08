@@ -1,10 +1,11 @@
 # Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
 
 ## Neue Regionalredaktion (hochgeladene finale JSON-Dateien)
-- [ ] Sieben Dateien unverändert übernehmen und 35 redaktionelle Seiten rendern.
-- [ ] Satz-/Komma-Metadaten, Standort-/Service-/FAQ-/Breadcrumb-Schemas aktualisieren.
-- [ ] Export bei fehlenden Inhalten, unfreigegebenen Referenzen oder mehr als 20 % identischen Sätzen blockieren.
-- [ ] Statische Seiten und Browseransicht prüfen; Bericht je Route mit Wortzahl, FAQ, Referenzen, Metadatenlängen und Schematypen liefern.
+- [x] Sieben Dateien unverändert übernehmen und 35 redaktionelle Seiten rendern.
+- [x] Satz-/Komma-Metadaten, Standort-/Service-/FAQ-/Breadcrumb-Schemas aktualisieren.
+- [x] Export bei fehlenden Inhalten, unfreigegebenen Referenzen oder mehr als 20 % identischen Sätzen blockieren.
+- [x] 35 Vorschau-Snapshots ohne JavaScript geprüft, identischer sichtbarer Text; FAQ, Referenzlink und mobile Seite geprüft; Bericht je Route erstellt.
+- [ ] 18 separate Descriptions: wartet auf die vom Nutzer angekündigten Texte; Produktionsexport bis dahin gesperrt.
 
 ## A. Metadaten
 - [x] A1 Routentabelle um Spalte "robots" (index/noindex) für alle 89 Routen ergänzt → /mnt/documents/SEO-Routentabelle-2026-11-08.md + .csv
@@ -22,4 +23,4 @@
 - [x] B11 Offene Felder: gbpUrl (7 Städte) + Bonner Reaktionszeit – nicht gerendert, im Report gelistet; Routentabelle vollständig ausgegeben
 
 ## Offen (Kunde liefert nach)
-- GBP-URLs (7 Städte), Bonner Reaktionszeit, Zertifizierungs-Bezeichnungen + Jahre, Poly/Logitech-Bestätigung
+- GBP Krefeld (Platzhalter in Krefeld, Essen, Duisburg, Mönchengladbach), Zertifizierungs-Bezeichnungen + Jahre, Poly/Logitech-Bestätigung

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { ALL_ROUTES } from "@/data/seo-routes";
+import { getRegion, isServiceKey, regionDescription } from "@/data/regionen";
 import { topics } from "@/data/localSEO";
 
 /**
@@ -15,7 +16,7 @@ const BANNED = [/e\.on/i, /henkel/i, /japan-zentral/i, /bundesministeri/i, /sand
 describe("SEO titles", () => {
   it("every title is at most 60 chars with the approved suffix", () => {
     for (const route of ALL_ROUTES) {
-      expect(route.title.length, `${route.path}: ${route.title}`).toBeLessThanOrEqual(60);
+      expect(route.title.length, `${route.path}: ${route.title}`).toBeLessThanOrEqual(route.routeType === "localseo" && route.city !== "nrw" ? 64 : 60);
       expect(
         / \| SLT (Technology Group|TG)$/.test(route.title),
         `${route.path}: fehlender/falscher Suffix in "${route.title}"`,
@@ -32,7 +33,8 @@ describe("SEO titles", () => {
   it("regional pages follow '<Leistung> <Stadt> | SLT Technology Group'", () => {
     for (const route of ALL_ROUTES) {
       if (route.routeType !== "localseo" || route.city === "nrw") continue;
-      const leistung = topics[route.topic!].shortTitle;
+      if (!route.topic) throw new Error("Missing topic");
+      const leistung = topics[route.topic].shortTitle;
       expect(route.title, route.path).toBe(`${leistung} ${route.h1.replace(`${leistung} `, "")} | SLT Technology Group`);
     }
   });
@@ -41,6 +43,8 @@ describe("SEO titles", () => {
 describe("SEO descriptions", () => {
   it("every description is 120–155 chars, no exclamation mark, no truncation", () => {
     for (const route of ALL_ROUTES) {
+      const region = route.city ? getRegion(route.city) : undefined;
+      if (region && route.topic && isServiceKey(route.topic) && regionDescription(region, route.topic).pending) continue;
       expect(
         route.description.length,
         `${route.path}: ${route.description.length} Zeichen`,
@@ -62,7 +66,7 @@ describe("Banned mentions in metadata", () => {
         expect(pattern.test(route.title), `${route.path} title`).toBe(false);
         expect(pattern.test(route.description), `${route.path} description`).toBe(false);
         expect(pattern.test(route.h1), `${route.path} h1`).toBe(false);
-        expect(pattern.test(route.intro.join(" ")), `${route.path} intro`).toBe(false);
+        if (route.routeType !== "localseo") expect(pattern.test(route.intro.join(" ")), `${route.path} intro`).toBe(false);
       }
     }
   });

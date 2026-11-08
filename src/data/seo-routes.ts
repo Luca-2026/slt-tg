@@ -4,7 +4,7 @@
  * canonical, og:image, noindex, breadcrumbs, routeType.
  */
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
-import { getRegion, referenzenFuerLeistung } from "./regionen";
+import { getRegion, regionDescription, isServiceKey, REGIONAL_MODIFIED } from "./regionen";
 import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
 import { solutionPages } from "./solutionPages";
@@ -305,29 +305,10 @@ export const MAIN_ROUTES: SeoRoute[] = [
 // ───────────────────────────────────────────────────────────
 // 2) LOCALSEO_ROUTES (aus getLocalSEORoutes())
 // ───────────────────────────────────────────────────────────
-/**
- * Description für Regional-Seiten: 120–155 Zeichen, datengetrieben aus den
- * Stadt-Feldern (Fahrzeit, freigegebene Referenzen der Leistung).
- */
 function buildRegionDescription(topicKey: string, cityKey: string): string {
-  const topic = topics[topicKey];
-  const city = cities[cityKey];
   const region = getRegion(cityKey);
-  if (!region) {
-    return getContentOverride(topicKey, cityKey)?.heroSubtitle ?? "";
-  }
-  const refs = referenzenFuerLeistung(region, topic.leistung);
-  let description: string;
-  if (refs.length > 0) {
-    const refNames = refs.map((ref) => ref.name).slice(0, 2).join(" und ");
-    description = `${topic.shortTitle} in ${city.name}: Planung, Installation und Service – ${region.fahrzeit}. Referenzen: ${refNames}.`;
-  } else {
-    description = `${topic.shortTitle} in ${city.name}: Planung, Installation und Service durch SLT Technology Group – ${region.fahrzeit}.`;
-  }
-  if (description.length < 120) {
-    description += " Ansprechpartner: Benedikt Nöchel.";
-  }
-  return description;
+  if (region && isServiceKey(topicKey)) return regionDescription(region, topicKey).text;
+  return getContentOverride(topicKey, cityKey)?.heroSubtitle ?? "";
 }
 
 export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
@@ -337,7 +318,7 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
   const override = region ? undefined : getContentOverride(r.topic, r.city);
 
   const h1 = override?.heroTitle ?? `${topic.shortTitle} ${city.name}`;
-  const intro = region ? [region.intro] : [override?.heroSubtitle ?? "", override?.intro ?? ""];
+  const intro = region && isServiceKey(r.topic) ? [region.leistungen[r.topic]?.einleitung ?? ""] : [override?.heroSubtitle ?? "", override?.intro ?? ""];
   const title = override
     ? `${override.heroTitle.replace(/ in Nordrhein-Westfalen$/, " NRW")} | SLT Technology Group`
     : `${topic.shortTitle} ${city.name} | SLT Technology Group`;
@@ -355,7 +336,7 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
     noindex: r.noindex,
     changefreq: "monthly",
     priority: 0.8,
-    lastmod: "2026-11-08",
+    lastmod: region ? REGIONAL_MODIFIED : undefined,
     breadcrumbs: [
       { name: topic.title, path: `/${topic.baseSlug}/krefeld` },
       { name: city.name, path: r.path },
