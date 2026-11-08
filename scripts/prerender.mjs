@@ -28,6 +28,8 @@ export async function loadRouteData() {
 export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOptions = {}, routes } = {}) {
   const { ALL_ROUTES, resolveRouteSchemas, routeMetadata, applyRouteMetadata, inspectRouteMetadata, REGIONEN, regionalDataViolations, isServiceKey } = await loadRouteData();
   const catalogue = routes ?? ALL_ROUTES;
+  const MAX_PRERENDER_PAGES = 1000;
+  if (catalogue.length > MAX_PRERENDER_PAGES) throw new Error(`Prerender route limit exceeded: ${catalogue.length}/${MAX_PRERENDER_PAGES}`);
   const regionalViolations = regionalDataViolations();
   if (!sourceUrl && regionalViolations.length) throw new Error(`Regional export blocked:\n${regionalViolations.join("\n")}`);
   // Production always requires the Vite-built template. A source URL is only
@@ -137,7 +139,7 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
       await scan(outputDir);
     }
     await writeFile(path.join(outputDir, "sitemap.xml"), buildSitemap(catalogue));
-    await writeFile(path.join(outputDir, "regionalseiten-pruefbericht.md"), regionalReportMarkdown(rows, { preview: !!template === false }));
+    await writeFile(path.join(template ? ROOT : outputDir, "regionalseiten-pruefbericht.md"), regionalReportMarkdown(rows, { preview: !!template === false }));
     await writeFile(path.join(sourceUrl && outputDir !== DIST ? outputDir : ROOT, ".prerender-audit.json"), JSON.stringify(rows, null, 2));
     await copyFile(path.join(ROOT, "public/.htaccess"), path.join(outputDir, ".htaccess"));
     console.log(`[prerender] ${rows.length} complete static pages; no runtime SSR`);

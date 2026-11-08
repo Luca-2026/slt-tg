@@ -26,8 +26,8 @@
     Header always set Cache-Control "public, max-age=86400"
   </FilesMatch>
 
-  # sitemap.xml und robots.txt: kurz cachen
-  <FilesMatch "^(sitemap\.xml|robots\.txt)$">
+  # Crawler-Dateien: kurz cachen
+  <FilesMatch "^(sitemap\.xml|robots\.txt|llms\.txt)$">
     Header always unset Cache-Control
     Header always set Cache-Control "public, max-age=3600"
   </FilesMatch>
@@ -48,7 +48,7 @@
 </IfModule>
 
 # ============================================================
-#  Rewrite-Block: HTTPS + www erzwingen, danach SPA-Fallback
+#  Rewrite-Block: HTTPS + www erzwingen, statische Seiten, echte 404
 # ============================================================
 <IfModule mod_rewrite.c>
   RewriteEngine On

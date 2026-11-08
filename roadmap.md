@@ -1,5 +1,10 @@
 # Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
 
+## Post-Build & Serverprofis-Upload
+- [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
+- [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
+- [ ] Produktions-Upload-Paket: blockiert durch 41 Inhaltsseiten unter 300 sichtbaren Wörtern sowie 404 (15 Wörter, kein Canonical). Unveränderliche regionale Redaktion darf nicht eigenmächtig aufgefüllt werden; Freigabe für redaktionelle Ergänzungen oder explizite Regelausnahmen erforderlich.
+
 ## JSON-LD (08.11.2026)
 - [x] Wiederverwendbare Ausgabe für globale Organisation, Standorte und route-spezifische Schemas ohne Duplikate.
 - [x] FAQ-Daten gemeinsam nutzen; Artikel, Referenzen und Unterseiten-Breadcrumbs prüfen.

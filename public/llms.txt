@@ -1,0 +1,33 @@
+# SLT Technology Group
+
+> AV-Systemhaus für Konferenz- und Medientechnik mit Standorten in Krefeld und Bonn.
+
+SLT Technology Group GmbH & Co. KG plant, integriert und betreibt AV- und IT-Lösungen für Unternehmen.
+
+## Lösungen und Services
+
+- [Konferenzraum-Ausstattung](/konferenzraum-ausstattung): Planung und Integration von Besprechungsräumen.
+- [Videokonferenzanlage](/videokonferenzanlage): Kamera, Audio, Displays und Plattform-Integration.
+- [Digital Signage](/digital-signage): Displays, Content-Systeme und standortübergreifende Ausspielung.
+- [Lösungen](/loesungen): Übersicht der AV-Lösungen.
+- [Managed Services](/managed-services): Betrieb, Wartung und CARE-Service-Modelle.
+
+## Wissen und Referenzen
+
+- [Ratgeber](/ratgeber): Fachbeiträge zur Planung und zum Betrieb von Medientechnik.
+- [Raumbuchungssystem für Konferenzräume](/ratgeber/raumbuchungssystem-konferenzraeume): Kalender-Integration, Türpanels und Betrieb.
+- [News](/news): Neuigkeiten aus der AV-Welt.
+- [Outdoor-LED-Wartung](/news/outdoor-led-wartung-servicekonzept): Prüfschritte und Service für LED-Anlagen.
+- [Projekte](/projekte): Kundenreferenzen.
+- [Bank-Verlag](/projekte/bank-verlag-mobile-videokonferenzstele-koeln): Mobile Videokonferenzlösung in Köln.
+
+## Unternehmen
+
+- [Über uns](/ueber-uns): Unternehmen und Team.
+- [Technologien](/technologien): Hersteller und technische Kompetenzen.
+- [Kontakt](/kontakt): Standorte und Kontaktmöglichkeiten.
+
+## Optional
+
+- [Karriere](/karriere): Stellen und Ausbildung.
+- [Finanzierung](/finanzierung): Finanzierungsoptionen für AV-Projekte.

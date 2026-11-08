@@ -1,4 +1,5 @@
 # Architecture rules
+- Production postbuild validates every exported HTML route in JavaScript-disabled Chromium, including 300 visible main-text words, H1, hero uniqueness, FAQ schemas and canonical; violations block delivery without silently exempting short pages.
 - JsonLd owns one reusable head slot; Layout and the static exporter resolve the same global and route schemas, and visible FAQ blocks share their editorial arrays with the schema catalogue to prevent duplication and drift.
 - Render one responsive homepage hero; initial counters contain their final values, browser-only animations respect reduced motion and the build-time prerender marker, and FAQ answers stay mounted while collapsed.
 - Keep initial reveal content visible and hotspot positions at CSS fallbacks; only mount effects animate or measure, and __PRERENDER__ freezes them so snapshots preserve initial root markup.
