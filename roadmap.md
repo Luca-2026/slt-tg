@@ -1,5 +1,11 @@
 # Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
 
+## Neue Regionalredaktion (hochgeladene finale JSON-Dateien)
+- [ ] Sieben Dateien unverändert übernehmen und 35 redaktionelle Seiten rendern.
+- [ ] Satz-/Komma-Metadaten, Standort-/Service-/FAQ-/Breadcrumb-Schemas aktualisieren.
+- [ ] Export bei fehlenden Inhalten, unfreigegebenen Referenzen oder mehr als 20 % identischen Sätzen blockieren.
+- [ ] Statische Seiten und Browseransicht prüfen; Bericht je Route mit Wortzahl, FAQ, Referenzen, Metadatenlängen und Schematypen liefern.
+
 ## A. Metadaten
 - [x] A1 Routentabelle um Spalte "robots" (index/noindex) für alle 89 Routen ergänzt → /mnt/documents/SEO-Routentabelle-2026-11-08.md + .csv
 - [x] A2 Titles max. 60 Zeichen, Suffix " | SLT Technology Group" / " | SLT TG"; kein "| SLT AV" mehr; Regionalseiten "<Leistung> <Stadt> | SLT Technology Group" (Test: seo-title-description.test.ts)
