@@ -53,7 +53,7 @@ export function visibleMainText() {
   const chunks = [];
   while (walker.nextNode()) {
     const node = walker.currentNode;
-    if (!node.textContent?.trim()) continue;
+    if (!node.textContent) continue;
     let element = node.parentElement;
     let visible = true;
     while (element && element !== main.parentElement) {
@@ -65,7 +65,15 @@ export function visibleMainText() {
           !element.querySelector(":scope > summary")?.contains(node)) { visible = false; break; }
       element = element.parentElement;
     }
-    if (visible) chunks.push(node.textContent.trim());
+    if (visible) {
+      // Preserve adjacent React text nodes: 305 + must remain 305+, not
+      // artificially diverge from the HTML parser's merged text node.
+      const parent = node.parentElement;
+      const block = parent && !["inline", "contents"].includes(getComputedStyle(parent).display);
+      if (block && node === parent.firstChild) chunks.push(" ");
+      chunks.push(node.textContent);
+      if (block && node === parent.lastChild) chunks.push(" ");
+    }
   }
-  return chunks.join(" ").replace(/\s+/g, " ").trim();
+  return chunks.join("").replace(/\s+/g, " ").trim();
 }
