@@ -15,6 +15,7 @@ import { getSolutionPage } from "./solutionPages";
 import { serviceModels } from "./serviceModels";
 import { msFaqs } from "./managedServices";
 import { homeFaqs, digitalSignageFaqs, videoConferenceFaqs } from "./pageFaqs";
+import { LOCATION_PROFILES } from "./locationProfiles";
 
 const BASE_URL = "https://www.slt-tg.de";
 
@@ -33,6 +34,8 @@ const KREFELD_LOCAL_BUSINESS = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${BASE_URL}/#localbusiness-krefeld`,
+  sameAs: [LOCATION_PROFILES.krefeld],
+  hasMap: LOCATION_PROFILES.krefeld,
   name: "SLT Technology Group GmbH & Co. KG",
   alternateName: "SLT Technology Group",
   description:

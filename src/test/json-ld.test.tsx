@@ -40,6 +40,17 @@ describe("Shared JSON-LD catalogue", () => {
       expect(faq[0].mainEntity.map((q: {name: string; acceptedAnswer: {text: string}}) => ({question: q.name, answer: q.acceptedAnswer.text}))).toEqual(faqs);
     }
   });
+  it("links the supplied Google profile only to the Krefeld LocalBusiness on every route", () => {
+    for (const route of ALL_ROUTES) {
+      const organization = parsed(resolveRouteSchemas(route)).find((s: Record<string, unknown>) => s["@type"] === "Organization");
+      const krefeld = organization.subOrganization.find((s: {address: {addressLocality: string}}) => s.address.addressLocality === "Krefeld");
+      const bonn = organization.subOrganization.find((s: {address: {addressLocality: string}}) => s.address.addressLocality === "Bonn");
+      expect(krefeld.sameAs).toEqual(["https://g.page/r/Cd2wFjhe4wGgEBM/"]);
+      expect(krefeld.hasMap).toBe("https://g.page/r/Cd2wFjhe4wGgEBM/");
+      expect(bonn).not.toHaveProperty("hasMap");
+      expect(bonn).not.toHaveProperty("sameAs");
+    }
+  });
   it("includes self-referencing breadcrumbs on every catalogue subpage", () => {
     for (const route of ALL_ROUTES.filter(r => r.path !== "/")) {
       const crumbs = parsed(resolveRouteSchemas(route)).filter((s: Record<string, unknown>) => s["@type"] === "BreadcrumbList");
