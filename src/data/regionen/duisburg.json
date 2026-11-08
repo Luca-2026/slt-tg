@@ -1,0 +1,22 @@
+{
+  "stadt": "Duisburg",
+  "slug": "duisburg",
+  "standort": "Krefeld",
+  "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Duisburg liegt uns nah: Von unserem Hauptsitz in Krefeld aus sind wir in rund 25–35 Minuten bei Ihnen. Projektleitung, Lager und Vorführraum sitzen in der Anrather Straße 291 – das bedeutet kurze Wege für Beratung, Installation und Service in Duisburg. Ihr Ansprechpartner ist Benedikt Nöchel aus der Geschäftsführung.",
+  "referenzen": [],
+  "branchen": [],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Wie schnell sind Sie in Duisburg vor Ort?",
+      "answer": "Von Krefeld aus erreichen wir Duisburg in ca. 25–35 Minuten – über die A57 sind es je nach Zielstadtteil oft nur wenige Kilometer."
+    },
+    {
+      "question": "Von welchem Standort wird Duisburg betreut?",
+      "answer": "Duisburg wird vollständig von unserem Hauptsitz in Krefeld aus betreut – Beratung, Installation und Service kommen direkt vom Niederrhein."
+    }
+  ]
+}

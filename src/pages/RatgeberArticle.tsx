@@ -736,7 +736,7 @@ const RatgeberArticle = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/service-wartung" className="text-primary hover:underline font-medium">
+                  <Link to="/managed-services" className="text-primary hover:underline font-medium">
                     Wartung und Service für Konferenztechnik
                   </Link>
                 </li>

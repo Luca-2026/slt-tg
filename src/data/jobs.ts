@@ -55,6 +55,8 @@ export interface JobPosition {
   isAzubi: boolean;
   /** ISO-Datum, an dem die Stelle veröffentlicht wurde */
   datePosted: string;
+  /** ISO-Datum der letzten inhaltlichen Änderung (dateModified/Sitemap) */
+  dateModified?: string;
   /** ISO-Datum, bis wann die Stelle gültig ist (Pflicht, sonst Risiko Spam-Filter) */
   validThrough: string;
   /** Frühestmöglicher Eintritt – Anzeige + Vorbelegung Formular */
@@ -113,9 +115,10 @@ export const JOBS: JobPosition[] = [
     employmentTypeLabel: "Vollzeit · Ausbildung",
     isAzubi: true,
     datePosted: "2026-04-20",
-    validThrough: "2026-07-31T23:59",
-    startLabel: "Ausbildungsbeginn: 01.08.2026",
-    identifier: "SLT-AZ-BM-2026",
+    dateModified: "2026-11-08",
+    validThrough: "2027-07-31T23:59",
+    startLabel: "Ausbildungsbeginn: 01.08.2027",
+    identifier: "SLT-AZ-BM-2027",
     educationRequirements: "high school",
     description:
       "Du organisierst gerne, behältst den Überblick und möchtest in einem innovativen Tech-Unternehmen durchstarten? Dann ist diese Ausbildung genau das Richtige für dich.",
@@ -139,10 +142,9 @@ export const JOBS: JobPosition[] = [
       "Übernahmechance nach erfolgreicher Ausbildung",
       "Modernes Büro mit Getränken, Obst und Grillplatz",
     ],
-    seoTitle:
-      "Ausbildung Kaufmann/-frau für Büromanagement (m/w/d) Krefeld/Bonn 2026 | SLT Technology Group",
+    seoTitle: "Ausbildung Büromanagement 2027 | SLT Technology Group",
     seoDescription:
-      "Ausbildungsplatz Büromanagement (m/w/d) ab 01.08.2026 in Krefeld oder Bonn. KI-gestützte Prozesse, eigene Projekte, Übernahmechance. Jetzt bewerben bei SLT.",
+      "Ausbildung Büromanagement (m/w/d) ab 01.08.2027 in Krefeld oder Bonn: KI-gestützte Prozesse, eigene Projekte und Übernahmechance.",
     iconName: "GraduationCap",
   },
   {
@@ -155,9 +157,10 @@ export const JOBS: JobPosition[] = [
     employmentTypeLabel: "Vollzeit · Ausbildung",
     isAzubi: true,
     datePosted: "2026-04-20",
-    validThrough: "2026-07-31T23:59",
-    startLabel: "Ausbildungsbeginn: 01.08.2026",
-    identifier: "SLT-AZ-VT-2026",
+    dateModified: "2026-11-08",
+    validThrough: "2027-07-31T23:59",
+    startLabel: "Ausbildungsbeginn: 01.08.2027",
+    identifier: "SLT-AZ-VT-2027",
     educationRequirements: "high school",
     description:
       "Du bist technikbegeistert und möchtest lernen, wie professionelle AV-Systeme geplant, installiert und konfiguriert werden? Werde Teil unseres Teams!",
@@ -179,10 +182,9 @@ export const JOBS: JobPosition[] = [
       "Übernahmechance nach erfolgreicher Ausbildung",
       "Eigenes Werkzeug und Arbeitskleidung",
     ],
-    seoTitle:
-      "Ausbildung Fachkraft Veranstaltungstechnik (m/w/d) AV-Systemintegration Krefeld 2026 | SLT",
+    seoTitle: "Ausbildung Veranstaltungstechnik 2027 | SLT Technology Group",
     seoDescription:
-      "Ausbildung Veranstaltungstechnik mit Schwerpunkt AV-Systemintegration in Krefeld ab 01.08.2026. Praxis an realen Projekten mit Crestron, Shure & Co.",
+      "Ausbildung Veranstaltungstechnik mit Schwerpunkt AV-Systemintegration in Krefeld ab 01.08.2027. Praxis an realen Projekten mit Crestron, Shure & Co.",
     iconName: "Wrench",
   },
   {
@@ -195,7 +197,8 @@ export const JOBS: JobPosition[] = [
     employmentTypeLabel: "Vollzeit",
     isAzubi: false,
     datePosted: "2026-04-20",
-    validThrough: "2026-10-31T23:59",
+    dateModified: "2026-11-08",
+    validThrough: "2027-04-30T23:59",
     startLabel: "Arbeitsbeginn: ab sofort",
     identifier: "SLT-MT-2026-01",
     experienceRequirementsMonths: 24,
@@ -225,7 +228,7 @@ export const JOBS: JobPosition[] = [
       "Herstellerzertifizierungen und kontinuierliche Weiterbildung",
       "Betriebliche Altersvorsorge & Bonussystem",
     ],
-    seoTitle: "Medientechniker (m/w/d) Krefeld – AV/UC Installation | SLT Technology Group",
+    seoTitle: "Medientechniker (m/w/d) in Krefeld | SLT Technology Group",
     seoDescription:
       "Medientechniker (m/w/d) in Krefeld gesucht: Installation und Konfiguration von Teams Rooms, Zoom Rooms, Crestron & Co. Unbefristet, ab sofort.",
     iconName: "Briefcase",

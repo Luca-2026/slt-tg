@@ -161,7 +161,7 @@ const RatgeberKiReadiness = () => {
               ein direkter Hebel gegen Ausfallzeiten und gegen den Fachkräftemangel in der AV-Branche, denn
               qualifizierte Servicetechniker sind knapp und werden es absehbar bleiben. Wie ein solcher Betrieb
               organisiert wird, beschreiben wir unter{" "}
-              <Link to="/service-wartung" className="text-primary underline underline-offset-4">
+              <Link to="/managed-services" className="text-primary underline underline-offset-4">
                 Service &amp; Wartung
               </Link>.
             </p>

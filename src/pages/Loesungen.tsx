@@ -381,7 +381,7 @@ const Loesungen = () => {
               <p className="text-sm text-muted-foreground">Raumgrößen-Matrix, Hardware-Empfehlungen und Planungs-Leitfaden – von Huddle bis Boardroom.</p>
               <span className="inline-flex items-center text-sm font-medium text-primary mt-4">Übersicht öffnen <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
             </Link>
-            <Link to="/service-wartung" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
+            <Link to="/managed-services" className="group block p-6 lg:p-8 rounded-xl border border-border bg-card hover:border-primary/40 hover:shadow-lg transition-all">
               <div className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Betrieb</div>
               <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Service & Wartung (ITIL v4)</h3>
               <p className="text-sm text-muted-foreground">Service Desk, 24/7-Monitoring und planbare Wartung für AV- und Signage-Installationen.</p>

@@ -1,0 +1,56 @@
+{
+  "stadt": "Düsseldorf",
+  "slug": "duesseldorf",
+  "standort": "Krefeld",
+  "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Düsseldorf erreichen wir von unserem Hauptsitz in Krefeld aus in rund 25–35 Minuten. In der Landeshauptstadt haben wir WLAN-Infrastruktur für die Boston Consulting Group und Capgemini umgesetzt sowie Licht-, Ton- und Signage-Technik für das Lakis an der Königsallee installiert. Ihr Ansprechpartner für Düsseldorf: Benedikt Nöchel, Geschäftsführung.",
+  "referenzen": [
+    {
+      "name": "Boston Consulting Group",
+      "leistung": "IT-Netzwerk",
+      "detail": "WLAN-Infrastruktur",
+      "ort": "Düsseldorf",
+      "freigabe": true
+    },
+    {
+      "name": "Capgemini",
+      "leistung": "IT-Netzwerk",
+      "detail": "WLAN-Infrastruktur und WLAN-Ausleuchtung",
+      "ort": "Düsseldorf und Ratingen",
+      "freigabe": true
+    },
+    {
+      "name": "Lakis Restaurant & Gastronomie",
+      "leistung": "Digital Signage und Medientechnik",
+      "detail": "Innenbeleuchtung und Lichtsteuerung, Licht- und Tontechnik, Digital Signage",
+      "ort": "Königsallee Düsseldorf",
+      "freigabe": true
+    },
+    {
+      "name": "Aluminium Norf",
+      "leistung": "Konferenztechnik",
+      "detail": "Boardroom und Schulungsraum mit Shure, Nureva und AVer",
+      "ort": "Neuss",
+      "freigabe": true,
+      "url": "/projekte/aluminium-norf"
+    }
+  ],
+  "branchen": ["Unternehmensberatung", "Gastronomie", "Industrie"],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Wie schnell sind Sie in Düsseldorf vor Ort?",
+      "answer": "Von unserem Hauptsitz in Krefeld erreichen wir Düsseldorf in ca. 25–35 Minuten."
+    },
+    {
+      "question": "Planen Sie auch die WLAN-Ausleuchtung?",
+      "answer": "Ja, inklusive professioneller Ausleuchtung – etwa für Capgemini in Düsseldorf und Ratingen, wo wir WLAN-Infrastruktur und Ausleuchtung umgesetzt haben."
+    },
+    {
+      "question": "Welche Hersteller setzen Sie für Boardrooms ein?",
+      "answer": "Wir arbeiten herstellerneutral mit zertifizierten Systemen von Crestron, Q-SYS, Shure, Yealink, Huddly, Barco, Sennheiser, Samsung, PureLink, Lightware, Nureva und iiyama – Details auf unserer Technologie-Übersicht."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "stadt": "Mönchengladbach",
+  "slug": "moenchengladbach",
+  "standort": "Krefeld",
+  "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Mönchengladbach erreichen wir von unserem Hauptsitz in Krefeld aus in rund 25–35 Minuten. Im rund 15 Minuten entfernten Willich haben wir für das REWE Center eine Logo-Bodenprojektion realisiert. Ansprechpartner für Projekte in Mönchengladbach ist Benedikt Nöchel aus der Geschäftsführung.",
+  "referenzen": [
+    {
+      "name": "REWE Center Willich",
+      "leistung": "Digital Signage",
+      "detail": "Logo-Bodenprojektion",
+      "ort": "Willich, ca. 15 Minuten von Mönchengladbach",
+      "freigabe": true
+    }
+  ],
+  "branchen": [],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Wie schnell sind Sie in Mönchengladbach vor Ort?",
+      "answer": "Von unserem Hauptsitz in Krefeld aus erreichen wir Mönchengladbach in ca. 25–35 Minuten."
+    },
+    {
+      "question": "Von welchem Standort wird Mönchengladbach betreut?",
+      "answer": "Mönchengladbach wird von unserem Hauptsitz in Krefeld aus betreut – mit Lager und Vorführraum in der Anrather Straße 291."
+    }
+  ]
+}

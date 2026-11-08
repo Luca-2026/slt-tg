@@ -4,6 +4,7 @@
  * canonical, og:image, noindex, breadcrumbs, routeType.
  */
 import { cities, topics, getLocalSEORoutes, isNoindex, getContentOverride } from "./localSEO";
+import { getRegion, referenzenFuerLeistung } from "./regionen";
 import { partners } from "./partners";
 import { ratgeberPosts } from "./ratgeberPosts";
 import { solutionPages } from "./solutionPages";
@@ -64,9 +65,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/",
     routeType: "home",
-    title: "Konferenzraum-Ausstattung & AV-Systemhaus NRW | SLT AV",
+    title: "Konferenzraum-Ausstattung & AV-Systemhaus NRW | SLT TG",
     description:
-      "AV-Systemhaus für Konferenzraum-Ausstattung, Videokonferenz und Digital Signage: Fachplanung, Rollout und Service nach ITIL v4. Krefeld & Bonn, NRW-weit.",
+      "AV-Systemhaus für Konferenzraum-Ausstattung, Videokonferenz und Digital Signage: Fachplanung, Rollout und Service für Unternehmen in NRW und bundesweit.",
     h1: "Konferenzraum-Ausstattung & AV-Systemintegration in NRW – SLT Technology Group",
     intro: [
       "Wir planen, integrieren und betreiben Konferenz- und Medientechnik für Konzerne, Industrie und großen Mittelstand in Deutschland und Europa.",
@@ -80,9 +81,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/loesungen",
     routeType: "page",
-    title: "Konferenzraum-Lösungen: Huddle bis Boardroom & Auditorium | SLT AV",
+    title: "AV-Lösungen: Huddle bis Auditorium | SLT Technology Group",
     description:
-      "Skalierbare AV-Lösungen für Enterprise: Huddle Space, Meetingraum, Boardroom, Auditorium, Empfang und Digital Signage – standardisierbar für Multi-Site-Rollouts.",
+      "AV-Lösungen von Huddle Space bis Auditorium: Meetingräume, Boardrooms, Empfang und Digital Signage – standardisierbar für Multi-Site-Rollouts.",
     h1: "AV-Lösungen für Konferenzraum, Auditorium & mehr",
     intro: [
       "Vom Huddle Space bis zum Auditorium: SLT Technology Group entwickelt skalierbare, standardisierbare Konzepte für moderne Enterprise-Arbeitswelten.",
@@ -96,9 +97,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/technologien",
     routeType: "page",
-    title: "Technologien: Crestron, Q-SYS, Poly, Logitech, Sennheiser | SLT AV",
+    title: "Technologien & Hersteller | SLT Technology Group",
     description:
-      "Zertifizierter Integrator führender Enterprise-Hersteller: Crestron, Q-SYS, Poly, Logitech, Sennheiser, Shure, Barco, Yealink. Herstellerneutral integriert.",
+      "Herstellerneutrale Beratung zu Videokonferenz, IT, Displays, Audio und Steuerung – mit zertifizierten Systemen von Crestron, Q-SYS, Shure u. a.",
     h1: "Herstellerneutrale Technologieberatung",
     intro: [
       "Best-of-Breed-Technologien führender Enterprise-Hersteller – zu einem konsistenten, herstellerneutralen Gesamtsystem integriert.",
@@ -111,9 +112,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/finanzierung",
     routeType: "page",
-    title: "AV-Finanzierung: Kauf, Leasing & AV-as-a-Service | SLT AV",
+    title: "AV-Finanzierung: Kauf, Leasing, AV-as-a-Service | SLT TG",
     description:
-      "Finanzierungsmodelle für Medientechnik im Vergleich: Direktkauf, Leasing und AV-as-a-Service. Vorteile, laufende Kosten und Service passend zu Budget und IT-Strategie.",
+      "Finanzierungsmodelle für Medientechnik im Vergleich: Direktkauf, Leasing und AV-as-a-Service – passend zu Budget, Bilanz und Rollout-Plan.",
     h1: "Flexible Finanzierungsoptionen",
     intro: [
       "Kauf, Leasing oder AV-as-a-Service: Wir finden das passende Modell für Budget, Bilanz und Rollout-Plan.",
@@ -126,9 +127,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/projekte",
     routeType: "project",
-    title: "Enterprise-Referenzen: GEA, Pfeifer & Langen, AluNorf, Sonoco | SLT AV",
+    title: "Referenzen & Projekte | SLT Technology Group",
     description:
-      "Realisierte Großprojekte für Konzerne und Industrie: Boardrooms, standortübergreifende Rollouts, hybride Meetingräume und Enterprise-Netzwerkinfrastruktur.",
+      "Realisierte AV- und IT-Projekte für Konzerne und Industrie: Boardrooms, standortübergreifende Rollouts, hybride Meetingräume und Netzwerkinfrastruktur.",
     h1: "Referenzprojekte: Medientechnik, IT & Netzwerk",
     intro: [
       "Einblicke in realisierte Enterprise-AV- und IT-Projekte – vom Einzelraum bis zum standortübergreifenden Multi-Site-Rollout.",
@@ -142,9 +143,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/ueber-uns",
     routeType: "page",
-    title: "Über SLT Technology Group: Team, Standorte Krefeld & Bonn | SLT AV",
+    title: "Über uns: Team & Standorte | SLT Technology Group",
     description:
-      "Inhabergeführtes AV-Systemhaus für Enterprise-Kunden: Team, Standorte Krefeld und Bonn, Zertifizierungen, Werte. Lernen Sie SLT Technology Group kennen.",
+      "Inhabergeführtes AV-Systemhaus: Team, Standorte Krefeld und Bonn, Zertifizierungen und Werte – lernen Sie SLT Technology Group kennen.",
     h1: "Die Geschichte der SLT Technology Group",
     intro: [
       "Inhabergeführt, partnerschaftlich, zertifiziert: Das Team von SLT Technology Group steht für transparente Enterprise-AV-Integration.",
@@ -158,9 +159,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/kontakt",
     routeType: "page",
-    title: "Kontakt SLT Technology Group: Krefeld & Bonn | SLT AV",
+    title: "Kontakt: Krefeld & Bonn | SLT Technology Group",
     description:
-      "Kontaktieren Sie SLT Technology Group: Hauptsitz Krefeld, Standort Bonn. Telefon, E-Mail, Anfahrt – Ihr Ansprechpartner für Enterprise-AV in NRW.",
+      "Kontakt zur SLT Technology Group: Hauptsitz Krefeld, Standort Bonn. Telefon, E-Mail und Anfahrt – Ihr Ansprechpartner für AV- und IT-Projekte in NRW.",
     h1: "Kontakt aufnehmen – kostenlose Erstberatung",
     intro: [
       "Sprechen Sie mit uns – per Telefon, E-Mail oder direkt vor Ort in Krefeld oder Bonn.",
@@ -173,7 +174,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/projektanfrage",
     routeType: "page",
-    title: "Projektanfrage: AV- & IT-Projekt unverbindlich anfragen | SLT AV",
+    title: "AV-Projektanfrage stellen | SLT Technology Group",
     description:
       "Ihr AV- oder IT-Projekt in fünf Schritten anfragen: Kontaktdaten, Projektrahmen, Anforderungen und Unterlagen übermitteln – unverbindlich und kostenfrei.",
     h1: "Starten Sie Ihr Projekt",
@@ -188,9 +189,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/karriere",
     routeType: "page",
-    title: "Karriere bei SLT Technology Group: AV-Jobs Krefeld & Bonn | SLT AV",
+    title: "Karriere: AV-Jobs in Krefeld & Bonn | SLT Technology Group",
     description:
-      "Karriere bei SLT Technology Group: Stellenanzeigen für Medientechnik und Ausbildungen in Büromanagement und Veranstaltungstechnik. Standorte Krefeld und Bonn.",
+      "Karriere bei SLT Technology Group: Stellenangebote für Medientechnik sowie Ausbildungen in Büromanagement und Veranstaltungstechnik in Krefeld und Bonn.",
     h1: "Starte mit uns durch.",
     intro: [
       "Werden Sie Teil eines wachsenden, inhabergeführten Enterprise-AV-Systemhauses mit Standorten in Krefeld und Bonn.",
@@ -203,9 +204,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/news",
     routeType: "page",
-    title: "News & Ratgeber: AV- & IT-Welt | SLT AV",
+    title: "News & Wissen aus der AV-Welt | SLT Technology Group",
     description:
-      "News, ISE-Berichte und Produktneuheiten aus der Enterprise-AV-Welt – fundiert kuratiert für IT-Entscheider, Facility Manager und Workplace-Verantwortliche.",
+      "News, Messeberichte und Produktneuheiten aus der professionellen AV-Welt – kuratiert für IT-Entscheider, Facility Manager und Workplace-Verantwortliche.",
     h1: "News & Ratgeber AV- & IT-Welt",
     intro: [
       "Trends, Innovationen und Praxiswissen aus der professionellen Enterprise-Medientechnik – von uns kuratiert.",
@@ -218,9 +219,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber",
     routeType: "page",
-    title: "AV- & Medientechnik-Ratgeber für IT-Entscheider | SLT AV",
+    title: "Ratgeber Konferenz- & Medientechnik | SLT Technology Group",
     description:
-      "Praxiswissen für IT-Entscheider, Facility Manager und Workplace-Verantwortliche: Raumgrößen, Plattform-Vergleiche, Kostenrahmen, Rollout-Erfahrungen – neutral.",
+      "Praxiswissen für IT-Entscheider und Facility Manager: Raumgrößen, Plattform-Vergleiche, Kostenrahmen und Rollout-Erfahrungen – neutral erklärt.",
     h1: "Ratgeber Konferenz- & Medientechnik",
     intro: [
       "Praxiswissen für IT-Entscheider, Facility Manager und Workplace-Verantwortliche: neutrale Empfehlungen, realistische Kostenrahmen und fundierte Vergleiche.",
@@ -233,9 +234,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/konferenzraum-ausstattung",
     routeType: "page",
-    title: "Konferenzraum-Ausstattung: Huddle bis Boardroom & Auditorium | SLT AV",
+    title: "Konferenzraum-Ausstattung | SLT Technology Group",
     description:
-      "Konferenzraum-Ausstattung vom Huddle Space bis zum Auditorium: typische AV-Komponenten, Raumgrößen und Anwendungsfälle. Kosten und Zeitplan nach individueller Bedarfsanalyse.",
+      "Konferenzraum-Ausstattung vom Huddle Space bis zum Auditorium: AV-Komponenten, Raumgrößen und Anwendungsfälle – Kosten nach Bedarfsanalyse.",
     h1: "Konferenzraum-Ausstattung nach Raumgröße",
     intro: [
       "Vom Huddle Space bis zum Auditorium: typische Komponenten-Auswahl und Anwendungsfälle. Die konkrete Planung erfolgt herstellerneutral und projektspezifisch.",
@@ -250,9 +251,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/managed-services",
     routeType: "page",
-    title: "Managed Services & Wartung für Medientechnik | SLT AV",
+    title: "Managed Services & Wartung für AV | SLT Technology Group",
     description:
-      "Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring, Managed Rooms und Wartung nach ITIL v4. Ihr Managed Service Provider für AV und IT – multi-site-fähig, herstellerneutral, aus NRW.",
+      "Managed Services für Konferenz- und Medientechnik: Service Desk, 24/7-Monitoring und Wartung nach ITIL v4 – multi-site-fähig, herstellerneutral.",
     h1: "Managed Services & Wartung für Konferenz- und Medientechnik",
     intro: [
       "Wir übernehmen den laufenden Betrieb Ihrer AV-Umgebung: zentraler Service Desk, proaktives 24/7-Monitoring, Managed Rooms und planbare Wartung.",
@@ -267,9 +268,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/digital-signage",
     routeType: "page",
-    title: "Digital Signage Anbieter für Unternehmen | SLT Technology Group",
+    title: "Digital Signage Anbieter | SLT Technology Group",
     description:
-      "Digital Signage Anbieter für Unternehmen: Fachplanung, Displays und LED-Walls, CMS- und Netzwerk-Integration, Multi-Site-Rollout und Service nach ITIL v4 – aus NRW, bundesweit tätig.",
+      "Digital Signage für Unternehmen: Fachplanung, Displays und LED-Walls, CMS-Integration, Multi-Site-Rollout und Service – aus NRW, bundesweit.",
     h1: "Digital Signage – geplant, integriert, betrieben",
     intro: [
       "Von der Empfangs-LED bis zum standortübergreifenden Display-Netz: Wir planen, installieren und betreiben Digital-Signage-Anlagen als AV-Systemhaus.",
@@ -284,9 +285,9 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/videokonferenzanlage",
     routeType: "page",
-    title: "Videokonferenzanlage für Konferenzräume | SLT Technology Group",
+    title: "Videokonferenzanlage | SLT Technology Group",
     description:
-      "Videokonferenzanlage planen, installieren und betreiben lassen: Kamera, Audio, Display und Steuerung für Teams- und Zoom-Räume – herstellerneutral, IT-konform, mit Service.",
+      "Videokonferenzanlage planen, installieren und betreiben lassen: Kamera, Audio, Display und Steuerung für Teams- und Zoom-Räume – herstellerneutral.",
     h1: "Videokonferenzanlage – passend zum Raum geplant",
     intro: [
       "Kamera, Audio, Display und Bedienung als durchdachtes Gesamtsystem – vom Huddle Room bis zum Auditorium.",
@@ -304,24 +305,43 @@ export const MAIN_ROUTES: SeoRoute[] = [
 // ───────────────────────────────────────────────────────────
 // 2) LOCALSEO_ROUTES (aus getLocalSEORoutes())
 // ───────────────────────────────────────────────────────────
+/**
+ * Description für Regional-Seiten: 120–155 Zeichen, datengetrieben aus den
+ * Stadt-Feldern (Fahrzeit, freigegebene Referenzen der Leistung).
+ */
+function buildRegionDescription(topicKey: string, cityKey: string): string {
+  const topic = topics[topicKey];
+  const city = cities[cityKey];
+  const region = getRegion(cityKey);
+  if (!region) {
+    return getContentOverride(topicKey, cityKey)?.heroSubtitle ?? "";
+  }
+  const refs = referenzenFuerLeistung(region, topic.leistung);
+  let description: string;
+  if (refs.length > 0) {
+    const refNames = refs.map((ref) => ref.name).slice(0, 2).join(" und ");
+    description = `${topic.shortTitle} in ${city.name}: Planung, Installation und Service – ${region.fahrzeit}. Referenzen: ${refNames}.`;
+  } else {
+    description = `${topic.shortTitle} in ${city.name}: Planung, Installation und Service durch SLT Technology Group – ${region.fahrzeit}.`;
+  }
+  if (description.length < 120) {
+    description += " Ansprechpartner: Benedikt Nöchel.";
+  }
+  return description;
+}
+
 export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
   const topic = topics[r.topic];
   const city = cities[r.city];
-  const override = getContentOverride(r.topic, r.city);
+  const region = getRegion(r.city);
+  const override = region ? undefined : getContentOverride(r.topic, r.city);
 
-  const h1 = override?.heroTitle ?? topic.heroTitle(city.name);
-  const heroSub = override?.heroSubtitle ?? topic.heroSubtitle(city.name);
-  const intro = override?.intro ?? topic.intro(city.name);
-  // Title: bei Override aus heroTitle ableiten (kürzer, einzigartiger);
-  // sonst weiter generisches Template
+  const h1 = override?.heroTitle ?? `${topic.shortTitle} ${city.name}`;
+  const intro = region ? [region.intro] : [override?.heroSubtitle ?? "", override?.intro ?? ""];
   const title = override
-    ? `${override.heroTitle} | SLT Technology Group`
-    : `${topic.metaTitle} ${city.name} – Fachplaner & Integrator | SLT Technology Group`;
-  const description = override
-    ? override.heroSubtitle.length > 160
-      ? override.heroSubtitle.slice(0, 157) + "..."
-      : override.heroSubtitle
-    : `${topic.metaDescription} ${city.description}: Installation, Integration und Service für ${city.name} und Umgebung. Kostenfreies Erstgespräch!`;
+    ? `${override.heroTitle.replace(/ in Nordrhein-Westfalen$/, " NRW")} | SLT Technology Group`
+    : `${topic.shortTitle} ${city.name} | SLT Technology Group`;
+  const description = buildRegionDescription(r.topic, r.city);
 
   return {
     path: r.path,
@@ -329,12 +349,13 @@ export const LOCALSEO_ROUTES: SeoRoute[] = getLocalSEORoutes().map((r) => {
     title,
     description,
     h1,
-    intro: [heroSub, intro],
+    intro: intro.filter(Boolean),
     canonical: r.path,
     ogImage: "/assets/hero-konferenzraum.jpg",
     noindex: r.noindex,
     changefreq: "monthly",
     priority: 0.8,
+    lastmod: "2026-11-08",
     breadcrumbs: [
       { name: topic.title, path: `/${topic.baseSlug}/krefeld` },
       { name: city.name, path: r.path },
@@ -351,9 +372,9 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/raumbuchungssystem-konferenzraeume",
     routeType: "ratgeber",
-    title: "Raumbuchungssystem für Konferenzräume: Auswahl & Integration | SLT Technology Group",
+    title: "Raumbuchungssystem für Konferenzräume | SLT Technology Group",
     description:
-      "Raumbuchungssystem planen: Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Auswahl-Checkliste.",
+      "Raumbuchungssystem planen: Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release und Datenschutz – mit Checkliste.",
     h1: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
     intro: [
       "Woraus ein Raumbuchungssystem besteht, wie es an Microsoft 365 oder Google Workspace andockt und welche sechs Kriterien vor der Bestellung geklärt gehören.",
@@ -375,9 +396,9 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/yealink-meetingboard-pro",
     routeType: "ratgeber",
-    title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms | SLT Technology Group",
+    title: "Yealink MeetingBoard Pro | SLT Technology Group",
     description:
-      "Yealink MeetingBoard Pro im Praxis-Check: Funktionen, Größen, Einsatzszenarien – Installation und Inbetriebnahme durch SLT Technology Group als autorisierter Partner.",
+      "Yealink MeetingBoard Pro im Praxis-Check: Funktionen, Größen und Einsatzszenarien – inklusive Installation durch SLT Technology Group.",
     h1: "Yealink MeetingBoard Pro: All-in-One Lösung für Microsoft Teams Rooms",
     intro: [
       "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation durch SLT Technology Group als autorisierter Partner.",
@@ -398,7 +419,7 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/konferenztechnik-raumgroesse",
     routeType: "ratgeber",
-    title: "Welche Konferenztechnik für welche Raumgröße? | SLT Technology Group",
+    title: "Konferenztechnik nach Raumgröße | SLT Technology Group",
     description:
       "Vom Huddle Space bis zum Boardroom: Welche AV-Ausstattung für welchen Raumtyp sinnvoll ist – mit konkreten Empfehlungen für Displays, Audio und Kameras.",
     h1: "Welche Konferenztechnik für welche Raumgröße?",
@@ -421,9 +442,9 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/teams-rooms-vs-zoom-rooms",
     routeType: "ratgeber",
-    title: "Microsoft Teams Rooms vs. Zoom Rooms im Vergleich | SLT Technology Group",
+    title: "Teams Rooms vs. Zoom Rooms | SLT Technology Group",
     description:
-      "Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe für Ihr Unternehmen.",
+      "Microsoft Teams Rooms vs. Zoom Rooms: Funktionen, Lizenzkosten und Ökosysteme im Vergleich – eine neutrale Entscheidungshilfe für Ihr Unternehmen.",
     h1: "Microsoft Teams Rooms vs. Zoom Rooms",
     intro: [
       "Neutrale Entscheidungshilfe: Funktionen, Lizenzkosten und Ökosystem-Aspekte beider Plattformen im direkten Vergleich.",
@@ -444,7 +465,7 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
   {
     path: "/ratgeber/konferenzraum-kosten",
     routeType: "ratgeber",
-    title: "Was kostet ein Konferenzraum? Realistische Budgets | SLT Technology Group",
+    title: "Konferenzraum-Kosten im Überblick | SLT Technology Group",
     description:
       "Realistische Kostenrahmen für verschiedene Raumgrößen und Ausstattungsstufen – von der Basisausstattung bis zum Boardroom.",
     h1: "Was kostet ein Konferenzraum?",
@@ -473,7 +494,7 @@ export const NEWS_ROUTES: SeoRoute[] = [
   {
     path: `/news/${outdoorLedArticle.slug}`,
     routeType: "news",
-    title: `${outdoorLedArticle.title} | SLT AV`,
+    title: "Outdoor-LED-Wartung & Servicekonzept | SLT Technology Group",
     description: outdoorLedArticle.description,
     h1: outdoorLedArticle.title,
     intro: [outdoorLedArticle.description],
@@ -492,9 +513,9 @@ export const NEWS_ROUTES: SeoRoute[] = [
   {
     path: "/news/ise-2026-barcelona",
     routeType: "news",
-    title: "Neues aus der AV-Welt von der ISE 2026 in Barcelona | SLT Technology Group",
+    title: "ISE 2026 Barcelona: AV-Neuheiten | SLT Technology Group",
     description:
-      "Highlights und Innovationen von der ISE 2026 in Barcelona – die weltweit größte Fachmesse für professionelle AV-Technik. Trends, Produktneuheiten und Eindrücke.",
+      "Highlights und Innovationen von der ISE 2026 in Barcelona – der weltweit größten Fachmesse für professionelle AV-Technik und Integration.",
     h1: "Neues aus der AV-Welt von der ISE 2026 in Barcelona",
     intro: [
       "Die ISE 2026 in Barcelona präsentiert die neuesten Innovationen in der AV-Branche – wir berichten über Trends, Produktneuheiten und Highlights.",
@@ -517,7 +538,7 @@ export const NEWS_ROUTES: SeoRoute[] = [
   {
     path: "/news/huddly-speaker-mode-ki-kamera",
     routeType: "news",
-    title: "Huddly Speaker Mode: KI-Kameras im Konferenzraum | SLT Technology Group",
+    title: "Huddly Speaker Mode: KI-Kameras | SLT Technology Group",
     description:
       "Mit Huddly Speaker Mode bleibt der aktive Sprecher immer im Bild. Wie die KI-gestützte Kamera-Lösung in modernen Konferenzräumen funktioniert.",
     h1: "Huddly Speaker Mode: KI-Kameras, die den Sprecher im Blick behalten",
@@ -540,7 +561,7 @@ export const NEWS_ROUTES: SeoRoute[] = [
   {
     path: "/news/hochwertige-technik-trotzdem-chaos",
     routeType: "news",
-    title: "Hochwertige Technik – trotzdem Chaos im Konferenzraum? | SLT Technology Group",
+    title: "Konferenzraum-Chaos trotz Top-Technik | SLT TG",
     description:
       "Viele Konferenzräume sind erstklassig ausgestattet – warum fühlt sich der Meeting-Start trotzdem oft an wie eine technische Herausforderung?",
     h1: "Hochwertige Technik – trotzdem Chaos im Konferenzraum?",
@@ -567,7 +588,7 @@ export const NEWS_ROUTES: SeoRoute[] = [
     routeType: "news",
     title: "Man hört nichts – schon wieder | SLT Technology Group",
     description:
-      "Audio-Probleme gehören zu den häufigsten Störfaktoren in Konferenzräumen. Was hilft – und woran es meist liegt.",
+      "Audio-Probleme gehören zu den häufigsten Störfaktoren in Konferenzräumen. Was wirklich hilft – und woran es in den meisten Fällen liegt.",
     h1: "Man hört nichts – schon wieder",
     intro: [
       "Ein Meeting startet, alle sind da – und trotzdem geht es nicht los. Warum Audio so oft das Sorgenkind ist.",
@@ -594,14 +615,22 @@ export const NEWS_ROUTES: SeoRoute[] = [
 // ───────────────────────────────────────────────────────────
 import { PROJECTS } from "./projects";
 
+/** Kurze, eindeutige SEO-Titel pro Referenz (max. 60 Zeichen inkl. Suffix). */
+const PROJECT_SEO_TITLES: Record<string, string> = {
+  "bank-verlag-mobile-videokonferenzstele-koeln": "Bank-Verlag: mobile Videokonferenzstele | SLT TG",
+  "knauber-outdoor-led-wartung-bonn": "Knauber: Outdoor-LED-Wartung Bonn | SLT Technology Group",
+  "aluminium-norf": "Aluminium Norf: Boardroom & Schulungsraum | SLT TG",
+  "pfeifer-langen": "Pfeifer & Langen: 20+ Konferenzräume | SLT Technology Group",
+  "gea-farm-technologies": "GEA Farm Technologies: Management Room | SLT TG",
+  "tourismus-info-bensersiel": "Tourismus Info Bensersiel: Digital Signage | SLT TG",
+  sonoco: "Sonoco: WLAN-Infrastruktur Multi-Site | SLT Technology Group",
+};
+
 export const PROJECT_ROUTES: SeoRoute[] = PROJECTS.map((project) => ({
   path: `/projekte/${project.slug}`,
   routeType: "project" as RouteType,
-  title: `${project.name} – Referenzprojekt | SLT Technology Group`,
-  description:
-    project.shortDescription.length > 160
-      ? project.shortDescription.slice(0, 157) + "..."
-      : project.shortDescription,
+  title: PROJECT_SEO_TITLES[project.slug] ?? `${project.name} | SLT TG`,
+  description: project.shortDescription,
   h1: project.name,
   intro: [project.shortDescription],
   canonical: `/projekte/${project.slug}`,
@@ -624,7 +653,7 @@ export const LEGAL_ROUTES: SeoRoute[] = [
     path: "/impressum",
     routeType: "legal",
     title: "Impressum | SLT Technology Group",
-    description: "Impressum der SLT Technology Group GmbH & Co. KG: Unternehmensangaben, Vertretung und Kontaktinformationen.",
+    description: "Impressum der SLT Technology Group GmbH & Co. KG: Unternehmensangaben, gesetzliche Vertretung, Registereintrag und Kontaktinformationen.",
     h1: "Impressum",
     intro: [],
     canonical: "/impressum",
@@ -635,7 +664,7 @@ export const LEGAL_ROUTES: SeoRoute[] = [
     path: "/datenschutz",
     routeType: "legal",
     title: "Datenschutzerklärung | SLT Technology Group",
-    description: "Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.",
+    description: "Datenschutzerklärung der SLT Technology Group: Informationen zur Verarbeitung personenbezogener Daten auf dieser Website gemäß DSGVO.",
     h1: "Datenschutzerklärung",
     intro: [],
     canonical: "/datenschutz",
@@ -645,8 +674,8 @@ export const LEGAL_ROUTES: SeoRoute[] = [
   {
     path: "/agb",
     routeType: "legal",
-    title: "Allgemeine Geschäftsbedingungen (AGB) | SLT Technology Group",
-    description: "Allgemeine Geschäftsbedingungen der SLT Technology Group GmbH & Co. KG.",
+    title: "AGB | SLT Technology Group",
+    description: "Allgemeine Geschäftsbedingungen der SLT Technology Group GmbH & Co. KG für Leistungen in Planung, Installation und Service.",
     h1: "Allgemeine Geschäftsbedingungen",
     intro: [],
     canonical: "/agb",
@@ -674,7 +703,7 @@ export const JOB_ROUTES: SeoRoute[] = JOBS.map((job) => ({
   ogType: "article",
   changefreq: "weekly",
   priority: 0.7,
-  lastmod: job.datePosted,
+  lastmod: job.dateModified ?? job.datePosted,
   breadcrumbs: [
     { name: "Karriere", path: "/karriere" },
     { name: job.title, path: `/karriere/${job.slug}` },
@@ -684,10 +713,22 @@ export const JOB_ROUTES: SeoRoute[] = JOBS.map((job) => ({
 // ───────────────────────────────────────────────────────────
 // 8) PARTNER_ROUTES (/partner/{slug})
 // ───────────────────────────────────────────────────────────
+/** Einheitliche Partner-Titel mit Suffix (max. 60 Zeichen). */
+const PARTNER_SEO_TITLES: Record<string, string> = {
+  crestron: "Crestron Integrator NRW | SLT Technology Group",
+  "q-sys": "Q-SYS Integrator NRW | SLT Technology Group",
+  sennheiser: "Sennheiser Partner NRW | SLT Technology Group",
+  shure: "Shure Partner NRW | SLT Technology Group",
+  huddly: "Huddly Partner NRW | SLT Technology Group",
+  barco: "Barco ClickShare Partner | SLT Technology Group",
+  yealink: "Yealink Partner NRW | SLT Technology Group",
+  cisco: "Cisco Netzwerk-Lösungen | SLT Technology Group",
+};
+
 export const PARTNER_ROUTES: SeoRoute[] = partners.map((partner) => ({
   path: `/partner/${partner.slug}`,
   routeType: "partner" as RouteType,
-  title: partner.headline,
+  title: PARTNER_SEO_TITLES[partner.slug] ?? `${partner.name} Partner | SLT Technology Group`,
   description: partner.description,
   h1: partner.headline,
   intro: [partner.longDescription],

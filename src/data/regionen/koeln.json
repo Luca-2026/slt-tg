@@ -1,0 +1,43 @@
+{
+  "stadt": "Köln",
+  "slug": "koeln",
+  "standort": "Bonn",
+  "fahrzeit": "ca. 35–45 Minuten ab Bonn",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Köln betreuen wir von unserem Standort Bonn aus – mit einer Anfahrt von rund 35–45 Minuten. In der Domstadt haben wir für den Bank-Verlag eine mobile Videokonferenzstele gebaut und für Pfeifer & Langen über 20 Konferenzräume standardisiert. Ansprechpartner für Kölner Projekte ist Benedikt Nöchel aus der Geschäftsführung.",
+  "referenzen": [
+    {
+      "name": "Bank-Verlag",
+      "leistung": "Videokonferenz",
+      "detail": "Mobile Videokonferenzstele mit iiyama 86\"-Touchscreen und Barco ClickShare Bar Core",
+      "ort": "Köln",
+      "freigabe": true,
+      "url": "/projekte/bank-verlag-mobile-videokonferenzstele-koeln"
+    },
+    {
+      "name": "Pfeifer & Langen",
+      "leistung": "Konferenztechnik",
+      "detail": "Über 20 Konferenzräume standardisiert, inklusive 136\"-LED-Wall",
+      "ort": "Köln",
+      "freigabe": true,
+      "url": "/projekte/pfeifer-langen"
+    }
+  ],
+  "branchen": ["Finanz- und Verlagswesen", "Lebensmittelindustrie"],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Wie schnell sind Sie in Köln vor Ort?",
+      "answer": "Unser Standort Bonn liegt ca. 35–45 Minuten von Köln entfernt – Beratung, Installation und Service für Kölner Unternehmen erfolgen von dort aus."
+    },
+    {
+      "question": "Welche Projekte haben Sie in Köln umgesetzt?",
+      "answer": "Für den Bank-Verlag haben wir eine mobile Videokonferenzstele mit iiyama 86\"-Touchscreen und Barco ClickShare Bar Core gebaut. Für Pfeifer & Langen haben wir über 20 Konferenzräume standardisiert, inklusive einer 136\"-LED-Wall."
+    },
+    {
+      "question": "Betreuen Sie mehrere Standorte eines Unternehmens?",
+      "answer": "Ja, wir realisieren standardisierte Rollouts über mehrere Standorte hinweg – wie bei Pfeifer & Langen in Köln mit über 20 einheitlich ausgestatteten Konferenzräumen."
+    }
+  ]
+}

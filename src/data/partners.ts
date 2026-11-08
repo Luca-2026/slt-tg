@@ -298,7 +298,7 @@ export const partners: Partner[] = [
     relatedLinks: [
       {
         label: "Service & Wartung für AV-Systeme",
-        href: "/service-wartung",
+        href: "/managed-services",
         description: "Monitoring, Wartungsverträge und Managed Services für Q-SYS-Installationen.",
       },
       {
@@ -560,7 +560,7 @@ export const partners: Partner[] = [
       },
       {
         label: "Service & Wartung",
-        href: "/service-wartung",
+        href: "/managed-services",
         description: "Betrieb, Firmware-Pflege und Support für Konferenzraumtechnik.",
       },
     ],
@@ -777,7 +777,7 @@ export const partners: Partner[] = [
       },
       {
         label: "Service & Wartung für AV-Technik",
-        href: "/service-wartung",
+        href: "/managed-services",
         description: "Managed Services, Firmware-Pflege und Störungsmanagement im Rollout.",
       },
       {
@@ -816,7 +816,8 @@ export const partners: Partner[] = [
         products: ["Cisco Meraki MX"],
       },
     ],
-    partnerStatus: DEFAULT_PARTNER_STATUS,
+    // Cisco gehört nicht zur bestätigten Zertifizierungs-Liste – neutraler Status.
+    partnerStatus: "Hersteller-Partner der SLT Technology Group",
     useCases: [
       {
         title: "WLAN-Rollout über mehrere Werksstandorte",

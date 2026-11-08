@@ -1,18 +1,19 @@
-# Aufgaben
-- [x] SEO-/Head-Bereinigung: meta title/keywords entfernt; individuelle Seitentags und www-URLs mit gemeinsamem Writer vereinheitlicht, 89 Browserseiten und 89 serialisierte Vorschau-Snapshots geprüft, 13 Regeltests bestanden; vollständige Title/Description-Tabelle als Markdown und CSV übergeben. Kein neuer Produktionsbuild, FTP-Export oder Deploy.
-- [x] Deterministische Snapshots: Reveal erst nach Mount, Hotspot-CSS-Fallback, __PRERENDER__ und reduzierte Bewegung, Routenvalidierung nach Serialisierung und JS/No-JS-Textvergleich umgesetzt; 89 Vorschau-Snapshots mit 0% Textabweichung, 45 Regeltests und Browserbedienung geprüft; vollständiges Script-Diff bereitgestellt. Kein neuer Produktionsbuild, kein FTP-Paket und kein Deploy.
-- [x] Startseite, Kontakt und Projektanfrage: Chromium-Snapshots ohne/mit JavaScript verglichen; Hero einmalig, 305+/228+/10+ statisch, sechs dauerhaft vorhandene FAQ-Antworten, Kontaktformular und beide Standortadressen geprüft. Formularbedienung ohne Versand, Desktop/Tablet/Mobil und 34 Tests bestanden; kein neues FTP-Paket erstellt, kein Deploy.
-- [x] Abschlussprüfung mit Semrush DE: 89 vollständige statische Seiten, 68 Sitemap-URLs, eindeutige Metadaten und bekannte lastmod-Daten; Apache-HTTPS-/301-/404-/410-Tests, 28 Regeltests, No-JS-Inhalte und Navigation geprüft. Bericht, CSV und Upload-ZIP übergeben; Live-Upload und anschließende Hoster-/Formular-/GSC-Prüfung bleiben beim Auftraggeber.
-- [x] Startseiten-Referenzen aus vollständigem Bestand (7 Projekte) rotieren lassen und davor datierte aktuelle News/Wissen interaktiv anzeigen; gemeinsame Newsquelle.
-- [x] Automatik, Bedienung, sichtbare Bilder, Reihenfolge und Seitenbreite bei 1280/393/320 Pixeln geprüft; News-Datumstest erfolgreich, kein Upload.
-- [x] Bank-Verlag-Referenz mit beiden Originalfotos, Projektzeit Februar 2026, Veröffentlichungsdatum 31.08.2026, interner Übersicht-Verlinkung und SEO/Sitemap integriert; Desktop/Mobil und Datumstests geprüft, kein Upload.
-- [x] Projektüberschriften intern verlinkt, drei Knauber-Bildzuschnitte auf die Motive fokussiert und großen Bildwechsel mit Fade auf Desktop/Mobil geprüft; Originalfotos unverändert erhalten.
-- [x] Knauber-Bild ohne Beschnitt, offizielle Firmierung und Kundenlink korrigiert; ausgeführte Wartung und Cloud-Migration ergänzt. Anlagenstandort nur Bonn, keine ungeprüfte Firmensitz-Zuordnung.
-- [x] Services und Wartung auf einer Seite konsolidiert und drei belegte CARE-Modelle interaktiv integriert; LED-Serviceleistungen und Buttons ergänzt, ohne PDF-Download.
-- [x] Links, Vertragsregeln, SEO und Darstellung bei 1280, 927 und 393 Pixeln im Browser geprüft; kein Deploy. Server-Weiterleitung erst nach FTP-Upload wirksam.
-- [x] Whitepaper-Download entfernen und Outdoor-LED-Beitrag mit belegten Inhalten und Kundenfotos überarbeiten.
-- [x] Knauber-Projektreferenz mit Datum 24.10.2026, Logo und korrekter Kundenwebsite ergänzen.
-- [x] SEO, interne Links, Bildtexte und Browser prüfen; vollständiges Reporting bereitstellen, kein Deploy.
-- [x] Outdoor-LED-Whitepaper als praxisnahen News-Beitrag veröffentlichungsbereit integrieren.
-- [x] Service-Navigation konsolidieren, ITIL aus Überschriften entfernen und beide Service-Seiten konkretisieren.
-- [x] Beitrag aus beiden Service-Seiten verlinken, SEO-Katalog und Browser prüfen. Kein Website-Deploy; statische Ausgabe folgt beim regulären Export.
+# Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
+
+## A. Metadaten
+- [x] A1 Routentabelle um Spalte "robots" (index/noindex) für alle 89 Routen ergänzt → /mnt/documents/SEO-Routentabelle-2026-11-08.md + .csv
+- [x] A2 Titles max. 60 Zeichen, Suffix " | SLT Technology Group" / " | SLT TG"; kein "| SLT AV" mehr; Regionalseiten "<Leistung> <Stadt> | SLT Technology Group" (Test: seo-title-description.test.ts)
+- [x] A3 Descriptions 120–155 Zeichen, keine abgeschnittenen Wörter, kein "!" (Test prüft alle 89 Routen)
+- [x] A4 E.ON/Henkel/Japan-Zentralen/Bundesministerien entfernt (alte Overrides gelöscht); "zertifiziert für Microsoft Teams, Zoom und Webex" ersetzt; src/data/certifications.ts mit 12 bestätigten Herstellern auf /technologien, Partnerseiten, Startseite; Poly/Logitech = "Erfahrung mit"; Cisco neutral "Hersteller-Partner"
+- [x] A5 "Luca Sandhoff": keine Fundstelle in src/, public/, index.html, scripts (Impressum nennt nur Benedikt Nöchel als Geschäftsführer)
+- [x] A6 Ausbildungsseiten: Start 01.08.2027, 2027 in Title/Description, dateModified 2026-11-08, validThrough 2027-07-31, Sitemap-lastmod via route.lastmod
+- [x] A7 /service-wartung: 301 in .htaccess + Navigate in App.tsx; alle 17 internen Links auf /managed-services umgestellt
+
+## B. Regionalseiten (35 Routen, alle index)
+- [x] B8 Datengetriebenes Template: src/data/regionen/<stadt>.json + Loader (freigabe-Filter, Leistungs-Matching, Platzhalter-Erkennung); LocalBusiness je zuständigem Standort, FAQPage aus faq[]; 30-%-Test (5-Gramm-Containment) in regionen.test.ts
+- [x] B9 JSON für koeln, duesseldorf, bonn, krefeld, essen, duisburg, moenchengladbach exakt mit Vorgabe befüllt
+- [x] B10 Eigene Einleitung pro Stadt (max. 3 Sätze, nur Stadtfelder, keine identischen Sätze)
+- [x] B11 Offene Felder: gbpUrl (7 Städte) + Bonner Reaktionszeit – nicht gerendert, im Report gelistet; Routentabelle vollständig ausgegeben
+
+## Offen (Kunde liefert nach)
+- GBP-URLs (7 Städte), Bonner Reaktionszeit, Zertifizierungs-Bezeichnungen + Jahre, Poly/Logitech-Bestätigung

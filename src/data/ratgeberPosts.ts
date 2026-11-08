@@ -29,10 +29,9 @@ export const ratgeberPosts: RatgeberPostMeta[] = [
     slug: "raumbuchungssystem-konferenzraeume",
     title: "Raumbuchungssystem für Konferenzräume",
     h1: "Raumbuchungssystem für Konferenzräume: Auswahl, Integration und Betrieb",
-    metaTitle:
-      "Raumbuchungssystem für Konferenzräume: Auswahl & Integration | SLT AV",
+    metaTitle: "Raumbuchungssystem für Konferenzräume | SLT Technology Group",
     description:
-      "Raumbuchungssystem planen: Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release, Netzwerk und Datenschutz – mit Auswahl-Checkliste.",
+      "Raumbuchungssystem planen: Kalender-Integration in Microsoft 365 oder Google Workspace, Türpanels, Auto-Release und Datenschutz – mit Checkliste.",
     keywords:
       "Raumbuchungssystem, Raumbuchung Konferenzraum, Raumbuchungssoftware, Konferenzraumbuchung, Room-Booking-Panel, Raumbuchung Microsoft 365, Türschild Besprechungsraum, Belegungsdaten Meetingräume",
     excerpt:
@@ -70,10 +69,9 @@ export const ratgeberPosts: RatgeberPostMeta[] = [
     slug: "ki-readiness-av-medientechnik-2026",
     title: "KI-Readiness in der AV-Branche",
     h1: "KI-Readiness in der AV-Branche: So machen Sie Ihre Medientechnik 2026 fit für Künstliche Intelligenz",
-    metaTitle:
-      "KI-Readiness in der AV-Branche: So machen Sie Ihre Medientechnik 2026 KI-fähig | SLT Technology Group",
+    metaTitle: "KI-Readiness in der AV-Branche | SLT Technology Group",
     description:
-      "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance: Was KI-Readiness für Ihre Medientechnik bedeutet und wie Sie Ihr Unternehmen jetzt vorbereiten. Mit Checkliste.",
+      "KI in Konferenzräumen, EU AI Act, NIS2 und Predictive Maintenance: Was KI-Readiness für Ihre Medientechnik bedeutet und wie Sie sich vorbereiten.",
     keywords:
       "KI-Readiness AV, KI in der Medientechnik, KI Konferenzraum, AI Meetingraum, EU AI Act Unternehmen, KI Videokonferenz, Predictive Maintenance Medientechnik, AV/IT-Konvergenz, Medientechnik 2026",
     excerpt:

@@ -35,7 +35,7 @@ const services = [
     description:
       "Zuverlässiger After-Sales Support, proaktives Monitoring und strukturierte Serviceprozesse nach ITIL v4.",
     features: ["Service Desk", "Managed Rooms", "Wartung & Updates"],
-    link: "/service-wartung",
+    link: "/managed-services",
   },
 ];
 

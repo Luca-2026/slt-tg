@@ -313,7 +313,7 @@ const Videokonferenzanlage = () => {
               { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung nach Raumgröße" },
               { to: "/partner/yealink", label: "Yealink MeetingBar & MeetingBoard" },
               { to: "/partner/huddly", label: "Huddly Konferenzkameras" },
-              { to: "/service-wartung", label: "Service & Wartung für Konferenzräume" },
+              { to: "/managed-services", label: "Service & Wartung für Konferenzräume" },
             ].map((l) => (
               <Link
                 key={l.to}

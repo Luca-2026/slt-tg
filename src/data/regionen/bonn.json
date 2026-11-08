@@ -1,0 +1,35 @@
+{
+  "stadt": "Bonn",
+  "slug": "bonn",
+  "standort": "Bonn",
+  "fahrzeit": "vor Ort; Rhein-Sieg-Kreis und Ahrweiler ca. 20–40 Minuten",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Bonn ist unser zweiter Standort: Von der Drachenburgstraße 8 aus sind wir direkt vor Ort, den Rhein-Sieg-Kreis und Ahrweiler erreichen wir in rund 20–40 Minuten. In Bonn-Endenich warten wir für Knauber die Outdoor-LED-Anlagen am Firmensitz. Ansprechpartner am Standort Bonn ist Geschäftsführer Benedikt Nöchel.",
+  "referenzen": [
+    {
+      "name": "Knauber",
+      "leistung": "Digital Signage und Medientechnik",
+      "detail": "Wartung der Outdoor-LED-Anlagen am Firmensitz",
+      "ort": "Bonn-Endenich",
+      "freigabe": true,
+      "url": "/projekte/knauber-outdoor-led-wartung-bonn"
+    }
+  ],
+  "branchen": ["Handel und Energie"],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Haben Sie ein Team in Bonn?",
+      "answer": "Ja, wir betreiben einen eigenen Standort in Bonn, Drachenburgstraße 8 – mit eigenem Team vor Ort."
+    },
+    {
+      "question": "Übernehmen Sie die Wartung bestehender Anlagen?",
+      "answer": "Ja – für Knauber in Bonn-Endenich warten wir die Outdoor-LED-Anlagen am Firmensitz, inklusive Lüfter- und Netzteiltausch sowie Ersatzteilpool."
+    },
+    {
+      "question": "Welche Reaktionszeit gilt für Bonn?",
+      "answer": "[REAKTIONSZEIT EINTRAGEN]"
+    }
+  ]
+}

@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
     datePublished: "2026-10-24",
     dateModified: "2026-10-31",
     category: "Outdoor-LED · Service & Wartung",
-    shortDescription: "Knauber vertraut SLT Technology Group die Wartung seiner Outdoor-LED-Anlagen in Bonn an. Lüfter- und Netzteiltausch, Ersatzteilpool und Migration in die VNNOX EU Cloud.",
+    shortDescription: "Knauber vertraut SLT die Wartung seiner Outdoor-LED-Anlagen in Bonn an: Lüfter- und Netzteiltausch, Ersatzteilpool und Migration in die VNNOX EU Cloud.",
     heroImage: "/assets/projects/knauber/knauber-led-wartung-buehne.webp",
     heroAlt: "Outdoor-LED-Anlage bei Knauber in Bonn mit aufgestellter Höhenarbeitsbühne von SLT Rental",
     logo: "/assets/projects/knauber/knauber-logo.webp",
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
     year: "2024",
     category: "Boardroom & Schulung (Videokonferenz)",
     shortDescription:
-      "Ausbau von zwei Räumen zu modernen Videokonferenz- und Schulungsumgebungen mit Shure, Nureva und AVer Tracking-Kameras.",
+      "Ausbau von zwei Räumen bei Aluminium Norf in Neuss zu modernen Videokonferenz- und Schulungsumgebungen mit Shure, Nureva und AVer Tracking-Kameras.",
     heroImage: "/assets/projects/alunorf/alunorf-main.jpg",
     galleryImages: [
       "/assets/projects/alunorf/alunorf-main.jpg",
@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
     year: "2023",
     category: "Multi-Room Rollout (Videokonferenz)",
     shortDescription:
-      "Standardisierte Ausstattung von über 20 Konferenzräumen inklusive einer 136-Zoll LED-Wall.",
+      "Standardisierte Ausstattung von über 20 Konferenzräumen bei Pfeifer & Langen in Köln, inklusive einer 136-Zoll-LED-Wall im Einsatz.",
     heroImage: "/assets/projects/pfeifer-langen/pl-main.jpg",
     galleryImages: [
       "/assets/projects/pfeifer-langen/pl-main.jpg",
@@ -259,7 +259,7 @@ export const PROJECTS: Project[] = [
     year: "2024–2026",
     category: "Management Room & Besprechungsräume",
     shortDescription:
-      "Management Room und drei weitere Besprechungsräume mit Huddly-Kameras, Nureva HDL-310, Iiyama Displays und Barco ClickShare CX – BYOD-fähig und sofort einsatzbereit.",
+      "Management Room und drei Besprechungsräume mit Huddly-Kameras, Nureva HDL-310, iiyama Displays und Barco ClickShare CX – BYOD-fähig.",
     heroImage: "/assets/projects/gea-farm/gea-main.jpg",
     galleryImages: [
       "/assets/projects/gea-farm/gea-main.jpg",
@@ -372,7 +372,7 @@ export const PROJECTS: Project[] = [
     year: "2022–2023",
     category: "WiFi-Infrastruktur & Netzwerk",
     shortDescription:
-      "Komplette WiFi-Infrastruktur für mehrere Werksstandorte des globalen Verpackungskonzerns – von EKAHAU-Ausleuchtung über Cat-7-Verkabelung bis zur Cisco Meraki Implementierung im laufenden 24/7-Betrieb.",
+      "WLAN-Infrastruktur für mehrere Werksstandorte von Sonoco: EKAHAU-Ausleuchtung, Cat-7-Verkabelung und Cisco Meraki im laufenden 24/7-Betrieb.",
     heroImage: "/assets/projects/sonoco/sonoco-ekahau.jpg",
     galleryImages: [
       "/assets/projects/sonoco/sonoco-ekahau.jpg",

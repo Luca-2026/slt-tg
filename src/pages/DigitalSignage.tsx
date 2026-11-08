@@ -327,7 +327,7 @@ const DigitalSignage = () => {
             {[
               { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung planen lassen" },
               { to: "/videokonferenzanlage", label: "Videokonferenzanlage einrichten lassen" },
-              { to: "/service-wartung", label: "Service & Wartung für AV-Anlagen" },
+              { to: "/managed-services", label: "Service & Wartung für AV-Anlagen" },
             ].map((l) => (
               <Link
                 key={l.to}

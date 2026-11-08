@@ -78,7 +78,7 @@ const App = () => (
           <Route path="/blog" element={<Navigate to="/ratgeber" replace />} />
           <Route path="/blog/:slug" element={<BlogRedirect />} />
           <Route path="/konferenzraum-ausstattung" element={<KonferenzraumAusstattung />} />
-          <Route path="/service-wartung" element={<Navigate to="/managed-services" replace />} />
+          <Route path="/managed-services" element={<Navigate to="/managed-services" replace />} />
           <Route path="/managed-services" element={<ManagedServices />} />
           <Route path="/digital-signage" element={<DigitalSignage />} />
           <Route path="/videokonferenzanlage" element={<Videokonferenzanlage />} />

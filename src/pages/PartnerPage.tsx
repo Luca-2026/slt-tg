@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getPartnerBySlug } from "@/data/partners";
+import { CERTIFIED_MANUFACTURERS, EXPERIENCED_MANUFACTURERS, isCertifiedManufacturer } from "@/data/certifications";
 import { ArrowRight, Award, CheckCircle, ExternalLink } from "lucide-react";
 
 const PartnerPage = () => {
@@ -58,7 +59,7 @@ const PartnerPage = () => {
               ]}
             />
             <Badge variant="outline" className="mb-6">
-              Zertifizierter Partner
+              {isCertifiedManufacturer(partner.name) ? "Zertifizierter Partner" : "Hersteller-Partner"}
             </Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               {partner.headline}
@@ -73,6 +74,23 @@ const PartnerPage = () => {
               <Badge variant="secondary" className="text-xs">
                 {partner.partnerStatus}
               </Badge>
+            </div>
+
+            {/* Zertifizierungs-Liste (bestätigte Hersteller) */}
+            <div className="mt-6">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                Zertifiziert für
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {CERTIFIED_MANUFACTURERS.map((name) => (
+                  <Badge key={name} variant="outline" className="text-xs">
+                    {name}
+                  </Badge>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground mt-3">
+                Dazu Erfahrung mit {EXPERIENCED_MANUFACTURERS.join(" und ")}.
+              </p>
             </div>
           </div>
         </div>

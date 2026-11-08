@@ -8,6 +8,7 @@
  */
 import type { SeoRoute } from "./seo-routes";
 import { cities, topics, getContentOverride } from "./localSEO";
+import { getRegion, visibleFaqs } from "./regionen";
 import { getProjectBySlug, PROJECTS, type Project } from "./projects";
 import { getJobBySlug, buildJobDescriptionHtml, HIRING_ORG, type JobPosition } from "./jobs";
 import { getPartnerBySlug } from "./partners";
@@ -125,30 +126,34 @@ export function buildLocalSeoSchemas(route: SeoRoute): object[] {
   if (!topic || !city) return [];
 
   const schemas: object[] = [];
+  const region = getRegion(route.city);
 
   // Service – immer
   schemas.push({
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `${topic.title} ${city.name}`,
+    name: `${topic.shortTitle} ${city.name}`,
     serviceType: topic.title,
-    description: topic.intro(city.name),
+    description: region?.intro ?? route.description,
     provider: ORG_REF,
     areaServed: { "@type": "City", name: city.name },
     url: `${BASE_URL}${route.path}`,
   });
 
-  // LocalBusiness nur auf Krefeld/Bonn-Seiten (echte Adressen)
-  if (route.city === "krefeld") {
+  // LocalBusiness mit dem zuständigen Standort (aus den Stadt-Daten)
+  if (region) {
+    schemas.push(region.standort.includes("Bonn") ? BONN_LOCAL_BUSINESS : KREFELD_LOCAL_BUSINESS);
+  } else if (route.city === "krefeld") {
     schemas.push(KREFELD_LOCAL_BUSINESS);
   } else if (route.city === "bonn") {
     schemas.push(BONN_LOCAL_BUSINESS);
   }
 
-  // FAQPage – Override hat Vorrang vor Template
-  const override = getContentOverride(route.topic, route.city);
-  const faqs = override?.faqItems ?? topic.faqItems(city.name);
-  schemas.push(buildFAQPageSchema(faqs));
+  // FAQPage – aus den Stadt-Daten (ohne Platzhalter), NRW aus dem Override
+  const faqs = region
+    ? visibleFaqs(region)
+    : getContentOverride(route.topic, route.city)?.faqItems ?? [];
+  if (faqs.length > 0) schemas.push(buildFAQPageSchema(faqs));
 
   schemas.push(buildBreadcrumbList(route));
   return schemas;

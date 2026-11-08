@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
 import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { CERTIFIED_MANUFACTURERS, EXPERIENCED_MANUFACTURERS } from "@/data/certifications";
 
 const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com" },
@@ -97,7 +98,7 @@ export function PartnersSection() {
         >
           <p className="text-sm text-muted-foreground">
             <Award className="h-4 w-4 inline-block mr-1 text-primary" />
-            Zertifiziert und autorisierter Partner für alle aufgeführten Hersteller
+            Zertifiziert für {CERTIFIED_MANUFACTURERS.join(", ")} – dazu Erfahrung mit {EXPERIENCED_MANUFACTURERS.join(" und ")}
           </p>
         </div>
       </div>

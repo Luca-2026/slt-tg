@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { CERTIFIED_MANUFACTURERS, EXPERIENCED_MANUFACTURERS } from "@/data/certifications";
 import { 
   ArrowRight,
   Video,
@@ -215,7 +216,7 @@ function TechDetailSection({ tech, index }: { tech: typeof technologies[0]; inde
         <div className="flex items-center gap-3 flex-wrap">
           <span className="text-xs lg:text-sm text-muted-foreground flex items-center gap-1.5">
             <Award className="h-3.5 w-3.5 text-primary" />
-            Zertifizierter Partner:
+            Hersteller im Portfolio:
           </span>
           {tech.partners.map((partner) => (
             <Badge key={partner} variant="outline" className="text-xs">
@@ -312,6 +313,35 @@ const Technologien = () => {
       {technologies.map((tech, sectionIndex) => (
         <TechDetailSection key={tech.id} tech={tech} index={sectionIndex} />
       ))}
+
+      {/* Zertifizierungen – bestätigte Hersteller-Zertifizierungen als Liste */}
+      <section className="py-16 lg:py-20 bg-card">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <Badge variant="outline" className="mb-6">
+              <Award className="h-3 w-3 mr-1" />
+              Zertifizierungen
+            </Badge>
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              Zertifiziert für diese Hersteller
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              SLT Technology Group ist für die folgenden Hersteller zertifiziert.
+              Die genaue Bezeichnung und das Jahr je Zertifizierung nennen wir Ihnen gerne im Gespräch.
+            </p>
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {CERTIFIED_MANUFACTURERS.map((name) => (
+                <Badge key={name} variant="secondary" className="text-xs">
+                  {name}
+                </Badge>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Darüber hinaus verfügen wir über langjährige Erfahrung mit {EXPERIENCED_MANUFACTURERS.join(" und ")}.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/10 via-background to-background relative overflow-hidden">

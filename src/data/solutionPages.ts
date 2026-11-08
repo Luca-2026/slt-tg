@@ -52,9 +52,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "kollaborationsraeume-kreativzonen",
     navLabel: "Kollaborationsräume & Kreativzonen",
-    title: "Kollaborationsräume & Kreativzonen ausstatten | SLT Technology Group",
+    title: "Kollaborationsräume & Kreativzonen | SLT Technology Group",
     description:
-      "Kollaborationsräume und Kreativzonen ausstatten: digitale Whiteboards, Wireless Presentation, mobile Videokonferenz-Carts und Buchungslogik – geplant und integriert vom AV-Fachbüro.",
+      "Kollaborationsräume und Kreativzonen: digitale Whiteboards, Wireless Presentation und mobile Videokonferenz-Carts – geplant und integriert vom AV-Fachbüro.",
     h1: "Kollaborationsräume & Kreativzonen",
     badge: "Agiles Arbeiten",
     heroLead:
@@ -162,7 +162,7 @@ export const solutionPages: SolutionPage[] = [
       { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung nach Raumgröße" },
       { to: "/videokonferenzanlage", label: "Videokonferenzanlage planen lassen" },
       { to: "/partner/barco", label: "Barco Wireless Presentation" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
     ],
   },
 
@@ -170,9 +170,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "auditorien-veranstaltungsraeume",
     navLabel: "Auditorien & Veranstaltungsräume",
-    title: "Auditorium & Veranstaltungsraum: Medientechnik planen | SLT Technology Group",
+    title: "Auditorium & Veranstaltungsraum | SLT Technology Group",
     description:
-      "Medientechnik für Auditorien und Veranstaltungsräume: Beschallung, LED-Wall oder Projektion, Kamera und Streaming, Mediensteuerung und barrierefreie Höranlagen – Fachplanung und Integration.",
+      "Medientechnik für Auditorien und Veranstaltungsräume: Beschallung, LED-Wall oder Projektion, Streaming und barrierefreie Höranlagen.",
     h1: "Auditorien & Veranstaltungsräume",
     badge: "Große Räume",
     heroLead:
@@ -280,7 +280,7 @@ export const solutionPages: SolutionPage[] = [
       { to: "/partner/q-sys", label: "Q-SYS Audio- und Steuerungsplattform" },
       { to: "/partner/sennheiser", label: "Sennheiser Konferenz- und Funktechnik" },
       { to: "/digital-signage", label: "Digital Signage für Foyer und Wegeleitung" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
     ],
   },
 
@@ -288,9 +288,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "bildung-schulung",
     navLabel: "Bildung & Schulung",
-    title: "Schulungsräume & Lernumgebungen ausstatten | SLT Technology Group",
+    title: "Schulungsräume & Lernumgebungen | SLT Technology Group",
     description:
-      "Medientechnik für Schulungsräume, Akademien und Hörsäle: interaktive Displays, Lecture Capture, hybride Trainings und robuste Bedienung für wechselnde Nutzergruppen.",
+      "Medientechnik für Schulungsräume, Akademien und Hörsäle: interaktive Displays, Lecture Capture und robuste Bedienung für wechselnde Nutzergruppen.",
     h1: "Bildung & Schulung",
     badge: "Lernumgebungen",
     heroLead:
@@ -398,7 +398,7 @@ export const solutionPages: SolutionPage[] = [
       { to: "/videokonferenzanlage", label: "Videokonferenzanlage für hybride Trainings" },
       { to: "/konferenzraum-ausstattung", label: "Konferenzraum-Ausstattung nach Raumgröße" },
       { to: "/partner/sennheiser", label: "Sennheiser Deckenmikrofone" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
     ],
   },
 
@@ -406,9 +406,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "industrie-produktion",
     navLabel: "Industrie & Produktion",
-    title: "Medientechnik für Industrie, Leitwarten & Produktion | SLT Technology Group",
+    title: "Industrie-Medientechnik & Leitwarten | SLT Technology Group",
     description:
-      "Medientechnik für Produktion und Leitwarten: industrietaugliche Displays, Shopfloor-Boards, Beschallung in lauten Hallen und 24/7-Betrieb mit Fernüberwachung.",
+      "Medientechnik für Produktion und Leitwarten: industrietaugliche Displays, Shopfloor-Boards, Beschallung in lauten Hallen und 24/7-Betrieb.",
     h1: "Industrie & Produktion",
     badge: "Raue Umgebung",
     heroLead:
@@ -516,7 +516,7 @@ export const solutionPages: SolutionPage[] = [
       { to: "/digital-signage", label: "Digital Signage für Standorte und Hallen" },
       { to: "/loesungen/it-infrastruktur-netzwerk", label: "IT-Infrastruktur & Netzwerk" },
       { to: "/loesungen/videoueberwachung-sicherheit", label: "Videoüberwachung & Sicherheit" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
     ],
   },
 
@@ -524,9 +524,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "it-infrastruktur-netzwerk",
     navLabel: "IT-Infrastruktur & Netzwerk",
-    title: "IT-Infrastruktur & strukturierte Verkabelung | SLT Technology Group",
+    title: "IT-Infrastruktur & Verkabelung | SLT Technology Group",
     description:
-      "Strukturierte Verkabelung nach DIN EN 50173, Netzwerk-Design, PoE-Versorgung und Enterprise-WLAN – als Fundament für Konferenztechnik, Digital Signage und Videoüberwachung.",
+      "Strukturierte Verkabelung nach DIN EN 50173, Netzwerk-Design, PoE und Enterprise-WLAN – das Fundament für Konferenztechnik und Digital Signage.",
     h1: "IT-Infrastruktur & Netzwerk",
     badge: "Fundament",
     heroLead:
@@ -634,7 +634,7 @@ export const solutionPages: SolutionPage[] = [
       { to: "/videokonferenzanlage", label: "Videokonferenzanlage planen lassen" },
       { to: "/digital-signage", label: "Digital Signage für Unternehmen" },
       { to: "/loesungen/videoueberwachung-sicherheit", label: "Videoüberwachung & Sicherheit" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
     ],
   },
 
@@ -642,9 +642,9 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "videoueberwachung-sicherheit",
     navLabel: "Videoüberwachung & Sicherheit",
-    title: "Videoüberwachung für Unternehmen: Planung & Betrieb | SLT Technology Group",
+    title: "Videoüberwachung für Unternehmen | SLT Technology Group",
     description:
-      "Videoüberwachung für Unternehmen: IP-Kameras, Video-Management-Software, Zutrittskontrolle und Intercom – geplant nach DIN EN 62676 und datenschutzkonform umgesetzt.",
+      "Videoüberwachung für Unternehmen: IP-Kameras, Video-Management und Zutrittskontrolle – geplant nach DIN EN 62676, datenschutzkonform umgesetzt.",
     h1: "Videoüberwachung & Sicherheit",
     badge: "Sicherheitstechnik",
     heroLead:
@@ -752,7 +752,7 @@ export const solutionPages: SolutionPage[] = [
     relatedLinks: [
       { to: "/loesungen/it-infrastruktur-netzwerk", label: "IT-Infrastruktur & Netzwerk" },
       { to: "/loesungen/industrie-produktion", label: "Industrie & Produktion" },
-      { to: "/service-wartung", label: "Service & Wartung (ITIL v4)" },
+      { to: "/managed-services", label: "Service & Wartung (ITIL v4)" },
       { to: "/projektanfrage", label: "Projekt anfragen" },
     ],
   },

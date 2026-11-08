@@ -1,0 +1,30 @@
+{
+  "stadt": "Essen",
+  "slug": "essen",
+  "standort": "Krefeld",
+  "fahrzeit": "ca. 40–50 Minuten ab Krefeld",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Essen betreuen wir von unserem Hauptsitz in Krefeld aus – die Anfahrt dauert rund 40–50 Minuten. Für Capgemini haben wir im benachbarten Ratingen, rund 20 Minuten von Essen entfernt, WLAN-Infrastruktur und WLAN-Ausleuchtung umgesetzt. Ansprechpartner für Essener Projekte ist Benedikt Nöchel aus der Geschäftsführung.",
+  "referenzen": [
+    {
+      "name": "Capgemini",
+      "leistung": "IT-Netzwerk",
+      "detail": "WLAN-Infrastruktur und Ausleuchtung",
+      "ort": "Ratingen, ca. 20 Minuten von Essen",
+      "freigabe": true
+    }
+  ],
+  "branchen": [],
+  "ausschluesse": ["Kurzfrist-Vermietung von Eventtechnik"],
+  "faq": [
+    {
+      "question": "Wie schnell sind Sie in Essen vor Ort?",
+      "answer": "Von unserem Hauptsitz in Krefeld erreichen wir Essen in ca. 40–50 Minuten."
+    },
+    {
+      "question": "Von welchem Standort wird Essen betreut?",
+      "answer": "Essen wird von unserem Hauptsitz in Krefeld aus betreut – inklusive Beratung, Installation und Service."
+    }
+  ]
+}

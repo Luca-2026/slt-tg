@@ -1,0 +1,49 @@
+{
+  "stadt": "Krefeld",
+  "slug": "krefeld",
+  "standort": "Anrather Str. 291, 47807 Krefeld, Hauptsitz mit Lager und Vorführraum",
+  "fahrzeit": "vor Ort; Niederrhein 15–30 Minuten",
+  "ansprechpartner": "Benedikt Nöchel, Geschäftsführung",
+  "gbpUrl": null,
+  "intro": "Krefeld ist unser Hauptsitz: In der Anrather Straße 291 arbeiten Projektleitung, Lager und Vorführraum unter einem Dach. Am Niederrhein sind wir in 15–30 Minuten vor Ort – etwa beim REWE Center Willich mit seiner Logo-Bodenprojektion oder bei GOB Software & Systeme in Krefeld. Ansprechpartner am Hauptsitz ist Geschäftsführer Benedikt Nöchel.",
+  "referenzen": [
+    {
+      "name": "REWE Center Willich",
+      "leistung": "Digital Signage",
+      "detail": "Logo-Bodenprojektion",
+      "ort": "Willich",
+      "freigabe": true
+    },
+    {
+      "name": "Aluminium Norf",
+      "leistung": "Konferenztechnik",
+      "detail": "Boardroom und Schulungsraum mit Shure, Nureva und AVer",
+      "ort": "Neuss",
+      "freigabe": true,
+      "url": "/projekte/aluminium-norf"
+    },
+    {
+      "name": "GOB Software & Systeme",
+      "leistung": "Videokonferenz",
+      "detail": "Zusammenarbeit im Bereich Videokonferenzsysteme",
+      "ort": "Krefeld",
+      "freigabe": true
+    }
+  ],
+  "branchen": ["Handel", "Industrie", "Software"],
+  "ausschluesse": ["Eventtechnik-Vermietung über SLT Rental am gleichen Standort (slt-rental.de)"],
+  "faq": [
+    {
+      "question": "Kann ich Geräte vor dem Kauf in Krefeld sehen?",
+      "answer": "Ja, in unserem Vorführraum am Hauptsitz in der Anrather Straße 291 – gerne nach Terminvereinbarung."
+    },
+    {
+      "question": "Welche Hersteller haben Sie vor Ort?",
+      "answer": "Am Hauptsitz in Krefeld zeigen wir Ihnen Systeme von Herstellern wie Crestron, Shure, Barco, Samsung und iiyama – die vollständige Übersicht finden Sie auf unserer Technologie-Seite."
+    },
+    {
+      "question": "Wie läuft eine Teststellung ab?",
+      "answer": "Auf Wunsch stellen wir Ihnen Systeme zum Testen direkt bei Ihnen vor Ort bereit (Try-and-Buy) – die Dauer stimmen wir individuell mit Ihnen ab."
+    }
+  ]
+}
