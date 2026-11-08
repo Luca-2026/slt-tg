@@ -15,7 +15,7 @@
 - [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.
 - [x] Inhaltsarbeit anhand des Prüfberichts gebündelt: 24 finale Stadttexte benötigen jeweils 6–53 zusätzliche Wörter; 17 weitere Seiten umfassen Kontakt/Anfrage (2), Karriere (4), Ratgeberübersicht (1), News (3), Partner (5), NRW (1), Impressum (1).
 - [x] Inhaltserweiterung: alle 89 Vorschaurouten bestehen die 300-Wörter-/H1-/Hero-/FAQ-/Canonical-Prüfung; JS/no-JS-Textvergleich identisch; 73 Tests bestanden.
-- [ ] Produktions-Upload-Paket: kein dist-Artefakt in dieser Umgebung vorhanden; automatische Vorschauprüfungen liefern keinen Produktions-Export. Node-Paritätstest zusätzlich durch fehlende Chromium-Version 1194 blockiert (verfügbarer Python-Browser für alle 89 Vorschaurouten erfolgreich genutzt). Erst geprüften vollständigen Produktionsexport verpacken, kein Vorschau-ZIP als Upload ausgeben.
+- [x] Produktions-Upload-Paket 08.11.: Chromium 1194 installiert, `npm run build` mit Pre-Rendering (89 statische Seiten) und Postbuild (90 Routen bestanden) erfolgreich; Paritätstest JS/no-JS bestanden, 73 Tests grün. dist in drei verifizierte ZIP-Teile gepackt (SLT-Upload-2026-11-08-Teil1/2/3 in /mnt/documents), Entpacken identisch mit dist geprüft.
 - [x] Erneute Vorschau-Prüfung aller 89 Inhaltsrouten: einzig /impressum unter 300 Wörtern; diese Vorschauprüfung ist kein Produktionsbuild oder Upload-Grünlicht.
 
 ## JSON-LD (08.11.2026)

@@ -1,0 +1,722 @@
+[
+  {
+    "path": "/",
+    "words": 1118,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen",
+    "words": 645,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/technologien",
+    "words": 818,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/finanzierung",
+    "words": 476,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte",
+    "words": 437,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ueber-uns",
+    "words": 357,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/kontakt",
+    "words": 353,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projektanfrage",
+    "words": 345,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/karriere",
+    "words": 324,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/news",
+    "words": 742,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber",
+    "words": 318,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/konferenzraum-ausstattung",
+    "words": 724,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/managed-services",
+    "words": 1142,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage",
+    "words": 494,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenzanlage",
+    "words": 498,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/kollaborationsraeume-kreativzonen",
+    "words": 599,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/auditorien-veranstaltungsraeume",
+    "words": 579,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/bildung-schulung",
+    "words": 528,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/industrie-produktion",
+    "words": 551,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/it-infrastruktur-netzwerk",
+    "words": 584,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/loesungen/videoueberwachung-sicherheit",
+    "words": 556,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/krefeld",
+    "words": 310,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/duesseldorf",
+    "words": 342,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/koeln",
+    "words": 325,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/bonn",
+    "words": 300,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/essen",
+    "words": 362,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/duisburg",
+    "words": 344,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/medientechnik/moenchengladbach",
+    "words": 362,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/krefeld",
+    "words": 305,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/duesseldorf",
+    "words": 311,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/koeln",
+    "words": 300,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/bonn",
+    "words": 351,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/essen",
+    "words": 346,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/duisburg",
+    "words": 321,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/moenchengladbach",
+    "words": 329,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/konferenztechnik/nrw",
+    "words": 324,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/krefeld",
+    "words": 357,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/duesseldorf",
+    "words": 316,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/koeln",
+    "words": 311,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/bonn",
+    "words": 331,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/essen",
+    "words": 329,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/duisburg",
+    "words": 351,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/videokonferenz/moenchengladbach",
+    "words": 355,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/krefeld",
+    "words": 326,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/duesseldorf",
+    "words": 305,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/koeln",
+    "words": 349,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/bonn",
+    "words": 327,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/essen",
+    "words": 356,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/duisburg",
+    "words": 338,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/it-netzwerk/moenchengladbach",
+    "words": 325,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/krefeld",
+    "words": 353,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/duesseldorf",
+    "words": 336,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/koeln",
+    "words": 369,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/bonn",
+    "words": 364,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/essen",
+    "words": 343,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/duisburg",
+    "words": 352,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/digital-signage/moenchengladbach",
+    "words": 359,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/yealink-meetingboard-pro",
+    "words": 605,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/konferenztechnik-raumgroesse",
+    "words": 550,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/teams-rooms-vs-zoom-rooms",
+    "words": 409,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/konferenzraum-kosten",
+    "words": 446,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/raumbuchungssystem-konferenzraeume",
+    "words": 910,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/ratgeber/ki-readiness-av-medientechnik-2026",
+    "words": 1006,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/news/outdoor-led-wartung-servicekonzept",
+    "words": 1234,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/news/ise-2026-barcelona",
+    "words": 635,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/news/huddly-speaker-mode-ki-kamera",
+    "words": 367,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/news/hochwertige-technik-trotzdem-chaos",
+    "words": 301,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/news/man-hoert-nichts-schon-wieder",
+    "words": 312,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/bank-verlag-mobile-videokonferenzstele-koeln",
+    "words": 464,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/knauber-outdoor-led-wartung-bonn",
+    "words": 424,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/aluminium-norf",
+    "words": 405,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/pfeifer-langen",
+    "words": 445,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/gea-farm-technologies",
+    "words": 467,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/tourismus-info-bensersiel",
+    "words": 482,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/projekte/sonoco",
+    "words": 477,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/karriere/ausbildung-bueromanagement",
+    "words": 336,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/karriere/ausbildung-veranstaltungstechnik",
+    "words": 316,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/karriere/medientechniker",
+    "words": 324,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/impressum",
+    "words": 336,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/datenschutz",
+    "words": 2911,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/agb",
+    "words": 2808,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": false,
+    "violations": []
+  },
+  {
+    "path": "/partner/crestron",
+    "words": 358,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/q-sys",
+    "words": 575,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/sennheiser",
+    "words": 315,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/shure",
+    "words": 344,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/huddly",
+    "words": 578,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/barco",
+    "words": 355,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/yealink",
+    "words": 612,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/partner/cisco",
+    "words": 377,
+    "h1": 1,
+    "heroes": 1,
+    "hasFaqBlock": true,
+    "violations": []
+  },
+  {
+    "path": "/404.html",
+    "words": 15,
+    "h1": 1,
+    "heroes": 0,
+    "hasFaqBlock": false,
+    "violations": []
+  }
+]
