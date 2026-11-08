@@ -1,6 +1,7 @@
 # Roadmap: SEO-Metadaten & Regionalseiten (08.11.2026)
 
 ## Post-Build & Serverprofis-Upload
+- [x] Geführte Fertigstellung planen: jeweils ein Arbeitspaket, konkrete Entwürfe und nur dazu nötige Rückfragen; keine Sammelfreigabe für unveränderliche Regionaltexte.
 - [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
 - [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
 - [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.

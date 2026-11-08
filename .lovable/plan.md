@@ -1,105 +1,69 @@
-# Strategischer SEO-Relaunch — SLT Technology Group (AV-Systemintegration Enterprise)
+# Schrittweise zur uploadreifen Website
 
-## Strategischer Kern
+## Ziel und verbindliche Regeln
+Die 41 bisher zu kurzen Inhaltsseiten gezielt nacharbeiten und anschließend ein geprüftes statisches Upload-Paket für Serverprofis bereitstellen.
 
-Die Marke "SLT" wird nicht erobert — sie ist durch **SLT Rental** (Baumaschinen-Vermietung, B2C-Volumen) besetzt. Wir verschieben den SEO-Fokus von Brand- und Stadt-Generika zu **kaufnahen Enterprise-Intents**: Lösungs-Suchen ("Konferenzraum-Ausstattung"), Vendor-Authority ("Crestron Integrator NRW") und Compliance/Standardisierung ("ISO-konforme Videokonferenz", "Multi-Site Rollout"). Lokale Seiten bleiben — werden aber auf Enterprise statt KMU/Privat zugespitzt.
+- Mindestens **300 sichtbare Wörter im Hauptinhalt** je Inhaltsseite; sinnvoller kleiner Puffer statt exakt 300.
+- Keine erfundenen Kunden, Leistungsversprechen, Zertifizierungen, Personal- oder Rechtsangaben.
+- Bestehendes Design beibehalten; nötige Textabsätze in die vorhandene Gestaltung einfügen.
+- Die 404-Ausnahme ist bereits umgesetzt und getestet: keine Mindestwortzahl oder Canonical-Pflicht, stattdessen 404 und noindex. Die echte HTTP-Antwort wird abschließend mit Apache geprüft.
+- Finale regionale Texte und alle 35 gelieferten Descriptions bleiben unverändert. Separate Zusätze benötigen eine ausdrückliche Freigabe im Regional-Schritt.
 
-**Brand-Token künftig immer "SLT Technology Group" oder "SLT AV"** — niemals nur "SLT" allein. Dadurch entkoppelt Google uns vom Rental-Geschäft im Knowledge-Graph.
+## Zusammenarbeit: jeweils nur ein Paket
+Ich recherchiere in den vorhandenen Projektunterlagen, formuliere die Ergänzungen und prüfe die betroffenen Seiten. Du bekommst konkrete Entwürfe bzw. Ergebnisse und nur die Fragen, die für das aktuelle Paket tatsächlich offen sind. Keine 41 Einzelaufgaben für dich und keine Sammelliste fehlender Angaben.
 
----
+Nicht betroffene Seiten bleiben unverändert. Neue, bestätigte Fakten werden nur auf passenden Seiten verwendet. Freigaben für Rechts- oder Regionalinhalte werden nicht aus einer allgemeinen Planfreigabe abgeleitet.
 
-## Sprint 1 — Brand-Entkopplung & Title-/Meta-Refresh (sofort umsetzbar)
+## 1. Kontakt und Projektanfrage — zuerst
+**Seiten:** `/kontakt`, `/projektanfrage` (bisher 64 bzw. 33 sichtbare Wörter).
 
-**Ziel:** Bessere CTR auf existierenden Rankings (Pos 5–15, aktuell 0 % CTR) + saubere Brand-Trennung von SLT Rental.
+- Relevante Beratungsanlässe und Leistungen aus den vorhandenen Lösungsseiten konkret erläutern.
+- Projektumfang, Räume, bestehende Ausstattung und Plattformen fachlich einordnen, ohne bloß die Formularbedienung zu beschreiben.
+- Kontaktwege, Standorte und bestehende Formulare erhalten; keine zusätzlichen Reaktionszeitversprechen aufnehmen.
+- Fehlende oder unbelegte Prozessangaben zuerst gezielt klären, statt sie zu erfinden.
 
-1. `src/data/seo-routes.ts` — alle MAIN_ROUTES Titles auf Enterprise-Sprache umstellen:
-   - Brand-Token vorne, Spezifität rein, Zahlen/USPs für Klick-Anreiz
-   - Beispiel `/`: `"AV-Systemintegration für Konzerne & Enterprise | SLT Technology Group"`
-   - Beispiel `/leistungen`: `"AV-Integration: Fachplanung, Rollout, Managed Services | SLT AV"`
-   - Beispiel `/projekte`: `"Enterprise-Referenzen: GEA, Pfeifer & Langen, AluNorf | SLT AV"`
-2. `src/data/localSEO.ts` — `metaTitle`, `metaDescription`, `heroSubtitle` aller Topics auf B2B-Enterprise zuspitzen ("Standardisierte Konferenzraum-Rollouts für Unternehmen in [Stadt]" statt generisch).
-3. Schema-Anpassung in `index.html` Organization-JSON-LD: `alternateName` auf `"SLT AV"`, `"SLT Technology Group"` setzen (nicht nur `"SLT"`), `disambiguatingDescription` ergänzen.
-4. `<h1 class="sr-only">` in `HeroSection.tsx` auf neuen Claim umstellen.
+**Ergebnis:** Zwei geprüfte Seiten mit nützlichem statischem Inhalt über 300 Wörtern. Vor der Umsetzung werden die vorgesehenen Ergänzungen und eventuell nötigen Fragen für dieses Paket vorgestellt.
 
-**Erfolgsmessung:** CTR der Top-10 Pages in GSC nach 14–28 Tagen.
+## 2. Ratgeberübersicht und drei Newsbeiträge
+**4 Seiten:** `/ratgeber`, `/news/huddly-speaker-mode-ki-kamera`, `/news/hochwertige-technik-trotzdem-chaos`, `/news/man-hoert-nichts-schon-wieder`.
 
----
+Vorhandene Themen fachlich einordnen, konkrete Planungs- und Betriebsfragen beantworten und passende bestehende Beiträge verlinken. Produktaussagen mit Herstellerquellen prüfen. Artikelmetadaten und sichtbare Inhalte konsistent halten.
 
-## Sprint 2 — Tracking-Fundament (parallelisierbar mit Sprint 1)
+## 3. Fünf Herstellerpartner-Seiten
+**Seiten:** Crestron, Sennheiser, Shure, Barco, Cisco.
 
-**Ziel:** Ohne Conversion-Daten arbeiten wir blind. Muss vor Content-Investments stehen.
+Belegte Einsatzbereiche, Schnittstellen und Integrationsfragen ergänzen. Herstellerquellen und bestehende Leistungs-/Projektinformationen verwenden. Zertifizierungsstatus ausschließlich aus dem bestätigten Katalog übernehmen. Keine neue Partnerschaft oder Zertifizierung behaupten.
 
-1. Google Tag Manager-Container einbinden (Container-ID via Secret).
-2. GA4-Property anlegen, IP-Anonymisierung, Cookieless-Mode bis Consent.
-3. `CookieConsent.tsx` erweitern: granulare Zustimmung für Analytics + Marketing, GTM Consent Mode v2.
-4. Conversion-Events:
-   - `lead_form_submit` (Projektanfrage)
-   - `whitepaper_download` (LED-PDF)
-   - `phone_click` (tel:-Links)
-   - `email_click` (mailto:-Links)
-   - `job_application_submit` (Karriere)
-5. Optional: Microsoft Clarity einbinden (DSGVO-konform via Consent).
+## 4. Karriereübersicht und drei Stellenprofile
+**4 Seiten:** `/karriere` und die drei bestehenden Stellenprofile.
 
-**Was wir vom Nutzer brauchen:** GA4-Measurement-ID, GTM-Container-ID.
+Vorhandene Aufgaben, Anforderungen und bestätigte Vorteile verständlich ausführen. Ausbildungsbeginn **01.08.2027** beibehalten. Für neue Angaben zu Ausbildung, Arbeitsalltag, Arbeitsbedingungen oder Bewerbungsablauf gezielt deine Bestätigung einholen. Keine Arbeitgeberversprechen erfinden.
 
----
+## 5. Die 24 zu kurzen Regionalseiten
+Laut bisherigem Bericht fehlen pro Seite nur **6–53 Wörter**.
 
-## Sprint 3 — Enterprise-Pillar "Konferenzraum-Ausstattung" + Vendor-Hubs
+- Zuerst an einer Seite einen separaten, belegten Zusatzabsatz zur Prüfung vorlegen.
+- Erst nach deiner ausdrücklichen Zustimmung weitere passende Zusätze erstellen.
+- Originaltexte und Descriptions nicht bearbeiten; keine pauschalen Stadtfloskeln oder Ortsreferenzen erfinden.
+- Die vorhandenen Regeln zu Quellen, privaten Hinweisen und maximal 20 % identischen Sätzen in Einleitung/Anforderungen beibehalten; Zusätze ebenfalls auf unnötige Wiederholungen prüfen.
 
-**Ziel:** Bedienung von 20+ ungenutzten Long-Tail-Cluster-Suchen mit einer Architektur.
+**Deine Entscheidung in diesem Schritt:** Separate Ergänzungen freigeben oder eigene zusätzliche freigegebene Texte liefern.
 
-1. Neue Pillar-Seite `/konferenzraum-ausstattung` mit Raumgrößen-Matrix (Huddle / Small / Medium / Boardroom / Auditorium) — pro Raumtyp Empfehlung Hardware, Kostenrahmen, Lieferzeit, Rollout-Dauer.
-2. 4–6 Vendor-Landingpages unter `/partner/{slug}`:
-   - `/partner/crestron` ("Crestron Integrator NRW")
-   - `/partner/poly` ("Poly Partner Deutschland")
-   - `/partner/q-sys` ("Q-SYS zertifiziert")
-   - `/partner/logitech` ("Logitech Rally Partner")
-   - `/partner/sennheiser`, `/partner/yealink`
-   - Jeweils Authority-Signale: Zertifizierungslogo, Use-Cases, Referenzen, FAQ.
-3. Neue Hub-Seite `/service-wartung` (sammelt LED-Whitepaper, AV-Wartung, IT-Wartung in einer Architektur mit FAQPage-Schema).
-4. `seo-routes.ts` + `App.tsx` + Sitemap entsprechend erweitern, Prerender-Coverage prüfen.
+## 6. NRW-Seite und Impressum
+**2 Seiten:** `/konferenztechnik/nrw`, `/impressum`.
 
-**Erfolgsmessung:** Neue Impressionen-Cluster in GSC nach 4–8 Wochen (Indexierungs-Vorlauf einkalkulieren).
+NRW-Leistungen anhand belegter vorhandener Informationen ergänzen; unbelegte Reichweiten oder Reaktionszeiten klären bzw. nicht übernehmen. Beim Impressum keine Marketingfülltexte oder Rechtsklauseln zur Wortzahl hinzufügen. Bestehende Unternehmensangaben und rechtliche Aktualität prüfen; fehlende notwendige Angaben mit dir klären. Bleibt das Impressum ohne sachlich vertretbare Ergänzung unter 300 Wörtern, diesen konkreten Konflikt vor Abschluss gemeinsam lösen — keine stillschweigende Ausnahme.
 
----
+## 7. Abschlussprüfung und Upload-Paket
+Erst nach Abschluss der Inhaltsarbeit:
 
-## Sprint 4 — LocalSEO-Schärfung & On-Page-Optimierung
+1. Alle Routen erneut prüfen: 300 sichtbare Wörter, genau eine H1, keine doppelten Hero-Abschnitte, FAQ-Schema, individuelle Metadaten und www-Canonical.
+2. Vollständiges statisches Pre-Rendering und JS-/No-JS-Textvergleich durchführen; Formulare und mobile Darstellung der geänderten Seiten prüfen.
+3. Sitemap gegen die tatsächlichen indexierbaren Routen abgleichen; `.htaccess`, Weiterleitungen, echte 404, `robots.txt` und `llms.txt` abschließend prüfen.
+4. Öffentliche Dateien auf interne Berichte, Quellen, Platzhalter und private Whitepapers kontrollieren.
+5. Bei bestandenen Prüfungen Upload-ZIP und bei Bedarf kleinere Teilarchive bereitstellen; mit kurzer FTP-Anleitung und abschließendem Bericht.
 
-**Ziel:** Existierende Local-Seiten (`/it-netzwerk/krefeld` etc.) aus Pos 30–60 in die Top 10 ziehen.
-
-1. Pro Top-5-LocalSEO-Page (Krefeld IT-Netzwerk, Düsseldorf Videokonferenz, Köln Medientechnik, Bonn Digital Signage, NRW Konferenztechnik): konkretes Praxis-Case einbauen, Preisrahmen, FAQPage-Schema mit Long-Tail-Fragen aus GSC.
-2. Internal Linking ausbauen: Pillar → Vendor-Hubs → LocalSEO ↔ Referenzen.
-3. `/ratgeber`-Hub umbenennen + Title auf Topic-Driven ("AV- & Medientechnik Ratgeber für IT-Entscheider").
-4. Breadcrumb-Schema-Audit (alle Detail-Routen).
-
----
-
-## Sprint 5 — Off-Page & GBP (nicht-Code, später zu besprechen)
-
-Außerhalb des Code-Scopes — wird im Anschluss als Maßnahmen-Liste geliefert:
-
-- Google Business Profile Krefeld + Bonn (Kategorien, Posts, Fotos, Q&A, Bewertungsworkflow).
-- LinkedIn Company Page Editorial-Plan (Case-Snippets, Behind-the-Scenes Großinstallationen).
-- Linkbuilding: Branchenverzeichnisse (AVIXA, BIV-OWS, IHK), Vendor-Partnerlisten.
-
----
+**Freigabekriterium:** Keine ungeklärten Pflichtverstöße. Ein Upload-Paket wird nicht als veröffentlichungsreif bezeichnet, solange ein Pflichtcheck scheitert. Nicht gelieferte optionale Angaben bleiben ausgelassen und werden separat dokumentiert.
 
 ## Technische Details
-
-- **Stack-Konformität:** Alle Änderungen in bestehender Vite + react-router-dom + Prerender-Pipeline. Kein React-Helmet — Routes werden bereits zentral via `seo-routes.ts` + `scripts/prerender.mjs` injiziert.
-- **Schema-Erweiterungen:** `src/data/schemas.ts` bekommt `buildVendorPartnerSchema()` (Service + Organization-Partner-Relation) und `buildFAQPageSchema()` als wiederverwendbarer Builder.
-- **Routes:** Neue Pfade in `src/data/seo-routes.ts` (`MAIN_ROUTES` und ggf. neues `PARTNER_ROUTES`-Array), in `App.tsx` registriert, Prerender + Sitemap erzeugen sie automatisch.
-- **Tracking-Code:** GTM-Snippet in `index.html`, Custom Hook `useTrackEvent()` in `src/lib/analytics.ts`, Aufrufe in Formularen + Whitepaper-Badge + Footer-Kontakt-Links.
-- **Brand-Konsistenz:** "SLT Technology Group" / "SLT AV" — niemals nackt "SLT". Ggf. globale Search-and-Replace-Audit in Components.
-
----
-
-## Vorschlag der Sprint-Reihenfolge
-
-1. **Sprint 1** (Brand + Title/Meta) — heute starten, kleinster Aufwand, größter Quick Win.
-2. **Sprint 2** (Tracking) — sobald GA4-/GTM-IDs vorliegen, parallel zu Sprint 1.
-3. **Sprint 3** (Pillar + Vendor-Hubs) — 2. Welle, sobald Daten aus Sprint 2 fließen.
-4. **Sprint 4** (LocalSEO-Schärfung) — 3. Welle.
-5. **Sprint 5** (Off-Page) — als Maßnahmen-Liste, kein Code.
-
-Beginnt mit Sprint 1 nach Freigabe.
+Bestehender Stack: React 18, Vite 5, TypeScript; eigenes Playwright-/Chromium-Pre-Rendering und Node-Postbuild-Prüfung. Serverprofis erhält fertige HTML-, CSS-, JavaScript- und Mediendateien; kein Runtime-SSR und keine Node-/Chromium-Installation auf dem Webspace erforderlich. Der Lovable-Vorschaubuild bleibt Vite-only. Produktionsexport und Auslieferungsprüfung müssen gemeinsam bestehen; Vorschauergebnisse allein sind keine Upload-Freigabe.
