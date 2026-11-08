@@ -153,6 +153,13 @@ export const partners: Partner[] = [
           "Die Kosten hängen stark von Raumgröße, Komponenten und Programmieraufwand ab. Wir erstellen Ihnen ein konkretes Angebot nach Bedarfsanalyse – Pauschalpreise wären unseriös.",
       },
     ],
+    sections: [{
+      title: "Bedienlogik und Signalwege gemeinsam planen",
+      paragraphs: [
+        "Bei einer Crestron-Integration beginnt die Planung mit den gewünschten Abläufen im Raum: Welche Quellen werden gezeigt, welche Displays sollen gemeinsam oder getrennt arbeiten und welche Funktionen benötigen die Teilnehmenden tatsächlich? Eine Touch-Oberfläche sollte diese Abläufe abbilden, statt lediglich alle Gerätefunktionen nebeneinander anzubieten. Für mehrere Raumtypen ist eine wiedererkennbare Bedienlogik sinnvoll, auch wenn sich die technische Ausstattung unterscheidet. Bestehende Anschlüsse und Steuerungsmöglichkeiten der Raumkomponenten gehören deshalb in die Bestandsaufnahme.",
+        "Die Signalverteilung wird passend zu Quellen, Zielgeräten und Leitungswegen ausgelegt. Bei AV-over-IP sind Netzwerkarchitektur und verfügbare Kapazität gemeinsam mit der IT zu prüfen; eine vorhandene Netzwerkdose allein beantwortet diese Fragen nicht. Ebenso müssen Gastpräsentation und festes Raumsystem voneinander abgegrenzt werden. Nach der Einrichtung sollte der vollständige Ablauf mit typischen Endgeräten getestet werden, einschließlich Quellenwechsel und Sitzungsende. Für den Betrieb bleiben dokumentierte Konfigurationen, Zuständigkeiten und abgestimmte Update-Fenster wichtig. Die konkrete Zusammenstellung der Crestron-Komponenten richtet sich nach diesen Projektanforderungen, nicht nach einer pauschalen Geräteempfehlung.",
+      ],
+    }],
     websiteUrl: "https://www.crestron.com",
   },
 
@@ -358,6 +365,13 @@ export const partners: Partner[] = [
           "Die genaue Abdeckung hängt von Raumgeometrie und Akustik ab. Wir prüfen das im Rahmen der Bedarfs- und Akustik-Analyse, bevor wir eine konkrete Konfiguration vorschlagen.",
       },
     ],
+    sections: [{
+      title: "Deckenmikrofone im tatsächlichen Raum bewerten",
+      paragraphs: [
+        "Eine TeamConnect-Deckenlösung hält die Tischfläche frei, muss aber zur Raumgeometrie und zur Nutzung passen. Relevant sind Deckenhöhe, Sitzordnung, übliche Sprecherpositionen und die akustischen Eigenschaften der Oberflächen. Ein Konferenztisch mit festen Sitzplätzen stellt andere Anforderungen als ein Schulungsraum mit wechselnder Anordnung. Beamforming unterstützt die gezielte Aufnahme von Sprache; es ersetzt keine Betrachtung von Nachhall und Hintergrundgeräuschen. Montageort und Mikrofonkonzept sollten deshalb nicht erst nach Abschluss der übrigen Raumausstattung festgelegt werden.",
+        "Neben der Aufnahme ist der Weg zur Konferenzplattform entscheidend. Die gewählte Kombination aus Mikrofon, Signalverarbeitung, Lautsprechern und Raumsystem muss als Gesamtsystem betrachtet werden. Dazu gehört ein Test mit zugeschalteten Teilnehmenden, damit beide Übertragungsrichtungen beurteilt werden können. Die technische Anbindung wird modellbezogen geprüft und mit vorhandener Verkabelung und IT abgestimmt. Bei einer Modernisierung hilft eine Bestandsaufnahme zu entscheiden, welche Komponenten erhalten bleiben können. Für mehrere Räume sind dokumentierte Einstellungen und ein nachvollziehbarer Supportweg ebenso wichtig wie die Auswahl des Mikrofons. Die endgültige Konfiguration ergibt sich aus der Raumprüfung und den vorgesehenen Funktionen.",
+      ],
+    }],
     websiteUrl:
       "https://www.sennheiser.com/de-de/professional/audio-for-video/business-communication",
   },
@@ -415,6 +429,13 @@ export const partners: Partner[] = [
           "Ja. IntelliMix kann in viele Raum- und DSP-Plattformen integriert werden. Welche Kombination für Sie sinnvoll ist, klären wir in der Fachplanung.",
       },
     ],
+    sections: [{
+      title: "Mikrofonabdeckung und Audioverarbeitung abstimmen",
+      paragraphs: [
+        "Bei Shure-Konferenztechnik ist zunächst zu klären, wo gesprochen wird und wie flexibel die Bestuhlung sein muss. Tisch- und Deckenlösungen unterscheiden sich bei Montage, sichtbarer Ausstattung und den zu erfassenden Positionen. Ein freier Tisch ist ein Gestaltungsvorteil, aber kein ausreichendes Auswahlkriterium. Raumhöhe, Nachhall und Hintergrundgeräusche beeinflussen die Planung ebenfalls. Die vorhandene Konferenzplattform und die übrige Audiotechnik bestimmen, welche Schnittstellen und Verarbeitungsschritte benötigt werden.",
+        "IntelliMix und das Mikrofonkonzept sind zusammen mit Lautsprechern und Signalrouting zu betrachten. Eine Prüfung sollte Sprache von unterschiedlichen Sitzplätzen sowie die Wiedergabe der entfernten Teilnehmenden umfassen. So lässt sich unterscheiden, ob ein Problem bei der Aufnahme, bei der Verarbeitung oder bei der Ausgabe entsteht. Für den laufenden Betrieb sind dokumentierte Einstellungen und abgestimmte Änderungen sinnvoll, insbesondere bei mehreren vergleichbaren Räumen. Das veröffentlichte Projekt Aluminium Norf zeigt einen Einsatz von Shure in Videokonferenz- und Schulungsumgebungen; daraus folgt jedoch keine identische Geräteempfehlung für andere Räume. Welche Kombination passt, wird anhand der tatsächlichen Anforderungen und des Bestands entschieden.",
+      ],
+    }],
     websiteUrl: "https://www.shure.com/de-DE",
   },
 
@@ -621,6 +642,13 @@ export const partners: Partner[] = [
           "Ja. Neben Windows werden macOS, iOS und Android unterstützt – über den ClickShare Button und/oder die ClickShare-App.",
       },
     ],
+    sections: [{
+      title: "Präsentation und Notebook-Konferenz unterscheiden",
+      paragraphs: [
+        "Für die Auswahl einer ClickShare-Lösung ist entscheidend, ob nur Inhalte auf dem Raumdisplay gezeigt werden oder ob das Notebook auch Kamera und Audio des Raums nutzen soll. Diese beiden Aufgaben sind nicht gleichzusetzen. In einem BYOM-Konzept führt das eigene Gerät die Konferenz aus; die Raumtechnik ergänzt Aufnahme und Wiedergabe. Deshalb müssen Modell, Anschlüsse und vorhandene Peripherie zusammen geprüft werden. Auch die Richtlinien für Gastgeräte und die zulässige Software auf Unternehmensnotebooks gehören zur Planung.",
+        "Der Ablauf sollte mit den tatsächlich vorgesehenen Endgeräten getestet werden: Verbindung herstellen, Inhalte teilen, Raumkamera und Audio in der Konferenz auswählen und die Sitzung beenden. Netzwerk- und Sicherheitsanforderungen werden mit der IT abgestimmt. Für mehrere Räume ist eine konsistente Bedienung hilfreich, ohne unterschiedliche Raumgrößen und Anforderungen zu ignorieren. Bestehende Displays oder Kameras können Teil des Konzepts sein, sofern ihre Eignung und Anbindung geprüft sind. Die GEA-Referenz zeigt ClickShare CX in Management- und Besprechungsräumen. Sie ist ein konkretes Anwendungsbeispiel, keine pauschale Zusage zur Kompatibilität jedes vorhandenen Geräts.",
+      ],
+    }],
     websiteUrl: "https://www.barco.com/de/clickshare",
   },
 
@@ -849,6 +877,13 @@ export const partners: Partner[] = [
           "Ja. Wir führen WLAN-Site-Surveys (z. B. mit EKAHAU) durch und planen die Access-Point-Positionierung auf Basis der gemessenen Ausleuchtung – nicht nach Bauchgefühl.",
       },
     ],
+    sections: [{
+      title: "AV-Anforderungen in die Netzwerkplanung einbeziehen",
+      paragraphs: [
+        "Konferenztechnik und AV-over-IP sind auf eine passende Netzwerkinfrastruktur angewiesen. Bei der Planung werden deshalb Endgeräte, benötigte Verbindungen, vorhandene Switches und die vorgesehene Verwaltung zusammen betrachtet. Netzwerksegmente müssen zu den Sicherheitsvorgaben passen, ohne erforderliche Kommunikation zwischen Komponenten zu verhindern. Welche Konfiguration geeignet ist, hängt von den eingesetzten Systemen und der bestehenden IT-Architektur ab. Eine pauschale Empfehlung für jeden Raum oder Standort würde diese Unterschiede übergehen.",
+        "Für WLAN sind die tatsächlichen Nutzungsflächen, baulichen Bedingungen und erwarteten Endgeräte wichtig. Ein Site Survey liefert eine Grundlage für die Positionierung von Access Points und die Prüfung der Abdeckung. Bei mehreren Standorten kommen einheitliche Konfigurationen, Zuständigkeiten und die zentrale Verwaltung hinzu. Die veröffentlichte Sonoco-Referenz verbindet Funkausleuchtung, strukturierte Verkabelung und Cisco Meraki an mehreren Werksstandorten. Für ein neues Projekt werden Bestand und Betriebsanforderungen erneut bewertet. Auch nach der Installation sollten Änderungen und Konfigurationsstände nachvollziehbar bleiben. Die Wahl zwischen Cisco- und Meraki-Komponenten richtet sich nach den technischen Anforderungen und dem gewünschten Verwaltungsmodell.",
+      ],
+    }],
     websiteUrl: "https://www.cisco.com/c/de_de/index.html",
   },
 ];

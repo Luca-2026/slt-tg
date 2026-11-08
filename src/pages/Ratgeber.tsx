@@ -152,6 +152,22 @@ const Ratgeber = () => {
         </div>
       </section>
 
+      <section className="py-8 lg:py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Planungsentscheidungen im Zusammenhang betrachten</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Raumgröße, Konferenzplattform und Budget beeinflussen sich gegenseitig. Wer einen Boardroom
+            modernisiert, sollte deshalb nicht nur Geräte vergleichen, sondern auch Sitzordnung,
+            Betrachtungsabstände und die vorhandene IT berücksichtigen. Unsere Beiträge zur Raumgröße
+            und zum Plattformvergleich beleuchten diese Zusammenhänge aus unterschiedlichen Perspektiven.
+            Bei der Raumbuchung kommen Kalenderanbindung, Netzwerk und Datenschutz hinzu. Der Ratgeber
+            zur KI-Readiness ergänzt die Sicht auf Betrieb und Weiterentwicklung. So entstehen
+            nachvollziehbare Kriterien für eine konkrete Planung, statt einer Einkaufsliste ohne Bezug
+            zur tatsächlichen Nutzung.
+          </p>
+        </div>
+      </section>
+
       <section className="py-16 lg:py-20 bg-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">

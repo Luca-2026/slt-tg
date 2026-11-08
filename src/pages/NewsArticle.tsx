@@ -405,8 +405,8 @@ const articlesData: Record<string, ArticleData> = {
           Intelligentes Framing für natürliche Meetings
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Mit dem <strong>Huddly Speaker Mode</strong> sehen Sie jederzeit, wer spricht – unabhängig vom Platz 
-          im Raum. Die KI erkennt automatisch den aktiven Sprecher und passt das Bild dynamisch an. 
+          Der <strong>Huddly Speaker Mode</strong> richtet den Bildausschnitt auf die sprechende Person aus.
+          Die KI erkennt den aktiven Sprecher und passt das Bild dynamisch an.
           Sobald das Gespräch weitergeht, folgt das Bild automatisch.
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -419,8 +419,8 @@ const articlesData: Record<string, ArticleData> = {
         </h2>
         <p className="text-muted-foreground leading-relaxed">
           Die <strong>Huddly C1</strong> ist eine AI-gesteuerte Videobar, die erstklassige Videoqualität mit 
-          innovativer Audio-Technologie verbindet. Mit einem ultra-weiten <strong>150°-Objektiv</strong> wird 
-          jeder Platz im Raum erfasst – niemand sitzt außerhalb des Bildes.
+          innovativer Audio-Technologie verbindet. Das weite Sichtfeld unterstützt die Erfassung des Raums;
+          welche Sitzplätze sichtbar sind, hängt von Raumgeometrie, Kameraposition und freien Sichtlinien ab.
         </p>
         
         <ul className="space-y-3 text-muted-foreground">
@@ -434,7 +434,7 @@ const articlesData: Record<string, ArticleData> = {
           </li>
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-            <span><strong>Premium-Audio:</strong> Integrierte Mikrofone und Lautsprecher für kristallklare Kommunikation</span>
+            <span><strong>Audio:</strong> Integrierte Mikrofone und Lautsprecher für Videokonferenzen</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
@@ -453,6 +453,18 @@ const articlesData: Record<string, ArticleData> = {
         <p className="text-muted-foreground leading-relaxed">
           Mit der neuesten <strong>3D Spatial Awareness</strong> Technologie erstellt das System eine 
           dreidimensionale Karte des Raums für noch präziseres und natürlicheres Framing.
+        </p>
+
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Raum und Kameraposition gemeinsam betrachten</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Huddly beschreibt Speaker Mode für C1, L1 und Crew. Das System richtet den Fokus auf die
+          sprechende Person und passt den Ausschnitt bei einem Sprecherwechsel an. Für die Auswahl
+          bleiben Raumgröße und Sitzordnung wichtig: L1 adressiert mittlere und große Räume, Crew
+          erweitert die visuelle Abdeckung durch mehrere Kameras. Auch die C1 lässt sich mit
+          Crew-Zusatzkameras erweitern. Diese Möglichkeiten ersetzen keine Prüfung der tatsächlichen
+          Sichtlinien und Montageorte. Maßgeblich ist, ob die üblicherweise genutzten Sitzplätze
+          aus den vorgesehenen Perspektiven erfasst werden können. Details erläutert die
+          <a href="https://www.huddly.com/speaker-mode/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> Herstellerbeschreibung zu Speaker Mode ↗</a>.
         </p>
 
         {/* YouTube Embed */}
@@ -593,6 +605,20 @@ const articlesData: Record<string, ArticleData> = {
           </li>
         </ul>
 
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Den vollständigen Meetingablauf prüfen</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Eine Funktionsprüfung sollte mehr umfassen als das Einschalten des Displays. Sinnvoll ist
+          ein Test mit den tatsächlich verwendeten Notebooks und der vorgesehenen Konferenzplattform:
+          Inhalte teilen, Kamera und Mikrofon auswählen, zwischen Präsentation und Gespräch wechseln
+          und die Sitzung wieder beenden. Dabei wird sichtbar, an welcher Schnittstelle die Bedienung
+          stockt. Auch Gastgeräte und unterschiedliche Raumtypen gehören in die Betrachtung. Eine
+          einheitliche Bedienlogik kann helfen, vertraute Abläufe auf weitere Räume zu übertragen.
+          Für den späteren Betrieb sind dokumentierte Zuständigkeiten und ein geregelter Umgang mit
+          Updates wichtig. Unsere <Link to="/managed-services" className="text-primary hover:underline">Managed Services</Link> greifen
+          diese Betriebsfragen auf; die <Link to="/konferenzraum-ausstattung" className="text-primary hover:underline">Konferenzraumplanung</Link> betrachtet
+          die passende Ausstattung als Gesamtsystem.
+        </p>
+
         <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
           <h3 className="text-lg font-semibold text-foreground mb-3">
             Lassen Sie uns Ordnung schaffen
@@ -709,6 +735,19 @@ const articlesData: Record<string, ArticleData> = {
             <span><strong>Akustikoptimierung:</strong> Falls nötig, Empfehlungen für bauliche Maßnahmen</span>
           </li>
         </ul>
+
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">Fehlerbild und Signalweg voneinander trennen</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Für die Fehlersuche ist zunächst wichtig, wer wen nicht hört. Fehlt der Ton nur im Raum,
+          nur bei den zugeschalteten Personen oder in beiden Richtungen? Anschließend lassen sich
+          die gewählten Ein- und Ausgabegeräte, Stummschaltungen und Verbindungen gezielt prüfen.
+          Ein gemeinsamer Test mit einer entfernten Person macht den vollständigen Signalweg
+          nachvollziehbar. Besteht das Problem nur an bestimmten Sitzplätzen, sollten
+          Mikrofonabdeckung und Abstand betrachtet werden. Ist Sprache überall verhallt, gehört
+          die Raumakustik in die Untersuchung. Geräte auszutauschen, bevor das Fehlerbild eingegrenzt
+          ist, kann an der Ursache vorbeigehen. Die <Link to="/videokonferenzanlage" className="text-primary hover:underline">Planung einer Videokonferenzanlage</Link> verbindet
+          deshalb Mikrofonkonzept, Lautsprecher und Raumgegebenheiten.
+        </p>
 
         <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
           <h3 className="text-lg font-semibold text-foreground mb-3">
