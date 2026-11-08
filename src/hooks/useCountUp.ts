@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useEffect, useState, useRef } from "react";
 
 interface UseCountUpOptions {
@@ -14,7 +15,7 @@ export function useCountUp({ end, duration = 2000, startOnView = true }: UseCoun
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motion.matches || "__SLT_PRERENDER__" in window) {
+    if (motionDisabled()) {
       setCount(end);
       return;
     }
@@ -44,7 +45,7 @@ export function useCountUp({ end, duration = 2000, startOnView = true }: UseCoun
   useEffect(() => {
     if (!hasStarted) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motion.matches || "__SLT_PRERENDER__" in window) {
+    if (motionDisabled()) {
       setCount(end);
       return;
     }

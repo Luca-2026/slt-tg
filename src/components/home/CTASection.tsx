@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function CTASection() {
   const { ref, isVisible } = useScrollAnimation();
@@ -14,9 +14,7 @@ export function CTASection() {
       <div className="section-container relative z-10">
         <div 
           ref={ref}
-          className={`max-w-4xl mx-auto text-center scroll-hidden-blur ${
-            isVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`max-w-4xl mx-auto text-center ${scrollReveal(isVisible, "blur")}`}
         >
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Bereit für Ihre <span className="gradient-text">digitale Zukunft</span>?

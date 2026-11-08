@@ -1,5 +1,5 @@
 import { Shield, Wrench, Settings, BarChart3, Headphones } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const trustPoints = [
   {
@@ -39,9 +39,7 @@ export function TrustBar() {
           {trustPoints.map((point, index) => (
             <div
               key={point.title}
-              className={`flex flex-col items-center text-center p-4 scroll-hidden ${
-                isVisible ? "scroll-visible" : ""
-              }`}
+              className={`flex flex-col items-center text-center p-4 ${scrollReveal(isVisible)}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3">

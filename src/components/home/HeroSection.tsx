@@ -1,9 +1,10 @@
+import { isPrerendering, motionDisabled } from "@/lib/prerender";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import { TypewriterText } from "@/components/home/TypewriterText";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useCallback, useRef } from "react";
 
 const inspirationImages = [
   "/assets/inspirationen/gea-display.jpg",
@@ -24,7 +25,7 @@ function InspirationSlider() {
   }, []);
 
   useEffect(() => {
-    if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches || "__SLT_PRERENDER__" in window) return;
+    if (isPaused || motionDisabled()) return;
     const timer = setInterval(next, 3500);
     return () => clearInterval(timer);
   }, [isPaused, next]);
@@ -123,12 +124,14 @@ const IMAGE_ASPECT = 16 / 9;
 
 function HeroHotspots() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState({ scaleX: 1, scaleY: 1, offsetX: 0, offsetY: 0 });
+  const [offset, setOffset] = useState<{ scaleX: number; scaleY: number; offsetX: number; offsetY: number } | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Export the same CSS fallback as the first React render, never measured pixels.
+    if (isPrerendering()) return;
     const calculate = () => {
       const el = containerRef.current;
-      if (!el) return;
+      if (!el || !el.clientWidth || !el.clientHeight) return;
       const cw = el.clientWidth;
       const ch = el.clientHeight;
       const containerAspect = cw / ch;
@@ -149,8 +152,9 @@ function HeroHotspots() {
     };
 
     calculate();
-    window.addEventListener("resize", calculate);
-    return () => window.removeEventListener("resize", calculate);
+    const observer = new ResizeObserver(calculate);
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -161,8 +165,8 @@ function HeroHotspots() {
           to={spot.href}
           className="group absolute"
           style={{
-            top: offset.offsetY + spot.top * offset.scaleY,
-            left: offset.offsetX + spot.left * offset.scaleX,
+            top: offset ? offset.offsetY + spot.top * offset.scaleY : `${spot.top}%`,
+            left: offset ? offset.offsetX + spot.left * offset.scaleX : `${spot.left}%`,
             pointerEvents: "auto",
           }}
           title={spot.label}

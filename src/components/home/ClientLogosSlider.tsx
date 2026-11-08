@@ -1,4 +1,4 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Badge } from "@/components/ui/badge";
 import { Building2 } from "lucide-react";
 
@@ -24,9 +24,7 @@ export function ClientLogosSlider() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={headerRef}
-          className={`text-center mb-10 scroll-hidden-blur ${
-            headerVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`text-center mb-10 ${scrollReveal(headerVisible, "blur")}`}
         >
           <Badge variant="outline" className="mb-4">
             <Building2 className="h-3 w-3 mr-1" />

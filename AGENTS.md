@@ -1,5 +1,7 @@
 # Architecture rules
 - Render one responsive homepage hero; initial counters contain their final values, browser-only animations respect reduced motion and the build-time prerender marker, and FAQ answers stay mounted while collapsed.
+- Keep initial reveal content visible and hotspot positions at CSS fallbacks; only mount effects animate or measure, and __PRERENDER__ freezes them so snapshots preserve initial root markup.
+- Validate every serialized snapshot and compare JS/no-JS visible main text at a 2% word-edit threshold; failed routes block export rather than silently shipping incomplete pages.
 - Production export uses build-time Chromium rendering of complete pages with React 18, Vite 5 and TypeScript; Serverprofis serves HTML without a persistent Node server or runtime SSR.
 - Keep build:dev Vite-only for Lovable preview builds and their injected config; production build retains mandatory Chromium prerendering and must not silently fall back to SPA output.
 - SEOHead reads the shared route catalogue for metadata and robots so browser navigation and exported pages cannot drift.

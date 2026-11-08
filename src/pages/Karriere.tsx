@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   MapPin,
   Clock,
@@ -72,7 +72,7 @@ export default function Karriere() {
         <div className="flex-1 flex flex-col justify-start gap-6 sm:gap-8 lg:gap-10 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-2 pb-6">
           <div
             ref={heroRef}
-            className={`relative z-10 max-w-xl scroll-hidden ${heroVisible ? "scroll-visible" : ""}`}
+            className={`relative z-10 max-w-xl ${scrollReveal(heroVisible)}`}
           >
             <Badge className="bg-accent/15 border border-accent/40 text-accent mb-3 sm:mb-5 text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5">
               Wir stellen ein 🚀
@@ -93,7 +93,7 @@ export default function Karriere() {
             </Button>
           </div>
 
-          <div ref={profileRef} className={`relative z-10 max-w-md scroll-hidden ${profileVisible ? "scroll-visible" : ""}`}>
+          <div ref={profileRef} className={`relative z-10 max-w-md ${scrollReveal(profileVisible)}`}>
             <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-4 sm:p-5">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-lg bg-primary-foreground/15 flex items-center justify-center shrink-0">
@@ -110,7 +110,7 @@ export default function Karriere() {
       </section>
 
       {/* Job Positions – jede Stelle verlinkt auf eigene Detailseite */}
-      <section ref={jobsRef} id="positions" className={`py-12 sm:py-16 md:py-24 scroll-hidden ${jobsVisible ? "scroll-visible" : ""}`}>
+      <section ref={jobsRef} id="positions" className={`py-12 sm:py-16 md:py-24 ${scrollReveal(jobsVisible)}`}>
         <div className="section-container">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Offene Stellen
@@ -182,7 +182,7 @@ export default function Karriere() {
       </section>
 
       {/* Benefits */}
-      <section ref={benefitsRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 scroll-hidden ${benefitsVisible ? "scroll-visible" : ""}`}>
+      <section ref={benefitsRef} className={`py-12 sm:py-16 md:py-24 bg-secondary/30 ${scrollReveal(benefitsVisible)}`}>
         <div className="section-container">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2 sm:mb-3">
             Wir möchten etwas zurückgeben

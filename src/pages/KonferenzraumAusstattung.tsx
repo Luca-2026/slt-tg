@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   ArrowRight,
   Users,
@@ -118,7 +118,7 @@ function RoomCard({ room, index }: { room: typeof roomTypes[0]; index: number })
       <div className="section-container">
         <div
           ref={ref}
-          className={`scroll-hidden-blur ${isVisible ? "scroll-visible-blur" : ""}`}
+          className={`${scrollReveal(isVisible, "blur")}`}
         >
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
@@ -234,7 +234,7 @@ const KonferenzraumAusstattung = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Konferenzraum-Ausstattung" }]} />
@@ -341,7 +341,7 @@ const KonferenzraumAusstattung = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">

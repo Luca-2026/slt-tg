@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail, MapPin, Phone, Send, MessageSquare } from "lucide-react";
@@ -91,7 +91,7 @@ const Kontakt = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Kontakt</Badge>
@@ -112,7 +112,7 @@ const Kontakt = () => {
             ref={contentRef}
             className="grid lg:grid-cols-2 gap-10 lg:gap-16"
           >
-            <div className={`scroll-hidden-left ${contentVisible ? "scroll-visible-x" : ""}`}>
+            <div className={`${scrollReveal(contentVisible, "left")}`}>
               <Card className="bg-card border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -151,7 +151,7 @@ const Kontakt = () => {
               </Card>
             </div>
 
-            <div className={`space-y-6 scroll-hidden-right ${contentVisible ? "scroll-visible-x" : ""}`}>
+            <div className={`space-y-6 ${scrollReveal(contentVisible, "right")}`}>
               <Card className="bg-card border-border">
                 <CardHeader>
                   <CardTitle>Kontaktdaten</CardTitle>

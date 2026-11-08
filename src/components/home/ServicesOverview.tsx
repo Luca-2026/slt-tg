@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Wrench, FileText, Monitor, ArrowRight, Headphones, Lightbulb, LifeBuoy } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -49,9 +49,7 @@ export function ServicesOverview() {
       <div className="section-container">
         <div 
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-8 lg:mb-16 scroll-hidden-blur ${
-            headerVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`text-center max-w-3xl mx-auto mb-8 lg:mb-16 ${scrollReveal(headerVisible, "blur")}`}
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Unsere Leistungen
@@ -67,9 +65,7 @@ export function ServicesOverview() {
             <Link
               key={service.title}
               to={service.link}
-              className={`block group scroll-hidden ${
-                cardsVisible ? "scroll-visible" : ""
-              }`}
+              className={`block group ${scrollReveal(cardsVisible)}`}
               style={{ transitionDelay: `${index * 0.12}s` }}
             >
               <Card className="bg-card border-border card-hover h-full hover:border-primary/30 transition-colors">
@@ -137,9 +133,7 @@ export function ServicesOverview() {
 
         <div 
           ref={ctaRef}
-          className={`text-center mt-8 lg:mt-12 scroll-hidden-scale ${
-            ctaVisible ? "scroll-visible-scale" : ""
-          }`}
+          className={`text-center mt-8 lg:mt-12 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <Button asChild variant="outline" size="lg">
             <Link to="/loesungen">

@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   ArrowRight,
   Video,
@@ -125,7 +125,7 @@ function TechOverviewCard({ tech, index }: { tech: typeof technologies[0]; index
     <a
       ref={ref}
       href={`#${tech.id}`}
-      className={`block group scroll-hidden ${isVisible ? "scroll-visible" : ""}`}
+      className={`block group ${scrollReveal(isVisible)}`}
       style={{ transitionDelay: `${index * 0.06}s` }}
     >
       <Card className="bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
@@ -167,7 +167,7 @@ function TechDetailSection({ tech, index }: { tech: typeof technologies[0]; inde
         {/* Section Header */}
         <div
           ref={headerRef}
-          className={`flex flex-col sm:flex-row items-start gap-4 mb-10 scroll-hidden-blur ${headerVisible ? "scroll-visible-blur" : ""}`}
+          className={`flex flex-col sm:flex-row items-start gap-4 mb-10 ${scrollReveal(headerVisible, "blur")}`}
         >
           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
             <tech.icon className="h-6 w-6 text-primary" />
@@ -190,7 +190,7 @@ function TechDetailSection({ tech, index }: { tech: typeof technologies[0]; inde
           {tech.categories.map((category, i) => (
             <Card
               key={category.name}
-              className={`bg-background/80 backdrop-blur-sm border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300 scroll-hidden ${cardsVisible ? "scroll-visible" : ""}`}
+              className={`bg-background/80 backdrop-blur-sm border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300 ${scrollReveal(cardsVisible)}`}
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
               <CardHeader className="p-4 lg:p-5 pb-2 lg:pb-2">
@@ -262,7 +262,7 @@ const Technologien = () => {
 
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Technologien" }]} />
@@ -320,7 +320,7 @@ const Technologien = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Welche Technologie passt zu Ihrem Projekt?

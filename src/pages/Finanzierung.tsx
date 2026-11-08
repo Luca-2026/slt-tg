@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   ArrowRight,
   CheckCircle,
@@ -110,7 +110,7 @@ const Finanzierung = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">Finanzierung & Servicemodelle</Badge>
@@ -132,7 +132,7 @@ const Finanzierung = () => {
         <div className="section-container">
           <div
             ref={compRef}
-            className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${compVisible ? "scroll-visible-blur" : ""}`}
+            className={`text-center max-w-3xl mx-auto mb-12 ${scrollReveal(compVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Finanzierungsmodelle im Vergleich
@@ -147,7 +147,7 @@ const Finanzierung = () => {
             {financingModels.map((model, index) => (
               <Card
                 key={model.id}
-                className={`bg-card border-border overflow-hidden hover:border-primary/30 hover:shadow-md transition-all duration-300 scroll-hidden ${compVisible ? "scroll-visible" : ""}`}
+                className={`bg-card border-border overflow-hidden hover:border-primary/30 hover:shadow-md transition-all duration-300 ${scrollReveal(compVisible)}`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="pb-3">
@@ -213,7 +213,7 @@ const Finanzierung = () => {
             ref={tcoRef}
             className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
           >
-            <div className={`scroll-hidden-left ${tcoVisible ? "scroll-visible-x" : ""}`}>
+            <div className={`${scrollReveal(tcoVisible, "left")}`}>
               <Badge variant="outline" className="mb-6">Total Cost of Ownership</Badge>
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-5">
                 Die wahren Kosten verstehen
@@ -250,7 +250,7 @@ const Finanzierung = () => {
               </Button>
             </div>
 
-            <div className={`scroll-hidden-right ${tcoVisible ? "scroll-visible-x" : ""}`}>
+            <div className={`${scrollReveal(tcoVisible, "right")}`}>
               <div className="bg-background rounded-2xl border border-border p-6 lg:p-8">
                 <h3 className="text-base lg:text-lg font-semibold text-foreground mb-6 text-center">
                   Typische Kostenverteilung über 5 Jahre
@@ -288,7 +288,7 @@ const Finanzierung = () => {
         <div className="section-container">
           <div
             ref={serviceRef}
-            className={`text-center max-w-3xl mx-auto mb-10 scroll-hidden-blur ${serviceVisible ? "scroll-visible-blur" : ""}`}
+            className={`text-center max-w-3xl mx-auto mb-10 ${scrollReveal(serviceVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Was in Service-Modellen enthalten ist
@@ -303,7 +303,7 @@ const Finanzierung = () => {
             {serviceInclusions.map((service, index) => (
               <div
                 key={service.title}
-                className={`p-5 bg-card rounded-xl border border-border/60 text-center hover:border-primary/30 hover:shadow-md transition-all duration-300 group scroll-hidden ${serviceVisible ? "scroll-visible" : ""}`}
+                className={`p-5 bg-card rounded-xl border border-border/60 text-center hover:border-primary/30 hover:shadow-md transition-all duration-300 group ${scrollReveal(serviceVisible)}`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/15 transition-colors">
@@ -324,7 +324,7 @@ const Finanzierung = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Welches Modell passt zu Ihnen?

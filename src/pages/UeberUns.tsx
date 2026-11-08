@@ -5,7 +5,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   ArrowRight, 
   Award, 
@@ -85,7 +85,7 @@ function TimelineItem({ item, index, isActive, onClick }: {
   return (
     <div
       ref={ref}
-      className={`relative pl-10 md:pl-0 pb-8 last:pb-0 cursor-pointer group scroll-hidden ${isVisible ? "scroll-visible" : ""}`}
+      className={`relative pl-10 md:pl-0 pb-8 last:pb-0 cursor-pointer group ${scrollReveal(isVisible)}`}
       style={{ transitionDelay: `${index * 0.1}s` }}
       onClick={onClick}
     >
@@ -171,7 +171,7 @@ const UeberUns = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
@@ -226,7 +226,7 @@ const UeberUns = () => {
         <div className="section-container">
           <div
             ref={valuesHeaderRef}
-            className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${valuesHeaderVisible ? "scroll-visible-blur" : ""}`}
+            className={`text-center max-w-3xl mx-auto mb-12 ${scrollReveal(valuesHeaderVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Unsere Werte
@@ -240,7 +240,7 @@ const UeberUns = () => {
             {values.map((value, index) => (
               <div
                 key={value.title}
-                className={`p-5 bg-background rounded-xl border border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300 group scroll-hidden ${valuesVisible ? "scroll-visible" : ""}`}
+                className={`p-5 bg-background rounded-xl border border-border/60 hover:border-primary/30 hover:shadow-md transition-all duration-300 group ${scrollReveal(valuesVisible)}`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/15 transition-colors">
@@ -263,7 +263,7 @@ const UeberUns = () => {
         <div className="section-container">
           <div
             ref={teamHeaderRef}
-            className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${teamHeaderVisible ? "scroll-visible-blur" : ""}`}
+            className={`text-center max-w-3xl mx-auto mb-12 ${scrollReveal(teamHeaderVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Unser Team
@@ -277,7 +277,7 @@ const UeberUns = () => {
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
-                className={`text-center group w-28 lg:w-32 scroll-hidden ${teamVisible ? "scroll-visible" : ""}`}
+                className={`text-center group w-28 lg:w-32 ${scrollReveal(teamVisible)}`}
                 style={{ transitionDelay: `${index * 0.08}s` }}
               >
                 {member.email ? (
@@ -320,7 +320,7 @@ const UeberUns = () => {
         <div className="section-container">
           <div
             ref={tlHeaderRef}
-            className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${tlHeaderVisible ? "scroll-visible-blur" : ""}`}
+            className={`text-center max-w-3xl mx-auto mb-12 ${scrollReveal(tlHeaderVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Unsere Entwicklung
@@ -371,7 +371,7 @@ const UeberUns = () => {
         <div className="section-container">
           <div
             ref={whyRef}
-            className={`max-w-3xl mx-auto text-center mb-10 scroll-hidden-blur ${whyVisible ? "scroll-visible-blur" : ""}`}
+            className={`max-w-3xl mx-auto text-center mb-10 ${scrollReveal(whyVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Warum SLT?
@@ -401,7 +401,7 @@ const UeberUns = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Lassen Sie uns über Ihr Projekt sprechen

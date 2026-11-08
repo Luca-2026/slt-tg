@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com" },
@@ -31,9 +31,7 @@ export function PartnersSection() {
       <div className="section-container">
         <div
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${
-            headerVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`text-center max-w-3xl mx-auto mb-12 ${scrollReveal(headerVisible, "blur")}`}
         >
           <Badge variant="outline" className="mb-6">
             <Award className="h-3 w-3 mr-1" />
@@ -95,9 +93,7 @@ export function PartnersSection() {
       <div className="section-container">
         <div
           ref={noteRef}
-          className={`mt-12 text-center scroll-hidden ${
-            noteVisible ? "scroll-visible" : ""
-          }`}
+          className={`mt-12 text-center ${scrollReveal(noteVisible)}`}
         >
           <p className="text-sm text-muted-foreground">
             <Award className="h-4 w-4 inline-block mr-1 text-primary" />

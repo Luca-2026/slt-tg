@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useState, useEffect } from "react";
 
 const FULL_TEXT = "your digital future.";
@@ -10,7 +11,11 @@ export function TypewriterText() {
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motion.matches || "__SLT_PRERENDER__" in window) return;
+    if (motionDisabled()) {
+      setDisplayedLength(FULL_TEXT.length);
+      setShowCursor(false);
+      return;
+    }
     setDisplayedLength(0);
     setShowCursor(true);
     let interval: ReturnType<typeof setInterval> | undefined;

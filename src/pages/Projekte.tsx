@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
@@ -20,7 +21,7 @@ import {
   Star,
   Quote
 } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { PROJECTS } from "@/data/projects";
 
 const knauber = PROJECTS.find((project) => project.slug === "knauber-outdoor-led-wartung-bonn");
@@ -282,7 +283,7 @@ function TestimonialsOnProjekte() {
   return (
     <section className="py-16 lg:py-20 bg-muted/30">
       <div className="section-container">
-        <div ref={ref} className={`text-center mb-10 scroll-hidden-blur ${isVisible ? "scroll-visible-blur" : ""}`}>
+        <div ref={ref} className={`text-center mb-10 ${scrollReveal(isVisible, "blur")}`}>
           <Badge variant="outline" className="mb-4">Kundenstimmen</Badge>
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground">Das sagen unsere Kunden</h2>
         </div>
@@ -334,7 +335,7 @@ function ProjectImageSlider({ images, imagePositions, alt }: { images: string[];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    if (images.length <= 1) return;
+    if (images.length <= 1 || motionDisabled()) return;
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
@@ -411,7 +412,7 @@ const Projekte = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Projekte" }]} />

@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getSolutionPage, solutionsNav } from "@/data/solutionPages";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -69,7 +69,7 @@ const SolutionPage = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl">
             <Breadcrumbs
@@ -105,7 +105,7 @@ const SolutionPage = () => {
         <div className="section-container">
           <div
             ref={gridRef}
-            className={`grid lg:grid-cols-2 gap-10 lg:gap-14 items-center scroll-hidden-blur ${gridVisible ? "scroll-visible-blur" : ""}`}
+            className={`grid lg:grid-cols-2 gap-10 lg:gap-14 items-center ${scrollReveal(gridVisible, "blur")}`}
           >
             <div className="aspect-video bg-secondary rounded-2xl overflow-hidden shadow-lg">
               <img
@@ -276,7 +276,7 @@ const SolutionPage = () => {
       <section className="py-20 lg:py-28 bg-gradient-to-b from-background to-primary/5">
         <div
           ref={ctaRef}
-          className={`section-container text-center scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             {solution.navLabel} planen lassen

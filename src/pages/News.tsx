@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
@@ -102,7 +103,7 @@ const News = () => {
   }, [api]);
 
   useEffect(() => {
-    if (!api) return;
+    if (!api || motionDisabled()) return;
     const id = window.setInterval(() => api.scrollNext(), 6000);
     return () => window.clearInterval(id);
   }, [api]);

@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ export function ProjectSlideshow({ images, alts, label }: { images: string[]; al
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   useEffect(() => {
-    if (paused || images.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (paused || images.length < 2 || motionDisabled()) return;
     const timer = window.setInterval(() => setCurrent(i => (i + 1) % images.length), 5000);
     return () => window.clearInterval(timer);
   }, [images.length, paused]);

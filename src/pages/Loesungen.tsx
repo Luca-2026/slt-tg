@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { 
   ArrowRight,
   Users,
@@ -182,7 +182,7 @@ function SolutionDetailSection({ solution, index }: { solution: typeof solutions
           className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
           {/* Image */}
-          <div className={`${isReversed ? "lg:order-2" : ""} scroll-hidden-${isReversed ? "right" : "left"} ${isVisible ? "scroll-visible-x" : ""}`}>
+          <div className={`${isReversed ? "lg:order-2" : ""} ${scrollReveal(isVisible, isReversed ? "right" : "left")}`}>
             <div className="aspect-video bg-secondary rounded-2xl overflow-hidden shadow-lg">
               <img 
                 src={solution.image} 
@@ -194,7 +194,7 @@ function SolutionDetailSection({ solution, index }: { solution: typeof solutions
           </div>
 
           {/* Content */}
-          <div className={`${isReversed ? "lg:order-1" : ""} scroll-hidden-${isReversed ? "left" : "right"} ${isVisible ? "scroll-visible-x" : ""}`}>
+          <div className={`${isReversed ? "lg:order-1" : ""} ${scrollReveal(isVisible, isReversed ? "left" : "right")}`}>
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
               <solution.icon className="h-6 w-6 text-primary" />
             </div>
@@ -292,7 +292,7 @@ const Loesungen = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Lösungen" }]} />
@@ -334,7 +334,7 @@ const Loesungen = () => {
               <Link
                 key={solution.id}
                 to={solution.href}
-                className={`block group scroll-hidden ${gridVisible ? "scroll-visible" : ""}`}
+                className={`block group ${scrollReveal(gridVisible)}`}
                 style={{ transitionDelay: `${index * 0.06}s` }}
               >
                 <Card className="bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
@@ -418,7 +418,7 @@ const Loesungen = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Ihre Anforderung ist nicht dabei?

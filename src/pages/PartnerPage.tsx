@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { getPartnerBySlug } from "@/data/partners";
 import { ArrowRight, Award, CheckCircle, ExternalLink } from "lucide-react";
 
@@ -48,7 +48,7 @@ const PartnerPage = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto">
             <Breadcrumbs
@@ -83,7 +83,7 @@ const PartnerPage = () => {
         <div className="section-container">
           <div
             ref={contentRef}
-            className={`scroll-hidden-blur ${contentVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(contentVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Produktbereiche & Lösungen
@@ -261,7 +261,7 @@ const PartnerPage = () => {
         <div className="section-container">
           <div
             ref={faqRef}
-            className={`scroll-hidden-blur ${faqVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(faqVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Häufige Fragen zu {partner.name}
@@ -328,7 +328,7 @@ const PartnerPage = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             {partner.name}-Integration planen?

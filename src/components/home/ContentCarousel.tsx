@@ -1,3 +1,4 @@
+import { motionDisabled } from "@/lib/prerender";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
@@ -19,7 +20,7 @@ export function ContentCarousel({ title, slides, allTo, allLabel }: { title: str
     return () => { api.off("select", select); };
   }, [api]);
   useEffect(() => {
-    if (!api || paused || interacting || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!api || paused || interacting || motionDisabled()) return;
     const timer = window.setInterval(() => {
       const bounds = section.current?.getBoundingClientRect();
       if (!document.hidden && bounds && bounds.top < window.innerHeight && bounds.bottom > 0) api.scrollNext();

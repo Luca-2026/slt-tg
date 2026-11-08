@@ -6,7 +6,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
-  Reflect.deleteProperty(window, "__SLT_PRERENDER__");
+  Reflect.deleteProperty(window, "__PRERENDER__");
 });
 
 function StaticCount({ end }: { end: number }) {
@@ -31,7 +31,7 @@ describe("Meaningful counter values before browser animation", () => {
     expect(frame).not.toHaveBeenCalled();
   });
   it("does not start animation while exporting a static page", () => {
-    Reflect.set(window, "__SLT_PRERENDER__", true);
+    Reflect.set(window, "__PRERENDER__", true);
     const frame = vi.spyOn(window, "requestAnimationFrame");
     const { result } = renderHook(() => useCountUp({ end: 228, startOnView: false }));
     expect(result.current.count).toBe(228);

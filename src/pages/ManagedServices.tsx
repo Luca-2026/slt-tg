@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { msModules, msProcess, msFaqs } from "@/data/managedServices";
 import { ServiceModels } from "@/components/services/ServiceModels";
 import { LedService } from "@/components/services/LedService";
@@ -66,7 +66,7 @@ const ManagedServices = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="min-w-0">
@@ -115,7 +115,7 @@ const ManagedServices = () => {
         <div className="section-container">
           <div
             ref={problemRef}
-            className={`grid lg:grid-cols-2 gap-10 items-center scroll-hidden-blur ${problemVisible ? "scroll-visible-blur" : ""}`}
+            className={`grid lg:grid-cols-2 gap-10 items-center ${scrollReveal(problemVisible, "blur")}`}
           >
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
@@ -153,7 +153,7 @@ const ManagedServices = () => {
         <div className="section-container">
           <div
             ref={modulesRef}
-            className={`scroll-hidden-blur ${modulesVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(modulesVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Leistungsmodule im Managed Service
@@ -167,7 +167,7 @@ const ManagedServices = () => {
                 <Card
                   key={m.id}
                   id={m.id}
-                  className={`bg-card border-border h-full flex flex-col scroll-hidden ${modulesVisible ? "scroll-visible" : ""}`}
+                  className={`bg-card border-border h-full flex flex-col ${scrollReveal(modulesVisible)}`}
                   style={{ transitionDelay: `${index * 0.06}s` }}
                 >
                   <CardHeader className="p-5 pb-3">
@@ -201,7 +201,7 @@ const ManagedServices = () => {
         <div className="section-container">
           <div
             ref={processRef}
-            className={`scroll-hidden-blur ${processVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(processVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               So läuft die Zusammenarbeit
@@ -210,7 +210,7 @@ const ManagedServices = () => {
               {msProcess.map((p, index) => (
                 <div
                   key={p.step}
-                  className={`rounded-xl border border-border bg-card p-5 h-full scroll-hidden ${processVisible ? "scroll-visible" : ""}`}
+                  className={`rounded-xl border border-border bg-card p-5 h-full ${scrollReveal(processVisible)}`}
                   style={{ transitionDelay: `${index * 0.06}s` }}
                 >
                   <div className="text-2xl font-bold text-primary/30 mb-2">{p.step}</div>
@@ -228,7 +228,7 @@ const ManagedServices = () => {
         <div className="section-container">
           <div
             ref={whyRef}
-            className={`scroll-hidden-blur ${whyVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(whyVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Warum SLT Technology Group als Managed Service Provider für AV und IT
@@ -277,7 +277,7 @@ const ManagedServices = () => {
         <div className="section-container">
           <div
             ref={faqRef}
-            className={`scroll-hidden-blur ${faqVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(faqVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Häufige Fragen zu Managed Services
@@ -321,7 +321,7 @@ const ManagedServices = () => {
         </div>
         <div
           ref={ctaRef}
-          className={`section-container text-center relative z-10 scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center relative z-10 ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Betrieb abgeben, Verfügbarkeit gewinnen

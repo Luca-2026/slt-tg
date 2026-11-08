@@ -1,6 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -38,9 +38,7 @@ export const TestimonialsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={headerRef}
-          className={`text-center mb-12 scroll-hidden-blur ${
-            headerVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`text-center mb-12 ${scrollReveal(headerVisible, "blur")}`}
         >
           <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
             Referenzen
@@ -57,9 +55,7 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className={`bg-card border-border hover:shadow-lg transition-shadow duration-300 relative overflow-hidden scroll-hidden-right ${
-                cardsVisible ? "scroll-visible-x" : ""
-              }`}
+              className={`bg-card border-border hover:shadow-lg transition-shadow duration-300 relative overflow-hidden ${scrollReveal(cardsVisible, "right")}`}
               style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-6">
@@ -97,9 +93,7 @@ export const TestimonialsSection = () => {
 
         <div 
           ref={trustRef}
-          className={`mt-12 text-center scroll-hidden-scale ${
-            trustVisible ? "scroll-visible-scale" : ""
-          }`}
+          className={`mt-12 text-center ${scrollReveal(trustVisible, "scale")}`}
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-full border border-border">
             <div className="flex gap-0.5">

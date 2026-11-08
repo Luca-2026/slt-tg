@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   ArrowRight,
   Video,
@@ -157,7 +157,7 @@ const Videokonferenzanlage = () => {
         </div>
         <div
           ref={heroRef}
-          className={`section-container relative z-10 scroll-hidden-blur ${heroVisible ? "scroll-visible-blur" : ""}`}
+          className={`section-container relative z-10 ${scrollReveal(heroVisible, "blur")}`}
         >
           <div className="max-w-3xl mx-auto text-center">
             <Breadcrumbs items={[{ label: "Videokonferenzanlage" }]} />
@@ -182,7 +182,7 @@ const Videokonferenzanlage = () => {
         <div className="section-container">
           <div
             ref={gridRef}
-            className={`scroll-hidden-blur ${gridVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(gridVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Was eine gute Videokonferenzanlage ausmacht
@@ -192,7 +192,7 @@ const Videokonferenzanlage = () => {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className={`block group scroll-hidden ${gridVisible ? "scroll-visible" : ""}`}
+                  className={`block group ${scrollReveal(gridVisible)}`}
                   style={{ transitionDelay: `${index * 0.06}s` }}
                 >
                   <Card className="bg-card border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
@@ -262,7 +262,7 @@ const Videokonferenzanlage = () => {
         <div className="section-container">
           <div
             ref={faqRef}
-            className={`scroll-hidden-blur ${faqVisible ? "scroll-visible-blur" : ""}`}
+            className={`${scrollReveal(faqVisible, "blur")}`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-8">
               Häufige Fragen zur Videokonferenzanlage
@@ -337,7 +337,7 @@ const Videokonferenzanlage = () => {
       <section className="py-20 lg:py-28 bg-gradient-to-b from-background to-primary/5">
         <div
           ref={ctaRef}
-          className={`section-container text-center scroll-hidden-scale ${ctaVisible ? "scroll-visible-scale" : ""}`}
+          className={`section-container text-center ${scrollReveal(ctaVisible, "scale")}`}
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-6">
             Videokonferenzanlage anfragen

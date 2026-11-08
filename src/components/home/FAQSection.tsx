@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { scrollReveal, useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
@@ -53,9 +53,7 @@ export function FAQSection() {
       <div className="section-container">
         <div 
           ref={headerRef}
-          className={`text-center max-w-3xl mx-auto mb-10 lg:mb-16 scroll-hidden-blur ${
-            headerVisible ? "scroll-visible-blur" : ""
-          }`}
+          className={`text-center max-w-3xl mx-auto mb-10 lg:mb-16 ${scrollReveal(headerVisible, "blur")}`}
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Häufige Fragen
@@ -71,9 +69,7 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className={`border-b border-border last:border-b-0 sm:bg-background sm:border sm:rounded-lg sm:px-6 sm:last:border-b data-[state=open]:border-primary/50 scroll-hidden ${
-                  accordionVisible ? "scroll-visible" : ""
-                }`}
+                className={`border-b border-border last:border-b-0 sm:bg-background sm:border sm:rounded-lg sm:px-6 sm:last:border-b data-[state=open]:border-primary/50 ${scrollReveal(accordionVisible)}`}
                 style={{ transitionDelay: `${index * 0.08}s` }}
               >
                 <AccordionTrigger className="text-left hover:no-underline hover:text-primary py-5">
