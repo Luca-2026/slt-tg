@@ -51,3 +51,4 @@
 ## Teamname und Bewerbungsupload (08.11.2026)
 - [x] Maibrit Breuer in Maibrit Sandhoff geändert; bestehende E-Mail unverändert, Vorschau geprüft.
 - [x] Lebenslauf-Upload mit UUID/MIME-Endung unabhängig von Umlauten und Sonderzeichen; 5 Tests bestanden. Alle drei Bewerbungsformulare in der Vorschau mit Jörg/Müller und Umlaut-PDF geprüft: Upload 200, Speicherung 201, E-Mail-Annahme 200, Bestätigung sichtbar. Kein neuer Produktionsexport/FTP-Upload; tatsächlicher Posteingang nicht geprüft.
+- [x] Neues einzelnes Upload-ZIP v2: separate Produktionskopie gebaut, 89 Seiten vorgerendert, 90 Exportseiten bestanden, 0 % JS/no-JS-Abweichung, 78 Tests bestanden. 238 ZIP-Einträge bytegleich zur finalen Uploadfassung; bestehende optimierte Bilder unverändert wiederverwendet. Google-Profil Krefeld und Maibrit Sandhoff enthalten; Desktop/Mobil ohne fehlende Dateien oder Laufzeitfehler geprüft. Kein FTP-Upload durchgeführt.
