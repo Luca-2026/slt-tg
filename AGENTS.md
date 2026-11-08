@@ -4,7 +4,7 @@
 - Validate every serialized snapshot and compare JS/no-JS visible main text at a 2% word-edit threshold; failed routes block export rather than silently shipping incomplete pages.
 - Production export uses build-time Chromium rendering of complete pages with React 18, Vite 5 and TypeScript; Serverprofis serves HTML without a persistent Node server or runtime SSR.
 - Keep build:dev Vite-only for Lovable preview builds and their injected config; production build retains mandatory Chromium prerendering and must not silently fall back to SPA output.
-- SEOHead reads the shared route catalogue for metadata and robots so browser navigation and exported pages cannot drift.
+- SEOHead and the static export use the shared route catalogue and metadata writer for identical route-specific head tags, self-referencing canonical URLs and removal of obsolete metadata; browser navigation and exported pages must not drift.
 - Sitemaps include only unique canonical indexable routes and use only page-specific known modification dates; never invent build-time or year-derived timestamps.
 - Keep source-based news articles in dedicated pages, with shared article metadata consumed by the news overview and SEO route catalogue to avoid date and URL drift.
 - Consolidate service and maintenance content under /managed-services; permanently redirect /service-wartung to the hub to preserve inbound links without duplicate pages.

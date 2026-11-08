@@ -67,7 +67,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Konferenzraum-Ausstattung & AV-Systemhaus NRW | SLT AV",
     description:
       "AV-Systemhaus für Konferenzraum-Ausstattung, Videokonferenz und Digital Signage: Fachplanung, Rollout und Service nach ITIL v4. Krefeld & Bonn, NRW-weit.",
-    h1: "Konferenz- & Medientechnik aus einer Hand",
+    h1: "Konferenzraum-Ausstattung & AV-Systemintegration in NRW – SLT Technology Group",
     intro: [
       "Wir planen, integrieren und betreiben Konferenz- und Medientechnik für Konzerne, Industrie und großen Mittelstand in Deutschland und Europa.",
       "Standardisierte Rollouts, Vendor-zertifizierte Integration, Managed Services – herstellerneutral und partnerschaftlich.",
@@ -83,7 +83,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Konferenzraum-Lösungen: Huddle bis Boardroom & Auditorium | SLT AV",
     description:
       "Skalierbare AV-Lösungen für Enterprise: Huddle Space, Meetingraum, Boardroom, Auditorium, Empfang und Digital Signage – standardisierbar für Multi-Site-Rollouts.",
-    h1: "Lösungen für jeden Raumtyp",
+    h1: "AV-Lösungen für Konferenzraum, Auditorium & mehr",
     intro: [
       "Vom Huddle Space bis zum Auditorium: SLT Technology Group entwickelt skalierbare, standardisierbare Konzepte für moderne Enterprise-Arbeitswelten.",
     ],
@@ -99,7 +99,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Technologien: Crestron, Q-SYS, Poly, Logitech, Sennheiser | SLT AV",
     description:
       "Zertifizierter Integrator führender Enterprise-Hersteller: Crestron, Q-SYS, Poly, Logitech, Sennheiser, Shure, Barco, Yealink. Herstellerneutral integriert.",
-    h1: "Technologien & Hersteller",
+    h1: "Herstellerneutrale Technologieberatung",
     intro: [
       "Best-of-Breed-Technologien führender Enterprise-Hersteller – zu einem konsistenten, herstellerneutralen Gesamtsystem integriert.",
     ],
@@ -111,12 +111,12 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/finanzierung",
     routeType: "page",
-    title: "Finanzierung: Leasing, Mietkauf & AV-as-a-Service | SLT AV",
+    title: "AV-Finanzierung: Kauf, Leasing & AV-as-a-Service | SLT AV",
     description:
-      "Bilanzschonende Finanzierungsmodelle für AV-Investitionen: Leasing, Mietkauf, AV-as-a-Service. Planbare OPEX statt CAPEX-Spitzen – auch für Multi-Site-Rollouts.",
-    h1: "Finanzierungsmodelle für Ihre AV-Investition",
+      "Finanzierungsmodelle für Medientechnik im Vergleich: Direktkauf, Leasing und AV-as-a-Service. Vorteile, laufende Kosten und Service passend zu Budget und IT-Strategie.",
+    h1: "Flexible Finanzierungsoptionen",
     intro: [
-      "Leasing, Mietkauf oder AV-as-a-Service: Wir finden das passende Modell für Budget, Bilanz und Rollout-Plan.",
+      "Kauf, Leasing oder AV-as-a-Service: Wir finden das passende Modell für Budget, Bilanz und Rollout-Plan.",
     ],
     canonical: "/finanzierung",
     changefreq: "monthly",
@@ -129,7 +129,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Enterprise-Referenzen: GEA, Pfeifer & Langen, AluNorf, Sonoco | SLT AV",
     description:
       "Realisierte Großprojekte für Konzerne und Industrie: Boardrooms, standortübergreifende Rollouts, hybride Meetingräume und Enterprise-Netzwerkinfrastruktur.",
-    h1: "Referenzprojekte",
+    h1: "Referenzprojekte: Medientechnik, IT & Netzwerk",
     intro: [
       "Einblicke in realisierte Enterprise-AV- und IT-Projekte – vom Einzelraum bis zum standortübergreifenden Multi-Site-Rollout.",
     ],
@@ -145,7 +145,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Über SLT Technology Group: Team, Standorte Krefeld & Bonn | SLT AV",
     description:
       "Inhabergeführtes AV-Systemhaus für Enterprise-Kunden: Team, Standorte Krefeld und Bonn, Zertifizierungen, Werte. Lernen Sie SLT Technology Group kennen.",
-    h1: "Über SLT Technology Group",
+    h1: "Die Geschichte der SLT Technology Group",
     intro: [
       "Inhabergeführt, partnerschaftlich, zertifiziert: Das Team von SLT Technology Group steht für transparente Enterprise-AV-Integration.",
     ],
@@ -161,7 +161,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Kontakt SLT Technology Group: Krefeld & Bonn | SLT AV",
     description:
       "Kontaktieren Sie SLT Technology Group: Hauptsitz Krefeld, Standort Bonn. Telefon, E-Mail, Anfahrt – Ihr Ansprechpartner für Enterprise-AV in NRW.",
-    h1: "Kontakt",
+    h1: "Kontakt aufnehmen – kostenlose Erstberatung",
     intro: [
       "Sprechen Sie mit uns – per Telefon, E-Mail oder direkt vor Ort in Krefeld oder Bonn.",
     ],
@@ -173,12 +173,12 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/projektanfrage",
     routeType: "page",
-    title: "Projektanfrage: Kostenfreies Enterprise-AV-Erstgespräch | SLT AV",
+    title: "Projektanfrage: AV- & IT-Projekt unverbindlich anfragen | SLT AV",
     description:
-      "Starten Sie Ihr Enterprise-AV-Projekt: Kostenfreies Erstgespräch mit konkretem Vorschlag binnen 24 Stunden. Für Konzerne, Industrie und großen Mittelstand.",
-    h1: "Projektanfrage starten",
+      "Ihr AV- oder IT-Projekt in fünf Schritten anfragen: Kontaktdaten, Projektrahmen, Anforderungen und Unterlagen übermitteln – unverbindlich und kostenfrei.",
+    h1: "Starten Sie Ihr Projekt",
     intro: [
-      "Beschreiben Sie kurz Ihre Anforderungen – wir melden uns innerhalb eines Werktags mit einem konkreten Vorschlag.",
+      "In nur 5 Schritten zu Ihrer individuellen Anfrage – unverbindlich und kostenfrei.",
     ],
     canonical: "/projektanfrage",
     changefreq: "monthly",
@@ -190,8 +190,8 @@ export const MAIN_ROUTES: SeoRoute[] = [
     routeType: "page",
     title: "Karriere bei SLT Technology Group: AV-Jobs Krefeld & Bonn | SLT AV",
     description:
-      "Aktuelle Stellenangebote bei SLT Technology Group: AV-Techniker, Projektleiter, Systemintegrator, Auszubildende – Standorte Krefeld und Bonn.",
-    h1: "Karriere bei SLT Technology Group",
+      "Karriere bei SLT Technology Group: Stellenanzeigen für Medientechnik und Ausbildungen in Büromanagement und Veranstaltungstechnik. Standorte Krefeld und Bonn.",
+    h1: "Starte mit uns durch.",
     intro: [
       "Werden Sie Teil eines wachsenden, inhabergeführten Enterprise-AV-Systemhauses mit Standorten in Krefeld und Bonn.",
     ],
@@ -203,10 +203,10 @@ export const MAIN_ROUTES: SeoRoute[] = [
   {
     path: "/news",
     routeType: "page",
-    title: "News: AV-Trends, ISE 2026, Enterprise-Produktneuheiten | SLT AV",
+    title: "News & Ratgeber: AV- & IT-Welt | SLT AV",
     description:
       "News, ISE-Berichte und Produktneuheiten aus der Enterprise-AV-Welt – fundiert kuratiert für IT-Entscheider, Facility Manager und Workplace-Verantwortliche.",
-    h1: "News & Aktuelles",
+    h1: "News & Ratgeber AV- & IT-Welt",
     intro: [
       "Trends, Innovationen und Praxiswissen aus der professionellen Enterprise-Medientechnik – von uns kuratiert.",
     ],
@@ -221,7 +221,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "AV- & Medientechnik-Ratgeber für IT-Entscheider | SLT AV",
     description:
       "Praxiswissen für IT-Entscheider, Facility Manager und Workplace-Verantwortliche: Raumgrößen, Plattform-Vergleiche, Kostenrahmen, Rollout-Erfahrungen – neutral.",
-    h1: "AV- & Medientechnik-Ratgeber",
+    h1: "Ratgeber Konferenz- & Medientechnik",
     intro: [
       "Praxiswissen für IT-Entscheider, Facility Manager und Workplace-Verantwortliche: neutrale Empfehlungen, realistische Kostenrahmen und fundierte Vergleiche.",
     ],
@@ -235,10 +235,10 @@ export const MAIN_ROUTES: SeoRoute[] = [
     routeType: "page",
     title: "Konferenzraum-Ausstattung: Huddle bis Boardroom & Auditorium | SLT AV",
     description:
-      "Enterprise-Konferenzraum-Ausstattung nach Raumgröße: Huddle, Meeting, Boardroom, Auditorium. Hardware-Empfehlungen, Kostenrahmen, Lieferzeit und Rollout-Dauer – standardisierbar für Multi-Site.",
+      "Konferenzraum-Ausstattung vom Huddle Space bis zum Auditorium: typische AV-Komponenten, Raumgrößen und Anwendungsfälle. Kosten und Zeitplan nach individueller Bedarfsanalyse.",
     h1: "Konferenzraum-Ausstattung nach Raumgröße",
     intro: [
-      "Vom Huddle Space bis zum Auditorium: Wir empfehlen die optimale AV-Ausstattung für jeden Raumtyp – mit konkreten Hardware-Kombinationen, Kostenrahmen und Rollout-Zeitplan.",
+      "Vom Huddle Space bis zum Auditorium: typische Komponenten-Auswahl und Anwendungsfälle. Die konkrete Planung erfolgt herstellerneutral und projektspezifisch.",
       "Standardisierbar, skalierbar und herstellerneutral – für Konzerne, Industrie und großen Mittelstand.",
     ],
     canonical: "/konferenzraum-ausstattung",
@@ -270,7 +270,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Digital Signage Anbieter für Unternehmen | SLT Technology Group",
     description:
       "Digital Signage Anbieter für Unternehmen: Fachplanung, Displays und LED-Walls, CMS- und Netzwerk-Integration, Multi-Site-Rollout und Service nach ITIL v4 – aus NRW, bundesweit tätig.",
-    h1: "Digital Signage für Unternehmen",
+    h1: "Digital Signage – geplant, integriert, betrieben",
     intro: [
       "Von der Empfangs-LED bis zum standortübergreifenden Display-Netz: Wir planen, installieren und betreiben Digital-Signage-Anlagen als AV-Systemhaus.",
       "Inklusive CMS-Auswahl, Netzwerk- und IT-Integration, Room-Booking-Panels und Outdoor-LED – herstellerneutral und multi-site-fähig.",
@@ -287,7 +287,7 @@ export const MAIN_ROUTES: SeoRoute[] = [
     title: "Videokonferenzanlage für Konferenzräume | SLT Technology Group",
     description:
       "Videokonferenzanlage planen, installieren und betreiben lassen: Kamera, Audio, Display und Steuerung für Teams- und Zoom-Räume – herstellerneutral, IT-konform, mit Service.",
-    h1: "Videokonferenzanlage für Ihre Konferenzräume",
+    h1: "Videokonferenzanlage – passend zum Raum geplant",
     intro: [
       "Kamera, Audio, Display und Bedienung als durchdachtes Gesamtsystem – vom Huddle Room bis zum Auditorium.",
       "Passend zu Microsoft Teams, Zoom oder BYOD, abgestimmt mit Ihrer IT und optional im Managed-Service-Betrieb.",
@@ -378,7 +378,7 @@ const LEGACY_RATGEBER_ROUTES: SeoRoute[] = [
     title: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms | SLT Technology Group",
     description:
       "Yealink MeetingBoard Pro im Praxis-Check: Funktionen, Größen, Einsatzszenarien – Installation und Inbetriebnahme durch SLT Technology Group als autorisierter Partner.",
-    h1: "Yealink MeetingBoard Pro: All-in-One für Teams Rooms",
+    h1: "Yealink MeetingBoard Pro: All-in-One Lösung für Microsoft Teams Rooms",
     intro: [
       "Funktionen, Größen und Einsatzszenarien des Yealink MeetingBoard Pro – inklusive Installation durch SLT Technology Group als autorisierter Partner.",
     ],
@@ -624,7 +624,7 @@ export const LEGAL_ROUTES: SeoRoute[] = [
     path: "/impressum",
     routeType: "legal",
     title: "Impressum | SLT Technology Group",
-    description: "Impressum gemäß § 5 TMG der SLT Technology Group GmbH & Co. KG.",
+    description: "Impressum der SLT Technology Group GmbH & Co. KG: Unternehmensangaben, Vertretung und Kontaktinformationen.",
     h1: "Impressum",
     intro: [],
     canonical: "/impressum",

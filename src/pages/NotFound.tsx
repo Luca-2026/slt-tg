@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { applyRouteMetadata, canonicalUrl } from "@/lib/seo-metadata";
 
 const NotFound = () => {
   const location = useLocation();
@@ -18,7 +19,11 @@ const NotFound = () => {
       meta.setAttribute("content", "noindex, nofollow");
       document.head.appendChild(meta);
     }
-    document.title = "Seite nicht gefunden | SLT Technology Group";
+    applyRouteMetadata({
+      title: "Seite nicht gefunden | SLT Technology Group",
+      description: "Die angeforderte Seite existiert nicht oder wurde verschoben. Kehren Sie zur Startseite zurück oder kontaktieren Sie SLT Technology Group.",
+      url: canonicalUrl(location.pathname),
+    });
 
     return () => {
       const m = document.querySelector('meta[name="robots"][content="noindex, nofollow"]');

@@ -24,7 +24,7 @@ export async function loadRouteData() {
 }
 
 export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOptions = {}, routes } = {}) {
-  const { ALL_ROUTES, resolveRouteSchemas } = await loadRouteData();
+  const { ALL_ROUTES, resolveRouteSchemas, routeMetadata, applyRouteMetadata, inspectRouteMetadata } = await loadRouteData();
   const catalogue = routes ?? ALL_ROUTES;
   // Production always requires the Vite-built template. A source URL is only
   // supplied by the browser test fixture; there is no SPA fallback on failure.
@@ -68,13 +68,12 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
         await Promise.all([...READY_SELECTORS, ...(ROUTE_SELECTORS[route.path] ?? [])]
           .map(selector => page.locator(selector).first().waitFor({ state: "attached" })));
         if (new URL(page.url()).pathname !== route.path) throw new Error(`Route redirected: ${route.path}`);
+        await page.evaluate(applyRouteMetadata, routeMetadata(route));
         await page.evaluate(({ route, schemas, base }) => {
           const setMeta = (attr, key, value) => {
             document.querySelectorAll(`meta[${attr}="${key}"]`).forEach(el => el.remove());
             const el = document.createElement("meta"); el.setAttribute(attr, key); el.content = value; document.head.append(el);
           };
-          document.title = route.title;
-          setMeta("name", "description", route.description);
           setMeta("name", "robots", route.noindex ? "noindex, follow" : "index, follow");
           setMeta("name", "twitter:url", `${base}${route.path}`);
           for (const lang of ["de", "x-default"]) {
@@ -100,7 +99,8 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
         snapshotPage = await snapshotContext.newPage();
         await snapshotPage.setContent(await readFile(output, "utf8"));
         const stats = await snapshotPage.evaluate(inspectSnapshot);
-        const violations = [...stats.violations, ...errors];
+        const violations = [...stats.violations, ...errors,
+          ...await snapshotPage.evaluate(inspectRouteMetadata, routeMetadata(route))];
         if (violations.length) {
           failures.push({ path: route.path, violations });
         } else {
