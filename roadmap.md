@@ -5,7 +5,7 @@
 - [x] Satz-/Komma-Metadaten, Standort-/Service-/FAQ-/Breadcrumb-Schemas aktualisieren.
 - [x] Export bei fehlenden Inhalten, unfreigegebenen Referenzen oder mehr als 20 % identischen Sätzen blockieren.
 - [x] 35 Vorschau-Snapshots ohne JavaScript geprüft, identischer sichtbarer Text; FAQ, Referenzlink und mobile Seite geprüft; Bericht je Route erstellt.
-- [ ] 18 separate Descriptions: wartet auf die vom Nutzer angekündigten Texte; Produktionsexport bis dahin gesperrt.
+- [x] Alle 35 gelieferten Descriptions aus leistungen.<key>.description wortgetreu verwenden; fehlende oder ungültige Felder blockieren den Build, keine Ableitung mehr.
 
 ## A. Metadaten
 - [x] A1 Routentabelle um Spalte "robots" (index/noindex) für alle 89 Routen ergänzt → /mnt/documents/SEO-Routentabelle-2026-11-08.md + .csv

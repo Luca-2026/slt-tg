@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
 import { ALL_ROUTES } from "@/data/seo-routes";
-import { getRegion, isServiceKey, regionDescription } from "@/data/regionen";
 import { topics } from "@/data/localSEO";
 
 /**
@@ -43,8 +42,6 @@ describe("SEO titles", () => {
 describe("SEO descriptions", () => {
   it("every description is 120–155 chars, no exclamation mark, no truncation", () => {
     for (const route of ALL_ROUTES) {
-      const region = route.city ? getRegion(route.city) : undefined;
-      if (region && route.topic && isServiceKey(route.topic) && regionDescription(region, route.topic).pending) continue;
       expect(
         route.description.length,
         `${route.path}: ${route.description.length} Zeichen`,

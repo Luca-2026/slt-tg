@@ -1,16 +1,37 @@
 {
   "stadt": "Essen",
   "slug": "essen",
-  "standort": { "name": "Krefeld", "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld" },
+  "standort": {
+    "name": "Krefeld",
+    "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld"
+  },
   "fahrzeit": "ca. 40–50 Minuten ab Krefeld",
-  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
+  "ansprechpartner": {
+    "name": "Benedikt Nöchel",
+    "funktion": "Geschäftsführung"
+  },
   "gbpUrl": "<GBP Krefeld>",
   "quellen": [
-    { "fakt": "Essen: Hauptsitze von drei DAX-Unternehmen (Brenntag, E.ON, RWE) und drei MDAX-Unternehmen (Evonik, Hochtief, thyssenkrupp); weitere u. a. Aldi Nord; Büroleerstand seit 2019 mehr als verdoppelt", "url": "https://www.kreditwesen.de/mimas/system/files/flipbook/insert/104825/dzhyp_regionenstudie_d_2025_2026_S41.pdf" },
-    { "fakt": "Rund 590.000 Einwohner im 5,1-Mio.-Ballungsraum Metropole Ruhr; Teile des bundesweiten Stromnetzes werden von Essen aus gesteuert; Messe Essen unter den zehn größten deutschen Messeplätzen", "url": "https://media.essen.de/media/emg_1/dokumente_18/2025_4/2025-139-069_EMG_Convention_Bureau_Online-Version.pdf" }
+    {
+      "fakt": "Essen: Hauptsitze von drei DAX-Unternehmen (Brenntag, E.ON, RWE) und drei MDAX-Unternehmen (Evonik, Hochtief, thyssenkrupp); weitere u. a. Aldi Nord; Büroleerstand seit 2019 mehr als verdoppelt",
+      "url": "https://www.kreditwesen.de/mimas/system/files/flipbook/insert/104825/dzhyp_regionenstudie_d_2025_2026_S41.pdf"
+    },
+    {
+      "fakt": "Rund 590.000 Einwohner im 5,1-Mio.-Ballungsraum Metropole Ruhr; Teile des bundesweiten Stromnetzes werden von Essen aus gesteuert; Messe Essen unter den zehn größten deutschen Messeplätzen",
+      "url": "https://media.essen.de/media/emg_1/dokumente_18/2025_4/2025-139-069_EMG_Convention_Bureau_Online-Version.pdf"
+    }
   ],
   "referenzen": [
-    { "name": "Capgemini", "leistung": ["it-netzwerk", "medientechnik"], "beschreibung": "WLAN-Ausleuchtung und WLAN-Infrastruktur", "ort": "Ratingen, ca. 20 Minuten von Essen", "freigabe": true }
+    {
+      "name": "Capgemini",
+      "leistung": [
+        "it-netzwerk",
+        "medientechnik"
+      ],
+      "beschreibung": "WLAN-Ausleuchtung und WLAN-Infrastruktur",
+      "ort": "Ratingen, ca. 20 Minuten von Essen",
+      "freigabe": true
+    }
   ],
   "leistungen": {
     "medientechnik": {
@@ -19,11 +40,21 @@
       "anforderungen": "Essen hat mehr Konzernzentralen als jede andere Stadt im Ruhrgebiet: E.ON, RWE und Brenntag im DAX, Evonik, Hochtief und thyssenkrupp im MDAX, dazu Aldi Nord. Konzernzentralen bedeuten für Medientechnik: viele Räume nach einem Standard, Einkauf über Rahmenverträge, Abstimmung mit einer zentralen IT, die Herstellervorgaben macht, und Dokumentation, die ein Audit übersteht. Zugleich ist der Büroleerstand in Essen seit 2019 deutlich gestiegen – Unternehmen ziehen um, verkleinern oder bauen Flächen neu aus, und jede dieser Bewegungen ist ein Anlass, Raumtechnik neu zu denken statt alte Anlagen mitzunehmen. Für den Mittelstand in Kettwig, Kray oder im Essener Norden gilt dagegen das Übliche: ein Raum, der zuverlässig startet, und ein Ansprechpartner, der kommt.",
       "arbeitsweise": "Bedarf und Raumtypen klären wir mit Ihnen; Technik zeigen wir im Vorführraum in Krefeld oder als Teststellung bei Ihnen. Aufmaß und Abstimmung mit IT und Facility Management erfolgen bei der Installation. Service und Monitoring aus Krefeld; Vor-Ort-Einsätze in Essen am nächsten Werktag.",
       "faq": [
-        { "frage": "Wie schnell sind Sie in Essen vor Ort?", "antwort": "Von Krefeld aus in rund 45 Minuten; für Servicefälle planen wir den nächsten Werktag ein." },
-        { "frage": "Haben Sie Referenzen im Ruhrgebiet?", "antwort": "Die nächstgelegene ist die WLAN-Infrastruktur für Capgemini in Ratingen; Konferenzraum-Referenzen liegen in Köln, Neuss und Düsseldorf." },
-        { "frage": "Begleiten Sie Umzüge und Flächenwechsel?", "antwort": "Ja – von der Bestandsaufnahme, was mitgenommen werden kann, bis zur Neuplanung der Räume am neuen Standort." }
+        {
+          "frage": "Wie schnell sind Sie in Essen vor Ort?",
+          "antwort": "Von Krefeld aus in rund 45 Minuten; für Servicefälle planen wir den nächsten Werktag ein."
+        },
+        {
+          "frage": "Haben Sie Referenzen im Ruhrgebiet?",
+          "antwort": "Die nächstgelegene ist die WLAN-Infrastruktur für Capgemini in Ratingen; Konferenzraum-Referenzen liegen in Köln, Neuss und Düsseldorf."
+        },
+        {
+          "frage": "Begleiten Sie Umzüge und Flächenwechsel?",
+          "antwort": "Ja – von der Bestandsaufnahme, was mitgenommen werden kann, bis zur Neuplanung der Räume am neuen Standort."
+        }
       ],
-      "pruefen": "Keine Essener Referenz vorhanden; der Text sagt das offen. Sobald ein Projekt in Essen steht, hier eintragen."
+      "pruefen": "Keine Essener Referenz vorhanden; der Text sagt das offen. Sobald ein Projekt in Essen steht, hier eintragen.",
+      "description": "Medientechnik in Essen: Raumstandards für Konzernzentralen und Mittelstand, Begleitung bei Umzug und Neubezug. Referenz: Capgemini in Ratingen."
     },
     "konferenztechnik": {
       "einleitung": "Konferenztechnik in Essen planen wir für Unternehmen, die zwischen einem Besprechungsraum und einem konzernweiten Standard liegen – und für beides vom Hauptsitz Krefeld aus erreichbar sind, rund 45 Minuten entfernt. SLT Technology Group stattet Räume vom Huddle Space bis zum Boardroom aus, installiert und betreut sie; über 20 Räume nach einem Standard haben wir bei Pfeifer & Langen in Köln umgesetzt, Boardroom und Schulungsraum bei Aluminium Norf in Neuss.",
@@ -31,11 +62,21 @@
       "anforderungen": "Essen ist Sitz von sechs DAX- und MDAX-Konzernen und zahlreichen Tochtergesellschaften – Räume werden hier in Serie gedacht. Was an einem Standort funktioniert, soll auf zwanzig andere übertragbar sein, inklusive Bedienung, Ersatzteilen und Schulung. Konzern-IT-Abteilungen geben Plattform und Hersteller oft vor; die Aufgabe des Systemhauses ist dann weniger die Auswahl als die saubere Umsetzung mit Dokumentation. Daneben wächst in Essen eine zweite Kundengruppe: Unternehmen, die Flächen neu beziehen, weil der Büromarkt es zulässt, und die Konferenzräume von Grund auf neu planen. In beiden Fällen entscheidet die Akustik in den verglasten Neubauten rund um den Hauptbahnhof und am Berliner Platz, ob die Technik überzeugt – wir planen Mikrofonie und Lautsprecher vor der Kamera.",
       "arbeitsweise": "Raumtypen festlegen, einen Referenzraum ausstatten und im Betrieb prüfen, dann skalieren. Aufmaß und Abstimmung mit IT und Hausverwaltung bei der Installation. Ersatzgeräte in Krefeld, Vor-Ort-Einsätze am nächsten Werktag.",
       "faq": [
-        { "frage": "Welche Konferenzraum-Projekte können Sie zeigen?", "antwort": "Über 20 Räume mit Standard und LED-Wall bei Pfeifer & Langen in Köln, Boardroom und Schulungsraum bei Aluminium Norf in Neuss." },
-        { "frage": "Arbeiten Sie mit Herstellervorgaben der Konzern-IT?", "antwort": "Ja. Wir setzen um, was Ihre IT freigibt, und dokumentieren so, dass der nächste Standort nach demselben Plan gebaut werden kann." },
-        { "frage": "Wie lange dauert ein Standardraum?", "antwort": "Nach Freigabe und Lieferung wenige Tage je Raum; mehrere Räume planen wir etagenweise." }
+        {
+          "frage": "Welche Konferenzraum-Projekte können Sie zeigen?",
+          "antwort": "Über 20 Räume mit Standard und LED-Wall bei Pfeifer & Langen in Köln, Boardroom und Schulungsraum bei Aluminium Norf in Neuss."
+        },
+        {
+          "frage": "Arbeiten Sie mit Herstellervorgaben der Konzern-IT?",
+          "antwort": "Ja. Wir setzen um, was Ihre IT freigibt, und dokumentieren so, dass der nächste Standort nach demselben Plan gebaut werden kann."
+        },
+        {
+          "frage": "Wie lange dauert ein Standardraum?",
+          "antwort": "Nach Freigabe und Lieferung wenige Tage je Raum; mehrere Räume planen wir etagenweise."
+        }
       ],
-      "pruefen": "Stadtteil- und Lagebezüge beschreiben den Baubestand, keine Projektorte."
+      "pruefen": "Stadtteil- und Lagebezüge beschreiben den Baubestand, keine Projektorte.",
+      "description": "Konferenztechnik in Essen: Räume in Serie nach Konzernvorgabe, dokumentiert für den nächsten Standort. Referenzen: Pfeifer & Langen, Aluminium Norf."
     },
     "videokonferenz": {
       "einleitung": "Videokonferenzsysteme für Essen planen wir für Konzernstandorte und Mittelstand gleichermaßen – Kamera, Mikrofonie, Display und Steuerung passend zum Raum, angebunden an Microsoft Teams Rooms oder Zoom Rooms, mit BYOD für alles andere. SLT Technology Group betreut Essen vom Hauptsitz Krefeld aus, rund 45 Minuten entfernt; Videokonferenzräume haben wir bei Aluminium Norf in Neuss und beim Bank-Verlag in Köln realisiert.",
@@ -43,11 +84,21 @@
       "anforderungen": "In Essens Energie-, Chemie- und Industriekonzernen laufen Videokonferenzen zwischen Zentrale, Kraftwerken, Werken und internationalen Tochtergesellschaften – oft mit Teilnehmern, die aus einem Leitstand oder von der Baustelle zugeschaltet sind. Das stellt Anforderungen an Stabilität und an die Einbindung in Konzernnetze mit strenger Segmentierung. Die Plattform ist meist vorgegeben, in der Regel Teams; die Aufgabe ist dann, Räume zu bauen, die diesen Standard ohne Ausnahme erfüllen. Für Dienstleister, Kanzleien und Mittelständler in Essen gilt umgekehrt: Kunden nutzen Teams, Zoom oder Webex, also muss der Raum offen bleiben. In beiden Fällen entscheidet die Mikrofonie, nicht die Kamera, ob die Gegenseite versteht.",
       "arbeitsweise": "Plattform, Raumgröße und Sicherheitsanforderungen klären wir zuerst; eine Teststellung im echten Raum zeigt Akustik und Sichtachsen. Danach installieren wir, weisen ein und übernehmen auf Wunsch Service und Monitoring aus Krefeld.",
       "faq": [
-        { "frage": "Welche Videokonferenz-Projekte können Sie zeigen?", "antwort": "Räume bei Aluminium Norf in Neuss und eine mobile Videokonferenzstele beim Bank-Verlag in Köln." },
-        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
-        { "frage": "Können Sie Räume nach einem Konzernstandard bauen?", "antwort": "Ja, nach Ihrer Spezifikation und mit Dokumentation, die der nächste Standort übernehmen kann." }
+        {
+          "frage": "Welche Videokonferenz-Projekte können Sie zeigen?",
+          "antwort": "Räume bei Aluminium Norf in Neuss und eine mobile Videokonferenzstele beim Bank-Verlag in Köln."
+        },
+        {
+          "frage": "Welche Raumgröße braucht welches System?",
+          "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera."
+        },
+        {
+          "frage": "Können Sie Räume nach einem Konzernstandard bauen?",
+          "antwort": "Ja, nach Ihrer Spezifikation und mit Dokumentation, die der nächste Standort übernehmen kann."
+        }
       ],
-      "pruefen": "Keine Essener Referenz; der Text verweist auf Neuss und Köln."
+      "pruefen": "Keine Essener Referenz; der Text verweist auf Neuss und Köln.",
+      "description": "Videokonferenz in Essen: Räume nach Konzernstandard oder plattformoffen für den Mittelstand, Akustik zuerst. Referenzen: Aluminium Norf, Bank-Verlag."
     },
     "it-netzwerk": {
       "einleitung": "IT-Netzwerk in Essen ist die Leistung, für die wir dem Ruhrgebiet am nächsten sind: Für Capgemini haben wir in Ratingen, zwanzig Minuten von Essen, WLAN-Ausleuchtung und -Infrastruktur umgesetzt, für die Boston Consulting Group in Düsseldorf die WLAN-Infrastruktur. SLT Technology Group plant und baut strukturierte Verkabelung, WLAN und Netzwerkinfrastruktur als Fundament für Konferenztechnik, Signage und Arbeitsplatz – vom Hauptsitz Krefeld aus, rund 45 Minuten entfernt.",
@@ -55,11 +106,21 @@
       "anforderungen": "Von Essen aus werden Teile des bundesweiten Stromnetzes gesteuert, und die Stadt beherbergt Konzernzentralen, deren IT-Sicherheitsanforderungen zu den strengsten der Wirtschaft gehören. Netzwerke für Medientechnik müssen sich dort in bestehende Segmentierung, Zugriffskontrolle und Protokollierung einfügen, ohne eigene Wege zu öffnen. Zugleich bewegt sich der Essener Büromarkt: Umzüge und Neubezüge sind Anlass, Verkabelung und WLAN neu zu planen statt Altbestand zu übernehmen. Die Bürotürme rund um Hauptbahnhof und Berliner Platz haben Stahlbeton und Glas, die eine Planung nach Grundriss unbrauchbar machen – wir messen aus. Für Industrie und Logistik im Essener Norden gilt dasselbe wie überall im Ruhrgebiet: WLAN muss in Hallen zwischen Stahl und Staplern funktionieren.",
       "arbeitsweise": "WLAN-Ausleuchtung mit Messung, Access-Point-Positionen und Kanalplan, Verkabelung nach DIN EN 50173; Installation und Abstimmung mit IT und Hausverwaltung vor Ort; Übergabe mit Messprotokoll und Dokumentation. Netzwerk, Konferenztechnik und Signage aus einer Hand.",
       "faq": [
-        { "frage": "Haben Sie Netzwerkprojekte im Ruhrgebiet?", "antwort": "WLAN-Ausleuchtung und -Infrastruktur für Capgemini in Ratingen, zwanzig Minuten von Essen; WLAN-Infrastruktur für die Boston Consulting Group in Düsseldorf." },
-        { "frage": "Planen Sie WLAN nach Messung?", "antwort": "Ja, im Gebäude mit Messgerät. Stahlbeton und Glasfassaden machen jede Planung nach Grundriss unzuverlässig." },
-        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+        {
+          "frage": "Haben Sie Netzwerkprojekte im Ruhrgebiet?",
+          "antwort": "WLAN-Ausleuchtung und -Infrastruktur für Capgemini in Ratingen, zwanzig Minuten von Essen; WLAN-Infrastruktur für die Boston Consulting Group in Düsseldorf."
+        },
+        {
+          "frage": "Planen Sie WLAN nach Messung?",
+          "antwort": "Ja, im Gebäude mit Messgerät. Stahlbeton und Glasfassaden machen jede Planung nach Grundriss unzuverlässig."
+        },
+        {
+          "frage": "Welche Hersteller setzen Sie ein?",
+          "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll."
+        }
       ],
-      "pruefen": "„Teile des bundesweiten Stromnetzes“ stammt aus der Broschüre des Convention Bureau Essen (Amprion sitzt in Dortmund, Westnetz/E.ON in Essen) – Formulierung bleibt allgemein."
+      "pruefen": "„Teile des bundesweiten Stromnetzes“ stammt aus der Broschüre des Convention Bureau Essen (Amprion sitzt in Dortmund, Westnetz/E.ON in Essen) – Formulierung bleibt allgemein.",
+      "description": "IT-Netzwerk in Essen: WLAN nach Messung, Verkabelung nach DIN EN 50173 und Segmentierung für Konzern-IT. Referenz: Capgemini in Ratingen bei Essen."
     },
     "digital-signage": {
       "einleitung": "Digital Signage für Essen planen wir für Konzernempfänge, Mitarbeiterinformation und Handel – als Display, Videowand oder LED-Fläche mit zentralem Content-Management. SLT Technology Group plant, installiert und betreibt Signage vom Hauptsitz Krefeld aus, rund 45 Minuten von Essen; Referenzen sind die Outdoor-LED-Anlagen von Knauber in Bonn und die LED-Wall bei Pfeifer & Langen in Köln.",
@@ -67,11 +128,21 @@
       "anforderungen": "Essen ist Konzern- und Messestadt: Die Zentralen von E.ON, RWE, Evonik, thyssenkrupp, Hochtief und Brenntag empfangen täglich Besucher, und die Messe Essen gehört zu den zehn größten deutschen Messeplätzen. Signage hat hier zwei Hauptaufgaben: Im Empfang und auf Campusflächen informiert sie Besucher und Mitarbeiter mehrsprachig und zentral gesteuert, mit Rollen für Kommunikation, Facility und Sicherheit. In Leitständen, Werken und Logistikflächen zeigt sie Kennzahlen und Hinweise im Dauerbetrieb. Dazu kommt der Handel – Aldi Nord sitzt in Essen – mit Anforderungen an Filialsteuerung über viele Standorte. Wir planen Displayklasse, Halterung, Netzwerk und CMS zusammen, damit Fernüberwachung und Ersatz von Anfang an geregelt sind.",
       "arbeitsweise": "Flächen, Licht und Inhalte klären wir vor Ort, wählen Display, Videowand oder LED danach aus und richten das CMS mit Ihren Rollen ein. Installation abgestimmt mit Hausverwaltung oder Facility Management; Monitoring und Wartung im Servicevertrag, auch für bestehende Anlagen.",
       "faq": [
-        { "frage": "Welche Signage-Projekte können Sie zeigen?", "antwort": "Wartung und Modernisierung der Outdoor-LED-Anlagen von Knauber in Bonn; LED-Wall bei Pfeifer & Langen in Köln." },
-        { "frage": "Eignet sich Signage für viele Standorte?", "antwort": "Ja, mit einem CMS, das zentrale Vorgaben und lokale Ergänzungen trennt und jeden Player überwacht." },
-        { "frage": "Übernehmen Sie bestehende Anlagen in den Betrieb?", "antwort": "Ja, nach Bestandsaufnahme und herstellerunabhängig – Monitoring, Ersatzteile, Wartung." }
+        {
+          "frage": "Welche Signage-Projekte können Sie zeigen?",
+          "antwort": "Wartung und Modernisierung der Outdoor-LED-Anlagen von Knauber in Bonn; LED-Wall bei Pfeifer & Langen in Köln."
+        },
+        {
+          "frage": "Eignet sich Signage für viele Standorte?",
+          "antwort": "Ja, mit einem CMS, das zentrale Vorgaben und lokale Ergänzungen trennt und jeden Player überwacht."
+        },
+        {
+          "frage": "Übernehmen Sie bestehende Anlagen in den Betrieb?",
+          "antwort": "Ja, nach Bestandsaufnahme und herstellerunabhängig – Monitoring, Ersatzteile, Wartung."
+        }
       ],
-      "pruefen": "Aldi Nord ist Standortfakt, kein Kunde – Formulierung macht das kenntlich."
+      "pruefen": "Aldi Nord ist Standortfakt, kein Kunde – Formulierung macht das kenntlich.",
+      "description": "Digital Signage in Essen: Displays, Videowände und LED für Konzernempfang, Leitstand und Handel mit zentralem CMS. Referenzen: Knauber, Pfeifer & Langen."
     }
   }
 }

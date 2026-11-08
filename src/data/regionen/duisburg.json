@@ -1,14 +1,29 @@
 {
   "stadt": "Duisburg",
   "slug": "duisburg",
-  "standort": { "name": "Krefeld", "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld" },
+  "standort": {
+    "name": "Krefeld",
+    "zusatz": "Hauptsitz Krefeld, Anrather Str. 291, 47807 Krefeld"
+  },
   "fahrzeit": "ca. 25–35 Minuten ab Krefeld",
-  "ansprechpartner": { "name": "Benedikt Nöchel", "funktion": "Geschäftsführung" },
+  "ansprechpartner": {
+    "name": "Benedikt Nöchel",
+    "funktion": "Geschäftsführung"
+  },
   "gbpUrl": "<GBP Krefeld>",
   "quellen": [
-    { "fakt": "duisport betreibt den größten Binnenhafen der Welt; über 300 logistikorientierte Unternehmen im Hafen mit rund 3 Mrd. Euro Wertschöpfung", "url": "https://www.verkehrsrundschau.de/who-is-who-logistik/unternehmen/duisburger-hafen-ag-3050165" },
-    { "fakt": "Rund 19.000 Beschäftigte in der Logistik, 8,1 % aller Erwerbstätigen in Duisburg (Logistikstudie IW Consult, 2026)", "url": "https://ckan.open.nrw/tl/dataset/wirtschaftsstandort-duisburg-logistikstudie-du" },
-    { "fakt": "Größter Stahlstandort Europas; knapp 29 % der Beschäftigten im produzierenden Gewerbe (IHK, 2015)", "url": "https://www.ihk.de/blueprint/servlet/resource/blob/3979194/3a819c9ffcf569a7aa17460758d952c6/made-in-duisburg-data.pdf" }
+    {
+      "fakt": "duisport betreibt den größten Binnenhafen der Welt; über 300 logistikorientierte Unternehmen im Hafen mit rund 3 Mrd. Euro Wertschöpfung",
+      "url": "https://www.verkehrsrundschau.de/who-is-who-logistik/unternehmen/duisburger-hafen-ag-3050165"
+    },
+    {
+      "fakt": "Rund 19.000 Beschäftigte in der Logistik, 8,1 % aller Erwerbstätigen in Duisburg (Logistikstudie IW Consult, 2026)",
+      "url": "https://ckan.open.nrw/tl/dataset/wirtschaftsstandort-duisburg-logistikstudie-du"
+    },
+    {
+      "fakt": "Größter Stahlstandort Europas; knapp 29 % der Beschäftigten im produzierenden Gewerbe (IHK, 2015)",
+      "url": "https://www.ihk.de/blueprint/servlet/resource/blob/3979194/3a819c9ffcf569a7aa17460758d952c6/made-in-duisburg-data.pdf"
+    }
   ],
   "referenzen": [],
   "leistungen": {
@@ -18,11 +33,21 @@
       "anforderungen": "Duisburg ist Hafen- und Industriestadt: der größte Binnenhafen der Welt mit über 300 Logistikunternehmen, der größte Stahlstandort Europas, knapp ein Drittel der Beschäftigten im produzierenden Gewerbe. Medientechnik heißt hier selten Repräsentation und fast immer Betrieb: Schichtübergaben mit Display, Schulungsräume für wechselnde Gruppen, Leitstände mit großen Bildflächen, Beschallung in Hallen, Besprechungsräume in Verwaltungsgebäuden, die seit den 70er Jahren stehen. Dazu kommen Logistikdienstleister, deren Kunden in China oder den Niederlanden sitzen und per Videokonferenz zugeschaltet werden. Technik muss hier Staub, Temperatur und Dauerbetrieb aushalten und von Menschen bedienbar sein, die keine Einweisung bekommen haben. Wir planen danach, nicht nach Katalog.",
       "arbeitsweise": "Bedarf und Räume klären wir vor Ort; Technik zeigen wir im Vorführraum in Krefeld oder als Teststellung bei Ihnen. Aufmaß und Abstimmung mit IT, Haustechnik und Arbeitssicherheit erfolgen bei der Installation. Service und Ersatzteile aus Krefeld; Vor-Ort-Einsätze in Duisburg am nächsten Werktag.",
       "faq": [
-        { "frage": "Wie schnell sind Sie in Duisburg vor Ort?", "antwort": "Von Krefeld aus in rund 30 Minuten; für Servicefälle planen wir den nächsten Werktag ein." },
-        { "frage": "Haben Sie Referenzen in der Nähe?", "antwort": "Aluminium Norf in Neuss, GOB Software & Systeme in Krefeld und das REWE Center Willich – alle innerhalb von 30 Minuten." },
-        { "frage": "Arbeiten Sie in Industrie- und Hafenbetrieben?", "antwort": "Ja. Zutrittsregeln, Arbeitssicherheit und Abstimmung mit der Betriebsfeuerwehr sind Teil unserer Planung." }
+        {
+          "frage": "Wie schnell sind Sie in Duisburg vor Ort?",
+          "antwort": "Von Krefeld aus in rund 30 Minuten; für Servicefälle planen wir den nächsten Werktag ein."
+        },
+        {
+          "frage": "Haben Sie Referenzen in der Nähe?",
+          "antwort": "Aluminium Norf in Neuss, GOB Software & Systeme in Krefeld und das REWE Center Willich – alle innerhalb von 30 Minuten."
+        },
+        {
+          "frage": "Arbeiten Sie in Industrie- und Hafenbetrieben?",
+          "antwort": "Ja. Zutrittsregeln, Arbeitssicherheit und Abstimmung mit der Betriebsfeuerwehr sind Teil unserer Planung."
+        }
       ],
-      "pruefen": "Keine Duisburger Referenz; der Text nennt die nächstgelegenen. Sobald ein Projekt in Duisburg steht, eintragen."
+      "pruefen": "Keine Duisburger Referenz; der Text nennt die nächstgelegenen. Sobald ein Projekt in Duisburg steht, eintragen.",
+      "description": "Medientechnik in Duisburg: Technik für Hafen, Industrie und Logistik – Schulungsräume, Leitstände, Beschallung, Signage. Referenzen in Neuss und Krefeld."
     },
     "konferenztechnik": {
       "einleitung": "Konferenztechnik in Duisburg planen wir für Verwaltungen von Industrie und Logistik, für Hafenunternehmen und für Dienstleister in der Innenstadt – vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt. SLT Technology Group stattet Räume vom Huddle Space bis zum Boardroom aus, installiert und betreut sie; Boardroom und Schulungsraum haben wir bei Aluminium Norf in Neuss realisiert, über 20 Standardräume bei Pfeifer & Langen in Köln.",
@@ -30,11 +55,21 @@
       "anforderungen": "In Duisburg sitzen Stahl, Logistik und Hafen – und ihre Konferenzräume sind Arbeitsplätze, keine Bühnen. Besprechungen mit Spediteuren, Reedereien und Werksleitungen laufen hybrid; die Gegenseite nutzt Teams, Zoom oder Webex, oft aus Asien oder den Niederlanden. Schulungsräume müssen für wechselnde Gruppen ohne Einweisung funktionieren. Verwaltungsgebäude aus den 60er bis 80er Jahren haben niedrige Decken, harte Oberflächen und wenig Kabelwege – Akustik und Trassen sind hier die Planungsthemen, nicht das Display. Wo Räume in Werksnähe liegen, kommen Staub, Lärm und Sicherheitsregeln hinzu. Wir planen Mikrofonie und Lautsprecher zuerst und wählen Technik, die zehn Jahre hält.",
       "arbeitsweise": "Raumtypen festlegen, Technik im Vorführraum oder als Teststellung prüfen, dann installieren – Aufmaß und Abstimmung mit IT und Haustechnik bei der Installation. Ersatzgeräte in Krefeld, Vor-Ort-Einsätze am nächsten Werktag.",
       "faq": [
-        { "frage": "Welche Konferenzraum-Projekte können Sie zeigen?", "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss, über 20 Räume bei Pfeifer & Langen in Köln." },
-        { "frage": "Funktioniert die Technik in alten Verwaltungsgebäuden?", "antwort": "Ja, wenn Akustik und Kabelwege vorher gemessen und geplant werden; dafür kommen wir vor dem Angebot vorbei." },
-        { "frage": "Teams oder Zoom?", "antwort": "Beides. Für Teams Rooms und Zoom Rooms zertifizierte Systeme, BYOD per USB-C für alle anderen Dienste." }
+        {
+          "frage": "Welche Konferenzraum-Projekte können Sie zeigen?",
+          "antwort": "Boardroom und Schulungsraum bei Aluminium Norf in Neuss, über 20 Räume bei Pfeifer & Langen in Köln."
+        },
+        {
+          "frage": "Funktioniert die Technik in alten Verwaltungsgebäuden?",
+          "antwort": "Ja, wenn Akustik und Kabelwege vorher gemessen und geplant werden; dafür kommen wir vor dem Angebot vorbei."
+        },
+        {
+          "frage": "Teams oder Zoom?",
+          "antwort": "Beides. Für Teams Rooms und Zoom Rooms zertifizierte Systeme, BYOD per USB-C für alle anderen Dienste."
+        }
       ],
-      "pruefen": "„dafür kommen wir vor dem Angebot vorbei“ widerspricht eurer Regel, keinen separaten Vor-Ort-Termin anzubieten – streichen oder bewusst zulassen."
+      "pruefen": "„dafür kommen wir vor dem Angebot vorbei“ widerspricht eurer Regel, keinen separaten Vor-Ort-Termin anzubieten – streichen oder bewusst zulassen.",
+      "description": "Konferenztechnik in Duisburg: Besprechungs- und Schulungsräume für Industrie und Logistik, plattformoffen und langlebig. Referenz: Aluminium Norf."
     },
     "videokonferenz": {
       "einleitung": "Videokonferenzsysteme für Duisburg planen wir für Unternehmen, deren Partner am anderen Ende der Lieferkette sitzen – in Rotterdam, Shanghai oder Chongqing. Kamera, Mikrofonie, Display und Steuerung stimmen wir auf den Raum ab und binden sie an Microsoft Teams Rooms oder Zoom Rooms an, mit BYOD für alles andere. SLT Technology Group betreut Duisburg vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt; mit GOB Software & Systeme in Krefeld arbeiten wir im Bereich Videokonferenzsysteme zusammen, bei Aluminium Norf in Neuss haben wir Räume ausgestattet.",
@@ -42,11 +77,21 @@
       "anforderungen": "Duisburg ist Drehscheibe für Güter zwischen Europa und Asien, und Videokonferenzen folgen den Warenströmen: Logistiker sprechen mit Partnern in anderen Zeitzonen, oft früh morgens ohne IT im Haus, oft auf Englisch, oft über die Plattform des Partners. Das Raumsystem muss also plattformoffen sein, ohne Techniker starten und zweisprachig bedienbar bleiben. In Industrie und Stahl laufen Konferenzen zwischen Zentrale, Werk und Leitstand; dort zählt Stabilität im Konzernnetz. Und viele Besprechungsräume stehen in Gebäuden, die nicht für Videokonferenz gebaut wurden – niedrige Decken, Beton, Glas. Die Mikrofonie entscheidet, ob die Gegenseite versteht; wir planen sie vor Kamera und Display.",
       "arbeitsweise": "Plattform, Raumgröße und Nutzung klären wir zuerst; eine Teststellung im echten Raum zeigt Akustik und Sichtachsen. Danach installieren wir, weisen ein und übernehmen auf Wunsch Service und Monitoring aus Krefeld.",
       "faq": [
-        { "frage": "Welche Videokonferenz-Projekte können Sie zeigen?", "antwort": "Zusammenarbeit mit GOB Software & Systeme in Krefeld; Räume bei Aluminium Norf in Neuss; mobile Stele beim Bank-Verlag in Köln." },
-        { "frage": "Welche Raumgröße braucht welches System?", "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera." },
-        { "frage": "Können wir mit Partnern auf anderen Plattformen konferieren?", "antwort": "Ja. Teams Rooms und Zoom Rooms treten gegenseitig bei; andere Dienste laufen per BYOD über USB-C." }
+        {
+          "frage": "Welche Videokonferenz-Projekte können Sie zeigen?",
+          "antwort": "Zusammenarbeit mit GOB Software & Systeme in Krefeld; Räume bei Aluminium Norf in Neuss; mobile Stele beim Bank-Verlag in Köln."
+        },
+        {
+          "frage": "Welche Raumgröße braucht welches System?",
+          "antwort": "Bis sechs Personen eine All-in-one-Bar, bis zwölf Bar plus Zusatzmikrofone, darüber getrennte Komponenten mit DSP-Audio und Tracking-Kamera."
+        },
+        {
+          "frage": "Können wir mit Partnern auf anderen Plattformen konferieren?",
+          "antwort": "Ja. Teams Rooms und Zoom Rooms treten gegenseitig bei; andere Dienste laufen per BYOD über USB-C."
+        }
       ],
-      "pruefen": "Keine Duisburger Referenz."
+      "pruefen": "Keine Duisburger Referenz.",
+      "description": "Videokonferenz in Duisburg: Räume für Logistiker und Industrie mit Partnern in anderen Zeitzonen, ohne Techniker startklar. Referenz: Aluminium Norf."
     },
     "it-netzwerk": {
       "einleitung": "IT-Netzwerk in Duisburg heißt vor allem: WLAN und Verkabelung, die in Hallen, Lagern und Werken funktionieren. SLT Technology Group plant strukturierte Verkabelung nach DIN EN 50173, WLAN nach Ausleuchtung, Switching und PoE – vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt. WLAN-Infrastruktur haben wir für Capgemini in Ratingen, die Boston Consulting Group in Düsseldorf und an mehreren Werksstandorten von Sonoco realisiert.",
@@ -54,11 +99,21 @@
       "anforderungen": "Mit dem größten Binnenhafen der Welt, über 300 Logistikunternehmen und rund 19.000 Beschäftigten in der Logistik ist Duisburg ein Hallenstandort. WLAN muss dort zwischen Hochregalen, Containern und Staplerverkehr stabil bleiben, Scanner und Terminals ohne Abbruch beim Zellenwechsel übergeben und Außenflächen abdecken. Verkabelung in Hallen heißt Kabeltrassen über zwölf Meter Höhe, Schutz gegen Feuchtigkeit und Temperatur, Trennung von Produktions- und Büronetz. Stahl und Industrie bringen Zutrittsregeln, Ex-Zonen und Betriebsfeuerwehr mit, die Montagezeiten und Material vorgeben. In der Innenstadt sitzen dagegen Dienstleister und Verwaltung mit den üblichen Büroanforderungen. Wir planen nach Messung vor Ort, weil in Hallen jede Planung nach Grundriss scheitert.",
       "arbeitsweise": "WLAN-Ausleuchtung mit Messung in Halle und Büro, daraus Access-Point-Positionen, Antennenwahl und Kanalplan; Verkabelung nach DIN EN 50173; Installation abgestimmt mit IT, Haustechnik und Arbeitssicherheit; Übergabe mit Messprotokoll. Netzwerk, Signage und Konferenztechnik aus einer Hand.",
       "faq": [
-        { "frage": "Haben Sie Netzwerkprojekte in Industrie und Logistik?", "antwort": "WLAN-Infrastruktur an mehreren Werksstandorten von Sonoco; Büro-WLAN für Capgemini in Ratingen und die Boston Consulting Group in Düsseldorf." },
-        { "frage": "Funktioniert WLAN in Hochregallagern?", "antwort": "Ja, wenn es nach Messung geplant wird: Antennenausrichtung, Access-Point-Dichte und Roaming-Einstellungen hängen vom Regalbild und den Endgeräten ab." },
-        { "frage": "Welche Hersteller setzen Sie ein?", "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll." }
+        {
+          "frage": "Haben Sie Netzwerkprojekte in Industrie und Logistik?",
+          "antwort": "WLAN-Infrastruktur an mehreren Werksstandorten von Sonoco; Büro-WLAN für Capgemini in Ratingen und die Boston Consulting Group in Düsseldorf."
+        },
+        {
+          "frage": "Funktioniert WLAN in Hochregallagern?",
+          "antwort": "Ja, wenn es nach Messung geplant wird: Antennenausrichtung, Access-Point-Dichte und Roaming-Einstellungen hängen vom Regalbild und den Endgeräten ab."
+        },
+        {
+          "frage": "Welche Hersteller setzen Sie ein?",
+          "antwort": "Cisco und Cisco Meraki für Switching und WLAN; Verkabelung nach DIN EN 50173 mit Messprotokoll."
+        }
       ],
-      "pruefen": "Sonoco-Werksstandorte: Orte auf der Projektseite ergänzen; „Ex-Zonen“ nur stehen lassen, wenn ihr dafür qualifiziert seid, sonst streichen."
+      "pruefen": "Sonoco-Werksstandorte: Orte auf der Projektseite ergänzen; „Ex-Zonen“ nur stehen lassen, wenn ihr dafür qualifiziert seid, sonst streichen.",
+      "description": "IT-Netzwerk in Duisburg: WLAN in Hochregallagern und Werken, Verkabelung nach DIN EN 50173, Netztrennung. Referenz: Sonoco-Werksstandorte."
     },
     "digital-signage": {
       "einleitung": "Digital Signage für Duisburg planen wir für Hallen, Leitstände, Empfänge und Handel – mit Displays, die Dauerbetrieb und Industrieumgebung aushalten, und einem CMS, das Kennzahlen aus Ihren Systemen zeigt. SLT Technology Group plant, installiert und betreibt Signage vom Hauptsitz Krefeld aus, rund 30 Minuten entfernt; Referenzen sind die Logo-Bodenprojektion im REWE Center Willich und die Outdoor-LED-Anlagen von Knauber in Bonn.",
@@ -66,11 +121,21 @@
       "anforderungen": "In Duisburgs Hafen, Stahlwerken und Logistikzentren hat Signage eine andere Aufgabe als im Einzelhandel: Sie zeigt Schichtpläne, Durchsatz, Sicherheitshinweise und Störungen – in Hallen mit Staub, Vibration und wechselndem Licht, rund um die Uhr. Displays brauchen Schutzgehäuse oder Industrieklasse, PoE-Versorgung und Fernüberwachung, Inhalte kommen aus ERP, WMS oder Leitsystem. In Empfangsbereichen der Verwaltung und bei Dienstleistern in der Innenstadt geht es dagegen um Besucherinformation und Markenauftritt. Für den Handel entlang der Ausfallstraßen gilt, was überall gilt: Helligkeit gegen Tageslicht und Inhalte, die die Filiale selbst pflegen kann. Wir planen Displayklasse, Halterung, Netzwerk und CMS zusammen, damit ein Ausfall gemeldet wird, bevor ihn jemand bemerkt.",
       "arbeitsweise": "Flächen, Licht und Datenquellen klären wir vor Ort, wählen Display, LED oder Projektion danach aus und richten das CMS mit Ihren Rollen ein. Installation abgestimmt mit Haustechnik und Arbeitssicherheit; Monitoring und Wartung im Servicevertrag, auch für bestehende Anlagen.",
       "faq": [
-        { "frage": "Welche Signage-Projekte können Sie zeigen?", "antwort": "Logo-Bodenprojektion im REWE Center Willich; Wartung der Outdoor-LED-Anlagen von Knauber in Bonn." },
-        { "frage": "Eignet sich Signage für Hallen und Leitstände?", "antwort": "Ja, mit Industriedisplays oder Schutzgehäusen, PoE-Versorgung, Fernüberwachung und Anbindung an Ihre Datenquellen." },
-        { "frage": "Übernehmen Sie bestehende Anlagen in den Betrieb?", "antwort": "Ja, nach Bestandsaufnahme und herstellerunabhängig." }
+        {
+          "frage": "Welche Signage-Projekte können Sie zeigen?",
+          "antwort": "Logo-Bodenprojektion im REWE Center Willich; Wartung der Outdoor-LED-Anlagen von Knauber in Bonn."
+        },
+        {
+          "frage": "Eignet sich Signage für Hallen und Leitstände?",
+          "antwort": "Ja, mit Industriedisplays oder Schutzgehäusen, PoE-Versorgung, Fernüberwachung und Anbindung an Ihre Datenquellen."
+        },
+        {
+          "frage": "Übernehmen Sie bestehende Anlagen in den Betrieb?",
+          "antwort": "Ja, nach Bestandsaufnahme und herstellerunabhängig."
+        }
       ],
-      "pruefen": "ERP/WMS/Leitsystem-Anbindung: nur stehen lassen, wenn ihr das anbietet."
+      "pruefen": "ERP/WMS/Leitsystem-Anbindung: nur stehen lassen, wenn ihr das anbietet.",
+      "description": "Digital Signage in Duisburg: Industriedisplays für Hallen und Leitstände, Empfang und Handel mit Fernüberwachung. Referenzen: REWE Willich, Knauber."
     }
   }
 }

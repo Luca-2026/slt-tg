@@ -43,11 +43,19 @@ describe("Final regional editorial data", () => {
     expect(schemas[2].mainEntity[0].acceptedAnswer.text).toBe(REGIONEN.koeln.leistungen.videokonferenz?.faq?.[0].antwort);
     expect(JSON.stringify(schemas)).not.toMatch(/pruefen|quellen|<GBP|Luca|Sandhoff/);
   });
-  it("blocks export until the 18 separate descriptions are supplied", () => {
-    const pending = Object.values(REGIONEN).flatMap(region => keys.filter(key => regionDescription(region, key).pending));
-    expect(pending).toHaveLength(18);
-    const violations = regionalDataViolations();
-    expect(violations).toHaveLength(18);
-    expect(violations.every(message => message.includes("description required"))).toBe(true);
+  it("uses all 35 explicit descriptions without deriving text from introductions", () => {
+    for (const region of Object.values(REGIONEN)) for (const key of keys) {
+      const metadata = regionDescription(region, key);
+      expect(metadata.text).toBe(region.leistungen[key]?.description);
+      expect(metadata.text.length).toBeGreaterThanOrEqual(120);
+      expect(metadata.text.length).toBeLessThanOrEqual(155);
+      expect(metadata.pending).toBe(false);
+    }
+    expect(regionalDataViolations()).toEqual([]);
+  });
+  it("fails for a missing description even when an introduction exists", () => {
+    const region = REGIONEN.koeln;
+    const candidate = { ...region, leistungen: { ...region.leistungen, medientechnik: { ...region.leistungen.medientechnik, description: undefined } } };
+    expect(() => regionDescription(candidate, "medientechnik")).toThrow("missing leistungen.medientechnik.description");
   });
 });

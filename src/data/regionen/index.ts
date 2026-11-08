@@ -6,7 +6,6 @@ import krefeld from "./krefeld.json";
 import essen from "./essen.json";
 import duisburg from "./duisburg.json";
 import moenchengladbach from "./moenchengladbach.json";
-import descriptions from "./descriptions.json";
 
 export const SERVICE_NAMES = {
   medientechnik: "Medientechnik", konferenztechnik: "Konferenztechnik",
@@ -15,6 +14,7 @@ export const SERVICE_NAMES = {
 export type ServiceKey = keyof typeof SERVICE_NAMES;
 export interface RegionFaq { frage: string; antwort: string }
 export interface RegionService {
+  description?: string;
   einleitung?: string; anforderungen_titel?: string; anforderungen?: string;
   arbeitsweise?: string; faq?: RegionFaq[]; pruefen?: string;
 }
@@ -51,23 +51,14 @@ export function sentenceSimilarity(a: string, b: string): number {
   return [...first].filter(s => second.has(s)).length / Math.min(first.size, second.size);
 }
 export function regionDescription(region: Region, key: ServiceKey): { text: string; pending: boolean } {
-  const override = (descriptions as Record<string, string>)[`/${key}/${region.slug}`];
-  if (override) return { text: override, pending: override.length < 120 || override.length > 155 || /!|…|\.\.\./.test(override) };
-  const intro = region.leistungen[key]?.einleitung ?? "";
-  const first = sentences(intro)[0] ?? "";
-  let text = "";
-  if (first.length > 155) {
-    const comma = first.lastIndexOf(",", 149);
-    if (comma >= 0) text = first.slice(0, comma).trim() + ".";
-  } else {
-    for (const sentence of sentences(intro)) {
-      const candidate = text ? `${text} ${sentence}` : sentence;
-      if (candidate.length > 155) break;
-      text = candidate;
-      if (text.length >= 120) break;
-    }
+  const text = region.leistungen[key]?.description;
+  if (typeof text !== "string" || !text.trim()) {
+    throw new Error(`/${key}/${region.slug}: missing leistungen.${key}.description`);
   }
-  return { text, pending: text.length < 120 || text.length > 155 };
+  if (text.length < 120 || text.length > 155 || /!|…|\.\.\./.test(text)) {
+    throw new Error(`/${key}/${region.slug}: description must contain 120–155 characters without truncation`);
+  }
+  return { text, pending: false };
 }
 export const OPEN_FIELDS = Object.values(REGIONEN).flatMap(region => {
   const fields: { stadt: string; feld: string; hinweis: string }[] = [];
