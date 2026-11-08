@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 
-const { scripts } = JSON.parse(readFileSync(new URL("../../package.json", import.meta.url), "utf8"));
+const { scripts } = JSON.parse(readFileSync("package.json", "utf8"));
 
 describe("Preview and Serverprofis build separation", () => {
   it("lets preview config arguments reach Vite without requiring Chromium", () => {
