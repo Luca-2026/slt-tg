@@ -133,7 +133,11 @@ export async function renderSnapshots({ sourceUrl, outputDir = DIST, browserOpti
         for (const entry of await readdir(directory, { withFileTypes: true })) {
           const file = path.join(directory, entry.name);
           if (entry.isDirectory()) await scan(file);
-          else if (/\.(html|js|css|json|svg|txt|xml|map)$/i.test(entry.name) && /Luca|Sandhoff|<GBP|\[REAKTIONSZEIT/i.test(await readFile(file, "utf8"))) throw new Error(`Forbidden public name/placeholder: ${path.relative(outputDir, file)}`);
+          else if (/\.(html|js|css|json|svg|txt|xml|map)$/i.test(entry.name)) {
+            // The explicitly approved team name is allowed; regional restrictions remain unchanged.
+            const content = (await readFile(file, "utf8")).replace(/Maibrit Sandhoff/g, "");
+            if (/Luca|Sandhoff|<GBP|\[REAKTIONSZEIT/i.test(content)) throw new Error(`Forbidden public name/placeholder: ${path.relative(outputDir, file)}`);
+          }
         }
       };
       await scan(outputDir);
