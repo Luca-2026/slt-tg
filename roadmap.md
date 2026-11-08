@@ -2,6 +2,9 @@
 
 ## Post-Build & Serverprofis-Upload
 - [x] Geführte Fertigstellung planen: jeweils ein Arbeitspaket, konkrete Entwürfe und nur dazu nötige Rückfragen; keine Sammelfreigabe für unveränderliche Regionaltexte.
+- [x] Paket 1: /kontakt auf 353 und /projektanfrage auf 345 sichtbare Wörter erweitert; Vorschau-Snapshots mit/ohne JavaScript identisch, H1/Canonical/Hero geprüft, Desktop und 393px mobil geprüft, Anfrage-Navigation mit Eingaben ohne Versand getestet.
+- [ ] Paket 1 abschließen: vorhandenes „innerhalb von 24 Stunden“-Versprechen auf Kontakt/Projektanfrage vom Nutzer bestätigen lassen oder entfernen; vollständiger Produktions-/Versandtest erst in der Abschlussprüfung.
+- [ ] Danach paketweise: Ratgeber/News → Herstellerpartner → Karriere → Regionalzusätze mit eigener Freigabe → NRW/Impressum → Produktionsprüfung und Upload-Paket.
 - [x] Verbindlichen Post-Build-Check für H1, 300 sichtbare Wörter, Hero, FAQ-Schema und www-Canonical ergänzen; 70 Tests bestanden.
 - [x] Sitemap auf 86 indexierbare Routen aktualisiert; .htaccess mit Apache getestet; robots.txt geprüft, llms.txt ergänzt. 89 gespeicherte Vorschau-Snapshots plus 404 ohne JavaScript geprüft.
 - [x] Entscheidung 08.11.: 300 Wörter für Inhaltsseiten beibehalten; 404 separat mit HTTP 404 und noindex prüfen, ohne Wortzahl-/Canonical-Pflicht.

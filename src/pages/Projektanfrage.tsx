@@ -709,6 +709,58 @@ const Projektanfrage = () => {
           </div>
         </div>
       </section>
+      <section className="pb-16 lg:pb-24">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Ein Gesamtkonzept für Raum, Technik und Nutzung</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Ein AV-Projekt beginnt mit der Frage, welche Aufgaben ein Raum erfüllen soll. Ein Boardroom
+                mit hybriden Sitzungen benötigt ein anderes Konzept als ein Schulungsraum oder eine offene
+                Besprechungszone. Die Anzahl der Teilnehmenden, die Raumtiefe und die Sitzordnung beeinflussen
+                Displaygröße, Kameraperspektive und Mikrofonanordnung. Ebenso wichtig sind die Inhalte:
+                Präsentationen, Tabellen und gemeinsame Whiteboard-Arbeit stellen unterschiedliche Anforderungen
+                an Darstellung und Bedienung. SLT Technology Group plant und integriert die Komponenten als
+                zusammenhängendes System. Der Blick auf die <Link to="/konferenzraum-ausstattung" className="text-primary hover:underline">Konferenzraum-Ausstattung</Link> hilft,
+                diese Anforderungen einzuordnen, bevor einzelne Geräte festgelegt werden. Bei mehreren Räumen
+                oder Standorten gehören einheitliche Bedienung und wiederverwendbare Raumkonzepte zu den
+                relevanten Planungsfragen.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Plattformen und vorhandene Infrastruktur zusammendenken</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Für eine <Link to="/videokonferenzanlage" className="text-primary hover:underline">Videokonferenzanlage</Link> ist
+                die vorhandene Plattform ebenso entscheidend wie die Hardware. Ein festes Raumsystem und
+                eine Besprechung über das eigene Notebook unterscheiden sich bei Anmeldung, Anschlüssen
+                und Geräteverwaltung. Kameras, Mikrofone und Lautsprecher müssen zum gewählten Betriebsmodell
+                passen. Vorhandene Displays, Verkabelung und Netzwerkanschlüsse bilden den Ausgangspunkt
+                für die technische Planung; ihre Weiterverwendung muss im Einzelfall geprüft werden.
+                WLAN-Abdeckung, Netzwerksegmente und Sicherheitsvorgaben werden mit der zuständigen IT
+                abgestimmt. Für kabellose Präsentation ist außerdem relevant, wie Gäste und Mitarbeitende
+                Inhalte teilen dürfen. Eine passende Lösung berücksichtigt diese Schnittstellen von
+                Beginn an, statt AV-Technik und Netzwerk getrennt zu behandeln.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Vom Einzelraum zum betreuten Rollout</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Bei einem standortübergreifenden Vorhaben werden Raumtypen, bestehende Ausstattung und
+                Verantwortlichkeiten zusammen betrachtet. Der Projektrahmen umfasst neben den gewünschten
+                Funktionen auch Budget und Zeitplan. Grundrisse und vorhandene Planungen können helfen,
+                Montageorte, Leitungswege und Betrachtungsabstände zu beurteilen. Zur Umsetzung gehören
+                Installation und Einrichtung; die spätere Betreuung sollte ebenfalls frühzeitig geklärt
+                werden. Unsere <Link to="/managed-services" className="text-primary hover:underline">Managed Services</Link> umfassen
+                je nach vereinbartem Leistungsumfang Service Desk, Monitoring, Wartung und abgestimmte
+                Updates. Welche Aufgaben Ihre interne IT übernimmt und welche wir betreuen, wird
+                individuell festgelegt. Unsere <Link to="/projekte" className="text-primary hover:underline">Referenzprojekte</Link> zeigen
+                konkrete Beispiele für AV- und IT-Integration, darunter die mobile Videokonferenzstele
+                beim Bank-Verlag in Köln mit Beratung, Installation, Einrichtung und After-Sales-Support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };

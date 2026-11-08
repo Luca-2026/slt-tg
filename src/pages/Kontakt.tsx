@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -201,6 +202,53 @@ const Kontakt = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="pb-16 lg:pb-24">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Beratung für Ihre AV- und IT-Landschaft</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Ein neuer Konferenzraum, die Modernisierung bestehender Technik oder ein Rollout an mehreren
+                Standorten stellen unterschiedliche Anforderungen. SLT Technology Group verbindet Beratung,
+                Planung und Integration von Medientechnik mit der dazugehörigen IT-Infrastruktur. Im Mittelpunkt
+                stehen die tatsächliche Nutzung, die vorhandenen Systeme und die Zusammenarbeit mit Ihrer internen
+                IT. Unsere Standorte in Krefeld und Bonn sind die Ausgangspunkte für Ihre Anfrage. Ob Einzelraum,
+                Boardroom oder Schulungsbereich: Entscheidend ist ein Gesamtkonzept, in dem Bild, Ton, Bedienung
+                und Netzwerk aufeinander abgestimmt sind. Dazu gehört auch die Frage, welche vorhandenen Komponenten
+                weiterverwendet werden können und wo eine Ergänzung oder Modernisierung sinnvoll ist.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Konferenzräume, Präsentation und Digital Signage</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Bei der <Link to="/konferenzraum-ausstattung" className="text-primary hover:underline">Konferenzraum-Ausstattung</Link> betrachten
+                wir Raumgröße, Sitzordnung und typische Inhalte gemeinsam mit Kameras, Mikrofonen und Displays.
+                Für hybride Besprechungen ist außerdem relevant, ob ein festes Raumsystem oder das Notebook der
+                Teilnehmenden die Konferenz steuert. Kabellose Präsentation und interaktive Displays können
+                Zusammenarbeit ergänzen, müssen aber zu den Endgeräten und Sicherheitsvorgaben passen. Auch für
+                <Link to="/digital-signage" className="text-primary hover:underline"> Digital Signage</Link> im Empfang,
+                auf Informationsflächen oder in der Produktion ist die Auswahl eines Bildschirms nur ein Teil
+                der Planung. Inhalte, Zuständigkeiten und deren Verteilung gehören ebenso zum Konzept wie
+                Montage, Netzwerkanschluss und die spätere Betreuung der Geräte.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Bestehende Anlagen und laufender Betrieb</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Nicht jede Anfrage beginnt mit einem Neubau. Wiederkehrende Störungen, uneinheitliche Bedienung
+                oder veraltete Komponenten können Anlass sein, die bestehende Ausstattung zu prüfen. Für die
+                Betreuung nach der Installation bieten unsere <Link to="/managed-services" className="text-primary hover:underline">Managed Services</Link> unter
+                anderem Service Desk, Monitoring, dokumentierte Wartung und abgestimmte Updates. Der geeignete
+                Umfang wird anhand von Räumen, Standorten und Betriebszustand bestimmt. Servicezeiten,
+                Verantwortlichkeiten und Schnittstellen zur internen IT gehören dabei zur individuellen
+                Abstimmung. Für ein konkretes Vorhaben finden Sie auf der <Link to="/projektanfrage" className="text-primary hover:underline">Projektanfrage</Link> die
+                relevanten Themen für den Projektrahmen; Beispiele bereits umgesetzter Lösungen zeigen unsere
+                <Link to="/projekte" className="text-primary hover:underline"> Referenzprojekte</Link>.
+              </p>
             </div>
           </div>
         </div>
